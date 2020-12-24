@@ -9,35 +9,47 @@
     ==========================================================================*/
 
     function inputAnimate() {
-        if ($('.form-control').length) {
-
+        if ($('.rs-form').length) {
             // Check if has value
-            $('.form-control').each(function () {
+            $('.rs-input').each(function () {
                 if ($(this).val()) {
-                    $(this).parents(".form-group").addClass('focus');
+                    $(this).parent(".rs-form").addClass('animate');
                 }
             })
 
             // Events
-            $('.form-control').focus(function () {
-                $(this).parents(".form-group").addClass('focus');
+            $('.rs-input').focus(function () {
+                $(this).parent(".rs-form").addClass('animate');
             });
 
-            $(".form-control").focusout(function () {
+            $('.rs-label').on('click', function () {
+                $(this).siblings(".rs-input").focus();
+            });
+
+            $(".rs-input").focusout(function () {
                 if ($(this).val() == '' || $(this).val() == null) {
-                    $(this).parents(".form-group").removeClass('focus');
+                    $(this).parent(".rs-form").removeClass('animate');
                 };
             });
 
-            $(".form-control").on('change keyup paste', function (e) {
+            $(".rs-input").on('change keyup paste', function (e) {
                 // alert($(this).val());
                 if ($(this).val() == '' || $(this).val() == null) {
-                    $(this).parents(".form-group").addClass('error');
+                    $(this).parent(".rs-form").addClass('error');
                 } else {
-                    $(this).parents(".form-group").removeClass('error');
-                    $(this).parents(".form-group").addClass('focus');
+                    $(this).parent(".rs-form").removeClass('error');
+                    $(this).parent(".rs-form").addClass('animate');
                 }
             });
+
+            $('.type-toggle').on('click', function(){
+                var input =  $(this).siblings('.rs-input');
+                if(input.attr('type') == 'text'){
+                   input.attr('type', 'password')
+                }else{
+                    input.attr('type', 'text')
+                }
+            })
         }
     }
 
@@ -111,7 +123,7 @@
 
     function validateEmail(field) {
         var el = field;
-        var wrapper = el.parents('.form-group');
+        var wrapper = el.parents('.rs-form');
         var value = el.val();
         var message = '';
         var error = true;
@@ -135,7 +147,7 @@
 
     function validateInput(field, message) {
         var el = field;
-        var wrapper = el.parents('.form-group');
+        var wrapper = el.parents('.rs-form');
         if ($(el).val()) {
             if (field === 'email') {
                 return validateEmail();
@@ -195,7 +207,7 @@
         WHEN DOCUMENT LOADING
     ==========================================================================*/
     $(window).on('load', function () {
-
+        inputAnimate()
         // will load on end
         pageLoader();
 

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G&R</title>
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/jpg">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
+
+    <!-- build:css assets/css/all.min.css -->
+    <link rel="stylesheet" href="assets/css/vendor.css">
+    <link rel="stylesheet" href="assets/css/auth.css">
+    <!-- endbuild -->
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center">
+                    <div class="site-logo">
+                        <a class="d-block" href="/"><img src="assets/images/logo.svg" alt="G&R"></a>
+                    </div>
+                    <div class="menu-area">
+                        <ul class="menu-list">
+                            <li><a href="">Advertisers</a></li>
+                            <li><a href="">Publishers</a></li>
+                            <li><a href="">Partners</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center">
+                    <a href="registration.html" class="rs-btn rs-btn-contained uppercase">Register</a>
+                    <a href="login.html" class="rs-btn rs-btn-primary uppercase ml-3">Login</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="preloader">
+        <div class="container">
+            <div class="auth-layout d-flex justify-content-center align-items-center flex-column">
+
+                <div class="auth-card">
+                    <div class="card-head text-center">
+                        <h2>Register</h2>
+                    </div>
+                    <form action="" class="registration-form">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <fieldset class="rs-form mb-4">
+                                    <label class="rs-label">First Name</label>
+                                    <input type="text" class="rs-input">
+                                </fieldset>
+                            </div>
+                            <div class="col-md-6">
+                                <fieldset class="rs-form mb-4">
+                                    <label class="rs-label">Last Name</label>
+                                    <input type="text" class="rs-input">
+                                </fieldset>
+                            </div>
+                            <div class="col-md-12">
+                                <fieldset class="rs-form mb-4">
+                                    <label class="rs-label">Email Address</label>
+                                    <input type="email" class="rs-input">
+                                </fieldset>
+                            </div>
+                            <div class="col-md-12">
+                                <fieldset class="rs-form mb-4">
+                                    <label class="rs-label">Phone Number</label>
+                                    <input type="text" class="rs-input">
+                                </fieldset>
+                            </div>
+                            <div class="col-md-12">
+                                <fieldset class="rs-form mb-2">
+                                    <label class="rs-label">Contact Address</label>
+                                    <input type="text" class="rs-input">
+                                </fieldset>
+                            </div>
+
+                            <div class="col-md-12">
+                                <fieldset class="rs-form mb-3">
+                                    <p class="fz10 pl-2 mb-1">Select Account Types </p>
+                                    <div class="d-flex align-items-center">
+                                        <div class="radio-group mr-3">
+                                            <input type="radio" name="accType" id="advertiser" class="radio-input" checked>
+                                            <label for="advertiser" class="radio-label">
+                                                <img src="assets/images/icons/campaign.svg" alt="">
+                                                Advertiser
+                                            </label>
+                                        </div>
+                                        <div class="radio-group">
+                                            <input type="radio" name="accType" id="publisher" class="radio-input">
+                                            <label for="publisher" class="radio-label">
+                                                <img src="assets/images/icons/ad-properties.svg" alt="">
+                                                Publisher
+                                            </label>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+
+                            <div class="col-md-12">
+                                <fieldset class="rs-form password-form mb-4">
+                                    <label class="rs-label">Password</label>
+                                    <input type="password" class="rs-input">
+                                    <img class="icon type-toggle" src="assets/images/icons/visible.svg" alt="">
+                                </fieldset>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="rs-checkbox">
+                                <input type="checkbox" name="" class="rs-checkbox-input" id="aggrement">
+                                <label class="checkbox-label fz16" for="aggrement">I agree to the G&R Terms of Services and Privacy Policy.</label>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="rs-btn rs-btn-primary rs-btn-lg uppercase mx-auto  mb-4">Register</button>
+                            <p class="fz16">Already Registered? <a href="login.html" class="fw-700 ml-1">Login Now</a></p>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <a href="javascript:void(0)" class="back-to-top" id="go-top"><i class="mdi mdi-chevron-double-up"></i><span> Back To Top</span></a>
+
+    <!-- build:js assets/js/vendor.min.js -->
+    <script type="text/javascript" src="assets/vendor/jQuery/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!-- <script type="text/javascript" src="assets/vendor/aos/js/aos.js"></script> -->
+    <!-- <script type="text/javascript" src="assets/vendor/slick/slick.min.js"></script>  -->
+    <!-- endbuild -->
+    <script type="text/javascript" src="assets/js/script.js"></script>
+
+</body>
+</html>
