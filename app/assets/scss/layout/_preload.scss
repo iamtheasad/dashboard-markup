@@ -1,0 +1,10 @@
+.preloader {
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s ease-in-out;
+
+    &.visible {
+        visibility: visible;
+        opacity: 1;
+    }
+}
