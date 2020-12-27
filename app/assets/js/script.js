@@ -44,10 +44,16 @@
 
             $('.type-toggle').on('click', function(){
                 var input =  $(this).siblings('.rs-input');
-                if(input.attr('type') == 'text'){
-                   input.attr('type', 'password')
-                }else{
-                    input.attr('type', 'text')
+                if(input.val()){
+                    if(input.attr('type') == 'text'){
+                       input.attr('type', 'password');
+                       $(this).removeClass('mdi-eye-off');
+                       $(this).addClass('mdi-eye');
+                    }else{
+                        input.attr('type', 'text');
+                        $(this).removeClass('mdi-eye');
+                        $(this).addClass('mdi-eye-off');
+                    }
                 }
             })
         }
@@ -102,13 +108,7 @@
         }
     }
 
-    function headerSpace() {
-        if ($('.header-fixed-top').length) {
-            $('.header-space').css({
-                'height': $('.site-nav').innerHeight() + 'px'
-            })
-        }
-    }
+   
 
     function pageLoader() {
         if ($('.preloader').length) {
@@ -171,14 +171,6 @@
         wrapper.removeClass('error');
     }
 
-    function goTop() {
-        $('#go-top').on('click', function () {
-            $('html, body').animate({
-                scrollTop: 0
-            }, 900);
-        });
-    }
-
     function contactFormSubmit() {
         var form = $('.contact-form');
         form.on('submit', (e) => {
@@ -207,7 +199,8 @@
         WHEN DOCUMENT LOADING
     ==========================================================================*/
     $(window).on('load', function () {
-        inputAnimate()
+        inputAnimate();
+
         // will load on end
         pageLoader();
 
@@ -217,12 +210,7 @@
         WHEN WINDOW SCROLL
     ==========================================================================*/
     $(window).scroll(function () {
-        if ($(window).scrollTop() < 500) {
-            $('.back-to-top').removeClass('show');
-        }
-        else {
-            $('.back-to-top').addClass('show');
-        }
+        //
     });
 
     /*==========================================================================
