@@ -32,9 +32,9 @@
     &.rs-btn-primary{
         background-color: $primaryColor;
         color: $white;
-        &:hover{
-            background-color: darken($primaryColor, 30);
-        }
+        // &:hover{
+        //     background-color: darken($primaryColor, 30);
+        // }
     }
 
     &.rs-btn-trans{
