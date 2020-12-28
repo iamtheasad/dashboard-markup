@@ -1,4 +1,4 @@
-<section class="sidebar-menu">
+<section class="sidebar-menu scrollbar">
     <div class="site-logo">
         <a class="d-block" href="">
             <img src="assets/images/logo.svg" alt="G&R">
@@ -9,9 +9,34 @@
             <li class="active"><a href=""><img class="icon" src="assets/images/icons/dashboard.svg" alt=""> Dashboard</a></li>
             <li><a href=""><img class="icon" src="assets/images/icons/ad-properties.svg" alt="">Properties</a></li>
             <li><a href=""><img class="icon" src="assets/images/icons/adplace.svg" alt="">Ad Place</a></li>
-            <li><a href=""><img class="icon" src="assets/images/icons/report.svg" alt="">Report</a></li>
+
+            <li>
+                <a href="#report-sidebar-menu" data-toggle="collapse">
+                    <img class="icon" src="assets/images/icons/report.svg" alt="">Report
+                </a>
+                <div id="report-sidebar-menu" class="collapse">
+                    <ul>
+                        <li><a href="">Overview</a></li>
+                        <li><a href="">Location</a></li>
+                        <li><a href="">Revenue              </a></li>
+                    </ul>
+                </div>
+            </li>
+
             <li><a href=""><img class="icon" src="assets/images/icons/money.svg" alt="">Payments</a></li>
-            <li><a href=""><img class="icon" src="assets/images/icons/settings.svg" alt="">Settings</a></li>
+            <li>
+                <a href="#settings-sidebar-menu" data-toggle="collapse">
+                    <img class="icon" src="assets/images/icons/settings.svg" alt="">Settings
+                </a>
+                <div id="settings-sidebar-menu" class="collapse">
+                    <ul>
+                        <li><a href="">Account Settings</a></li>
+                        <li><a href="">Users</a></li>
+                        <li><a href="">Activity Log</a></li>
+                        <li><a href="login.html">Logout</a></li>
+                    </ul>
+                </div>
+            </li>
         </ul>
     </div>
 </section>

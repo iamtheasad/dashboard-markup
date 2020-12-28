@@ -14,10 +14,10 @@
     <!-- endbuild -->
     <script type="text/javascript" src="assets/vendor/jQuery/jquery.min.js"></script>
 </head>
-<body>
+<body class="preloader">
     <div class="d-flex">
         {% include "./sidemenu.njk" %}
-        <main class="dashboard-main preloader">
+        <main class="dashboard-main">
             {% include "./topbar.njk" %}
     
             {% block content %}{% endblock %}
