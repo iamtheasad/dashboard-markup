@@ -193,24 +193,12 @@
         })
     }
 
-    // function dropdown(){
-    //     if($('.dropdown').length){
-    //         var button = $('.dropdown-icon');
-    //         var content = button$('.dropdown-content');
-
-    //         $('.dropdown-icon').on('click', function(){
-    //             $('.dropdown-content').toggleClass('show');
-    //         });
-
-    //     }
-    // }
-
     /*==========================================================================
         WHEN DOCUMENT LOADING
     ==========================================================================*/
     $(window).on('load', function () {
         inputAnimate();
-        // dropdown();
+        
         // will load on end
         pageLoader();
 
