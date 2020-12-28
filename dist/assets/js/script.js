@@ -108,8 +108,6 @@
         }
     }
 
-   
-
     function pageLoader() {
         if ($('.preloader').length) {
             $('.preloader').addClass('visible');

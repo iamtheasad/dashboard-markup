@@ -59,6 +59,9 @@ button:focus{
     outline: none;
     box-shadow: none;
 }
+label, button{
+    cursor: pointer;
+}
 
 img {
     height: auto;
