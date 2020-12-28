@@ -198,7 +198,7 @@
     ==========================================================================*/
     $(window).on('load', function () {
         inputAnimate();
-
+        
         // will load on end
         pageLoader();
 
