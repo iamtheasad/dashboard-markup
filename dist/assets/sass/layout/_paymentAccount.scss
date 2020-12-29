@@ -5,5 +5,10 @@
 }
 
 .dashed_border {
-   border-style: dashed;
+   border-style: dashed !important;
+   border-color: #000 !important;
+}
+
+.payment_item label {
+   border: 3px solid transparent;
 }
