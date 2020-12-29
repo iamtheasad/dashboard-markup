@@ -1,0 +1,20 @@
+{% extends "layouts/layout.njk" %}
+
+{% block content %}
+
+<div class="row">
+   <div class="col-md-7">
+      {% include 'snippets/profile.njk' %}
+      <div class="PaymentAccount">
+         {% include 'snippets/paymentAccount.njk' %}
+      </div>
+   </div>
+   <div class="col-md-4">
+      <div class="adv_dashboard">
+         {% include 'snippets/advertiserDashboard.njk' %}
+         {% include 'snippets/changeAccountPassword.njk' %}
+      </div>
+   </div>
+</div>
+    
+{% endblock %}

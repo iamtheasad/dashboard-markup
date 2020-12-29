@@ -1,0 +1,14 @@
+.profile{
+   border-radius: 5px;
+   .profile_image{
+      .image{
+         height: 200px;
+         width: 200px;
+      }
+   }
+}
+
+.radius-50{
+   border-radius: 50%;
+   overflow: hidden;
+}
