@@ -4,19 +4,19 @@
 
    <div class="payment_option d-flex flex-wrap pb-3 mt-4">
       <div class="payment_item">
-         <input type="file" id="add_payment_one" class="d-none">
-         <label class="p-4 fz44 mr-3" for="add_payment_one"><span class="mdi mdi-plus-thick"></span></label>
-         <p class="fz13 mt-2 fz12">Payment Option</p>
-      </div>
-         <div class="payment_item">
-         <input type="file" id="add_payment_one" class="d-none">
-         <label class="p-4 fz44 mr-3" for="add_payment_one"><span class="mdi mdi-plus-thick"></span></label>
+         <button type="button" class="p-4 mr-3" data-toggle="modal" data-target="#editPaymentAccount"><span class="mdi mdi-plus-thick fz44"></span></button>
          <p class="fz13 mt-2 fz12">Payment Option</p>
       </div>
       <div class="payment_item">
-         <input type="file" id="add_payment_one" class="d-none">
-         <label class="p-4 fz44 mr-3 dashed_border" for="add_payment_one"><span class="mdi mdi-plus-thick"></span></label>
+         <button type="button" class="p-4 mr-3" data-toggle="modal" data-target="#editPaymentAccount"><span class="mdi mdi-plus-thick fz44"></span></button>
+         <p class="fz13 mt-2 fz12">Payment Option</p>
+      </div>
+      <div class="payment_item">
+         <button type="button" class="p-4 mr-3" data-toggle="modal" data-target="#addPaymentOption"><span class="mdi mdi-plus-thick fz44"></span></button>
          <p class="fz13 mt-2 fz12">Add Payment Option</p>
       </div>
+
+      {% include 'snippets/modals/addPaymentOption.njk' %}
+      {% include 'snippets/modals/editPaymentAccount.njk' %}
    </div>
 </div>
