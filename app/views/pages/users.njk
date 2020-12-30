@@ -1,0 +1,11 @@
+{% extends "layouts/layout.njk" %}
+
+{% block content %}
+
+    {% include 'snippets/addNewUser.njk' %}
+    <div class="row">
+        <div class="col-md-6 mt-4">{% include 'snippets/accountName.njk' %}</div>
+        <div class="col-md-6 mt-4">{% include 'snippets/accountName.njk' %}</div>
+    </div>
+    
+{% endblock %}
