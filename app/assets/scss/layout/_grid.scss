@@ -36,9 +36,9 @@
 }
 
 .row{
-    margin-left: -4px;
-    margin-right: -4px;
-    [class*='col-']{
+    margin-left: -8px;
+    margin-right: -8px;
+    .col, [class*='col-']{
         padding-left: 8px;
         padding-right: 8px;
     }

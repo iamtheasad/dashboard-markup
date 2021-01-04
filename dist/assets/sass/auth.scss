@@ -18,8 +18,8 @@
 @import "layout/preload";
 @import "layout/buttons";
 @import "layout/form";
-@import "layout/sidemenu";
-@import "layout/topbar";
+@import "layout/header";
+@import "layout/footer";
 
 // Pages
-@import "pages/index";
+@import "pages/auth";

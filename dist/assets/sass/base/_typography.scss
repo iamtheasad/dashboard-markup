@@ -69,12 +69,12 @@ p{
 a{
     color: $primaryColor;
     transition: .3s ease-in-out;
-    &:hover{
-        color: $secondaryColor;
-    }
 }
 
 // ==============================
+.lh-1{
+    line-height: 1 !important;
+}
 
 .fw-100 {
     font-weight: 100 !important;

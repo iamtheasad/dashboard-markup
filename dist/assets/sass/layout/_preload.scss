@@ -1,7 +1,7 @@
 .preloader {
     visibility: hidden;
     opacity: 0;
-    transition: .5s ease-in-out;
+    transition: opacity .3s ease-in-out;
 
     &.visible {
         visibility: visible;
