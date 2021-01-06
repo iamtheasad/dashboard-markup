@@ -4,4 +4,16 @@
     width: 100%;
     padding-left: 64px;
     padding-right: 64px;
+<<<<<<< HEAD
+=======
+}
+
+.d-card{
+    border-radius: 8px;
+    padding: 16px; 
+    background-color: #ECEEF3;
+    &.darken{
+        background-color: #CED5DE;
+    }
+>>>>>>> f9c080c92269fe05b5b7bba8c9e60eff088813f9
 }

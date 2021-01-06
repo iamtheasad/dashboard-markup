@@ -5,3 +5,33 @@
     padding-left: 64px;
     padding-right: 64px;
 }
+
+.d-card{
+    border-radius: 8px;
+    padding: 16px; 
+    background-color: #ECEEF3;
+    &.darken{
+        background-color: #CED5DE;
+    }
+}
+
+.map-area{
+    height: calc(100% - 44px);
+}
+
+.tab-area{
+    background: #FAFAFA;
+    border-radius: 8px;
+    padding: 15px;
+}
+
+.nav-pills{
+    background-color: #ECEEF3;
+    .nav-item{
+        .nav-link{
+            &.active{
+                background-color: #475364;
+            }
+        }
+    }
+}

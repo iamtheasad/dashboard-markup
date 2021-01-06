@@ -1,0 +1,80 @@
+<div class="d-card {% if data.class %} {{data.class}}{% endif %}">
+    <h4 class="mb-3">{{ data.title }}</h4>
+    {% if data.info %}
+    <p class="fz12 gray-color mb-2">{{data.info}}</p>
+    {% endif%}
+
+    {% if data.impressionToday %}
+        <div class="row">
+            {% if data.impressionToday %}
+            <div class="col">
+                <p class="h4">{{ data.impressionToday }}</p>
+                <p class="fz12 gray-color mb-2">Today untill 16:04</p>
+            </div>
+            {%endif%}
+            {% if data.impressionMonth %}
+            <div class="col">
+                <p class="h4">{{ data.impressionMonth }}</p>
+                <p class="fz12 gray-color mb-2">This Month utill 4 October 2020</p>
+            </div>
+            {%endif%}
+        </div>
+    {% endif %}
+    {% if data.today %}
+    <div class="row mb-3">
+        {% if data.today %}
+        <div class="col">
+            <p class="fz12 gray-color mb-2">Today</p>
+            <p class="fz14">{{ data.today }}</p>
+        </div>
+        {%endif%}
+        {% if data.yesterday %}
+        <div class="col">
+            <p class="fz12 gray-color mb-2">Yesterday</p>
+            <p class="fz14">{{ data.yesterday }}</p>
+        </div>
+        {%endif%}
+        {% if data.month %}
+        <div class="col">
+            <p class="fz12 gray-color mb-2">This Month</p>
+            <p class="fz14">{{ data.month }}</p>
+        </div>
+        {%endif%}
+    </div>
+    {%endif%}
+    <div class="row">
+        <div class="col-8">
+            <div class="row">
+                {% if data.estGrowth %}
+                <div class="col">
+                    <p class="fz12 gray-color">Est. m/m Growth</p>
+                    <div class="d-flex align-items-center">
+                        <h4 class="fw-700">{{ data.estGrowth }} </h4>
+                        <i class="mdi {{data.icon}} fz44 lh-1 d-flex green-color"></i>
+                    </div>
+                </div>
+                {% endif %}
+                {% if data.properties %}
+                {% for item in data.properties %}
+                <div class="col">
+                    <p class="fz16 mb-1 fw-500">{{item.name}}</p>
+                    <p class="fz12 gray-color">Est. m/m Growth</p>
+                    <div class="d-flex align-items-center">
+                        <h4 class="fw-700">{{ item.estGrowth }} </h4>
+                        <i class="mdi {{item.icon}} fz44 lh-1 d-flex green-color"></i>
+                    </div>
+                </div>
+                {%endfor%}
+                {% endif %}
+            </div>
+        </div>
+        {% if data.moreBtn %}
+        <div class="col-3 d-flex justify-content-end align-items-end">
+            <a href="/" class="fz24 fw-700 uppercase d-flex align-items-center">
+                <span>More</span>  
+                <i class="mdi mdi-menu-right fz44 lh-1 d-flex"></i>
+            </a>
+        </div>
+        {% endif %}
+    </div>
+</div>
