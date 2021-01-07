@@ -36,15 +36,9 @@
 }
 
 .row{
-<<<<<<< HEAD
-    margin-left: -4px;
-    margin-right: -4px;
-    [class*='col-']{
-=======
     margin-left: -8px;
     margin-right: -8px;
     .col, [class*='col-']{
->>>>>>> f9c080c92269fe05b5b7bba8c9e60eff088813f9
         padding-left: 8px;
         padding-right: 8px;
     }

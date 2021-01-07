@@ -14,12 +14,9 @@
         ul{
             li{
                 margin-bottom: 8px;
-<<<<<<< HEAD
-=======
                 &:last-child{
                     margin-bottom: 0;
                 }
->>>>>>> f9c080c92269fe05b5b7bba8c9e60eff088813f9
                 a{
                     font-weight: 700;
                     font-size: rem(16);
@@ -35,16 +32,11 @@
                         margin-right: 16px;
                         transition: .3s ease-in-out;
                     }
-<<<<<<< HEAD
-                }
-                &.active> a, & a:hover{
-=======
                     &:hover{
                         background-color: darken(#eceef3, 10);
                     }
                 }
                 &.active> a{
->>>>>>> f9c080c92269fe05b5b7bba8c9e60eff088813f9
                     background-color: #0E1217;
                     color: $white;
                     .icon{
