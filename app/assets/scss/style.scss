@@ -20,14 +20,7 @@
 @import "layout/form";
 @import "layout/sidemenu";
 @import "layout/topbar";
-@import "layout/advertiserDashboard";
-@import "layout/paymentAccount";
-@import "layout/editAccountInfo";
-@import "layout/addPaymentAccount";
-@import "layout/changePasswordModal";
-@import "layout/changeAccountPassword";
 
 // Pages
 @import "pages/index";
-@import "pages/accountSettings";
-@import "layout/users";
+@import "pages/custom";

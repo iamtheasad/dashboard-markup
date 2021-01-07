@@ -16,9 +16,9 @@
     
     &:hover{
         box-shadow: 0 3px 5px 2px rgba($black,  .1); 
-        background-color: rgba($primaryColor, 1);
+        // background-color: rgba($primaryColor, 1);
         transform: translateY(-1px);
-        color: $white;
+        // color: $white;
     }
 
     &.rs-btn-lg{
