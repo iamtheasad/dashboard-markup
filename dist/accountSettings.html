@@ -60,7 +60,7 @@
                 </ul>
             </div>
         </section>
-        <main class="dashboard-main">
+        <main class="container-fluid">
             <header class="topbar sticky-top d-flex justify-content-between align-items-center">
                 <div class="breadcumb fz24 fw-500">
                     <div class="d-flex align-items-center">
@@ -95,10 +95,10 @@
             </header>
 
             <div class="row">
-                <div class="col-md-7">
-                    <div class="profile accountSettingSnippetBg mr-3 p-3">
+                <div class="col-lg-5">
+                    <div class="profile mr-3 p-3">
                         <div class="row">
-                            <div class="col-lg-5 col-md-12 d-flex justify-content-center">
+                            <div class="col-lg-5 d-flex justify-content-center mb-md-5">
                                 <div class="profile_image text-center">
                                     <div class="radius-50 flex-img mb-4">
                                         <img class="account_img " src="http://via.placeholder.com/200x200" alt="Account Holder Image">
@@ -109,7 +109,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-7 col-md-12 pl-1">
+                            <div class="col-lg-7 pl-1 ">
                                 <h2 class="fz16 fw-700 mb-3">Account Name</h2>
 
                                 <div class="mb-2">
@@ -131,7 +131,7 @@
 
                                 <!-- Button trigger modal -->
                                 <div class="d-flex pt-4">
-                                    <button type="button" class="rs-btn rs-btn-primary fz20 fw-700 rs-btn-lg uppercase" data-toggle="modal" data-target="#editAccountModal">
+                                    <button type="button" class="change_account_password_btn rs-btn rs-btn-primary fz20 fw-700 rs-btn-lg uppercase" data-toggle="modal" data-target="#editAccountModal">
                                         Edit
                                     </button>
                                 </div>
@@ -195,8 +195,71 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="adv_dashboard">
+                        <div class="ad_dashboard p-3 mb-2">
+                            <h3 class="fz20 fw-500">Advertiser Dashboard</h3>
+                            <p class="fz12 fw-400 mt-2"></p>Active Campaign <span class="fz14 fw-700">5</span></p>
+
+                            <a href="#" class="change_account_password_btn fz18 w-100 rs-btn rs-btn-primary rs-btn-lg uppercase mt-4">Go To Dashboard</a>
+                        </div>
+                        <div class="ad_dashboard p-3 mb-2">
+                            <h3 class="fz20 fw-500">Change Account Password</h3>
+                            <p class="fz12 fw-400 mt-2">Change Your Account Password</p>
+
+                            <!-- <a href="#" class="rs-btn rs_btn_profile rs-btn-primary rs-btn-lg uppercase mt-4">Change Password</a> -->
+                            <button type="button" class="fz18 w-100 change_account_password_btn rs-btn rs-btn-primary rs-btn-lg uppercase mt-4" data-toggle="modal" data-target="#changePassword">Change Password</button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="changePassword" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg" role="document">
+                                    <div class="modal-content changePasswordModal-content">
+                                        <form action="">
+                                            <div class="modal-header pt-5 border-bottom-0">
+                                                <h5 class="modal-title" id="exampleModalLabel">Change Account Password</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span class="mdi mdi-close" aria-hidden="true"></span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body pb-5">
+                                                <div class="row">
+
+                                                    <div class="col-md-12">
+                                                        <fieldset class="rs-form mb-4 password-change">
+                                                            <label for="editName" class="rs-label">Enter Old Password</label>
+                                                            <input type="password" class="rs-input" value="123456">
+                                                            <span class="mdi mdi-eye"></span>
+                                                        </fieldset>
+                                                    </div>
+
+                                                    <div class="col-md-12">
+                                                        <fieldset class="rs-form mb-4 password-change">
+                                                            <label for="editName" class="rs-label">Enter New Password</label>
+                                                            <input type="password" class="rs-input" value="123456">
+                                                            <span class="mdi mdi-eye"></span>
+                                                            <!-- <span class="mdi mdi-eye-off"></span> -->
+                                                        </fieldset>
+                                                    </div>
+
+                                                </div>
+                                                <div class="d-flex mt-3">
+                                                    <button type="submit" class="rs-btn rs-btn-primary rs-btn-lg uppercase mr-3">Change Password</button>
+
+                                                    <button class="rs-btn rs-btn-primary rs-btn-lg uppercase" data-dismiss="modal">Cancel</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12">
                     <div class="PaymentAccount">
-                        <div class="payment_account ad_dashboard p-3 accountSettingSnippetBg mt-3 mr-3">
+                        <div class="payment_account ad_dashboard p-3 mt-3 mr-3">
                             <h3 class="fz28 fw-500">Payment Account</h3>
                             <p class="fz13 mt-2 fz12">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa laborum autem id odit a magnam temporibus.</p>
 
@@ -368,66 +431,6 @@
                                                 </div>
                                             </form>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="adv_dashboard">
-                        <div class="ad_dashboard p-3 accountSettingSnippetBg mb-2">
-                            <h3 class="fz28 fw-500">Advertiser Dashboard</h3>
-                            <p class="fz13 mt-2"></p>Active Campaign <span class="fz14 fw-700">5</span></p>
-
-                            <a href="#" class="rs-btn rs_btn_profile rs-btn-primary rs-btn-lg uppercase mt-4">Go To Dashboard</a>
-                        </div>
-                        <div class="ad_dashboard p-3 accountSettingSnippetBg mb-2">
-                            <h3 class="fz28 fw-500">Change Account Password</h3>
-                            <p class="fz13 mt-2">Change Your Account Password</p>
-
-                            <!-- <a href="#" class="rs-btn rs_btn_profile rs-btn-primary rs-btn-lg uppercase mt-4">Change Password</a> -->
-                            <button type="button" class="p-4 mr-3 rs-btn rs_btn_profile rs-btn-primary rs-btn-lg uppercase mt-4" data-toggle="modal" data-target="#changePassword">Change Password</button>
-
-                            <!-- Modal -->
-                            <div class="modal fade" id="changePassword" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-lg" role="document">
-                                    <div class="modal-content changePasswordModal-content">
-                                        <form action="">
-                                            <div class="modal-header pt-5 border-bottom-0">
-                                                <h5 class="modal-title" id="exampleModalLabel">Change Account Password</h5>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span class="mdi mdi-close" aria-hidden="true"></span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body pb-5">
-                                                <div class="row">
-
-                                                    <div class="col-md-12">
-                                                        <fieldset class="rs-form mb-4 password-change">
-                                                            <label for="editName" class="rs-label">Enter Old Password</label>
-                                                            <input type="password" class="rs-input" value="123456">
-                                                            <span class="mdi mdi-eye"></span>
-                                                        </fieldset>
-                                                    </div>
-
-                                                    <div class="col-md-12">
-                                                        <fieldset class="rs-form mb-4 password-change">
-                                                            <label for="editName" class="rs-label">Enter New Password</label>
-                                                            <input type="password" class="rs-input" value="123456">
-                                                            <span class="mdi mdi-eye"></span>
-                                                            <!-- <span class="mdi mdi-eye-off"></span> -->
-                                                        </fieldset>
-                                                    </div>
-
-                                                </div>
-                                                <div class="d-flex mt-3">
-                                                    <button type="submit" class="rs-btn rs-btn-primary rs-btn-lg uppercase mr-3">Change Password</button>
-
-                                                    <button class="rs-btn rs-btn-primary rs-btn-lg uppercase" data-dismiss="modal">Cancel</button>
-                                                </div>
-                                            </div>
-                                        </form>
                                     </div>
                                 </div>
                             </div>
