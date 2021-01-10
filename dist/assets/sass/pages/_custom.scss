@@ -28,11 +28,6 @@
 }
 
 // Edit Account Info
-select {
-   width: 30%;
-   padding: 10px;
-}
-
 .rs-select-editAccount {
    position: absolute !important;
    top: -3% !important;
@@ -40,6 +35,28 @@ select {
 
 input[type="text"] {
    font-size: 24px;
+}
+
+.ra-select {
+   width: 30%;
+   padding: 10px;
+   /* Replace Default styling (arrow) */
+   appearance: none;
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   background-image: url('data:image/svg+xml;utf8,<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 10.127L12 18.127L20 10.127H4Z" fill="%238E8E93"/></svg>');
+   background-repeat: no-repeat;
+   background-position-y: 50%;
+   background-position-x: 98%;
+}
+
+.ra-select:focus {
+   outline: none;
+   border: 1px solid $borderColor;
+}
+
+.ra-select option {
+   background-color: #fff;
 }
 
 // Change Password Modal
@@ -64,18 +81,28 @@ input[type="text"] {
 }
 
 // Users Page
+.user_img img {
+   width: 72px;
+   height: 72px;
+}
+
 .user_img {
    background-color: #fff;
    display: flex;
    justify-content: center;
    align-items: center;
-   width: 96px;
-   height: 96px;
+   width: 128px;
+   height: 128px;
    border-radius: 50%;
 }
 
 .user_btn .rs-btn {
    display: inline-flex !important;
+}
+
+// accountName
+.ra-custom-bg {
+   background-color: #F5F5F5 !important;
 }
 
 // Change Password Modal
