@@ -31,12 +31,13 @@
             <div class="user_btn mt-4">
                 <button type="button"
                     class="change_account_password_btn rs-btn rs-btn-primary fz20 fw-700 rs-btn-lg uppercase"
-                    data-toggle="modal" data-target="#editAccountModal">
+                    data-toggle="modal" data-target="#addNewUserModal">
                     Edit
                 </button>
-                <button
-                    class="rs-btn rs-btn-lg rs-btn-secondary uppercase rs-btn-trans ra-custom-bg fz20">Delete</button>
+                <button class="rs-btn rs-btn-lg rs-btn-secondary uppercase rs-btn-trans ra-custom-bg fz20">Delete</button>
             </div>
+
+            {% include 'snippets/modals/addUserModal.njk' %}
         </div>
 
     </div>
