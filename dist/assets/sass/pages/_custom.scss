@@ -100,9 +100,22 @@ input[type="text"] {
    display: inline-flex !important;
 }
 
+.linkColor {
+   color: $linkColor;
+   transition: 5s ease-in-out;
+}
+
+.linkColor:hover {
+   text-decoration: underline;
+}
+
+.changePasswordModal-content.addUser-close .close{
+   top: 5%;
+}
+
 // accountName
 .ra-custom-bg {
-   background-color: #F5F5F5 !important;
+   background-color: #f5f5f5 !important;
 }
 
 // Change Password Modal
