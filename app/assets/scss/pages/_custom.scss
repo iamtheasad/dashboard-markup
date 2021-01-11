@@ -156,3 +156,40 @@ input[type="text"] {
 .changePasswordModal-content.properties-close .close {
    top: 3%;
 }
+
+
+//Property Data Table
+.ra-table-head {
+   background-color: $tableHeaderColor;
+}
+
+.property-table.table-striped tbody tr:nth-of-type(odd){
+   background-color: $tableRowColor !important;
+}
+
+.property-table.table-striped tbody tr{
+   transition: .2s ease-in-out;
+}
+
+.property-table.table-striped tbody tr:hover {
+   background-color: $tableHeaderColor !important;
+}
+
+
+
+table.dataTable>thead .sorting,
+table.dataTable>thead .sorting_asc,
+table.dataTable>thead .sorting_desc{
+   &:after, &:before{
+      content: '' !important;
+      background-color: #000000;
+      width: 5px;
+      height: 5px;
+   }
+   &:after{
+      clip-path: polygon(100% 100%, 0 100%, 50% 0);
+   }
+   &:before{
+      clip-path: polygon(100% 0, 0 0, 50% 100%);
+   }
+}
