@@ -20,7 +20,30 @@
 <div class="ra-property-list mt-5 dashbaord-main">
     <div class="row">
         <div class="col-md-12">
-            {% include "snippets/propertyDataTable.njk" %}
+            <div class="dataTable ">
+                <div class="property-data-table-head d-flex flex-wrap justify-content-between">
+                    <h2 class="fw-500 fz24">List of Properties</h2>
+
+                    <div class="propert-header-right d-flex flex-wrap">
+                        <fieldset class="rs-form mr-2">
+                            <select class="ra-select fw-700 fz16">
+                                <option class="fz18 fw-500" value="bangladesh" selected>Bangladesh</option>
+                                <option class="fz18 fw-500" value="saudi arabia">Saudi Arabia</option>
+                                <option class="fz18 fw-500" value="us">Uinited State Of America</option>
+                                <option class="fz18 fw-500" value="india">India</option>
+                            </select>
+                        </fieldset>
+                        <fieldset class="rs-form">
+                            <label class="position-absolute ra-search-label" for="searchInput">
+                                <span><img src="../../assets/images/icons/search.svg" alt="Search Icon"></span>
+                            </label>
+                            <input type="search" class="rs-input pr-5" id="searchInput"
+                                placeholder="enter property name">
+                        </fieldset>
+                    </div>
+                </div>
+                {% include "snippets/propertyDataTable.njk" %}
+            </div>
         </div>
     </div>
 </div>

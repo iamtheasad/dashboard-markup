@@ -42,14 +42,14 @@
                 }
             });
 
-            $('.type-toggle').on('click', function(){
-                var input =  $(this).siblings('.rs-input');
-                if(input.val()){
-                    if(input.attr('type') == 'text'){
-                       input.attr('type', 'password');
-                       $(this).removeClass('mdi-eye-off');
-                       $(this).addClass('mdi-eye');
-                    }else{
+            $('.type-toggle').on('click', function () {
+                var input = $(this).siblings('.rs-input');
+                if (input.val()) {
+                    if (input.attr('type') == 'text') {
+                        input.attr('type', 'password');
+                        $(this).removeClass('mdi-eye-off');
+                        $(this).addClass('mdi-eye');
+                    } else {
                         input.attr('type', 'text');
                         $(this).removeClass('mdi-eye');
                         $(this).addClass('mdi-eye-off');
@@ -197,19 +197,20 @@
     /*==========================================================================
         Bootsrtrap Data Table
     ==========================================================================*/
-    $(document).ready(function() {
+    $(document).ready(function () {
         $('#propertyDataTable').DataTable({
-            "paging": false
+            "paging": false,
+            "searching": false,
         });
-    } );
-    
+    });
+
 
     /*==========================================================================
         WHEN DOCUMENT LOADING
     ==========================================================================*/
     $(window).on('load', function () {
         inputAnimate();
-        
+
         // will load on end
         pageLoader();
 
@@ -228,7 +229,7 @@
     $(window).on("resize", function () {
         //
     });
-    
+
 })(window.jQuery);
 
 
