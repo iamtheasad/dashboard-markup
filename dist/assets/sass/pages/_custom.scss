@@ -38,7 +38,7 @@ input[type="text"] {
 }
 
 .ra-select {
-   width: 30%;
+   // width: 30%;
    padding: 10px;
    /* Replace Default styling (arrow) */
    appearance: none;
@@ -157,39 +157,62 @@ input[type="text"] {
    top: 3%;
 }
 
-
 //Property Data Table
 .ra-table-head {
    background-color: $tableHeaderColor;
 }
 
-.property-table.table-striped tbody tr:nth-of-type(odd){
+.property-table.table-striped tbody tr:nth-of-type(odd) {
    background-color: $tableRowColor !important;
 }
 
-.property-table.table-striped tbody tr{
-   transition: .2s ease-in-out;
+.property-table.table-striped tbody tr {
+   transition: 0.2s ease-in-out;
 }
 
 .property-table.table-striped tbody tr:hover {
    background-color: $tableHeaderColor !important;
 }
 
-
-
-table.dataTable>thead .sorting,
-table.dataTable>thead .sorting_asc,
-table.dataTable>thead .sorting_desc{
-   &:after, &:before{
-      content: '' !important;
-      background-color: #000000;
-      width: 5px;
-      height: 5px;
+table.dataTable > thead .sorting,
+table.dataTable > thead .sorting_asc,
+table.dataTable > thead .sorting_desc {
+   &:after,
+   &:before {
+      content: "" !important;
+      background-color: $black;
+      width: 12px;
+      height: 5.25px;
+      right: 6%;
    }
-   &:after{
-      clip-path: polygon(100% 100%, 0 100%, 50% 0);
+   &:after {
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+      top: 50%;
    }
-   &:before{
-      clip-path: polygon(100% 0, 0 0, 50% 100%);
+   &:before {
+      clip-path: polygon(50% 100%, 0 0, 100% 0);
+      top: 59%;
+   }
+}
+
+.propert-header-right input,
+.propert-header-right select {
+   border-radius: 30px !important;
+   border-color: $borderColor;
+   transition: 0.2s ease-in-out;
+   min-height: 48px !important;
+   color: $primaryColor;
+   width: 250px;
+}
+
+.propert-header-right select:focus {
+   border-color: $black;
+}
+
+.propert-header-right {
+   .ra-search-label {
+      top: 50%;
+      right: 5%;
+      transform: translateY(-50%);
    }
 }

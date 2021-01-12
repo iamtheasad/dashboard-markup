@@ -202,6 +202,11 @@
             "paging": false,
             "searching": false,
         });
+
+        // $('#propertyDataTable').DataTable({
+        //     "paging": false,
+        //     "searching": false,
+        // });
     });
 
 
