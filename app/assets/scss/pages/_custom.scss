@@ -187,11 +187,11 @@ table.dataTable > thead .sorting_desc {
    }
    &:after {
       clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-      top: 50%;
+      top: 37%;
    }
    &:before {
       clip-path: polygon(50% 100%, 0 0, 100% 0);
-      top: 65%;
+      top: 53%;
    }
 }
 

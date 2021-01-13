@@ -203,10 +203,10 @@
             "searching": false,
         });
 
-        // $('#propertyDataTable').DataTable({
-        //     "paging": false,
-        //     "searching": false,
-        // });
+        $('#propertyDetailsDataTable').DataTable({
+            "paging": false,
+            "searching": false,
+        });
     });
 
 
