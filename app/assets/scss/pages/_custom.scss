@@ -216,3 +216,29 @@ table.dataTable > thead .sorting_desc {
       border: none;
    }
 }
+
+// Block Add Page
+.ra-add-block-select {
+   background-color: $tableRowColor !important;
+}
+
+.ra-add-block-input {
+   background-color: $tableRowColor;
+   background-image: url(url('data:image/svg+xml;utf8,<svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0.126953L8 8.12695L16 0.126953H0Z" fill="#8E8E93"/></svg>'));
+}
+
+.ra-block-add-select-bg option {
+   background-color: $tableRowColor;
+}
+
+.ra-block-add-btn {
+   background-color: $blockAddBtn;
+   color: $white !important;
+   padding: 8px 12px !important;
+   display: unset;
+   border: none;
+}
+
+.ra-block-add-btn:hover {
+   color: $white !important;
+}
