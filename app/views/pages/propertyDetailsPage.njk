@@ -5,7 +5,7 @@
 {% include "snippets/propertyDetailsReport.njk" %}
 
 <div class="d-card">
-    <div class="user-wrapper pl-4">
+    <div class="user-wrapper">
         <h2 class="fz24 fw-500 mb-3">Add New Place for Advertise</h2>
 
         <p class="fz12 gray-color">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
@@ -19,7 +19,7 @@
         {% include 'snippets/modals/propertyDetailsModal.njk' %}
     </div>
 </div>
-<div class="ra-property-list mt-5 dashbaord-main">
+<div class="ra-data-table-bg p-3 pt-5 radius_8  ra-property-list mt-5 dashbaord-main">
     <div class="row">
         <div class="col-md-12">
             <div class="dataTable table-responsive">
@@ -35,13 +35,13 @@
                                 <option class="fz18 fw-500" value="india">India</option>
                             </select>
                         </fieldset>
-                        <fieldset class="rs-form">
-                            <label class="position-absolute ra-search-label" for="searchInput">
-                                <span><img src="../../assets/images/icons/search.svg" alt="Search Icon"></span>
-                            </label>
+                        <form action="" class="rs-form">
+                            <button type="submit" class="position-absolute ra-search-label" for="searchInput">
+                                <img src="../../assets/images/icons/search.svg" alt="Search Icon">
+                            </button>
                             <input type="search" class="rs-input pr-5" id="searchInput"
                                 placeholder="enter property name">
-                        </fieldset>
+                        </form>
                     </div>
                 </div>
 

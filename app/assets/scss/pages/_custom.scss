@@ -87,14 +87,12 @@ input[type="text"] {
    height: 72px;
 }
 
-.user_img {
+.user_img label {
    background-color: #fff;
-   display: flex;
-   justify-content: center;
-   align-items: center;
+   padding: 25px;
+   border-radius: 50%;
    width: 128px;
    height: 128px;
-   border-radius: 50%;
 }
 
 .user_btn .rs-btn {
@@ -214,5 +212,7 @@ table.dataTable > thead .sorting_desc {
       top: 50%;
       right: 5%;
       transform: translateY(-50%);
+      background: transparent;
+      border: none;
    }
 }

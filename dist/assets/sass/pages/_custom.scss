@@ -87,13 +87,19 @@ input[type="text"] {
    height: 72px;
 }
 
-.user_img {
+// .user_img {
+//    background-color: #fff;
+//    display: flex;
+//    justify-content: center;
+//    align-items: center;
+//    width: 128px;
+//    height: 128px;
+//    border-radius: 50%;
+// }
+
+.user_img label {
    background-color: #fff;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   width: 128px;
-   height: 128px;
+   padding: 25px;
    border-radius: 50%;
 }
 
@@ -187,11 +193,11 @@ table.dataTable > thead .sorting_desc {
    }
    &:after {
       clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-      top: 50%;
+      top: 37%;
    }
    &:before {
       clip-path: polygon(50% 100%, 0 0, 100% 0);
-      top: 59%;
+      top: 53%;
    }
 }
 
