@@ -80,8 +80,10 @@
             </div>
 
             <div class="user_btn mr-2">
-                <a href="javascript:void(0)" class="rs-btn rs-btn-lg uppercase fz20">edit</a>
+                <button data-target="#placeEditModal" data-toggle="modal" class="rs-btn rs-btn-lg uppercase fz20">edit</button>
             </div>
+
+            {% include "snippets/modals/placeEditModal.njk" %}
         </div>
     </div>
 </div>
