@@ -82,18 +82,20 @@ input[type="text"] {
    font-size: unset;
 }
 
-// Users Page
-.user_img img {
-   width: 72px;
-   height: 72px;
+.profile_image {
+   width: 100%;
+}
+
+.user_img {
+   max-width: 128px;
+   margin: 0 auto;
 }
 
 .user_img label {
-   background-color: #fff;
-   padding: 25px;
+   background: #fff;
+   width: 100%;
    border-radius: 50%;
-   width: 128px;
-   height: 128px;
+   padding: 20px;
 }
 
 .user_btn .rs-btn {
