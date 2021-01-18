@@ -51,10 +51,10 @@
         font-size: rem(14px) !important;
         padding: 8px 10px !important;
     }
-    @media (max-width: 575) {
+    @media (max-width: 575px) {
         font-size: rem(10px) !important;
         padding: 8px 8px !important;
-        letter-spacing: 0px;
+        letter-spacing: 1px;
     }
 }
 
