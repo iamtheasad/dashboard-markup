@@ -97,6 +97,9 @@
     .checkbox-label{
         padding-left: 32px;
         position: relative;
+        @media(max-width: 575px){
+            font-size: rem(12px);
+        }
         &:before, &:after{
             content: '';
             position: absolute;
@@ -105,6 +108,10 @@
             top: 0;
             left: 0;
             border-radius: 4px;
+            @media(max-width: 575px){
+                width: 20px;
+                height: 20px;
+            }
         }
         &:before{
             border: 2px solid #8E8E93;
