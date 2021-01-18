@@ -8,15 +8,14 @@
 }
 
 // Payment Account Option
-.payment_item {
-   text-align: center;
-}
-
-.payment_item button {
-   background-color: #fff;
-   border-color: transparent;
-   border-radius: 8px;
+.payment-btn {
+   width: 120px;
+   height: 90px;
    border: 1px dashed transparent;
+   @media (max-width: 576px) {
+      width: 60px;
+      height: 60px;
+   }
 }
 
 .dashed_border {
@@ -50,6 +49,9 @@ input[type="text"] {
    background-position-x: 95%;
    min-height: 64px;
    border-radius: 4px;
+   @media (max-width: 992px) {
+      min-height: 40px;
+   }
 }
 
 .ra-select:focus {
@@ -256,16 +258,20 @@ table.dataTable > thead .sorting_desc {
 }
 
 .acitivity-icon-wrapper {
-    background: $tableRowColor;
-    max-width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+   background: $tableRowColor;
+   max-width: 48px;
+   height: 48px;
+   border-radius: 50%;
+   width: 100%;
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
 }
 
 .activity-icon {
-    max-width: 21px;
+   max-width: 21px;
+}
+
+th.sorting {
+   white-space: nowrap;
 }

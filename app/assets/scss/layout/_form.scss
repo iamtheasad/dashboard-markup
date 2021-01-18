@@ -37,6 +37,9 @@
         font-size: rem(16);
         transition: .2s ease-in-out;
         color: $black;
+        @media(max-width: 992px){
+           min-height: 40px;
+        }
     }
     .icon{
         width: 24px;
