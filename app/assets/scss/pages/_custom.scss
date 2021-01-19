@@ -80,33 +80,17 @@ input[type="text"] {
 }
 
 // Add Payment Account
-
-// .profile_image {
-//    width: 100%;
-// }
-
 .user_img {
    background: #fff;
-   max-width: 96px;
-   width: 100%;
+   width: 96px;
    height: 96px;
    border-radius: 50%;
-   display: flex;
-   justify-content: center;
-   align-items: center;
 }
 
-// .user_img {
-//    max-width: 128px;
-//    margin: 0 auto;
-// }
-
-// .user_img label {
-//    background: #fff;
-//    width: 100%;
-//    border-radius: 50%;
-//    padding: 20px;
-// }
+.setting-user-img {
+   width: 128px;
+   height: 128px;
+}
 
 .user_btn .rs-btn {
    display: inline-flex !important;
