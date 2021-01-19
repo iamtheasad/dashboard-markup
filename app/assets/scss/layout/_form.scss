@@ -1,8 +1,5 @@
 .rs-form { 
     position: relative;
-    @media(max-width: 575px){
-        margin-top: 20px;
-    }
     &.password-form{
         .rs-input{
             padding-right: 50px;
@@ -134,5 +131,15 @@
     .rs-checkbox-input:checked + .checkbox-label:after{
         opacity: 1;
         visibility: visible;
+    }
+}
+
+.acitvity-log-search {
+    max-width: 400px;
+    width: 100%;
+    float: right;
+    @media(max-width: 767px){
+    margin-top: 20px;
+    float: left;
     }
 }
