@@ -1,5 +1,8 @@
 .rs-form { 
     position: relative;
+    @media(max-width: 575px){
+        margin-top: 20px;
+    }
     &.password-form{
         .rs-input{
             padding-right: 50px;

@@ -9,6 +9,10 @@
         padding-left: 30px;
         padding-right: 30px;
     }
+    @media(max-width: 575px){
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
 
 .d-card{

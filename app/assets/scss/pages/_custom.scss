@@ -81,7 +81,7 @@ input[type="text"] {
 
 // Add Payment Account
 .user_img {
-   background: #fff;
+   background: $white;
    width: 96px;
    height: 96px;
    border-radius: 50%;
@@ -201,6 +201,9 @@ table.dataTable > thead .sorting_desc {
 
 .propert-header-right select {
    width: 250px;
+   // @media(max-width: 575px){
+   //    width: 100%;
+   // }
 }
 
 .propert-header-right select:focus {
