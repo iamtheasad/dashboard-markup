@@ -238,10 +238,11 @@ table.dataTable>thead .sorting_desc {
 .propert-header-right {
    .ra-search-label {
       top: 50%;
-      right: 5%;
+      right: 0%;
       transform: translateY(-50%);
       background: transparent;
       border: none;
+      height: 100%;
    }
 }
 
@@ -271,6 +272,10 @@ table.dataTable>thead .sorting_desc {
    color: $white !important;
 }
 
+th.sorting_asc {
+   white-space: nowrap;
+}
+
 // Acitvity Log
 .ra-activity-log-wrapper {
    border: 1px solid $primaryBg;
@@ -282,10 +287,6 @@ table.dataTable>thead .sorting_desc {
       max-width: 400px;
       width: 100% !important;
    }
-}
-
-.ra-activity-log-text {
-   position: relative;
 }
 
 .acitivity-icon-wrapper {
