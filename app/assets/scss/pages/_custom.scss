@@ -225,9 +225,8 @@ table.dataTable>thead .sorting_desc {
    width: 100%;
    padding-left: 25px;
 
-   @media(max-width: 420px) {
-      margin-bottom: 15px;
-      margin-top: 20px;
+   @media(max-width: 767px) {
+      max-width: 100%;
    }
 }
 
@@ -282,6 +281,10 @@ th.sorting_asc {
 .ra-activity-log-wrapper {
    border: 1px solid $primaryBg;
    position: relative;
+
+   @media(max-width: 767px) {
+      text-align: center;
+   }
 }
 
 @media(max-width: 767px) {
@@ -300,6 +303,12 @@ th.sorting_asc {
    position: absolute;
    top: 50%;
    transform: translateY(-50%);
+
+   @media(max-width: 767px) {
+      position: unset;
+      margin: auto;
+      margin-top: 25px;
+   }
 }
 
 .activity-icon {
@@ -308,4 +317,11 @@ th.sorting_asc {
 
 th.sorting {
    white-space: nowrap;
+}
+
+@media(max-width: 767px) {
+   .ra-activity-log-text {
+      padding: 0px !important;
+      margin: 0px !important;
+   }
 }
