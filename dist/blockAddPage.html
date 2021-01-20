@@ -46,7 +46,16 @@
                         </div>
                     </li>
 
-                    <li><a href=""><img class="icon" src="assets/images/icons/money.svg" alt="">Payments</a></li>
+                    <li>
+                        <a href="#payment-sidebar-menu" data-toggle="collapse"><img class="icon" src="assets/images/icons/money.svg" alt="">Payments</a>
+                        <div id="payment-sidebar-menu" class="collapse">
+                            <ul>
+                                <li><a href="estimatedRevenuePage.html">Estimated Revennue</a></li>
+                                <li><a href="">Finilized Payments</a></li>
+                                <li><a href="">Balance</a></li>
+                            </ul>
+                        </div>
+                    </li>
                     <li>
                         <a href="#settings-sidebar-menu" data-toggle="collapse">
                             <img class="icon" src="assets/images/icons/settings.svg" alt="">Settings
@@ -160,93 +169,139 @@
     Bootstrap Table all class name: table table-striped table-hover table-bordered  table-borderless table-sm
  -->
 
-                                <table id="blocAddDataTable" class="property-table table table-striped table-hover" style="width:100%">
+                                <table id="estimatedRevenueDataTable" class="property-table table table-striped table-hover" style="width:100%">
                                     <thead class="ra-table-head">
                                         <tr>
-                                            <th>Property Name</th>
-                                            <th>URL</th>
-                                            <th>Blocked By</th>
-                                            <th>Modified</th>
-                                            <th>Action</th>
+                                            <th>Date</th>
+                                            <th>Ad Requests</th>
+                                            <th>Impressions</th>
+                                            <th>Clicks</th>
+                                            <th>CTR</th>
+                                            <th>eCPC</th>
+                                            <th>eCPM</th>
+                                            <th>Revenue</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>PropertyName 1</td>
-                                            <td>www.block.website.com</td>
-                                            <td>user@email.com</td>
-                                            <td>2020-10-05 18:42:41</td>
-                                            <td><span class="mdi mdi-trash-can rs-btn ra-block-add-btn fz14 uppercase"> Delete</span></td>
+                                            <td>2020-10-15</td>
+                                            <td>1,625,790,161</td>
+                                            <td>856,651,740</td>
+                                            <td>148,673</td>
+                                            <td>5.5%</td>
+                                            <td>৳ 30.20</td>
+                                            <td>৳ 30.20</td>
+                                            <td>৳ 1,702,908</td>
                                         </tr>
                                         <tr>
-                                            <td>PropertyName 1</td>
-                                            <td>www.block.website.com</td>
-                                            <td>user@email.com</td>
-                                            <td>2020-10-05 18:42:41</td>
-                                            <td><span class="mdi mdi-trash-can rs-btn ra-block-add-btn fz14 uppercase"> Delete</span></td>
+                                            <td>2020-10-15</td>
+                                            <td>1,625,790,161</td>
+                                            <td>856,651,740</td>
+                                            <td>148,673</td>
+                                            <td>5.5%</td>
+                                            <td>৳ 30.20</td>
+                                            <td>৳ 30.20</td>
+                                            <td>৳ 1,702,908</td>
                                         </tr>
                                         <tr>
-                                            <td>PropertyName 1</td>
-                                            <td>www.block.website.com</td>
-                                            <td>user@email.com</td>
-                                            <td>2020-10-05 18:42:41</td>
-                                            <td><span class="mdi mdi-trash-can rs-btn ra-block-add-btn fz14 uppercase"> Delete</span></td>
+                                            <td>2020-10-15</td>
+                                            <td>1,625,790,161</td>
+                                            <td>856,651,740</td>
+                                            <td>148,673</td>
+                                            <td>5.5%</td>
+                                            <td>৳ 30.20</td>
+                                            <td>৳ 30.20</td>
+                                            <td>৳ 1,702,908</td>
                                         </tr>
                                         <tr>
-                                            <td>PropertyName 1</td>
-                                            <td>www.block.website.com</td>
-                                            <td>user@email.com</td>
-                                            <td>2020-10-05 18:42:41</td>
-                                            <td><span class="mdi mdi-trash-can rs-btn ra-block-add-btn fz14 uppercase"> Delete</span></td>
+                                            <td>2020-10-15</td>
+                                            <td>1,625,790,161</td>
+                                            <td>856,651,740</td>
+                                            <td>148,673</td>
+                                            <td>5.5%</td>
+                                            <td>৳ 30.20</td>
+                                            <td>৳ 30.20</td>
+                                            <td>৳ 1,702,908</td>
                                         </tr>
                                         <tr>
-                                            <td>PropertyName 1</td>
-                                            <td>www.block.website.com</td>
-                                            <td>user@email.com</td>
-                                            <td>2020-10-05 18:42:41</td>
-                                            <td><span class="mdi mdi-trash-can rs-btn ra-block-add-btn fz14 uppercase"> Delete</span></td>
+                                            <td>2020-10-15</td>
+                                            <td>1,625,790,161</td>
+                                            <td>856,651,740</td>
+                                            <td>148,673</td>
+                                            <td>5.5%</td>
+                                            <td>৳ 30.20</td>
+                                            <td>৳ 30.20</td>
+                                            <td>৳ 1,702,908</td>
                                         </tr>
                                         <tr>
-                                            <td>PropertyName 1</td>
-                                            <td>www.block.website.com</td>
-                                            <td>user@email.com</td>
-                                            <td>2020-10-05 18:42:41</td>
-                                            <td><span class="mdi mdi-trash-can rs-btn ra-block-add-btn fz14 uppercase"> Delete</span></td>
+                                            <td>2020-10-15</td>
+                                            <td>1,625,790,161</td>
+                                            <td>856,651,740</td>
+                                            <td>148,673</td>
+                                            <td>5.5%</td>
+                                            <td>৳ 30.20</td>
+                                            <td>৳ 30.20</td>
+                                            <td>৳ 1,702,908</td>
                                         </tr>
                                         <tr>
-                                            <td>PropertyName 1</td>
-                                            <td>www.block.website.com</td>
-                                            <td>user@email.com</td>
-                                            <td>2020-10-05 18:42:41</td>
-                                            <td><span class="mdi mdi-trash-can rs-btn ra-block-add-btn fz14 uppercase"> Delete</span></td>
+                                            <td>2020-10-15</td>
+                                            <td>1,625,790,161</td>
+                                            <td>856,651,740</td>
+                                            <td>148,673</td>
+                                            <td>5.5%</td>
+                                            <td>৳ 30.20</td>
+                                            <td>৳ 30.20</td>
+                                            <td>৳ 1,702,908</td>
                                         </tr>
                                         <tr>
-                                            <td>PropertyName 1</td>
-                                            <td>www.block.website.com</td>
-                                            <td>user@email.com</td>
-                                            <td>2020-10-05 18:42:41</td>
-                                            <td><span class="mdi mdi-trash-can rs-btn ra-block-add-btn fz14 uppercase"> Delete</span></td>
+                                            <td>2020-10-15</td>
+                                            <td>1,625,790,161</td>
+                                            <td>856,651,740</td>
+                                            <td>148,673</td>
+                                            <td>5.5%</td>
+                                            <td>৳ 30.20</td>
+                                            <td>৳ 30.20</td>
+                                            <td>৳ 1,702,908</td>
                                         </tr>
                                         <tr>
-                                            <td>PropertyName 1</td>
-                                            <td>www.block.website.com</td>
-                                            <td>user@email.com</td>
-                                            <td>2020-10-05 18:42:41</td>
-                                            <td><span class="mdi mdi-trash-can rs-btn ra-block-add-btn fz14 uppercase"> Delete</span></td>
+                                            <td>2020-10-15</td>
+                                            <td>1,625,790,161</td>
+                                            <td>856,651,740</td>
+                                            <td>148,673</td>
+                                            <td>5.5%</td>
+                                            <td>৳ 30.20</td>
+                                            <td>৳ 30.20</td>
+                                            <td>৳ 1,702,908</td>
                                         </tr>
                                         <tr>
-                                            <td>PropertyName 1</td>
-                                            <td>www.block.website.com</td>
-                                            <td>user@email.com</td>
-                                            <td>2020-10-05 18:42:41</td>
-                                            <td><span class="mdi mdi-trash-can rs-btn ra-block-add-btn fz14 uppercase"> Delete</span></td>
+                                            <td>2020-10-15</td>
+                                            <td>1,625,790,161</td>
+                                            <td>856,651,740</td>
+                                            <td>148,673</td>
+                                            <td>5.5%</td>
+                                            <td>৳ 30.20</td>
+                                            <td>৳ 30.20</td>
+                                            <td>৳ 1,702,908</td>
                                         </tr>
                                         <tr>
-                                            <td>PropertyName 1</td>
-                                            <td>www.block.website.com</td>
-                                            <td>user@email.com</td>
-                                            <td>2020-10-05 18:42:41</td>
-                                            <td><span class="mdi mdi-trash-can rs-btn ra-block-add-btn fz14 uppercase"> Delete</span></td>
+                                            <td>2020-10-15</td>
+                                            <td>1,625,790,161</td>
+                                            <td>856,651,740</td>
+                                            <td>148,673</td>
+                                            <td>5.5%</td>
+                                            <td>৳ 30.20</td>
+                                            <td>৳ 30.20</td>
+                                            <td>৳ 1,702,908</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2020-10-15</td>
+                                            <td>1,625,790,161</td>
+                                            <td>856,651,740</td>
+                                            <td>148,673</td>
+                                            <td>5.5%</td>
+                                            <td>৳ 30.20</td>
+                                            <td>৳ 30.20</td>
+                                            <td>৳ 1,702,908</td>
                                         </tr>
                                     </tbody>
                                 </table>
