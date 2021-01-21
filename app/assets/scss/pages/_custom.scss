@@ -407,3 +407,12 @@ th.sorting {
 div.dataTables_wrapper div.dataTables_info {
    display: none;
 }
+
+/***********************************
+// Invoice All
+**************************************/
+.invoice-btn {
+   background-color: $dataTableSearchBgColor !important;
+   color: $paymentInputColor3 !important;
+   border: none;
+}
