@@ -1,0 +1,53 @@
+{% extends "layouts/layout.njk" %}
+
+{% block content %}
+<div class="d-card">
+   <div class="d-flex align-items-center">
+      <div class="col">
+         <h4 class="fz20 fw-400">Total Revenue</h4>
+         <span class="fw-700 fz24 lh-2">৳ 71,085.28</span>
+      </div>
+      <div class="col d-flex justify-content-end">
+         <button class="rs-btn rs-btn-lg rs-btn-primary uppercase fz20">Process Payment</button>
+      </div>
+   </div>
+</div>
+
+<div class="ra-data-table-bg p-3 radius_8 ra-property-list dashbaord-main">
+   <div class="row">
+       <div class="col-md-12">
+           <div class="property-data-table-head mb-2">
+               <h2 class="fw-500 fz24">Monthly Information</h2>
+
+               <div class="propert-header-right">
+                   <fieldset class="rs-form mr-2">
+                       <select class="ra-select min-height-40 form-width fw-700 fz16">
+                           <option class="fz18 fw-500" value="bangladesh" selected>All Sources</option>
+                           <option class="fz18 fw-500" value="bangladesh" selected>All Sources</option>
+                           <option class="fz18 fw-500" value="bangladesh" selected>All Sources</option>
+                           <option class="fz18 fw-500" value="bangladesh" selected>All Sources</option>
+                           <option class="fz18 fw-500" value="bangladesh" selected>All Sources</option>
+                           <option class="fz18 fw-500" value="saudi arabia">Saudi Arabia</option>
+                           <option class="fz18 fw-500" value="india">India</option>
+                       </select>
+                   </fieldset>
+                   <form action="" class="rs-form">
+                       <button type="submit" class="position-absolute ra-search-label" for="searchInput">
+                           <img src="assets/images/icons/search.svg" alt="Search Icon">
+                       </button>
+                       <input type="search" class="rs-input min-height-48 pr-5" id="searchInput" placeholder="enter ad place name">
+                   </form>
+               </div>
+           </div>
+           <div class="dataTable table-responsive">
+
+               {% include "snippets/dataTable/finalizedPaymentMonthlyInfoDataTable.njk" %}
+
+               <div class="load-more-btn d-flex justify-content-center">
+                  <button class="rs-btn rs-btn-trans uppercase">Load More <span class="mdi mdi-reload fz20 pl-1"></span></button>
+               </div>
+           </div>
+       </div>
+   </div>
+</div>
+{% endblock %}
