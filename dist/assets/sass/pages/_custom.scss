@@ -416,3 +416,11 @@ div.dataTables_wrapper div.dataTables_info {
    color: $paymentInputColor3 !important;
    border: none;
 }
+
+.requestUnpaiddModal-content .close {
+   position: absolute;
+   right: 2%;
+   top: 4%;
+}
+
+
