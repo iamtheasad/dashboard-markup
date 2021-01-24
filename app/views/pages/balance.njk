@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="row">
-   <div class="col-md-3 col-sm-6">
+   <div class="col-md-3 col-sm-6 mb-2 mb-md-4">
       <div class="balance-card d-card ml-md-2 mt-3 mt-md-0">
          <div class="d-flex justify-content-between">
             <div>
@@ -45,5 +45,14 @@
 </div>
 
 
+<div class="ra-data-table-bg p-1 pt-3 radius_8 ra-property-list dashbaord-main">
+   <div class="row">
+      <div class="col-md-12">
+         <div class="dataTable table-responsive">
+            {% include "snippets/dataTable/balanceDataTable.njk" %}
+         </div>
+      </div>
+   </div>
+</div>
 
 {% endblock %}

@@ -191,8 +191,16 @@ input[type="text"] {
    background-color: $tableHeaderColor;
 }
 
+.ra-balance-table {
+   background-color: $tableRowColor;
+}
+
 .property-table.table-striped tbody tr:nth-of-type(odd) {
    background-color: $tableRowColor !important;
+}
+
+.property-table.balance-table tbody tr:nth-of-type(odd) {
+   background-color: unset !important;
 }
 
 .property-table.table-striped tbody tr {
@@ -335,7 +343,7 @@ th.sorting_asc {
    max-width: 21px;
 }
 
-th.sorting {
+th.sorting, .table thead th {
    white-space: nowrap;
 }
 
