@@ -203,6 +203,25 @@ input[type="text"] {
    background-color: unset !important;
 }
 
+.table td,
+.table th td.border-top-0 {
+   border-top: none !important;
+   white-space: nowrap;
+}
+
+.balance-table-wrapper tbody .balance-btn-row:hover {
+   background-color: #eceef3;
+}
+
+td.border-top-0 {
+   padding: 0px;
+}
+
+.balance-table-wrapper.table thead th {
+   border-bottom: none;
+   vertical-align: middle;
+}
+
 .property-table.table-striped tbody tr {
    transition: 0.2s ease-in-out;
 }
@@ -343,7 +362,8 @@ th.sorting_asc {
    max-width: 21px;
 }
 
-th.sorting, .table thead th {
+th.sorting,
+.table thead th {
    white-space: nowrap;
 }
 
@@ -430,5 +450,3 @@ div.dataTables_wrapper div.dataTables_info {
    right: 2%;
    top: 4%;
 }
-
-
