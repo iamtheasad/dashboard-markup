@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G&R</title>
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/jpg">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
+    <!-- Bootstrap Table Css Link -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.18.1/dist/bootstrap-table.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css">
+
+    <!-- build:css assets/css/all.min.css -->
+    <link rel="stylesheet" href="assets/css/vendor.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- endbuild -->
+    <script type="text/javascript" src="assets/vendor/jQuery/jquery.min.js"></script>
+</head>
+
+<body class="preloader">
+    <div class="d-flex">
+        <section class="sidebar-menu scrollbar">
+            <div class="site-logo">
+                <a class="d-block" href="/">
+                    <img src="assets/images/logo.svg" alt="G&R">
+                </a>
+            </div>
+            <div class="menu-area">
+                <ul>
+                    <li class="active"><a href="/"><img class="icon" src="assets/images/icons/dashboard.svg" alt=""> Dashboard</a></li>
+                    <li><a href="properties.html"><img class="icon" src="assets/images/icons/ad-properties.svg" alt="">Properties</a></li>
+                    <li><a href="placesAllAdded.html"><img class="icon" src="assets/images/icons/adplace.svg" alt="">Ad Place</a></li>
+
+                    <li>
+                        <a href="#report-sidebar-menu" data-toggle="collapse">
+                            <img class="icon" src="assets/images/icons/report.svg" alt="">Report
+                        </a>
+                        <div id="report-sidebar-menu" class="collapse">
+                            <ul>
+                                <li><a href="">Overview</a></li>
+                                <li><a href="">Location</a></li>
+                                <li><a href="">Revenue </a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="#payment-sidebar-menu" data-toggle="collapse"><img class="icon" src="assets/images/icons/money.svg" alt="">Payments</a>
+                        <div id="payment-sidebar-menu" class="collapse">
+                            <ul>
+                                <li><a href="estimatedRevenuePage.html">Estimated Revennue</a></li>
+                                <li><a href="finilizedPayment.html">Finilized Payments</a></li>
+                                <li><a href="">Balance</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#settings-sidebar-menu" data-toggle="collapse">
+                            <img class="icon" src="assets/images/icons/settings.svg" alt="">Settings
+                        </a>
+                        <div id="settings-sidebar-menu" class="collapse">
+                            <ul>
+                                <li><a href="accountSettings.html">Account Settings</a></li>
+                                <li><a href="users.html">Users</a></li>
+                                <li><a href="activityLogPage.html">Activity Log</a></li>
+                                <li><a href="login.html">Logout</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <main class="dashboard-main">
+            <header class="topbar sticky-top d-flex justify-content-between align-items-center">
+                <div class="breadcumb fz24 fw-500">
+                    <div class="d-flex align-items-center">
+                        <!-- <i class="mdi mdi-arrow-left"></i> -->
+                        <span>Wecome to Publisher Dashboard</span>
+                    </div>
+                </div>
+                <div class="right-menu">
+                    <div class="account-menu d-flex align-items-center">
+                        <div class="avater">
+                            <img src="http://via.placeholder.com/48x48" alt="">
+                        </div>
+                        <div class="acc-name">Publisher</div>
+
+                        <div class="dropdown">
+                            <button class="dropdown-toggle dropdown-icon" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="mdi mdi-menu-down"></i>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <ul>
+                                    <li><a href="">Account Settings</a></li>
+                                    <li><a href="">বাংলা ভাষা নির্বাচন</a></li>
+                                    <li><a href="">Take a Tour</a></li>
+                                    <li><a href="">Account Settings</a></li>
+                                    <li><a href="login.html">Logout</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </header>
+
+            <!-- Publisher Invoice Payment Process Header -->
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 class="fz24 fw-500">Publisher Invoice - 161553</h3>
+                    <p class="fz12 fw-400 gray-color pt-2 pb-3">
+                        Address: 371/A, Block-D, Bashundhara R/A, Dhaka-1229, Bangladesh.<br />
+         Phone: +8801743831115<br />
+         bKash Number: 01766694696<br />
+         Payee Name: The Daily Kalerkantho<br />
+         Total Payable: ৳71,085.28<br />
+         In Word: Seventy-one Thousand And Eighty-five Taka<br />
+                    </p>
+                    <button class="rs-btn rs-btn-primary rs-btn-lg uppercase">Download</button>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-card ml-md-4 mt-3 mt-md-0">
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <h3 class="fz20 fw-400">Total Revenue</h3>
+                                <span class="fz24 fw-700 mt-1">৳ 60,419.75</span>
+                            </div>
+
+                            <div>
+                                <h3 class="fz20 fw-400">Payment Status</h3>
+                                <span class="fz24 fw-700 mt-1">Partial Paid</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Invoice Payment Process Table -->
+            <div class="ra-data-table-bg mb-4 mt-5 p-3 radius_8 ra-property-list dashbaord-main">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="dataTable table-responsive">
+
+                            <!--
+    Bootstrap Table all class name: table table-striped table-hover table-bordered  table-borderless table-sm
+ -->
+
+                            <table id="publisherInvoicePaymentProcessPropertiesDataTable" class="property-table table table-striped table-hover" style="width:100%">
+                                <thead class="ra-table-head">
+                                    <tr>
+                                        <th>Properties</th>
+                                        <th>Property Type</th>
+                                        <th>Request</th>
+                                        <th>Impressions</th>
+                                        <th>Fill Rate</th>
+                                        <th>Clicks</th>
+                                        <th>CTR</th>
+                                        <th>eCPM</th>
+                                        <th>Revenue</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>PropertyName 1</td>
+                                        <td>Website</td>
+                                        <td>1,625,790,161</td>
+                                        <td>856,651,740</td>
+                                        <td>85.29%</td>
+                                        <td>148,673</td>
+                                        <td>5.5%</td>
+                                        <td>৳ 1,702</td>
+                                        <td>৳ 1,702,908</td>
+                                    </tr>
+                                    <tr>
+                                        <td>PropertyName 1</td>
+                                        <td>App</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>৳ 0</td>
+                                        <td>৳ 0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>PropertyName 1</td>
+                                        <td>Website</td>
+                                        <td>1,625,790,161</td>
+                                        <td>856,651,740</td>
+                                        <td>85.29%</td>
+                                        <td>148,673</td>
+                                        <td>5.5%</td>
+                                        <td>৳ 1,702</td>
+                                        <td>৳ 1,702,908</td>
+                                    </tr>
+                                    <tr>
+                                        <td>PropertyName 1</td>
+                                        <td>Website</td>
+                                        <td>1,625,790,161</td>
+                                        <td>856,651,740</td>
+                                        <td>85.29%</td>
+                                        <td>148,673</td>
+                                        <td>5.5%</td>
+                                        <td>৳ 1,702</td>
+                                        <td>৳ 1,702,908</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ra-data-table-bg p-3 radius_8 ra-property-list dashbaord-main">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="dataTable table-responsive">
+
+                            <!--
+    Bootstrap Table all class name: table table-striped table-hover table-bordered  table-borderless table-sm
+ -->
+
+                            <table id="publisherInvoicePaymentProcessAdvertiserDataTable" class="property-table table table-striped table-hover" style="width:100%">
+                                <thead class="ra-table-head">
+                                    <tr>
+                                        <th>SL</th>
+                                        <th>Advertiser</th>
+                                        <th>Impressions</th>
+                                        <th>Clicks</th>
+                                        <th>CTR</th>
+                                        <th>Finalized CPM</th>
+                                        <th>Share (%)</th>
+                                        <th>Agency (%)</th>
+                                        <th>Revenue</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Chang Chee Bo</td>
+                                        <td>9,700,120 </td>
+                                        <td>660</td>
+                                        <td>5.5%</td>
+                                        <td>৳ 30.20</td>
+                                        <td>65%</td>
+                                        <td>0%</td>
+                                        <td>৳ 23.40</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Chang Chee Bo</td>
+                                        <td>9,700,120 </td>
+                                        <td>660</td>
+                                        <td>5.5%</td>
+                                        <td>৳ 30.20</td>
+                                        <td>65%</td>
+                                        <td>0%</td>
+                                        <td>৳ 23.40</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Chang Chee Bo</td>
+                                        <td>9,700,120 </td>
+                                        <td>660</td>
+                                        <td>5.5%</td>
+                                        <td>৳ 30.20</td>
+                                        <td>65%</td>
+                                        <td>0%</td>
+                                        <td>৳ 23.40</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Chang Chee Bo</td>
+                                        <td>9,700,120 </td>
+                                        <td>660</td>
+                                        <td>5.5%</td>
+                                        <td>৳ 30.20</td>
+                                        <td>65%</td>
+                                        <td>0%</td>
+                                        <td>৳ 23.40</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Chang Chee Bo</td>
+                                        <td>9,700,120 </td>
+                                        <td>660</td>
+                                        <td>5.5%</td>
+                                        <td>৳ 30.20</td>
+                                        <td>65%</td>
+                                        <td>0%</td>
+                                        <td>৳ 23.40</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Chang Chee Bo</td>
+                                        <td>9,700,120 </td>
+                                        <td>660</td>
+                                        <td>5.5%</td>
+                                        <td>৳ 30.20</td>
+                                        <td>65%</td>
+                                        <td>0%</td>
+                                        <td>৳ 23.40</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Chang Chee Bo</td>
+                                        <td>9,700,120 </td>
+                                        <td>660</td>
+                                        <td>5.5%</td>
+                                        <td>৳ 30.20</td>
+                                        <td>65%</td>
+                                        <td>0%</td>
+                                        <td>৳ 23.40</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="load-more-btn d-flex justify-content-center">
+                                <button class="rs-btn rs-btn-trans uppercase">Load More <span
+                     class="mdi mdi-reload fz20 pl-1"></span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- build:js assets/js/vendor.min.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- Bootstrap Table Js Link -->
+    <script src="https://unpkg.com/bootstrap-table@1.18.1/dist/bootstrap-table.min.js"></script>
+    <!-- <script type="text/javascript" src="assets/vendor/aos/js/aos.js"></script> -->
+    <!-- endbuild -->
+    <script type="text/javascript" src="assets/js/script.js"></script>
+
+</body>
+
+</html>
