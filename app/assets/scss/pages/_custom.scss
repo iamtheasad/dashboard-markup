@@ -60,7 +60,7 @@ input[type="text"] {
 }
 
 .form-width {
-   @media(max-width: 768px) {
+   @media (max-width: 768px) {
       width: 100% !important;
    }
 }
@@ -222,7 +222,7 @@ td.border-top-0 {
    vertical-align: middle;
 }
 
-.table tbody td{
+.table tbody td {
    vertical-align: middle !important;
 }
 
@@ -234,10 +234,9 @@ td.border-top-0 {
    background-color: $tableHeaderColor !important;
 }
 
-table.dataTable>thead .sorting,
-table.dataTable>thead .sorting_asc,
-table.dataTable>thead .sorting_desc {
-
+table.dataTable > thead .sorting,
+table.dataTable > thead .sorting_asc,
+table.dataTable > thead .sorting_desc {
    &:after,
    &:before {
       content: "" !important;
@@ -271,7 +270,7 @@ table.dataTable>thead .sorting_desc {
    width: 100%;
    padding-left: 25px;
 
-   @media(max-width: 767px) {
+   @media (max-width: 767px) {
       max-width: 100%;
    }
 }
@@ -292,7 +291,6 @@ table.dataTable>thead .sorting_desc {
       padding-left: 10px;
    }
 }
-
 
 /***********************************
 // Block Add Page
@@ -333,12 +331,12 @@ th.sorting_asc {
    border: 1px solid $primaryBg;
    position: relative;
 
-   @media(max-width: 767px) {
+   @media (max-width: 767px) {
       text-align: center;
    }
 }
 
-@media(max-width: 767px) {
+@media (max-width: 767px) {
    .acitvity-log-select {
       max-width: 400px;
       width: 100% !important;
@@ -355,7 +353,7 @@ th.sorting_asc {
    top: 50%;
    transform: translateY(-50%);
 
-   @media(max-width: 767px) {
+   @media (max-width: 767px) {
       position: unset;
       margin: auto;
       margin-top: 25px;
@@ -372,7 +370,7 @@ th.sorting,
 }
 
 .ra-activity-log-text {
-   @media(max-width: 767px) {
+   @media (max-width: 767px) {
       padding: 0px !important;
       margin: 0px !important;
    }
@@ -382,12 +380,12 @@ th.sorting,
 // Estimated Revenue
 **************************************/
 .esitmate-card {
-   @media(max-width: 767px) {
+   @media (max-width: 767px) {
       margin-bottom: 15px;
    }
 
    h3 {
-      @media(max-width: 1200px) {
+      @media (max-width: 1200px) {
          font-size: rem(20px);
       }
    }
@@ -397,7 +395,7 @@ th.sorting,
    max-width: 32px;
    width: 100%;
 
-   @media(max-width: 1200px) {
+   @media (max-width: 1200px) {
       max-width: 20px;
    }
 }
@@ -405,11 +403,10 @@ th.sorting,
 .estimate-revenue-select {
    width: 300px !important;
 
-   @media(max-width: 767px) {
+   @media (max-width: 767px) {
       width: 100% !important;
    }
 }
-
 
 /***********************************
 // Process Payment Modal
@@ -431,7 +428,6 @@ th.sorting,
    right: 2%;
    position: absolute;
 }
-
 
 /***********************************
 // Data Table
@@ -455,10 +451,10 @@ div.dataTables_wrapper div.dataTables_info {
    top: 4%;
 }
 
-
 .balance-table-wrapper .balance-row {
    transition: 0.2s ease-in-out;
 }
+
 .balance-table-wrapper .balance-row:hover {
    background-color: $tableHeaderColor;
 }
