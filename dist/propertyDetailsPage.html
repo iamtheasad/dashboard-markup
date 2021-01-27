@@ -46,7 +46,16 @@
                         </div>
                     </li>
 
-                    <li><a href=""><img class="icon" src="assets/images/icons/money.svg" alt="">Payments</a></li>
+                    <li>
+                        <a href="#payment-sidebar-menu" data-toggle="collapse"><img class="icon" src="assets/images/icons/money.svg" alt="">Payments</a>
+                        <div id="payment-sidebar-menu" class="collapse">
+                            <ul>
+                                <li><a href="estimatedRevenuePage.html">Estimated Revennue</a></li>
+                                <li><a href="finilizedPayment.html">Finilized Payments</a></li>
+                                <li><a href="balance.html">Balance</a></li>
+                            </ul>
+                        </div>
+                    </li>
                     <li>
                         <a href="#settings-sidebar-menu" data-toggle="collapse">
                             <img class="icon" src="assets/images/icons/settings.svg" alt="">Settings
@@ -201,7 +210,7 @@
                     <!-- Modal -->
                     <div class="modal fade" id="propertyDetailsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-lg" role="document">
-                            <div class="modal-content p-5 changePasswordModal-content properties-close">
+                            <div class="modal-content p-xl-5 p-lg-3 p-md-1 changePasswordModal-content properties-close">
                                 <form action="">
                                     <div class="modal-header border-bottom-0">
                                         <h5 class="modal-title" id="exampleModalLabel">Add New Ad Place </h5>
@@ -214,7 +223,7 @@
                                             <div class="col-md-12">
                                                 <fieldset class="rs-form mb-4 f44">
                                                     <label for="editName" class="rs-label rs-select-editAccount fz10 fz10">Title of your property</label>
-                                                    <select class="ra-select fz18 fw-500 w-100 editAccountSelect">
+                                                    <select class="ra-select  fz18 fw-500 w-100 editAccountSelect">
                                                         <option value="Eastern Bank Ltd.">PropertyName 1</option>
                                                         <option value="Eastern Bank Ltd.">PropertyName 2</option>
                                                         <option value="Eastern Bank Ltd.">PropertyName 3</option>
@@ -260,7 +269,7 @@
                                             </div>
                                         </div>
                                         <div class="d-flex mt-3">
-                                            <bytton type="submit" class="rs-btn rs-btn-primary rs-btn-lg uppercase mr-3">Add New ad place</bytton>
+                                            <button type="submit" class="rs-btn rs-btn-primary rs-btn-lg uppercase mr-3">Add New ad place</button>
                                         </div>
 
                                         <div class="guide-line fw-500 mt-5">
@@ -276,12 +285,12 @@
             <div class="ra-data-table-bg p-3 pt-5 radius_8  ra-property-list mt-5 dashbaord-main">
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="property-data-table-head d-flex flex-wrap justify-content-between align-items-center mb-2">
+                        <div class="property-data-table-head mb-2">
                             <h2 class="fw-500 fz24">List of Properties</h2>
 
-                            <div class="propert-header-right d-flex flex-wrap">
+                            <div class="propert-header-right">
                                 <fieldset class="rs-form mr-2">
-                                    <select class="ra-select fw-700 fz16">
+                                    <select class="ra-select form-width min-height-40 fw-700 fz16">
                                         <option class="fz18 fw-500" value="bangladesh" selected>All Property Type</option>
                                         <option class="fz18 fw-500" value="saudi arabia">Saudi Arabia</option>
                                         <option class="fz18 fw-500" value="us">Uinited State Of America</option>
@@ -292,7 +301,7 @@
                                     <button type="submit" class="position-absolute ra-search-label" for="searchInput">
                                         <img src="assets/images/icons/search.svg" alt="Search Icon">
                                     </button>
-                                    <input type="search" class="rs-input pr-5" id="searchInput" placeholder="enter property name">
+                                    <input type="search" class="rs-input min-height-48 pr-5" id="searchInput" placeholder="enter property name">
                                 </form>
                             </div>
                         </div>

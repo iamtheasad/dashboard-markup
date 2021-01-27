@@ -7,11 +7,14 @@
    overflow: hidden;
 }
 
+/***********************************
 // Payment Account Option
+**************************************/
 .payment-btn {
    width: 120px;
    height: 90px;
    border: 1px dashed transparent;
+
    @media (max-width: 576px) {
       width: 60px;
       height: 60px;
@@ -26,18 +29,19 @@
    color: $primaryColor;
 }
 
+/***********************************
 // Edit Account Info
+**************************************/
 .rs-select-editAccount {
    position: absolute !important;
    top: -3% !important;
 }
 
 input[type="text"] {
-   font-size: 24px;
+   font-size: rem(24px);
 }
 
 .ra-select {
-   // width: 30%;
    padding: 10px;
    /* Replace Default styling (arrow) */
    appearance: none;
@@ -47,10 +51,17 @@ input[type="text"] {
    background-repeat: no-repeat;
    background-position-y: 50%;
    background-position-x: 95%;
-   min-height: 64px;
+   min-height: 56px;
    border-radius: 4px;
+
    @media (max-width: 992px) {
       min-height: 40px;
+   }
+}
+
+.form-width {
+   @media(max-width: 768px) {
+      width: 100% !important;
    }
 }
 
@@ -63,7 +74,9 @@ input[type="text"] {
    background-color: #fff;
 }
 
+/***********************************
 // Change Password Modal
+**************************************/
 .password-change {
    position: relative;
 }
@@ -79,34 +92,28 @@ input[type="text"] {
    box-shadow: 1px 2px 10px -1px #000;
 }
 
+/***********************************
 // Add Payment Account
+**************************************/
+.user_img label {
+   background: $white;
+   width: 96px;
+   height: 96px;
+   border-radius: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
 
-// .profile_image {
-//    width: 100%;
-// }
+.user_img img {
+   width: 56px;
+   height: 56px;
+}
 
-// .user_img {
-//    background: #fff;
-//    max-width: 96px;
-//    width: 100%;
-//    height: 96px;
-//    border-radius: 50%;
-//    display: flex;
-//    justify-content: center;
-//    align-items: center;
-// }
-
-// .user_img {
-//    max-width: 128px;
-//    margin: 0 auto;
-// }
-
-// .user_img label {
-//    background: #fff;
-//    width: 100%;
-//    border-radius: 50%;
-//    padding: 20px;
-// }
+.setting-user-img label {
+   width: 128px;
+   height: 128px;
+}
 
 .user_btn .rs-btn {
    display: inline-flex !important;
@@ -125,12 +132,16 @@ input[type="text"] {
    top: 5%;
 }
 
+/***********************************
 // accountName
+**************************************/
 .ra-custom-bg {
    background-color: #f5f5f5 !important;
 }
 
+/***********************************
 // Change Password Modal
+**************************************/
 .changePasswordModal-content .close {
    position: absolute;
    top: 7%;
@@ -143,7 +154,9 @@ input[type="text"] {
    padding: 15px 7px;
 }
 
+/***********************************
 // Add Payment Option Modal
+**************************************/
 .changePasswordModal-content.payment-close .close {
    top: 4%;
    right: 4%;
@@ -154,11 +167,14 @@ input[type="text"] {
    right: 4%;
 }
 
+/***********************************
 // Properties Page
+**************************************/
 .guide-line a {
    border-bottom: 1px solid transparent;
    transition: 0.1s ease-in-out;
 }
+
 .guide-line a:hover {
    border-bottom: 1px solid $primaryColor;
    color: $primaryColor;
@@ -168,13 +184,46 @@ input[type="text"] {
    top: 3%;
 }
 
+/***********************************
 //Property Data Table
+**************************************/
 .ra-table-head {
    background-color: $tableHeaderColor;
 }
 
+.ra-balance-table {
+   background-color: $tableRowColor;
+}
+
 .property-table.table-striped tbody tr:nth-of-type(odd) {
    background-color: $tableRowColor !important;
+}
+
+.property-table.balance-table tbody tr:nth-of-type(odd) {
+   background-color: unset !important;
+}
+
+.table td,
+.table th td.border-top-0 {
+   border-top: none !important;
+   white-space: nowrap;
+}
+
+.balance-table-wrapper tbody tr.balance-btn-row:hover {
+   background-color: #eceef3;
+}
+
+td.border-top-0 {
+   padding: 0px;
+}
+
+.balance-table-wrapper.table thead th {
+   border-bottom: none;
+   vertical-align: middle;
+}
+
+.table tbody td{
+   vertical-align: middle !important;
 }
 
 .property-table.table-striped tbody tr {
@@ -185,9 +234,10 @@ input[type="text"] {
    background-color: $tableHeaderColor !important;
 }
 
-table.dataTable > thead .sorting,
-table.dataTable > thead .sorting_asc,
-table.dataTable > thead .sorting_desc {
+table.dataTable>thead .sorting,
+table.dataTable>thead .sorting_asc,
+table.dataTable>thead .sorting_desc {
+
    &:after,
    &:before {
       content: "" !important;
@@ -196,10 +246,12 @@ table.dataTable > thead .sorting_desc {
       height: 5.25px;
       right: 6%;
    }
+
    &:after {
       clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
       top: 37%;
    }
+
    &:before {
       clip-path: polygon(50% 100%, 0 0, 100% 0);
       top: 53%;
@@ -211,12 +263,17 @@ table.dataTable > thead .sorting_desc {
    border-radius: 30px !important;
    border-color: $borderColor;
    transition: 0.2s ease-in-out;
-   min-height: 48px !important;
    color: $primaryColor;
 }
 
 .propert-header-right select {
-   width: 250px;
+   max-width: 250px;
+   width: 100%;
+   padding-left: 25px;
+
+   @media(max-width: 767px) {
+      max-width: 100%;
+   }
 }
 
 .propert-header-right select:focus {
@@ -226,14 +283,20 @@ table.dataTable > thead .sorting_desc {
 .propert-header-right {
    .ra-search-label {
       top: 50%;
-      right: 5%;
+      right: 0%;
       transform: translateY(-50%);
       background: transparent;
       border: none;
+      height: 100%;
+      padding-right: 10px;
+      padding-left: 10px;
    }
 }
 
+
+/***********************************
 // Block Add Page
+**************************************/
 .ra-add-block-select {
    background-color: $tableRowColor !important;
 }
@@ -252,20 +315,34 @@ table.dataTable > thead .sorting_desc {
    padding: 8px 12px !important;
    display: unset;
    border: none;
+   white-space: nowrap;
 }
 
 .ra-block-add-btn:hover {
    color: $white !important;
 }
 
+th.sorting_asc {
+   white-space: nowrap;
+}
+
+/***********************************
 // Acitvity Log
+**************************************/
 .ra-activity-log-wrapper {
    border: 1px solid $primaryBg;
    position: relative;
+
+   @media(max-width: 767px) {
+      text-align: center;
+   }
 }
 
-.ra-activity-log-text {
-   position: relative;
+@media(max-width: 767px) {
+   .acitvity-log-select {
+      max-width: 400px;
+      width: 100% !important;
+   }
 }
 
 .acitivity-icon-wrapper {
@@ -277,12 +354,103 @@ table.dataTable > thead .sorting_desc {
    position: absolute;
    top: 50%;
    transform: translateY(-50%);
+
+   @media(max-width: 767px) {
+      position: unset;
+      margin: auto;
+      margin-top: 25px;
+   }
 }
 
 .activity-icon {
    max-width: 21px;
 }
 
-th.sorting {
+th.sorting,
+.table thead th {
    white-space: nowrap;
+}
+
+.ra-activity-log-text {
+   @media(max-width: 767px) {
+      padding: 0px !important;
+      margin: 0px !important;
+   }
+}
+
+/***********************************
+// Estimated Revenue
+**************************************/
+.esitmate-card {
+   @media(max-width: 767px) {
+      margin-bottom: 15px;
+   }
+
+   h3 {
+      @media(max-width: 1200px) {
+         font-size: rem(20px);
+      }
+   }
+}
+
+.bdt {
+   max-width: 32px;
+   width: 100%;
+
+   @media(max-width: 1200px) {
+      max-width: 20px;
+   }
+}
+
+.estimate-revenue-select {
+   width: 300px !important;
+
+   @media(max-width: 767px) {
+      width: 100% !important;
+   }
+}
+
+
+/***********************************
+// Process Payment Modal
+**************************************/
+.process-payment-btn {
+   width: 80px;
+   height: 60px;
+   border: 2px solid transparent;
+   padding: 0px;
+   background-color: $tableRowColor;
+}
+
+.border-gray-2px {
+   border-color: $primaryColor !important;
+}
+
+.processPaymentModal-content .close {
+   top: 2%;
+   right: 2%;
+   position: absolute;
+}
+
+
+/***********************************
+// Data Table
+**************************************/
+div.dataTables_wrapper div.dataTables_info {
+   display: none;
+}
+
+/***********************************
+// Invoice All
+**************************************/
+.invoice-btn {
+   background-color: $dataTableSearchBgColor !important;
+   color: $paymentInputColor3 !important;
+   border: none;
+}
+
+.requestUnpaiddModal-content .close {
+   position: absolute;
+   right: 2%;
+   top: 4%;
 }

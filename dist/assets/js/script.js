@@ -219,6 +219,22 @@
             "paging": false,
             "searching": false,
         });
+        $('#estimatedRevenueDataTable').DataTable({
+            "paging": false,
+            "searching": false,
+        });
+        $('#finalizedPaymentMonthlyInfoDataTable').DataTable({
+            "paging": false,
+            "searching": false,
+        });
+        $('#publisherInvoicePaymentProcessAdvertiserDataTable').DataTable({
+            "paging": false,
+            "searching": false,
+        });
+        $('#publisherInvoicePaymentProcessPropertiesDataTable').DataTable({
+            "paging": false,
+            "searching": false,
+        });
     });
 
 

@@ -1,0 +1,58 @@
+{% extends "layouts/layout.njk" %}
+
+{% block content %}
+<div class="row">
+   <div class="col-md-3 col-sm-6 mb-2 mb-md-4">
+      <div class="balance-card d-card ml-md-2 mt-3 mt-md-0">
+         <div class="d-flex justify-content-between">
+            <div>
+               <h3 class="fz20 fw-400">Unpaid Amount</h3>
+               <span class="fz24 fw-700 pt-2 d-block">৳ 36,478.67</span>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="col-md-3 col-sm-6">
+      <div class="balance-card d-card ml-md-2 mt-3 mt-md-0">
+         <div class="d-flex justify-content-between">
+            <div>
+               <h3 class="fz20 fw-400">On Process Amount</h3>
+               <span class="fz24 fw-700 pt-2 d-block">৳ 36,478.67</span>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="col-md-3 col-sm-6">
+      <div class="balance-card d-card ml-md-2 mt-3 mt-md-0">
+         <div class="d-flex justify-content-between">
+            <div>
+               <h3 class="fz20 fw-400">Last Paid Earning</h3>
+               <span class="fz24 fw-700 pt-2 d-block">৳ 36,478.67</span>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="col-md-3 col-sm-6">
+      <div class="balance-card d-card ml-md-2 mt-3 mt-md-0">
+         <div class="d-flex justify-content-between">
+            <div>
+               <h3 class="fz20 fw-400">Total Earnings</h3>
+               <span class="fz24 fw-700 pt-2 d-block">৳ 36,478.67</span>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+
+<div class="ra-data-table-bg ra-balance p-1 pt-3 radius_8 ra-property-list dashbaord-main">
+   <div class="row">
+      <div class="col-md-12">
+         <div class="dataTable table-responsive">
+            {% include "snippets/dataTable/balanceDataTable.njk" %}
+         </div>
+      </div>
+   </div>
+</div>
+
+{% endblock %}
