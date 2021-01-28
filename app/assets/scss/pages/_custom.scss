@@ -197,10 +197,15 @@ input[type="text"] {
 
 .property-table.table-striped tbody tr:nth-of-type(odd) {
    background-color: $tableRowColor !important;
+   line-height: 31px;
 }
 
 .property-table.balance-table tbody tr:nth-of-type(odd) {
    background-color: unset !important;
+}
+
+.property-table.table-striped tbody tr:nth-of-type(even) {
+   line-height: 31px;
 }
 
 .table td,
@@ -310,7 +315,7 @@ table.dataTable > thead .sorting_desc {
 .ra-block-add-btn {
    background-color: $blockAddBtn;
    color: $white !important;
-   padding: 8px 12px !important;
+   padding: 3px 12px !important;
    display: unset;
    border: none;
    white-space: nowrap;
