@@ -1,21 +1,82 @@
-<!-- Modal -->
-<div class="modal fade" id="paymentDetails" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+<!-- Payment Details Modal -->
+<div class="modal fade" id="paymentDetailsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
   aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content p-xl-5 p-lg-3 p-md-1 changePasswordModal-content payment-close">
+    <div class="modal-content p-xl-5 p-lg-3 p-md-1 changePasswordModal-content paymentDetails-close">
       <form action="">
         <div class="modal-header border-bottom-0">
-          <h5 class="modal-title" id="exampleModalLabel">Edit Payment Account</h5>
+          <h5 class="modal-title fz24 fw-500" id="exampleModalLabel">Payment Details</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span class="mdi mdi-close" aria-hidden="true"></span>
           </button>
         </div>
         <div class="modal-body">
-          <h1>Test</h1>
-          <div class="d-flex mt-3">
-            <button type="submit" class="rs-btn rs-btn-primary rs-btn-lg uppercase mr-3">Edit Payment Account</button>
-  
-            <button class="rs-btn rs-btn-primary rs-btn-lg uppercase" data-dismiss="modal">Cancel</button>
+          <div class="row border-bottom-1 mb-4 mb-md-3 pb-1 pb-md-1">
+            <div class="col-md-4 mb-4 mb-md-3">
+              <span class="fz10 fw-400 mb-1 mb-md-1 d-block gray-color">Reference No</span>
+              <h4 class="fz18 fw-500  gray-color">GR1234567890</h4>
+            </div>
+            <div class="col-md-4 mb-4 mb-md-3">
+              <span class="fz10 fw-400 mb-1 mb-md-1 d-block gray-color">Status</span>
+              <h4 class="fz18 fw-500  gray-color">Partial Paid</h4>
+            </div>
+            <div class="col-md-4 mb-4 mb-md-3">
+              <span class="fz10 fw-400 mb-1 mb-md-1 d-block gray-color">Total Amount</span>
+              <h4 class="fz18 fw-500  gray-color">৳ 60,419.75</h4>
+            </div>
+
+            <div class="col-md-4 mb-4 mb-md-3">
+              <span class="fz10 fw-400 mb-1 mb-md-1 d-block gray-color">Requested on</span>
+              <h4 class="fz18 fw-500  gray-color">20 MAY 2020</h4>
+            </div>
+            <div class="col-md-8 mb-4 mb-md-3">
+              <span class="fz10 fw-400 mb-1 mb-md-1 d-block gray-color">Time Period</span>
+              <h4 class="fz18 fw-500  gray-color">1 June 2019 to 30 May 2020 </h4>
+            </div>
+
+            <div class="col-md-4 mb-4 mb-md-3">
+              <span class="fz10 fw-400 mb-1 mb-md-1 d-block gray-color">Reference No</span>
+              <h4 class="fz18 fw-500  gray-color">GR1234567890</h4>
+            </div>
+            <div class="col-md-4 mb-4 mb-md-3">
+              <span class="fz10 fw-400 mb-1 mb-md-1 d-block gray-color">Status</span>
+              <h4 class="fz18 fw-500 gray-color">Partial Paid</h4>
+            </div>
+            <div class="col-md-4 mb-4 mb-md-3">
+              <span class="fz10 fw-400 mb-1 mb-md-1 d-block gray-color">Total Amount</span>
+              <h4 class="fz18 fw-500  gray-color">৳ 60,419.75</h4>
+            </div>
+          </div><!-- row / -->
+
+          <div class="row">
+            <div class="col-md-4 mb-4 mb-md-3">
+              <span class="fz10 fw-400 mb-1 mb-md-1 d-block gray-color">Payment Disbursed on</span>
+              <h4 class="fz18 fw-500  gray-color">26 MAY 2020</h4>
+            </div>
+            <div class="col-md-4 mb-4 mb-md-3">
+              <span class="fz10 fw-400 mb-1 mb-md-1 d-block gray-color">Payment Through</span>
+              <h4 class="fz18 fw-500  gray-color">bKash</h4>
+            </div>
+            <div class="col-md-4 mb-4 mb-md-3">
+              <span class="fz10 fw-400 mb-1 mb-md-1 d-block gray-color">Account Number</span>
+              <h4 class="fz18 fw-500  gray-color">1234567890123</h4>
+            </div>
+
+            <div class="col-md-4 mb-4 mb-md-3">
+              <span class="fz10 fw-400 mb-1 mb-md-1 d-block gray-color">Account Title </span>
+              <h4 class="fz18 fw-500  gray-color">Account Name</h4>
+            </div>
+            <div class="col-md-4 mb-4 mb-md-3">
+              <span class="fz10 fw-400 mb-1 mb-md-1 d-block gray-color">Paid Amount</span>
+              <h4 class="fz18 fw-500  gray-color">৳ 40,419.75</h4>
+            </div>
+            <div class="col-md-4 mb-4 mb-md-3">
+              <span class="fz10 fw-400 mb-1 mb-md-1 d-block gray-color">Balance</span>
+              <h4 class="fz18 fw-500  gray-color">৳ 20,000.00</h4>
+            </div>
+          </div><!-- row / -->
+          <div class="d-flex mt-1 mt-md-3">
+            <button class="rs-btn rs-btn-primary rs-btn-lg uppercase" data-dismiss="modal">Close</button>
           </div>
         </div>
       </form>

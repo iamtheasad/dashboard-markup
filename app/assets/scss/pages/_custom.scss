@@ -458,3 +458,17 @@ div.dataTables_wrapper div.dataTables_info {
 .balance-table-wrapper .balance-row:hover {
    background-color: $tableHeaderColor;
 }
+
+
+/***********************************
+// Payment Details Modal
+**************************************/
+.paymentDetails-close .close {
+   top: 3%;
+   right: 2%;
+}
+
+
+.border-bottom-1 {
+   border-bottom: 1px solid $tableRowColor;
+}
