@@ -41,9 +41,9 @@
     <div class="col-md-4">
         <div class="d-card">
 
-            <h3 class="fz20 fw-500 mb-2 mb-md-5">Impression Served</h3>
+            <h3 class="fz20 fw-500 mb-2 mb-md-4">Impression Served</h3>
 
-            <div class="row mb-1 mb-md-4">
+            <div class="row mb-1 mb-md-3">
                 <div class="col">
                     <p class="gray-color fz12 fw-400">Date Range</p>
                     <span class="fz14 fw-500">01 Jul, 20 - 31 Jul, 20</span>
@@ -73,8 +73,9 @@
     <div class="col-md-4">
         <div class="d-card">
             <div class="row">
-                <div class="col-md-6">
-                    <h4 class="fz14 fw-700 uppercase">Full Report</h4>
+                <div class="col-md-6 text-center">
+                    {% include "snippets/overviewRoundChart.njk" %}
+                    <h4 class="fz14 fw-700 uppercase ra-primary-color">Full Report</h4>
                 </div>
                 <div class="col-md-6">
                     <h3 class="fz20 fw-500 mb-1 mb-md-3">Top Impressions</h3>
