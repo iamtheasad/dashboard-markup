@@ -118,7 +118,36 @@
          Total Payable: ৳71,085.28<br />
          In Word: Seventy-one Thousand And Eighty-five Taka<br />
                     </p>
-                    <button class="rs-btn rs-btn-primary rs-btn-lg uppercase">Download</button>
+                    <button class="rs-btn rs-btn-primary rs-btn-lg uppercase" data-target="#requestUnpaidPaymentModal" data-toggle="modal">Download</button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="requestUnpaidPaymentModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content p-xl-5 p-lg-3 p-md-1 requestUnpaiddModal-content properties-close">
+                                <form action="">
+                                    <div class="modal-header border-bottom-0">
+                                        <h5 class="modal-title" id="exampleModalLabel">Add New Ad Place </h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span class="mdi mdi-close" aria-hidden="true"></span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body pb-5">
+                                        <div class="row">
+                                            <h2 class="fz24 fw-500">Request for processing full unpaid payment?</h2>
+                                            <p class="fz12 fw-400 mt-1 mt-md-3 mb-1 mb-md-3">Please make request for processing full unpaid payment. Or, make request for this month only.</p>
+                                        </div>
+                                        <div class="d-flex mt-3">
+                                            <button class="rs-btn rs-btn-primary rs-btn-lg uppercase mr-3">Full unpaid payment</button>
+                                            <button class="rs-btn rs-btn-contained rs-btn-lg uppercase">This month only</button>
+                                        </div>
+
+                                        <div class="guide-line fw-500 mt-4">
+                                            Need Help? Visit here <a href="#" class="ra-primary-color fw-700">Guideline</a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-6">
                     <div class="d-card ml-md-4 mt-3 mt-md-0">
@@ -133,36 +162,7 @@
                                 <span class="fz24 fw-700 mt-1">Unpaid</span>
                             </div>
                         </div>
-                        <button class="rs-btn rs-btn-primary rs-btn-lg uppercase mt-4" data-target="#requestUnpaidPaymentModal" data-toggle="modal">Process Payment</button>
-                        <!-- Modal -->
-                        <div class="modal fade" id="requestUnpaidPaymentModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-lg" role="document">
-                                <div class="modal-content p-xl-5 p-lg-3 p-md-1 requestUnpaiddModal-content properties-close">
-                                    <form action="">
-                                        <div class="modal-header border-bottom-0">
-                                            <h5 class="modal-title" id="exampleModalLabel">Add New Ad Place </h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span class="mdi mdi-close" aria-hidden="true"></span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body pb-5">
-                                            <div class="row">
-                                                <h2 class="fz24 fw-500">Request for processing full unpaid payment?</h2>
-                                                <p class="fz12 fw-400 mt-1 mt-md-3 mb-1 mb-md-3">Please make request for processing full unpaid payment. Or, make request for this month only.</p>
-                                            </div>
-                                            <div class="d-flex mt-3">
-                                                <button class="rs-btn rs-btn-primary rs-btn-lg uppercase mr-3">Full unpaid payment</button>
-                                                <button class="rs-btn rs-btn-contained rs-btn-lg uppercase">This month only</button>
-                                            </div>
-
-                                            <div class="guide-line fw-500 mt-4">
-                                                Need Help? Visit here <a href="#" class="ra-primary-color fw-700">Guideline</a>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
+                        <button class="rs-btn rs-btn-primary rs-btn-lg uppercase mt-4">Process Payment</button>
                     </div>
                 </div>
             </div>
