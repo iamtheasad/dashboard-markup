@@ -1,0 +1,32 @@
+<div class="tab-area">
+   <ul class="nav nav-pills nav-justified">
+      <li class="nav-item">
+         <a class="nav-link fz20 fw-700 uppercase" data-toggle="tab" href="#requests">Requests</a>
+      </li>
+      <li class="nav-item">
+         <a class="nav-link fz20 fw-700 uppercase" data-toggle="tab" href="#impressions">impressions</a>
+      </li>
+      <li class="nav-item">
+         <a class="nav-link fz20 fw-700 uppercase" data-toggle="tab" href="#fillrate">Fill Rate</a>
+      </li>
+      <li class="nav-item">
+         <a class="nav-link fz20 fw-700 uppercase" data-toggle="tab" href="#clicks">Clicks</a>
+      </li>
+      <li class="nav-item">
+         <a class="nav-link fz20 fw-700 uppercase active" data-toggle="tab" href="#revenue">revenue</a>
+      </li>
+   </ul>
+
+   <!-- Tab panes -->
+   <div class="tab-content">
+      <div class="tab-pane container fade" id="requests">...</div>
+      <div class="tab-pane container fade" id="impressions">...</div>
+      <div class="tab-pane container fade" id="fillrate">...</div>
+      <div class="tab-pane container fade" id="clicks">...</div>
+      <div class="tab-pane container active" id="revenue">
+         <div class="chart-area">
+            {% include 'snippets/reports/revenue-map.njk' %}
+         </div>
+      </div>
+   </div>
+</div>
