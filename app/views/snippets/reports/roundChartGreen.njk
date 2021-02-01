@@ -1,6 +1,6 @@
 <!-- Styles -->
 <style>
-   #overviewRoundChart {
+   #overviewGreenRoundChart {
       width: 100%;
       max-height: 128px;
       height: 100%;
@@ -21,18 +21,18 @@
         // Themes end
 
         // Create chart instance
-        var chart = am4core.create("overviewRoundChart", am4charts.PieChart);
+        var chart = am4core.create("overviewGreenRoundChart", am4charts.PieChart);
 
         // Add data
         chart.data = [{
             "advertiser": "Advertiser 1",
+            "impression": 1000
+        }, {
+            "advertiser": "Advertiser 2",
+            "impression": 1000
+        }, {
+            "advertiser": "Advertiser 2",
             "impression": 2000
-        }, {
-            "advertiser": "Advertiser 2",
-            "impression": 1000
-        }, {
-            "advertiser": "Advertiser 2",
-            "impression": 1000
         }
         ];
 
@@ -48,7 +48,7 @@
 
         // Default Color of chart
         pieSeries.slices.template.adapter.add("fill", (fill, target) => {
-            return am4core.color("#ED1C24")
+            return am4core.color("#72BF44")
         });
 
         // Opacity of default color
@@ -65,4 +65,4 @@
 </script>
 
 <!-- HTML -->
-<div id="overviewRoundChart"></div>
+<div id="overviewGreenRoundChart"></div>

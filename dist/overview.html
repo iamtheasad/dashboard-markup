@@ -39,7 +39,7 @@
                         </a>
                         <div id="report-sidebar-menu" class="collapse">
                             <ul>
-                                <li><a href="reportOverview.html">Overview</a></li>
+                                <li><a href="overview.html">Overview</a></li>
                                 <li><a href="">Location</a></li>
                                 <li><a href="">Revenue </a></li>
                             </ul>
@@ -106,7 +106,7 @@
                 </div>
             </header>
 
-            <div class="data-table-search-bg p-3 border-radius-8  ra-property-list  mb-2 mb-md-4">
+            <div class="data-table-search-bg p-3 border-radius-8  ra-property-list  mb-3 mb-md-4">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="property-data-table-head">
@@ -142,8 +142,8 @@
             </div>
 
             <div class="row">
-                <div class="col-md-4">
-                    <div class="d-card">
+                <div class="col-md-4 mb-md-0 mb-3">
+                    <div class="d-card h-100">
 
                         <h3 class="fz20 fw-500 mb-2 mb-md-4">Impression Served</h3>
 
@@ -172,15 +172,16 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
 
-                <div class="col-md-4">
-                    <div class="d-card">
+                <div class="col-md-4 mb-md-0 mb-3">
+                    <div class="d-card h-100">
                         <div class="row">
                             <div class="col-md-6 text-center">
                                 <!-- Styles -->
                                 <style>
-                                    #overviewRoundChart {
+                                    #overviewRedRoundChart {
                                         width: 100%;
                                         max-height: 128px;
                                         height: 100%;
@@ -199,7 +200,7 @@
                                         am4core.useTheme(am4themes_animated);
                                         // Themes end
                                         // Create chart instance
-                                        var chart = am4core.create("overviewRoundChart", am4charts.PieChart);
+                                        var chart = am4core.create("overviewRedRoundChart", am4charts.PieChart);
                                         // Add data
                                         chart.data = [{
                                             "advertiser": "Advertiser 1",
@@ -236,7 +237,7 @@
                                 </script>
 
                                 <!-- HTML -->
-                                <div id="overviewRoundChart"></div>
+                                <div id="overviewRedRoundChart"></div>
                                 <h4 class="fz14 fw-700 uppercase ra-primary-color letter-spacing-2">Full Report</h4>
                             </div>
                             <div class="col-md-6">
@@ -250,7 +251,84 @@
                         </div>
                     </div>
                 </div>
-            </div>
+
+                <div class="col-md-4">
+                    <div class="d-card h-100">
+                        <div class="row">
+                            <div class="col-md-6 text-center">
+                                <!-- Styles -->
+                                <style>
+                                    #overviewGreenRoundChart {
+                                        width: 100%;
+                                        max-height: 128px;
+                                        height: 100%;
+                                    }
+                                </style>
+
+                                <!-- Resources -->
+                                <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+                                <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+                                <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+
+                                <!-- Chart code -->
+                                <script>
+                                    am4core.ready(function() {
+                                        // Themes begin
+                                        am4core.useTheme(am4themes_animated);
+                                        // Themes end
+                                        // Create chart instance
+                                        var chart = am4core.create("overviewGreenRoundChart", am4charts.PieChart);
+                                        // Add data
+                                        chart.data = [{
+                                            "advertiser": "Advertiser 1",
+                                            "impression": 1000
+                                        }, {
+                                            "advertiser": "Advertiser 2",
+                                            "impression": 1000
+                                        }, {
+                                            "advertiser": "Advertiser 2",
+                                            "impression": 2000
+                                        }];
+                                        // Add and configure Series
+                                        var pieSeries = chart.series.push(new am4charts.PieSeries());
+                                        pieSeries.labels.template.disabled = true;
+                                        pieSeries.ticks.template.disabled = true;
+                                        pieSeries.dataFields.value = "impression";
+                                        pieSeries.dataFields.category = "advertiser";
+                                        // pieSeries.slices.template.stroke = am4core.color("#fff");
+                                        pieSeries.slices.template.strokeWidth = 0;
+                                        // pieSeries.slices.template.strokeOpacity = 1;
+                                        // Default Color of chart
+                                        pieSeries.slices.template.adapter.add("fill", (fill, target) => {
+                                            return am4core.color("#72BF44")
+                                        });
+                                        // Opacity of default color
+                                        pieSeries.slices.template.adapter.add("fillOpacity", (fillOpacity, target) => {
+                                            return (target.dataItem.index + 1) * 0.3;
+                                        });
+                                        // This creates initial animation
+                                        pieSeries.hiddenState.properties.opacity = 1;
+                                        pieSeries.hiddenState.properties.endAngle = -90;
+                                        pieSeries.hiddenState.properties.startAngle = -90;
+                                    }); // end am4core.ready()
+                                </script>
+
+                                <!-- HTML -->
+                                <div id="overviewGreenRoundChart"></div>
+                                <h4 class="fz14 fw-700 uppercase ra-primary-color letter-spacing-2">Full Report</h4>
+                            </div>
+                            <div class="col-md-6">
+                                <h3 class="fz20 fw-500 mb-1 mb-md-3">Top Revenue</h3>
+                                <ul class="overview-round-chart-list">
+                                    <li><a href="#" class="fz12 fw-400 mb-1">Advertiser 1</a></li>
+                                    <li><a href="#" class="fz12 fw-400 mb-1">Advertiser 2</a></li>
+                                    <li><a href="#" class="fz12 fw-400 mb-1">Advertiser 3</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- Row / -->
 
         </main>
     </div>

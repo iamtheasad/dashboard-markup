@@ -1,0 +1,22 @@
+{% extends "layouts/layout.njk" %}
+
+{% block content %}
+
+{% include "snippets/reports/overviewSelectionField.njk" %}
+
+
+<div class="row">
+   <div class="col-md-4 mb-md-0 mb-3">
+      {% include "snippets/reports/card-impressionServed.njk" %}
+   </div>
+
+   <div class="col-md-4 mb-md-0 mb-3">
+      {% include "snippets/reports/card-topImpression.njk" %}
+   </div>
+
+   <div class="col-md-4">
+      {% include "snippets/reports/card-topRevenue.njk" %}
+   </div>
+</div> <!-- Row / -->
+
+{% endblock %}

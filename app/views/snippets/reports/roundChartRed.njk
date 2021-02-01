@@ -1,0 +1,68 @@
+<!-- Styles -->
+<style>
+   #overviewRedRoundChart {
+      width: 100%;
+      max-height: 128px;
+      height: 100%;
+   }
+</style>
+
+<!-- Resources -->
+<script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+
+<!-- Chart code -->
+<script>
+    am4core.ready(function () {
+
+        // Themes begin
+        am4core.useTheme(am4themes_animated);
+        // Themes end
+
+        // Create chart instance
+        var chart = am4core.create("overviewRedRoundChart", am4charts.PieChart);
+
+        // Add data
+        chart.data = [{
+            "advertiser": "Advertiser 1",
+            "impression": 2000
+        }, {
+            "advertiser": "Advertiser 2",
+            "impression": 1000
+        }, {
+            "advertiser": "Advertiser 2",
+            "impression": 1000
+        }
+        ];
+
+        // Add and configure Series
+        var pieSeries = chart.series.push(new am4charts.PieSeries());
+        pieSeries.labels.template.disabled = true;
+        pieSeries.ticks.template.disabled = true;
+        pieSeries.dataFields.value = "impression";
+        pieSeries.dataFields.category = "advertiser";
+        // pieSeries.slices.template.stroke = am4core.color("#fff");
+        pieSeries.slices.template.strokeWidth = 0;
+        // pieSeries.slices.template.strokeOpacity = 1;
+
+        // Default Color of chart
+        pieSeries.slices.template.adapter.add("fill", (fill, target) => {
+            return am4core.color("#ED1C24")
+        });
+
+        // Opacity of default color
+        pieSeries.slices.template.adapter.add("fillOpacity", (fillOpacity, target) => {
+            return (target.dataItem.index + 1) * 0.3;
+        });
+
+        // This creates initial animation
+        pieSeries.hiddenState.properties.opacity = 1;
+        pieSeries.hiddenState.properties.endAngle = -90;
+        pieSeries.hiddenState.properties.startAngle = -90;
+
+    }); // end am4core.ready()
+</script>
+
+<!-- HTML -->
+<div id="overviewRedRoundChart"></div>
