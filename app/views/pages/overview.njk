@@ -21,7 +21,15 @@
 
 <div class="row">
    <div class="col-md-12">
-      {% include "snippets/reports/chartTab.njk" %}
+      <div class="tab-area">
+         {% include "snippets/reports/chartTab.njk" %}
+         <!-- Revenue Chart Amount -->
+         {% include "snippets/reports/revenueChartAmount.njk" %}
+      </div>
+   </div>
+
+   <div class="col-md-12">
+      {% include "snippets/reports/overviewDatesTable.njk" %}
    </div>
 </div>
 
