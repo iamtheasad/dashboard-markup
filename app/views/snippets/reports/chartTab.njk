@@ -1,5 +1,5 @@
 
-   <ul class="nav nav-pills nav-justified">
+   <ul class="nav nav-pills nav-justified mb-2 mb-md-4 border-radius-8">
       <li class="nav-item">
          <a class="nav-link fz20 fw-700 uppercase" data-toggle="tab" href="#requests">Requests</a>
       </li>
@@ -18,7 +18,7 @@
    </ul>
 
    <!-- Tab panes -->
-   <div class="tab-content">
+   <div class="tab-content border-radius-8 table-row-bg-color">
       <div class="tab-pane container fade" id="requests">...</div>
       <div class="tab-pane container fade" id="impressions">...</div>
       <div class="tab-pane container fade" id="fillrate">...</div>
@@ -26,6 +26,9 @@
       <div class="tab-pane container active" id="revenue">
          <div class="chart-area">
             {% include 'snippets/reports/revenue-map.njk' %}
+
+            <!-- Revenue Chart Amount -->
+            {% include "snippets/reports/revenueChartAmount.njk" %}
          </div>
       </div>
    </div>

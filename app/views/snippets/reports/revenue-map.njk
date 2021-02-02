@@ -4,7 +4,7 @@
       height: 398px;
    }
 
-   @media(max-width: 992px){
+   @media (max-width: 992px) {
       #revinew-chart {
          width: 100%;
          max-height: 398px;
@@ -266,27 +266,46 @@
 
         var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
 
-
         // Create series
         var series = chart.series.push(new am4charts.LineSeries());
         series.dataFields.valueY = "value";
         series.dataFields.dateX = "date";
-        series.strokeWidth = 3;
-        series.fillOpacity = 1;
+        series.strokeWidth = 0;
+        series.fillOpacity = .8;
         series.tensionX = 0.77;
+        // Add Background Color
+        series.fill = am4core.color("rgba(178, 223, 138, 1)");
 
+        // Add Chart Background Color
+        /*chart.background.fill = "#ECEEF3";
+        chart.background.opacity = 1;*/
+
+        // Add Horizontal Scrollbar
+        chart.cursor = new am4charts.XYCursor();
+        chart.cursor.lineY.opacity = 1;
+        chart.scrollbarX = new am4charts.XYChartScrollbar();
+        chart.scrollbarX.series.push(series);
+        // chart.scrollbarX.minHeight = 60;
 
         // Add vertical scrollbar
-        chart.scrollbarY = new am4core.Scrollbar();
-        chart.scrollbarY.marginLeft = 0;
+        /*chart.scrollbarY = new am4core.Scrollbar();
+        chart.scrollbarY.marginLeft = 0;*/
+
+        // Customize scrollbar background
+        chart.scrollbarX.background.fill = am4core.color("#ECEEF3");
+        chart.scrollbarX.background.fillOpacity = 1;
+
         // Add cursor
         chart.cursor = new am4charts.XYCursor();
-        // chart.cursor.behavior = true;
-        chart.cursor.lineX.disabled = true;
 
+        // Vertical Line
+        chart.cursor.behavior = true;
+
+        chart.cursor.lineX.disabled = true;
 
     }); // end am4core.ready()
 </script>
 
 <!-- HTML -->
 <div id="revinew-chart"></div>
+

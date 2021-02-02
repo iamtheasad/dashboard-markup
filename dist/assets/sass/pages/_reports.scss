@@ -31,3 +31,10 @@
 .tab-wrap {
     background-color: $tableRowColor;
 }
+
+.chart-amount {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
