@@ -629,8 +629,13 @@
                                             series.tensionX = 0.77;
                                             // Add Background Color
                                             series.fill = am4core.color("rgba(178, 223, 138, 1)");
+                                            // Override button colors
+                                            chart.zoomOutButton.background.defaultState.properties.fill = am4core.color("#475364").brighten(-.2);
+                                            chart.zoomOutButton.background.defaultState.properties.fillOpacity = .7;
+                                            chart.zoomOutButton.background.states.getKey("hover").properties.fill = am4core.color("#475364").brighten(-.2);
+                                            chart.zoomOutButton.background.states.getKey("down").properties.fill = am4core.color("#B2DF8A");
                                             // Add Chart Background Color
-                                            /*chart.background.fill = "#ECEEF3";
+                                            /*chart.background.fill = "red";
                                             chart.background.opacity = 1;*/
                                             // Add Horizontal Scrollbar
                                             chart.cursor = new am4charts.XYCursor();
@@ -641,9 +646,23 @@
                                             // Add vertical scrollbar
                                             /*chart.scrollbarY = new am4core.Scrollbar();
                                             chart.scrollbarY.marginLeft = 0;*/
-                                            // Customize scrollbar background
+                                            // Customize scrollbar background color
                                             chart.scrollbarX.background.fill = am4core.color("#ECEEF3");
                                             chart.scrollbarX.background.fillOpacity = 1;
+                                            // Scrollbar Button Background Color
+                                            chart.scrollbarX.startGrip.background.fill = am4core.color("#475364");
+                                            chart.scrollbarX.endGrip.background.fill = am4core.color("#475364");
+                                            // Scrollbar Button Hover & Active Color
+                                            chart.scrollbarX.startGrip.background.states.getKey('hover').properties.fill = am4core.color("rgba(178, 223, 138, 1)"); // Left Button Hover
+                                            chart.scrollbarX.startGrip.background.states.getKey('down').properties.fill = am4core.color("rgba(178, 223, 138, 1)"); // Left Button Active
+                                            chart.scrollbarX.endGrip.background.states.getKey('hover').properties.fill = am4core.color("rgba(178, 223, 138, 1)"); // Right Button Hover
+                                            chart.scrollbarX.endGrip.background.states.getKey('down').properties.fill = am4core.color("rgba(178, 223, 138, 1)"); // Right Button Active
+                                            // Scrollbar Overlay Hover Color
+                                            chart.scrollbarX.thumb.background.states.getKey('hover').properties.fill = am4core.color("rgba(178, 223, 138, 1)");
+                                            // Scrollbar Overlay Active Color
+                                            chart.scrollbarX.thumb.background.states.getKey('down').properties.fill = am4core.color("rgba(178, 223, 138, 1)");
+                                            // Scrollbar Stroke Color
+                                            chart.scrollbarX.stroke = am4core.color("#475364");
                                             // Add cursor
                                             chart.cursor = new am4charts.XYCursor();
                                             // Vertical Line
