@@ -1,0 +1,26 @@
+<div class="tab-area mb-2 mb-md-3 mt-2 mt-md-4">
+   <div class="tab-wrap border-radius-8 mb-2 mb-md-4">
+      <ul class="nav nav-pills nav-justified w-50">
+         <li class="nav-item">
+            <a class="rs-btn rs-btn-trans rs-btn-lg nav-link fz20 fw-700 uppercase active" data-toggle="tab" href="#dates">Dates</a>
+         </li>
+         <li class="nav-item">
+            <a class="rs-btn rs-btn-trans rs-btn-lg nav-link fz20 fw-700 uppercase" data-toggle="tab" href="#properties">properties</a>
+         </li>
+         <li class="nav-item">
+            <a class="rs-btn rs-btn-trans rs-btn-lg nav-link fz20 fw-700 uppercase" data-toggle="tab" href="#adPlaces">Ad places</a>
+         </li>
+      </ul>
+   </div>
+
+   <!-- Tab panes -->
+   <div class="tab-content border-radius-8 table-row-bg-color">
+      <div class="tab-pane container active" id="dates">
+         <div class="dates-data-table">
+            {% include "snippets/dataTable/datesDataTable.njk" %}
+         </div>
+      </div>
+      <div class="tab-pane container fade" id="properties">...</div>
+      <div class="tab-pane container fade" id="adPlaces">...</div>
+   </div>
+</div>
