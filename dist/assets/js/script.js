@@ -247,6 +247,18 @@
             "paging": false,
             "searching": false,
         });
+        $('#browserDataTable').DataTable({
+            "paging": false,
+            "searching": false,
+        });
+        $('#devicesDataTable').DataTable({
+            "paging": false,
+            "searching": false,
+        });
+        $('#operatingSystemDataTable').DataTable({
+            "paging": false,
+            "searching": false,
+        });
     });
 
 
