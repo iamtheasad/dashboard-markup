@@ -123,9 +123,29 @@
 </div>
 
 {% include "snippets/reports/chartTab.njk" %}
-{% include "snippets/dataTable/datesData.njk" %}
-<!--Load More Button-->
-{% include "snippets/loadMoreBtn.njk" %}
+
+<div class="ra-data-table-bg p-3  mt-2 mt-md-5 border-radius-8 ra-property-list dashbaord-main">
+   <div class="row">
+      <div class="col-md-12">
+         <div class="property-data-table-head mb-2">
+            <h2 class="fw-500 fz24">Report Last 30 Days</h2>
+
+            <div class="propert-header-right">
+               <button type="submit" class="rs-btn rs-btn-primary uppercase" for="searchInput">expoert</button>
+            </div>
+         </div>
+         <div class="dataTable table-responsive">
+
+            {% include "snippets/dataTable/datesData.njk" %}
+
+            <!--Load More Button-->
+            {% include "snippets/loadMoreBtn.njk" %}
+
+         </div>
+      </div>
+   </div>
+</div>
+
 
 {% endblock %}
 
