@@ -29,7 +29,8 @@
             $(".rs-input").focusout(function () {
                 if ($(this).val() == '' || $(this).val() == null) {
                     $(this).parent(".rs-form").removeClass('animate');
-                };
+                }
+                ;
             });
 
             $(".rs-input").on('change keyup paste', function (e) {
@@ -268,6 +269,18 @@
             "searching": false,
         });
         $('#networkDataTable').DataTable({
+            "paging": false,
+            "searching": false,
+        });
+        $('#advertiserDataTable').DataTable({
+            "paging": false,
+            "searching": false,
+        });
+        $('#adSizeDataTable').DataTable({
+            "paging": false,
+            "searching": false,
+        });
+        $('#positionDataTable').DataTable({
             "paging": false,
             "searching": false,
         });
