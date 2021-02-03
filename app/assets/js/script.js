@@ -284,6 +284,10 @@
             "paging": false,
             "searching": false,
         });
+        $('#countriesDetailDataTable').DataTable({
+            "paging": false,
+            "searching": false,
+        });
     });
 
 
