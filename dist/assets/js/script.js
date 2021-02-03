@@ -259,6 +259,18 @@
             "paging": false,
             "searching": false,
         });
+        $('#countriesDataTable').DataTable({
+            "paging": false,
+            "searching": false,
+        });
+        $('#citiesDataTable').DataTable({
+            "paging": false,
+            "searching": false,
+        });
+        $('#networkDataTable').DataTable({
+            "paging": false,
+            "searching": false,
+        });
     });
 
 
