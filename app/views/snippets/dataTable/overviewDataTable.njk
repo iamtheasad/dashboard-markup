@@ -2,13 +2,16 @@
    <div class="tab-wrap border-radius-8 mb-2 mb-md-4">
       <ul class="nav nav-pills nav-justified w-50">
          <li class="nav-item">
-            <a class="rs-btn rs-btn-trans rs-btn-lg nav-link fz20 fw-700 uppercase active" data-toggle="tab" href="#dates">Dates</a>
+            <a class="rs-btn rs-btn-trans rs-btn-lg nav-link fz20 fw-700 uppercase active" data-toggle="tab"
+               href="#dates">Dates</a>
          </li>
          <li class="nav-item">
-            <a class="rs-btn rs-btn-trans rs-btn-lg nav-link fz20 fw-700 uppercase" data-toggle="tab" href="#properties">properties</a>
+            <a class="rs-btn rs-btn-trans rs-btn-lg nav-link fz20 fw-700 uppercase" data-toggle="tab"
+               href="#properties">properties</a>
          </li>
          <li class="nav-item">
-            <a class="rs-btn rs-btn-trans rs-btn-lg nav-link fz20 fw-700 uppercase" data-toggle="tab" href="#adPlaces">Ad places</a>
+            <a class="rs-btn rs-btn-trans rs-btn-lg nav-link fz20 fw-700 uppercase" data-toggle="tab" href="#adPlaces">Ad
+               places</a>
          </li>
       </ul>
    </div>
@@ -17,10 +20,19 @@
    <div class="tab-content border-radius-8 table-row-bg-color">
       <div class="tab-pane active" id="dates">
          <div class="dates-data-table">
-            {% include "snippets/dataTable/datesDataTable.njk" %}
+            {% include "snippets/dataTable/overviewDatesDataTable.njk" %}
          </div>
       </div>
-      <div class="tab-pane fade" id="properties">...</div>
-      <div class="tab-pane fade" id="adPlaces">...</div>
+
+      <div class="tab-pane fade" id="properties">
+         <div class="properties-data-table">
+            {% include "snippets/dataTable/overviewPropertyDataTable.njk" %}
+         </div>
+      </div>
+      <div class="tab-pane fade" id="adPlaces">
+         <div class="overview-adPlace-data-table">
+            {% include "snippets/dataTable/overviewaddPlaceDataTable.njk" %}
+         </div>
+      </div>
    </div>
 </div>

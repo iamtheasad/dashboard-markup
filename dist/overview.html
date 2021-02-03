@@ -699,7 +699,8 @@
                                     <a class="rs-btn rs-btn-trans rs-btn-lg nav-link fz20 fw-700 uppercase" data-toggle="tab" href="#properties">properties</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="rs-btn rs-btn-trans rs-btn-lg nav-link fz20 fw-700 uppercase" data-toggle="tab" href="#adPlaces">Ad places</a>
+                                    <a class="rs-btn rs-btn-trans rs-btn-lg nav-link fz20 fw-700 uppercase" data-toggle="tab" href="#adPlaces">Ad
+                                        places</a>
                                 </li>
                             </ul>
                         </div>
@@ -708,33 +709,14 @@
                         <div class="tab-content border-radius-8 table-row-bg-color">
                             <div class="tab-pane active" id="dates">
                                 <div class="dates-data-table">
-                                    <div class="ra-data-table-bg p-3 pt-4 mt-2 mt-md-5 border-radius-8 ra-property-list">
+                                    <div class="ra-data-table-bg border-radius-8 ra-property-list">
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <div class="property-data-table-head mb-2">
-                                                    <h2 class="fw-500 fz24 text-sm-center">List of Properties</h2>
-
-                                                    <div class="propert-header-right">
-                                                        <fieldset class="rs-form mr-2">
-                                                            <select class="ra-select min-height-40 form-width fw-700 fz16">
-                                                                <option class="fz18 fw-500" value="bangladesh" selected>All Property Type</option>
-                                                                <option class="fz18 fw-500" value="saudi arabia">Saudi Arabia</option>
-                                                                <option class="fz18 fw-500" value="us">Uinited State Of America</option>
-                                                                <option class="fz18 fw-500" value="india">India</option>
-                                                            </select>
-                                                        </fieldset>
-                                                        <form action="" class="rs-form">
-                                                            <button type="submit" class="position-absolute ra-search-label" for="searchInput">
-                                                                <img src="assets/images/icons/search.svg" alt="Search Icon">
-                                                            </button>
-                                                            <input type="search" class="rs-input min-height-48 pr-5" id="searchInput" placeholder="enter property name">
-                                                        </form>
-                                                    </div>
-                                                </div>
                                                 <div class="dataTable table-responsive">
+
                                                     <!-- Bootstrap Table all class name: table table-striped table-hover table-bordered  table-borderless table-sm -->
 
-                                                    <table id="propertyDataTable" class="property-table table table-striped table-hover" style="width:100%">
+                                                    <table id="overviewDatesDataTable" class="property-table table table-striped table-hover" style="width:100%">
                                                         <thead class="ra-table-head">
                                                             <tr class="table-header-height-for-34">
                                                                 <th>Date</th>
@@ -761,7 +743,7 @@
                                                                 <td>৳ 4.74</td>
                                                             </tr>
                                                             <tr>
-                                                                <td>5 Oct 2020</td>
+                                                                <td>6 Oct 2020</td>
                                                                 <td>112,110</td>
                                                                 <td>95,623</td>
                                                                 <td>21</td>
@@ -772,7 +754,7 @@
                                                                 <td>৳ 4.74</td>
                                                             </tr>
                                                             <tr>
-                                                                <td>5 Oct 2020</td>
+                                                                <td>7 Oct 2020</td>
                                                                 <td>112,110</td>
                                                                 <td>95,623</td>
                                                                 <td>21</td>
@@ -783,7 +765,7 @@
                                                                 <td>৳ 4.74</td>
                                                             </tr>
                                                             <tr>
-                                                                <td>5 Oct 2020</td>
+                                                                <td>8 Oct 2020</td>
                                                                 <td>112,110</td>
                                                                 <td>95,623</td>
                                                                 <td>21</td>
@@ -794,7 +776,7 @@
                                                                 <td>৳ 4.74</td>
                                                             </tr>
                                                             <tr>
-                                                                <td>5 Oct 2020</td>
+                                                                <td>9 Oct 2020</td>
                                                                 <td>112,110</td>
                                                                 <td>95,623</td>
                                                                 <td>21</td>
@@ -805,7 +787,7 @@
                                                                 <td>৳ 4.74</td>
                                                             </tr>
                                                             <tr>
-                                                                <td>5 Oct 2020</td>
+                                                                <td>10 Oct 2020</td>
                                                                 <td>112,110</td>
                                                                 <td>95,623</td>
                                                                 <td>21</td>
@@ -928,8 +910,182 @@
 
                                 </div>
                             </div>
-                            <div class="tab-pane fade" id="properties">...</div>
-                            <div class="tab-pane fade" id="adPlaces">...</div>
+
+                            <div class="tab-pane fade" id="properties">
+                                <div class="properties-data-table">
+                                    <div class="ra-data-table-bg border-radius-8 ra-property-list">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="dataTable table-responsive">
+                                                    <!-- Bootstrap Table all class name: table table-striped table-hover table-bordered  table-borderless table-sm -->
+
+                                                    <table id="overviewPropertyDataTable" class="property-table table table-striped table-hover" style="width:100%">
+                                                        <thead class="ra-table-head">
+                                                            <tr class="table-header-height-for-34">
+                                                                <th>Properties</th>
+                                                                <th>Property Type</th>
+                                                                <th>Request</th>
+                                                                <th>Impressions</th>
+                                                                <th>Fill Rate</th>
+                                                                <th>Clicks</th>
+                                                                <th>CTR</th>
+                                                                <th>Revenue</th>
+                                                                <th>eCPM</th>
+
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>PropertyName 1</td>
+                                                                <td>Website</td>
+                                                                <td>1,625,790,161</td>
+                                                                <td>856,651,740</td>
+                                                                <td>85.29%</td>
+                                                                <td>148,673</td>
+                                                                <td>5.5%</td>
+                                                                <td>৳ 1,702,908</td>
+                                                                <td>৳ 1,702</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>PropertyName 2</td>
+                                                                <td>Website</td>
+                                                                <td>1,625,790,161</td>
+                                                                <td>856,651,740</td>
+                                                                <td>85.29%</td>
+                                                                <td>148,673</td>
+                                                                <td>5.5%</td>
+                                                                <td>৳ 1,702,908</td>
+                                                                <td>৳ 1,702</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>PropertyName 3</td>
+                                                                <td>Website</td>
+                                                                <td>1,625,790,161</td>
+                                                                <td>856,651,740</td>
+                                                                <td>85.29%</td>
+                                                                <td>148,673</td>
+                                                                <td>5.5%</td>
+                                                                <td>৳ 1,702,908</td>
+                                                                <td>৳ 1,702</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>PropertyName 1</td>
+                                                                <td>Website</td>
+                                                                <td>1,625,790,161</td>
+                                                                <td>856,651,740</td>
+                                                                <td>85.29%</td>
+                                                                <td>148,673</td>
+                                                                <td>5.5%</td>
+                                                                <td>৳ 1,702,908</td>
+                                                                <td>৳ 1,702</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>PropertyName 4</td>
+                                                                <td>Website</td>
+                                                                <td>1,625,790,161</td>
+                                                                <td>856,651,740</td>
+                                                                <td>85.29%</td>
+                                                                <td>148,673</td>
+                                                                <td>5.5%</td>
+                                                                <td>৳ 1,702,908</td>
+                                                                <td>৳ 1,702</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>PropertyName 5</td>
+                                                                <td>Website</td>
+                                                                <td>1,625,790,161</td>
+                                                                <td>856,651,740</td>
+                                                                <td>85.29%</td>
+                                                                <td>148,673</td>
+                                                                <td>5.5%</td>
+                                                                <td>৳ 1,702,908</td>
+                                                                <td>৳ 1,702</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="adPlaces">
+                                <div class="overview-adPlace-data-table">
+                                    <div class="ra-data-table-bg border-radius-8 ra-property-list">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="dataTable table-responsive">
+                                                    <!-- Bootstrap Table all class name: table table-striped table-hover table-bordered  table-borderless table-sm -->
+
+                                                    <table id="overviewAdPlaceDataTable" class="property-table table table-striped table-hover" style="width:100%">
+                                                        <thead class="ra-table-head">
+                                                            <tr class="table-header-height-for-34">
+                                                                <th>Ad Place</th>
+                                                                <th>Property Name</th>
+                                                                <th>Size</th>
+                                                                <th>Request</th>
+                                                                <th>Impressions</th>
+                                                                <th>Fill Rate</th>
+                                                                <th>Clicks</th>
+                                                                <th>CTR</th>
+                                                                <th>Revenue</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>AdPlaceName 1</td>
+                                                                <td>PropertyName 1</td>
+                                                                <td>300x250</td>
+                                                                <td>1,625,790,161</td>
+                                                                <td>856,651,740</td>
+                                                                <td>85.29%</td>
+                                                                <td>148,673</td>
+                                                                <td>5.5%</td>
+                                                                <td>৳ 1,702,908</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>AdPlaceName 2</td>
+                                                                <td>PropertyName 1</td>
+                                                                <td>300x250</td>
+                                                                <td>1,625,790,161</td>
+                                                                <td>856,651,740</td>
+                                                                <td>85.29%</td>
+                                                                <td>148,673</td>
+                                                                <td>5.5%</td>
+                                                                <td>৳ 1,702,908</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>AdPlaceName 3</td>
+                                                                <td>PropertyName 1</td>
+                                                                <td>300x250</td>
+                                                                <td>1,625,790,161</td>
+                                                                <td>856,651,740</td>
+                                                                <td>85.29%</td>
+                                                                <td>148,673</td>
+                                                                <td>5.5%</td>
+                                                                <td>৳ 1,702,908</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>AdPlaceName 4</td>
+                                                                <td>PropertyName 1</td>
+                                                                <td>300x250</td>
+                                                                <td>1,625,790,161</td>
+                                                                <td>856,651,740</td>
+                                                                <td>85.29%</td>
+                                                                <td>148,673</td>
+                                                                <td>5.5%</td>
+                                                                <td>৳ 1,702,908</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

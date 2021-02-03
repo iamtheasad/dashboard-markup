@@ -235,6 +235,18 @@
             "paging": false,
             "searching": false,
         });
+        $('#overviewDatesDataTable').DataTable({
+            "paging": false,
+            "searching": false,
+        });
+        $('#overviewPropertyDataTable').DataTable({
+            "paging": false,
+            "searching": false,
+        });
+        $('#overviewAdPlaceDataTable').DataTable({
+            "paging": false,
+            "searching": false,
+        });
     });
 
 
