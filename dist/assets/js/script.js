@@ -216,8 +216,6 @@
         });
 
         $('#placesDataTable').DataTable({
-            // "scrollY": "400px",
-            // "scrollCollapse": true,
             "paging": false,
             "searching": false,
         });

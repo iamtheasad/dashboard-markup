@@ -1,3 +1,9 @@
 node_modules/
 
 .idea
+.vscode
+
+debug.log
+package-lock.json
+yarn.lock
+.idea

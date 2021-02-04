@@ -8,15 +8,15 @@
 }
 
 // Payment Account Option
-.payment_item {
-   text-align: center;
-}
-
-.payment_item button {
-   background-color: #fff;
-   border-color: transparent;
-   border-radius: 8px;
+.payment-btn {
+   width: 120px;
+   height: 90px;
    border: 1px dashed transparent;
+
+   @media (max-width: 576px) {
+      width: 60px;
+      height: 60px;
+   }
 }
 
 .dashed_border {
@@ -50,6 +50,10 @@ input[type="text"] {
    background-position-x: 95%;
    min-height: 64px;
    border-radius: 4px;
+
+   @media (max-width: 992px) {
+      min-height: 40px;
+   }
 }
 
 .ra-select:focus {
@@ -78,21 +82,24 @@ input[type="text"] {
 }
 
 // Add Payment Account
-
-.profile_image {
-   width: 100%;
-}
-
-.user_img {
-   max-width: 128px;
-   margin: 0 auto;
-}
-
 .user_img label {
-   background: #fff;
-   width: 100%;
+   background: $white;
+   width: 96px;
+   height: 96px;
    border-radius: 50%;
-   padding: 20px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.user_img img {
+   width: 56px;
+   height: 56px;
+}
+
+.setting-user-img label{
+   width: 128px;
+   height: 128px;
 }
 
 .user_btn .rs-btn {
@@ -146,6 +153,7 @@ input[type="text"] {
    border-bottom: 1px solid transparent;
    transition: 0.1s ease-in-out;
 }
+
 .guide-line a:hover {
    border-bottom: 1px solid $primaryColor;
    color: $primaryColor;
@@ -172,9 +180,10 @@ input[type="text"] {
    background-color: $tableHeaderColor !important;
 }
 
-table.dataTable > thead .sorting,
-table.dataTable > thead .sorting_asc,
-table.dataTable > thead .sorting_desc {
+table.dataTable>thead .sorting,
+table.dataTable>thead .sorting_asc,
+table.dataTable>thead .sorting_desc {
+
    &:after,
    &:before {
       content: "" !important;
@@ -183,10 +192,12 @@ table.dataTable > thead .sorting_desc {
       height: 5.25px;
       right: 6%;
    }
+
    &:after {
       clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
       top: 37%;
    }
+
    &:before {
       clip-path: polygon(50% 100%, 0 0, 100% 0);
       top: 53%;
@@ -198,9 +209,17 @@ table.dataTable > thead .sorting_desc {
    border-radius: 30px !important;
    border-color: $borderColor;
    transition: 0.2s ease-in-out;
-   min-height: 48px !important;
    color: $primaryColor;
-   width: 250px;
+}
+
+.propert-header-right select {
+   max-width: 250px;
+   width: 100%;
+
+   @media(max-width: 420px) {
+      margin-bottom: 15px;
+      margin-top: 20px;
+   }
 }
 
 .propert-header-right select:focus {
@@ -224,7 +243,6 @@ table.dataTable > thead .sorting_desc {
 
 .ra-add-block-input {
    background-color: $tableRowColor;
-   background-image: url(url('data:image/svg+xml;utf8,<svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0.126953L8 8.12695L16 0.126953H0Z" fill="#8E8E93"/></svg>'));
 }
 
 .ra-block-add-select-bg option {
@@ -241,4 +259,40 @@ table.dataTable > thead .sorting_desc {
 
 .ra-block-add-btn:hover {
    color: $white !important;
+}
+
+// Acitvity Log
+.ra-activity-log-wrapper {
+   border: 1px solid $primaryBg;
+   position: relative;
+}
+
+@media(max-width: 767px) {
+   .acitvity-log-select {
+      max-width: 400px;
+      width: 100% !important;
+   }
+}
+
+.ra-activity-log-text {
+   position: relative;
+}
+
+.acitivity-icon-wrapper {
+   background: $tableRowColor;
+   max-width: 48px;
+   height: 48px;
+   border-radius: 50%;
+   width: 100%;
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+}
+
+.activity-icon {
+   max-width: 21px;
+}
+
+th.sorting {
+   white-space: nowrap;
 }

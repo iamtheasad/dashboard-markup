@@ -1,45 +1,48 @@
-.sidebar-menu{
+.sidebar-menu {
     max-width: 216px;
     width: 100%;
     background-color: #fafafa;
     padding: 18px;
     height: 100vh;
     overflow-y: auto;
-    .site-logo{
+    @media (max-width: 992px) {
+        display: none;
+    }
+    .site-logo {
         max-width: 122px;
         width: 100%;
         margin-bottom: 40px;
     }
-    .menu-area{
-        ul{
-            li{
+    .menu-area {
+        ul {
+            li {
                 margin-bottom: 8px;
-                &:last-child{
+                &:last-child {
                     margin-bottom: 0;
                 }
-                a{
+                a {
                     font-weight: 700;
                     font-size: rem(16);
                     color: $black;
                     border-radius: 4px;
                     width: 100%;
                     background-color: transparent;
-                    transition: .3s ease-in-out;
+                    transition: 0.3s ease-in-out;
                     min-height: 40px;
                     display: flex;
                     align-items: center;
-                    .icon{
+                    .icon {
                         margin-right: 16px;
-                        transition: .3s ease-in-out;
+                        transition: 0.3s ease-in-out;
                     }
-                    &:hover{
+                    &:hover {
                         background-color: darken(#eceef3, 10);
                     }
                 }
-                &.active> a{
-                    background-color: #0E1217;
+                &.active > a {
+                    background-color: #0e1217;
                     color: $white;
-                    .icon{
+                    .icon {
                         filter: brightness(0) invert(1);
                     }
                 }
@@ -47,13 +50,14 @@
         }
     }
 
-    .collapse,.collapsing{
-        ul{
-            background-color: #ECEEF3;
+    .collapse,
+    .collapsing {
+        ul {
+            background-color: #eceef3;
             padding: 4px 0 !important;
             border-radius: 4px;
-            li{
-                a{
+            li {
+                a {
                     padding: 8px 16px;
                 }
             }

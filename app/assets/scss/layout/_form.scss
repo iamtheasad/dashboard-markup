@@ -37,6 +37,9 @@
         font-size: rem(16);
         transition: .2s ease-in-out;
         color: $black;
+        @media(max-width: 992px){
+           min-height: 40px;
+        }
     }
     .icon{
         width: 24px;
@@ -94,6 +97,9 @@
     .checkbox-label{
         padding-left: 32px;
         position: relative;
+        @media(max-width: 575px){
+            font-size: rem(12px);
+        }
         &:before, &:after{
             content: '';
             position: absolute;
@@ -102,6 +108,10 @@
             top: 0;
             left: 0;
             border-radius: 4px;
+            @media(max-width: 575px){
+                width: 20px;
+                height: 20px;
+            }
         }
         &:before{
             border: 2px solid #8E8E93;
@@ -121,5 +131,15 @@
     .rs-checkbox-input:checked + .checkbox-label:after{
         opacity: 1;
         visibility: visible;
+    }
+}
+
+.acitvity-log-search {
+    max-width: 400px;
+    width: 100%;
+    float: right;
+    @media(max-width: 767px){
+    margin-top: 20px;
+    float: left;
     }
 }
