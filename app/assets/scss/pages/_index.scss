@@ -19,19 +19,9 @@
   border-radius: 8px;
   padding: 16px;
   background-color: #ECEEF3;
-  transition: .2s ease-out;
 
   &.darken {
     background-color: #CED5DE;
-    transition: .2s ease-out;
-
-    &:hover {
-      background-color: rgba(206, 213, 222, 0.8);
-    }
-  }
-
-  &:hover {
-    background-color: rgba(236, 238, 243, 0.7);
   }
 }
 
