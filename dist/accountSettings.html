@@ -39,14 +39,24 @@
                         </a>
                         <div id="report-sidebar-menu" class="collapse">
                             <ul>
-                                <li><a href="">Overview</a></li>
-                                <li><a href="">Location</a></li>
-                                <li><a href="">Revenue </a></li>
+                                <li><a href="overview.html">Overview</a></li>
+                                <li><a href="location.html">Location</a></li>
+                                <li><a href="revenue.html">Revenue</a></li>
+                                <li><a href="technology.html">Technology</a></li>
                             </ul>
                         </div>
                     </li>
 
-                    <li><a href=""><img class="icon" src="assets/images/icons/money.svg" alt="">Payments</a></li>
+                    <li>
+                        <a href="#payment-sidebar-menu" data-toggle="collapse"><img class="icon" src="assets/images/icons/money.svg" alt="">Payments</a>
+                        <div id="payment-sidebar-menu" class="collapse">
+                            <ul>
+                                <li><a href="estimatedRevenuePage.html">Estimated Revennue</a></li>
+                                <li><a href="finilizedPayment.html">Finilized Payments</a></li>
+                                <li><a href="balance.html">Balance</a></li>
+                            </ul>
+                        </div>
+                    </li>
                     <li>
                         <a href="#settings-sidebar-menu" data-toggle="collapse">
                             <img class="icon" src="assets/images/icons/settings.svg" alt="">Settings
@@ -85,6 +95,7 @@
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 <ul>
                                     <li><a href="">Account Settings</a></li>
+                                    <li><a href="index2.html">Advertiser Dashboard</a></li>
                                     <li><a href="">বাংলা ভাষা নির্বাচন</a></li>
                                     <li><a href="">Take a Tour</a></li>
                                     <li><a href="">Account Settings</a></li>
@@ -145,7 +156,7 @@
                                 <!-- Modal -->
                                 <div class="modal fade" id="editAccountModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog modal-lg" role="document">
-                                        <div class="modal-content p-5 changePasswordModal-content editAccount-close">
+                                        <div class="modal-content p-xl-5 p-lg-3 p-md-1 changePasswordModal-content editAccount-close">
                                             <form action="">
                                                 <div class="modal-header border-bottom-0">
                                                     <h5 class="modal-title fz24 fw-500" id="exampleModalLabel">Edit Account Information</h5>
@@ -269,16 +280,16 @@
                             <p class="mt-2 fz12 pt-1 pb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa laborum autem id odit a magnam temporibus.</p>
 
                             <div class="d-flex pb-3 mt-4 text-center">
-                                <div class="payment_item mr-2">
-                                    <button type="button" class="rs-btn mr-3 radius_8 payment-btn" data-toggle="modal" data-target="#editPaymentAccount"><span><img src="assets/images/icons/bdt.svg" alt="BDT Icon"></span></button>
+                                <div class="payment_item mr-3">
+                                    <button type="button" class="rs-btn border-radius-8 payment-btn" data-toggle="modal" data-target="#editPaymentAccount"><span><img src="assets/images/icons/bdt.svg" alt="BDT Icon"></span></button>
                                     <p class="mt-2 fz12">Payment Option</p>
                                 </div>
-                                <div class="payment_item mr-2">
-                                    <button type="button" class="rs-btn mr-3 radius_8 payment-btn" data-toggle="modal" data-target="#editPaymentAccount"><span><img src="assets/images/icons/bdt.svg" alt="BDT Icon"></span></button>
+                                <div class="payment_item mr-3">
+                                    <button type="button" class="rs-btn border-radius-8 payment-btn" data-toggle="modal" data-target="#editPaymentAccount"><span><img src="assets/images/icons/bdt.svg" alt="BDT Icon"></span></button>
                                     <p class="mt-2 fz12">Payment Option</p>
                                 </div>
-                                <div class="payment_item mr-2">
-                                    <button type="button" class="rs-btn mr-3 dashed_border radius_8 payment-btn" data-toggle="modal" data-target="#addPaymentOption">
+                                <div class="payment_item mr-3">
+                                    <button type="button" class="rs-btn dashed_border border-radius-8 payment-btn" data-toggle="modal" data-target="#addPaymentOption">
                                         <span><img src="assets/images/icons/plus.svg" alt="BDT Icon"></span>
                                     </button>
                                     <p class="fz13 mt-2 fz12">Add Payment Option</p>
@@ -287,7 +298,7 @@
                                 <!-- Modal -->
                                 <div class="modal fade" id="addPaymentOption" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog modal-lg" role="document">
-                                        <div class="modal-content p-5 changePasswordModal-content payment-close">
+                                        <div class="modal-content p-xl-5 p-lg-3 p-md-1 changePasswordModal-content payment-close">
                                             <form action="">
                                                 <div class="modal-header border-bottom-0">
                                                     <h5 class="modal-title" id="exampleModalLabel">Add Payment Account</h5>
@@ -365,7 +376,7 @@
                                 <!-- Modal -->
                                 <div class="modal fade" id="editPaymentAccount" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog modal-lg" role="document">
-                                        <div class="modal-content p-5 changePasswordModal-content payment-close">
+                                        <div class="modal-content p-xl-5 p-lg-3 p-md-1 changePasswordModal-content payment-close">
                                             <form action="">
                                                 <div class="modal-header border-bottom-0">
                                                     <h5 class="modal-title" id="exampleModalLabel">Edit Payment Account</h5>

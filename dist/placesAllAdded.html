@@ -39,14 +39,24 @@
                         </a>
                         <div id="report-sidebar-menu" class="collapse">
                             <ul>
-                                <li><a href="">Overview</a></li>
-                                <li><a href="">Location</a></li>
-                                <li><a href="">Revenue </a></li>
+                                <li><a href="overview.html">Overview</a></li>
+                                <li><a href="location.html">Location</a></li>
+                                <li><a href="revenue.html">Revenue</a></li>
+                                <li><a href="technology.html">Technology</a></li>
                             </ul>
                         </div>
                     </li>
 
-                    <li><a href=""><img class="icon" src="assets/images/icons/money.svg" alt="">Payments</a></li>
+                    <li>
+                        <a href="#payment-sidebar-menu" data-toggle="collapse"><img class="icon" src="assets/images/icons/money.svg" alt="">Payments</a>
+                        <div id="payment-sidebar-menu" class="collapse">
+                            <ul>
+                                <li><a href="estimatedRevenuePage.html">Estimated Revennue</a></li>
+                                <li><a href="finilizedPayment.html">Finilized Payments</a></li>
+                                <li><a href="balance.html">Balance</a></li>
+                            </ul>
+                        </div>
+                    </li>
                     <li>
                         <a href="#settings-sidebar-menu" data-toggle="collapse">
                             <img class="icon" src="assets/images/icons/settings.svg" alt="">Settings
@@ -85,6 +95,7 @@
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 <ul>
                                     <li><a href="">Account Settings</a></li>
+                                    <li><a href="index2.html">Advertiser Dashboard</a></li>
                                     <li><a href="">বাংলা ভাষা নির্বাচন</a></li>
                                     <li><a href="">Take a Tour</a></li>
                                     <li><a href="">Account Settings</a></li>
@@ -98,7 +109,7 @@
             </header>
 
             <div class="d-card">
-                <div class="user-wrapper pl-4">
+                <div class="user-wrapper">
                     <h2 class="fz24 fw-500 mb-3">Add New Place for Advertise</h2>
 
                     <p class="fz12 gray-color">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
@@ -112,15 +123,15 @@
                     </div>
                 </div>
             </div>
-            <div class="ra-data-table-bg p-3 pt-5 radius_8 ra-property-list dashbaord-main">
+            <div class="ra-data-table-bg p-3  mt-2 mt-md-5 border-radius-8 ra-property-list dashbaord-main">
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="property-data-table-head d-flex flex-wrap justify-content-between align-items-center mb-2">
+                        <div class="property-data-table-head mb-2">
                             <h2 class="fw-500 fz24">List of Ad Places</h2>
 
-                            <div class="propert-header-right d-flex flex-wrap">
+                            <div class="propert-header-right">
                                 <fieldset class="rs-form mr-2">
-                                    <select class="ra-select fw-700 fz16">
+                                    <select class="ra-select min-height-40 form-width fw-700 fz16">
                                         <option class="fz18 fw-500" value="bangladesh" selected>All Properties</option>
                                         <option class="fz18 fw-500" value="saudi arabia">Saudi Arabia</option>
                                         <option class="fz18 fw-500" value="us">Uinited State Of America</option>
@@ -131,7 +142,7 @@
                                     <button type="submit" class="position-absolute ra-search-label" for="searchInput">
                                         <img src="assets/images/icons/search.svg" alt="Search Icon">
                                     </button>
-                                    <input type="search" class="rs-input pr-5" id="searchInput" placeholder="enter ad place name">
+                                    <input type="search" class="rs-input min-height-48 pr-5" id="searchInput" placeholder="enter ad place name">
                                 </form>
                             </div>
                         </div>
@@ -143,7 +154,7 @@
 
                             <table id="placesDataTable" class="property-table table table-striped table-hover" style="width:100%">
                                 <thead class="ra-table-head">
-                                    <tr>
+                                    <tr class="table-header-height-for-34">
                                         <th>Ad Place</th>
                                         <th>Property Name</th>
                                         <th>Size</th>

@@ -29,7 +29,8 @@
             $(".rs-input").focusout(function () {
                 if ($(this).val() == '' || $(this).val() == null) {
                     $(this).parent(".rs-form").removeClass('animate');
-                };
+                }
+                ;
             });
 
             $(".rs-input").on('change keyup paste', function (e) {
@@ -216,6 +217,74 @@
         });
 
         $('#placesDataTable').DataTable({
+            "paging": false,
+            "searching": false,
+        });
+        $('#estimatedRevenueDataTable').DataTable({
+            "paging": false,
+            "searching": false,
+        });
+        $('#finalizedPaymentMonthlyInfoDataTable').DataTable({
+            "paging": false,
+            "searching": false,
+        });
+        $('#publisherInvoicePaymentProcessAdvertiserDataTable').DataTable({
+            "paging": false,
+            "searching": false,
+        });
+        $('#publisherInvoicePaymentProcessPropertiesDataTable').DataTable({
+            "paging": false,
+            "searching": false,
+        });
+        $('#overviewDatesDataTable').DataTable({
+            "paging": false,
+            "searching": false,
+        });
+        $('#overviewPropertyDataTable').DataTable({
+            "paging": false,
+            "searching": false,
+        });
+        $('#overviewAdPlaceDataTable').DataTable({
+            "paging": false,
+            "searching": false,
+        });
+        $('#browserDataTable').DataTable({
+            "paging": false,
+            "searching": false,
+        });
+        $('#devicesDataTable').DataTable({
+            "paging": false,
+            "searching": false,
+        });
+        $('#operatingSystemDataTable').DataTable({
+            "paging": false,
+            "searching": false,
+        });
+        $('#countriesDataTable').DataTable({
+            "paging": false,
+            "searching": false,
+        });
+        $('#citiesDataTable').DataTable({
+            "paging": false,
+            "searching": false,
+        });
+        $('#networkDataTable').DataTable({
+            "paging": false,
+            "searching": false,
+        });
+        $('#advertiserDataTable').DataTable({
+            "paging": false,
+            "searching": false,
+        });
+        $('#adSizeDataTable').DataTable({
+            "paging": false,
+            "searching": false,
+        });
+        $('#positionDataTable').DataTable({
+            "paging": false,
+            "searching": false,
+        });
+        $('#countriesDetailDataTable').DataTable({
             "paging": false,
             "searching": false,
         });

@@ -47,15 +47,21 @@
         font-size: rem(16px) !important;
         padding: 8px 16px !important;
     }
+
     @media (max-width: 1200px) {
         font-size: rem(14px) !important;
         padding: 8px 10px !important;
     }
+
     @media (max-width: 575px) {
         font-size: rem(10px) !important;
         padding: 8px 8px !important;
         letter-spacing: 1px;
     }
+}
+
+.ra-blance-btn {
+    background-color: $tableRowColor;
 }
 
 .ra-cursor-pointer {

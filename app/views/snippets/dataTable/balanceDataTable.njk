@@ -1,0 +1,132 @@
+{% block content %}
+
+<!--
+    Bootstrap Table all class name: table table-striped table-hover table-bordered  table-borderless table-sm
+ -->
+<!-- Balance Data Table -->
+<table class="property-table balance-table balance-table-wrapper table table-striped table-hover" style="width:100%">
+
+   <!-- Balance Table Header -->
+   <thead class="ra-table-head ra-balance-table-head">
+      <tr class="table-header-height-for-34">
+         <th class="balance-table-head" colspan="2">Description</th>
+         <th class="balance-table-head">Debits</th>
+         <th class="balance-table-head">Credits</th>
+         <th class="balance-table-head" style="text-align: right">Balance</th>
+      </tr>
+   </thead>
+
+
+   <!-- Balance Table Block -->
+   <thead class="ra-table-head ra-balance-table-head">
+      <tr class="ra-balance-table">
+         <th colspan="4" class="fz20 fw-500">Ref- GR1234567890</th>
+         <th class="balance-table-head">
+            <table style="margin-left: auto;">
+               <tr class="balance-btn-row">
+                  <td class="border-top-0">
+                     <button data-target="#paymentDetailsModal" data-toggle="modal" type="button"
+                        class="rs-btn ra-blance-btn uppercase">
+                        Payment Details
+                     </button>
+
+                     {% include "snippets/modals/paymentDetailsModal.njk" %}
+                  </td>
+               </tr>
+            </table>
+         </th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr class="balance-row">
+         <td>20 MAY 2020</td>
+         <td>Publisher Payment Requested</td>
+         <td>৳ 60,419.75</td>
+         <td>৳ 0.00</td>
+         <td style="text-align: right">৳ 60,419.75</td>
+      </tr>
+      <tr class="balance-row table-row-radius">
+         <td>20 MAY 2020</td>
+         <td>Earnings - Display Banner Advertisement</td>
+         <td>৳ 0.00</td>
+         <td>৳ 40,419.75</td>
+         <td style="text-align: right">৳ 20,000.00</td>
+      </tr>
+   </tbody>
+
+   <!-- Balance Table Block -->
+   <thead class="ra-table-head ra-balance-table-head">
+      <tr class="ra-balance-table">
+         <th colspan="4" class="fz20 fw-500">Ref- GR1234567890</th>
+         <th class="balance-table-head">
+            <table style="margin-left: auto;">
+               <tr class="balance-btn-row">
+                  <td class="border-top-0">
+                     <button data-target="#paymentDetailsModal" data-toggle="modal" type="button"
+                        class="rs-btn ra-blance-btn uppercase">
+                        Payment Details
+                     </button>
+
+                     {% include "snippets/modals/paymentDetailsModal.njk" %}
+                  </td>
+               </tr>
+            </table>
+         </th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr class="balance-row">
+         <td>20 MAY 2020</td>
+         <td>Publisher Payment Requested</td>
+         <td>৳ 60,419.75</td>
+         <td>৳ 0.00</td>
+         <td style="text-align: right">৳ 60,419.75</td>
+      </tr>
+      <tr class="balance-row">
+         <td>20 MAY 2020</td>
+         <td>Earnings - Display Banner Advertisement</td>
+         <td>৳ 0.00</td>
+         <td>৳ 40,419.75</td>
+         <td style="text-align: right">৳ 20,000.00</td>
+      </tr>
+   </tbody>
+
+   <!-- Balance Table Block -->
+   <thead class="ra-table-head ra-balance-table-head">
+      <tr class="ra-balance-table">
+         <th colspan="4" class="fz20 fw-500">Ref- GR1234567890</th>
+         <th class="balance-table-head">
+            <table style="margin-left: auto;">
+               <tr class="balance-btn-row">
+                  <td class="border-top-0">
+                     <button data-target="#paymentDetailsModal" data-toggle="modal" type="button"
+                        class="rs-btn ra-blance-btn uppercase">
+                        Payment Details
+                     </button>
+
+                     {% include "snippets/modals/paymentDetailsModal.njk" %}
+                  </td>
+               </tr>
+            </table>
+         </th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr class="balance-row">
+         <td>20 MAY 2020</td>
+         <td>Publisher Payment Requested</td>
+         <td>৳ 60,419.75</td>
+         <td>৳ 0.00</td>
+         <td style="text-align: right">৳ 60,419.75</td>
+      </tr>
+      <tr class="balance-row">
+         <td>20 MAY 2020</td>
+         <td>Earnings - Display Banner Advertisement</td>
+         <td>৳ 0.00</td>
+         <td>৳ 40,419.75</td>
+         <td style="text-align: right">৳ 20,000.00</td>
+      </tr>
+   </tbody>
+
+</table>
+{% endblock %}

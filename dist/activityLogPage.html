@@ -39,14 +39,24 @@
                         </a>
                         <div id="report-sidebar-menu" class="collapse">
                             <ul>
-                                <li><a href="">Overview</a></li>
-                                <li><a href="">Location</a></li>
-                                <li><a href="">Revenue </a></li>
+                                <li><a href="overview.html">Overview</a></li>
+                                <li><a href="location.html">Location</a></li>
+                                <li><a href="revenue.html">Revenue</a></li>
+                                <li><a href="technology.html">Technology</a></li>
                             </ul>
                         </div>
                     </li>
 
-                    <li><a href=""><img class="icon" src="assets/images/icons/money.svg" alt="">Payments</a></li>
+                    <li>
+                        <a href="#payment-sidebar-menu" data-toggle="collapse"><img class="icon" src="assets/images/icons/money.svg" alt="">Payments</a>
+                        <div id="payment-sidebar-menu" class="collapse">
+                            <ul>
+                                <li><a href="estimatedRevenuePage.html">Estimated Revennue</a></li>
+                                <li><a href="finilizedPayment.html">Finilized Payments</a></li>
+                                <li><a href="balance.html">Balance</a></li>
+                            </ul>
+                        </div>
+                    </li>
                     <li>
                         <a href="#settings-sidebar-menu" data-toggle="collapse">
                             <img class="icon" src="assets/images/icons/settings.svg" alt="">Settings
@@ -85,6 +95,7 @@
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 <ul>
                                     <li><a href="">Account Settings</a></li>
+                                    <li><a href="index2.html">Advertiser Dashboard</a></li>
                                     <li><a href="">বাংলা ভাষা নির্বাচন</a></li>
                                     <li><a href="">Take a Tour</a></li>
                                     <li><a href="">Account Settings</a></li>
@@ -98,34 +109,32 @@
             </header>
 
             <div class="dashbaord-main">
-                <div class="propert-header-right data-table-search-bg p-4 radius_8">
+                <div class="data-table-search-bg p-4 border-radius-8">
                     <div class="row">
-                        <div class="col-lg-6 col-md-6">
-                            <fieldset>
-                                <select class="ra-dark-down-arrow acitvity-log-select ra-select fw-700 fz16">
-                                    <option class="fz18 fw-500" value="bangladesh" selected>Select Date Range</option>
-                                    <option class="fz18 fw-500" value="saudi arabia">Saudi Arabia</option>
-                                    <option class="fz18 fw-500" value="us">Uinited State Of America</option>
-                                    <option class="fz18 fw-500" value="india">India</option>
-                                </select>
-                            </fieldset>
-                        </div>
-                        <div class="col-lg-6 col-md-6">
-                            <form action="" class="rs-form acitvity-log-search">
-                                <div>
+                        <div class="col-md-12">
+                            <div class="propert-header-right activity-log-header">
+                                <fieldset class="rs-form acitvity-log-selection mr-2">
+                                    <select class="ra-select min-height-40 form-width fw-700 fz16">
+                                        <option class="fz18 fw-500" value="bangladesh" selected>Select Date Range</option>
+                                        <option class="fz18 fw-500" value="saudi arabia">Select Date Range1</option>
+                                        <option class="fz18 fw-500" value="us">Select Date Range2</option>
+                                        <option class="fz18 fw-500" value="india">Sharetrip</option>
+                                    </select>
+                                </fieldset>
+                                <form action="" class="rs-form">
                                     <button type="submit" class="position-absolute ra-search-label" for="searchInput">
                                         <img src="assets/images/icons/search.svg" alt="Search Icon">
                                     </button>
-                                    <input type="search" class="rs-input pr-5" id="searchInput" placeholder="enter property or ad place or user name">
-                                </div>
-                            </form>
+                                    <input type="search" class="rs-input min-height-48 pr-5" id="searchInput" placeholder="enter property name">
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="ra-activity-log-wrapper mt-5 mb-5 p-4 radius_8">
+                        <div class="ra-activity-log-wrapper mt-2 mb-2 p-3 border-radius-8">
                             <div class="acitivity-icon-wrapper d-flex justify-content-center align-items-center">
                                 <div class="activity-icon">
                                     <img src="assets/images/icons/icon.svg" alt="Acitvity Icon">
@@ -136,7 +145,7 @@
                                 <p class="gray-color fz12 fw-400">Wed, 04 Dec 2019, 12:16:06</p>
                             </div>
                         </div>
-                        <div class="ra-activity-log-wrapper mt-5 mb-5 p-4 radius_8">
+                        <div class="ra-activity-log-wrapper mt-2 mb-2 p-3 border-radius-8">
                             <div class="acitivity-icon-wrapper d-flex justify-content-center align-items-center">
                                 <div class="activity-icon">
                                     <img src="assets/images/icons/icon.svg" alt="Acitvity Icon">
@@ -147,7 +156,7 @@
                                 <p class="gray-color fz12 fw-400">Wed, 04 Dec 2019, 12:16:06</p>
                             </div>
                         </div>
-                        <div class="ra-activity-log-wrapper mt-5 mb-5 p-4 radius_8">
+                        <div class="ra-activity-log-wrapper mt-2 mb-2 p-3 border-radius-8">
                             <div class="acitivity-icon-wrapper d-flex justify-content-center align-items-center">
                                 <div class="activity-icon">
                                     <img src="assets/images/icons/icon.svg" alt="Acitvity Icon">
@@ -158,7 +167,7 @@
                                 <p class="gray-color fz12 fw-400">Wed, 04 Dec 2019, 12:16:06</p>
                             </div>
                         </div>
-                        <div class="ra-activity-log-wrapper mt-5 mb-5 p-4 radius_8">
+                        <div class="ra-activity-log-wrapper mt-2 mb-2 p-3 border-radius-8">
                             <div class="acitivity-icon-wrapper d-flex justify-content-center align-items-center">
                                 <div class="activity-icon">
                                     <img src="assets/images/icons/icon.svg" alt="Acitvity Icon">
@@ -169,7 +178,7 @@
                                 <p class="gray-color fz12 fw-400">Wed, 04 Dec 2019, 12:16:06</p>
                             </div>
                         </div>
-                        <div class="ra-activity-log-wrapper mt-5 mb-5 p-4 radius_8">
+                        <div class="ra-activity-log-wrapper mt-2 mb-2 p-3 border-radius-8">
                             <div class="acitivity-icon-wrapper d-flex justify-content-center align-items-center">
                                 <div class="activity-icon">
                                     <img src="assets/images/icons/icon.svg" alt="Acitvity Icon">
@@ -180,7 +189,7 @@
                                 <p class="gray-color fz12 fw-400">Wed, 04 Dec 2019, 12:16:06</p>
                             </div>
                         </div>
-                        <div class="ra-activity-log-wrapper mt-5 mb-5 p-4 radius_8">
+                        <div class="ra-activity-log-wrapper mt-2 mb-2 p-3 border-radius-8">
                             <div class="acitivity-icon-wrapper d-flex justify-content-center align-items-center">
                                 <div class="activity-icon">
                                     <img src="assets/images/icons/icon.svg" alt="Acitvity Icon">
@@ -191,7 +200,7 @@
                                 <p class="gray-color fz12 fw-400">Wed, 04 Dec 2019, 12:16:06</p>
                             </div>
                         </div>
-                        <div class="ra-activity-log-wrapper mt-5 mb-5 p-4 radius_8">
+                        <div class="ra-activity-log-wrapper mt-2 mb-2 p-3 border-radius-8">
                             <div class="acitivity-icon-wrapper d-flex justify-content-center align-items-center">
                                 <div class="activity-icon">
                                     <img src="assets/images/icons/icon.svg" alt="Acitvity Icon">
@@ -202,7 +211,7 @@
                                 <p class="gray-color fz12 fw-400">Wed, 04 Dec 2019, 12:16:06</p>
                             </div>
                         </div>
-                        <div class="ra-activity-log-wrapper mt-5 mb-5 p-4 radius_8">
+                        <div class="ra-activity-log-wrapper mt-2 mb-2 p-3 border-radius-8">
                             <div class="acitivity-icon-wrapper d-flex justify-content-center align-items-center">
                                 <div class="activity-icon">
                                     <img src="assets/images/icons/icon.svg" alt="Acitvity Icon">
@@ -213,7 +222,7 @@
                                 <p class="gray-color fz12 fw-400">Wed, 04 Dec 2019, 12:16:06</p>
                             </div>
                         </div>
-                        <div class="ra-activity-log-wrapper mt-5 mb-5 p-4 radius_8">
+                        <div class="ra-activity-log-wrapper mt-2 mb-2 p-3 border-radius-8">
                             <div class="acitivity-icon-wrapper d-flex justify-content-center align-items-center">
                                 <div class="activity-icon">
                                     <img src="assets/images/icons/icon.svg" alt="Acitvity Icon">
@@ -224,7 +233,7 @@
                                 <p class="gray-color fz12 fw-400">Wed, 04 Dec 2019, 12:16:06</p>
                             </div>
                         </div>
-                        <div class="ra-activity-log-wrapper mt-5 mb-5 p-4 radius_8">
+                        <div class="ra-activity-log-wrapper mt-2 mb-2 p-3 border-radius-8">
                             <div class="acitivity-icon-wrapper d-flex justify-content-center align-items-center">
                                 <div class="activity-icon">
                                     <img src="assets/images/icons/icon.svg" alt="Acitvity Icon">

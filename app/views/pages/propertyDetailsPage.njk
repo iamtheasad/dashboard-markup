@@ -11,7 +11,7 @@
         <p class="fz12 gray-color">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
             Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown.</p>
 
-        <div class="user_btn mt-4">
+        <div class="user_btn mt-2 mt-md-5">
             <button data-target="#propertyDetailsModal" data-toggle="modal"
                 class="rs-btn rs-btn-lg rs-btn-primary uppercase fz20">Add</button>
         </div>
@@ -19,15 +19,15 @@
         {% include 'snippets/modals/propertyDetailsModal.njk' %}
     </div>
 </div>
-<div class="ra-data-table-bg p-3 pt-5 radius_8  ra-property-list mt-5 dashbaord-main">
+<div class="ra-data-table-bg p-3 pt-md-4 mt-2 mt-md-5 border-radius-8  ra-property-list mt-5 dashbaord-main">
     <div class="row">
         <div class="col-md-12">
-            <div class="property-data-table-head d-flex flex-wrap justify-content-between align-items-center mb-2">
+            <div class="property-data-table-head mb-2">
                 <h2 class="fw-500 fz24">List of Properties</h2>
 
-                <div class="propert-header-right d-flex flex-wrap">
+                <div class="propert-header-right">
                     <fieldset class="rs-form mr-2">
-                        <select class="ra-select fw-700 fz16">
+                        <select class="ra-select form-width min-height-40 fw-700 fz16">
                             <option class="fz18 fw-500" value="bangladesh" selected>All Property Type</option>
                             <option class="fz18 fw-500" value="saudi arabia">Saudi Arabia</option>
                             <option class="fz18 fw-500" value="us">Uinited State Of America</option>
@@ -38,13 +38,13 @@
                         <button type="submit" class="position-absolute ra-search-label" for="searchInput">
                             <img src="assets/images/icons/search.svg" alt="Search Icon">
                         </button>
-                        <input type="search" class="rs-input pr-5" id="searchInput"
+                        <input type="search" class="rs-input min-height-48 pr-5" id="searchInput"
                             placeholder="enter property name">
                     </form>
                 </div>
             </div>
             <div class="dataTable table-responsive">
-                {% include "snippets/propertyDetailsDataTable.njk" %}
+                {% include "snippets/dataTable/propertyDetailsDataTable.njk" %}
             </div>
         </div>
     </div>

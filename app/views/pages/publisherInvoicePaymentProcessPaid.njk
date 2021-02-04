@@ -1,0 +1,40 @@
+{% extends "layouts/layout.njk" %}
+
+{% block content %}
+
+<!-- Publisher Invoice Payment Process Header -->
+<div class="row">
+   <div class="col-md-6">
+      <h3 class="fz24 fw-500">Publisher Invoice - 161553</h3>
+      <p class="fz12 fw-400 gray-color pt-2 pb-3">
+         Address: 371/A, Block-D, Bashundhara R/A, Dhaka-1229, Bangladesh.<br />
+         Phone: +8801743831115<br />
+         bKash Number: 01766694696<br />
+         Payee Name: The Daily Kalerkantho<br />
+         Total Payable: ৳71,085.28<br />
+         In Word: Seventy-one Thousand And Eighty-five Taka<br />
+      </p>
+      <button class="rs-btn rs-btn-primary rs-btn-lg uppercase" data-target="#requestUnpaidPaymentModal"
+         data-toggle="modal">Download</button>
+      {% include "snippets/modals/requestUnpaidPaymentModal.njk" %}
+   </div>
+   <div class="col-md-6">
+      <div class="d-card ml-md-4 mt-3 mt-md-0">
+         <div class="d-flex justify-content-between">
+            <div>
+               <h3 class="fz20 fw-400">Total Revenue</h3>
+               <span class="fz24 fw-700 mt-1">৳ 60,419.75</span>
+            </div>
+
+            <div>
+               <h3 class="fz20 fw-400">Payment Status</h3>
+               <span class="fz24 fw-700 mt-1">Paid</span>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+{% include "snippets/dataTable/invoiceDataTable.njk" %}
+
+{% endblock %}

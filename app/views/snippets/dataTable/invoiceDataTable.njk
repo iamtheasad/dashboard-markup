@@ -1,0 +1,27 @@
+<!-- Invoice Payment Process Table -->
+<div class="ra-data-table-bg mb-2 mb-md-4 mt-2 mt-md-4 p-3 border-radius-8 ra-property-list dashbaord-main">
+   <div class="row">
+      <div class="col-md-12">
+         <div class="dataTable table-responsive">
+
+            {% include "snippets/dataTable/publisherInvoicePaymentProcessPropertiesDataTable.njk" %}
+
+         </div>
+      </div>
+   </div>
+</div>
+
+<div class="ra-data-table-bg p-3 border-radius-8 ra-property-list dashbaord-main">
+   <div class="row">
+      <div class="col-md-12">
+         <div class="dataTable table-responsive">
+
+            {% include "snippets/dataTable/publisherInvoicePaymentProcessAdvertiserDataTable.njk" %}
+
+            <!--Load More Button-->
+            {% include "snippets/loadMoreBtn.njk" %}
+
+         </div>
+      </div>
+   </div>
+</div>
