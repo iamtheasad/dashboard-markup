@@ -275,12 +275,6 @@
         // Add Background Color
         series.fill = am4core.color("rgba(178, 223, 138, 1)");
 
-        // Override button colors
-        chart.zoomOutButton.background.defaultState.properties.fill = am4core.color("#475364").brighten(-.2);
-        chart.zoomOutButton.background.defaultState.properties.fillOpacity = .7;
-        chart.zoomOutButton.background.states.getKey("hover").properties.fill = am4core.color("#475364").brighten(-.2);
-        chart.zoomOutButton.background.states.getKey("down").properties.fill = am4core.color("#B2DF8A");
-
         // Add cursor
         chart.cursor = new am4charts.XYCursor();
 
