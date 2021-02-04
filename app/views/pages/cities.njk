@@ -56,8 +56,19 @@
       </div>
    </div>
 
-   <!-- Cities Data Table -->
-   {% include "snippets/dataTable/citiesDataTable.njk" %}
+   <div class="ra-data-table-bg border-radius-8 p-3 ra-property-list">
+      <div class="row">
+         <div class="col-md-12">
+            <div class="dataTable table-responsive">
+               <!-- Cities Data Table -->
+               {% include "snippets/dataTable/citiesDataTable.njk" %}
+
+               {% include "snippets/loadMoreBtn.njk" %}
+            </div>
+         </div>
+      </div>
+   </div>
+
 
 </section>
 
