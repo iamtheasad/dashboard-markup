@@ -10,7 +10,7 @@
       <div class="mb-2 mb-md-0">
          <h2 class="fw-700 mb-1 mb-md-2">Advertisers</h2>
       </div>
-      <a href="#" type="button" class="rs-btn rs-btn-contained rs-btn-lg uppercase">Explore More <span
+      <a href="advertiser.html" type="button" class="rs-btn rs-btn-contained rs-btn-lg uppercase">Explore More <span
               class="mdi mdi-arrow-right"></span></a>
    </div>
 
@@ -38,8 +38,16 @@
       </div>
    </div>
 
-   <!--Advertisers Data Table-->
-   {% include "snippets/dataTable/advertisersDataTable.njk" %}
+   <div class="ra-data-table-bg border-radius-8 p-3 ra-property-list">
+      <div class="row">
+         <div class="col-md-12">
+            <div class="dataTable table-responsive">
+               <!--Advertisers Data Table-->
+               {% include "snippets/dataTable/advertisersDataTable.njk" %}
+            </div>
+         </div>
+      </div>
+   </div>
 </section>
 
 
@@ -77,8 +85,17 @@
       </div>
    </div>
 
-   <!--Ad Sizes Data Table-->
-   {% include "snippets/dataTable/adSizesDataTable.njk" %}
+   <div class="ra-data-table-bg border-radius-8 p-3 ra-property-list">
+      <div class="row">
+         <div class="col-md-12">
+            <div class="dataTable table-responsive">
+
+               <!--Ad Sizes Data Table-->
+               {% include "snippets/dataTable/adSizesDataTable.njk" %}
+            </div>
+         </div>
+      </div>
+   </div>
 </section>
 
 
@@ -116,8 +133,18 @@
       </div>
    </div>
 
-   <!--Ad Sizes Data Table-->
-   {% include "snippets/dataTable/positionsDataTable.njk" %}
+   <div class="ra-data-table-bg border-radius-8 p-3 ra-property-list">
+      <div class="row">
+         <div class="col-md-12">
+            <div class="dataTable table-responsive">
+
+               <!--Positions Data Table-->
+               {% include "snippets/dataTable/positionsDataTable.njk" %}
+            </div>
+         </div>
+      </div>
+   </div>
+
 </section>
 
 {% endblock %}
