@@ -115,180 +115,15 @@
         }
     }
 
-    function isEmail(email) {
-        var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-        return regex.test(email);
-    }
-
-    function validateEmail(field) {
-        var el = field;
-        var wrapper = el.parents('.rs-form');
-        var value = el.val();
-        var message = '';
-        var error = true;
-        if (value) {
-            if (isEmail(value)) {
-                error = false;
-                removeError(wrapper);
-            } else {
-                message = 'Invalid Email Address';
-            }
-        } else {
-            message = 'Email Address Required.';
-        }
-        if (error) {
-            setError(wrapper, message);
-            return false;
-        } else {
-            return true;
+    function dataTable(element) {
+        var element = $(element);
+        if(element.length){
+            $(element).DataTable({
+                "paging": false,
+                "searching": false,
+            });
         }
     }
-
-    function validateInput(field, message) {
-        var el = field;
-        var wrapper = el.parents('.rs-form');
-        if ($(el).val()) {
-            if (field === 'email') {
-                return validateEmail();
-            } else {
-                removeError(wrapper);
-                return true;
-            }
-        } else {
-            setError(wrapper, message);
-            return false;
-        }
-    }
-
-    function setError(wrapper, message) {
-        wrapper.addClass('error');
-        wrapper.append('<span class="help-block"></span>')
-        wrapper.find('.help-block').text(message);
-    }
-
-    function removeError(wrapper) {
-        wrapper.removeClass('error');
-    }
-
-    function contactFormSubmit() {
-        var form = $('.contact-form');
-        form.on('submit', (e) => {
-            // e.preventDefault();
-            if (form.length) {
-                var inquiry = form.find('#inquiry');
-                var name = form.find('#name');
-                var email = form.find('#email');
-                var message = form.find('#message');
-
-                if (
-                    validateInput(inquiry, 'Required') &&
-                    validateInput(name, 'Required') &&
-                    validateEmail(email, 'Required') &&
-                    validateInput(message, 'Required')
-                ) {
-                    return true;
-                } else {
-                    return false;
-                }
-            }
-        })
-    }
-
-
-    /*==========================================================================
-        Bootsrtrap Data Table
-    ==========================================================================*/
-    $(document).ready(function () {
-        $('#propertyDataTable').DataTable({
-            "paging": false,
-            "searching": false,
-        });
-
-        $('#propertyDetailsDataTable').DataTable({
-            "paging": false,
-            "searching": false,
-        });
-
-        $('#blocAddDataTable').DataTable({
-            // "scrollY": "400px",
-            // "scrollCollapse": true,
-            "paging": false,
-            "searching": false,
-        });
-
-        $('#placesDataTable').DataTable({
-            "paging": false,
-            "searching": false,
-        });
-        $('#estimatedRevenueDataTable').DataTable({
-            "paging": false,
-            "searching": false,
-        });
-        $('#finalizedPaymentMonthlyInfoDataTable').DataTable({
-            "paging": false,
-            "searching": false,
-        });
-        $('#publisherInvoicePaymentProcessAdvertiserDataTable').DataTable({
-            "paging": false,
-            "searching": false,
-        });
-        $('#publisherInvoicePaymentProcessPropertiesDataTable').DataTable({
-            "paging": false,
-            "searching": false,
-        });
-        $('#overviewDatesDataTable').DataTable({
-            "paging": false,
-            "searching": false,
-        });
-        $('#overviewPropertyDataTable').DataTable({
-            "paging": false,
-            "searching": false,
-        });
-        $('#overviewAdPlaceDataTable').DataTable({
-            "paging": false,
-            "searching": false,
-        });
-        $('#browserDataTable').DataTable({
-            "paging": false,
-            "searching": false,
-        });
-        $('#devicesDataTable').DataTable({
-            "paging": false,
-            "searching": false,
-        });
-        $('#operatingSystemDataTable').DataTable({
-            "paging": false,
-            "searching": false,
-        });
-        $('#countriesDataTable').DataTable({
-            "paging": false,
-            "searching": false,
-        });
-        $('#citiesDataTable').DataTable({
-            "paging": false,
-            "searching": false,
-        });
-        $('#networkDataTable').DataTable({
-            "paging": false,
-            "searching": false,
-        });
-        $('#advertiserDataTable').DataTable({
-            "paging": false,
-            "searching": false,
-        });
-        $('#adSizeDataTable').DataTable({
-            "paging": false,
-            "searching": false,
-        });
-        $('#positionDataTable').DataTable({
-            "paging": false,
-            "searching": false,
-        });
-        $('#countriesDetailDataTable').DataTable({
-            "paging": false,
-            "searching": false,
-        });
-    });
 
 
     /*==========================================================================
@@ -296,6 +131,28 @@
     ==========================================================================*/
     $(window).on('load', function () {
         inputAnimate();
+
+        dataTable('#propertyDataTable');
+        dataTable('#propertyDetailsDataTable');
+        dataTable('#blocAddDataTable');
+        dataTable('#placesDataTable');
+        dataTable('#estimatedRevenueDataTable');
+        dataTable('#finalizedPaymentMonthlyInfoDataTable');
+        dataTable('#publisherInvoicePaymentProcessAdvertiserDataTable');
+        dataTable('#publisherInvoicePaymentProcessPropertiesDataTable');
+        dataTable('#overviewDatesDataTable');
+        dataTable('#overviewPropertyDataTable');
+        dataTable('#overviewAdPlaceDataTable');
+        dataTable('#browserDataTable');
+        dataTable('#devicesDataTable');
+        dataTable('#operatingSystemDataTable');
+        dataTable('#countriesDataTable');
+        dataTable('#citiesDataTable');
+        dataTable('#networkDataTable');
+        dataTable('#advertiserDataTable');
+        dataTable('#adSizeDataTable');
+        dataTable('#positionDataTable');
+        dataTable('#countriesDetailDataTable');
 
         // will load on end
         pageLoader();

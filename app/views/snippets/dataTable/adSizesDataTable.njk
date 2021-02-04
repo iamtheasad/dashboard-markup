@@ -17,6 +17,7 @@
    </tr>
    </thead>
    <tbody>
+   {% for i in range(0, 5) %}
    <tr>
       <td>300x250</td>
       <td>112,110</td>
@@ -26,42 +27,7 @@
       <td>৳ 453.68</td>
       <td>৳4.55</td>
    </tr>
-   <tr>
-      <td>320x50</td>
-      <td>112,110</td>
-      <td>95,623</td>
-      <td>21</td>
-      <td>0.02%</td>
-      <td>৳ 453.68</td>
-      <td>৳4.55</td>
-   </tr>
-   <tr>
-      <td>970x90</td>
-      <td>112,110</td>
-      <td>95,623</td>
-      <td>21</td>
-      <td>0.02%</td>
-      <td>৳ 453.68</td>
-      <td>৳4.55</td>
-   </tr>
-   <tr>
-      <td>300x600</td>
-      <td>112,110</td>
-      <td>95,623</td>
-      <td>21</td>
-      <td>0.02%</td>
-      <td>৳ 453.68</td>
-      <td>৳4.55</td>
-   </tr>
-   <tr>
-      <td>728x90</td>
-      <td>112,110</td>
-      <td>95,623</td>
-      <td>21</td>
-      <td>0.02%</td>
-      <td>৳ 453.68</td>
-      <td>৳4.55</td>
-   </tr>
+   {% endfor %}
    </tbody>
 </table>
 {% endblock %}
