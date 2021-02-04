@@ -5,64 +5,33 @@
  -->
 
 <table id="placesDataTable" class="property-table table table-striped table-hover" style="width:100%">
-    <thead class="ra-table-head">
-        <tr class="table-header-height-for-34">
-            <th>Ad Place</th>
-            <th>Property Name</th>
-            <th>Size</th>
-            <th>Request</th>
-            <th>Impressions</th>
-            <th>Fill Rate</th>
-            <th>Clicks</th>
-            <th>CTR</th>
-            <th>Revenue</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>AdPlaceName 1</td>
-            <td>PropertyName 1</td>
-            <td>300x250</td>
-            <td>1,625,790,161</td>
-            <td>856,651,740</td>
-            <td>85.29% </td>
-            <td>148,673</td>
-            <td>5.5%</td>
-            <td>৳ 1,702,908</td>
-        </tr>
-        <tr>
-            <td>AdPlaceName 2</td>
-            <td>PropertyName 2</td>
-            <td>300x250</td>
-            <td>1,625,790,161</td>
-            <td>856,651,740</td>
-            <td>85.29% </td>
-            <td>148,673</td>
-            <td>5.5%</td>
-            <td>৳ 1,702,908</td>
-        </tr>
-        <tr>
-            <td>AdPlaceName 3</td>
-            <td>PropertyName 3</td>
-            <td>300x250</td>
-            <td>1,625,790,161</td>
-            <td>856,651,740</td>
-            <td>85.29% </td>
-            <td>148,673</td>
-            <td>5.5%</td>
-            <td>৳ 1,702,908</td>
-        </tr>
-        <tr>
-            <td>AdPlaceName 4</td>
-            <td>PropertyName 4</td>
-            <td>300x250</td>
-            <td>1,625,790,161</td>
-            <td>856,651,740</td>
-            <td>85.29% </td>
-            <td>148,673</td>
-            <td>5.5%</td>
-            <td>৳ 1,702,908</td>
-        </tr>
-    </tbody>
+   <thead class="ra-table-head">
+   <tr class="table-header-height-for-34">
+      <th>Ad Place</th>
+      <th>Property Name</th>
+      <th>Size</th>
+      <th>Request</th>
+      <th>Impressions</th>
+      <th>Fill Rate</th>
+      <th>Clicks</th>
+      <th>CTR</th>
+      <th>Revenue</th>
+   </tr>
+   </thead>
+   <tbody>
+   {% for i in range(0, 10) %}
+   <tr>
+      <td>AdPlaceName 1</td>
+      <td>PropertyName 1</td>
+      <td>300x250</td>
+      <td>1,625,790,161</td>
+      <td>856,651,740</td>
+      <td>85.29%</td>
+      <td>148,673</td>
+      <td>5.5%</td>
+      <td>৳ 1,702,908</td>
+   </tr>
+   {% endfor %}
+   </tbody>
 </table>
 {% endblock %}

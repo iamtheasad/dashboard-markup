@@ -4,7 +4,8 @@
          <div class="dataTable table-responsive">
             <!-- Bootstrap Table all class name: table table-striped table-hover table-bordered  table-borderless table-sm -->
 
-            <table id="overviewPropertyDataTable" class="property-table table table-striped table-hover" style="width:100%">
+            <table id="overviewPropertyDataTable" class="property-table table table-striped table-hover"
+                   style="width:100%">
                <thead class="ra-table-head">
                <tr class="table-header-height-for-34">
                   <th>Properties</th>
@@ -20,6 +21,7 @@
                </tr>
                </thead>
                <tbody>
+               {% for i in range(0, 10) %}
                <tr>
                   <td>PropertyName 1</td>
                   <td>Website</td>
@@ -31,57 +33,7 @@
                   <td>৳ 1,702,908</td>
                   <td>৳ 1,702</td>
                </tr>
-               <tr>
-                  <td>PropertyName 2</td>
-                  <td>Website</td>
-                  <td>1,625,790,161</td>
-                  <td>856,651,740</td>
-                  <td>85.29%</td>
-                  <td>148,673</td>
-                  <td>5.5%</td>
-                  <td>৳ 1,702,908</td>
-                  <td>৳ 1,702</td>
-               </tr> <tr>
-                  <td>PropertyName 3</td>
-                  <td>Website</td>
-                  <td>1,625,790,161</td>
-                  <td>856,651,740</td>
-                  <td>85.29%</td>
-                  <td>148,673</td>
-                  <td>5.5%</td>
-                  <td>৳ 1,702,908</td>
-                  <td>৳ 1,702</td>
-               </tr> <tr>
-                  <td>PropertyName 1</td>
-                  <td>Website</td>
-                  <td>1,625,790,161</td>
-                  <td>856,651,740</td>
-                  <td>85.29%</td>
-                  <td>148,673</td>
-                  <td>5.5%</td>
-                  <td>৳ 1,702,908</td>
-                  <td>৳ 1,702</td>
-               </tr> <tr>
-                  <td>PropertyName 4</td>
-                  <td>Website</td>
-                  <td>1,625,790,161</td>
-                  <td>856,651,740</td>
-                  <td>85.29%</td>
-                  <td>148,673</td>
-                  <td>5.5%</td>
-                  <td>৳ 1,702,908</td>
-                  <td>৳ 1,702</td>
-               </tr> <tr>
-                  <td>PropertyName 5</td>
-                  <td>Website</td>
-                  <td>1,625,790,161</td>
-                  <td>856,651,740</td>
-                  <td>85.29%</td>
-                  <td>148,673</td>
-                  <td>5.5%</td>
-                  <td>৳ 1,702,908</td>
-                  <td>৳ 1,702</td>
-               </tr>
+               {% endfor %}
                </tbody>
             </table>
          </div>
