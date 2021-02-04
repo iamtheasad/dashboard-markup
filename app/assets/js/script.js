@@ -115,6 +115,7 @@
         }
     }
 
+    /* Looping Data Table Id */
     function dataTable(element) {
         var element = $(element);
         if(element.length){

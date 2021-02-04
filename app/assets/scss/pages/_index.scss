@@ -1,52 +1,64 @@
-.dashboard-main{
-    height: 100vh;
-    overflow-Y: auto;
-    width: 100%;
-    padding-left: 64px;
-    padding-right: 64px;
+.dashboard-main {
+  height: 100vh;
+  overflow-Y: auto;
+  width: 100%;
+  padding-left: 64px;
+  padding-right: 64px;
 
-    @media(max-width: 992px){
-        padding-left: 30px;
-        padding-right: 30px;
-    }
-    @media(max-width: 575px){
-        padding-left: 15px;
-        padding-right: 15px;
-    }
+  @media(max-width: 992px) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  @media(max-width: 575px) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
-.d-card{
-    border-radius: 8px;
-    padding: 16px; 
-    background-color: #ECEEF3;
-    &.darken{
-        background-color: #CED5DE;
+.d-card {
+  border-radius: 8px;
+  padding: 16px;
+  background-color: #ECEEF3;
+  transition: .2s ease-out;
+
+  &.darken {
+    background-color: #CED5DE;
+    transition: .2s ease-out;
+
+    &:hover {
+      background-color: rgba(206, 213, 222, 0.8);
     }
+  }
+
+  &:hover {
+    background-color: rgba(236, 238, 243, 0.7);
+  }
 }
 
 .balance-card {
-    border-radius: 8px;
-    padding: 16px;
-    background-color: #F5F5F5;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: #F5F5F5;
 }
 
-.map-area{
-    height: calc(100% - 44px);
+.map-area {
+  height: calc(100% - 44px);
 }
 
-.tab-area{
-    background: #FAFAFA;
-    border-radius: 8px;
-    padding: 15px;
+.tab-area {
+  background: #FAFAFA;
+  border-radius: 8px;
+  padding: 15px;
 }
 
-.nav-pills{
-    background-color: #ECEEF3;
-    .nav-item{
-        .nav-link{
-            &.active{
-                background-color: #475364;
-            }
-        }
+.nav-pills {
+  background-color: #ECEEF3;
+
+  .nav-item {
+    .nav-link {
+      &.active {
+        background-color: #475364;
+      }
     }
+  }
 }
