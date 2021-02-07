@@ -2,8 +2,8 @@
 
 {% block content %}
 
-<div class="row mb-3">
-   <div class="col-md-4">
+<div class="row">
+   <div class="col-md-4 mb-2 mb-md-3">
       {% set data = {
       title: 'Revenue Overview',
       today: '৳ 34,569',
@@ -14,7 +14,7 @@
       }%}
       {% include 'snippets/menu-card.njk' %}
    </div>
-   <div class="col-md-4">
+   <div class="col-md-4 mb-2 mb-md-3">
       {% set data = {
       class: 'darken',
       title: 'Fill Rate',
@@ -26,7 +26,7 @@
       }%}
       {% include 'snippets/menu-card.njk' %}
    </div>
-   <div class="col-md-4">
+   <div class="col-md-4 mb-2 mb-md-3">
       {% set data = {
       title: 'Requests',
       today: '35.4 K',
@@ -40,9 +40,9 @@
    </div>
 </div>
 
-<div class="row mb-4">
+<div class="row">
    <div class="col-md-6">
-      <div class="mb-3">
+      <div class="mb-2 mb-md-3">
          {% set data = {
          title: 'Impression',
          today: '34,569',
@@ -54,7 +54,7 @@
          }%}
          {% include 'snippets/menu-card.njk' %}
       </div>
-      <div class="mb-3">
+      <div class="mb-2 mb-md-3">
          {% set data = {
          title: 'Impressions served',
          moreBtn: false,
@@ -66,7 +66,7 @@
          }%}
          {% include 'snippets/menu-card.njk' %}
       </div>
-      <div>
+      <div class="mb-2 mb-md-3">
          {% set data = {
          title: 'Properties',
          icon: 'mdi-menu-up red-color',
@@ -87,10 +87,10 @@
          {% include 'snippets/menu-card.njk' %}
       </div>
    </div>
-   <div class="col-md-6">
+   <div class="col-md-6 mb-2 mb-md-3">
       <div class="d-card h-100">
          <div class="row">
-            <div class="col-sm-6">
+            <div class="col-md-12 col-lg-6">
                {% include 'snippets/locationinfo.njk' %}
                {% include 'snippets/locationinfo.njk' %}
                {% include 'snippets/locationinfo.njk' %}
@@ -98,7 +98,7 @@
                {% include 'snippets/locationinfo.njk' %}
                {% include 'snippets/locationinfo.njk' %}
             </div>
-            <div class="col-sm-6">
+            <div class="col-md-12 col-lg-6">
                <div class="map-area">
                   {% set map = {lat: "23.7984463", lon: "90.4031033"} %}
                   <iframe
