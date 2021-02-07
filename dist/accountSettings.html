@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G&R</title>
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/jpg">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
+    <!-- Bootstrap Table Css Link -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.18.1/dist/bootstrap-table.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css">
+
+    <!-- build:css assets/css/all.min.css -->
+    <link rel="stylesheet" href="assets/css/vendor.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- endbuild -->
+    <script type="text/javascript" src="assets/vendor/jQuery/jquery.min.js"></script>
+</head>
+
+<body class="preloader">
+    <div class="d-flex">
+        <section class="sidebar-menu scrollbar">
+            <div class="site-logo">
+                <a class="d-block" href="/">
+                    <img src="assets/images/logo.svg" alt="G&R">
+                </a>
+            </div>
+            <div class="menu-area">
+                <ul>
+                    <li class="active"><a href="/"><img class="icon" src="assets/images/icons/dashboard.svg" alt=""> Dashboard</a></li>
+                    <li><a href="properties.html"><img class="icon" src="assets/images/icons/ad-properties.svg" alt="">Properties</a></li>
+                    <li><a href="placesAllAdded.html"><img class="icon" src="assets/images/icons/adplace.svg" alt="">Ad Place</a></li>
+
+                    <li>
+                        <a href="#report-sidebar-menu" data-toggle="collapse">
+                            <img class="icon" src="assets/images/icons/report.svg" alt="">Report
+                        </a>
+                        <div id="report-sidebar-menu" class="collapse">
+                            <ul>
+                                <li><a href="overview.html">Overview</a></li>
+                                <li><a href="location.html">Location</a></li>
+                                <li><a href="revenue.html">Revenue</a></li>
+                                <li><a href="technology.html">Technology</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="#payment-sidebar-menu" data-toggle="collapse"><img class="icon" src="assets/images/icons/money.svg" alt="">Payments</a>
+                        <div id="payment-sidebar-menu" class="collapse">
+                            <ul>
+                                <li><a href="estimatedRevenuePage.html">Estimated Revennue</a></li>
+                                <li><a href="finilizedPayment.html">Finilized Payments</a></li>
+                                <li><a href="balance.html">Balance</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#settings-sidebar-menu" data-toggle="collapse">
+                            <img class="icon" src="assets/images/icons/settings.svg" alt="">Settings
+                        </a>
+                        <div id="settings-sidebar-menu" class="collapse">
+                            <ul>
+                                <li><a href="accountSettings.html">Account Settings</a></li>
+                                <li><a href="users.html">Users</a></li>
+                                <li><a href="activityLogPage.html">Activity Log</a></li>
+                                <li><a href="login.html">Logout</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <main class="dashboard-main">
+            <header class="topbar sticky-top d-flex justify-content-between align-items-center">
+                <div class="breadcumb fz24 fw-500">
+                    <div class="d-flex align-items-center">
+                        <!-- <i class="mdi mdi-arrow-left"></i> -->
+                        <span>Wecome to Publisher Dashboard</span>
+                    </div>
+                </div>
+                <div class="right-menu dropdown">
+                    <a href="javascript:void(0)" class="account-menu d-flex align-items-center dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div class="avater">
+                            <img src="http://via.placeholder.com/48x48" alt="">
+                        </div>
+                        <div class="acc-name">Publisher</div>
+
+                        <div class="">
+                            <button class="dropdown-icon">
+                                <i class="mdi mdi-menu-down"></i>
+                            </button>
+                        </div>
+
+                    </a>
+                    <div class="dropdown-menu mt-1" aria-labelledby="dropdownMenuButton">
+                        <ul>
+                            <li><a href="accountSettings.html">Account Settings</a></li>
+                            <li><a href="index2.html">Advertiser Dashboard</a></li>
+                            <li><a href="">বাংলা ভাষা নির্বাচন</a></li>
+                            <li><a href="">Take a Tour</a></li>
+                            <li><a href="login.html">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="d-card mr-lg-3 mb-3">
+                        <div class="row">
+                            <div class="col-xl-3 col-md-4 col-sm-12 d-flex justify-content-center mb-md-5">
+                                <div class="profile_image">
+                                    <div class="user_img setting-user-img">
+                                        <label for="user_img">
+                                            <img src="assets/images/icons/add-user.svg" alt="User Image" />
+                                        </label>
+                                        <input type="file" id="user_img" class="d-none">
+                                    </div>
+                                    <div class="mt-3">
+                                        <input type="file" id="image_upload" class="d-none">
+                                        <label class="rs-btn fz14 fw-700 rs-btn-trans uppercase" for="image_upload">Upload</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-9 col-md-8 cl-sm-12 pl-lg-3 ">
+                                <h2 class="fz28 fw-700 mb-3">Account Name</h2>
+
+                                <div class="mb-2">
+                                    <span class="fz12 mb-2 gray-color">Email Address</span>
+                                    <h4 class="fz16 fw-400">01234567890</h4>
+                                </div>
+                                <div class="mb-2">
+                                    <span class="fz12 mb-2 gray-color">Phone Number</span>
+                                    <h4 class="fz16 fw-400">account@gmail.com</h4>
+                                </div>
+                                <div class="mb-2">
+                                    <span class="fz12 mb-2 gray-color">Address</span>
+                                    <h4 class="fz16 fw-400">371/A, Block-D, Bashudhara R/A, Dhaka-1229</h4>
+                                </div>
+                                <div class="mb-2">
+                                    <span class="fz12 mb-2 gray-color">Country</span>
+                                    <h4 class="fz16 fw-400">Bangladesh</h4>
+                                </div>
+
+                                <!-- Button trigger modal -->
+                                <div class="d-flex pt-4">
+                                    <button type="button" class="change_account_password_btn rs-btn rs-btn-primary fz20 fw-700 rs-btn-lg uppercase" data-toggle="modal" data-target="#editAccountModal">
+                                        Edit
+                                    </button>
+                                </div>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="editAccountModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg" role="document">
+                                        <div class="modal-content p-xl-5 p-lg-3 p-md-1 changePasswordModal-content editAccount-close">
+                                            <form action="">
+                                                <div class="modal-header border-bottom-0">
+                                                    <h5 class="modal-title fz24 fw-500" id="exampleModalLabel">Edit Account Information</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span class="mdi mdi-close" aria-hidden="true"></span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <fieldset class="rs-form mb-4">
+                                                                <label for="editName" class="rs-label fz10 fw-400">Account Name</label>
+                                                                <input type="text" class="rs-input fz18 fw-500" value="Account Name">
+                                                            </fieldset>
+                                                        </div>
+
+                                                        <div class="col-md-12">
+                                                            <fieldset class="rs-form mb-4">
+                                                                <label for="editName" class="rs-label fz10 fw-400">Phone Number</label>
+                                                                <input type="text" class="rs-input fz18 fw-500" value="+88012345678990">
+                                                            </fieldset>
+                                                        </div>
+
+                                                        <div class="col-md-12">
+                                                            <fieldset class="rs-form mb-4">
+                                                                <label for="editName" class="rs-label fz10 fw-400">Address</label>
+                                                                <input type="text" class="rs-input fz18 fw-500" value="371/A, Block-D, Bashudhara R/A, Dhaka-1229">
+                                                            </fieldset>
+                                                        </div>
+
+                                                        <div class="col-md-12">
+
+                                                            <fieldset class="rs-form mb-4">
+                                                                <label for="editName" class="rs-label rs-select-editAccount fz10 fw-400">Country</label>
+                                                                <select class="ra-select fz18 fw-500 w-50">
+                                                                    <option class="fz18 fw-500" value="bangladesh" selected>Bangladesh</option>
+                                                                    <option class="fz18 fw-500" value="saudi arabia">Saudi Arabia</option>
+                                                                    <option class="fz18 fw-500" value="us">Uinited State Of America</option>
+                                                                    <option class="fz18 fw-500" value="india">India</option>
+                                                                </select>
+                                                            </fieldset>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex mt-3">
+                                                        <button type="submit" class="rs-btn rs-btn-primary rs-btn-lg uppercase mr-3">Update</button>
+
+                                                        <button class="rs-btn rs-btn-lg uppercase" data-dismiss="modal">Cancel</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="adv_dashboard">
+                        <div class="d-card mb-3">
+                            <h3 class="fz20 fw-500">Advertiser Dashboard</h3>
+                            <p class="fz12 fw-400 mt-2"></p>Active Campaign <span class="fz14 fw-700">5</span></p>
+
+                            <a href="/" class="fz20 rs-btn fit-content rs-btn-primary rs-btn-lg uppercase mt-4">Go To Dashboard</a>
+                        </div>
+                        <div class="d-card mb-3">
+                            <h3 class="fz20 fw-500">Change Account Password</h3>
+                            <p class="fz12 fw-400 mt-2">Change Your Account Password</p>
+
+                            <!-- <a href="#" class="rs-btn rs_btn_profile rs-btn-primary rs-btn-lg uppercase mt-4">Change Password</a> -->
+                            <button type="button" class="fz20 fit-content rs-btn rs-btn-primary rs-btn-lg uppercase mt-4" data-toggle="modal" data-target="#changePassword">Change Password</button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="changePassword" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg" role="document">
+                                    <div class="modal-content changePasswordModal-content">
+                                        <form action="">
+                                            <div class="modal-header pt-5 border-bottom-0">
+                                                <h5 class="modal-title" id="exampleModalLabel">Change Account Password</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span class="mdi mdi-close" aria-hidden="true"></span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body pb-5">
+                                                <div class="row">
+
+                                                    <div class="col-md-12">
+                                                        <fieldset class="rs-form password-form mb-4">
+                                                            <label class="rs-label">Enter Old Password</label>
+                                                            <input type="password" class="rs-input">
+                                                            <span class="mdi mdi-eye icon type-toggle fz20"></span>
+                                                        </fieldset>
+                                                    </div>
+
+                                                    <div class="col-md-12">
+                                                        <fieldset class="rs-form password-form mb-4">
+                                                            <label class="rs-label">Enter New Password</label>
+                                                            <input type="password" class="rs-input">
+                                                            <span class="mdi mdi-eye icon type-toggle fz20"></span>
+                                                        </fieldset>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex mt-3">
+                                                    <button type="submit" class="rs-btn rs-btn-primary rs-btn-lg uppercase mr-3">Change Password</button>
+
+                                                    <button class="rs-btn rs-btn-primary rs-btn-lg uppercase" data-dismiss="modal">Cancel</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-8">
+                    <div class="PaymentAccount">
+                        <div class="d-card mr-lg-3">
+                            <h3 class="fz24 fw-500">Payment Account</h3>
+                            <p class="mt-2 fz12 pt-1 pb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa laborum autem id odit a magnam temporibus.</p>
+
+                            <div class="d-flex pb-3 mt-4 text-center">
+                                <div class="payment_item mr-3">
+                                    <button type="button" class="rs-btn border-radius-8 payment-btn" data-toggle="modal" data-target="#editPaymentAccount"><span><img src="assets/images/icons/bdt.svg" alt="BDT Icon"></span></button>
+                                    <p class="mt-2 fz12">Payment Option</p>
+                                </div>
+                                <div class="payment_item mr-3">
+                                    <button type="button" class="rs-btn border-radius-8 payment-btn" data-toggle="modal" data-target="#editPaymentAccount"><span><img src="assets/images/icons/bdt.svg" alt="BDT Icon"></span></button>
+                                    <p class="mt-2 fz12">Payment Option</p>
+                                </div>
+                                <div class="payment_item mr-3">
+                                    <button type="button" class="rs-btn dashed_border border-radius-8 payment-btn" data-toggle="modal" data-target="#addPaymentOption">
+                                        <span><img src="assets/images/icons/plus.svg" alt="BDT Icon"></span>
+                                    </button>
+                                    <p class="fz13 mt-2 fz12">Add Payment Option</p>
+                                </div>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="addPaymentOption" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg" role="document">
+                                        <div class="modal-content p-xl-5 p-lg-3 p-md-1 changePasswordModal-content payment-close">
+                                            <form action="">
+                                                <div class="modal-header border-bottom-0">
+                                                    <h5 class="modal-title" id="exampleModalLabel">Add Payment Account</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span class="mdi mdi-close" aria-hidden="true"></span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body pb-5">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <fieldset class="rs-form mb-4 f44">
+                                                                <label for="editName" class="rs-label rs-select-editAccount fz10">Select Account Type</label>
+                                                                <select class="ra-select w-100 editAccountSelect">
+                                                                    <option value="BFTN">BFTN - Regualar Transfer</option>
+                                                                    <option value="BFTN">BFTN - Regualar Transfer</option>
+                                                                    <option value="BFTN">BFTN - Regualar Transfer</option>
+                                                                </select>
+                                                            </fieldset>
+                                                        </div>
+
+                                                        <div class="col-md-12">
+                                                            <fieldset class="rs-form mb-4">
+                                                                <label for="editName" class="rs-label">Account Title</label>
+                                                                <input type="text" class="rs-input" value="+88012345678990">
+                                                            </fieldset>
+                                                        </div>
+
+                                                        <div class="col-md-12">
+                                                            <fieldset class="rs-form mb-4">
+                                                                <label for="editName" class="rs-label">Account Number</label>
+                                                                <input type="text" class="rs-input" value="1199223344556677">
+                                                            </fieldset>
+                                                        </div>
+
+                                                        <div class="col-md-12">
+                                                            <fieldset class="rs-form mb-4">
+                                                                <label for="editName" class="rs-label rs-select-editAccount">Select Bank</label>
+                                                                <select class="ra-select w-100 editAccountSelect">
+                                                                    <option value="Eastern Bank Ltd.">Eastern Bank Ltd.</option>
+                                                                    <option value="Eastern Bank Ltd.">Eastern Bank Ltd.</option>
+                                                                    <option value="Eastern Bank Ltd.">Eastern Bank Ltd.</option>
+                                                                </select>
+                                                            </fieldset>
+                                                        </div>
+
+                                                        <div class="col-md-12">
+                                                            <fieldset class="rs-form mb-4">
+                                                                <label for="editName" class="rs-label rs-select-editAccount">Select Branch</label>
+                                                                <select class="ra-select w-100">
+                                                                    <option value="BFTN">Gulshan</option>
+                                                                    <option value="BFTN">Gulshan</option>
+                                                                    <option value="BFTN">Gulshan</option>
+                                                                </select>
+                                                            </fieldset>
+                                                        </div>
+
+                                                        <div class="col-md-12">
+                                                            <fieldset class="rs-form mb-4">
+                                                                <label for="editName" class="rs-label">Routing Number</label>
+                                                                <input type="text" class="rs-input" value="123456789">
+                                                            </fieldset>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="d-flex mt-3">
+                                                        <button type="submit" class="rs-btn rs-btn-primary rs-btn-lg uppercase mr-3">Add Payment Account</button>
+
+                                                        <button class="rs-btn rs-btn-primary rs-btn-lg uppercase" data-dismiss="modal">Cancel</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Modal -->
+                                <div class="modal fade" id="editPaymentAccount" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg" role="document">
+                                        <div class="modal-content p-xl-5 p-lg-3 p-md-1 changePasswordModal-content payment-close">
+                                            <form action="">
+                                                <div class="modal-header border-bottom-0">
+                                                    <h5 class="modal-title" id="exampleModalLabel">Edit Payment Account</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span class="mdi mdi-close" aria-hidden="true"></span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <fieldset class="rs-form mb-4 f44">
+                                                                <label for="editName" class="rs-label rs-select-editAccount fz10">Select Account Type</label>
+                                                                <select class="ra-select w-100">
+                                                                    <option value="BFTN">BFTN - Regualar Transfer</option>
+                                                                    <option value="BFTN">BFTN - Regualar Transfer</option>
+                                                                    <option value="BFTN">BFTN - Regualar Transfer</option>
+                                                                </select>
+                                                            </fieldset>
+                                                        </div>
+
+                                                        <div class="col-md-12">
+                                                            <fieldset class="rs-form mb-4">
+                                                                <label for="editName" class="rs-label">Account Title</label>
+                                                                <input type="text" class="rs-input" value="+88012345678990">
+                                                            </fieldset>
+                                                        </div>
+
+                                                        <div class="col-md-12">
+                                                            <fieldset class="rs-form mb-4">
+                                                                <label for="editName" class="rs-label">Account Number</label>
+                                                                <input type="text" class="rs-input" value="1199223344556677">
+                                                            </fieldset>
+                                                        </div>
+
+                                                        <div class="col-md-12">
+                                                            <fieldset class="rs-form mb-4">
+                                                                <label for="editName" class="rs-label rs-select-editAccount">Select Bank</label>
+                                                                <select class="ra-select w-100 editAccountSelect">
+                                                                    <option value="Eastern Bank Ltd.">Eastern Bank Ltd.</option>
+                                                                    <option value="Eastern Bank Ltd.">Eastern Bank Ltd.</option>
+                                                                    <option value="Eastern Bank Ltd.">Eastern Bank Ltd.</option>
+                                                                </select>
+                                                            </fieldset>
+                                                        </div>
+
+                                                        <div class="col-md-12">
+                                                            <fieldset class="rs-form mb-4">
+                                                                <label for="editName" class="rs-label rs-select-editAccount">Select Branch</label>
+                                                                <select class="ra-select w-100 editAccountSelect">
+                                                                    <option value="BFTN">Gulshan</option>
+                                                                    <option value="BFTN">Gulshan</option>
+                                                                    <option value="BFTN">Gulshan</option>
+                                                                </select>
+                                                            </fieldset>
+                                                        </div>
+
+                                                        <div class="col-md-12">
+                                                            <fieldset class="rs-form mb-4">
+                                                                <label for="editName" class="rs-label">Routing Number</label>
+                                                                <input type="text" class="rs-input" value="123456789">
+                                                            </fieldset>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="d-flex mt-3">
+                                                        <button type="submit" class="rs-btn rs-btn-primary rs-btn-lg uppercase mr-3">Edit Payment Account</button>
+
+                                                        <button class="rs-btn rs-btn-primary rs-btn-lg uppercase" data-dismiss="modal">Cancel</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- build:js assets/js/vendor.min.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- Bootstrap Table Js Link -->
+    <script src="https://unpkg.com/bootstrap-table@1.18.1/dist/bootstrap-table.min.js"></script>
+    <!-- <script type="text/javascript" src="assets/vendor/aos/js/aos.js"></script> -->
+    <!-- endbuild -->
+    <script type="text/javascript" src="assets/js/script.js"></script>
+
+</body>
+
+</html>

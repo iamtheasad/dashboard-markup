@@ -1,0 +1,29 @@
+<!-- Bootstrap Table all class name: table table-striped table-hover table-bordered  table-borderless table-sm -->
+
+<table id="citiesDataTable" class="property-table table table-striped table-hover" style="width:100%">
+   <thead class="ra-table-head">
+   <tr class="table-header-height-for-34">
+      <th>Cities</th>
+      <th>Request</th>
+      <th>Impressions</th>
+      <th>Clicks</th>
+      <th>Revenues</th>
+      <th>CTR</th>
+      <th>Fill Rate</th>
+   </tr>
+   </thead>
+   <tbody>
+
+   {% for i in range(0, 10) %}
+   <tr>
+      <td>Dhaka</td>
+      <td>112,110</td>
+      <td>95,623</td>
+      <td>21</td>
+      <td>৳ 453.68</td>
+      <td>0.02%</td>
+      <td>85.29%</td>
+   </tr>
+   {% endfor %}
+   </tbody>
+</table>

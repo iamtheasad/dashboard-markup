@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G&R</title>
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/jpg">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
+    <!-- Bootstrap Table Css Link -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.18.1/dist/bootstrap-table.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css">
+
+    <!-- build:css assets/css/all.min.css -->
+    <link rel="stylesheet" href="assets/css/vendor.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- endbuild -->
+    <script type="text/javascript" src="assets/vendor/jQuery/jquery.min.js"></script>
+</head>
+
+<body class="preloader">
+    <div class="d-flex">
+        <section class="sidebar-menu scrollbar">
+            <div class="site-logo">
+                <a class="d-block" href="/">
+                    <img src="assets/images/logo.svg" alt="G&R">
+                </a>
+            </div>
+            <div class="menu-area">
+                <ul>
+                    <li class="active"><a href="/"><img class="icon" src="assets/images/icons/dashboard.svg" alt=""> Dashboard</a></li>
+                    <li><a href="properties.html"><img class="icon" src="assets/images/icons/ad-properties.svg" alt="">Properties</a></li>
+                    <li><a href="placesAllAdded.html"><img class="icon" src="assets/images/icons/adplace.svg" alt="">Ad Place</a></li>
+
+                    <li>
+                        <a href="#report-sidebar-menu" data-toggle="collapse">
+                            <img class="icon" src="assets/images/icons/report.svg" alt="">Report
+                        </a>
+                        <div id="report-sidebar-menu" class="collapse">
+                            <ul>
+                                <li><a href="overview.html">Overview</a></li>
+                                <li><a href="location.html">Location</a></li>
+                                <li><a href="revenue.html">Revenue</a></li>
+                                <li><a href="technology.html">Technology</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="#payment-sidebar-menu" data-toggle="collapse"><img class="icon" src="assets/images/icons/money.svg" alt="">Payments</a>
+                        <div id="payment-sidebar-menu" class="collapse">
+                            <ul>
+                                <li><a href="estimatedRevenuePage.html">Estimated Revennue</a></li>
+                                <li><a href="finilizedPayment.html">Finilized Payments</a></li>
+                                <li><a href="balance.html">Balance</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#settings-sidebar-menu" data-toggle="collapse">
+                            <img class="icon" src="assets/images/icons/settings.svg" alt="">Settings
+                        </a>
+                        <div id="settings-sidebar-menu" class="collapse">
+                            <ul>
+                                <li><a href="accountSettings.html">Account Settings</a></li>
+                                <li><a href="users.html">Users</a></li>
+                                <li><a href="activityLogPage.html">Activity Log</a></li>
+                                <li><a href="login.html">Logout</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <main class="dashboard-main">
+            <header class="topbar sticky-top d-flex justify-content-between align-items-center">
+                <div class="breadcumb fz24 fw-500">
+                    <div class="d-flex align-items-center">
+                        <!-- <i class="mdi mdi-arrow-left"></i> -->
+                        <span>Wecome to Publisher Dashboard</span>
+                    </div>
+                </div>
+                <div class="right-menu dropdown">
+                    <a href="javascript:void(0)" class="account-menu d-flex align-items-center dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div class="avater">
+                            <img src="http://via.placeholder.com/48x48" alt="">
+                        </div>
+                        <div class="acc-name">Publisher</div>
+
+                        <div class="">
+                            <button class="dropdown-icon">
+                                <i class="mdi mdi-menu-down"></i>
+                            </button>
+                        </div>
+
+                    </a>
+                    <div class="dropdown-menu mt-1" aria-labelledby="dropdownMenuButton">
+                        <ul>
+                            <li><a href="accountSettings.html">Account Settings</a></li>
+                            <li><a href="index2.html">Advertiser Dashboard</a></li>
+                            <li><a href="">বাংলা ভাষা নির্বাচন</a></li>
+                            <li><a href="">Take a Tour</a></li>
+                            <li><a href="login.html">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+
+            <div class="row">
+                <div class="col-md-4 mb-2 mb-md-3">
+
+                    <div class="d-card ">
+                        <h4 class="mb-3">Revenue Overview</h4>
+
+                        <div class="row mb-3">
+
+                            <div class="col">
+                                <p class="fz12 gray-color mb-2">Today</p>
+                                <p class="fz14">৳ 34,569</p>
+                            </div>
+
+                            <div class="col">
+                                <p class="fz12 gray-color mb-2">Yesterday</p>
+                                <p class="fz14">৳ 34,586</p>
+                            </div>
+
+                            <div class="col">
+                                <p class="fz12 gray-color mb-2">This Month</p>
+                                <p class="fz14">৳ 34.5 K</p>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-8">
+                                <div class="row">
+
+                                    <div class="col">
+                                        <p class="fz12 gray-color">Est. m/m Growth</p>
+                                        <div class="d-flex align-items-center">
+                                            <h4 class="fw-700">36.5% </h4>
+                                            <i class="mdi mdi-menu-up green-color fz44 lh-1 d-flex green-color"></i>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-2 mb-md-3">
+
+                    <div class="d-card  darken">
+                        <h4 class="mb-3">Fill Rate</h4>
+
+                        <div class="row mb-3">
+
+                            <div class="col">
+                                <p class="fz12 gray-color mb-2">Today</p>
+                                <p class="fz14">5%</p>
+                            </div>
+
+                            <div class="col">
+                                <p class="fz12 gray-color mb-2">Yesterday</p>
+                                <p class="fz14">85%</p>
+                            </div>
+
+                            <div class="col">
+                                <p class="fz12 gray-color mb-2">This Month</p>
+                                <p class="fz14">75%</p>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-8">
+                                <div class="row">
+
+                                    <div class="col">
+                                        <p class="fz12 gray-color">Est. m/m Growth</p>
+                                        <div class="d-flex align-items-center">
+                                            <h4 class="fw-700">15.6% </h4>
+                                            <i class="mdi mdi-menu-down red-color fz44 lh-1 d-flex green-color"></i>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-2 mb-md-3">
+
+                    <div class="d-card ">
+                        <h4 class="mb-3">Inventory</h4>
+
+                        <div class="row mb-3">
+
+                            <div class="col">
+                                <p class="fz12 gray-color mb-2">Today</p>
+                                <p class="fz14">35.4 K</p>
+                            </div>
+
+                            <div class="col">
+                                <p class="fz12 gray-color mb-2">Yesterday</p>
+                                <p class="fz14">35.4 K</p>
+                            </div>
+
+                            <div class="col">
+                                <p class="fz12 gray-color mb-2">This Month</p>
+                                <p class="fz14">35.4 K</p>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-8">
+                                <div class="row">
+
+                                    <div class="col">
+                                        <p class="fz12 gray-color">Est. m/m Growth</p>
+                                        <div class="d-flex align-items-center">
+                                            <h4 class="fw-700">36.5% </h4>
+                                            <i class="mdi mdi-menu-up green-color fz44 lh-1 d-flex green-color"></i>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-3 d-flex justify-content-end align-items-end">
+                                <a href="/" class="fz24 fw-700 uppercase d-flex align-items-center">
+                                    <span>More</span>
+                                    <i class="mdi mdi-menu-right fz44 lh-1 d-flex"></i>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-2 mb-md-3">
+
+                        <div class="d-card ">
+                            <h4 class="mb-3">Impression</h4>
+
+                            <div class="row mb-3">
+
+                                <div class="col">
+                                    <p class="fz12 gray-color mb-2">Today</p>
+                                    <p class="fz14">34,569</p>
+                                </div>
+
+                                <div class="col">
+                                    <p class="fz12 gray-color mb-2">Yesterday</p>
+                                    <p class="fz14">34,586</p>
+                                </div>
+
+                                <div class="col">
+                                    <p class="fz12 gray-color mb-2">This Month</p>
+                                    <p class="fz14">34.5 K</p>
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+                                <div class="col-8">
+                                    <div class="row">
+
+                                        <div class="col">
+                                            <p class="fz12 gray-color">Est. m/m Growth</p>
+                                            <div class="d-flex align-items-center">
+                                                <h4 class="fw-700">36.5% </h4>
+                                                <i class="mdi mdi-menu-up green-color fz44 lh-1 d-flex green-color"></i>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-3 d-flex justify-content-end align-items-end">
+                                    <a href="/" class="fz24 fw-700 uppercase d-flex align-items-center">
+                                        <span>More</span>
+                                        <i class="mdi mdi-menu-right fz44 lh-1 d-flex"></i>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-2 mb-md-3">
+
+                        <div class="d-card  darken">
+                            <h4 class="mb-3">Impressions served</h4>
+
+                            <p class="fz12 gray-color mb-2">1 Active Publishers with 2 Websites, 0 Apps</p>
+
+                            <div class="row">
+
+                                <div class="col">
+                                    <p class="h4">34,569</p>
+                                    <p class="fz12 gray-color mb-2">Today untill 16:04</p>
+                                </div>
+
+                                <div class="col">
+                                    <p class="h4">561,251</p>
+                                    <p class="fz12 gray-color mb-2">This Month utill 4 October 2020</p>
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+                                <div class="col-8">
+                                    <div class="row">
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-2 mb-md-3">
+
+                        <div class="d-card ">
+                            <h4 class="mb-3">Properties</h4>
+
+                            <div class="row">
+                                <div class="col-8">
+                                    <div class="row">
+
+                                        <div class="col">
+                                            <p class="fz16 mb-1 fw-500">PropertyName 1</p>
+                                            <p class="fz12 gray-color">Est. m/m Growth</p>
+                                            <div class="d-flex align-items-center">
+                                                <h4 class="fw-700">36.5% </h4>
+                                                <i class="mdi mdi-menu-up green-color fz44 lh-1 d-flex green-color"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="col">
+                                            <p class="fz16 mb-1 fw-500">PropertyName 2</p>
+                                            <p class="fz12 gray-color">Est. m/m Growth</p>
+                                            <div class="d-flex align-items-center">
+                                                <h4 class="fw-700">16.5% </h4>
+                                                <i class="mdi mdi-menu-down red-color fz44 lh-1 d-flex green-color"></i>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-3 d-flex justify-content-end align-items-end">
+                                    <a href="/" class="fz24 fw-700 uppercase d-flex align-items-center">
+                                        <span>More</span>
+                                        <i class="mdi mdi-menu-right fz44 lh-1 d-flex"></i>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-2 mb-md-3">
+                    <div class="d-card h-100">
+                        <div class="row">
+                            <div class="col-md-12 col-lg-6">
+                                <div class="location-info mb-3">
+                                    <p class="fz20 fw-500 mb-1">Bangladesh</p>
+                                    <div class="row">
+                                        <div class="col">
+                                            <p class="fz12 gray-color">Today</p>
+                                            <div class="d-flex align-items-center">
+                                                <p class="fz14 fw-500">35.4 K</p>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <p class="fz12 gray-color">Est. m/m Growth</p>
+                                            <div class="d-flex align-items-center">
+                                                <p class="fz14 fw-500">26.5% </p>
+                                                <i class="mdi mdi-menu-up green-color fz24 lh-1 d-flex green-color"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="location-info mb-3">
+                                    <p class="fz20 fw-500 mb-1">Bangladesh</p>
+                                    <div class="row">
+                                        <div class="col">
+                                            <p class="fz12 gray-color">Today</p>
+                                            <div class="d-flex align-items-center">
+                                                <p class="fz14 fw-500">35.4 K</p>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <p class="fz12 gray-color">Est. m/m Growth</p>
+                                            <div class="d-flex align-items-center">
+                                                <p class="fz14 fw-500">26.5% </p>
+                                                <i class="mdi mdi-menu-up green-color fz24 lh-1 d-flex green-color"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="location-info mb-3">
+                                    <p class="fz20 fw-500 mb-1">Bangladesh</p>
+                                    <div class="row">
+                                        <div class="col">
+                                            <p class="fz12 gray-color">Today</p>
+                                            <div class="d-flex align-items-center">
+                                                <p class="fz14 fw-500">35.4 K</p>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <p class="fz12 gray-color">Est. m/m Growth</p>
+                                            <div class="d-flex align-items-center">
+                                                <p class="fz14 fw-500">26.5% </p>
+                                                <i class="mdi mdi-menu-up green-color fz24 lh-1 d-flex green-color"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="location-info mb-3">
+                                    <p class="fz20 fw-500 mb-1">Bangladesh</p>
+                                    <div class="row">
+                                        <div class="col">
+                                            <p class="fz12 gray-color">Today</p>
+                                            <div class="d-flex align-items-center">
+                                                <p class="fz14 fw-500">35.4 K</p>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <p class="fz12 gray-color">Est. m/m Growth</p>
+                                            <div class="d-flex align-items-center">
+                                                <p class="fz14 fw-500">26.5% </p>
+                                                <i class="mdi mdi-menu-up green-color fz24 lh-1 d-flex green-color"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="location-info mb-3">
+                                    <p class="fz20 fw-500 mb-1">Bangladesh</p>
+                                    <div class="row">
+                                        <div class="col">
+                                            <p class="fz12 gray-color">Today</p>
+                                            <div class="d-flex align-items-center">
+                                                <p class="fz14 fw-500">35.4 K</p>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <p class="fz12 gray-color">Est. m/m Growth</p>
+                                            <div class="d-flex align-items-center">
+                                                <p class="fz14 fw-500">26.5% </p>
+                                                <i class="mdi mdi-menu-up green-color fz24 lh-1 d-flex green-color"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="location-info mb-3">
+                                    <p class="fz20 fw-500 mb-1">Bangladesh</p>
+                                    <div class="row">
+                                        <div class="col">
+                                            <p class="fz12 gray-color">Today</p>
+                                            <div class="d-flex align-items-center">
+                                                <p class="fz14 fw-500">35.4 K</p>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <p class="fz12 gray-color">Est. m/m Growth</p>
+                                            <div class="d-flex align-items-center">
+                                                <p class="fz14 fw-500">26.5% </p>
+                                                <i class="mdi mdi-menu-up green-color fz24 lh-1 d-flex green-color"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-lg-6">
+                                <div class="map-area">
+
+                                    <iframe width="100%" height="100%" frameborder="0" src="https://maps.google.com/maps?q=23.7984463,90.4031033&hl=en&amp;&z=14&amp;output=embed">
+                                    </iframe>
+                                </div>
+                                <div class="p-4">
+                                    <a href="#" class="fz14 color-b d-flex align-items-center justify-content-center text-center uppercase">
+                                        <span>Explore More</span>
+                                        <i class="mdi mdi-menu-right fz24"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- build:js assets/js/vendor.min.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- Bootstrap Table Js Link -->
+    <script src="https://unpkg.com/bootstrap-table@1.18.1/dist/bootstrap-table.min.js"></script>
+    <!-- <script type="text/javascript" src="assets/vendor/aos/js/aos.js"></script> -->
+    <!-- endbuild -->
+    <script type="text/javascript" src="assets/js/script.js"></script>
+
+</body>
+
+</html>
