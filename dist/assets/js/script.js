@@ -62,11 +62,7 @@
 
     function menuHide() {
         $('main').removeClass('overlay');
-        $('.menu-toggler').removeClass('show');
-        setTimeout(function () {
-            $('.menu-toggler').removeClass('animate');
-        }, 300);
-        $('.site-header .menu-area').removeClass('show');
+        $('.sidebar-menu').removeClass('show');
         $('body').css({
             'overflow-y': 'visible'
         })
@@ -74,11 +70,8 @@
 
     function menuShow() {
         $('main').addClass('overlay');
-        $('.menu-toggler').addClass('animate');
-        setTimeout(function () {
-            $('.menu-toggler').addClass('show');
-        }, 400);
-        $('.site-header .menu-area').addClass('show');
+        
+        $('.sidebar-menu').addClass('show');
         $('body').css({
             'overflow-y': 'hidden'
         })
@@ -88,7 +81,7 @@
         var btn = $('.menu-toggler');
         if (btn.length) {
             btn.on('click', function () {
-                if (btn.hasClass('animate')) {
+                if ( $('.sidebar-menu').hasClass('show')) {
                     menuHide();
                 } else {
                     menuShow();
@@ -96,9 +89,9 @@
 
             })
 
-            var specifiedElement = document.querySelector('.site-header');
+            var specifiedElement = document.querySelector('.sidebar-menu');
             document.addEventListener('click', function (event) {
-                if ($('.menu-area').hasClass('show')) {
+                if ($('.sidebar-menu').hasClass('show')) {
                     var isClickInside = specifiedElement.contains(event.target);
                     if (!isClickInside) {
                         menuHide();
@@ -131,6 +124,7 @@
     ==========================================================================*/
     $(window).on('load', function () {
         inputAnimate();
+        menuToggler();
 
         dataTable('#propertyDataTable');
         dataTable('#propertyDetailsDataTable');
