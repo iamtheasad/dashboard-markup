@@ -45,21 +45,10 @@
   background-color: #ECEEF3;
 
   .nav-item {
-    white-space: nowrap;
-
     .nav-link {
       &.active {
         background-color: #475364;
       }
-    }
-  }
-
-  @media(max-width: 575px) {
-    .nav-item {
-      border: 1px solid $white;
-    }
-    .nav-item:last-child {
-      border-right: none;
     }
   }
 }
