@@ -1,0 +1,242 @@
+/***********************************
+// Global Data Table CSS
+**************************************/
+th.sorting,
+.table thead th {
+    white-space: nowrap;
+    border: none;
+}
+
+div.dataTables_wrapper div.dataTables_info {
+    display: none;
+}
+
+.table-header-height-for-34 {
+    line-height: 10px;
+    font-size: rem(12px);
+}
+
+table.dataTable > thead .sorting,
+table.dataTable > thead .sorting_asc,
+table.dataTable > thead .sorting_desc {
+    &:after,
+    &:before {
+        content: "" !important;
+        background-color: $black;
+        width: 12px;
+        height: 5.25px;
+        right: 6%;
+    }
+
+    &:after {
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        top: 35%;
+    }
+
+    &:before {
+        clip-path: polygon(50% 100%, 0 0, 100% 0);
+        top: 54%;
+
+        @media(max-width: 992px){
+            top: 60%;
+        }
+
+        @media(max-width: 768px){
+            top: 57%;
+        }
+    }
+}
+
+/***********************************
+// Properties Page
+**************************************/
+.guide-line a {
+    border-bottom: 1px solid transparent;
+    transition: 0.1s ease-in-out;
+}
+
+.guide-line a:hover {
+    border-bottom: 1px solid $primaryColor;
+    color: $primaryColor;
+}
+
+.changePasswordModal-content.properties-close .close {
+    top: 3%;
+}
+
+/***********************************
+//Property Data Table
+**************************************/
+.ra-table-head {
+    background-color: $tableHeaderColor;
+}
+
+.ra-balance-table {
+    background-color: $tableRowColor;
+}
+
+.property-table.table-striped tbody tr:nth-of-type(odd) {
+    background-color: $tableRowColor !important;
+    line-height: 31px;
+}
+
+.property-table.balance-table tbody tr:nth-of-type(odd) {
+    background-color: unset !important;
+}
+
+.property-table.table-striped tbody tr:nth-of-type(even) {
+    line-height: 31px;
+}
+
+.table td,
+.table th td.border-top-0 {
+    border-top: none !important;
+    white-space: nowrap;
+}
+
+.balance-table-wrapper tbody tr.balance-btn-row:hover {
+    background-color: #eceef3;
+}
+
+td.border-top-0 {
+    padding: 0px;
+}
+
+.balance-table-wrapper.table thead th {
+    border-bottom: none;
+    vertical-align: middle;
+}
+
+.table tbody td {
+    vertical-align: middle !important;
+}
+
+.property-table.table-striped tbody tr {
+    transition: 0.2s ease-in-out;
+}
+
+.property-table.table-striped tbody tr:hover {
+    background-color: $tableHeaderColor !important;
+}
+
+.propert-header-right input,
+.propert-header-right select {
+    border-radius: 30px !important;
+    border-color: $borderColor;
+    transition: 0.2s ease-in-out;
+    color: $primaryColor;
+}
+
+.propert-header-right select {
+    max-width: 250px;
+    width: 100%;
+    padding-left: 25px;
+
+    @media (max-width: 767px) {
+        max-width: 100%;
+    }
+}
+
+.propert-header-right select:focus {
+    border-color: $black;
+}
+
+.propert-header-right {
+    .ra-search-label {
+        top: 50%;
+        right: 0%;
+        transform: translateY(-50%);
+        background: transparent;
+        border: none;
+        height: 100%;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+}
+
+/***********************************
+// Block Add Page
+**************************************/
+.ra-add-block-select {
+    background-color: $tableRowColor !important;
+}
+
+.ra-add-block-input {
+    background-color: $tableRowColor;
+}
+
+.ra-block-add-select-bg option {
+    background-color: $tableRowColor;
+}
+
+.ra-block-add-btn {
+    background-color: $blockAddBtn;
+    color: $white !important;
+    padding: 3px 12px !important;
+    display: unset;
+    border: none;
+    white-space: nowrap;
+}
+
+.ra-block-add-btn:hover {
+    color: $white !important;
+}
+
+th.sorting_asc {
+    white-space: nowrap;
+}
+
+/***********************************
+// Estimated Revenue
+**************************************/
+.esitmate-card {
+    @media (max-width: 767px) {
+        margin-bottom: 15px;
+    }
+
+    h3 {
+        @media (max-width: 1200px) {
+            font-size: rem(20px);
+        }
+    }
+}
+
+.bdt {
+    max-width: 32px;
+    width: 100%;
+
+    @media (max-width: 1200px) {
+        max-width: 20px;
+    }
+}
+
+.estimate-revenue-select {
+    width: 300px !important;
+
+    @media (max-width: 767px) {
+        width: 100% !important;
+    }
+}
+
+/***********************************
+// Invoice All
+**************************************/
+.invoice-btn {
+    background-color: $dataTableSearchBgColor !important;
+    color: $paymentInputColor3 !important;
+    border: none;
+}
+
+.requestUnpaiddModal-content .close {
+    position: absolute;
+    right: 2%;
+    top: 4%;
+}
+
+.balance-table-wrapper .balance-row {
+    transition: 0.2s ease-in-out;
+}
+
+.balance-table-wrapper .balance-row:hover {
+    background-color: $tableHeaderColor;
+}

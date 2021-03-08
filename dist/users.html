@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G&R</title>
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/jpg">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
+    <!-- Bootstrap Table Css Link -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.18.1/dist/bootstrap-table.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css">
+
+    <!-- build:css assets/css/all.min.css -->
+    <link rel="stylesheet" href="assets/css/vendor.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- endbuild -->
+    <script type="text/javascript" src="assets/vendor/jQuery/jquery.min.js"></script>
+</head>
+
+<body class="preloader">
+    <div class="d-flex">
+        <section class="sidebar-menu scrollbar">
+            <div class="menu-toggler">
+                <i class="mdi mdi-menu"></i>
+            </div>
+            <div class="site-logo">
+                <a class="d-block" href="/">
+                    <img src="assets/images/logo.svg" alt="G&R">
+                </a>
+            </div>
+            <div class="menu-area">
+                <ul>
+                    <li class="active"><a href="/"><img class="icon" src="assets/images/icons/dashboard.svg" alt=""> Dashboard</a></li>
+                    <li><a href="properties.html"><img class="icon" src="assets/images/icons/ad-properties.svg" alt="">Properties</a></li>
+                    <li><a href="placesAllAdded.html"><img class="icon" src="assets/images/icons/adplace.svg" alt="">Ad Place</a></li>
+
+                    <li>
+                        <a href="#report-sidebar-menu" data-toggle="collapse">
+                            <img class="icon" src="assets/images/icons/report.svg" alt="">Report
+                        </a>
+                        <div id="report-sidebar-menu" class="collapse">
+                            <ul>
+                                <li><a href="overview.html">Overview</a></li>
+                                <li><a href="location.html">Location</a></li>
+                                <li><a href="revenue.html">Revenue</a></li>
+                                <li><a href="technology.html">Technology</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="#payment-sidebar-menu" data-toggle="collapse"><img class="icon" src="assets/images/icons/money.svg" alt="">Payments</a>
+                        <div id="payment-sidebar-menu" class="collapse">
+                            <ul>
+                                <li><a href="estimatedRevenuePage.html">Estimated Revennue</a></li>
+                                <li><a href="finilizedPayment.html">Finilized Payments</a></li>
+                                <li><a href="balance.html">Balance</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#settings-sidebar-menu" data-toggle="collapse">
+                            <img class="icon" src="assets/images/icons/settings.svg" alt="">Settings
+                        </a>
+                        <div id="settings-sidebar-menu" class="collapse">
+                            <ul>
+                                <li><a href="accountSettings.html">Account Settings</a></li>
+                                <li><a href="users.html">Users</a></li>
+                                <li><a href="activityLogPage.html">Activity Log</a></li>
+                                <li><a href="login.html">Logout</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <main class="dashboard-main">
+            <header class="topbar sticky-top d-flex justify-content-between align-items-center">
+                <div class="breadcumb fz24 fw-500 py-3">
+                    <div class="d-flex align-items-center">
+                        <!-- <i class="mdi mdi-arrow-left"></i> -->
+                        <span>Wecome to Publisher Dashboard</span>
+                    </div>
+                </div>
+                <div class="right-menu dropdown">
+                    <a href="javascript:void(0)" class="account-menu d-flex align-items-center dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div class="avater">
+                            <img src="http://via.placeholder.com/48x48" alt="">
+                        </div>
+                        <div class="acc-name">Publisher</div>
+
+                        <button class="dropdown-icon">
+                            <i class="mdi mdi-menu-down"></i>
+                        </button>
+
+                    </a>
+                    <div class="dropdown-menu mt-1" aria-labelledby="dropdownMenuButton">
+                        <ul>
+                            <li><a href="accountSettings.html">Account Settings</a></li>
+                            <li><a href="index2.html">Advertiser Dashboard</a></li>
+                            <li><a href="">বাংলা ভাষা নির্বাচন</a></li>
+                            <li><a href="">Take a Tour</a></li>
+                            <li><a href="login.html">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="d-card">
+                        <div class="row">
+                            <div class="col-xl-1 col-lg-2">
+                                <div class="user_img">
+                                    <label for="user_img">
+                                        <img src="assets/images/icons/add-user.svg" alt="User Image" />
+                                    </label>
+                                    <input type="file" id="user_img" class="d-none">
+                                </div>
+                            </div>
+                            <div class="col-xl-11 col-lg-10 mt-md-3 pl-lg-5">
+                                <div class="user-wrapper">
+                                    <h2 class="fz28 fw-700 mb-3">Add New User</h2>
+
+                                    <p class="fz12 gray-color">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                        Lorem
+                                        Ipsum has been
+                                        the industry</p>
+
+                                    <div class="user_btn mt-4">
+                                        <button data-target="#addNewUserModal" data-toggle="modal" class="rs-btn rs-btn-lg rs-btn-primary uppercase fz20"><span class="mdi mdi-plus-thick"></span>
+                                            Add</button>
+                                    </div>
+
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="addNewUserModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-lg" role="document">
+                                            <div class="modal-content p-xl-5 p-lg-3 p-md-1 changePasswordModal-content addUser-close">
+                                                <form action="">
+                                                    <div class="modal-header border-bottom-0">
+                                                        <h5 class="modal-title" id="exampleModalLabel">Add Users</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span class="mdi mdi-close" aria-hidden="true"></span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body pb-5">
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <fieldset class="rs-form mb-2">
+                                                                    <label for="editName" class="rs-label fz10">Email Address</label>
+                                                                    <input type="text" class="rs-input fz18" value="user@email.com">
+                                                                </fieldset>
+                                                                <a href="#" class="fz12 linkColor mb-4 mt-1">User must be registered in G&R Ad Network</a>
+                                                            </div>
+
+                                                            <div class="col-md-12">
+                                                                <fieldset class="rs-form mb-4 f44">
+                                                                    <label for="editName" class="rs-label rs-select-editAccount fz10 fz10">Select Property to
+                                                                        Manage</label>
+                                                                    <select class="ra-select w-100 editAccountSelect">
+                                                                        <option class="fz18" value="BFTN">PropertyName 1</option>
+                                                                        <option class="fz18" value="BFTN">PropertyName 2</option>
+                                                                        <option class="fz18" value="BFTN">PropertyName 3</option>
+                                                                    </select>
+                                                                </fieldset>
+                                                            </div>
+
+                                                            <div class="col-md-12">
+                                                                <fieldset class="rs-form mb-4">
+                                                                    <label for="editName" class="rs-label rs-select-editAccount fz10">Access Type</label>
+                                                                    <select class="ra-select w-100 editAccountSelect">
+                                                                        <option class="fz18" value="Eastern Bank Ltd.">Read & Manage</option>
+                                                                        <option class="fz18" value="Eastern Bank Ltd.">Read & Manage</option>
+                                                                        <option class="fz18" value="Eastern Bank Ltd.">Read & Manage</option>
+                                                                    </select>
+                                                                </fieldset>
+                                                            </div>
+                                                        </div>
+                                                        <div class="d-flex mt-3">
+                                                            <button type="submit" class="rs-btn rs-btn-primary rs-btn-lg uppercase mr-3">Add User</button>
+
+                                                            <button class="rs-btn rs-btn-lg uppercase" data-dismiss="modal">Cancel</button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-12 mt-4">
+                    <div class="d-card d-md-flex flex-direction-md-column">
+                        <div class="user-wrapper">
+                            <div class="user_img">
+                                <label for="user_img">
+                                    <img src="assets/images/icons/user.svg" alt="User Image" />
+                                </label>
+                                <input type="submit" id="user_img" class="d-none">
+                            </div>
+                        </div>
+                        <div class="user-wrapper pl-4">
+                            <h2 class="fz28 fw-700 mb-3">Account Name</h2>
+
+                            <div class="d-card mr-3 p-3">
+                                <div class="row">
+                                    <div class="col-lg-12 pl-1 ">
+
+                                        <div class="mb-2">
+                                            <span class="gray-color fz12 fw-400 mb-2">Email Address</span>
+                                            <h4 class="fz16 fw-400 mb-2">account@email.com</h4>
+                                        </div>
+                                        <div class="mb-2">
+                                            <span class="gray-color fz12 fw-400 mb-2">Property</span>
+                                            <h4 class="fz16 fw-400 mb-2">Property Name</h4>
+                                        </div>
+                                        <div class="mb-2">
+                                            <span class="gray-color fz12 fw-400 mb-2">Access Type</span>
+                                            <h4 class="fz16 fw-400 mb-2">Read & Manage</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="user_btn mt-4">
+                                    <button type="button" class="change_account_password_btn rs-btn rs-btn-primary fz20 fw-700 rs-btn-lg uppercase" data-toggle="modal" data-target="#addNewUserModal">
+                                        Edit
+                                    </button>
+                                    <button class="rs-btn rs-btn-lg rs-btn-secondary uppercase rs-btn-trans ra-custom-bg fz20">Delete</button>
+                                </div>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="addNewUserModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg" role="document">
+                                        <div class="modal-content p-xl-5 p-lg-3 p-md-1 changePasswordModal-content addUser-close">
+                                            <form action="">
+                                                <div class="modal-header border-bottom-0">
+                                                    <h5 class="modal-title" id="exampleModalLabel">Add Users</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span class="mdi mdi-close" aria-hidden="true"></span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body pb-5">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <fieldset class="rs-form mb-2">
+                                                                <label for="editName" class="rs-label fz10">Email Address</label>
+                                                                <input type="text" class="rs-input fz18" value="user@email.com">
+                                                            </fieldset>
+                                                            <a href="#" class="fz12 linkColor mb-4 mt-1">User must be registered in G&R Ad Network</a>
+                                                        </div>
+
+                                                        <div class="col-md-12">
+                                                            <fieldset class="rs-form mb-4 f44">
+                                                                <label for="editName" class="rs-label rs-select-editAccount fz10 fz10">Select Property to
+                                                                    Manage</label>
+                                                                <select class="ra-select w-100 editAccountSelect">
+                                                                    <option class="fz18" value="BFTN">PropertyName 1</option>
+                                                                    <option class="fz18" value="BFTN">PropertyName 2</option>
+                                                                    <option class="fz18" value="BFTN">PropertyName 3</option>
+                                                                </select>
+                                                            </fieldset>
+                                                        </div>
+
+                                                        <div class="col-md-12">
+                                                            <fieldset class="rs-form mb-4">
+                                                                <label for="editName" class="rs-label rs-select-editAccount fz10">Access Type</label>
+                                                                <select class="ra-select w-100 editAccountSelect">
+                                                                    <option class="fz18" value="Eastern Bank Ltd.">Read & Manage</option>
+                                                                    <option class="fz18" value="Eastern Bank Ltd.">Read & Manage</option>
+                                                                    <option class="fz18" value="Eastern Bank Ltd.">Read & Manage</option>
+                                                                </select>
+                                                            </fieldset>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex mt-3">
+                                                        <button type="submit" class="rs-btn rs-btn-primary rs-btn-lg uppercase mr-3">Add User</button>
+
+                                                        <button class="rs-btn rs-btn-lg uppercase" data-dismiss="modal">Cancel</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 mt-4">
+                    <div class="d-card d-md-flex flex-direction-md-column">
+                        <div class="user-wrapper">
+                            <div class="user_img">
+                                <label for="user_img">
+                                    <img src="assets/images/icons/user.svg" alt="User Image" />
+                                </label>
+                                <input type="submit" id="user_img" class="d-none">
+                            </div>
+                        </div>
+                        <div class="user-wrapper pl-4">
+                            <h2 class="fz28 fw-700 mb-3">Account Name</h2>
+
+                            <div class="d-card mr-3 p-3">
+                                <div class="row">
+                                    <div class="col-lg-12 pl-1 ">
+
+                                        <div class="mb-2">
+                                            <span class="gray-color fz12 fw-400 mb-2">Email Address</span>
+                                            <h4 class="fz16 fw-400 mb-2">account@email.com</h4>
+                                        </div>
+                                        <div class="mb-2">
+                                            <span class="gray-color fz12 fw-400 mb-2">Property</span>
+                                            <h4 class="fz16 fw-400 mb-2">Property Name</h4>
+                                        </div>
+                                        <div class="mb-2">
+                                            <span class="gray-color fz12 fw-400 mb-2">Access Type</span>
+                                            <h4 class="fz16 fw-400 mb-2">Read & Manage</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="user_btn mt-4">
+                                    <button type="button" class="change_account_password_btn rs-btn rs-btn-primary fz20 fw-700 rs-btn-lg uppercase" data-toggle="modal" data-target="#addNewUserModal">
+                                        Edit
+                                    </button>
+                                    <button class="rs-btn rs-btn-lg rs-btn-secondary uppercase rs-btn-trans ra-custom-bg fz20">Delete</button>
+                                </div>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="addNewUserModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg" role="document">
+                                        <div class="modal-content p-xl-5 p-lg-3 p-md-1 changePasswordModal-content addUser-close">
+                                            <form action="">
+                                                <div class="modal-header border-bottom-0">
+                                                    <h5 class="modal-title" id="exampleModalLabel">Add Users</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span class="mdi mdi-close" aria-hidden="true"></span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body pb-5">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <fieldset class="rs-form mb-2">
+                                                                <label for="editName" class="rs-label fz10">Email Address</label>
+                                                                <input type="text" class="rs-input fz18" value="user@email.com">
+                                                            </fieldset>
+                                                            <a href="#" class="fz12 linkColor mb-4 mt-1">User must be registered in G&R Ad Network</a>
+                                                        </div>
+
+                                                        <div class="col-md-12">
+                                                            <fieldset class="rs-form mb-4 f44">
+                                                                <label for="editName" class="rs-label rs-select-editAccount fz10 fz10">Select Property to
+                                                                    Manage</label>
+                                                                <select class="ra-select w-100 editAccountSelect">
+                                                                    <option class="fz18" value="BFTN">PropertyName 1</option>
+                                                                    <option class="fz18" value="BFTN">PropertyName 2</option>
+                                                                    <option class="fz18" value="BFTN">PropertyName 3</option>
+                                                                </select>
+                                                            </fieldset>
+                                                        </div>
+
+                                                        <div class="col-md-12">
+                                                            <fieldset class="rs-form mb-4">
+                                                                <label for="editName" class="rs-label rs-select-editAccount fz10">Access Type</label>
+                                                                <select class="ra-select w-100 editAccountSelect">
+                                                                    <option class="fz18" value="Eastern Bank Ltd.">Read & Manage</option>
+                                                                    <option class="fz18" value="Eastern Bank Ltd.">Read & Manage</option>
+                                                                    <option class="fz18" value="Eastern Bank Ltd.">Read & Manage</option>
+                                                                </select>
+                                                            </fieldset>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex mt-3">
+                                                        <button type="submit" class="rs-btn rs-btn-primary rs-btn-lg uppercase mr-3">Add User</button>
+
+                                                        <button class="rs-btn rs-btn-lg uppercase" data-dismiss="modal">Cancel</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- build:js assets/js/vendor.min.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- Bootstrap Table Js Link -->
+    <script src="https://unpkg.com/bootstrap-table@1.18.1/dist/bootstrap-table.min.js"></script>
+    <!-- <script type="text/javascript" src="assets/vendor/aos/js/aos.js"></script> -->
+    <!-- endbuild -->
+    <script type="text/javascript" src="assets/js/script.js"></script>
+
+</body>
+
+</html>

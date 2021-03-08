@@ -1,0 +1,74 @@
+{% extends "layouts/layout.njk" %}
+{% block content %}
+
+<!--Selection Field-->
+{% include "snippets/reports/overviewSelectionField.njk" %}
+
+<!-- Countries Section -->
+<section>
+   <div class="p-0 pt-2 pb-2 pt-md-3 pb-md-4">
+      {% include "snippets/worldMap.njk" %}
+   </div>
+
+   <div class="row">
+      <div class="col-md-4  mb-md-3 mb-2">
+         <div class="d-card">
+            <h4 class="fz14 fw-400">Top Requests</h4>
+            <h2 class="fz28 fw-700 mt-1 mb-1 mt-md-2 mb-md-2">Bangladesh</h2>
+            <span class="fz20 fw-500">10,017,365</span>
+         </div>
+      </div>
+      <div class="col-md-4  mb-md-3 mb-2">
+         <div class="d-card">
+            <h4 class="fz14 fw-400">Top Impressions</h4>
+            <h2 class="fz28 fw-700 mt-1 mb-1 mt-md-2 mb-md-2">United States</h2>
+            <span class="fz20 fw-500">5,065,089</span>
+         </div>
+      </div>
+      <div class="col-md-4  mb-md-3 mb-2">
+         <div class="d-card">
+            <h4 class="fz14 fw-400">Top Clicks</h4>
+            <h2 class="fz28 fw-700 mt-1 mb-1 mt-md-2 mb-md-2">Bangladesh</h2>
+            <span class="fz20 fw-500">84,444</span>
+         </div>
+      </div>
+      <div class="col-md-4  mb-md-3 mb-2">
+         <div class="d-card">
+            <h4 class="fz14 fw-400">Top Fill Rate</h4>
+            <h2 class="fz28 fw-700 mt-1 mb-1 mt-md-2 mb-md-2">United Kingdom</h2>
+            <span class="fz20 fw-500">96.76%</span>
+         </div>
+      </div>
+      <div class="col-md-4  mb-md-3 mb-2">
+         <div class="d-card">
+            <h4 class="fz14 fw-400">Top CTR</h4>
+            <h2 class="fz28 fw-700 mt-1 mb-1 mt-md-2 mb-md-2">Singapore</h2>
+            <span class="fz20 fw-500">6.76% </span>
+         </div>
+      </div>
+      <div class="col-md-4  mb-md-3 mb-2">
+         <div class="d-card">
+            <h4 class="fz14 fw-400">Top Revenue</h4>
+            <h2 class="fz28 fw-700 mt-1 mb-1 mt-md-2 mb-md-2">Bangladesh</h2>
+            <span class="fz20 fw-500">৳ 71,085.28</span>
+         </div>
+      </div>
+   </div>
+
+   <div class="ra-data-table-bg border-radius-8 p-3 ra-property-list">
+      <div class="row">
+         <div class="col-md-12">
+            <div class="dataTable table-responsive">
+               <!--Country Dtails Data Table-->
+               {% include "snippets/dataTable/countriesDetailsDataTable.njk" %}
+
+               {% include "snippets/loadMoreBtn.njk" %}
+            </div>
+         </div>
+      </div>
+   </div>
+
+</section>
+
+
+{% endblock %}

@@ -1,14 +1,17 @@
 <section class="sidebar-menu scrollbar">
+    <div class="menu-toggler">
+        <i class="mdi mdi-menu"></i>
+    </div>
     <div class="site-logo">
-        <a class="d-block" href="">
+        <a class="d-block" href="/">
             <img src="assets/images/logo.svg" alt="G&R">
         </a>
     </div>
     <div class="menu-area">
         <ul>
-            <li class="active"><a href=""><img class="icon" src="assets/images/icons/dashboard.svg" alt=""> Dashboard</a></li>
-            <li><a href=""><img class="icon" src="assets/images/icons/ad-properties.svg" alt="">Properties</a></li>
-            <li><a href=""><img class="icon" src="assets/images/icons/adplace.svg" alt="">Ad Place</a></li>
+            <li class="active"><a href="/"><img class="icon" src="assets/images/icons/dashboard.svg" alt=""> Dashboard</a></li>
+            <li><a href="properties.html"><img class="icon" src="assets/images/icons/ad-properties.svg" alt="">Properties</a></li>
+            <li><a href="placesAllAdded.html"><img class="icon" src="assets/images/icons/adplace.svg" alt="">Ad Place</a></li>
 
             <li>
                 <a href="#report-sidebar-menu" data-toggle="collapse">
@@ -16,23 +19,33 @@
                 </a>
                 <div id="report-sidebar-menu" class="collapse">
                     <ul>
-                        <li><a href="">Overview</a></li>
-                        <li><a href="">Location</a></li>
-                        <li><a href="">Revenue              </a></li>
+                        <li><a href="overview.html">Overview</a></li>
+                        <li><a href="location.html">Location</a></li>
+                        <li><a href="revenue.html">Revenue</a></li>
+                        <li><a href="technology.html">Technology</a></li>
                     </ul>
                 </div>
             </li>
 
-            <li><a href=""><img class="icon" src="assets/images/icons/money.svg" alt="">Payments</a></li>
+            <li>
+                <a href="#payment-sidebar-menu" data-toggle="collapse"><img class="icon" src="assets/images/icons/money.svg" alt="">Payments</a>
+                <div id="payment-sidebar-menu" class="collapse">
+                    <ul>
+                        <li><a href="estimatedRevenuePage.html">Estimated Revennue</a></li>
+                        <li><a href="finilizedPayment.html">Finilized Payments</a></li>
+                        <li><a href="balance.html">Balance</a></li>
+                    </ul>
+                </div>
+            </li>
             <li>
                 <a href="#settings-sidebar-menu" data-toggle="collapse">
                     <img class="icon" src="assets/images/icons/settings.svg" alt="">Settings
                 </a>
                 <div id="settings-sidebar-menu" class="collapse">
                     <ul>
-                        <li><a href="">Account Settings</a></li>
-                        <li><a href="">Users</a></li>
-                        <li><a href="">Activity Log</a></li>
+                        <li><a href="accountSettings.html">Account Settings</a></li>
+                        <li><a href="users.html">Users</a></li>
+                        <li><a href="activityLogPage.html">Activity Log</a></li>
                         <li><a href="login.html">Logout</a></li>
                     </ul>
                 </div>

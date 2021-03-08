@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G&R</title>
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/jpg">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
+    <!-- Bootstrap Table Css Link -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.18.1/dist/bootstrap-table.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css">
+
+    <!-- build:css assets/css/all.min.css -->
+    <link rel="stylesheet" href="assets/css/vendor.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- endbuild -->
+    <script type="text/javascript" src="assets/vendor/jQuery/jquery.min.js"></script>
+</head>
+
+<body class="preloader">
+    <div class="d-flex">
+        <section class="sidebar-menu scrollbar">
+            <div class="menu-toggler">
+                <i class="mdi mdi-menu"></i>
+            </div>
+            <div class="site-logo">
+                <a class="d-block" href="/">
+                    <img src="assets/images/logo.svg" alt="G&R">
+                </a>
+            </div>
+            <div class="menu-area">
+                <ul>
+                    <li class="active"><a href="/"><img class="icon" src="assets/images/icons/dashboard.svg" alt=""> Dashboard</a></li>
+                    <li><a href="properties.html"><img class="icon" src="assets/images/icons/ad-properties.svg" alt="">Properties</a></li>
+                    <li><a href="placesAllAdded.html"><img class="icon" src="assets/images/icons/adplace.svg" alt="">Ad Place</a></li>
+
+                    <li>
+                        <a href="#report-sidebar-menu" data-toggle="collapse">
+                            <img class="icon" src="assets/images/icons/report.svg" alt="">Report
+                        </a>
+                        <div id="report-sidebar-menu" class="collapse">
+                            <ul>
+                                <li><a href="overview.html">Overview</a></li>
+                                <li><a href="location.html">Location</a></li>
+                                <li><a href="revenue.html">Revenue</a></li>
+                                <li><a href="technology.html">Technology</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="#payment-sidebar-menu" data-toggle="collapse"><img class="icon" src="assets/images/icons/money.svg" alt="">Payments</a>
+                        <div id="payment-sidebar-menu" class="collapse">
+                            <ul>
+                                <li><a href="estimatedRevenuePage.html">Estimated Revennue</a></li>
+                                <li><a href="finilizedPayment.html">Finilized Payments</a></li>
+                                <li><a href="balance.html">Balance</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#settings-sidebar-menu" data-toggle="collapse">
+                            <img class="icon" src="assets/images/icons/settings.svg" alt="">Settings
+                        </a>
+                        <div id="settings-sidebar-menu" class="collapse">
+                            <ul>
+                                <li><a href="accountSettings.html">Account Settings</a></li>
+                                <li><a href="users.html">Users</a></li>
+                                <li><a href="activityLogPage.html">Activity Log</a></li>
+                                <li><a href="login.html">Logout</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <main class="dashboard-main">
+            <header class="topbar sticky-top d-flex justify-content-between align-items-center">
+                <div class="breadcumb fz24 fw-500 py-3">
+                    <div class="d-flex align-items-center">
+                        <!-- <i class="mdi mdi-arrow-left"></i> -->
+                        <span>Wecome to Publisher Dashboard</span>
+                    </div>
+                </div>
+                <div class="right-menu dropdown">
+                    <a href="javascript:void(0)" class="account-menu d-flex align-items-center dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div class="avater">
+                            <img src="http://via.placeholder.com/48x48" alt="">
+                        </div>
+                        <div class="acc-name">Publisher</div>
+
+                        <button class="dropdown-icon">
+                            <i class="mdi mdi-menu-down"></i>
+                        </button>
+
+                    </a>
+                    <div class="dropdown-menu mt-1" aria-labelledby="dropdownMenuButton">
+                        <ul>
+                            <li><a href="accountSettings.html">Account Settings</a></li>
+                            <li><a href="index2.html">Advertiser Dashboard</a></li>
+                            <li><a href="">বাংলা ভাষা নির্বাচন</a></li>
+                            <li><a href="">Take a Tour</a></li>
+                            <li><a href="login.html">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+
+            <div class="d-card">
+                <div class="user-wrapper">
+                    <h2 class="fz24 fw-500 mb-3">Add New Place for Advertise</h2>
+
+                    <p class="fz12 gray-color">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                        Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown.</p>
+
+                    <div class="user_btn mt-4">
+                        <a href="placeAddDetails.html" class="rs-btn rs-btn-lg rs-btn-primary uppercase fz20"><span
+                    class="mdi mdi-plus-thick"></span>
+                            Add
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="ra-data-table-bg p-3  mt-2 mt-md-5 border-radius-8 ra-property-list dashbaord-main">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="property-data-table-head mb-2">
+                            <h2 class="fw-500 fz24">List of Ad Places</h2>
+
+                            <div class="propert-header-right">
+                                <fieldset class="rs-form mr-2">
+                                    <select class="ra-select min-height-40 form-width fw-700 fz16">
+                                        <option class="fz18 fw-500" value="bangladesh" selected>All Properties</option>
+                                        <option class="fz18 fw-500" value="saudi arabia">Saudi Arabia</option>
+                                        <option class="fz18 fw-500" value="us">Uinited State Of America</option>
+                                        <option class="fz18 fw-500" value="india">India</option>
+                                    </select>
+                                </fieldset>
+                                <form action="" class="rs-form">
+                                    <button type="submit" class="position-absolute ra-search-label" for="searchInput">
+                                        <img src="assets/images/icons/search.svg" alt="Search Icon">
+                                    </button>
+                                    <input type="search" class="rs-input min-height-48 pr-5" id="searchInput" placeholder="enter ad place name">
+                                </form>
+                            </div>
+                        </div>
+                        <div class="dataTable table-responsive">
+
+                            <!-- 
+    Bootstrap Table all class name: table table-striped table-hover table-bordered  table-borderless table-sm
+ -->
+
+                            <table id="placesDataTable" class="property-table table table-striped table-hover" style="width:100%">
+                                <thead class="ra-table-head">
+                                    <tr class="table-header-height-for-34">
+                                        <th>Ad Place</th>
+                                        <th>Property Name</th>
+                                        <th>Size</th>
+                                        <th>Request</th>
+                                        <th>Impressions</th>
+                                        <th>Fill Rate</th>
+                                        <th>Clicks</th>
+                                        <th>CTR</th>
+                                        <th>Revenue</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    <tr>
+                                        <td>AdPlaceName 1</td>
+                                        <td>PropertyName 1</td>
+                                        <td>300x250</td>
+                                        <td>1,625,790,161</td>
+                                        <td>856,651,740</td>
+                                        <td>85.29%</td>
+                                        <td>148,673</td>
+                                        <td>5.5%</td>
+                                        <td>৳ 1,702,908</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>AdPlaceName 1</td>
+                                        <td>PropertyName 1</td>
+                                        <td>300x250</td>
+                                        <td>1,625,790,161</td>
+                                        <td>856,651,740</td>
+                                        <td>85.29%</td>
+                                        <td>148,673</td>
+                                        <td>5.5%</td>
+                                        <td>৳ 1,702,908</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>AdPlaceName 1</td>
+                                        <td>PropertyName 1</td>
+                                        <td>300x250</td>
+                                        <td>1,625,790,161</td>
+                                        <td>856,651,740</td>
+                                        <td>85.29%</td>
+                                        <td>148,673</td>
+                                        <td>5.5%</td>
+                                        <td>৳ 1,702,908</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>AdPlaceName 1</td>
+                                        <td>PropertyName 1</td>
+                                        <td>300x250</td>
+                                        <td>1,625,790,161</td>
+                                        <td>856,651,740</td>
+                                        <td>85.29%</td>
+                                        <td>148,673</td>
+                                        <td>5.5%</td>
+                                        <td>৳ 1,702,908</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>AdPlaceName 1</td>
+                                        <td>PropertyName 1</td>
+                                        <td>300x250</td>
+                                        <td>1,625,790,161</td>
+                                        <td>856,651,740</td>
+                                        <td>85.29%</td>
+                                        <td>148,673</td>
+                                        <td>5.5%</td>
+                                        <td>৳ 1,702,908</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>AdPlaceName 1</td>
+                                        <td>PropertyName 1</td>
+                                        <td>300x250</td>
+                                        <td>1,625,790,161</td>
+                                        <td>856,651,740</td>
+                                        <td>85.29%</td>
+                                        <td>148,673</td>
+                                        <td>5.5%</td>
+                                        <td>৳ 1,702,908</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>AdPlaceName 1</td>
+                                        <td>PropertyName 1</td>
+                                        <td>300x250</td>
+                                        <td>1,625,790,161</td>
+                                        <td>856,651,740</td>
+                                        <td>85.29%</td>
+                                        <td>148,673</td>
+                                        <td>5.5%</td>
+                                        <td>৳ 1,702,908</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>AdPlaceName 1</td>
+                                        <td>PropertyName 1</td>
+                                        <td>300x250</td>
+                                        <td>1,625,790,161</td>
+                                        <td>856,651,740</td>
+                                        <td>85.29%</td>
+                                        <td>148,673</td>
+                                        <td>5.5%</td>
+                                        <td>৳ 1,702,908</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>AdPlaceName 1</td>
+                                        <td>PropertyName 1</td>
+                                        <td>300x250</td>
+                                        <td>1,625,790,161</td>
+                                        <td>856,651,740</td>
+                                        <td>85.29%</td>
+                                        <td>148,673</td>
+                                        <td>5.5%</td>
+                                        <td>৳ 1,702,908</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>AdPlaceName 1</td>
+                                        <td>PropertyName 1</td>
+                                        <td>300x250</td>
+                                        <td>1,625,790,161</td>
+                                        <td>856,651,740</td>
+                                        <td>85.29%</td>
+                                        <td>148,673</td>
+                                        <td>5.5%</td>
+                                        <td>৳ 1,702,908</td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- build:js assets/js/vendor.min.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- Bootstrap Table Js Link -->
+    <script src="https://unpkg.com/bootstrap-table@1.18.1/dist/bootstrap-table.min.js"></script>
+    <!-- <script type="text/javascript" src="assets/vendor/aos/js/aos.js"></script> -->
+    <!-- endbuild -->
+    <script type="text/javascript" src="assets/js/script.js"></script>
+
+</body>
+
+</html>

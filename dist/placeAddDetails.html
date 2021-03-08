@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G&R</title>
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/jpg">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
+    <!-- Bootstrap Table Css Link -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.18.1/dist/bootstrap-table.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css">
+
+    <!-- build:css assets/css/all.min.css -->
+    <link rel="stylesheet" href="assets/css/vendor.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- endbuild -->
+    <script type="text/javascript" src="assets/vendor/jQuery/jquery.min.js"></script>
+</head>
+
+<body class="preloader">
+    <div class="d-flex">
+        <section class="sidebar-menu scrollbar">
+            <div class="menu-toggler">
+                <i class="mdi mdi-menu"></i>
+            </div>
+            <div class="site-logo">
+                <a class="d-block" href="/">
+                    <img src="assets/images/logo.svg" alt="G&R">
+                </a>
+            </div>
+            <div class="menu-area">
+                <ul>
+                    <li class="active"><a href="/"><img class="icon" src="assets/images/icons/dashboard.svg" alt=""> Dashboard</a></li>
+                    <li><a href="properties.html"><img class="icon" src="assets/images/icons/ad-properties.svg" alt="">Properties</a></li>
+                    <li><a href="placesAllAdded.html"><img class="icon" src="assets/images/icons/adplace.svg" alt="">Ad Place</a></li>
+
+                    <li>
+                        <a href="#report-sidebar-menu" data-toggle="collapse">
+                            <img class="icon" src="assets/images/icons/report.svg" alt="">Report
+                        </a>
+                        <div id="report-sidebar-menu" class="collapse">
+                            <ul>
+                                <li><a href="overview.html">Overview</a></li>
+                                <li><a href="location.html">Location</a></li>
+                                <li><a href="revenue.html">Revenue</a></li>
+                                <li><a href="technology.html">Technology</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="#payment-sidebar-menu" data-toggle="collapse"><img class="icon" src="assets/images/icons/money.svg" alt="">Payments</a>
+                        <div id="payment-sidebar-menu" class="collapse">
+                            <ul>
+                                <li><a href="estimatedRevenuePage.html">Estimated Revennue</a></li>
+                                <li><a href="finilizedPayment.html">Finilized Payments</a></li>
+                                <li><a href="balance.html">Balance</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#settings-sidebar-menu" data-toggle="collapse">
+                            <img class="icon" src="assets/images/icons/settings.svg" alt="">Settings
+                        </a>
+                        <div id="settings-sidebar-menu" class="collapse">
+                            <ul>
+                                <li><a href="accountSettings.html">Account Settings</a></li>
+                                <li><a href="users.html">Users</a></li>
+                                <li><a href="activityLogPage.html">Activity Log</a></li>
+                                <li><a href="login.html">Logout</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <main class="dashboard-main">
+            <header class="topbar sticky-top d-flex justify-content-between align-items-center">
+                <div class="breadcumb fz24 fw-500 py-3">
+                    <div class="d-flex align-items-center">
+                        <!-- <i class="mdi mdi-arrow-left"></i> -->
+                        <span>Wecome to Publisher Dashboard</span>
+                    </div>
+                </div>
+                <div class="right-menu dropdown">
+                    <a href="javascript:void(0)" class="account-menu d-flex align-items-center dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div class="avater">
+                            <img src="http://via.placeholder.com/48x48" alt="">
+                        </div>
+                        <div class="acc-name">Publisher</div>
+
+                        <button class="dropdown-icon">
+                            <i class="mdi mdi-menu-down"></i>
+                        </button>
+
+                    </a>
+                    <div class="dropdown-menu mt-1" aria-labelledby="dropdownMenuButton">
+                        <ul>
+                            <li><a href="accountSettings.html">Account Settings</a></li>
+                            <li><a href="index2.html">Advertiser Dashboard</a></li>
+                            <li><a href="">বাংলা ভাষা নির্বাচন</a></li>
+                            <li><a href="">Take a Tour</a></li>
+                            <li><a href="login.html">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Add Place Details Page -->
+
+            <div class="d-card mb-5">
+                <div class="location-info">
+                    <div class="row ">
+                        <div class="col">
+                            <p class="fz24 fw-500 mb-3">AdPlaceName 1</p>
+                        </div>
+                        <div class="col d-flex justify-content-end align-items-center">
+                            <p class="fz12 gray-color">Est. m/m Growth</p>
+                            <div class="ra-property-details-head d-flex align-items-center">
+                                <p class="fz24 pl-3 pr-2 fw-700">36.5%</p>
+                                <span class="mdi mdi-menu-up green-color fz44"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <p class="fz12 gray-color mb-1">ID</p>
+                            <div class="d-flex align-items-center">
+                                <p class="fz14 fw-500">88876</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <p class="fz12 gray-color mb-1">Property Name</p>
+                            <div class="d-flex align-items-center">
+                                <p class="fz14 fw-500">PropertyName</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <p class="fz12 gray-color mb-1">Property Type</p>
+                            <div class="d-flex align-items-center">
+                                <p class="fz14 fw-500">Website</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <p class="fz12 gray-color mb-1">Request</p>
+                            <div class="d-flex align-items-center">
+                                <p class="fz14 fw-500">1,625,790,161</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <p class="fz12 gray-color mb-1">Impressions</p>
+                            <div class="d-flex align-items-center">
+                                <p class="fz14 fw-500">1,625,790,161</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <p class="fz12 gray-color mb-1">Fill Rate</p>
+                            <div class="d-flex align-items-center">
+                                <p class="fz14 fw-500">85.29%</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <p class="fz12 gray-color mb-1">Clicks</p>
+                            <div class="d-flex align-items-center">
+                                <p class="fz14 fw-500">148,673</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <p class="fz12 gray-color mb-1">Revenue</p>
+                            <div class="d-flex align-items-center">
+                                <p class="fz14 fw-500">৳ 1,702,908</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="proper-button-wrapper d-flex mt-4">
+                        <div class="user_btn mr-2">
+                            <a href="javascript:void(0)" class="rs-btn rs-btn-lg rs-btn-primary uppercase fz20">Get Code</a>
+                        </div>
+
+                        <div class="user_btn mr-2">
+                            <a href="javascript:void(0)" class="rs-btn rs-btn-lg uppercase fz20">Reports</a>
+                        </div>
+
+                        <div class="user_btn mr-2">
+                            <button data-target="#placeEditModal" data-toggle="modal" class="rs-btn rs-btn-lg uppercase fz20">edit</button>
+                        </div>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="placeEditModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg" role="document">
+                                <div class="modal-content p-xl-5 p-lg-3 p-md-1 changePasswordModal-content">
+                                    <form action="">
+                                        <div class="modal-header border-bottom-0">
+                                            <h5 class="modal-title" id="exampleModalLabel">Edit Ad Place</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span class="mdi mdi-close" aria-hidden="true"></span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body pb-5">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <fieldset class="rs-form mb-2">
+                                                        <label for="editName" class="rs-label fz10">Edit Ad Place Name</label>
+                                                        <input type="text" class="rs-input fw-500 fz18" value="Ad Place Name">
+                                                    </fieldset>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex mt-3">
+                                                <button href="propertyDetailsPage.html" type="submit" class="rs-btn rs-btn-primary rs-btn-lg uppercase mr-3">Update</button>
+                                            </div>
+
+                                            <div class="guide-line fw-500 mt-5">
+                                                Need Help? Visit here <a href="#" class="ra-primary-color fw-700">Guideline</a>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- build:js assets/js/vendor.min.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- Bootstrap Table Js Link -->
+    <script src="https://unpkg.com/bootstrap-table@1.18.1/dist/bootstrap-table.min.js"></script>
+    <!-- <script type="text/javascript" src="assets/vendor/aos/js/aos.js"></script> -->
+    <!-- endbuild -->
+    <script type="text/javascript" src="assets/js/script.js"></script>
+
+</body>
+
+</html>
