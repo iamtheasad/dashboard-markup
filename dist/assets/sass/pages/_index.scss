@@ -56,9 +56,10 @@
 
   @media(max-width: 575px) {
     .nav-item {
-      border: 1px solid $white;
+      border-right: 1px solid $white;
     }
-    .nav-item:last-child {
+
+    .nav-item:last-child{
       border-right: none;
     }
   }
