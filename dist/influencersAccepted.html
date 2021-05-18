@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G&R</title>
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/jpg">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
+    <!-- Bootstrap Table Css Link -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.18.1/dist/bootstrap-table.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css">
+
+    <!-- build:css assets/css/all.min.css -->
+    <link rel="stylesheet" href="assets/css/vendor.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- endbuild -->
+    <script type="text/javascript" src="assets/vendor/jQuery/jquery.min.js"></script>
+</head>
+
+<body class="preloader">
+    <div class="d-flex">
+        <section class="sidebar-menu scrollbar">
+            <div class="menu-toggler">
+                <i class="mdi mdi-menu"></i>
+            </div>
+            <div class="site-logo">
+                <a class="d-block" href="/">
+                    <img src="assets/images/logo.svg" alt="G&R">
+                </a>
+            </div>
+            <div class="menu-area">
+                <ul>
+                    <li class="active"><a href="/"><img class="icon" src="assets/images/icons/dashboard.svg" alt=""> Dashboard</a></li>
+                    <li><a href="properties.html"><img class="icon" src="assets/images/icons/ad-properties.svg" alt="">Properties</a></li>
+                    <li><a href="Influncers.html"><img class="icon" src="assets/images/icons/influencer.svg" alt="">Influncers</a></li>
+                    <li><a href="placesAllAdded.html"><img class="icon" src="assets/images/icons/adplace.svg" alt="">Ad Place</a></li>
+
+                    <li>
+                        <a href="#report-sidebar-menu" data-toggle="collapse">
+                            <img class="icon" src="assets/images/icons/report.svg" alt="">Report
+                        </a>
+                        <div id="report-sidebar-menu" class="collapse">
+                            <ul>
+                                <li><a href="overview.html">Overview</a></li>
+                                <li><a href="location.html">Location</a></li>
+                                <li><a href="revenue.html">Revenue</a></li>
+                                <li><a href="technology.html">Technology</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="#payment-sidebar-menu" data-toggle="collapse"><img class="icon" src="assets/images/icons/money.svg" alt="">Payments</a>
+                        <div id="payment-sidebar-menu" class="collapse">
+                            <ul>
+                                <li><a href="estimatedRevenuePage.html">Estimated Revennue</a></li>
+                                <li><a href="finilizedPayment.html">Finilized Payments</a></li>
+                                <li><a href="balance.html">Balance</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#settings-sidebar-menu" data-toggle="collapse">
+                            <img class="icon" src="assets/images/icons/settings.svg" alt="">Settings
+                        </a>
+                        <div id="settings-sidebar-menu" class="collapse">
+                            <ul>
+                                <li><a href="accountSettings.html">Account Settings</a></li>
+                                <li><a href="users.html">Users</a></li>
+                                <li><a href="activityLogPage.html">Activity Log</a></li>
+                                <li><a href="login.html">Logout</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <main class="dashboard-main">
+            <header class="topbar sticky-top d-flex justify-content-between align-items-center">
+                <div class="breadcumb fz24 fw-500 py-3">
+                    <div class="d-flex align-items-center">
+                        <!-- <i class="mdi mdi-arrow-left"></i> -->
+                        <span>Wecome to Publisher Dashboard</span>
+                    </div>
+                </div>
+                <div class="right-menu dropdown">
+                    <a href="javascript:void(0)" class="account-menu d-flex align-items-center dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div class="avater">
+                            <img src="http://via.placeholder.com/48x48" alt="">
+                        </div>
+                        <div class="acc-name">Publisher</div>
+
+                        <button class="dropdown-icon">
+                            <i class="mdi mdi-menu-down"></i>
+                        </button>
+
+                    </a>
+                    <div class="dropdown-menu mt-1" aria-labelledby="dropdownMenuButton">
+                        <ul>
+                            <li><a href="accountSettings.html">Account Settings</a></li>
+                            <li><a href="index2.html">Advertiser Dashboard</a></li>
+                            <li><a href="">বাংলা ভাষা নির্বাচন</a></li>
+                            <li><a href="">Take a Tour</a></li>
+                            <li><a href="login.html">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+
+            <div class="user-wrapper">
+                <h2 class="fz24 fw-500 mb-3">ShareTrip: Save Travel Repeat</h2>
+
+                <p class="fz18 fw-500 mb-2 mb-4" style="color: #FFC700; border: 1px solid #FFC700; display:inline-block; padding: 5px 10px; border-radius: 200px;">
+                    Inactive</p>
+                <p class="fz18 fw-500 mb-2 mb-4" style="color: #4A6DFF; border: 1px solid #4A6DFF; display:inline-block; padding: 5px 10px; border-radius: 200px;">
+                    Accepted by Influencer</p>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+
+                    <div class="row mt-2">
+                        <div class="col-md-6">
+                            <h3 class="fz16 fw-500 mb-2">Influencer</h3>
+
+                            <div class="radio-group pr-3 pl-3 pb-2 pt-2 ra-border border-radius-8 influenc-radio-group mb-md-4 mb-1">
+                                <div class="rs-checkbox d-flex align-items-center">
+                                    <input type="checkbox" name="" class="rs-checkbox-input" id="influencer-1">
+                                    <a href="#" class="fz16 user_img d-flex align-items-center" for="influencer-1">
+                                        <div class="influencer-user table-row-bg-color">
+                                            <img src="assets/images/icons/user.svg" alt="Icon">
+                                        </div>
+
+                                        <div class="d-flex flex-column pl-3">
+                                            <h4 class="fz20 fw-500 mb-2">Fahad Abdullah</h4>
+                                            <div class="d-flex">
+                                                <p class="fw-400 fz14">Gender: <span class="fw-700 pr-4">Male</span></p>
+                                                <p class="fw-400 fz14">Budget: <span class="fw-700">৳ 50,000</span></p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <h3 class="fz12 fw-400 mb-1 mb-md-2">Campaign Info</h3>
+                            <span class="fz16 fw-500 mb-1 mb-md-2">ShareTrip: Save Travel Repeat</span>
+                            <p class="fz14 fw-400 mb-1 mb-md-2">Platform: <span class="fz16 fw-500">Youtube</span></p>
+                            <p class="fz14 fw-400 mb-1 mb-md-2">Post Type: <span class="fz16 fw-500">Video</span></p>
+                            <p class="fz14 fw-400 mb-1 mb-md-2">Requested Budget: <span class="fz16 fw-500">৳ 50,000</span></p>
+                            <a href="#" class="fz16 fw-500 mb-1 mb-md-2"><span class="mdi mdi-play"></span> Video Link</a>
+
+                            <h3 class="fz14 fw-400 mb-1 mb-md-2">Campaign Text:</h3>
+                            <p class="fz14 fw-400">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+                                into electronic typesetting, remaining essentially unchanged
+                            </p>
+
+                            <div class="d-flex justify-content-between mt-2 mt-md-5 mb-3 mb-md-5">
+                                <a href="campaignDetails.html" class="rs-btn rs-btn-secondary rs-btn-lg uppercase mr-3 process-Payment-Modal-color-3"><img src="assets/images/icons/edit.svg" style="width:30px; padding-right: 5px;" alt="Icon"> Edit
+                                    Campaign</a>
+                            </div>
+
+                            <form action="" class="mt-2 mt-md-4">
+                                <div class="p-3 border-radius-8" style="border: 1px solid #D1D1D6">
+                                    <h3 class="fz12 fw-400 mb-2 mb-md-3">Budgget</h3>
+
+                                    <fieldset class="rs-form influInput w-100" style="padding">
+                                        <label class="rs-label influencer-label">Reqquested Budget</label>
+                                        <input type="text" class="rs-input fw-500 fz18">
+                                        <p class="fz12 fw-400 gray-color mb-2 mb-md-4">Your cost: 2500 + 10% = 2750</p>
+                                    </fieldset>
+
+                                    <a href="campaignDetails.html" class="rs-btn rs-btn-secondary rs-btn-lg uppercase process-Payment-Modal-color-3" style="display: inline-block; background-color: #f5f5f5 !important">Update Budget</a>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-md-6">
+                            <h3 class="fz16 fw-500 mb-2">Comments</h3>
+
+                            <div class="ra-border mb-2 mb-md-4" style="background-color: #FAFAFA; padding: 16px; border-radius: 8px;">
+                                <a href="#" class="fz16 user_img d-flex align-items-center mb-2 mb-md-3" for="influencer-1">
+                                    <div class="influencer-user table-row-bg-color">
+                                        <img src="assets/images/icons/user.svg" alt="Icon">
+                                    </div>
+
+                                    <div class="d-flex flex-column pl-3">
+                                        <h4 class="fz20 fw-500 mb-2">Fahad Abdullah</h4>
+                                        <div class="d-flex">
+                                            <span class="fw-400 fz14 dark-gray">12:08 PM, 1st Apr 2021</span>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <div class="influ-bottom">
+                                    <p class="fz14 fw-400">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                        Lorem Ipsum has been the industry's standard dummy.</p>
+                                </div>
+                            </div>
+                            <div class="ra-border mb-2 mb-md-4" style="background-color: #FAFAFA; padding: 16px; border-radius: 8px;">
+                                <a href="#" class="fz16 user_img d-flex align-items-center mb-2 mb-md-3" for="influencer-1">
+                                    <div class="influencer-user table-row-bg-color">
+                                        <img src="assets/images/icons/user.svg" alt="Icon">
+                                    </div>
+
+                                    <div class="d-flex flex-column pl-3">
+                                        <h4 class="fz20 fw-500 mb-2">Fahad Abdullah</h4>
+                                        <div class="d-flex">
+                                            <span class="fw-400 fz14 dark-gray">12:08 PM, 1st Apr 2021</span>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <div class="influ-bottom">
+                                    <p class="fz14 fw-400">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                        Lorem Ipsum has been the industry's standard dummy.</p>
+                                </div>
+                            </div>
+                            <div class="ra-border mb-2 mb-md-4" style="background-color: #FAFAFA; padding: 16px; border-radius: 8px;">
+                                <a href="#" class="fz16 user_img d-flex align-items-center mb-2 mb-md-3" for="influencer-1">
+                                    <div class="influencer-user table-row-bg-color">
+                                        <img src="assets/images/icons/user.svg" alt="Icon">
+                                    </div>
+
+                                    <div class="d-flex flex-column pl-3">
+                                        <h4 class="fz20 fw-500 mb-2">Fahad Abdullah</h4>
+                                        <div class="d-flex">
+                                            <span class="fw-400 fz14 dark-gray">12:08 PM, 1st Apr 2021</span>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <div class="influ-bottom">
+                                    <p class="fz14 fw-400">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                        Lorem Ipsum has been the industry's standard dummy.</p>
+                                </div>
+                            </div>
+
+                            <div class="influTextarea">
+                                <textarea name="" class="influTextPlaceholder fz18" style="width: 100%; height: 56px;" placeholder="Your comment here"></textarea>
+                                <span class="mdi mdi-arrow-right influActiveArrow"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- build:js assets/js/vendor.min.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- Bootstrap Table Js Link -->
+    <script src="https://unpkg.com/bootstrap-table@1.18.1/dist/bootstrap-table.min.js"></script>
+    <!-- <script type="text/javascript" src="assets/vendor/aos/js/aos.js"></script> -->
+    <!-- endbuild -->
+    <script type="text/javascript" src="assets/js/script.js"></script>
+
+</body>
+
+</html>
