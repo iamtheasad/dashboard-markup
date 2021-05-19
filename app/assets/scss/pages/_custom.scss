@@ -206,6 +206,25 @@
 }
 
 /***********************************
+// Influencer All
+**************************************/
+.influencer-top {
+  width: 50%;
+
+  @media (max-width: 992px) {
+    width: 100%;
+  }
+}
+
+.influencer-arrow {
+  color: #475364;
+}
+
+.influencer-name {
+  
+}
+
+/***********************************
 // Influencer Progress Bar
 **************************************/
 %remain-steps {
