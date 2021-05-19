@@ -220,10 +220,6 @@
   color: #475364;
 }
 
-.influencer-name {
-  
-}
-
 /***********************************
 // Influencer Progress Bar
 **************************************/
@@ -240,6 +236,11 @@
   display: table;
   table-layout: fixed;
   width: 100%;
+
+  @media (max-width: 521px) {
+    display: none;
+  }
+
   > li {
     text-align: center;
     display: table-cell;
@@ -247,6 +248,10 @@
     color: $primaryColor;
     font-weight: 700;
     font-size: rem(20px);
+
+    @media (max-width: 768px) {
+      font-size: rem(12px);
+    }
 
     &:after {
       content: "";
@@ -256,6 +261,10 @@
       position: absolute;
       top: 40px;
       left: 50%;
+
+      @media (max-width: 768px) {
+        top: 30px;
+      }
     }
     &:last-child {
       &:after {
