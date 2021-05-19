@@ -223,6 +223,12 @@
 /***********************************
 // Influencer Progress Bar
 **************************************/
+.user-wrapper {
+  @media (max-width: 521px) {
+    margin-top: -5px !important;
+  }
+}
+
 %remain-steps {
   &:before {
     font-family: inherit;
