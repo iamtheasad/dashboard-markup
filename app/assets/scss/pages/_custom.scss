@@ -204,3 +204,60 @@
 .border-bottom-1:last-child {
   border-bottom: 1px solid transparent;
 }
+
+/***********************************
+// Influencer Progress Bar
+**************************************/
+%remain-steps {
+  &:before {
+    font-family: inherit;
+    font-weight: 700;
+  }
+  &:after {
+    background-color: $grey-light;
+  }
+}
+.multi-steps {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  > li {
+    text-align: center;
+    display: table-cell;
+    position: relative;
+    color: $primaryColor;
+    font-weight: 700;
+    font-size: rem(20px);
+
+    &:after {
+      content: "";
+      height: 8px;
+      width: 100%;
+      background-color: $primaryColor;
+      position: absolute;
+      top: 40px;
+      left: 50%;
+    }
+    &:last-child {
+      &:after {
+        display: none;
+      }
+    }
+
+    &.is-active {
+      @extend %remain-steps;
+      &:before {
+        border-color: $primaryColor;
+      }
+
+      ~ li {
+        color: $paymentInputColor3;
+        @extend %remain-steps;
+        &:before {
+          background-color: $grey-light;
+          border-color: $grey-light;
+        }
+      }
+    }
+  }
+}

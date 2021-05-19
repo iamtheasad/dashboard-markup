@@ -109,7 +109,18 @@
                 </div>
             </header>
 
-            <div class="user-wrapper">
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="list-unstyled multi-steps mt-1 mt-md-3 mb-md-5 mb-4">
+                        <li>Search Influencer</li>
+                        <li>Select Influencer</li>
+                        <li class="is-active">Details</li>
+                        <li>Publish</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="user-wrapper mt-4 mb-2 mb-md-4">
                 <h2 class="fz24 fw-500 mb-3">Enter Campaign Details</h2>
 
                 <p class="fz12 fw-400 gray-color mb-1 mb-md-3">Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -157,9 +168,12 @@
                             </div>
 
                             <div class="col-md-12">
-                                <fieldset class="rs-form mb-md-4 mb-1 w-25">
-                                    <label for="editName" class="fz10 fw-400">Image</label>
-                                    <input type="file" class="rs-input b-none fz18 fw-500">
+                                <fieldset class="rs-form mb-md-4 mb-1 w-50">
+                                    <h5 class="fz10 fw-400 mb-1 mb-md-2 gray-color">Image</h5>
+                                    <label for="imgUpload" class="fz10 fw-400">
+                                        <span class="rs-btn rs-btn-secondary rs-btn-lg fz16 fw-700 uppercase">Choose Image</span>
+                                    </label>
+                                    <input type="file" id="imgUpload" class="rs-input b-none fz18 fw-500 d-none">
                                 </fieldset>
                             </div>
 
