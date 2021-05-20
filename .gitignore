@@ -1,9 +1,9 @@
 node_modules/
 
 .idea
+.idea/
 .vscode
 
 debug.log
 package-lock.json
 yarn.lock
-.idea

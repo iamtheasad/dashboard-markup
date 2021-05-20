@@ -201,6 +201,7 @@
 .border-bottom-1 {
   border-bottom: 1px solid $tableRowColor;
 }
+
 .border-bottom-1:last-child {
   border-bottom: 1px solid transparent;
 }
@@ -231,76 +232,51 @@
 /***********************************
 // Influencer Progress Bar
 **************************************/
-.user-wrapper {
-  @media (max-width: 521px) {
-    margin-top: -5px !important;
-  }
-}
-
-%remain-steps {
-  &:before {
-    font-family: inherit;
-    font-weight: 700;
-  }
-  &:after {
-    background-color: $grey-light;
-  }
-}
-.multi-steps {
-  display: table;
-  table-layout: fixed;
-  width: 100%;
-
-  @media (max-width: 521px) {
-    display: none;
-  }
-
-  > li {
-    text-align: center;
-    display: table-cell;
+.influencer-step-form{
+  .step-menu{
     position: relative;
-    color: $primaryColor;
-    font-weight: 700;
-    font-size: rem(20px);
+    padding-bottom: 16px;
 
-    @media (max-width: 768px) {
-      font-size: rem(12px);
-    }
-
-
-
-    &:after {
-      content: "";
-      height: 8px;
-      width: 100%;
-      background-color: $primaryColor;
+    .progress-bar{
       position: absolute;
-      top: 40px;
-      left: 50%;
+      width: 100%;
+      background-color: #EFEFF4;
+      height: 8px;
+      border-radius: 20px;
+      left: 0;
+      bottom: 0;  
 
-      @media (max-width: 768px) {
-        top: 30px;
+      & > span{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 32px;
+        height: 100%;
+        background-color: #475364;
+        border-radius: 20px;
+        transition: width .3s ease-in-out;
       }
     }
-    &:last-child {
-      &:after {
-        display: none;
-      }
-    }
-
-    &.is-active {
-      @extend %remain-steps;
-      &:before {
-        border-color: $primaryColor;
-      }
-
-      ~ li {
-        color: $paymentInputColor3;
-        @extend %remain-steps;
-        &:before {
-          background-color: $grey-light;
-          border-color: $grey-light;
+    ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      li{
+        font-size: rem(20);
+        color: #8E8E93;
+        font-weight: 500;
+        &.stepped {
+          color: #475364;
         }
+      }
+    }
+  }
+
+  .step-content{
+    .step{
+      display: none;
+      &.show {
+        display: block;
       }
     }
   }

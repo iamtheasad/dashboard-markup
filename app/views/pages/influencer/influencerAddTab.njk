@@ -1,0 +1,37 @@
+{% set base = "../" %}
+{% extends "layouts/layout.njk" %}
+
+{% block content %}
+
+<div class="influencer-step-form">
+    <div class="step-menu mb-5">
+        <ul>
+            <li class="stepped" data-ref="influencer-step-1">Search Influencer</li>
+            <li data-ref="influencer-step-2">Select Influencer</li>
+            <li data-ref="influencer-step-3">Details</li>
+            <li data-ref="influencer-step-4">Publish</li>
+        </ul>
+        <div class="progress-bar"><span></span></div>
+    </div>
+
+    <div class="step-content">
+        <div class="step show" id="influencer-step-1">
+            {% include 'sections/influencer/influencerCriteria.html' %}
+        </div>
+        <div class="step" id="influencer-step-2">
+            {% include 'sections/influencer/selectInfluencer.html' %}
+        </div>
+        <div class="step" id="influencer-step-3">
+            {% include 'sections/influencer/campaignDetailsForm.html' %}
+        </div>
+        <div class="step" id="influencer-step-4">
+            {% include 'sections/influencer/influencerPublishConfirm.html' %}
+        </div>
+    </div>
+</div>
+
+
+
+
+
+{% endblock %}
