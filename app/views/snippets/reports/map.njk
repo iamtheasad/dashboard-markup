@@ -2,7 +2,7 @@
 <style>
   #ra-map {
     width: 100%;
-    height: 450px;
+    height: 500px;
   }
 </style>
 
@@ -67,6 +67,11 @@
 
   // Bind "fill" property to "fill" key in data
   polygonTemplate.propertyFields.fill = "fill";
+
+  polygonTemplate.events.on("hit", function(ev) {
+  ev.target.series.chart.zoomToMapObject(ev.target);
+})
+  chart.zoomControl = new am4maps.ZoomControl();
 </script>
 
 <!-- HTML -->
