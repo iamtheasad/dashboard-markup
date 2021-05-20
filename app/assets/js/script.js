@@ -119,6 +119,50 @@
         }
     }
 
+    function resetSteps(){
+        var menus = $('.influencer-step-form .step-menu ul li');
+        var steps = $('.influencer-step-form .step-content .step');
+
+        steps.each(function(){
+            $(this).removeClass('show');
+        })
+
+    }
+
+    function influencerStepForm() {
+        var stepTab = $('.influencer-step-form');
+
+        if(stepTab.length){
+            var form_1 = $('#influencer-form-1');
+            var form_2 = $('#influencer-form-2');
+            var form_3 = $('#influencer-form-3');
+            var form_4 = $('#influencer-form-1');
+
+            form_1.on('submit', function(e) {
+                e.preventDefault();
+                resetSteps();
+                $('#influencer-step-2').addClass('show');
+                $('[data-ref="influencer-step-2"]').addClass('stepped');
+                $('.influencer-step-form .progress-bar>span').css({"width": 37.5+"%"});
+            })
+            form_2.on('submit', function(e) {
+                e.preventDefault();
+                resetSteps();
+                $('#influencer-step-3').addClass('show');
+                $('[data-ref="influencer-step-3"]').addClass('stepped');
+                $('.influencer-step-form .progress-bar>span').css({"width": 37.5*2+"%"});
+            })
+            form_3.on('submit', function(e) {
+                e.preventDefault();
+                resetSteps();
+                $('#influencer-step-4').addClass('show');
+                $('[data-ref="influencer-step-4"]').addClass('stepped');
+                $('.influencer-step-form .progress-bar>span').css({"width": 37.5*3+"%"});
+            })
+
+        }
+    }
+
     /*==========================================================================
         WHEN DOCUMENT LOADING
     ==========================================================================*/
@@ -147,6 +191,8 @@
         dataTable('#adSizeDataTable');
         dataTable('#positionDataTable');
         dataTable('#countriesDetailDataTable');
+
+        influencerStepForm();
 
         // will load on end
         pageLoader();
