@@ -38,7 +38,11 @@
 
   // Configure series
   var polygonTemplate = polygonSeries.mapPolygons.template;
-  polygonTemplate.tooltipText = "{name}:{value}";
+
+  // Dynamic Data for Impression or as 
+  // polygonTemplate.dataSource.url= 'http://www.example.com/data.json';
+
+  polygonTemplate.tooltipText = "{name} \n  Impression: {value}";
   polygonTemplate.fill = am4core.color("#74B266");
 
   // Create hover state and set alternative fill color
@@ -51,7 +55,6 @@
   // Add some data
   polygonSeries.data = [{
     "id": "US",
-    "name": "United States",
     "value": 100,
     "fill": am4core.color("#F05C5C")
   }, {
