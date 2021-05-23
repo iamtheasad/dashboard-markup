@@ -131,6 +131,13 @@
         }
     }
 
+    function getFileName(){
+        $(document).on('change', '.file-input', function(e) {
+            var fileName = e.target.files[0].name;
+            $(this).parents('.rs-form').find('.filename').text(fileName);
+        })
+    }
+
     function resetSteps(){
         var menus = $('.influencer-step-form .step-menu ul li');
         var steps = $('.influencer-step-form .step-content .step');
@@ -195,6 +202,7 @@
         inputAnimate();
         checkbox();
         menuToggler();
+        getFileName();
 
         dataTable('#propertyDataTable');
         dataTable('#propertyDetailsDataTable');
