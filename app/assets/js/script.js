@@ -60,6 +60,18 @@
         }
     }
 
+    function checkbox() {
+        $('.rs-checkbox-input').on('change', function(){
+            var input = $(this);
+            var wrapper = input.parents('.checkbox-group');
+            if(wrapper.hasClass('active')){
+                wrapper.removeClass('active')
+            }else {
+                wrapper.addClass('active')
+            }
+        })
+    }
+
     function menuHide() {
         $('main').removeClass('overlay');
         $('.sidebar-menu').removeClass('show');
@@ -181,6 +193,7 @@
     ==========================================================================*/
     $(window).on('load', function () {
         inputAnimate();
+        checkbox();
         menuToggler();
 
         dataTable('#propertyDataTable');
