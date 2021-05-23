@@ -145,6 +145,7 @@
                 $('[data-ref="influencer-step-2"]').addClass('stepped');
                 $('.influencer-step-form .progress-bar>span').css({"width": 37.5+"%"});
             })
+
             form_2.on('submit', function(e) {
                 e.preventDefault();
                 resetSteps();
@@ -152,12 +153,24 @@
                 $('[data-ref="influencer-step-3"]').addClass('stepped');
                 $('.influencer-step-form .progress-bar>span').css({"width": 37.5*2+"%"});
             })
+
             form_3.on('submit', function(e) {
                 e.preventDefault();
                 resetSteps();
                 $('#influencer-step-4').addClass('show');
                 $('[data-ref="influencer-step-4"]').addClass('stepped');
                 $('.influencer-step-form .progress-bar>span').css({"width": 37.5*3+"%"});
+            })
+
+            $('.step-back-btn').on('click', function(){
+                var href = $(this).attr('data-href');
+                var tab = $('#'+href);
+                var menu = $(`.step-menu [data-ref=${href}]`);
+                resetSteps();
+                $('.step-menu .stepped').last().removeClass('stepped');
+                var progressBar = $('.influencer-step-form .progress-bar>span');
+                progressBar.css({"width": (progressBar.width() / progressBar.parent().width() * 100 - 37.5)+"%"});
+                tab.addClass('show');
             })
 
         }
