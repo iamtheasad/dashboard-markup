@@ -242,7 +242,7 @@
       position: absolute;
       overflow: hidden;
       width: 100%;
-      background-color: #EFEFF4;
+      background-color: $grey-light;
       height: 8px;
       border-radius: 20px;
       left: 0;
@@ -254,7 +254,7 @@
         left: 0;
         min-width: 32px;
         height: 100%;
-        background-color: #475364;
+        background-color: $primaryColor;
         border-radius: 20px;
         transition: width .3s ease-in-out;
       }
@@ -269,7 +269,7 @@
         color: #8E8E93;
         font-weight: 500;
         &.stepped {
-          color: #475364;
+          color: $primaryColor;
         }
       }
     }

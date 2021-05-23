@@ -324,16 +324,9 @@ input[type="text"] {
 }
 
 .influencer-user {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background-color: $tableRowColor;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
   img {
     border-radius: 50%;
+    background-color: $tableRowColor;
   }
 }
 
