@@ -229,16 +229,22 @@
   }
 }
 
+.influClose {
+  position: absolute;
+  top: 3%;
+  left: 92%;
+}
+
 /***********************************
 // Influencer Progress Bar
 **************************************/
-.influencer-step-form{
-  .step-menu{
+.influencer-step-form {
+  .step-menu {
     position: relative;
     padding-bottom: 16px;
     overflow: hidden;
 
-    .progress-bar{
+    .progress-bar {
       position: absolute;
       overflow: hidden;
       width: 100%;
@@ -246,9 +252,9 @@
       height: 8px;
       border-radius: 20px;
       left: 0;
-      bottom: 0;  
+      bottom: 0;
 
-      & > span{
+      & > span {
         position: absolute;
         top: 0;
         left: 0;
@@ -256,7 +262,7 @@
         height: 100%;
         background-color: $primaryColor;
         border-radius: 20px;
-        transition: width .3s ease-in-out;
+        transition: width 0.3s ease-in-out;
       }
     }
 
@@ -264,9 +270,9 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      li{
+      li {
         font-size: rem(20);
-        color: #8E8E93;
+        color: #8e8e93;
         font-weight: 500;
         &.stepped {
           color: $primaryColor;
@@ -275,8 +281,8 @@
     }
   }
 
-  .step-content{
-    .step{
+  .step-content {
+    .step {
       display: none;
       &.show {
         display: block;
