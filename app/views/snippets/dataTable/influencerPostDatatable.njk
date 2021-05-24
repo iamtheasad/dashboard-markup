@@ -1,0 +1,31 @@
+{% block content %}
+
+<!-- 
+    Bootstrap Table all class name: table table-striped table-hover table-bordered  table-borderless table-sm
+ -->
+
+<table id="influencerPostDatatable" class="property-table table table-striped table-hover" style="width:100%">
+   <thead class="ra-table-head">
+      <tr class="table-header-height-for-34">
+         <th class="process-Payment-Modal-color-1 fw-700">Influencer Platform</th>
+         <th class="process-Payment-Modal-color-1 fw-500">Advertiser</th>
+         <th class="process-Payment-Modal-color-1 fw-500">Creation Date</th>
+         <th class="process-Payment-Modal-color-1 fw-500">Created By</th>
+         <th class="process-Payment-Modal-color-1 fw-500">Budget</th>
+         <th class="process-Payment-Modal-color-1 fw-500">Status</th>
+      </tr>
+   </thead>
+   <tbody>
+      {% for i in range(0, 5) %}
+      <tr>
+         <td class="fz16 fw-700 ra-primary-color"><a href="#" class="w-100 h-100">Instagram</a></td>
+         <td><a href="influencer/influencersActive.html">Rockstar Aman</a></td>
+         <td>Mar 25, 2021</td>
+         <td><a href="#">Magnificent Habibur Rahman</a></td>
+         <td>৳ 50,000</td>
+         <td>Active</td>
+      </tr>
+      {% endfor %}
+   </tbody>
+</table>
+{% endblock %}

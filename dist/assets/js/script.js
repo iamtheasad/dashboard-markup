@@ -227,6 +227,7 @@
         dataTable('#countriesDetailDataTable');
         dataTable('#influencerDataTable');
         dataTable('#influencerPlatformDataTable');
+        dataTable('#influencerPostDatatable');
 
         influencerStepForm();
 
