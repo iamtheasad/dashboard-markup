@@ -11,10 +11,12 @@
        <p class="fz12 fw-400 gray-color influencer-top mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown.</p>
 
        <div class="user_btn">
-           <button class="rs-btn rs-btn-lg rs-btn-primary uppercase fz20">
+           <button data-target="#addPlatformModal" data-toggle="modal" class="rs-btn rs-btn-lg rs-btn-primary uppercase fz20">
                <i class="mdi mdi-plus-thick pr-2"></i>Add Platform
            </button>
        </div>
+
+       {% include 'snippets/modals/influencerPlatform.njk' %}
    </div>
 </div>
 <div class="ra-data-table-bg p-3 pt-4 mt-2 mt-md-5 border-radius-8 ra-property-list dashbaord-main">

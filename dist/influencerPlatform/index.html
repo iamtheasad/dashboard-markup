@@ -134,9 +134,62 @@
                     <p class="fz12 fw-400 gray-color influencer-top mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown.</p>
 
                     <div class="user_btn">
-                        <button class="rs-btn rs-btn-lg rs-btn-primary uppercase fz20">
+                        <button data-target="#addPlatformModal" data-toggle="modal" class="rs-btn rs-btn-lg rs-btn-primary uppercase fz20">
                             <i class="mdi mdi-plus-thick pr-2"></i>Add Platform
                         </button>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="addPlatformModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content p-xl-5 p-lg-3 p-md-1">
+                                <form action="">
+                                    <div class="modal-header border-bottom-0">
+                                        <h5 class="modal-title" id="exampleModalLongTitle">Add New Influncer Platform</h5>
+                                        <button type="button" class="close influClose" data-dismiss="modal" aria-label="Close">
+                                            <span class="mdi mdi-close" aria-hidden="true"></span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body pb-5">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <fieldset class="rs-form mb-4 f44">
+                                                    <label for="editName" class="rs-label rs-select-editAccount fz10 fz10">Select Media</label>
+                                                    <select class="ra-select fz18 fw-500 w-100 editAccountSelect">
+                                                        <option value="Eastern Bank Ltd.">Facebook</option>
+                                                        <option value="Eastern Bank Ltd.">Twitter</option>
+                                                        <option value="Eastern Bank Ltd.">Instagram</option>
+                                                    </select>
+                                                </fieldset>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <fieldset class="rs-form mb-4 f44">
+                                                    <label for="editName" class="rs-label rs-select-editAccount fz10 fz10">Type</label>
+                                                    <select class="ra-select fz18 fw-500 w-100 editAccountSelect">
+                                                        <option value="Eastern Bank Ltd.">Post</option>
+                                                        <option value="Eastern Bank Ltd.">Bangla</option>
+                                                        <option value="Eastern Bank Ltd.">Arabic</option>
+                                                    </select>
+                                                </fieldset>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <fieldset class="rs-form mb-4 influInput">
+                                                    <label class="rs-label">Budget</label>
+                                                    <input type="text" class="rs-input fw-500 fz18">
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex mt-3">
+                                            <button type="submit" class="rs-btn rs-btn-primary rs-btn-lg uppercase mr-3">Add Platform</button>
+                                        </div>
+
+                                        <div class="guide-line fw-500 mt-5">
+                                            Need Help? Visit here <a href="#" class="ra-primary-color fw-700">Guideline</a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -163,7 +216,7 @@
     Bootstrap Table all class name: table table-striped table-hover table-bordered  table-borderless table-sm
  -->
 
-                            <table id="propertyDataTable" class="property-table table table-striped table-hover" style="width:100%">
+                            <table id="influencerPlatformDataTable" class="property-table table table-striped table-hover" style="width:100%">
                                 <thead class="ra-table-head">
                                     <tr class="table-header-height-for-34">
                                         <th class="process-Payment-Modal-color-1 fz12 fw-700">Media</th>
@@ -183,12 +236,67 @@
                                         <td>Mar 25, 2021</td>
                                         <td><a href="#">Habibur Rahman</a></td>
                                         <td>
-                                            <a href="influencer/influencersActive.html" class="rs-btn rs-btn-trans p-0 w-100 h-100 text-center fz16 fw-700 ra-primary-color d-flex align-items-center justify-content-center">
-                                                <p class="pr-1">EDIT</p>
-                                                <span>
-                  <img src="assets/images/icons/edit.svg" style="width: 24px" alt="Icon">
-               </span>
-                                            </a>
+                                            <div class="user_btn">
+                                                <button data-target="#addPlatformEdit-modal" data-toggle="modal" class="rs-btn rs-btn-trans p-0 w-100 h-100 text-center fz16 fw-700 ra-primary-color d-flex align-items-center justify-content-center">
+                                                    <p class="pr-1">EDIT</p>
+                                                    <span>
+                     <img src="assets/images/icons/edit.svg" style="width: 24px" alt="Icon">
+                  </span>
+                                                </button>
+                                            </div>
+
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="addPlatformEdit-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                                <div class="modal-dialog modal-lg" role="document">
+                                                    <div class="modal-content p-xl-5 p-lg-3 p-md-1">
+                                                        <form action="">
+                                                            <div class="modal-header border-bottom-0">
+                                                                <h5 class="modal-title" id="exampleModalLongTitle>Edit Influncer Platform</h5>
+                   <button type=" button" class="close influClose" data-dismiss="modal" aria-label="Close">
+                                                                    <span class="mdi mdi-close" aria-hidden="true"></span>
+                                                                    </button>
+                                                            </div>
+                                                            <div class="modal-body pb-5">
+                                                                <div class="row">
+                                                                    <div class="col-md-12">
+                                                                        <fieldset class="rs-form mb-4 f44">
+                                                                            <label for="editName" class="rs-label rs-select-editAccount fz10 fz10">Select Media</label>
+                                                                            <select class="ra-select fz18 fw-500 w-100 editAccountSelect">
+                                                                                <option value="Eastern Bank Ltd.">Facebook</option>
+                                                                                <option value="Eastern Bank Ltd.">Twitter</option>
+                                                                                <option value="Eastern Bank Ltd.">Instagram</option>
+                                                                            </select>
+                                                                        </fieldset>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <fieldset class="rs-form mb-4 f44">
+                                                                            <label for="editName" class="rs-label rs-select-editAccount fz10 fz10">Type</label>
+                                                                            <select class="ra-select fz18 fw-500 w-100 editAccountSelect">
+                                                                                <option value="Eastern Bank Ltd.">Post</option>
+                                                                                <option value="Eastern Bank Ltd.">Bangla</option>
+                                                                                <option value="Eastern Bank Ltd.">Arabic</option>
+                                                                            </select>
+                                                                        </fieldset>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <fieldset class="rs-form mb-4 influInput">
+                                                                            <label class="rs-label">Budget</label>
+                                                                            <input type="text" class="rs-input fw-500 fz18">
+                                                                        </fieldset>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="d-flex mt-3">
+                                                                    <button type="submit" class="rs-btn rs-btn-primary rs-btn-lg uppercase mr-3">Update</button>
+                                                                </div>
+
+                                                                <div class="guide-line fw-500 mt-5">
+                                                                    Need Help? Visit here <a href="#" class="ra-primary-color fw-700">Guideline</a>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </td>
                                     </tr>
 
@@ -199,12 +307,67 @@
                                         <td>Mar 25, 2021</td>
                                         <td><a href="#">Habibur Rahman</a></td>
                                         <td>
-                                            <a href="influencer/influencersActive.html" class="rs-btn rs-btn-trans p-0 w-100 h-100 text-center fz16 fw-700 ra-primary-color d-flex align-items-center justify-content-center">
-                                                <p class="pr-1">EDIT</p>
-                                                <span>
-                  <img src="assets/images/icons/edit.svg" style="width: 24px" alt="Icon">
-               </span>
-                                            </a>
+                                            <div class="user_btn">
+                                                <button data-target="#addPlatformEdit-modal" data-toggle="modal" class="rs-btn rs-btn-trans p-0 w-100 h-100 text-center fz16 fw-700 ra-primary-color d-flex align-items-center justify-content-center">
+                                                    <p class="pr-1">EDIT</p>
+                                                    <span>
+                     <img src="assets/images/icons/edit.svg" style="width: 24px" alt="Icon">
+                  </span>
+                                                </button>
+                                            </div>
+
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="addPlatformEdit-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                                <div class="modal-dialog modal-lg" role="document">
+                                                    <div class="modal-content p-xl-5 p-lg-3 p-md-1">
+                                                        <form action="">
+                                                            <div class="modal-header border-bottom-0">
+                                                                <h5 class="modal-title" id="exampleModalLongTitle>Edit Influncer Platform</h5>
+                   <button type=" button" class="close influClose" data-dismiss="modal" aria-label="Close">
+                                                                    <span class="mdi mdi-close" aria-hidden="true"></span>
+                                                                    </button>
+                                                            </div>
+                                                            <div class="modal-body pb-5">
+                                                                <div class="row">
+                                                                    <div class="col-md-12">
+                                                                        <fieldset class="rs-form mb-4 f44">
+                                                                            <label for="editName" class="rs-label rs-select-editAccount fz10 fz10">Select Media</label>
+                                                                            <select class="ra-select fz18 fw-500 w-100 editAccountSelect">
+                                                                                <option value="Eastern Bank Ltd.">Facebook</option>
+                                                                                <option value="Eastern Bank Ltd.">Twitter</option>
+                                                                                <option value="Eastern Bank Ltd.">Instagram</option>
+                                                                            </select>
+                                                                        </fieldset>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <fieldset class="rs-form mb-4 f44">
+                                                                            <label for="editName" class="rs-label rs-select-editAccount fz10 fz10">Type</label>
+                                                                            <select class="ra-select fz18 fw-500 w-100 editAccountSelect">
+                                                                                <option value="Eastern Bank Ltd.">Post</option>
+                                                                                <option value="Eastern Bank Ltd.">Bangla</option>
+                                                                                <option value="Eastern Bank Ltd.">Arabic</option>
+                                                                            </select>
+                                                                        </fieldset>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <fieldset class="rs-form mb-4 influInput">
+                                                                            <label class="rs-label">Budget</label>
+                                                                            <input type="text" class="rs-input fw-500 fz18">
+                                                                        </fieldset>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="d-flex mt-3">
+                                                                    <button type="submit" class="rs-btn rs-btn-primary rs-btn-lg uppercase mr-3">Update</button>
+                                                                </div>
+
+                                                                <div class="guide-line fw-500 mt-5">
+                                                                    Need Help? Visit here <a href="#" class="ra-primary-color fw-700">Guideline</a>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </td>
                                     </tr>
 
@@ -215,12 +378,67 @@
                                         <td>Mar 25, 2021</td>
                                         <td><a href="#">Habibur Rahman</a></td>
                                         <td>
-                                            <a href="influencer/influencersActive.html" class="rs-btn rs-btn-trans p-0 w-100 h-100 text-center fz16 fw-700 ra-primary-color d-flex align-items-center justify-content-center">
-                                                <p class="pr-1">EDIT</p>
-                                                <span>
-                  <img src="assets/images/icons/edit.svg" style="width: 24px" alt="Icon">
-               </span>
-                                            </a>
+                                            <div class="user_btn">
+                                                <button data-target="#addPlatformEdit-modal" data-toggle="modal" class="rs-btn rs-btn-trans p-0 w-100 h-100 text-center fz16 fw-700 ra-primary-color d-flex align-items-center justify-content-center">
+                                                    <p class="pr-1">EDIT</p>
+                                                    <span>
+                     <img src="assets/images/icons/edit.svg" style="width: 24px" alt="Icon">
+                  </span>
+                                                </button>
+                                            </div>
+
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="addPlatformEdit-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                                <div class="modal-dialog modal-lg" role="document">
+                                                    <div class="modal-content p-xl-5 p-lg-3 p-md-1">
+                                                        <form action="">
+                                                            <div class="modal-header border-bottom-0">
+                                                                <h5 class="modal-title" id="exampleModalLongTitle>Edit Influncer Platform</h5>
+                   <button type=" button" class="close influClose" data-dismiss="modal" aria-label="Close">
+                                                                    <span class="mdi mdi-close" aria-hidden="true"></span>
+                                                                    </button>
+                                                            </div>
+                                                            <div class="modal-body pb-5">
+                                                                <div class="row">
+                                                                    <div class="col-md-12">
+                                                                        <fieldset class="rs-form mb-4 f44">
+                                                                            <label for="editName" class="rs-label rs-select-editAccount fz10 fz10">Select Media</label>
+                                                                            <select class="ra-select fz18 fw-500 w-100 editAccountSelect">
+                                                                                <option value="Eastern Bank Ltd.">Facebook</option>
+                                                                                <option value="Eastern Bank Ltd.">Twitter</option>
+                                                                                <option value="Eastern Bank Ltd.">Instagram</option>
+                                                                            </select>
+                                                                        </fieldset>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <fieldset class="rs-form mb-4 f44">
+                                                                            <label for="editName" class="rs-label rs-select-editAccount fz10 fz10">Type</label>
+                                                                            <select class="ra-select fz18 fw-500 w-100 editAccountSelect">
+                                                                                <option value="Eastern Bank Ltd.">Post</option>
+                                                                                <option value="Eastern Bank Ltd.">Bangla</option>
+                                                                                <option value="Eastern Bank Ltd.">Arabic</option>
+                                                                            </select>
+                                                                        </fieldset>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <fieldset class="rs-form mb-4 influInput">
+                                                                            <label class="rs-label">Budget</label>
+                                                                            <input type="text" class="rs-input fw-500 fz18">
+                                                                        </fieldset>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="d-flex mt-3">
+                                                                    <button type="submit" class="rs-btn rs-btn-primary rs-btn-lg uppercase mr-3">Update</button>
+                                                                </div>
+
+                                                                <div class="guide-line fw-500 mt-5">
+                                                                    Need Help? Visit here <a href="#" class="ra-primary-color fw-700">Guideline</a>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </td>
                                     </tr>
 
@@ -231,12 +449,67 @@
                                         <td>Mar 25, 2021</td>
                                         <td><a href="#">Habibur Rahman</a></td>
                                         <td>
-                                            <a href="influencer/influencersActive.html" class="rs-btn rs-btn-trans p-0 w-100 h-100 text-center fz16 fw-700 ra-primary-color d-flex align-items-center justify-content-center">
-                                                <p class="pr-1">EDIT</p>
-                                                <span>
-                  <img src="assets/images/icons/edit.svg" style="width: 24px" alt="Icon">
-               </span>
-                                            </a>
+                                            <div class="user_btn">
+                                                <button data-target="#addPlatformEdit-modal" data-toggle="modal" class="rs-btn rs-btn-trans p-0 w-100 h-100 text-center fz16 fw-700 ra-primary-color d-flex align-items-center justify-content-center">
+                                                    <p class="pr-1">EDIT</p>
+                                                    <span>
+                     <img src="assets/images/icons/edit.svg" style="width: 24px" alt="Icon">
+                  </span>
+                                                </button>
+                                            </div>
+
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="addPlatformEdit-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                                <div class="modal-dialog modal-lg" role="document">
+                                                    <div class="modal-content p-xl-5 p-lg-3 p-md-1">
+                                                        <form action="">
+                                                            <div class="modal-header border-bottom-0">
+                                                                <h5 class="modal-title" id="exampleModalLongTitle>Edit Influncer Platform</h5>
+                   <button type=" button" class="close influClose" data-dismiss="modal" aria-label="Close">
+                                                                    <span class="mdi mdi-close" aria-hidden="true"></span>
+                                                                    </button>
+                                                            </div>
+                                                            <div class="modal-body pb-5">
+                                                                <div class="row">
+                                                                    <div class="col-md-12">
+                                                                        <fieldset class="rs-form mb-4 f44">
+                                                                            <label for="editName" class="rs-label rs-select-editAccount fz10 fz10">Select Media</label>
+                                                                            <select class="ra-select fz18 fw-500 w-100 editAccountSelect">
+                                                                                <option value="Eastern Bank Ltd.">Facebook</option>
+                                                                                <option value="Eastern Bank Ltd.">Twitter</option>
+                                                                                <option value="Eastern Bank Ltd.">Instagram</option>
+                                                                            </select>
+                                                                        </fieldset>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <fieldset class="rs-form mb-4 f44">
+                                                                            <label for="editName" class="rs-label rs-select-editAccount fz10 fz10">Type</label>
+                                                                            <select class="ra-select fz18 fw-500 w-100 editAccountSelect">
+                                                                                <option value="Eastern Bank Ltd.">Post</option>
+                                                                                <option value="Eastern Bank Ltd.">Bangla</option>
+                                                                                <option value="Eastern Bank Ltd.">Arabic</option>
+                                                                            </select>
+                                                                        </fieldset>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <fieldset class="rs-form mb-4 influInput">
+                                                                            <label class="rs-label">Budget</label>
+                                                                            <input type="text" class="rs-input fw-500 fz18">
+                                                                        </fieldset>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="d-flex mt-3">
+                                                                    <button type="submit" class="rs-btn rs-btn-primary rs-btn-lg uppercase mr-3">Update</button>
+                                                                </div>
+
+                                                                <div class="guide-line fw-500 mt-5">
+                                                                    Need Help? Visit here <a href="#" class="ra-primary-color fw-700">Guideline</a>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </td>
                                     </tr>
 
@@ -247,12 +520,67 @@
                                         <td>Mar 25, 2021</td>
                                         <td><a href="#">Habibur Rahman</a></td>
                                         <td>
-                                            <a href="influencer/influencersActive.html" class="rs-btn rs-btn-trans p-0 w-100 h-100 text-center fz16 fw-700 ra-primary-color d-flex align-items-center justify-content-center">
-                                                <p class="pr-1">EDIT</p>
-                                                <span>
-                  <img src="assets/images/icons/edit.svg" style="width: 24px" alt="Icon">
-               </span>
-                                            </a>
+                                            <div class="user_btn">
+                                                <button data-target="#addPlatformEdit-modal" data-toggle="modal" class="rs-btn rs-btn-trans p-0 w-100 h-100 text-center fz16 fw-700 ra-primary-color d-flex align-items-center justify-content-center">
+                                                    <p class="pr-1">EDIT</p>
+                                                    <span>
+                     <img src="assets/images/icons/edit.svg" style="width: 24px" alt="Icon">
+                  </span>
+                                                </button>
+                                            </div>
+
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="addPlatformEdit-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                                <div class="modal-dialog modal-lg" role="document">
+                                                    <div class="modal-content p-xl-5 p-lg-3 p-md-1">
+                                                        <form action="">
+                                                            <div class="modal-header border-bottom-0">
+                                                                <h5 class="modal-title" id="exampleModalLongTitle>Edit Influncer Platform</h5>
+                   <button type=" button" class="close influClose" data-dismiss="modal" aria-label="Close">
+                                                                    <span class="mdi mdi-close" aria-hidden="true"></span>
+                                                                    </button>
+                                                            </div>
+                                                            <div class="modal-body pb-5">
+                                                                <div class="row">
+                                                                    <div class="col-md-12">
+                                                                        <fieldset class="rs-form mb-4 f44">
+                                                                            <label for="editName" class="rs-label rs-select-editAccount fz10 fz10">Select Media</label>
+                                                                            <select class="ra-select fz18 fw-500 w-100 editAccountSelect">
+                                                                                <option value="Eastern Bank Ltd.">Facebook</option>
+                                                                                <option value="Eastern Bank Ltd.">Twitter</option>
+                                                                                <option value="Eastern Bank Ltd.">Instagram</option>
+                                                                            </select>
+                                                                        </fieldset>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <fieldset class="rs-form mb-4 f44">
+                                                                            <label for="editName" class="rs-label rs-select-editAccount fz10 fz10">Type</label>
+                                                                            <select class="ra-select fz18 fw-500 w-100 editAccountSelect">
+                                                                                <option value="Eastern Bank Ltd.">Post</option>
+                                                                                <option value="Eastern Bank Ltd.">Bangla</option>
+                                                                                <option value="Eastern Bank Ltd.">Arabic</option>
+                                                                            </select>
+                                                                        </fieldset>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <fieldset class="rs-form mb-4 influInput">
+                                                                            <label class="rs-label">Budget</label>
+                                                                            <input type="text" class="rs-input fw-500 fz18">
+                                                                        </fieldset>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="d-flex mt-3">
+                                                                    <button type="submit" class="rs-btn rs-btn-primary rs-btn-lg uppercase mr-3">Update</button>
+                                                                </div>
+
+                                                                <div class="guide-line fw-500 mt-5">
+                                                                    Need Help? Visit here <a href="#" class="ra-primary-color fw-700">Guideline</a>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </td>
                                     </tr>
 

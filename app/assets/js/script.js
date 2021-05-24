@@ -60,18 +60,6 @@
         }
     }
 
-    // function checkbox() {
-    //     $('.rs-checkbox-input').on('change', function(){
-    //         var input = $(this);
-    //         var wrapper = input.parents('.checkbox-group');
-    //         if(wrapper.hasClass('active')){
-    //             wrapper.removeClass('active')
-    //         }else {
-    //             wrapper.addClass('active')
-    //         }
-    //     })
-    // }
-
     function checkbox() {
         $('.rs-checkbox-input').on('change', function(){
             var input = $(this);
@@ -237,6 +225,8 @@
         dataTable('#adSizeDataTable');
         dataTable('#positionDataTable');
         dataTable('#countriesDetailDataTable');
+        dataTable('#influencerDataTable');
+        dataTable('#influencerPlatformDataTable');
 
         influencerStepForm();
 
