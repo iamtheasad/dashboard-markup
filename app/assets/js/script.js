@@ -60,6 +60,18 @@
         }
     }
 
+    function checkbox() {
+        $('.rs-checkbox-input').on('change', function(){
+            var input = $(this);
+            var wrapper = input.parents('.checkbox-group');
+            if(wrapper.hasClass('active')){
+                wrapper.removeClass('active')
+            }else {
+                wrapper.addClass('active')
+            }
+        })
+    }
+
     function menuHide() {
         $('main').removeClass('overlay');
         $('.sidebar-menu').removeClass('show');
@@ -119,12 +131,78 @@
         }
     }
 
+    function getFileName(){
+        $(document).on('change', '.file-input', function(e) {
+            var fileName = e.target.files[0].name;
+            $(this).parents('.rs-form').find('.filename').text(fileName);
+        })
+    }
+
+    function resetSteps(){
+        var menus = $('.influencer-step-form .step-menu ul li');
+        var steps = $('.influencer-step-form .step-content .step');
+
+        steps.each(function(){
+            $(this).removeClass('show');
+        })
+
+    }
+
+    function influencerStepForm() {
+        var stepTab = $('.influencer-step-form');
+
+        if(stepTab.length){
+            var form_1 = $('#influencer-form-1');
+            var form_2 = $('#influencer-form-2');
+            var form_3 = $('#influencer-form-3');
+            var form_4 = $('#influencer-form-1');
+
+            form_1.on('submit', function(e) {
+                e.preventDefault();
+                resetSteps();
+                $('#influencer-step-2').addClass('show');
+                $('[data-ref="influencer-step-2"]').addClass('stepped');
+                $('.influencer-step-form .progress-bar>span').css({"width": 37.5+"%"});
+            })
+
+            form_2.on('submit', function(e) {
+                e.preventDefault();
+                resetSteps();
+                $('#influencer-step-3').addClass('show');
+                $('[data-ref="influencer-step-3"]').addClass('stepped');
+                $('.influencer-step-form .progress-bar>span').css({"width": 37.5*2+"%"});
+            })
+
+            form_3.on('submit', function(e) {
+                e.preventDefault();
+                resetSteps();
+                $('#influencer-step-4').addClass('show');
+                $('[data-ref="influencer-step-4"]').addClass('stepped');
+                $('.influencer-step-form .progress-bar>span').css({"width": 37.5*3+"%"});
+            })
+
+            $('.step-back-btn').on('click', function(){
+                var href = $(this).attr('data-href');
+                var tab = $('#'+href);
+                var menu = $(`.step-menu [data-ref=${href}]`);
+                resetSteps();
+                $('.step-menu .stepped').last().removeClass('stepped');
+                var progressBar = $('.influencer-step-form .progress-bar>span');
+                progressBar.css({"width": (progressBar.width() / progressBar.parent().width() * 100 - 37.5)+"%"});
+                tab.addClass('show');
+            })
+
+        }
+    }
+
     /*==========================================================================
         WHEN DOCUMENT LOADING
     ==========================================================================*/
     $(window).on('load', function () {
         inputAnimate();
+        checkbox();
         menuToggler();
+        getFileName();
 
         dataTable('#propertyDataTable');
         dataTable('#propertyDetailsDataTable');
@@ -147,6 +225,11 @@
         dataTable('#adSizeDataTable');
         dataTable('#positionDataTable');
         dataTable('#countriesDetailDataTable');
+        dataTable('#influencerDataTable');
+        dataTable('#influencerPlatformDataTable');
+        dataTable('#influencerPostDatatable');
+
+        influencerStepForm();
 
         // will load on end
         pageLoader();

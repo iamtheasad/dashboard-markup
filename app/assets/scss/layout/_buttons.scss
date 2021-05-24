@@ -42,6 +42,11 @@
         border-color: transparent;
         background-color: transparent;
     }
+    &.rs-btn-gray-bg{
+        background-color: $dataTableSearchBgColor;
+        border: none;
+        color: $paymentInputColor3;
+    }
 
     @media (max-width: 1448px) {
         font-size: rem(16px) !important;

@@ -1,7 +1,7 @@
 .rs-form {
   position: relative;
 
-  @media(max-width: 767px) {
+  @media (max-width: 767px) {
     width: 100%;
     margin-top: 20px;
   }
@@ -32,7 +32,7 @@
     transform: translateY(-50%);
     background-color: $white;
     padding: 5px 6px;
-    transition: .2s ease-in-out;
+    transition: 0.2s ease-in-out;
     cursor: pointer;
     color: $darkGray;
   }
@@ -44,10 +44,10 @@
     border: 1px solid $borderColor;
     padding: 5px 16px;
     font-size: rem(16);
-    transition: .2s ease-in-out;
+    transition: 0.2s ease-in-out;
     color: $black;
 
-    @media(max-width: 992px) {
+    @media (max-width: 992px) {
       min-height: 40px;
     }
   }
@@ -68,6 +68,12 @@
 }
 
 .radio-group {
+  &.checkbox-group{
+    border: 1px solid $tableRowColor;
+    &.active{
+      border:  1px solid $primaryColor;
+    }
+  }
   .radio-label {
     display: flex;
     align-items: center;
@@ -77,11 +83,11 @@
     min-height: 40px;
     padding: 8px 12px;
     border-radius: 4px;
-    background: #ECEEF3;
+    background: #eceef3;
     border: 1px solid #475364;
-    opacity: .5;
+    opacity: 0.5;
     cursor: pointer;
-    transition: .3s ease-in-out;
+    transition: 0.3s ease-in-out;
     letter-spacing: 0.16em;
     font-weight: 600;
 
@@ -100,23 +106,24 @@
   }
 }
 
+
 .rs-checkbox {
+ 
   .rs-checkbox-input {
     display: none;
   }
-
 
   .checkbox-label {
     padding-left: 32px;
     position: relative;
 
-    @media(max-width: 575px) {
+    @media (max-width: 575px) {
       font-size: rem(12px);
     }
 
     &:before,
     &:after {
-      content: '';
+      content: "";
       position: absolute;
       width: 24px;
       height: 24px;
@@ -124,25 +131,25 @@
       left: 0;
       border-radius: 4px;
 
-      @media(max-width: 575px) {
+      @media (max-width: 575px) {
         width: 20px;
         height: 20px;
       }
     }
 
     &:before {
-      border: 2px solid #8E8E93;
+      border: 2px solid #8e8e93;
       z-index: 1;
     }
 
     &:after {
       z-index: 2;
-      background-image: url('../images/icons/check.svg');
+      background-image: url("../images/icons/check.svg");
       background-repeat: no-repeat;
       background-size: 24px;
       opacity: 0;
       visibility: hidden;
-      transition: .3s ease-in-out;
+      transition: 0.3s ease-in-out;
     }
   }
 
@@ -157,14 +164,14 @@
   width: 100%;
   float: right;
 
-  @media(max-width: 767px) {
+  @media (max-width: 767px) {
     margin-top: 20px;
     float: left;
   }
 }
 
 .ra-add-block-input {
-  @media(max-width: 992px) {
+  @media (max-width: 992px) {
     width: 100% !important;
   }
 }
@@ -182,7 +189,7 @@
   justify-content: space-between;
   align-items: center;
 
-  @media(max-width: 767px) {
+  @media (max-width: 767px) {
     flex-direction: column;
   }
 }
@@ -191,7 +198,7 @@
   display: flex;
   align-items: center;
 
-  @media(max-width: 767px) {
+  @media (max-width: 767px) {
     flex-direction: column;
     margin-bottom: 20px;
     width: 100%;
@@ -205,7 +212,7 @@
 .acitvity-log-selection {
   width: 35%;
 
-  @media(max-width: 767px) {
+  @media (max-width: 767px) {
     width: 100%;
   }
 }
@@ -258,4 +265,120 @@ input[type="text"] {
 
 .ra-select option {
   background-color: #fff;
+}
+
+/***********************************
+// Influencer
+**************************************/
+.influInpu {
+  position: relative;
+}
+
+.influInput:after {
+  content: "৳";
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  width: 100px;
+  height: 100%;
+  text-align: center;
+  transform: translateY(-45%);
+  font-size: 30px;
+
+  @media (max-width: 992px) {
+    right: -5%;
+    top: 33%;
+  }
+}
+
+.rs-form.influInput .rs-input {
+  padding-right: 77px;
+}
+
+.genderSelect input {
+  display: inline-box;
+}
+
+.influencerLabel {
+  display: flex;
+  align-items: center;
+}
+
+.influencersSelect:before,
+.influencersSelect:after {
+  width: 20px !important;
+  height: 20px !important;
+}
+
+.influencersSelect:before {
+  top: 50% !important;
+  transform: translateY(-50%);
+  border-radius: 50% !important;
+}
+
+.influencersSelect:after {
+  top: 50% !important;
+  transform: translateY(-50%);
+  border-radius: 50% !important;
+  background-size: 20px !important;
+}
+
+.influencer-user {
+  img {
+    border-radius: 50%;
+    background-color: $tableRowColor;
+  }
+}
+
+.rs-label.influencer-label {
+  top: 28%;
+}
+
+.influTextarea {
+  position: relative;
+}
+
+.influActiveArrow {
+  position: absolute;
+  top: 47%;
+  right: 3%;
+  transform: translateY(-50%);
+  font-size: 25px;
+}
+
+.influActiveArrow {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  font-size: 25px;
+  border: none;
+  background: transparent;
+  width: 7%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+.influRadioBtn {
+  border: 2px solid red;
+}
+
+.campagnDetailsInput {
+  width: 75%;
+  
+  @media (max-width: 768px){
+    width: 100%;
+  }
+}
+
+.campagnDetailsInput-request {
+  width: 40%;
+
+  @media (max-width: 992px) {
+    width: 50%;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 }
