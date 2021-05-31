@@ -65,13 +65,17 @@
     display: flex;
     align-items: center;
   }
+
+  .influ-comment-label {
+    top: 46%;
+  }
 }
 
 .radio-group {
-  &.checkbox-group{
+  &.checkbox-group {
     border: 1px solid $tableRowColor;
-    &.active{
-      border:  1px solid $primaryColor;
+    &.active {
+      border: 1px solid $primaryColor;
     }
   }
   .radio-label {
@@ -106,9 +110,7 @@
   }
 }
 
-
 .rs-checkbox {
- 
   .rs-checkbox-input {
     display: none;
   }
@@ -342,21 +344,12 @@ input[type="text"] {
 .influActiveArrow {
   position: absolute;
   top: 47%;
-  right: 3%;
-  transform: translateY(-50%);
-  font-size: 25px;
-}
-
-.influActiveArrow {
-  position: absolute;
-  top: 50%;
-  right: 0;
+  right: 0%;
   transform: translateY(-50%);
   font-size: 25px;
   border: none;
   background: transparent;
   width: 7%;
-  height: 100%;
   border-radius: 8px;
 }
 
@@ -366,8 +359,8 @@ input[type="text"] {
 
 .campagnDetailsInput {
   width: 75%;
-  
-  @media (max-width: 768px){
+
+  @media (max-width: 768px) {
     width: 100%;
   }
 }

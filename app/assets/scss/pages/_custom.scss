@@ -235,6 +235,37 @@
   left: 92%;
 }
 
+.influ-active-icon {
+  width: 30px;
+  padding-right: 5px;
+}
+
+.influ-user {
+  background-color: $primaryBg;
+}
+.influ-inactive,
+.influ-active,
+.influ-accepted {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 200px;
+}
+
+.influ-inactive {
+  color: #ffc700;
+  border: 1px solid #ffc700;
+}
+
+.influ-active {
+  color: #00c66d;
+  border: 1px solid #00c66d;
+}
+
+.influ-accepted {
+  color: #4a6dff;
+  border: 1px solid #4a6dff;
+}
+
 /***********************************
 // Influencer Progress Bar
 **************************************/
@@ -276,12 +307,12 @@
         font-weight: 500;
         &.stepped {
           color: $primaryColor;
-          span{
+          span {
             opacity: 1;
             display: block;
           }
         }
-        span{
+        span {
           opacity: 0;
           display: none;
         }
