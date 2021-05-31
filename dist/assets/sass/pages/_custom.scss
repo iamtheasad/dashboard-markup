@@ -276,6 +276,14 @@
         font-weight: 500;
         &.stepped {
           color: $primaryColor;
+          span{
+            opacity: 1;
+            display: block;
+          }
+        }
+        span{
+          opacity: 0;
+          display: none;
         }
       }
     }
