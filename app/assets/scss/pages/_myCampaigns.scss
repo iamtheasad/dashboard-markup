@@ -1,0 +1,34 @@
+.dot {
+   position: relative;
+}
+
+.dot:after {
+   width: 7px;
+   height: 7px;
+   background: $orang;
+   content: '';
+   position: absolute;
+   top: 30%;
+   right: 19%;
+   border-radius: 50%;
+}
+
+.ra-custom-nav-link{
+   padding: 10px 47px;
+   font-size: rem(15px);
+   font-weight: 600;
+   background-color: $white;
+}
+
+.ra-custom-nav-link.active {
+   background-color: $tab-btn-bg !important;
+   color: #fff;
+}
+
+.ra-gray-light-bg {
+   background-color: $gray-light;
+}
+
+.ra-custom-tab {
+   
+}
