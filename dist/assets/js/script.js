@@ -131,6 +131,14 @@ function dataTable(element) {
     }
 }
 
+// My Campaign Data Table
+function datatable2(){
+    $('#myCampaignDatatTable').DataTable( {
+        "paging": false,
+        "searching": false,
+    } );
+}
+
 function getFileName() {
     $(document).on('change', '.file-input', function (e) {
         var fileName = e.target.files[0].name;
@@ -199,6 +207,7 @@ function influencerStepForm() {
     WHEN DOCUMENT LOADING
 ==========================================================================*/
 $(window).on('load', function () {
+    datatable2();
     inputAnimate();
     checkbox();
     menuToggler();
