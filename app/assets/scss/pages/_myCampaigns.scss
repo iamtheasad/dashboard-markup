@@ -27,10 +27,24 @@
 }
 
 .ra-custom-nav-link.active {
-   background-color: $tab-btn-bg !important;
+   background-color: $tabBtnBg !important;
    color: #fff;
 }
 
 .ra-gray-light-bg {
-   background-color: $gray-light;
+   background-color: $grayLight;
+}
+
+.serach-number, .search-filter, .serach-sort {
+   padding: 3px 10px;
+}
+
+.filter-dropdown {
+   background: #fafafa;
+   display: none;
+}
+
+.filter-dropdown li a {
+   width: 100%;
+   padding: 2px 7px;
 }
