@@ -9,7 +9,6 @@
    content: '';
    position: absolute;
    top: 30%;
-   right: 19%;
    border-radius: 50%;
 }
 
@@ -20,6 +19,13 @@
    background-color: $white;
 }
 
+@media screen and(max-width: 767px){
+   .ra-custom-nav-link {
+      margin-bottom: 5px;
+      padding: 10px 10px;
+   }
+}
+
 .ra-custom-nav-link.active {
    background-color: $tab-btn-bg !important;
    color: #fff;
@@ -27,8 +33,4 @@
 
 .ra-gray-light-bg {
    background-color: $gray-light;
-}
-
-.ra-custom-tab {
-   
 }
