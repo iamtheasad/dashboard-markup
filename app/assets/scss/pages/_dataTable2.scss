@@ -137,3 +137,44 @@ tbody td.custom-table-data {
 .c-title.c-archived {
    padding-left: 0px;
 }
+
+
+// Checkbox
+
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+   background-color: 0 0 0 0.2rem rgb(72, 72, 72)!important;
+ }
+ 
+ .custom-checkbox .custom-control-input:checked:focus ~ .custom-control-label::before {
+   box-shadow: 0 0 0 2px $grayCheckboxLight;
+ }
+ .custom-checkbox .custom-control-input:focus ~ .custom-control-label::before {
+   box-shadow:  0 0 0 2px $tabBtnBg
+ }
+ .custom-checkbox .custom-control-input:active ~ .custom-control-label::before {
+   background-color: $tabBtnBg;
+ }
+
+ .custom-checkbox .custom-control-input:checked~.custom-control-label:before{
+   background-color:  $tabBtnBg;
+ }
+
+// .rs-checkbox.c-custom-checkbox {
+//    display: inline-block;
+//    vertical-align: text-top;
+// }
+
+// .rs-checkbox.c-custom-checkbox .checkbox-label:before {
+//    border-color: $grayCheckboxLight;
+// }
+
+// .rs-checkbox.c-custom-checkbox .checkbox-label:after {
+//    width: 16px;
+// }
+
+// .rs-checkbox.c-custom-checkbox .checkbox-label:after,
+// .rs-checkbox.c-custom-checkbox .checkbox-label:before {
+//    width: 16px;
+//    height: 16px;
+//    background-size: 16px;
+// }
