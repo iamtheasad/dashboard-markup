@@ -133,10 +133,14 @@ function dataTable(element) {
 
 // My Campaign Data Table
 function datatable2(){
-    $('#myCampaignDatatTable').DataTable( {
+    $('#myCampaignDatatTable').DataTable({
         "paging": false,
         "searching": false,
-    } );
+    });
+    $('#ongoingDataTable').DataTable({
+        "paging": false,
+        "searching": false,
+    });
 }
 
 function getFileName() {

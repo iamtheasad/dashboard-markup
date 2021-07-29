@@ -28,21 +28,20 @@ table.dataTable>thead .custom-table-head.no-icon.sorting_desc:after {
 .custom-table-head {
    background: #fff;
    padding: 15px 17px;
-   font-size: 14px;
+   font-size: rem(14px);
    font-weight: 500;
 }
 
 tbody td.custom-table-data.active {
    background: #F7F7F7;
    border-top: 1px solid $grayLightBgColor;
-   padding: 20px 17px;
 }
 
 tbody td.custom-table-data {
    background: #ffffff;
    border-top: 1px solid $grayLightBgColor;
-   padding: 20px 17px;
-   font-size: 14px;
+   padding: 7px 18px;
+   font-size: rem(14px);
    font-weight: 500;
    white-space: nowrap;
 }
@@ -56,7 +55,7 @@ tbody td.custom-table-data {
 }
 
 .c-title {
-   font-size: 14px;
+   font-size: rem(14px);
    color: #000;
    display: inline-block;
    padding-left: 10px;
@@ -93,7 +92,7 @@ tbody td.custom-table-data {
 .c-message-icon {
    width: 16px;
    height: 16px;
-   font-size: 16px;
+   font-size: rem(16px);
 }
 
 .c-message-wrapper .c-message-icon.active,
@@ -109,4 +108,10 @@ tbody td.custom-table-data {
 .c-start-campaign {
    font-weight: 400;
    color: $darkBlueColor;
+}
+
+.c-ongoing-title {
+   color: $darkBlueColor;
+   font-weight: 600;
+   font-size: rem(12px);
 }
