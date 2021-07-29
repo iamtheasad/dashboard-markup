@@ -24,18 +24,30 @@
 
    <div class="tab-content" id="pills-tabContent">
       <div class="tab-pane fade show active" id="scheduled" role="tabpanel" aria-labelledby="scheduled-tab">
+         {% set data = {
+            searchTitle : 'Search in Scheduled'
+         }%}
          {% include "sections/myCampaigns/searchBar.njk"%}
          {% include "sections/myCampaigns/scheduledDataTable.njk"%}
       </div>
       <div class="tab-pane fade" id="ongoing" role="tabpanel" aria-labelledby="ongoing-tab">
+         {% set data = {
+            searchTitle : 'Search in Ongoing'
+         }%}
          {% include "sections/myCampaigns/searchBar.njk"%}
          {% include "sections/myCampaigns/ongoingDataTable.njk"%}
       </div>
       <div class="tab-pane fade" id="completed" role="tabpanel" aria-labelledby="completed-tab">
+         {% set data = {
+            searchTitle : 'Search in Completed'
+         }%}
          {% include "sections/myCampaigns/searchBar.njk"%}
          {% include "sections/myCampaigns/completedDataTable.njk"%}
       </div>
       <div class="tab-pane fade" id="archieved" role="tabpanel" aria-labelledby="archieved-tab">
+         {% set data = {
+            searchTitle : 'Search in Archieved'
+         }%}
          {% include "sections/myCampaigns/searchBar.njk"%}
          {% include "sections/myCampaigns/archievedDataTable.njk"%}
       </div>

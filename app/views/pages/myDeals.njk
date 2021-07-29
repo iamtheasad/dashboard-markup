@@ -2,7 +2,47 @@
 
 {% block content %}
 
+<div class="ra-gray-light-bg p-20">
+   <ul class="nav d-flex justify-content-center nav-pills bg-transparent mb-20" id="pills-tab" role="tablist">
+      <li class="nav-item">
+         <a class="nav-link ra-custom-nav-link rounded-0 active" id="scheduled-tab" data-toggle="pill" href="#scheduled"
+            role="tab" aria-controls="scheduled" aria-selected="true">Connect Requests (2)</a>
+      </li>
+      <li class="nav-item">
+         <a class="nav-link ra-custom-nav-link rounded-0 dot" id="ongoing-tab" data-toggle="pill" href="#ongoing"
+            role="tab" aria-controls="ongoing" aria-selected="false">In Progress (1)</a>
+      </li>
+      <li class="nav-item">
+         <a class="nav-link ra-custom-nav-link rounded-0" id="completed-tab" data-toggle="pill" href="#completed"
+            role="tab" aria-controls="completed" aria-selected="false">Pending Approval</a>
+      </li>
+      <li class="nav-item">
+         <a class="nav-link ra-custom-nav-link rounded-0" id="archieved-tab" data-toggle="pill" href="#archieved"
+            role="tab" aria-controls="archieved" aria-selected="false">Cancelled</a>
+      </li>
+   </ul>
 
-
+   <div class="tab-content" id="pills-tabContent">
+      <div class="tab-pane fade show active" id="scheduled" role="tabpanel" aria-labelledby="scheduled-tab">
+         {% set data = {
+            searchTitle : 'Search in Connect Requests'
+         }%}
+         {% include "sections/myCampaigns/searchBar.njk"%}
+         {% include "sections/myCampaigns/scheduledDataTable.njk"%}
+      </div>
+      <div class="tab-pane fade" id="ongoing" role="tabpanel" aria-labelledby="ongoing-tab">
+         {% include "sections/myCampaigns/searchBar.njk"%}
+         {% include "sections/myCampaigns/ongoingDataTable.njk"%}
+      </div>
+      <div class="tab-pane fade" id="completed" role="tabpanel" aria-labelledby="completed-tab">
+         {% include "sections/myCampaigns/searchBar.njk"%}
+         {% include "sections/myCampaigns/completedDataTable.njk"%}
+      </div>
+      <div class="tab-pane fade" id="archieved" role="tabpanel" aria-labelledby="archieved-tab">
+         {% include "sections/myCampaigns/searchBar.njk"%}
+         {% include "sections/myCampaigns/archievedDataTable.njk"%}
+      </div>
+   </div>
+</div>
 
 {% endblock %}

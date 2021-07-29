@@ -154,6 +154,1998 @@
                 </div>
             </header>
 
+            <div class="ra-gray-light-bg p-20">
+                <ul class="nav d-flex justify-content-center nav-pills bg-transparent mb-20" id="pills-tab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link ra-custom-nav-link rounded-0 active" id="scheduled-tab" data-toggle="pill" href="#scheduled" role="tab" aria-controls="scheduled" aria-selected="true">Connect Requests (2)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ra-custom-nav-link rounded-0 dot" id="ongoing-tab" data-toggle="pill" href="#ongoing" role="tab" aria-controls="ongoing" aria-selected="false">In Progress (1)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ra-custom-nav-link rounded-0" id="completed-tab" data-toggle="pill" href="#completed" role="tab" aria-controls="completed" aria-selected="false">Pending Approval</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ra-custom-nav-link rounded-0" id="archieved-tab" data-toggle="pill" href="#archieved" role="tab" aria-controls="archieved" aria-selected="false">Cancelled</a>
+                    </li>
+                </ul>
+
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="scheduled" role="tabpanel" aria-labelledby="scheduled-tab">
+
+                        <div class="d-flex justify-content-between mb-2 mb-md-3">
+                            <form action="" class="rs-form custom-form d-flex justify-content-between align-items-center">
+                                <button type="submit" class="position-absolute search-icon border-0 bg-transparent pl-3" for="searchInput">
+                                    <span class="mdi mdi-magnify search-img gray-light-text-color fz20"></span>
+                                </button>
+                                <input type="search" class="rs-input border-0 ra-data-table-bg gray-light-text-color fz14 fw-500 min-hieght-36 pl-5" id="searchInput" placeholder="Search in Connect Requests">
+                            </form>
+
+                            <div class="search-right d-flex align-items-center justify-content-center">
+                                <div class="mr-1 mr-md-3">
+                                    <button class="serach-number border-0 fw-500 d-flex align-items-center">
+                                        <p class="fz14"><span>1</span>-<span>4</span></p>
+                                    </button>
+                                </div>
+                                <div class="ra-filter mr-1 mr-md-3">
+                                    <div class="dropdown search-common">
+                                        <button class="search-filter border-0 radius-5 d-flex gray-light-bg-color fw-500 d-flex align-items-center" type="button" id="serach-filter" data-toggle="dropdown" aria-haspopup="true">
+                                            <span class="mdi mdi-filter-outline fz20 pr-2"></span>
+                                            <p class="fz14">Filter By</p>
+                                            <span class="mdi mdi-chevron-up fz20 pl-2"></span>
+                                        </button>
+                                        <div class="dropdown-menu search-dropdown" aria-labelledby="serach-filter">
+                                            <a class="dropdown-item" href="#">Campaign Name</a>
+                                            <a class="dropdown-item" href="#">Type</a>
+                                            <a class="dropdown-item" href="#">Budget</a>
+                                            <a class="dropdown-item" href="#">Category</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ra-filter">
+                                    <div class="dropdown search-common">
+                                        <button class="search-filter border-0 radius-5 d-flex gray-light-bg-color fw-500 d-flex align-items-center" type="button" id="serach-filter" data-toggle="dropdown" aria-haspopup="true">
+                                            <span class="mdi mdi-sort-descending fz20 pr-2"></span>
+                                            <p class="fz14">Sort By</p>
+                                            <span class="mdi mdi-chevron-up fz20 pl-2"></span>
+                                        </button>
+                                        <div class="dropdown-menu search-dropdown" aria-labelledby="serach-filter">
+                                            <a class="dropdown-item" href="#">Campaign Name</a>
+                                            <a class="dropdown-item" href="#">Type</a>
+                                            <a class="dropdown-item" href="#">Budget</a>
+                                            <a class="dropdown-item" href="#">Category</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="dataTable table-responsive">
+                                    <table id="myCampaignDatatTable" class="display" style="width:100%">
+                                        <thead>
+                                            <tr>
+                                                <th class="custom-table-head">Campaign Name</th>
+                                                <th class="custom-table-head">Type</th>
+                                                <th class="custom-table-head">Client</th>
+                                                <th class="custom-table-head">Will Start</th>
+                                                <th class="custom-table-head">Budget</th>
+                                                <th class="custom-table-head">Category</th>
+                                                <th class="custom-table-head">Dealed</th>
+                                                <th class="custom-table-head no-icon">&nbsp;</th>
+                                                <th class="custom-table-head no-icon">&nbsp;</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="custom-table-data active">
+                                                    <a href="#" class="d-flex align-items-center">
+                                                        <div class="notification active">
+                                                            <div class="c-user-img">
+                                                                <img src="https://via.placeholder.com/300" class="img" alt="Campaign Holder Image">
+                                                            </div>
+                                                        </div>
+                                                        <p class="c-title">
+                                                            Blendtec: Will It Blend Campaign
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data active">
+                                                    <a href="#" class="d-flex align-items-center">
+                                                        <div class="c-social-img">
+                                                            <img src="https://image.flaticon.com/icons/png/512/1384/1384053.png" class="img" alt="Social Icon">
+                                                        </div>
+                                                        <p class="c-title">
+                                                            FB Post
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data active">
+                                                    <a href="#">
+                                                        <p class="c-title">
+                                                            Shafayat
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data active">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date active">24 JUL, 21</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">09:00 PM</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data active">
+                                                    <p class="c-title">
+                                                        <span>50,000</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data active">
+                                                    <p class="c-title">
+                                                        <span>Brand</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data active">
+                                                    <p class="c-title">
+                                                        <span>18 JUL, 21</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data active">
+                                                    <button class="c-message-wrapper d-flex align-items-center border-0 bg-transparent">
+                                                        <div class="c-message-icon active">
+                                                            <span class="mdi mdi-message-outline"></span>
+                                                        </div>
+                                                        <p class="c-title active">
+                                                            12
+                                                        </p>
+                                                    </button>
+                                                </td>
+                                                <td class="custom-table-data active">
+                                                    <p class="c-title c-start-campaign active">
+                                                        Start Campaign
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="custom-table-data active">
+                                                    <a href="#" class="d-flex align-items-center">
+                                                        <div class="notification active">
+                                                            <div class="c-user-img">
+                                                                <img src="https://via.placeholder.com/300" class="img" alt="Campaign Holder Image">
+                                                            </div>
+                                                        </div>
+                                                        <p class="c-title">
+                                                            Blendtec: Will It Blend Campaign
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data active">
+                                                    <a href="#" class="d-flex align-items-center">
+                                                        <div class="c-social-img">
+                                                            <img src="https://image.flaticon.com/icons/png/512/1384/1384053.png" class="img" alt="Social Icon">
+                                                        </div>
+                                                        <p class="c-title">
+                                                            FB Post
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data active">
+                                                    <a href="#">
+                                                        <p class="c-title">
+                                                            Shafayat
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data active">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date active">24 JUL, 21</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">09:00 PM</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data active">
+                                                    <p class="c-title">
+                                                        <span>50,000</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data active">
+                                                    <p class="c-title">
+                                                        <span>Brand</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data active">
+                                                    <p class="c-title">
+                                                        <span>18 JUL, 21</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data active">
+                                                    <button class="c-message-wrapper d-flex align-items-center border-0 bg-transparent">
+                                                        <div class="c-message-icon active">
+                                                            <span class="mdi mdi-message-outline"></span>
+                                                        </div>
+                                                        <p class="c-title active">
+                                                            12
+                                                        </p>
+                                                    </button>
+                                                </td>
+                                                <td class="custom-table-data active">
+                                                    <p class="c-title c-start-campaign active">
+                                                        Start Campaign
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="custom-table-data active">
+                                                    <a href="#" class="d-flex align-items-center">
+                                                        <div class="notification active">
+                                                            <div class="c-user-img">
+                                                                <img src="https://via.placeholder.com/300" class="img" alt="Campaign Holder Image">
+                                                            </div>
+                                                        </div>
+                                                        <p class="c-title">
+                                                            Blendtec: Will It Blend Campaign
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data active">
+                                                    <a href="#" class="d-flex align-items-center">
+                                                        <div class="c-social-img">
+                                                            <img src="https://image.flaticon.com/icons/png/512/1384/1384053.png" class="img" alt="Social Icon">
+                                                        </div>
+                                                        <p class="c-title">
+                                                            FB Post
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data active">
+                                                    <a href="#">
+                                                        <p class="c-title">
+                                                            Shafayat
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data active">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date active">24 JUL, 21</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">09:00 PM</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data active">
+                                                    <p class="c-title">
+                                                        <span>50,000</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data active">
+                                                    <p class="c-title">
+                                                        <span>Brand</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data active">
+                                                    <p class="c-title">
+                                                        <span>18 JUL, 21</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data active">
+                                                    <button class="c-message-wrapper d-flex align-items-center border-0 bg-transparent">
+                                                        <div class="c-message-icon active">
+                                                            <span class="mdi mdi-message-outline"></span>
+                                                        </div>
+                                                        <p class="c-title active">
+                                                            12
+                                                        </p>
+                                                    </button>
+                                                </td>
+                                                <td class="custom-table-data active">
+                                                    <p class="c-title c-start-campaign active">
+                                                        Start Campaign
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="custom-table-data">
+                                                    <a href="#" class="d-flex align-items-center">
+                                                        <div class="notification">
+                                                            <div class="c-user-img">
+                                                                <img src="https://via.placeholder.com/300" class="img" alt="Campaign Holder Image">
+                                                            </div>
+                                                        </div>
+                                                        <p class="c-title">
+                                                            Blendtec: Will It Blend Campaign
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <a href="#" class="d-flex align-items-center">
+                                                        <div class="c-social-img">
+                                                            <img src="https://image.flaticon.com/icons/png/512/2111/2111463.png" class="img" alt="Social Icon">
+                                                        </div>
+                                                        <p class="c-title">
+                                                            IG Post
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <a href="#">
+                                                        <p class="c-title">
+                                                            Shafayat
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">24 JUL, 21</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">09:00 PM</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <p class="c-title">
+                                                        <span>50,000</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <p class="c-title">
+                                                        <span>Brand</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <p class="c-title">
+                                                        <span>18 JUL, 21</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <button class="c-message-wrapper d-flex align-items-center border-0 bg-transparent">
+                                                        <div class="c-message-icon">
+                                                            <span class="mdi mdi-message-outline"></span>
+                                                        </div>
+                                                        <p class="c-title">
+                                                            12
+                                                        </p>
+                                                    </button>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <p class="c-title c-start-campaign">
+                                                        Start Campaign
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="custom-table-data">
+                                                    <a href="#" class="d-flex align-items-center">
+                                                        <div class="notification">
+                                                            <div class="c-user-img">
+                                                                <img src="https://via.placeholder.com/300" class="img" alt="Campaign Holder Image">
+                                                            </div>
+                                                        </div>
+                                                        <p class="c-title">
+                                                            Blendtec: Will It Blend Campaign
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <a href="#" class="d-flex align-items-center">
+                                                        <div class="c-social-img">
+                                                            <img src="https://image.flaticon.com/icons/png/512/2111/2111463.png" class="img" alt="Social Icon">
+                                                        </div>
+                                                        <p class="c-title">
+                                                            IG Story
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <a href="#">
+                                                        <p class="c-title">
+                                                            Shafayat
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">24 JUL, 21</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">09:00 PM</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <p class="c-title">
+                                                        <span>50,000</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <p class="c-title">
+                                                        <span>Brand</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <p class="c-title">
+                                                        <span>18 JUL, 21</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <button class="c-message-wrapper d-flex align-items-center border-0 bg-transparent">
+                                                        <div class="c-message-icon">
+                                                            <span class="mdi mdi-message-outline"></span>
+                                                        </div>
+                                                        <p class="c-title">
+                                                            12
+                                                        </p>
+                                                    </button>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <p class="c-title c-start-campaign">
+                                                        Start Campaign
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="custom-table-data">
+                                                    <a href="#" class="d-flex align-items-center">
+                                                        <div class="notification">
+                                                            <div class="c-user-img">
+                                                                <img src="https://via.placeholder.com/300" class="img" alt="Campaign Holder Image">
+                                                            </div>
+                                                        </div>
+                                                        <p class="c-title">
+                                                            Blendtec: Will It Blend Campaign
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <a href="#" class="d-flex align-items-center">
+                                                        <div class="c-social-img">
+                                                            <img src="https://image.flaticon.com/icons/png/512/2111/2111463.png" class="img" alt="Social Icon">
+                                                        </div>
+                                                        <p class="c-title">
+                                                            IG Post
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <a href="#">
+                                                        <p class="c-title">
+                                                            Shafayat
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">24 JUL, 21</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">09:00 PM</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <p class="c-title">
+                                                        <span>50,000</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <p class="c-title">
+                                                        <span>Brand</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <p class="c-title">
+                                                        <span>18 JUL, 21</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <button class="c-message-wrapper d-flex align-items-center border-0 bg-transparent">
+                                                        <div class="c-message-icon">
+                                                            <span class="mdi mdi-message-outline"></span>
+                                                        </div>
+                                                        <p class="c-title">
+                                                            12
+                                                        </p>
+                                                    </button>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <p class="c-title c-start-campaign">
+                                                        Start Campaign
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="ongoing" role="tabpanel" aria-labelledby="ongoing-tab">
+                        <div class="d-flex justify-content-between mb-2 mb-md-3">
+                            <form action="" class="rs-form custom-form d-flex justify-content-between align-items-center">
+                                <button type="submit" class="position-absolute search-icon border-0 bg-transparent pl-3" for="searchInput">
+                                    <span class="mdi mdi-magnify search-img gray-light-text-color fz20"></span>
+                                </button>
+                                <input type="search" class="rs-input border-0 ra-data-table-bg gray-light-text-color fz14 fw-500 min-hieght-36 pl-5" id="searchInput" placeholder="Search in Connect Requests">
+                            </form>
+
+                            <div class="search-right d-flex align-items-center justify-content-center">
+                                <div class="mr-1 mr-md-3">
+                                    <button class="serach-number border-0 fw-500 d-flex align-items-center">
+                                        <p class="fz14"><span>1</span>-<span>4</span></p>
+                                    </button>
+                                </div>
+                                <div class="ra-filter mr-1 mr-md-3">
+                                    <div class="dropdown search-common">
+                                        <button class="search-filter border-0 radius-5 d-flex gray-light-bg-color fw-500 d-flex align-items-center" type="button" id="serach-filter" data-toggle="dropdown" aria-haspopup="true">
+                                            <span class="mdi mdi-filter-outline fz20 pr-2"></span>
+                                            <p class="fz14">Filter By</p>
+                                            <span class="mdi mdi-chevron-up fz20 pl-2"></span>
+                                        </button>
+                                        <div class="dropdown-menu search-dropdown" aria-labelledby="serach-filter">
+                                            <a class="dropdown-item" href="#">Campaign Name</a>
+                                            <a class="dropdown-item" href="#">Type</a>
+                                            <a class="dropdown-item" href="#">Budget</a>
+                                            <a class="dropdown-item" href="#">Category</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ra-filter">
+                                    <div class="dropdown search-common">
+                                        <button class="search-filter border-0 radius-5 d-flex gray-light-bg-color fw-500 d-flex align-items-center" type="button" id="serach-filter" data-toggle="dropdown" aria-haspopup="true">
+                                            <span class="mdi mdi-sort-descending fz20 pr-2"></span>
+                                            <p class="fz14">Sort By</p>
+                                            <span class="mdi mdi-chevron-up fz20 pl-2"></span>
+                                        </button>
+                                        <div class="dropdown-menu search-dropdown" aria-labelledby="serach-filter">
+                                            <a class="dropdown-item" href="#">Campaign Name</a>
+                                            <a class="dropdown-item" href="#">Type</a>
+                                            <a class="dropdown-item" href="#">Budget</a>
+                                            <a class="dropdown-item" href="#">Category</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="dataTable table-responsive">
+                                    <table id="ongoingDataTable" class="display" style="width:100%">
+                                        <thead>
+                                            <tr>
+                                                <th class="custom-table-head">Campaign Name</th>
+                                                <th class="custom-table-head">Link</th>
+                                                <th class="custom-table-head">Client</th>
+                                                <th class="custom-table-head">Strted on</th>
+                                                <th class="custom-table-head">End Time</th>
+                                                <th class="custom-table-head">Imprsn.</th>
+                                                <th class="custom-table-head">Engmt.</th>
+                                                <th class="custom-table-head no-icon">&nbsp;</th>
+                                                <th class="custom-table-head no-icon">&nbsp;</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="custom-table-data active">
+                                                    <a href="#" class="d-flex align-items-center">
+                                                        <div class="notification active">
+                                                            <div class="c-user-img">
+                                                                <img src="https://via.placeholder.com/300" class="img" alt="Campaign Holder Image">
+                                                            </div>
+                                                        </div>
+                                                        <p class="c-title">
+                                                            Blendtec: Will It Blend Campaign
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data active">
+                                                    <a href="#" class="d-flex align-items-center">
+                                                        <div class="c-social-img">
+                                                            <img src="https://image.flaticon.com/icons/png/512/1384/1384053.png" class="img" alt="Social Icon">
+                                                        </div>
+                                                        <p class="c-title c-ongoing-title">
+                                                            FB Post
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data active">
+                                                    <a href="#">
+                                                        <p class="c-title d-flex flex-column">
+                                                            Shafayat
+                                                            <span class="fz12 fw-400 gray-light-text-color">BDT 50,000</span>
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data active">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">17 JUL, 21</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">09:00 PM</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data active">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">24 JUL, 21</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">08:59 PM</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data active">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">20,123</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">9.26%</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data active">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">20,123</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">9.26%</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data active">
+                                                    <button class="c-message-wrapper d-flex align-items-center border-0 bg-transparent">
+                                                        <div class="c-message-icon active">
+                                                            <span class="mdi mdi-message-outline"></span>
+                                                        </div>
+                                                        <p class="c-title active">
+                                                            12
+                                                        </p>
+                                                    </button>
+                                                </td>
+                                                <td class="custom-table-data active">
+                                                    <p class="c-title c-start-campaign active">
+                                                        Start Campaign
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="custom-table-data active">
+                                                    <a href="#" class="d-flex align-items-center">
+                                                        <div class="notification active">
+                                                            <div class="c-user-img">
+                                                                <img src="https://via.placeholder.com/300" class="img" alt="Campaign Holder Image">
+                                                            </div>
+                                                        </div>
+                                                        <p class="c-title">
+                                                            Blendtec: Will It Blend Campaign
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data active">
+                                                    <a href="#" class="d-flex align-items-center">
+                                                        <div class="c-social-img">
+                                                            <img src="https://image.flaticon.com/icons/png/512/1384/1384053.png" class="img" alt="Social Icon">
+                                                        </div>
+                                                        <p class="c-title c-ongoing-title">
+                                                            FB Post
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data active">
+                                                    <a href="#">
+                                                        <p class="c-title d-flex flex-column">
+                                                            Shafayat
+                                                            <span class="fz12 fw-400 gray-light-text-color">BDT 50,000</span>
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data active">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">17 JUL, 21</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">09:00 PM</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data active">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">24 JUL, 21</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">08:59 PM</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data active">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">20,123</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">9.26%</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data active">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">20,123</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">9.26%</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data active">
+                                                    <button class="c-message-wrapper d-flex align-items-center border-0 bg-transparent">
+                                                        <div class="c-message-icon active">
+                                                            <span class="mdi mdi-message-outline"></span>
+                                                        </div>
+                                                        <p class="c-title active">
+                                                            12
+                                                        </p>
+                                                    </button>
+                                                </td>
+                                                <td class="custom-table-data active">
+                                                    <p class="c-title c-start-campaign active">
+                                                        Start Campaign
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="custom-table-data active">
+                                                    <a href="#" class="d-flex align-items-center">
+                                                        <div class="notification active">
+                                                            <div class="c-user-img">
+                                                                <img src="https://via.placeholder.com/300" class="img" alt="Campaign Holder Image">
+                                                            </div>
+                                                        </div>
+                                                        <p class="c-title">
+                                                            Blendtec: Will It Blend Campaign
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data active">
+                                                    <a href="#" class="d-flex align-items-center">
+                                                        <div class="c-social-img">
+                                                            <img src="https://image.flaticon.com/icons/png/512/1384/1384053.png" class="img" alt="Social Icon">
+                                                        </div>
+                                                        <p class="c-title c-ongoing-title">
+                                                            FB Post
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data active">
+                                                    <a href="#">
+                                                        <p class="c-title d-flex flex-column">
+                                                            Shafayat
+                                                            <span class="fz12 fw-400 gray-light-text-color">BDT 50,000</span>
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data active">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">17 JUL, 21</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">09:00 PM</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data active">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">24 JUL, 21</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">08:59 PM</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data active">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">20,123</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">9.26%</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data active">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">20,123</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">9.26%</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data active">
+                                                    <button class="c-message-wrapper d-flex align-items-center border-0 bg-transparent">
+                                                        <div class="c-message-icon active">
+                                                            <span class="mdi mdi-message-outline"></span>
+                                                        </div>
+                                                        <p class="c-title active">
+                                                            12
+                                                        </p>
+                                                    </button>
+                                                </td>
+                                                <td class="custom-table-data active">
+                                                    <p class="c-title c-start-campaign active">
+                                                        Start Campaign
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="custom-table-data active">
+                                                    <a href="#" class="d-flex align-items-center">
+                                                        <div class="notification">
+                                                            <div class="c-user-img">
+                                                                <img src="https://via.placeholder.com/300" class="img" alt="Campaign Holder Image">
+                                                            </div>
+                                                        </div>
+                                                        <p class="c-title">
+                                                            Blendtec: Will It Blend Campaign
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <a href="#" class="d-flex align-items-center">
+                                                        <div class="c-social-img">
+                                                            <img src="https://image.flaticon.com/icons/png/512/1384/1384053.png" class="img" alt="Social Icon">
+                                                        </div>
+                                                        <p class="c-title c-ongoing-title">
+                                                            FB Post
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <a href="#">
+                                                        <p class="c-title d-flex flex-column">
+                                                            Shafayat
+                                                            <span class="fz12 fw-400 gray-light-text-color">BDT 50,000</span>
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">17 JUL, 21</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">09:00 PM</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">24 JUL, 21</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">08:59 PM</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">20,123</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">9.26%</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">20,123</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">9.26%</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <button class="c-message-wrapper d-flex align-items-center border-0 bg-transparent">
+                                                        <div class="c-message-icon">
+                                                            <span class="mdi mdi-message-outline"></span>
+                                                        </div>
+                                                        <p class="c-title">
+                                                            12
+                                                        </p>
+                                                    </button>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <p class="c-title c-start-campaign">
+                                                        Start Campaign
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="custom-table-data active">
+                                                    <a href="#" class="d-flex align-items-center">
+                                                        <div class="notification">
+                                                            <div class="c-user-img">
+                                                                <img src="https://via.placeholder.com/300" class="img" alt="Campaign Holder Image">
+                                                            </div>
+                                                        </div>
+                                                        <p class="c-title">
+                                                            Blendtec: Will It Blend Campaign
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <a href="#" class="d-flex align-items-center">
+                                                        <div class="c-social-img">
+                                                            <img src="https://image.flaticon.com/icons/png/512/1384/1384053.png" class="img" alt="Social Icon">
+                                                        </div>
+                                                        <p class="c-title c-ongoing-title">
+                                                            FB Post
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <a href="#">
+                                                        <p class="c-title d-flex flex-column">
+                                                            Shafayat
+                                                            <span class="fz12 fw-400 gray-light-text-color">BDT 50,000</span>
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">17 JUL, 21</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">09:00 PM</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">24 JUL, 21</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">08:59 PM</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">20,123</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">9.26%</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">20,123</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">9.26%</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <button class="c-message-wrapper d-flex align-items-center border-0 bg-transparent">
+                                                        <div class="c-message-icon">
+                                                            <span class="mdi mdi-message-outline"></span>
+                                                        </div>
+                                                        <p class="c-title">
+                                                            12
+                                                        </p>
+                                                    </button>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <p class="c-title c-start-campaign">
+                                                        Start Campaign
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="custom-table-data active">
+                                                    <a href="#" class="d-flex align-items-center">
+                                                        <div class="notification">
+                                                            <div class="c-user-img">
+                                                                <img src="https://via.placeholder.com/300" class="img" alt="Campaign Holder Image">
+                                                            </div>
+                                                        </div>
+                                                        <p class="c-title">
+                                                            Blendtec: Will It Blend Campaign
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <a href="#" class="d-flex align-items-center">
+                                                        <div class="c-social-img">
+                                                            <img src="https://image.flaticon.com/icons/png/512/1384/1384053.png" class="img" alt="Social Icon">
+                                                        </div>
+                                                        <p class="c-title c-ongoing-title">
+                                                            FB Post
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <a href="#">
+                                                        <p class="c-title d-flex flex-column">
+                                                            Shafayat
+                                                            <span class="fz12 fw-400 gray-light-text-color">BDT 50,000</span>
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">17 JUL, 21</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">09:00 PM</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">24 JUL, 21</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">08:59 PM</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">20,123</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">9.26%</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">20,123</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">9.26%</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <button class="c-message-wrapper d-flex align-items-center border-0 bg-transparent">
+                                                        <div class="c-message-icon">
+                                                            <span class="mdi mdi-message-outline"></span>
+                                                        </div>
+                                                        <p class="c-title">
+                                                            10
+                                                        </p>
+                                                    </button>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <p class="c-title c-start-campaign">
+                                                        Start Campaign
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="completed" role="tabpanel" aria-labelledby="completed-tab">
+                        <div class="d-flex justify-content-between mb-2 mb-md-3">
+                            <form action="" class="rs-form custom-form d-flex justify-content-between align-items-center">
+                                <button type="submit" class="position-absolute search-icon border-0 bg-transparent pl-3" for="searchInput">
+                                    <span class="mdi mdi-magnify search-img gray-light-text-color fz20"></span>
+                                </button>
+                                <input type="search" class="rs-input border-0 ra-data-table-bg gray-light-text-color fz14 fw-500 min-hieght-36 pl-5" id="searchInput" placeholder="Search in Connect Requests">
+                            </form>
+
+                            <div class="search-right d-flex align-items-center justify-content-center">
+                                <div class="mr-1 mr-md-3">
+                                    <button class="serach-number border-0 fw-500 d-flex align-items-center">
+                                        <p class="fz14"><span>1</span>-<span>4</span></p>
+                                    </button>
+                                </div>
+                                <div class="ra-filter mr-1 mr-md-3">
+                                    <div class="dropdown search-common">
+                                        <button class="search-filter border-0 radius-5 d-flex gray-light-bg-color fw-500 d-flex align-items-center" type="button" id="serach-filter" data-toggle="dropdown" aria-haspopup="true">
+                                            <span class="mdi mdi-filter-outline fz20 pr-2"></span>
+                                            <p class="fz14">Filter By</p>
+                                            <span class="mdi mdi-chevron-up fz20 pl-2"></span>
+                                        </button>
+                                        <div class="dropdown-menu search-dropdown" aria-labelledby="serach-filter">
+                                            <a class="dropdown-item" href="#">Campaign Name</a>
+                                            <a class="dropdown-item" href="#">Type</a>
+                                            <a class="dropdown-item" href="#">Budget</a>
+                                            <a class="dropdown-item" href="#">Category</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ra-filter">
+                                    <div class="dropdown search-common">
+                                        <button class="search-filter border-0 radius-5 d-flex gray-light-bg-color fw-500 d-flex align-items-center" type="button" id="serach-filter" data-toggle="dropdown" aria-haspopup="true">
+                                            <span class="mdi mdi-sort-descending fz20 pr-2"></span>
+                                            <p class="fz14">Sort By</p>
+                                            <span class="mdi mdi-chevron-up fz20 pl-2"></span>
+                                        </button>
+                                        <div class="dropdown-menu search-dropdown" aria-labelledby="serach-filter">
+                                            <a class="dropdown-item" href="#">Campaign Name</a>
+                                            <a class="dropdown-item" href="#">Type</a>
+                                            <a class="dropdown-item" href="#">Budget</a>
+                                            <a class="dropdown-item" href="#">Category</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="dataTable table-responsive">
+                                    <table id="completedDataTable" class="display" style="width:100%">
+                                        <thead>
+                                            <tr>
+                                                <th class="custom-table-head">Campaign Name</th>
+                                                <th class="custom-table-head">Payment</th>
+                                                <th class="custom-table-head">Client</th>
+                                                <th class="custom-table-head">Duration</th>
+                                                <th class="custom-table-head">Imprsn.</th>
+                                                <th class="custom-table-head">Engmt.</th>
+                                                <th class="custom-table-head">Rating</th>
+                                                <th class="custom-table-head no-icon">&nbsp;</th>
+                                                <th class="custom-table-head no-icon">&nbsp;</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="custom-table-data active">
+                                                    <a href="#" class="d-flex align-items-center">
+                                                        <div class="notification active">
+                                                            <div class="c-user-img">
+                                                                <img src="https://via.placeholder.com/300" class="img" alt="Campaign Holder Image">
+                                                            </div>
+                                                        </div>
+                                                        <p class="c-title">
+                                                            Blendtec: Will It Blend Campaign
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data active">
+                                                    <div class="progress c-progress">
+                                                        <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                                            <p class="c-title">
+                                                                Ready
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="custom-table-data active">
+                                                    <a href="#">
+                                                        <p class="c-title d-flex flex-column">
+                                                            Shafayat
+                                                            <span class="fz12 fw-400 gray-light-text-color">BDT 50,000</span>
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data active">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">17 JUL, 21</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">09:00 PM</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data active">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">20,123</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">9.26%</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data active">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">20,123</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">9.26%</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data active">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-star mdi mdi-star-outline"><span class="pl-2">5.0</span></span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data active">
+                                                    <button class="c-message-wrapper d-flex align-items-center border-0 bg-transparent">
+                                                        <p class="c-title">
+                                                            <span class="fz14 fw-400 gray-light-text-color">You gave <span class="fw-600">5.0</span></span>
+                                                        </p>
+                                                    </button>
+                                                </td>
+                                                <td class="custom-table-data active">
+                                                    <p class="c-title c-start-campaign active">
+                                                        Start Campaign
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="custom-table-data">
+                                                    <a href="#" class="d-flex align-items-center">
+                                                        <div class="notification active">
+                                                            <div class="c-user-img">
+                                                                <img src="https://via.placeholder.com/300" class="img" alt="Campaign Holder Image">
+                                                            </div>
+                                                        </div>
+                                                        <p class="c-title">
+                                                            Blendtec: Will It Blend Campaign
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <div class="progress c-progress">
+                                                        <div class="progress-bar" role="progressbar" style="width:60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+                                                            <p class="c-title">
+                                                                Processing
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <a href="#">
+                                                        <p class="c-title d-flex flex-column">
+                                                            Shafayat
+                                                            <span class="fz12 fw-400 gray-light-text-color">BDT 50,000</span>
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">17 JUL, 21</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">09:00 PM</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">20,123</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">9.26%</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">20,123</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">9.26%</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-star mdi mdi-star-outline"><span class="pl-2">4.0</span></span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <button class="c-message-wrapper d-flex align-items-center border-0 bg-transparent">
+                                                        <p class="c-title">
+                                                            <span class="fz14 fw-400 gray-light-text-color">You gave <span class="fw-600">4.0</span></span>
+                                                        </p>
+                                                    </button>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <p class="c-title c-start-campaign">
+                                                        Start Campaign
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="custom-table-data">
+                                                    <a href="#" class="d-flex align-items-center">
+                                                        <div class="notification active">
+                                                            <div class="c-user-img">
+                                                                <img src="https://via.placeholder.com/300" class="img" alt="Campaign Holder Image">
+                                                            </div>
+                                                        </div>
+                                                        <p class="c-title">
+                                                            Blendtec: Will It Blend Campaign
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <div class="progress c-progress">
+                                                        <div class="progress-bar" role="progressbar" style="width:0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                                            <p class="c-title">
+                                                                Pending
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <a href="#">
+                                                        <p class="c-title d-flex flex-column">
+                                                            Shafayat
+                                                            <span class="fz12 fw-400 gray-light-text-color">BDT 50,000</span>
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">17 JUL, 21</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">09:00 PM</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">20,123</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">9.26%</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">20,123</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">9.26%</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-star mdi mdi-star-outline"><span class="pl-2">-</span></span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <button class="c-message-wrapper d-flex align-items-center border-0 bg-transparent">
+                                                        <p class="c-title">
+                                                            <span class="fz14 fw-400 gray-light-text-color">You gave <span class="fw-600">0.0</span></span>
+                                                        </p>
+                                                    </button>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <p class="c-title c-start-campaign">
+                                                        Start Campaign
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="archieved" role="tabpanel" aria-labelledby="archieved-tab">
+                        <div class="d-flex justify-content-between mb-2 mb-md-3">
+                            <form action="" class="rs-form custom-form d-flex justify-content-between align-items-center">
+                                <button type="submit" class="position-absolute search-icon border-0 bg-transparent pl-3" for="searchInput">
+                                    <span class="mdi mdi-magnify search-img gray-light-text-color fz20"></span>
+                                </button>
+                                <input type="search" class="rs-input border-0 ra-data-table-bg gray-light-text-color fz14 fw-500 min-hieght-36 pl-5" id="searchInput" placeholder="Search in Connect Requests">
+                            </form>
+
+                            <div class="search-right d-flex align-items-center justify-content-center">
+                                <div class="mr-1 mr-md-3">
+                                    <button class="serach-number border-0 fw-500 d-flex align-items-center">
+                                        <p class="fz14"><span>1</span>-<span>4</span></p>
+                                    </button>
+                                </div>
+                                <div class="ra-filter mr-1 mr-md-3">
+                                    <div class="dropdown search-common">
+                                        <button class="search-filter border-0 radius-5 d-flex gray-light-bg-color fw-500 d-flex align-items-center" type="button" id="serach-filter" data-toggle="dropdown" aria-haspopup="true">
+                                            <span class="mdi mdi-filter-outline fz20 pr-2"></span>
+                                            <p class="fz14">Filter By</p>
+                                            <span class="mdi mdi-chevron-up fz20 pl-2"></span>
+                                        </button>
+                                        <div class="dropdown-menu search-dropdown" aria-labelledby="serach-filter">
+                                            <a class="dropdown-item" href="#">Campaign Name</a>
+                                            <a class="dropdown-item" href="#">Type</a>
+                                            <a class="dropdown-item" href="#">Budget</a>
+                                            <a class="dropdown-item" href="#">Category</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ra-filter">
+                                    <div class="dropdown search-common">
+                                        <button class="search-filter border-0 radius-5 d-flex gray-light-bg-color fw-500 d-flex align-items-center" type="button" id="serach-filter" data-toggle="dropdown" aria-haspopup="true">
+                                            <span class="mdi mdi-sort-descending fz20 pr-2"></span>
+                                            <p class="fz14">Sort By</p>
+                                            <span class="mdi mdi-chevron-up fz20 pl-2"></span>
+                                        </button>
+                                        <div class="dropdown-menu search-dropdown" aria-labelledby="serach-filter">
+                                            <a class="dropdown-item" href="#">Campaign Name</a>
+                                            <a class="dropdown-item" href="#">Type</a>
+                                            <a class="dropdown-item" href="#">Budget</a>
+                                            <a class="dropdown-item" href="#">Category</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="dataTable table-responsive">
+                                    <table id="archievedDataTable" class="display" style="width:100%">
+                                        <thead>
+                                            <tr>
+                                                <th class="custom-table-head">Campaign Name</th>
+                                                <th class="custom-table-head">Client</th>
+                                                <th class="custom-table-head">Duration</th>
+                                                <th class="custom-table-head">Imprsn.</th>
+                                                <th class="custom-table-head">Engmt.</th>
+                                                <th class="custom-table-head">Rating</th>
+                                                <th class="custom-table-head no-icon">&nbsp;</th>
+                                                <th class="custom-table-head">Recieved</th>
+                                                <th class="custom-table-head no-icon">&nbsp;</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+                                            <tr>
+                                                <td class="custom-table-data ">
+                                                    <a href="#" class="d-flex align-items-center">
+                                                        <div class="notification ">
+                                                            <div class="c-user-img">
+                                                                <img src="https://via.placeholder.com/300" class="img" alt="Campaign Holder Image">
+                                                            </div>
+                                                        </div>
+                                                        <p class="c-title">
+                                                            Blendtec: Will It Blend Campaign
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <a href="#">
+                                                        <p class="c-title d-flex flex-column">
+                                                            Shafayat
+                                                            <span class="fz12 fw-400 gray-light-text-color">BDT 50,000</span>
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">17 JUL, 21</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">09:00 PM</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">20,123</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">9.26%</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">20,123</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">9.26%</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-star mdi mdi-star-outline"><span class="pl-2">5.0</span></span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <button class="c-message-wrapper d-flex align-items-center border-0 bg-transparent">
+                                                        <p class="c-title">
+                                                            <span class="fz14 fw-400 gray-light-text-color">You gave <span
+                                 class="fw-600">5.0</span></span>
+                                                        </p>
+                                                    </button>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <button class="c-message-wrapper d-flex align-items-center border-0 bg-transparent">
+                                                        <p class="c-title c-archived">
+                                                            18 JUL, 21
+                                                        </p>
+                                                    </button>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <p class="c-title c-start-campaign active">
+                                                        View Details
+                                                    </p>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="custom-table-data ">
+                                                    <a href="#" class="d-flex align-items-center">
+                                                        <div class="notification ">
+                                                            <div class="c-user-img">
+                                                                <img src="https://via.placeholder.com/300" class="img" alt="Campaign Holder Image">
+                                                            </div>
+                                                        </div>
+                                                        <p class="c-title">
+                                                            Blendtec: Will It Blend Campaign
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <a href="#">
+                                                        <p class="c-title d-flex flex-column">
+                                                            Shafayat
+                                                            <span class="fz12 fw-400 gray-light-text-color">BDT 50,000</span>
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">17 JUL, 21</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">09:00 PM</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">20,123</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">9.26%</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">20,123</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">9.26%</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-star mdi mdi-star-outline"><span class="pl-2">5.0</span></span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <button class="c-message-wrapper d-flex align-items-center border-0 bg-transparent">
+                                                        <p class="c-title">
+                                                            <span class="fz14 fw-400 gray-light-text-color">You gave <span
+                                 class="fw-600">5.0</span></span>
+                                                        </p>
+                                                    </button>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <button class="c-message-wrapper d-flex align-items-center border-0 bg-transparent">
+                                                        <p class="c-title c-archived">
+                                                            18 JUL, 21
+                                                        </p>
+                                                    </button>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <p class="c-title c-start-campaign active">
+                                                        View Details
+                                                    </p>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="custom-table-data ">
+                                                    <a href="#" class="d-flex align-items-center">
+                                                        <div class="notification ">
+                                                            <div class="c-user-img">
+                                                                <img src="https://via.placeholder.com/300" class="img" alt="Campaign Holder Image">
+                                                            </div>
+                                                        </div>
+                                                        <p class="c-title">
+                                                            Blendtec: Will It Blend Campaign
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <a href="#">
+                                                        <p class="c-title d-flex flex-column">
+                                                            Shafayat
+                                                            <span class="fz12 fw-400 gray-light-text-color">BDT 50,000</span>
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">17 JUL, 21</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">09:00 PM</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">20,123</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">9.26%</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">20,123</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">9.26%</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-star mdi mdi-star-outline"><span class="pl-2">5.0</span></span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <button class="c-message-wrapper d-flex align-items-center border-0 bg-transparent">
+                                                        <p class="c-title">
+                                                            <span class="fz14 fw-400 gray-light-text-color">You gave <span
+                                 class="fw-600">5.0</span></span>
+                                                        </p>
+                                                    </button>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <button class="c-message-wrapper d-flex align-items-center border-0 bg-transparent">
+                                                        <p class="c-title c-archived">
+                                                            18 JUL, 21
+                                                        </p>
+                                                    </button>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <p class="c-title c-start-campaign active">
+                                                        View Details
+                                                    </p>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="custom-table-data ">
+                                                    <a href="#" class="d-flex align-items-center">
+                                                        <div class="notification ">
+                                                            <div class="c-user-img">
+                                                                <img src="https://via.placeholder.com/300" class="img" alt="Campaign Holder Image">
+                                                            </div>
+                                                        </div>
+                                                        <p class="c-title">
+                                                            Blendtec: Will It Blend Campaign
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <a href="#">
+                                                        <p class="c-title d-flex flex-column">
+                                                            Shafayat
+                                                            <span class="fz12 fw-400 gray-light-text-color">BDT 50,000</span>
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">17 JUL, 21</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">09:00 PM</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">20,123</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">9.26%</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">20,123</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">9.26%</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-star mdi mdi-star-outline"><span class="pl-2">5.0</span></span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <button class="c-message-wrapper d-flex align-items-center border-0 bg-transparent">
+                                                        <p class="c-title">
+                                                            <span class="fz14 fw-400 gray-light-text-color">You gave <span
+                                 class="fw-600">5.0</span></span>
+                                                        </p>
+                                                    </button>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <button class="c-message-wrapper d-flex align-items-center border-0 bg-transparent">
+                                                        <p class="c-title c-archived">
+                                                            18 JUL, 21
+                                                        </p>
+                                                    </button>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <p class="c-title c-start-campaign active">
+                                                        View Details
+                                                    </p>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="custom-table-data ">
+                                                    <a href="#" class="d-flex align-items-center">
+                                                        <div class="notification ">
+                                                            <div class="c-user-img">
+                                                                <img src="https://via.placeholder.com/300" class="img" alt="Campaign Holder Image">
+                                                            </div>
+                                                        </div>
+                                                        <p class="c-title">
+                                                            Blendtec: Will It Blend Campaign
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <a href="#">
+                                                        <p class="c-title d-flex flex-column">
+                                                            Shafayat
+                                                            <span class="fz12 fw-400 gray-light-text-color">BDT 50,000</span>
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">17 JUL, 21</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">09:00 PM</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">20,123</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">9.26%</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">20,123</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">9.26%</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-star mdi mdi-star-outline"><span class="pl-2">5.0</span></span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <button class="c-message-wrapper d-flex align-items-center border-0 bg-transparent">
+                                                        <p class="c-title">
+                                                            <span class="fz14 fw-400 gray-light-text-color">You gave <span
+                                 class="fw-600">5.0</span></span>
+                                                        </p>
+                                                    </button>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <button class="c-message-wrapper d-flex align-items-center border-0 bg-transparent">
+                                                        <p class="c-title c-archived">
+                                                            18 JUL, 21
+                                                        </p>
+                                                    </button>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <p class="c-title c-start-campaign active">
+                                                        View Details
+                                                    </p>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="custom-table-data ">
+                                                    <a href="#" class="d-flex align-items-center">
+                                                        <div class="notification ">
+                                                            <div class="c-user-img">
+                                                                <img src="https://via.placeholder.com/300" class="img" alt="Campaign Holder Image">
+                                                            </div>
+                                                        </div>
+                                                        <p class="c-title">
+                                                            Blendtec: Will It Blend Campaign
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <a href="#">
+                                                        <p class="c-title d-flex flex-column">
+                                                            Shafayat
+                                                            <span class="fz12 fw-400 gray-light-text-color">BDT 50,000</span>
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">17 JUL, 21</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">09:00 PM</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">20,123</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">9.26%</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">20,123</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">9.26%</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-star mdi mdi-star-outline"><span class="pl-2">5.0</span></span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <button class="c-message-wrapper d-flex align-items-center border-0 bg-transparent">
+                                                        <p class="c-title">
+                                                            <span class="fz14 fw-400 gray-light-text-color">You gave <span
+                                 class="fw-600">5.0</span></span>
+                                                        </p>
+                                                    </button>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <button class="c-message-wrapper d-flex align-items-center border-0 bg-transparent">
+                                                        <p class="c-title c-archived">
+                                                            18 JUL, 21
+                                                        </p>
+                                                    </button>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <p class="c-title c-start-campaign active">
+                                                        View Details
+                                                    </p>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="custom-table-data ">
+                                                    <a href="#" class="d-flex align-items-center">
+                                                        <div class="notification ">
+                                                            <div class="c-user-img">
+                                                                <img src="https://via.placeholder.com/300" class="img" alt="Campaign Holder Image">
+                                                            </div>
+                                                        </div>
+                                                        <p class="c-title">
+                                                            Blendtec: Will It Blend Campaign
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <a href="#">
+                                                        <p class="c-title d-flex flex-column">
+                                                            Shafayat
+                                                            <span class="fz12 fw-400 gray-light-text-color">BDT 50,000</span>
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">17 JUL, 21</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">09:00 PM</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">20,123</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">9.26%</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">20,123</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">9.26%</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-star mdi mdi-star-outline"><span class="pl-2">5.0</span></span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <button class="c-message-wrapper d-flex align-items-center border-0 bg-transparent">
+                                                        <p class="c-title">
+                                                            <span class="fz14 fw-400 gray-light-text-color">You gave <span
+                                 class="fw-600">5.0</span></span>
+                                                        </p>
+                                                    </button>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <button class="c-message-wrapper d-flex align-items-center border-0 bg-transparent">
+                                                        <p class="c-title c-archived">
+                                                            18 JUL, 21
+                                                        </p>
+                                                    </button>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <p class="c-title c-start-campaign active">
+                                                        View Details
+                                                    </p>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="custom-table-data ">
+                                                    <a href="#" class="d-flex align-items-center">
+                                                        <div class="notification ">
+                                                            <div class="c-user-img">
+                                                                <img src="https://via.placeholder.com/300" class="img" alt="Campaign Holder Image">
+                                                            </div>
+                                                        </div>
+                                                        <p class="c-title">
+                                                            Blendtec: Will It Blend Campaign
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <a href="#">
+                                                        <p class="c-title d-flex flex-column">
+                                                            Shafayat
+                                                            <span class="fz12 fw-400 gray-light-text-color">BDT 50,000</span>
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">17 JUL, 21</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">09:00 PM</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">20,123</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">9.26%</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">20,123</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">9.26%</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-star mdi mdi-star-outline"><span class="pl-2">5.0</span></span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <button class="c-message-wrapper d-flex align-items-center border-0 bg-transparent">
+                                                        <p class="c-title">
+                                                            <span class="fz14 fw-400 gray-light-text-color">You gave <span
+                                 class="fw-600">5.0</span></span>
+                                                        </p>
+                                                    </button>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <button class="c-message-wrapper d-flex align-items-center border-0 bg-transparent">
+                                                        <p class="c-title c-archived">
+                                                            18 JUL, 21
+                                                        </p>
+                                                    </button>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <p class="c-title c-start-campaign active">
+                                                        View Details
+                                                    </p>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="custom-table-data ">
+                                                    <a href="#" class="d-flex align-items-center">
+                                                        <div class="notification ">
+                                                            <div class="c-user-img">
+                                                                <img src="https://via.placeholder.com/300" class="img" alt="Campaign Holder Image">
+                                                            </div>
+                                                        </div>
+                                                        <p class="c-title">
+                                                            Blendtec: Will It Blend Campaign
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <a href="#">
+                                                        <p class="c-title d-flex flex-column">
+                                                            Shafayat
+                                                            <span class="fz12 fw-400 gray-light-text-color">BDT 50,000</span>
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">17 JUL, 21</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">09:00 PM</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">20,123</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">9.26%</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">20,123</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">9.26%</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-star mdi mdi-star-outline"><span class="pl-2">5.0</span></span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <button class="c-message-wrapper d-flex align-items-center border-0 bg-transparent">
+                                                        <p class="c-title">
+                                                            <span class="fz14 fw-400 gray-light-text-color">You gave <span
+                                 class="fw-600">5.0</span></span>
+                                                        </p>
+                                                    </button>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <button class="c-message-wrapper d-flex align-items-center border-0 bg-transparent">
+                                                        <p class="c-title c-archived">
+                                                            18 JUL, 21
+                                                        </p>
+                                                    </button>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <p class="c-title c-start-campaign active">
+                                                        View Details
+                                                    </p>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="custom-table-data ">
+                                                    <a href="#" class="d-flex align-items-center">
+                                                        <div class="notification ">
+                                                            <div class="c-user-img">
+                                                                <img src="https://via.placeholder.com/300" class="img" alt="Campaign Holder Image">
+                                                            </div>
+                                                        </div>
+                                                        <p class="c-title">
+                                                            Blendtec: Will It Blend Campaign
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <a href="#">
+                                                        <p class="c-title d-flex flex-column">
+                                                            Shafayat
+                                                            <span class="fz12 fw-400 gray-light-text-color">BDT 50,000</span>
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">17 JUL, 21</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">09:00 PM</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">20,123</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">9.26%</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">20,123</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">9.26%</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-star mdi mdi-star-outline"><span class="pl-2">5.0</span></span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <button class="c-message-wrapper d-flex align-items-center border-0 bg-transparent">
+                                                        <p class="c-title">
+                                                            <span class="fz14 fw-400 gray-light-text-color">You gave <span
+                                 class="fw-600">5.0</span></span>
+                                                        </p>
+                                                    </button>
+                                                </td>
+                                                <td class="custom-table-data ">
+                                                    <button class="c-message-wrapper d-flex align-items-center border-0 bg-transparent">
+                                                        <p class="c-title c-archived">
+                                                            18 JUL, 21
+                                                        </p>
+                                                    </button>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <p class="c-title c-start-campaign active">
+                                                        View Details
+                                                    </p>
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </main>
     </div>
 
