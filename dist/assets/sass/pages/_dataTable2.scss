@@ -28,18 +28,90 @@ table.dataTable>thead .custom-table-head.no-icon.sorting_desc:after {
 .custom-table-head {
    background: #fff;
    padding: 15px 17px;
-   font-size: 14px;
+   font-size: rem(14px);
    font-weight: 500;
 }
 
 tbody td.custom-table-data.active {
    background: #F7F7F7;
    border-top: 1px solid $grayLightBgColor;
-   padding: 20px 17px;
 }
 
 tbody td.custom-table-data {
    background: #ffffff;
    border-top: 1px solid $grayLightBgColor;
-   padding: 20px 17px;
+   padding: 7px 18px;
+   font-size: rem(14px);
+   font-weight: 500;
+   white-space: nowrap;
+}
+
+.c-user-img {
+   width: 32px;
+   height: 32px;
+   border-radius: 50%;
+   overflow: hidden;
+   display: flex;
+}
+
+.c-title {
+   font-size: rem(14px);
+   color: #000;
+   display: inline-block;
+   padding-left: 10px;
+   font-weight: 500;
+}
+
+.notification {
+   position: relative;
+}
+
+.notification.active:after {
+   right: 0px;
+   top: 3px;
+   width: 10px;
+   height: 10px;
+   border: 2px solid #F7F7F7;
+
+   background: $orang;
+   content: '';
+   position: absolute;
+   border-radius: 50%;
+}
+
+.c-social-img {
+   width: 16px;
+   overflow: hidden;
+   display: flex;
+}
+
+.c-date.active {
+   color: $orang;
+}
+
+.c-message-icon {
+   width: 16px;
+   height: 16px;
+   font-size: rem(16px);
+}
+
+.c-message-wrapper .c-message-icon.active,
+.c-message-wrapper .c-title.active {
+   color: $darkBlueColor;
+}
+
+.c-start-campaign.active {
+   color: $darkBlueColor;
+   font-weight: 700;
+}
+
+.c-start-campaign {
+   font-weight: 400;
+   color: $darkBlueColor;
+}
+
+.c-ongoing-title {
+   color: $darkBlueColor;
+   font-weight: 600;
+   font-size: rem(12px);
 }

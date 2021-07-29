@@ -38,7 +38,7 @@
 .dropdown .dropdown-menu.search-dropdown {
    width: 200px;
    padding: 0px;
-   font-size: 14px;
+   font-size: rem(14px);
    font-weight: 500;
    transform: translate3d(0, 31px, 0) !important;
    background-clip: unset;

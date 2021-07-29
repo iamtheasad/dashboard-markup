@@ -141,6 +141,10 @@ function datatable2(){
         "paging": false,
         "searching": false,
     });
+    $('#completedDataTable').DataTable({
+        "paging": false,
+        "searching": false,
+    });
 }
 
 function getFileName() {

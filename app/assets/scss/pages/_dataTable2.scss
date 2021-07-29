@@ -115,3 +115,21 @@ tbody td.custom-table-data {
    font-weight: 600;
    font-size: rem(12px);
 }
+
+.progress.c-progress {
+   height: auto;
+   background: $grayProgressLight;
+}
+
+.c-progress .progress-bar .c-title {
+   padding-right: 10px;
+}
+
+.c-progress .progress-bar {
+   background: $grayProgressDark;
+}
+
+.c-star {
+   width: 20px;
+   height: 20px;
+}
