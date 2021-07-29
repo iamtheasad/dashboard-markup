@@ -145,6 +145,10 @@ function datatable2(){
         "paging": false,
         "searching": false,
     });
+    $('#archievedDataTable').DataTable({
+        "paging": false,
+        "searching": false,
+    });
 }
 
 function getFileName() {
