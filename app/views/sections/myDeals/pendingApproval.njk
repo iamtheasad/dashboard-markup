@@ -1,0 +1,99 @@
+<div class="row">
+   <div class="col-md-12">
+      <div class="dataTable table-responsive">
+         <table id="pendingApproval" class="display" style="width:100%">
+            <thead>
+               <tr>
+                  <th class="custom-table-head">
+                     {% include "snippets/myDeals/checkBoxHead.njk" %}
+                     <p>Campaign Name</p>
+                  </th>
+                  <th class="custom-table-head">Type</th>
+                  <th class="custom-table-head">Created by</th>
+                  <th class="custom-table-head">Start Date</th>
+                  <th class="custom-table-head">Offered</th>
+                  <th class="custom-table-head">Connects</th>
+                  <th class="custom-table-head no-icon">&nbsp;</th>
+                  <th class="custom-table-head no-icon">&nbsp;</th>
+                  <th class="custom-table-head no-icon">&nbsp;</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td class="custom-table-data d-flex align-items-center">
+                     {% include "snippets/myDeals/checkBox.njk" %}
+
+                     <a href="#" class="d-flex align-items-center">
+                        <div class="notification">
+                           <div class="c-user-img">
+                              <img src="https://via.placeholder.com/300" class="img" alt="Campaign Holder Image">
+                           </div>
+                        </div>
+                        <p class="c-title">
+                           Airbnb: We Are Here Campaign
+                        </p>
+                     </a>
+                  </td>
+                  <td class="custom-table-data">
+                     <a href="#" class="d-flex align-items-center">
+                        <div class="c-social-img">
+                           <img src="https://image.flaticon.com/icons/png/512/1384/1384053.png" class="img"
+                              alt="Social Icon">
+                        </div>
+                        <p class="c-title c-ongoing-title">
+                           FB Post
+                        </p>
+                     </a>
+                  </td>
+                  <td class="custom-table-data">
+                     <a href="#">
+                        <p class="c-title d-flex flex-column">
+                           Kashef
+                           <span class="fz12 fw-400 gray-light-text-color">BDT 50,000</span>
+                        </p>
+                     </a>
+                  </td>
+                  <td class="custom-table-data">
+                     <p class="c-title d-flex flex-column">
+                        <span class="fz14 fw-500 c-date">24 JUL, 21</span>
+                        <span class="fz12 fw-400 gray-light-text-color">09:00 PM</span>
+                     </p>
+                  </td>
+                  <td class="custom-table-data">
+                     <p class="c-title d-flex flex-column">
+                        <span class="fz14 fw-500 c-date">20,000</span>
+                     </p>
+                  </td>
+                  <td class="custom-table-data">
+                     <p class="c-title d-flex flex-column">
+                        <span class="fz14 fw-500 c-date">5</span>
+                     </p>
+                  </td>
+                  <td class="custom-table-data">
+                     <button class="c-message-wrapper d-flex align-items-center border-0 bg-transparent">
+                        <div class="c-message-icon">
+                           <span class="mdi mdi-message-outline"></span>
+                        </div>
+                        <p class="c-title">
+                           5
+                        </p>
+                     </button>
+                  </td>
+                  <td class="custom-table-data">
+                     <p class="c-title d-flex flex-column">
+                        <span class="fz14 fw-500 c-date">24 JUL, 21</span>
+                        <span class="fz12 fw-400 gray-light-text-color">09:00 PM</span>
+                     </p>
+                  </td>
+                  <td class="custom-table-data">
+                     <button class="c-title c-start-campaign active c-datatable-btn">
+                        Cancel
+                     </button>
+                  </td>
+               </tr>
+               
+            </tbody>
+         </table>
+      </div>
+   </div>
+</div>

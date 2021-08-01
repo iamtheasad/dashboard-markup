@@ -129,9 +129,12 @@ tbody td.custom-table-data {
 }
 
 .c-ongoing-title {
-   color: $darkBlueColor;
    font-weight: 600;
    font-size: rem(12px);
+}
+
+.c-ongoing-title.active {
+   color: $darkBlueColor;
 }
 
 .progress.c-progress {
