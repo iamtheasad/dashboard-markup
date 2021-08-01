@@ -132,23 +132,14 @@ function dataTable(element) {
 }
 
 // My Campaign Data Table
-function datatable2(){
-    $('#myCampaignDatatTable').DataTable({
-        "paging": false,
-        "searching": false,
-    });
-    $('#ongoingDataTable').DataTable({
-        "paging": false,
-        "searching": false,
-    });
-    $('#completedDataTable').DataTable({
-        "paging": false,
-        "searching": false,
-    });
-    $('#archievedDataTable').DataTable({
-        "paging": false,
-        "searching": false,
-    });
+function dataTable2(element) {
+    var element = $(element);
+    if (element.length) {
+        $(element).DataTable({
+            "paging": false,
+            "searching": false,
+        });
+    }
 }
 
 function getFileName() {
@@ -219,11 +210,17 @@ function influencerStepForm() {
     WHEN DOCUMENT LOADING
 ==========================================================================*/
 $(window).on('load', function () {
-    datatable2();
     inputAnimate();
     checkbox();
     menuToggler();
     getFileName();
+
+    dataTable2('#myCampaignDatatTable');
+    dataTable2('#ongoingDataTable');
+    dataTable2('#completedDataTable');
+    dataTable2('#archievedDataTable');
+    dataTable2('#connectRequestsDataTable');
+    dataTable2('#inProgressDataTable');
 
     dataTable('#propertyDataTable');
     dataTable('#propertyDetailsDataTable');

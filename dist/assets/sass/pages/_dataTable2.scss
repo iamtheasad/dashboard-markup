@@ -25,9 +25,13 @@ table.dataTable>thead .custom-table-head.no-icon.sorting_desc:after {
    height: 0;
 }
 
-table.dataTable>thead.custom-table-head>tr>th:not(.sorting_disabled),
-table.dataTable>thead.custom-table-data>tr>td:not(.sorting_disabled) {
-   white-space: nowrap;
+// table.dataTable>thead>tr>th:not(.sorting_disabled),
+// table.dataTable>thead>tr>td:not(.sorting_disabled) {
+//    white-space: nowrap;
+// }
+
+thead{
+   background: $white;
 }
 
 .custom-table-head {
@@ -36,6 +40,7 @@ table.dataTable>thead.custom-table-data>tr>td:not(.sorting_disabled) {
    font-size: rem(14px);
    font-weight: 500;
    height: 56px;
+   width: 100%;
 }
 
 .custom-table-head p {
@@ -219,4 +224,9 @@ tbody td.custom-table-data {
    border: solid #fff;
    border-width: 0 2px 2px 0;
    transform: rotate(45deg);
+}
+
+.c-datatable-btn {
+   border: none;
+   background: transparent;
 }

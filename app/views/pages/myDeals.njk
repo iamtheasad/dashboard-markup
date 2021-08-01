@@ -35,17 +35,17 @@
             searchTitle : 'Search in In Progress'
          }%}
          {% include "sections/myCampaigns/searchBar.njk"%}
-         {% include "sections/myCampaigns/ongoingDataTable.njk"%}
+         {% include "sections/myDeals/inProgressDataTable.njk"%}
       </div>
       <div class="tab-pane fade" id="approval" role="tabpanel" aria-labelledby="approval-tab">
          {% set data = {
             searchTitle : 'Search in Pending Approval'
          }%}
          {% include "sections/myCampaigns/searchBar.njk"%}
-         {% include "sections/myCampaigns/ongoingDataTable.njk"%}
+       
       </div>
       <div class="tab-pane fade" id="cancelled" role="tabpanel" aria-labelledby="cancelled-tab">
-         {% include "sections/myCampaigns/archievedDataTable.njk"%}
+       
       </div>
    </div>
 </div>
