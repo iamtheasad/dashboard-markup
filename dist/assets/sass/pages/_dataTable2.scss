@@ -25,10 +25,10 @@ table.dataTable>thead .custom-table-head.no-icon.sorting_desc:after {
    height: 0;
 }
 
-// table.dataTable>thead>tr>th:not(.sorting_disabled),
-// table.dataTable>thead>tr>td:not(.sorting_disabled) {
-//    white-space: nowrap;
-// }
+table.dataTable>thead>tr>th:not(.sorting_disabled),
+table.dataTable>thead>tr>td:not(.sorting_disabled) {
+   white-space: nowrap;
+}
 
 thead{
    background: $white;
@@ -129,9 +129,12 @@ tbody td.custom-table-data {
 }
 
 .c-ongoing-title {
-   color: $darkBlueColor;
    font-weight: 600;
    font-size: rem(12px);
+}
+
+.c-ongoing-title.active {
+   color: $darkBlueColor;
 }
 
 .progress.c-progress {
@@ -192,7 +195,7 @@ tbody td.custom-table-data {
    transition: .2s ease;
 }
 
-/* On mouse-over, add a grey background color */
+/* On mouse-over, add a background color */
 .checkbox-wrapper:hover input~.checkmark {
    background-color: $white;
 }
@@ -229,4 +232,13 @@ tbody td.custom-table-data {
 .c-datatable-btn {
    border: none;
    background: transparent;
+}
+
+label.checkbox-wrapper.checkbox-head {
+   position: absolute;
+   top: 23px;
+}
+
+label.checkbox-wrapper.checkbox-head~p {
+   padding-left: 25px;
 }
