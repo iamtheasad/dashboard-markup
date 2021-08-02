@@ -165,10 +165,14 @@
 }
 
 .my-deals-form-height {
-   height: 42vh;
+   min-height: calc(100vh-120px);
    display: flex;
    flex-direction: column;
    justify-content: space-between;
+
+   @media screen and (max-width: 992px) {
+      min-height: 100vh;
+   }
 }
 
 .deals-details {
