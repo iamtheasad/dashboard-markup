@@ -163,3 +163,10 @@
    padding: 10px 15px;
    color: $black;
 }
+
+.my-deals-form-height {
+   height:32vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
