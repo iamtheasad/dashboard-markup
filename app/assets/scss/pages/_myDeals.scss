@@ -129,9 +129,9 @@
    border: 1px solid $grayLight2 !important;
 }
 
-.no-gutter > [class*='col-'] {
-   padding-right:0;
-   padding-left:0;
+.no-gutter>[class*='col-'] {
+   padding-right: 0;
+   padding-left: 0;
 }
 
 .my-deals-form {
@@ -154,7 +154,7 @@
    display: flex;
 }
 
-.my-deals-form input{
+.my-deals-form input {
    background: $white;
    border: 1px solid $grayProgressLight;
    border-radius: 4px;
@@ -169,4 +169,37 @@
    display: flex;
    flex-direction: column;
    justify-content: space-between;
+}
+
+.deals-details {
+   padding: 16px 20px;
+}
+
+.deals-details-desc {
+   color: $tabBtnBg;
+}
+
+.in-btn-primary.hashtag-primary {
+   border: none;
+   background: $tabBtnBg;
+   color: $white;
+   padding: 4px 12px;
+   border-radius: 4px;
+}
+
+.in-btn-primary.hashtag-secondary {
+   border: none;
+   background: $grayProgressLight;
+   color: $black;
+   padding: 4px 12px;
+   border-radius: 4px;
+}
+
+.my-deals-attachment {
+   display: flex;
+   justify-content: space-between;
+}
+
+.my-deals-attachment-img {
+   width: 145px;
 }
