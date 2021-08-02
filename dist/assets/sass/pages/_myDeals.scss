@@ -1,3 +1,7 @@
+.ra-progress {
+   height: 95vh;
+}
+
 .ra-progress-top {
    display: flex;
    justify-content: space-between;
@@ -37,9 +41,10 @@
 
 .ra-progress-item {
    display: flex;
-   padding: 10px 20px;
+   padding: 0px 20px;
    align-items: center;
    background-color: $white;
+   height: 72px;
 }
 
 .ra-progress-item.active {
@@ -81,4 +86,49 @@
    justify-content: space-between;
 }
 
+.ra-brand-name-subtitle {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
 
+.green-dot.active {
+   width: 8px;
+   height: 8px;
+   background-color: $greenDark;
+   border-radius: 50%;
+   display: block;
+}
+
+.green-dot {
+   display: none;
+}
+
+.rs-btn.in-btn-primary {
+   background-color: $tabBtnBg;
+   color: $white;
+   font-weight: 500;
+}
+
+.rs-btn.in-btn-primary:hover {
+   color: $white;
+}
+
+.brand-name-top {
+   background-color: $dataTableSearchBgColor;
+   padding: 16px;
+   margin-bottom: 16px;
+}
+
+.brand-name-body {
+   padding: 0px 16px;
+
+   p {
+      color: $tabBtnBg;
+      margin-bottom: 5px;
+   }
+}
+
+.ra-progress.border {
+   border: 1px solid $grayLight2 !important;
+}

@@ -100,4 +100,66 @@
    display: none;
 }
 
+.rs-btn.in-btn-primary {
+   background-color: $tabBtnBg;
+   color: $white;
+   font-weight: 500;
+}
 
+.rs-btn.in-btn-primary:hover {
+   color: $white;
+}
+
+.brand-name-top {
+   background-color: $dataTableSearchBgColor;
+   padding: 16px;
+   margin-bottom: 16px;
+}
+
+.brand-name-body {
+   padding: 0px 16px;
+
+   p {
+      color: $tabBtnBg;
+      margin-bottom: 5px;
+   }
+}
+
+.ra-progress.border {
+   border: 1px solid $grayLight2 !important;
+}
+
+.no-gutter > [class*='col-'] {
+   padding-right:0;
+   padding-left:0;
+}
+
+.my-deals-form {
+   padding: 16px 20px;
+   background-color: $dataTableSearchBgColor;
+}
+
+.rs-btn.in-btn-secondary {
+   border: none;
+   background-color: $tabBtnBg;
+   opacity: 0.6;
+   color: #fff;
+}
+
+.rs-btn.in-btn-secondary:hover {
+   color: $white;
+}
+
+.my-deals-form {
+   display: flex;
+}
+
+.my-deals-form input{
+   background: $white;
+   border: 1px solid $grayProgressLight;
+   border-radius: 4px;
+   font-size: 14px;
+   width: 100%;
+   padding: 10px 15px;
+   color: $black;
+}
