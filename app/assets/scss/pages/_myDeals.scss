@@ -1,0 +1,103 @@
+.ra-progress-top {
+   display: flex;
+   justify-content: space-between;
+   padding: 16px 20px;
+   background: $primaryBg;
+}
+
+.ra-three-dot-btn {
+   position: relative;
+   background-color: transparent;
+   border: none;
+}
+
+.ra-three-dot-btn span:nth-child(1),
+.ra-three-dot-btn span:nth-child(2),
+.ra-three-dot-btn span:nth-child(3) {
+   position: absolute;
+   left: 50%;
+   transform: translateX(-50%);
+   width: 3px;
+   height: 3px;
+   background: $black;
+   border-radius: 50%;
+}
+
+.ra-three-dot-btn span:nth-child(1) {
+   top: 25%;
+}
+
+.ra-three-dot-btn span:nth-child(2) {
+   top: 50%;
+}
+
+.ra-three-dot-btn span:nth-child(3) {
+   top: 75%;
+}
+
+.ra-progress-item {
+   display: flex;
+   padding: 0px 20px;
+   align-items: center;
+   background-color: $white;
+   height: 72px;
+}
+
+.ra-progress-item.active {
+   background-color: $dataTableSearchBgColor;
+}
+
+.ra-progress-user {
+   width: 36px;
+   height: 36px;
+   border-radius: 50%;
+   overflow: hidden;
+   display: flex;
+}
+
+.progress-user-status {
+   position: relative;
+}
+
+.ra-progress-social {
+   position: absolute;
+   width: 16px;
+   height: 16px;
+   top: 60%;
+   left: 79%;
+   transform: translate(-50%, -50%);
+}
+
+.ra-progress-social img {
+   border-radius: 4px 0 4px 0;
+}
+
+.ra-progress-body {
+   width: 100%;
+   padding-left: 10px;
+}
+
+.ra-brand-name-title {
+   display: flex;
+   justify-content: space-between;
+}
+
+.ra-brand-name-subtitle {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.green-dot.active {
+   width: 8px;
+   height: 8px;
+   background-color: $greenDark;
+   border-radius: 50%;
+   display: block;
+}
+
+.green-dot {
+   display: none;
+}
+
+
