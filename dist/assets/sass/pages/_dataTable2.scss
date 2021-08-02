@@ -41,6 +41,7 @@ thead{
    font-weight: 500;
    height: 56px;
    width: 100%;
+   max-width: 250px;
 }
 
 .custom-table-head p {
@@ -131,6 +132,11 @@ tbody td.custom-table-data {
 .c-ongoing-title {
    font-weight: 600;
    font-size: rem(12px);
+}
+
+.c-start-campaign.in-porgress {
+   color: $black;
+   font-weight: 600;
 }
 
 .c-ongoing-title.active {
@@ -241,4 +247,9 @@ label.checkbox-wrapper.checkbox-head {
 
 label.checkbox-wrapper.checkbox-head~p {
    padding-left: 25px;
+}
+
+.in-table-row {
+   // background: gray;
+   // opacity: .5;
 }

@@ -17,7 +17,7 @@
             role="tab" aria-controls="approval" aria-selected="false">Pending Approval</a>
       </li>
       <li class="nav-item">
-         <a class="nav-link ra-custom-nav-link rounded-0 dot" id="cancelled-tab" href="myDealsCancelled.html"
+         <a class="nav-link ra-custom-nav-link rounded-0 dot" id="cancelled-tab" data-toggle="pill" href="#cancelled"
             role="tab" aria-controls="cancelled" aria-selected="false">Cancelled</a>
       </li>
    </ul>
@@ -43,6 +43,13 @@
          }%}
          {% include "sections/myCampaigns/searchBar.njk"%}
          {% include "sections/myDeals/pendingApproval.njk"%}
+      </div>
+      <div class="tab-pane fade" id="cancelled" role="tabpanel" aria-labelledby="cancelled-tab">
+         {% set data = {
+            searchTitle : 'Search in Cancelled'
+         }%}
+         {% include "sections/myCampaigns/searchBar.njk"%}
+         {% include "sections/myDeals/cancelled.njk"%}
       </div>
    </div>
 </div>

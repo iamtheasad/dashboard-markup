@@ -1,7 +1,3 @@
-.ra-progress {
-   height: 95vh;
-}
-
 .ra-progress-top {
    display: flex;
    justify-content: space-between;
@@ -131,4 +127,83 @@
 
 .ra-progress.border {
    border: 1px solid $grayLight2 !important;
+}
+
+.no-gutter>[class*='col-'] {
+   padding-right: 0;
+   padding-left: 0;
+}
+
+.my-deals-form {
+   padding: 16px 20px;
+   background-color: $dataTableSearchBgColor;
+}
+
+.rs-btn.in-btn-secondary {
+   border: none;
+   background-color: $tabBtnBg;
+   opacity: 0.6;
+   color: #fff;
+}
+
+.rs-btn.in-btn-secondary:hover {
+   color: $white;
+}
+
+.my-deals-form {
+   display: flex;
+}
+
+.my-deals-form input {
+   background: $white;
+   border: 1px solid $grayProgressLight;
+   border-radius: 4px;
+   font-size: 14px;
+   width: 100%;
+   padding: 10px 15px;
+   color: $black;
+}
+
+.my-deals-form-height {
+   min-height: calc(100vh-120px);
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+
+   @media screen and (max-width: 992px) {
+      min-height: 100vh;
+   }
+}
+
+.deals-details {
+   padding: 16px 20px;
+}
+
+.deals-details-desc {
+   color: $tabBtnBg;
+}
+
+.in-btn-primary.hashtag-primary {
+   border: none;
+   background: $tabBtnBg;
+   color: $white;
+   padding: 4px 12px;
+   border-radius: 4px;
+}
+
+.in-btn-primary.hashtag-secondary {
+   border: none;
+   background: $grayProgressLight;
+   color: $black;
+   padding: 4px 12px;
+   border-radius: 4px;
+}
+
+.my-deals-attachment {
+   display: flex;
+   justify-content: space-between;
+}
+
+.my-deals-attachment-img {
+   width: 145px;
 }

@@ -53,8 +53,8 @@
                             </ul>
                         </div>
                     </li>
-                    <li><a href="placesAllAdded.html"><img class="icon" src="assets/images/icons/adplace.svg" alt="">Ad
-                            Place</a></li>
+                    <li><a href="placesAllAdded.html"><img class="icon" src="assets/images/icons/adplace.svg" alt="">Ad Place</a></li>
+                    <li><a href="connects.html"><img class="icon" src="assets/images/icons/connect.svg" alt="">Connects</a></li>
 
                     <li>
                         <a href="#report-sidebar-menu" data-toggle="collapse">
@@ -166,7 +166,7 @@
                         <a class="nav-link ra-custom-nav-link rounded-0 dot" id="approval-tab" data-toggle="pill" href="#approval" role="tab" aria-controls="approval" aria-selected="false">Pending Approval</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link ra-custom-nav-link rounded-0 dot" id="cancelled-tab" href="myDealsCancelled.html" role="tab" aria-controls="cancelled" aria-selected="false">Cancelled</a>
+                        <a class="nav-link ra-custom-nav-link rounded-0 dot" id="cancelled-tab" data-toggle="pill" href="#cancelled" role="tab" aria-controls="cancelled" aria-selected="false">Cancelled</a>
                     </li>
                 </ul>
 
@@ -619,6 +619,232 @@
                                     <span class="mdi mdi-magnify search-img gray-light-text-color fz20"></span>
                                 </button>
                                 <input type="search" class="rs-input border-0 ra-data-table-bg gray-light-text-color fz14 fw-500 min-hieght-36 pl-5" id="searchInput" placeholder="Search in Pending Approval">
+                            </form>
+
+                            <div class="search-right d-flex align-items-center justify-content-center">
+                                <div class="mr-1 mr-md-3">
+                                    <button class="serach-number border-0 fw-500 d-flex align-items-center">
+                                        <p class="fz14"><span>1</span>-<span>4</span></p>
+                                    </button>
+                                </div>
+                                <div class="ra-filter mr-1 mr-md-3">
+                                    <div class="dropdown search-common">
+                                        <button class="search-filter border-0 radius-5 d-flex gray-light-bg-color fw-500 d-flex align-items-center" type="button" id="serach-filter" data-toggle="dropdown" aria-haspopup="true">
+                                            <span class="mdi mdi-filter-outline fz20 pr-2"></span>
+                                            <p class="fz14">Filter By</p>
+                                            <span class="mdi mdi-chevron-up fz20 pl-2"></span>
+                                        </button>
+                                        <div class="dropdown-menu search-dropdown" aria-labelledby="serach-filter">
+                                            <a class="dropdown-item" href="#">Campaign Name</a>
+                                            <a class="dropdown-item" href="#">Type</a>
+                                            <a class="dropdown-item" href="#">Budget</a>
+                                            <a class="dropdown-item" href="#">Category</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ra-filter">
+                                    <div class="dropdown search-common">
+                                        <button class="search-filter border-0 radius-5 d-flex gray-light-bg-color fw-500 d-flex align-items-center" type="button" id="serach-filter" data-toggle="dropdown" aria-haspopup="true">
+                                            <span class="mdi mdi-sort-descending fz20 pr-2"></span>
+                                            <p class="fz14">Sort By</p>
+                                            <span class="mdi mdi-chevron-up fz20 pl-2"></span>
+                                        </button>
+                                        <div class="dropdown-menu search-dropdown" aria-labelledby="serach-filter">
+                                            <a class="dropdown-item" href="#">Campaign Name</a>
+                                            <a class="dropdown-item" href="#">Type</a>
+                                            <a class="dropdown-item" href="#">Budget</a>
+                                            <a class="dropdown-item" href="#">Category</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="dataTable table-responsive">
+                                    <table id="pendingApproval" class="display" style="width:100%">
+                                        <thead>
+                                            <tr>
+                                                <th class="custom-table-head">
+                                                    <label class="checkbox-wrapper checkbox-head">
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                    <p>Campaign Name</p>
+                                                </th>
+                                                <th class="custom-table-head">Type</th>
+                                                <th class="custom-table-head">Created by</th>
+                                                <th class="custom-table-head">Start Date</th>
+                                                <th class="custom-table-head">Offered</th>
+                                                <th class="custom-table-head">Connects</th>
+                                                <th class="custom-table-head no-icon">&nbsp;</th>
+                                                <th class="custom-table-head no-icon">&nbsp;</th>
+                                                <th class="custom-table-head no-icon">&nbsp;</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="in-table-row">
+                                                <td class="custom-table-data d-flex align-items-center">
+                                                    <label class="checkbox-wrapper">
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+
+                                                    <a href="#" class="d-flex align-items-center">
+                                                        <div class="notification">
+                                                            <div class="c-user-img">
+                                                                <img src="https://via.placeholder.com/300" class="img" alt="Campaign Holder Image">
+                                                            </div>
+                                                        </div>
+                                                        <p class="c-title">
+                                                            Airbnb: We Are Here Campaign
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <a href="#" class="d-flex align-items-center">
+                                                        <div class="c-social-img">
+                                                            <img src="https://image.flaticon.com/icons/png/512/1384/1384053.png" class="img" alt="Social Icon">
+                                                        </div>
+                                                        <p class="c-title c-ongoing-title">
+                                                            FB Post
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <a href="#">
+                                                        <p class="c-title d-flex flex-column">
+                                                            Kashef
+                                                            <span class="fz12 fw-400 gray-light-text-color">BDT 50,000</span>
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">24 JUL, 21</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">09:00 PM</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">20,000</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">5</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <button class="c-message-wrapper d-flex align-items-center border-0 bg-transparent">
+                                                        <div class="c-message-icon">
+                                                            <span class="mdi mdi-message-outline"></span>
+                                                        </div>
+                                                        <p class="c-title">
+                                                            5
+                                                        </p>
+                                                    </button>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">24 JUL, 21</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">09:00 PM</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <button class="c-title c-start-campaign active c-datatable-btn">
+                                                        Cancel
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr class="in-table-row">
+                                                <td class="custom-table-data d-flex align-items-center">
+                                                    <label class="checkbox-wrapper">
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+
+                                                    <a href="#" class="d-flex align-items-center">
+                                                        <div class="notification">
+                                                            <div class="c-user-img">
+                                                                <img src="https://via.placeholder.com/300" class="img" alt="Campaign Holder Image">
+                                                            </div>
+                                                        </div>
+                                                        <p class="c-title">
+                                                            Airbnb: We Are Here Campaign
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <a href="#" class="d-flex align-items-center">
+                                                        <div class="c-social-img">
+                                                            <img src="https://image.flaticon.com/icons/png/512/1384/1384053.png" class="img" alt="Social Icon">
+                                                        </div>
+                                                        <p class="c-title c-ongoing-title">
+                                                            FB Post
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <a href="#">
+                                                        <p class="c-title d-flex flex-column">
+                                                            Kashef
+                                                            <span class="fz12 fw-400 gray-light-text-color">BDT 50,000</span>
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">24 JUL, 21</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">09:00 PM</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">20,000</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">5</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <button class="c-message-wrapper d-flex align-items-center border-0 bg-transparent">
+                                                        <div class="c-message-icon">
+                                                            <span class="mdi mdi-message-outline"></span>
+                                                        </div>
+                                                        <p class="c-title">
+                                                            5
+                                                        </p>
+                                                    </button>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <p class="c-title d-flex flex-column">
+                                                        <span class="fz14 fw-500 c-date">24 JUL, 21</span>
+                                                        <span class="fz12 fw-400 gray-light-text-color">09:00 PM</span>
+                                                    </p>
+                                                </td>
+                                                <td class="custom-table-data">
+                                                    <button class="c-title c-start-campaign active c-datatable-btn">
+                                                        Cancel
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="cancelled" role="tabpanel" aria-labelledby="cancelled-tab">
+
+                        <div class="d-flex justify-content-between mb-2 mb-md-3">
+                            <form action="" class="rs-form custom-form d-flex justify-content-between align-items-center">
+                                <button type="submit" class="position-absolute search-icon border-0 bg-transparent pl-3" for="searchInput">
+                                    <span class="mdi mdi-magnify search-img gray-light-text-color fz20"></span>
+                                </button>
+                                <input type="search" class="rs-input border-0 ra-data-table-bg gray-light-text-color fz14 fw-500 min-hieght-36 pl-5" id="searchInput" placeholder="Search in Cancelled">
                             </form>
 
                             <div class="search-right d-flex align-items-center justify-content-center">
