@@ -88,12 +88,18 @@
    align-items: center;
 }
 
+.ra-time {
+   white-space: nowrap;
+}
+
 .green-dot.active {
    width: 8px;
    height: 8px;
    background-color: $greenDark;
    border-radius: 50%;
    display: block;
+   align-self: flex-start;
+   margin-top: 6px;
 }
 
 .green-dot {
@@ -165,7 +171,7 @@
 }
 
 .my-deals-form-height {
-   min-height: calc(100vh-120px);
+   min-height: calc(100vh-110px);
    display: flex;
    flex-direction: column;
    justify-content: space-between;
@@ -177,6 +183,10 @@
 
 .deals-details {
    padding: 16px 20px;
+
+   @media  screen and(max-width: 767px) {
+      padding: 0px;
+   }
 }
 
 .deals-details-desc {
@@ -201,9 +211,12 @@
 
 .my-deals-attachment {
    display: flex;
-   justify-content: space-between;
 }
 
 .my-deals-attachment-img {
    width: 145px;
+}
+
+.my-deals-attachment-img:not(:last-child) {
+   margin-right: 8px;
 }
