@@ -131,7 +131,7 @@ function dataTable(element) {
     }
 }
 
-// My Campaign Data Table
+/* Influencer Looping Data Table Id */
 function dataTable2(element) {
     var element = $(element);
     if (element.length) {
