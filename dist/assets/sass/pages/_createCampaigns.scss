@@ -27,28 +27,3 @@
    border-bottom: 1px solid #dedede;
    margin-bottom: 20px;
 }
-
-.campaign-star {
-   color: $grayProgressLight;
-   font-size: 25px;
-}
-
-.campaign-star.checked {
-   color: $grayLightTextColor;
-}
-
-.ra-progress-item.custom{
-   height: unset;
-}
-
-.img {
-   object-fit: cover;
-}
-
-.post-black {
-   color: $black;
-}
-
-.post-blue {
-   color: $darkBlueColor;
-}
