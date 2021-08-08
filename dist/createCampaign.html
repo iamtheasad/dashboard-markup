@@ -169,117 +169,49 @@
                 </div>
             </header>
 
-            <!-- Add Place Details Page -->
+            <div class="filter-wrapper filter-wrapper-custom ra-data-table-bg">
+                <form action="" class="rs-form custom-form d-flex justify-content-between align-items-center mb-md-0 mb-3">
+                    <button type="submit" class="position-absolute search-icon border-0 bg-transparent pl-3 d-flex align-items-center" for="searchInput">
+                        <span class="fz20 fw-600">All Campaigns</span><span class="mdi mdi-magnify search-img black-color fw-600 search-custom pl-4"></span>
+                    </button>
+                    <input type="search" class="rs-input border-0 ra-data-table-bg gray-light-text-color fz14 fw-500 min-hieght-36 pl-3 d-none" id="searchInput" placeholder="">
+                </form>
 
-            <div class="d-card mb-5">
-                <div class="location-info">
-                    <div class="row ">
-                        <div class="col">
-                            <p class="fz24 fw-500 mb-3">AdPlaceName 1</p>
+                <div class="search-right d-flex align-items-center justify-content-center">
+                    <div class="mr-1 mr-md-3">
+                        <div class="serach-number border-0 fw-500 d-flex align-items-center min-hieght-36">
+                            <p class="fz14 mr-2"><span>1</span>-<span>10</span> of <span>11</span></p>
+                            <button class="filter-number"><span class="mdi mdi-chevron-left"></span></button>
+                            <button class="filter-number active"><span class="mdi mdi-chevron-right active"></span></button>
                         </div>
-                        <div class="col d-flex justify-content-end align-items-center">
-                            <p class="fz12 gray-color">Est. m/m Growth</p>
-                            <div class="ra-property-details-head d-flex align-items-center">
-                                <p class="fz24 pl-3 pr-2 fw-700">36.5%</p>
-                                <span class="mdi mdi-menu-up green-color fz44"></span>
+                    </div>
+                    <div class="ra-filter mr-1 mr-md-3">
+                        <div class="dropdown search-common">
+                            <button class="search-filter border-0 radius-5 d-flex gray-light-bg-color fw-500 d-flex align-items-center min-hieght-36" type="button" id="serach-filter" data-toggle="dropdown" aria-haspopup="true">
+                                <span class="mdi mdi-filter-outline fz20 pr-2"></span>
+                                <p class="fz14">Filter By</p>
+                                <span class="mdi mdi-chevron-up fz20 pl-2"></span>
+                            </button>
+                            <div class="dropdown-menu search-dropdown" aria-labelledby="serach-filter">
+                                <a class="dropdown-item" href="#">Campaign Name</a>
+                                <a class="dropdown-item" href="#">Type</a>
+                                <a class="dropdown-item" href="#">Budget</a>
+                                <a class="dropdown-item" href="#">Category</a>
                             </div>
                         </div>
                     </div>
-
-                    <div class="row">
-                        <div class="col">
-                            <p class="fz12 gray-color mb-1">ID</p>
-                            <div class="d-flex align-items-center">
-                                <p class="fz14 fw-500">88876</p>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <p class="fz12 gray-color mb-1">Property Name</p>
-                            <div class="d-flex align-items-center">
-                                <p class="fz14 fw-500">PropertyName</p>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <p class="fz12 gray-color mb-1">Property Type</p>
-                            <div class="d-flex align-items-center">
-                                <p class="fz14 fw-500">Website</p>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <p class="fz12 gray-color mb-1">Request</p>
-                            <div class="d-flex align-items-center">
-                                <p class="fz14 fw-500">1,625,790,161</p>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <p class="fz12 gray-color mb-1">Impressions</p>
-                            <div class="d-flex align-items-center">
-                                <p class="fz14 fw-500">1,625,790,161</p>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <p class="fz12 gray-color mb-1">Fill Rate</p>
-                            <div class="d-flex align-items-center">
-                                <p class="fz14 fw-500">85.29%</p>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <p class="fz12 gray-color mb-1">Clicks</p>
-                            <div class="d-flex align-items-center">
-                                <p class="fz14 fw-500">148,673</p>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <p class="fz12 gray-color mb-1">Revenue</p>
-                            <div class="d-flex align-items-center">
-                                <p class="fz14 fw-500">৳ 1,702,908</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="proper-button-wrapper d-flex mt-4">
-                        <div class="user_btn mr-2">
-                            <a href="javascript:void(0)" class="rs-btn rs-btn-lg rs-btn-primary uppercase fz20">Get Code</a>
-                        </div>
-
-                        <div class="user_btn mr-2">
-                            <a href="javascript:void(0)" class="rs-btn rs-btn-lg uppercase fz20">Reports</a>
-                        </div>
-
-                        <div class="user_btn mr-2">
-                            <button data-target="#placeEditModal" data-toggle="modal" class="rs-btn rs-btn-lg uppercase fz20">edit</button>
-                        </div>
-
-                        <!-- Modal -->
-                        <div class="modal fade" id="placeEditModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-lg" role="document">
-                                <div class="modal-content p-xl-5 p-lg-3 p-md-1 changePasswordModal-content">
-                                    <form action="">
-                                        <div class="modal-header border-bottom-0">
-                                            <h5 class="modal-title" id="exampleModalLabel">Edit Ad Place</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span class="mdi mdi-close" aria-hidden="true"></span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body pb-5">
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                    <fieldset class="rs-form mb-2">
-                                                        <label for="editName" class="rs-label fz10">Edit Ad Place Name</label>
-                                                        <input type="text" class="rs-input fw-500 fz18" value="Ad Place Name">
-                                                    </fieldset>
-                                                </div>
-                                            </div>
-                                            <div class="d-flex mt-3">
-                                                <button href="propertyDetailsPage.html" type="submit" class="rs-btn rs-btn-primary rs-btn-lg uppercase mr-3">Update</button>
-                                            </div>
-
-                                            <div class="guide-line fw-500 mt-5">
-                                                Need Help? Visit here <a href="#" class="ra-primary-color fw-700">Guideline</a>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
+                    <div class="ra-filter">
+                        <div class="dropdown search-common">
+                            <button class="search-filter border-0 radius-5 d-flex gray-light-bg-color fw-500 d-flex align-items-center min-hieght-36" type="button" id="serach-filter" data-toggle="dropdown" aria-haspopup="true">
+                                <span class="mdi mdi-sort-descending fz20 pr-2"></span>
+                                <p class="fz14">Sort By</p>
+                                <span class="mdi mdi-chevron-up fz20 pl-2"></span>
+                            </button>
+                            <div class="dropdown-menu search-dropdown" aria-labelledby="serach-filter">
+                                <a class="dropdown-item" href="#">Campaign Name</a>
+                                <a class="dropdown-item" href="#">Type</a>
+                                <a class="dropdown-item" href="#">Budget</a>
+                                <a class="dropdown-item" href="#">Category</a>
                             </div>
                         </div>
                     </div>

@@ -1,0 +1,29 @@
+.search-custom {
+   font-size: 31px;
+}
+
+.filter-number {
+   border-radius: 4px;
+   height: 24px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border: none;
+   margin: 8px 8px 8px 0px;
+   opacity: .5;
+   background-color: $grayLight1;
+   color: $black;
+}
+
+.filter-number.active {
+   background-color: $grayLight1;
+   color: $black;
+   opacity: 1;
+}
+
+.filter-wrapper-custom {
+   height: 61px;
+   padding: 16px 20px;
+   border-bottom: 1px solid #dedede;
+   margin-bottom: 20px;
+}
