@@ -229,34 +229,71 @@
   }
 }
 
+.influClose {
+  position: absolute;
+  top: 3%;
+  left: 92%;
+}
+
+.influ-active-icon {
+  width: 30px;
+  padding-right: 5px;
+}
+
+.influ-user {
+  background-color: $primaryBg;
+}
+.influ-inactive,
+.influ-active,
+.influ-accepted {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 200px;
+}
+
+.influ-inactive {
+  color: #ffc700;
+  border: 1px solid #ffc700;
+}
+
+.influ-active {
+  color: #00c66d;
+  border: 1px solid #00c66d;
+}
+
+.influ-accepted {
+  color: #4a6dff;
+  border: 1px solid #4a6dff;
+}
+
 /***********************************
 // Influencer Progress Bar
 **************************************/
-.influencer-step-form{
-  .step-menu{
+.influencer-step-form {
+  .step-menu {
     position: relative;
     padding-bottom: 16px;
     overflow: hidden;
 
-    .progress-bar{
+    .progress-bar {
       position: absolute;
       overflow: hidden;
       width: 100%;
-      background-color: #EFEFF4;
+      background-color: $grayLight;
       height: 8px;
       border-radius: 20px;
       left: 0;
-      bottom: 0;  
+      bottom: 0;
 
-      & > span{
+      & > span {
         position: absolute;
         top: 0;
         left: 0;
-        width: 32px;
+        min-width: 32px;
         height: 100%;
-        background-color: #475364;
+        background-color: $primaryColor;
         border-radius: 20px;
-        transition: width .3s ease-in-out;
+        transition: width 0.3s ease-in-out;
       }
     }
 
@@ -264,19 +301,27 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      li{
+      li {
         font-size: rem(20);
-        color: #8E8E93;
+        color: #8e8e93;
         font-weight: 500;
         &.stepped {
-          color: #475364;
+          color: $primaryColor;
+          span {
+            opacity: 1;
+            display: block;
+          }
+        }
+        span {
+          opacity: 0;
+          display: none;
         }
       }
     }
   }
 
-  .step-content{
-    .step{
+  .step-content {
+    .step {
       display: none;
       &.show {
         display: block;

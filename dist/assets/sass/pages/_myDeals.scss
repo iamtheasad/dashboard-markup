@@ -1,0 +1,222 @@
+.ra-progress-top {
+   display: flex;
+   justify-content: space-between;
+   padding: 16px 20px;
+   background: $primaryBg;
+}
+
+.ra-three-dot-btn {
+   position: relative;
+   background-color: transparent;
+   border: none;
+}
+
+.ra-three-dot-btn span:nth-child(1),
+.ra-three-dot-btn span:nth-child(2),
+.ra-three-dot-btn span:nth-child(3) {
+   position: absolute;
+   left: 50%;
+   transform: translateX(-50%);
+   width: 3px;
+   height: 3px;
+   background: $black;
+   border-radius: 50%;
+}
+
+.ra-three-dot-btn span:nth-child(1) {
+   top: 25%;
+}
+
+.ra-three-dot-btn span:nth-child(2) {
+   top: 50%;
+}
+
+.ra-three-dot-btn span:nth-child(3) {
+   top: 75%;
+}
+
+.ra-progress-item {
+   display: flex;
+   padding: 0px 20px;
+   align-items: center;
+   background-color: $white;
+   height: 72px;
+}
+
+.ra-progress-item.active {
+   background-color: $dataTableSearchBgColor;
+}
+
+.ra-progress-user {
+   width: 36px;
+   height: 36px;
+   border-radius: 50%;
+   overflow: hidden;
+   display: flex;
+}
+
+.progress-user-status {
+   position: relative;
+}
+
+.ra-progress-social {
+   position: absolute;
+   width: 16px;
+   height: 16px;
+   top: 60%;
+   left: 79%;
+   transform: translate(-50%, -50%);
+}
+
+.ra-progress-social img {
+   border-radius: 4px 0 4px 0;
+}
+
+.ra-progress-body {
+   width: 100%;
+   padding-left: 10px;
+}
+
+.ra-brand-name-title {
+   display: flex;
+   justify-content: space-between;
+}
+
+.ra-brand-name-subtitle {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.ra-time {
+   white-space: nowrap;
+}
+
+.green-dot.active {
+   width: 8px;
+   height: 8px;
+   background-color: $greenDark;
+   border-radius: 50%;
+   display: block;
+   align-self: flex-start;
+   margin-top: 6px;
+}
+
+.green-dot {
+   display: none;
+}
+
+.rs-btn.in-btn-primary {
+   background-color: $tabBtnBg;
+   color: $white;
+   font-weight: 500;
+}
+
+.rs-btn.in-btn-primary:hover {
+   color: $white;
+}
+
+.brand-name-top {
+   background-color: $dataTableSearchBgColor;
+   padding: 16px;
+   margin-bottom: 16px;
+}
+
+.brand-name-body {
+   padding: 0px 16px;
+
+   p {
+      color: $tabBtnBg;
+      margin-bottom: 5px;
+   }
+}
+
+.ra-progress.border {
+   border: 1px solid $grayLight2 !important;
+}
+
+.no-gutter>[class*='col-'] {
+   padding-right: 0;
+   padding-left: 0;
+}
+
+.my-deals-form {
+   padding: 16px 20px;
+   background-color: $dataTableSearchBgColor;
+}
+
+.rs-btn.in-btn-secondary {
+   border: none;
+   background-color: $tabBtnBg;
+   opacity: 0.6;
+   color: #fff;
+}
+
+.rs-btn.in-btn-secondary:hover {
+   color: $white;
+}
+
+.my-deals-form {
+   display: flex;
+}
+
+.my-deals-form input {
+   background: $white;
+   border: 1px solid $grayProgressLight;
+   border-radius: 4px;
+   font-size: 14px;
+   width: 100%;
+   padding: 10px 15px;
+   color: $black;
+}
+
+.my-deals-form-height {
+   min-height: calc(100vh-110px);
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+
+   @media screen and (max-width: 992px) {
+      min-height: 100vh;
+   }
+}
+
+.deals-details {
+   padding: 16px 20px;
+
+   @media  screen and(max-width: 767px) {
+      padding: 0px;
+   }
+}
+
+.deals-details-desc {
+   color: $tabBtnBg;
+}
+
+.in-btn-primary.hashtag-primary {
+   border: none;
+   background: $tabBtnBg;
+   color: $white;
+   padding: 4px 12px;
+   border-radius: 4px;
+}
+
+.in-btn-primary.hashtag-secondary {
+   border: none;
+   background: $grayProgressLight;
+   color: $black;
+   padding: 4px 12px;
+   border-radius: 4px;
+}
+
+.my-deals-attachment {
+   display: flex;
+}
+
+.my-deals-attachment-img {
+   width: 145px;
+}
+
+.my-deals-attachment-img:not(:last-child) {
+   margin-right: 8px;
+}

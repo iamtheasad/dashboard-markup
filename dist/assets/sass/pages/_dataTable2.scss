@@ -1,0 +1,255 @@
+// Data Table Start
+table.dataTable>thead .custom-table-head.sorting:before,
+table.dataTable>thead .custom-table-head.sorting_asc:before,
+table.dataTable>thead .custom-table-head.sorting_desc:before {
+   clip-path: polygon(50% 100%, 100% 33%, 100% 0, 50% 67%, 0 0, 0 33%);
+   width: 10px;
+}
+
+table.dataTable>thead .custom-table-head.sorting:after,
+table.dataTable>thead .custom-table-head.sorting_asc:after,
+table.dataTable>thead .custom-table-head.sorting_desc:after {
+   clip-path: polygon(50% 0, 100% 70%, 100% 100%, 50% 33%, 0 100%, 0 70%);
+   width: 10px;
+   top: 40%;
+}
+
+table.dataTable>thead .custom-table-head.no-icon.sorting:before,
+table.dataTable>thead .custom-table-head.no-icon.sorting_asc:before,
+table.dataTable>thead .custom-table-head.no-icon.sorting_desc:before,
+table.dataTable>thead .custom-table-head.no-icon.sorting:after,
+table.dataTable>thead .custom-table-head.no-icon.sorting_asc:after,
+table.dataTable>thead .custom-table-head.no-icon.sorting_desc:after {
+   clip-path: unset;
+   width: 0;
+   height: 0;
+}
+
+table.dataTable>thead>tr>th:not(.sorting_disabled),
+table.dataTable>thead>tr>td:not(.sorting_disabled) {
+   white-space: nowrap;
+}
+
+thead{
+   background: $white;
+}
+
+.custom-table-head {
+   background: $white;
+   padding: 0px 20px;
+   font-size: rem(14px);
+   font-weight: 500;
+   height: 56px;
+   width: 100%;
+   max-width: 250px;
+}
+
+.custom-table-head p {
+   display: flex;
+   align-items: center;
+   font-size: rem(14px);
+   font-weight: 500;
+}
+
+tbody td.custom-table-data.active {
+   background: $whiteLight;
+   border-top: 1px solid $grayLightBgColor;
+}
+
+tbody td.custom-table-data {
+   background: $white;
+   border-top: 1px solid $grayLightBgColor;
+   padding: 0px 20px;
+   font-size: rem(14px);
+   font-weight: 500;
+   white-space: nowrap;
+   height: 64px;
+}
+
+.c-user-img {
+   width: 32px;
+   height: 32px;
+   border-radius: 50%;
+   overflow: hidden;
+   display: flex;
+}
+
+.c-title {
+   font-size: rem(14px);
+   color: #000;
+   display: inline-block;
+   padding-left: 10px;
+   font-weight: 500;
+}
+
+.notification {
+   position: relative;
+}
+
+.notification.active:after {
+   right: 0px;
+   top: 3px;
+   width: 10px;
+   height: 10px;
+   border: 2px solid $whiteLight;
+   background: $orang;
+   content: '';
+   position: absolute;
+   border-radius: 50%;
+}
+
+.c-social-img {
+   width: 16px;
+   overflow: hidden;
+   display: flex;
+}
+
+.c-date.active {
+   color: $orang;
+}
+
+.c-message-icon {
+   width: 16px;
+   height: 16px;
+   font-size: rem(16px);
+}
+
+.c-message-wrapper .c-message-icon.active,
+.c-message-wrapper .c-title.active {
+   color: $darkBlueColor;
+}
+
+.c-start-campaign.active {
+   color: $darkBlueColor;
+   font-weight: 600;
+}
+
+.c-start-campaign {
+   font-weight: 400;
+   color: $darkBlueColor;
+}
+
+.c-ongoing-title {
+   font-weight: 600;
+   font-size: rem(12px);
+}
+
+.c-start-campaign.in-porgress {
+   color: $black;
+   font-weight: 600;
+}
+
+.c-ongoing-title.active {
+   color: $darkBlueColor;
+}
+
+.progress.c-progress {
+   height: auto;
+   background: $grayProgressLight;
+}
+
+.c-progress .progress-bar .c-title {
+   padding-right: 10px;
+}
+
+.c-progress .progress-bar {
+   background: $grayProgressDark;
+}
+
+.c-star {
+   width: 20px;
+   height: 20px;
+}
+
+.c-title.c-archived {
+   padding-left: 0px;
+}
+
+// Checkbox
+.checkbox-wrapper {
+   display: block;
+   position: relative;
+   padding-left: 26px;
+   margin-bottom: 12px;
+   cursor: pointer;
+   font-size: 22px;
+   -webkit-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-wrapper input {
+   position: absolute;
+   opacity: 0;
+   cursor: pointer;
+   height: 0;
+   width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+   position: absolute;
+   top: 0;
+   left: 0px;
+   height: 16px;
+   width: 16px;
+   background-color: $white;
+   border: 1px solid $grayCheckboxLight;
+   border-radius: 4px;
+   transition: .2s ease;
+}
+
+/* On mouse-over, add a background color */
+.checkbox-wrapper:hover input~.checkmark {
+   background-color: $white;
+}
+
+/* When the checkbox is checked, add a background */
+.checkbox-wrapper input:checked~.checkmark {
+   background-color: $tabBtnBg;
+   border-color: $grayCheckboxLight;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+   content: "";
+   position: absolute;
+   display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-wrapper input:checked~.checkmark:after {
+   display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-wrapper .checkmark:after {
+   left: 5px;
+   top: 0px;
+   width: 5px;
+   height: 10px;
+   border: solid #fff;
+   border-width: 0 2px 2px 0;
+   transform: rotate(45deg);
+}
+
+.c-datatable-btn {
+   border: none;
+   background: transparent;
+}
+
+label.checkbox-wrapper.checkbox-head {
+   position: absolute;
+   top: 23px;
+}
+
+label.checkbox-wrapper.checkbox-head~p {
+   padding-left: 25px;
+}
+
+.in-table-row {
+   // background: gray;
+   // opacity: .5;
+}

@@ -1,0 +1,56 @@
+{% extends "layouts/layout.njk" %}
+
+{% block content %}
+
+<div class="ra-gray-light-bg p-20">
+   <ul class="nav d-flex justify-content-center nav-pills bg-transparent tab-wrapper" id="pills-tab" role="tablist">
+      <li class="nav-item">
+         <a class="nav-link ra-custom-nav-link rounded-0 active dot" id="request-tab" data-toggle="pill" href="#request"
+            role="tab" aria-controls="request" aria-selected="true">Connect Requests (2)</a>
+      </li>
+      <li class="nav-item">
+         <a class="nav-link ra-custom-nav-link rounded-0 dot" id="progress-tab" data-toggle="pill" href="#progress"
+            role="tab" aria-controls="progress" aria-selected="false">In Progress (1)</a>
+      </li>
+      <li class="nav-item">
+         <a class="nav-link ra-custom-nav-link rounded-0 dot" id="approval-tab" data-toggle="pill" href="#approval"
+            role="tab" aria-controls="approval" aria-selected="false">Pending Approval</a>
+      </li>
+      <li class="nav-item">
+         <a class="nav-link ra-custom-nav-link rounded-0 dot" id="cancelled-tab" data-toggle="pill" href="#cancelled"
+            role="tab" aria-controls="cancelled" aria-selected="false">Cancelled</a>
+      </li>
+   </ul>
+
+   <div class="tab-content" id="pills-tabContent">
+      <div class="tab-pane fade show active" id="request" role="tabpanel" aria-labelledby="request-tab">
+         {% set data = {
+            searchTitle : 'Search in Connect Requests'
+         }%}
+         {% include "snippets/searchBar.njk"%}
+         {% include "sections/myDeals/connectRequestsDataTable.njk"%}
+      </div>
+      <div class="tab-pane fade" id="progress" role="tabpanel" aria-labelledby="progress-tab">
+         {% set data = {
+            searchTitle : 'Search in In Progress'
+         }%}
+         {% include "snippets/searchBar.njk"%}
+         {% include "sections/myDeals/inProgressDataTable.njk"%}
+      </div>
+      <div class="tab-pane fade" id="approval" role="tabpanel" aria-labelledby="approval-tab">
+         {% set data = {
+            searchTitle : 'Search in Pending Approval'
+         }%}
+         {% include "snippets/searchBar.njk"%}
+         {% include "sections/myDeals/pendingApproval.njk"%}
+      </div>
+      <div class="tab-pane fade" id="cancelled" role="tabpanel" aria-labelledby="cancelled-tab">
+         {% set data = {
+            searchTitle : 'Search in Cancelled'
+         }%}
+         {% include "snippets/searchBar.njk"%}
+         {% include "sections/myDeals/cancelled.njk"%}
+      </div>
+   </div>
+</div>
+{% endblock %}

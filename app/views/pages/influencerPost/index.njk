@@ -1,0 +1,38 @@
+{% set base = "../" %}
+
+{% extends "layouts/layout.njk" %}
+
+{% block content %}
+<div class="ra-data-table-bg p-3 pt-4 border-radius-8 ra-property-list dashbaord-main">
+   <div class="row">
+      <div class="col-md-12">
+         <div class="property-data-table-head mb-2">
+            <h2 class="fw-500 fz24 text-sm-center">Influencer Posts</h2>
+
+            <div class="propert-header-right">
+               <fieldset class="rs-form mr-2">
+                  <select class="ra-select min-height-40 form-width fw-700 fz16">
+                     <option class="fz18 fw-500" value="platforms" selected>All Platforms</option>
+                     <option class="fz18 fw-500" value="youtube">Youtube</option>
+                     <option class="fz18 fw-500" value="youtube">Youtube</option>
+                     <option class="fz18 fw-500" value="youtube">Youtube</option>
+                  </select>
+               </fieldset>
+               <fieldset class="rs-form mr-2">
+                  <select class="ra-select min-height-40 form-width fw-700 fz16">
+                     <option class="fz18 fw-500" value="platforms" selected>All Campaigns</option>
+                     <option class="fz18 fw-500" value="youtube">Campaigns 1</option>
+                     <option class="fz18 fw-500" value="youtube">Campaigns 2</option>
+                     <option class="fz18 fw-500" value="youtube">Campaigns 3</option>
+                  </select>
+               </fieldset>
+            </div>
+         </div>
+         <div class="dataTable table-responsive">
+            {% include "snippets/dataTable/influencerPostDatatable.njk" %}
+         </div>
+      </div>
+   </div>
+</div>
+
+{% endblock %}
