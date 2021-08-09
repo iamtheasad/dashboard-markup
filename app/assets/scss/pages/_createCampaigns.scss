@@ -95,3 +95,34 @@
       width: 100%;
    }
 }
+
+.custom-border {
+   background-color: $grayLightBgColor;
+   height: 1px;
+   width: 100%;
+}
+
+.create-campaign-modal {
+   padding-bottom: 20px;
+}
+
+.custom-modal-body {
+   padding: 0px;
+}
+
+.create-campaign-modal-social img {
+   width: 40px;
+}
+
+.create-campaign-modal-social img {
+   height: 40px;
+   width: 174px;
+}
+
+.create-campaign-modal-content {
+   width: 410px;
+}
+
+.create-campaign-th {
+   padding-left: 35px !important;
+}

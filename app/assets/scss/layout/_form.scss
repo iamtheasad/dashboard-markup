@@ -382,8 +382,14 @@ input[type="text"] {
   border: 1px solid $grayLightBgColor;
   width: 100%;
   transition: .1s ease;
+  min-height: 46px;
 }
 
 .rs-input.ra-input:focus {
   border: 1px solid $tabBtnBg;
+}
+
+.rs-input.ra-input::placeholder {
+  font-size: 14px;
+  color: $grayLightTextColor;
 }

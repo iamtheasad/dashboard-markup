@@ -1,6 +1,43 @@
-{% extends "layouts/layout.njk" %}
+{% extends "layouts/layout2.njk" %}
 
 {% block content %}
+
+<!-- Top Bar -->
+<header class="topbar topbar2 d-flex justify-content-between align-items-center">
+   <div class="breadcumb fz16 fw-600">
+      <div class="d-flex align-items-center">
+         <i class="mdi mdi-arrow-left"></i>
+         <span>Campaigns</span>
+
+         <!-- Button trigger modal -->
+         {% include 'snippets/modals/addCampaignModal.njk' %}
+      </div>
+   </div>
+   <div class="right-menu dropdown">
+      <a href="javascript:void(0)" class="account-menu d-flex align-items-center dropdown-toggle" type="button"
+         id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         <div class="avater">
+            <img src="http://via.placeholder.com/48x48" alt="">
+         </div>
+         <div class="acc-name">Publisher</div>
+
+         <button class="dropdown-icon">
+            <i class="mdi mdi-menu-down"></i>
+         </button>
+
+      </a>
+      <div class="dropdown-menu mt-1" aria-labelledby="dropdownMenuButton2">
+         <ul>
+            <li><a href="accountSettings.html">Account Settings</a></li>
+            <li><a href="index2.html">Advertiser Dashboard</a></li>
+            <li><a href="">বাংলা ভাষা নির্বাচন</a></li>
+            <li><a href="">Take a Tour</a></li>
+            <li><a href="login.html">Logout</a></li>
+         </ul>
+      </div>
+   </div>
+</header>
+
 <div class="filter-wrapper filter-wrapper-custom ra-data-table-bg">
    <form action="" class="rs-form create-campaign-form custom-form mb-md-0 mb-3">
       <div class="create-campaign-wrapper">
@@ -9,7 +46,8 @@
             for="campaignSearch">
             <span class="mdi mdi-magnify search-img black-color fw-600 search-custom"></span>
          </button>
-         <input type="search" class="rs-input ra-input create-campaign-custom-input ra-data-table-bg fz14 fw-500 min-hieght-36 d-none"
+         <input type="search"
+            class="rs-input ra-input create-campaign-custom-input ra-data-table-bg fz14 fw-500 min-hieght-36 d-none"
             id="campaignSearch" placeholder="">
       </div>
    </form>
@@ -58,8 +96,8 @@
       </div>
    </div>
 </div>
-
-
-{% include "sections/createCampaign/createCampaignDataTable.njk" %}
+<div class="wrapper">
+   {% include "sections/createCampaign/createCampaignDataTable.njk" %}
+</div>
 
 {% endblock %}
