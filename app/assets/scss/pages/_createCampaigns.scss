@@ -1,5 +1,9 @@
 .search-custom {
    font-size: 31px;
+
+   @media screen and (max-width: 767px) {
+      font-size: 20px;
+   }
 }
 
 .filter-number {
@@ -22,10 +26,14 @@
 }
 
 .filter-wrapper-custom {
-   height: 61px;
+   min-height: 61px;
    padding: 16px 20px;
    border-bottom: 1px solid #dedede;
    margin-bottom: 20px;
+
+   @media screen and (max-width: 575px) {
+      padding: 5px 10px;
+   }
 }
 
 .campaign-star {
@@ -37,7 +45,7 @@
    color: $grayLightTextColor;
 }
 
-.ra-progress-item.custom{
+.ra-progress-item.custom {
    height: unset;
 }
 
@@ -51,4 +59,39 @@
 
 .post-blue {
    color: $darkBlueColor;
+}
+
+.search-icon {
+   width: 25px;
+   height: 25px;
+}
+
+.create-campaign-form {
+   display: flex;
+   justify-content: flex-start;
+
+   @media screen and(max-width: 767px) {
+      justify-content: center;
+   }
+}
+
+.create-campaign-filter {
+   @media screen and (max-width: 767px) {
+      flex-direction: column-reverse;
+      justify-content: space-evenly !important;
+      height: 129px;
+   }
+}
+
+.create-campaign-wrapper {
+   display: flex;
+   align-items: center;
+   white-space: nowrap;
+
+   @media screen and(max-width: 767px) {
+      flex-direction: column;
+      height: 65px;
+      justify-content: space-between;
+      width: 100%;
+   }
 }

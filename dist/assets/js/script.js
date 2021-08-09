@@ -223,6 +223,7 @@ $(window).on('load', function () {
     dataTable2('#inProgressDataTable');
     dataTable2('#pendingApproval');
     dataTable2('#myDealsCancelled');
+    dataTable2('#createCampaignDataTable');
 
     dataTable('#propertyDataTable');
     dataTable('#propertyDetailsDataTable');

@@ -170,14 +170,17 @@
             </header>
 
             <div class="filter-wrapper filter-wrapper-custom ra-data-table-bg">
-                <form action="" class="rs-form custom-form d-flex justify-content-between align-items-center mb-md-0 mb-3">
-                    <button type="submit" class="position-absolute search-icon border-0 bg-transparent pl-3 d-flex align-items-center" for="searchInput">
-                        <span class="fz20 fw-600">All Campaigns</span><span class="mdi mdi-magnify search-img black-color fw-600 search-custom pl-4"></span>
-                    </button>
-                    <input type="search" class="rs-input border-0 ra-data-table-bg gray-light-text-color fz14 fw-500 min-hieght-36 pl-3 d-none" id="searchInput" placeholder="">
+                <form action="" class="rs-form create-campaign-form custom-form mb-md-0 mb-3">
+                    <div class="create-campaign-wrapper">
+                        <div class="fz20 fw-600 mr-2">All Campaigns</div>
+                        <button type="submit" class="search-icon border-0 bg-transparent pl-md-3 pl-0 d-flex align-items-center" for="campaignSearch">
+                            <span class="mdi mdi-magnify search-img black-color fw-600 search-custom"></span>
+                        </button>
+                        <input type="search" class="rs-input ra-input create-campaign-custom-input ra-data-table-bg fz14 fw-500 min-hieght-36 d-none" id="campaignSearch" placeholder="">
+                    </div>
                 </form>
 
-                <div class="search-right d-flex align-items-center justify-content-center">
+                <div class="search-right create-campaign-filter d-flex align-items-center justify-content-center">
                     <div class="mr-1 mr-md-3">
                         <div class="serach-number border-0 fw-500 d-flex align-items-center min-hieght-36">
                             <p class="fz14 mr-2"><span>1</span>-<span>10</span> of <span>11</span></p>
@@ -221,7 +224,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="dataTable table-responsive radius-4">
-                        <table id="connectRequestsDataTable" class="display" style="width:100%">
+                        <table id="createCampaignDataTable" class="display" style="width:100%">
                             <thead>
                                 <tr>
                                     <th class="custom-table-head">
@@ -288,9 +291,7 @@
                                         </a>
                                     </td>
                                     <td class="custom-table-data">
-                                        <p class="c-title d-flex flex-column">
-                                            <span class="fz14 fw-500 c-date">50,000</span>
-                                        </p>
+                                        <p class="c-title d-flex flex-column fw14 fw-500">50,000 <span class="fz12 fw-400 gray-light-text-color"></span></p>
                                     </td>
                                     <td class="custom-table-data">
                                         <p class="c-title d-flex flex-column">
@@ -367,9 +368,7 @@
                                         </a>
                                     </td>
                                     <td class="custom-table-data">
-                                        <p class="c-title d-flex flex-column">
-                                            <span class="fz14 fw-500 c-date">50,000</span>
-                                        </p>
+                                        <p class="c-title d-flex flex-column fw14 fw-500">50,000 <span class="fz12 fw-400 gray-light-text-color"></span></p>
                                     </td>
                                     <td class="custom-table-data">
                                         <p class="c-title d-flex flex-column">
@@ -413,7 +412,7 @@
                                                     State Bicycle Co: 12 Days of State
                                                 </p>
                                             </a>
-                                            <span class="mdi mdi-star campaign-star unseen"></span>
+                                            <span class="mdi mdi-star campaign-star unseen checked"></span>
                                         </div>
                                     </td>
                                     <td class="custom-table-data">
@@ -446,7 +445,7 @@
                                         </a>
                                     </td>
                                     <td class="custom-table-data">
-                                        <p class="c-title d-flex flex-column fw14 fw-500">50,000</p>
+                                        <p class="c-title d-flex flex-column fw14 fw-500">50,000 <span class="fz12 fw-400 gray-light-text-color"></span></p>
                                     </td>
                                     <td class="custom-table-data">
                                         <p class="c-title d-flex flex-column">
