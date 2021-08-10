@@ -74,12 +74,6 @@
     cursor: pointer;
 }
 
-.btn-4x12 {
-    padding: 4px 12px;
-    color: $black;
-    background: $grayProgressLight;
-}
-
 .ra-btn {
     display: flex;
     justify-content: center;
@@ -137,6 +131,15 @@
             background-color: $tabBtnBg;
             color: $white;
         }
-    }  
+    }
 }
+
+.btn-4x12 {
+    color: $black;
+    background: $grayProgressLight;
+    padding: 4px 12px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+} 
 

@@ -1,0 +1,94 @@
+.draft-progress-bar {
+   padding: 16px 24px;
+   background-color: $dataTableSearchBgColor;
+   display: flex;
+   margin-bottom: 28px;
+   justify-content: space-between;
+   min-height: 68px;
+
+   @media screen and (max-width: 767px) {
+      justify-content: center;
+      flex-direction: column;
+   }
+}
+
+.step {
+   display: flex;
+   justify-content: space-around;
+   width: 25%;
+   align-items: center;
+
+   @media screen and (max-width: 767px) {
+      width: 100%;
+      margin: 5px;
+   }
+}
+
+.draft-step-item {
+   display: flex;
+   align-items: center;
+
+   @media screen and (max-width: 767px){
+      width: 33%;
+   }
+}
+
+.draft-step-number {
+   min-width: 30px;
+   height: 30px;
+   background: $grayLight1;
+   border-radius: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: $black;
+   font-weight: 700;
+   font-size: 14px;
+   opacity: .6;
+}
+
+.draft-step-number {
+   &.active {
+      background: $greenDark;
+      color: $white;
+      opacity: 1;
+   }
+}
+
+.draft-step-title {
+   font-weight: 500;
+   opacity: .6;
+   line-height: 11px;
+
+   &.active {
+      opacity: 1;
+      font-weight: 600;
+   }
+}
+
+.draft-step-subtitle {
+   font-weight: 500;
+   color: $grayLightTextColor;
+   opacity: .6;
+
+   &.active {
+      opacity: 1;
+   }
+}
+
+.draft-step-text {
+   margin-left: 10px;
+   margin-right: 10px;
+}
+
+.draft-step-seperator {
+   width: 25px;
+   height: 1px;
+   background-color: $grayProgressLight;
+   margin-right: 10px;
+   display: flex;
+
+   @media screen and (max-width: 767px) {
+      display: none;
+   }
+}

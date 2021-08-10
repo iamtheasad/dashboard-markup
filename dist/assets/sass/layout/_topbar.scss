@@ -13,9 +13,8 @@
     }
 
     .account-menu {
-        background-color: $primaryColor;
+        background-color: $grayLight1;
         border-radius: 50px;
-        padding: 4px;
 
         &:after {
             display: none;
@@ -42,9 +41,9 @@
         }
 
         .acc-name {
-            color: $white;
-            font-weight: 600;
-            font-size: rem(16);
+            color: $black;
+            font-weight: 500;
+            font-size: rem(15);
             margin-right: 10px;
 
             @media(max-width: 757px) {
@@ -67,7 +66,7 @@
             cursor: pointer;
 
             &:hover {
-                background-color: lighten($primaryColor, 10);
+                background-color: lighten($tabBtnBg, 10);
             }
 
             &:after {
@@ -90,10 +89,6 @@
         padding: 0px 20px 0px;
 
         .breadcumb {
-            span {
-                padding-left: 17px;
-            }
-
             i {
                 font-size: 24px;
             }
@@ -104,4 +99,8 @@
             margin: 0px 10px 0px 0px; 
         }
     }
+}
+
+.long-arrow {
+    width: 18px;
 }
