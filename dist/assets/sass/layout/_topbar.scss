@@ -66,7 +66,7 @@
             cursor: pointer;
 
             &:hover {
-                background-color: lighten($tabBtnBg, 10);
+                background-color: lighten($darkPrimaryColor, 10);
             }
 
             &:after {
