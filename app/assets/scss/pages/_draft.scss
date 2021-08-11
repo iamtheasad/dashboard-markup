@@ -1,3 +1,12 @@
+.draft-top-message {
+   background-color: $grayProgressLight;
+   padding: 8px 20px;
+   height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .draft-progress-bar {
    padding: 16px 24px;
    background-color: $dataTableSearchBgColor;
