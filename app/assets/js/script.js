@@ -211,19 +211,6 @@
         WHEN DOCUMENT LOADING
     ==========================================================================*/
     $(window).on('load', function () {
-        if($('#basic').length){
-            $('#basic').daterangepicker({
-                "singleDatePicker": true,
-                "autoApply": true,
-                "showCustomRangeLabel": false,
-                "startDate": "08/04/2021",
-                "endDate": "08/10/2021",
-                "opens": "center"
-            }, function(start, end, label) {
-              console.log("New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')");
-            });
-        }
-
         inputAnimate();
         checkbox();
         menuToggler();
