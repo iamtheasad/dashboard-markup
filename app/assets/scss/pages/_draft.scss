@@ -2,9 +2,9 @@
    background-color: $grayProgressLight;
    padding: 8px 20px;
    height: 32px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 
 .draft-progress-bar {
@@ -30,18 +30,40 @@
       width: 100%;
       margin: 5px;
    }
-}
 
-.draft-step-item {
-   display: flex;
-   align-items: center;
+   .draft-step-item {
+      display: flex;
+      align-items: center;
 
-   @media screen and (max-width: 767px) {
-      flex-direction: column;
+      @media screen and (max-width: 767px) {
+         flex-direction: column;
+      }
    }
 }
 
-.draft-step-number {
+.blur {
+   .draft-position {
+      opacity: .6;
+      color: $black;
+
+      .draft-step-number {
+         display: block;
+      }
+   }
+}
+
+.active {
+   .draft-position {
+      background: $greenDark;
+
+      .draft-step-number {
+         color: $white;
+         display: block;
+      }
+   }
+}
+
+.draft-position {
    min-width: 30px;
    height: 30px;
    background: $grayLight1;
@@ -49,18 +71,84 @@
    display: flex;
    justify-content: center;
    align-items: center;
-   color: $black;
    font-weight: 700;
    font-size: 14px;
-   opacity: .6;
    margin-bottom: 5px;
+   position: relative;
+
+   .draft-step-number {
+      display: none;
+   }
 }
 
-.draft-step-number {
-   &.active {
-      background: $greenDark;
-      color: $white;
-      opacity: 1;
+.ongoing {
+   .draft-position {
+      background: $darkPrimaryColor;
+
+      &:after {
+         position: absolute;
+         content: "";
+         background-image: url('../images/icons/ok.svg');
+         width: 12px;
+         height: 12px;
+         background-repeat: no-repeat;
+         background-size: contain;
+         background-position: center;
+      }
+   }
+
+   &.active-text {
+      .draft-step-title {
+         font-weight: 500;
+         opacity: 1;
+      }
+
+      .draft-step-subtitle {
+         opacity: 1;
+      }
+   }
+}
+
+.lock {
+   .draft-position {
+      background: $darkPrimaryColor;
+
+      &:after {
+         position: absolute;
+         content: "";
+         background-image: url('../images/icons/lock.svg');
+         width: 12px;
+         height: 12px;
+         background-repeat: no-repeat;
+         background-size: contain;
+         background-position: center;
+      }
+   }
+
+   &.active-text {
+      .draft-step-title {
+         font-weight: 500;
+         opacity: 1;
+      }
+
+      .draft-step-subtitle {
+         opacity: 1;
+      }
+   }
+}
+
+.ongoing,
+.lock {
+
+   &.active-text {
+      .draft-step-title {
+         font-weight: 500;
+         opacity: 1;
+      }
+
+      .draft-step-subtitle {
+         opacity: 1;
+      }
    }
 }
 
@@ -69,7 +157,7 @@
    opacity: .6;
    line-height: 14px;
 
-   &.active {
+   &.active-text {
       opacity: 1;
       font-weight: 600;
    }
@@ -80,7 +168,7 @@
    color: $grayLightTextColor;
    opacity: .6;
 
-   &.active {
+   &.active-text {
       opacity: 1;
    }
 }
@@ -156,42 +244,6 @@
 }
 
 .promotion-input {
-   .custom-input-group {
-      height: 40px;
-
-      input[type="time"],
-      input[type="date"] {
-
-         &::-webkit-calendar-picker-indicator {
-            margin-left: 10px;
-            background-position: left center;
-            position: absolute;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-size: auto;
-         }
-
-         &::-webkit-datetime-edit-fields-wrapper {
-            position: absolute;
-            left: 40px;
-            top: 50%;
-            transform: translateY(-50%);
-         }
-      }
-
-      input[type="time"] {
-         &::-webkit-calendar-picker-indicator {
-            background-image: url('../images/icons/time.svg')
-         }
-      }
-
-      input[type="date"] {
-         &::-webkit-calendar-picker-indicator {
-            background-image: url('../images/icons/date.svg')
-         }
-      }
-   }
 
    .input-icon {
       background: transparent;

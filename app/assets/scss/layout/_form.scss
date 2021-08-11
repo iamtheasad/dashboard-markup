@@ -74,10 +74,12 @@
 .radio-group {
   &.checkbox-group {
     border: 1px solid $tableRowColor;
+
     &.active {
       border: 1px solid $primaryColor;
     }
   }
+
   .radio-label {
     display: flex;
     align-items: center;
@@ -105,7 +107,7 @@
     display: none;
   }
 
-  .radio-input:checked + .radio-label {
+  .radio-input:checked+.radio-label {
     opacity: 1;
   }
 }
@@ -155,7 +157,7 @@
     }
   }
 
-  .rs-checkbox-input:checked + .checkbox-label:after {
+  .rs-checkbox-input:checked+.checkbox-label:after {
     opacity: 1;
     visibility: visible;
   }
@@ -392,4 +394,68 @@ input[type="text"] {
 .rs-input.ra-input::placeholder {
   font-size: 14px;
   color: $grayLightTextColor;
+}
+
+
+.custom-date-time {
+  height: 42px;
+
+  input[type="time"],
+  input[type="date"] {
+    min-height: 100%;
+
+    &::-webkit-calendar-picker-indicator {
+      margin-left: 10px;
+      background-position: left center;
+      position: absolute;
+      left: 0;
+      background-size: auto;
+    }
+
+    &::-webkit-datetime-edit-fields-wrapper {
+      position: absolute;
+      left: 40px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &::-webkit-datetime-edit-fields-wrapper {
+      visibility: hidden;
+    }
+  }
+
+  input[type="time"] {
+    &::-webkit-calendar-picker-indicator {
+      background-image: url('../images/icons/time.svg')
+    }
+  }
+
+  input[type="date"] {
+    &::-webkit-calendar-picker-indicator {
+      background-image: url('../images/icons/date.svg')
+    }
+  }
+
+  input {
+    border-top-left-radius: 4px !important;
+    border-bottom-left-radius: 4px !important;
+  }
+
+  .rs-label {
+    left: 40px;
+    margin: 0;
+    z-index: 9;
+  }
+
+  &.animate {
+    .rs-label {
+      left: 5px;
+      padding: 0 4px;
+    }
+    input {
+      &::-webkit-datetime-edit-fields-wrapper {
+        visibility: visible;
+      }
+    }
+  }
 }
