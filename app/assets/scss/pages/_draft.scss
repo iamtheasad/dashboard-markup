@@ -132,7 +132,7 @@
          display: flex;
          justify-content: center;
          align-items: center;
-         border: 1px solid $grayLight2;
+         border: 1px solid $grayBorderColor;
          transition: .2s ease-in-out;
          margin-right: 4px;
 
@@ -186,14 +186,14 @@
 
    .input-icon {
       background: transparent;
-      border: 1px solid $grayLight2;
+      border: 1px solid $grayBorderColor;
       border-radius: 4px;
       border-right: none;
    }
 
    .custom-form-control {
       border-radius: 4px;
-      border-color: $grayLight2;
+      border-color: $grayBorderColor;
       color: $grayLightTextColor;
 
       &:focus {
@@ -202,4 +202,28 @@
          box-shadow: unset;
       }
    }
+}
+
+.brief {
+   margin-bottom: 32px;
+
+   .brief-content {
+      textarea {
+         width: 100%;
+         border: 1px solid $grayBorderColor;
+         color: $black;
+         height: 112px;
+         resize: none;
+         border-radius: 4px;
+         padding: 12px 16px;
+
+         &::placeholder {
+            color: $grayLightTextColor;
+         }
+      }
+   }
+}
+
+.draft-btn {
+   padding: 6px 28px;
 }

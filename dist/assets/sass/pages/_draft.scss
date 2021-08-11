@@ -133,7 +133,7 @@
          display: flex;
          justify-content: center;
          align-items: center;
-         border: 1px solid $grayLight2;
+         border: 1px solid $grayBorderColor;
          transition: .2s ease-in-out;
          margin-right: 4px;
 
@@ -154,7 +154,7 @@
 
    .input-icon {
       background: transparent;
-      border: 1px solid $grayLight2;
+      border: 1px solid $grayBorderColor;
       border-radius: 4px;
       border-right: none;
    }
@@ -162,11 +162,11 @@
    .custom-form-control {
       border-left: none;
       border-radius: 4px;
-      border-color: $grayLight2;
+      border-color: $grayBorderColor;
       color: $grayLightTextColor;
 
       &:focus {
-         border-color: $grayLight2;
+         border-color: $grayBorderColor;
          outline: 0;
          box-shadow: unset;
       }
