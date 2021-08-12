@@ -3,14 +3,24 @@
 <div class="draft-brand-tag">
    <h3 class="fz14 fw-600 black-color mb-12">What do you want to Promote?</h3>
    <div class="promotion-tag">
-      <button class="fw-400 promotion-tag-btn ra-btn-border">Brand</button>
-      <button class="fw-400 promotion-tag-btn ra-btn-border">Campaign</button>
-      <button class="fw-400 promotion-tag-btn ra-btn-border">Event</button>
-      <button class="fw-400 promotion-tag-btn ra-btn-border">Movie</button>
-      <button class="fw-400 promotion-tag-btn ra-btn-border">Product</button>
-      <button class="fw-400 promotion-tag-btn ra-btn-border">Service</button>
-      <button class="fw-400 promotion-tag-btn ra-btn-border">Hotel</button>
-      <button class="fw-400 promotion-tag-btn ra-btn-border">Restaurant</button>
+      {%
+      set promuteItems = [
+      { name: "Brand" },
+      { name: "Campaign" },
+      { name: "Event" },
+      { name: "Movie" },
+      { name: "Product" },
+      { name: "Service" },
+      { name: "Hotel" },
+      { name: "Restaurant" }
+      ]
+      %}
+      {% for item in promuteItems %}
+      <div class="btn-checkbox">
+         <input type="checkbox" name="" id="promoteTag_{{ loop.index }}" class="d-none btn-checkbox-input">
+         <label class="btn-checkbox-label" for="promoteTag_{{ loop.index }}">{{ item.name }}</label>
+      </div>
+      {% endfor %}
    </div>
 </div>
 

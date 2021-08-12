@@ -516,3 +516,30 @@ input[type="text"] {
     }
   }
 }
+
+.btn-checkbox {
+  .btn-checkbox-label {
+    height: 36px;
+    font-size: .875rem;
+    color: $black;
+    border-radius: 200px;
+    background-color: transparent;
+    width: 132px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $grayBorderColor;
+    transition: .2s ease-in-out;
+    margin-right: 4px;
+
+    &:hover {
+      background-color: $primaryBg;
+    }
+  }
+
+  .btn-checkbox-input:checked+.btn-checkbox-label {
+    background-color: $darkPrimaryColor;
+    color: $white;
+  }
+}
