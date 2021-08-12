@@ -41,28 +41,6 @@
    }
 }
 
-.blur {
-   .draft-position {
-      opacity: .6;
-      color: $black;
-
-      .draft-step-number {
-         display: block;
-      }
-   }
-}
-
-.active {
-   .draft-position {
-      background: $greenDark;
-
-      .draft-step-number {
-         color: $white;
-         display: block;
-      }
-   }
-}
-
 .draft-position {
    min-width: 30px;
    height: 30px;
@@ -81,7 +59,40 @@
    }
 }
 
+.blur {
+   .draft-position {
+      opacity: .6;
+      color: $black;
+
+      .draft-step-number {
+         display: block;
+      }
+   }
+}
+
 .ongoing {
+   .draft-position {
+      background: $greenDark;
+
+      .draft-step-number {
+         color: $white;
+         display: block;
+      }
+   }
+
+   &.active-text {
+      .draft-step-title {
+         font-weight: 500;
+         opacity: 1;
+      }
+
+      .draft-step-subtitle {
+         opacity: 1;
+      }
+   }
+}
+
+.selected {
    .draft-position {
       background: $darkPrimaryColor;
 
@@ -137,7 +148,7 @@
    }
 }
 
-.ongoing,
+.selected,
 .lock {
 
    &.active-text {
