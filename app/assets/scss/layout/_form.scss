@@ -379,24 +379,6 @@ input[type="text"] {
   }
 }
 
-.rs-input.ra-input {
-  border-radius: 4px;
-  border: 1px solid $grayLightBgColor;
-  width: 100%;
-  transition: .1s ease;
-  min-height: 46px;
-}
-
-.rs-input.ra-input:focus {
-  border: 1px solid $darkPrimaryColor;
-}
-
-.rs-input.ra-input::placeholder {
-  font-size: 14px;
-  color: $grayLightTextColor;
-}
-
-
 .custom-date-time {
   height: 42px;
 
@@ -452,9 +434,84 @@ input[type="text"] {
       left: 5px;
       padding: 0 4px;
     }
+
     input {
       &::-webkit-datetime-edit-fields-wrapper {
         visibility: visible;
+      }
+    }
+  }
+}
+
+
+.rs-form {
+  &.ra-form {
+    position: relative;
+
+    @media (max-width: 767px) {
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    &.password-form {
+      .rs-input {
+        &.ra-input {
+          padding-right: 50px;
+        }
+      }
+    }
+
+    &.animate {
+      .rs-label {
+        &.ra-label {
+          top: 0%;
+          left: 5px;
+          font-size: rem(10);
+          font-weight: 400;
+        }
+      }
+
+      .rs-input {
+        &.ra-input {
+          border: 1px solid $primaryColor;
+        }
+      }
+    }
+
+    .rs-label {
+      &.ra-label {
+        left: 15px;
+        top: 50%;
+        font-size: rem(14);
+        font-weight: 400;
+        transform: translateY(-50%);
+        counter-reset: $grayLightTextColor;
+      }
+    }
+
+    .rs-input {
+      &.ra-input {
+        border-radius: 4px;
+        border: 1px solid $grayLightBgColor;
+        width: 100%;
+        transition: .1s ease;
+        min-height: 40px;
+        font-size: rem(14);
+        font-weight: 500;
+        color: $black;
+
+        &:focus {
+          border: 1px solid $darkPrimaryColor;
+        }
+
+        &::placeholder {
+          font-size: 14px;
+          color: $grayLightTextColor;
+        }
+
+        @media (max-width: 992px) {
+          min-height: 36px;
+        }
       }
     }
   }

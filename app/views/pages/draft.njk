@@ -47,14 +47,15 @@
 
 <!-- Draft Message -->
 <div class="draft-top-message">
-   <p class="fz14 fw-400 black-color">Campaign created as a <span class="fw-500">Draft</span>. Please complete the flow to make a deal with an <span class="fw-500">Influencer</span></p>
+   <p class="fz14 fw-400 black-color">Campaign created as a <span class="fw-500">Draft</span>. Please complete the flow
+      to make a deal with an <span class="fw-500">Influencer</span></p>
 </div>
 
 <!-- Draft Pogress Bar -->
 <div class="draft-progress-bar">
 
    <div class="step">
-      <div class="draft-step-item lock active-text">
+      <div class="draft-step-item selected active-text">
          <div class="draft-position">
             <p class="draft-step-number fz14">1</p>
          </div>
@@ -66,7 +67,7 @@
       <div class="draft-step-seperator"></div>
    </div>
    <div class="step">
-      <div class="draft-step-item lock active-text">
+      <div class="draft-step-item ongoing active-text">
          <div class="draft-position">
             <p class="draft-step-number fz14">2</p>
          </div>
@@ -78,7 +79,7 @@
       <div class="draft-step-seperator"></div>
    </div>
    <div class="step">
-      <div class="draft-step-item selected active-text">
+      <div class="draft-step-item lock active-text">
          <div class="draft-position">
             <p class="draft-step-number fz14">3</p>
          </div>
@@ -115,63 +116,16 @@
 </div>
 
 <!-- Draft Content -->
-<div class="draft-content-wrapper">
+<div class="draft-content-wrapper min-vh-100">
    <div class="draft-body">
       <form action="#">
          <div class="page page-1">
-            <p class="fz14 fw-400 black-color pb-20">Lorem Ipsum has been the industry's standard dummy text ever since
-               the 1500s, when an unknown printer took. Lorem Ipsum has been the industry's standard dummy text.</p>
-            <div class="draft-brand-tag">
-               <h3 class="fz14 fw-600 black-color pb-16">What do you want to Promote?</h3>
-               <div class="promotion-tag">
-                  <button class="fw-400 promotion-tag-btn ra-btn-border">Brand</button>
-                  <button class="fw-400 promotion-tag-btn ra-btn-border">Campaign</button>
-                  <button class="fw-400 promotion-tag-btn ra-btn-border">Event</button>
-                  <button class="fw-400 promotion-tag-btn ra-btn-border">Movie</button>
-                  <button class="fw-400 promotion-tag-btn ra-btn-border">Product</button>
-                  <button class="fw-400 promotion-tag-btn ra-btn-border">Service</button>
-                  <button class="fw-400 promotion-tag-btn ra-btn-border">Hotel</button>
-                  <button class="fw-400 promotion-tag-btn ra-btn-border">Restaurant</button>
-               </div>
-            </div>
-
-            <div class="promotion-start-form">
-               <h3 class="fz14 fw-600 black-color pb-16">When do you want to start the Promotion?</h3>
-               <div class="promotion-input">
-                  <div class="row">
-
-                     <div class="col-md-6">
-                        <div class="input-group custom-date-time rs-form mb-20">
-                           <label class="fz14 fw-400 gray-light-text-color rs-label" for="promotionInputDate">Select date</label>
-                           <input type="date" class="form-control custom-form-control rs-input" id="promotionInputDate">
-                        </div>
-                     </div>
-
-                     <div class="col-md-6">
-                        <div class="input-group custom-date-time rs-form mb-20">
-                           <label class="fz14 fw-400 gray-light-text-color rs-label" for="promotionInputTime">Select Time</label>
-                           <input type="time" class="form-control custom-form-control rs-input" id="promotionInputTime">
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-
-            <div class="brief">
-               <h3 class="fz14 fw-600 black-color pb-16">Brief a short brief on your Promotion</h3>
-
-               <div class="brief-content">
-                  <textarea class="fz14 fw-400" name="brief" id="briefText" placeholder="# Describe your Campaign 
-# Give an idea of how the content should look like 
-# What is the key message that you want the influencers to promote"></textarea>
-               </div>
-            </div>
-
-            <div class="d-flex justify-content-center">
-               <button class="ra-btn ra-btn-dark-bg draft-btn fz15 fw-500" type="submit">Next</button>
-            </div>
+            <!-- {% include 'sections/draftTab/draftTab1.njk' %} -->
          </div> <!-- Page End -->
 
+         <div class="page page-2">
+            {% include 'sections/draftTab/draftTab2.njk' %}
+         </div> <!-- Page End -->
       </form>
    </div>
 </div>

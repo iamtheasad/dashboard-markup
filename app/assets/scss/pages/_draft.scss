@@ -205,7 +205,6 @@
    background-color: $white;
    display: flex;
    justify-content: center;
-   height: 100vh;
 
    .draft-body {
       max-width: 555px;
@@ -213,6 +212,8 @@
       margin: 28px;
    }
 }
+
+// Draft Tab 1
 
 .draft-brand-tag {
    margin-bottom: 8px;
@@ -298,4 +299,38 @@
 
 .draft-btn {
    padding: 6px 28px;
+}
+
+// Draft Tab 2
+
+.img-video {
+   width: 100%;
+   background-color: $primaryBg;
+   height: 112px;
+   border: 1px dashed $grayBorderColor;
+   border-radius: 4px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   label {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      img {
+         width: 40px;
+      }
+   }
+}
+
+.at-icon {
+   margin-right: 12px;
+
+   img{
+      width: 16px;
+   }
 }

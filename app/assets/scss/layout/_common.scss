@@ -256,8 +256,28 @@ main {
   margin-left: 20px;
 }
 
+.mr-12 {
+  margin-right: 12px;
+}
+
+.mb-12{
+  margin-bottom: 12px;
+}
+
+.mb-28{
+  margin-bottom: 28px;
+
+  @media screen and(max-width: 767px) {
+     margin-bottom: 16px;
+  }
+}
+
 .min-hieght-36 {
   min-height: 36px !important;
+}
+
+.min-vh-100 {
+  min-height: 100vh;
 }
 
 .radius-5 {
