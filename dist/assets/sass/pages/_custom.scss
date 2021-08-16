@@ -229,36 +229,6 @@
   }
 }
 
-<<<<<<< HEAD
-/***********************************
-// Influencer Progress Bar
-**************************************/
-.influencer-step-form{
-  .step-menu{
-    position: relative;
-    padding-bottom: 16px;
-    overflow: hidden;
-
-    .progress-bar{
-      position: absolute;
-      overflow: hidden;
-      width: 100%;
-      background-color: #EFEFF4;
-      height: 8px;
-      border-radius: 20px;
-      left: 0;
-      bottom: 0;  
-
-      & > span{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 32px;
-        height: 100%;
-        background-color: #475364;
-        border-radius: 20px;
-        transition: width .3s ease-in-out;
-=======
 .influClose {
   position: absolute;
   top: 3%;
@@ -324,7 +294,6 @@
         background-color: $primaryColor;
         border-radius: 20px;
         transition: width 0.3s ease-in-out;
->>>>>>> 45e7941f68228c2ce40d784df815b1992e4891d3
       }
     }
 
@@ -332,14 +301,6 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-<<<<<<< HEAD
-      li{
-        font-size: rem(20);
-        color: #8E8E93;
-        font-weight: 500;
-        &.stepped {
-          color: #475364;
-=======
       li {
         font-size: rem(20);
         color: #8e8e93;
@@ -354,19 +315,13 @@
         span {
           opacity: 0;
           display: none;
->>>>>>> 45e7941f68228c2ce40d784df815b1992e4891d3
         }
       }
     }
   }
 
-<<<<<<< HEAD
-  .step-content{
-    .step{
-=======
   .step-content {
     .step {
->>>>>>> 45e7941f68228c2ce40d784df815b1992e4891d3
       display: none;
       &.show {
         display: block;

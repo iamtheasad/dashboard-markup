@@ -132,6 +132,7 @@ main {
     opacity: 1;
     text-decoration: none;
   }
+
   i {
     transform: rotate(90deg) translateX(-15px);
     position: absolute;
@@ -140,6 +141,7 @@ main {
     display: block;
     font-size: 20px;
   }
+
   &.show {
     transform: rotate(-90deg) translateY(45px);
   }
@@ -148,6 +150,7 @@ main {
 .reset-link-popup {
   position: relative;
   display: none;
+
   .close-btn {
     position: absolute;
     top: 10px;
@@ -157,6 +160,7 @@ main {
     padding: 8px;
     border-radius: 4px;
     transition: 0.3s ease-in-out;
+
     &:hover {
       background-color: #fafafa;
     }
@@ -180,9 +184,11 @@ main {
     left: auto !important;
     right: 0 !important;
     transform: translate3d(0, 45px, 0px) !important;
+
     ul {
       li {
         margin-bottom: 8px;
+
         a {
           padding: 8px 16px;
           color: $black;
@@ -191,6 +197,7 @@ main {
           font-size: rem(16);
           transition: 0.3s ease-in-out;
           border-radius: 4px;
+
           &:hover {
             background-color: $black;
             color: $white;
@@ -206,19 +213,71 @@ main {
 }
 
 .b-none {
-    border: none !important;
+  border: none !important;
 }
 
-.p-20{
+.p-20 {
   padding: 20px;
+}
+
+.pt-20 {
+  padding-top: 20px;
+}
+
+.pr-20 {
+  padding-right: 20px;
+}
+
+.pb-20 {
+  padding-bottom: 20px;
+}
+
+.pl-20 {
+  padding-left: 20px;
+}
+
+.pb-16 {
+  padding-bottom: 16px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mr-20 {
+  margin-right: 20px;
 }
 
 .mb-20 {
   margin-bottom: 20px;
 }
 
+.ml-20 {
+  margin-left: 20px;
+}
+
+.mr-12 {
+  margin-right: 12px;
+}
+
+.mb-12{
+  margin-bottom: 12px;
+}
+
+.mb-28{
+  margin-bottom: 28px;
+
+  @media screen and(max-width: 767px) {
+     margin-bottom: 16px;
+  }
+}
+
 .min-hieght-36 {
   min-height: 36px !important;
+}
+
+.min-vh-100 {
+  min-height: 100vh;
 }
 
 .radius-5 {
@@ -227,4 +286,8 @@ main {
 
 .radius-4 {
   border-radius: 5px;
+}
+
+.padding-16x20 {
+  padding: 16px 20px;
 }

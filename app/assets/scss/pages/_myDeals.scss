@@ -13,6 +13,10 @@
    position: relative;
    background-color: transparent;
    border: none;
+
+   &.three-dot-draft {
+      height: 20px;
+   }
 }
 
 .ra-three-dot-btn span:nth-child(1),
@@ -111,7 +115,7 @@
 }
 
 .rs-btn.in-btn-primary {
-   background-color: $tabBtnBg;
+   background-color: $darkPrimaryColor;
    color: $white;
    font-weight: 500;
 }
@@ -130,13 +134,13 @@
    padding: 0px 16px;
 
    p {
-      color: $tabBtnBg;
+      color: $darkPrimaryColor;
       margin-bottom: 5px;
    }
 }
 
 .ra-progress.border {
-   border: 1px solid $grayLight2 !important;
+   border: 1px solid $grayBorderColor !important;
 }
 
 .no-gutter>[class*='col-'] {
@@ -151,7 +155,7 @@
 
 .rs-btn.in-btn-secondary {
    border: none;
-   background-color: $tabBtnBg;
+   background-color: $darkPrimaryColor;
    opacity: 0.6;
    color: #fff;
 }
@@ -194,12 +198,12 @@
 }
 
 .deals-details-desc {
-   color: $tabBtnBg;
+   color: $darkPrimaryColor;
 }
 
 .in-btn-primary.hashtag-primary {
    border: none;
-   background: $tabBtnBg;
+   background: $darkPrimaryColor;
    color: $white;
    padding: 4px 12px;
    border-radius: 4px;
