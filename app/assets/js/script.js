@@ -131,7 +131,7 @@ function dataTable(element) {
     }
 }
 
-// My Campaign Data Table
+/* Influencer Looping Data Table Id */
 function dataTable2(element) {
     var element = $(element);
     if (element.length) {
@@ -223,6 +223,7 @@ $(window).on('load', function () {
     dataTable2('#inProgressDataTable');
     dataTable2('#pendingApproval');
     dataTable2('#myDealsCancelled');
+    dataTable2('#createCampaignDataTable');
 
     dataTable('#propertyDataTable');
     dataTable('#propertyDetailsDataTable');

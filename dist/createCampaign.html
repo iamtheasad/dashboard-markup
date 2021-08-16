@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G&R</title>
+    <base href="" />
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/jpg">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
+    <!-- Bootstrap Table Css Link -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.18.1/dist/bootstrap-table.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css">
+
+    <!-- build:css assets/css/all.min.css -->
+    <link rel="stylesheet" href="assets/css/vendor.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- endbuild -->
+    <script type="text/javascript" src="assets/vendor/jQuery/jquery.min.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/maps.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/geodata/worldLow.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/geodata/usaLow.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+</head>
+
+<body class="preloader">
+    <div class="d-flex">
+        <section class="sidebar-menu scrollbar">
+            <div class="menu-toggler">
+                <i class="mdi mdi-menu"></i>
+            </div>
+            <div class="site-logo">
+                <a class="d-block" href="/">
+                    <img src="assets/images/logo.svg" alt="G&R">
+                </a>
+            </div>
+            <div class="menu-area">
+                <ul>
+                    <li class="active"><a href="/"><img class="icon" src="assets/images/icons/dashboard.svg" alt="">
+                            Dashboard</a></li>
+                    <li><a href="properties.html"><img class="icon" src="assets/images/icons/ad-properties.svg" alt="">Properties</a></li>
+
+                    <li>
+                        <a href="#influencer-sidebar-menu" data-toggle="collapse"><img class="icon" src="assets/images/icons/influencer.svg" alt="">Influncers</a>
+                        <div id="influencer-sidebar-menu" class="collapse">
+                            <ul>
+                                <li><a href="influencerPlatform">Platform</a></li>
+                                <li><a href="influencer">Influencer Posts</a></li>
+                                <li><a href="influencerPost">Influencer Posts (Type: Advertiser)</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="placesAllAdded.html"><img class="icon" src="assets/images/icons/adplace.svg" alt="">Ad Place</a></li>
+                    <li><a href="connects.html"><img class="icon" src="assets/images/icons/connect.svg" alt="">Connects</a></li>
+
+                    <li>
+                        <a href="#report-sidebar-menu" data-toggle="collapse">
+                            <img class="icon" src="assets/images/icons/report.svg" alt="">Report
+                        </a>
+                        <div id="report-sidebar-menu" class="collapse">
+                            <ul>
+                                <li><a href="overview.html">Overview</a></li>
+                                <li><a href="location.html">Location</a></li>
+                                <li><a href="revenue.html">Revenue</a></li>
+                                <li><a href="technology.html">Technology</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="#payment-sidebar-menu" data-toggle="collapse"><img class="icon" src="assets/images/icons/money.svg" alt="">Payments</a>
+                        <div id="payment-sidebar-menu" class="collapse">
+                            <ul>
+                                <li><a href="estimatedRevenuePage.html">Estimated Revennue</a></li>
+                                <li><a href="finilizedPayment.html">Finilized Payments</a></li>
+                                <li><a href="balance.html">Balance</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#advertiserCampaigns" data-toggle="collapse">
+                            <img class="icon" src="assets/images/icons/arrow-up.svg" alt="">Campaigns
+                        </a>
+                        <div id="advertiserCampaigns" class="collapse">
+                            <ul>
+                                <li><a href="createCampaign.html"><img class="icon" src="assets/images/icons/all.svg" alt=""> All</a></li>
+                                <li><a href="createCampaign.html">Scheduled</a></li>
+                                <li><a href="createCampaign.html">Ongoing</a></li>
+                                <li><a href="createCampaign.html">Completed</a></li>
+                                <li><a href="createCampaign.html">Draft</a></li>
+                                <li><a href="createCampaign.html">Archieved</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#my-deals-sidebar-menu" data-toggle="collapse">
+                            <img class="icon" src="assets/images/icons/arrow-up.svg" alt="">My Deals
+                        </a>
+                        <div id="my-deals-sidebar-menu" class="collapse">
+                            <ul>
+                                <li><a href="myDeals.html">Connect Requests</a></li>
+                                <li><a href="myDeals.html">In Progress</a></li>
+                                <li><a href="myDeals.html">Pending Approval</a></li>
+                                <li><a href="myDeals.html">Cancelled</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#my-campaigns-sidebar-menu" data-toggle="collapse">
+                            <img class="icon" src="assets/images/icons/arrow-up.svg" alt="">My Campaigns
+                        </a>
+                        <div id="my-campaigns-sidebar-menu" class="collapse">
+                            <ul>
+                                <li><a href="myCampaigns.html">Scheduled</a></li>
+                                <li><a href="myCampaigns.html">Ongoing</a></li>
+                                <li><a href="myCampaigns.html">Completed</a></li>
+                                <li><a href="myCampaigns.html">Archieved</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#settings-sidebar-menu" data-toggle="collapse">
+                            <img class="icon" src="assets/images/icons/settings.svg" alt="">Settings
+                        </a>
+                        <div id="settings-sidebar-menu" class="collapse">
+                            <ul>
+                                <li><a href="accountSettings.html">Account Settings</a></li>
+                                <li><a href="users.html">Users</a></li>
+                                <li><a href="activityLogPage.html">Activity Log</a></li>
+                                <li><a href="login.html">Logout</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <main class="dashboard-main">
+            <header class="topbar sticky-top d-flex justify-content-between align-items-center">
+                <div class="breadcumb fz24 fw-500 py-3">
+                    <div class="d-flex align-items-center">
+                        <!-- <i class="mdi mdi-arrow-left"></i> -->
+                        <span>Wecome to Publisher Dashboard</span>
+                    </div>
+                </div>
+                <div class="right-menu dropdown">
+                    <a href="javascript:void(0)" class="account-menu d-flex align-items-center dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div class="avater">
+                            <img src="http://via.placeholder.com/48x48" alt="">
+                        </div>
+                        <div class="acc-name">Publisher</div>
+
+                        <button class="dropdown-icon">
+                            <i class="mdi mdi-menu-down"></i>
+                        </button>
+
+                    </a>
+                    <div class="dropdown-menu mt-1" aria-labelledby="dropdownMenuButton">
+                        <ul>
+                            <li><a href="accountSettings.html">Account Settings</a></li>
+                            <li><a href="index2.html">Advertiser Dashboard</a></li>
+                            <li><a href="">বাংলা ভাষা নির্বাচন</a></li>
+                            <li><a href="">Take a Tour</a></li>
+                            <li><a href="login.html">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+
+            <div class="filter-wrapper filter-wrapper-custom ra-data-table-bg">
+                <form action="" class="rs-form create-campaign-form custom-form mb-md-0 mb-3">
+                    <div class="create-campaign-wrapper">
+                        <div class="fz20 fw-600 mr-2">All Campaigns</div>
+                        <button type="submit" class="search-icon border-0 bg-transparent pl-md-3 pl-0 d-flex align-items-center" for="campaignSearch">
+                            <span class="mdi mdi-magnify search-img black-color fw-600 search-custom"></span>
+                        </button>
+                        <input type="search" class="rs-input ra-input create-campaign-custom-input ra-data-table-bg fz14 fw-500 min-hieght-36 d-none" id="campaignSearch" placeholder="">
+                    </div>
+                </form>
+
+                <div class="search-right create-campaign-filter d-flex align-items-center justify-content-center">
+                    <div class="mr-1 mr-md-3">
+                        <div class="serach-number border-0 fw-500 d-flex align-items-center min-hieght-36">
+                            <p class="fz14 mr-2"><span>1</span>-<span>10</span> of <span>11</span></p>
+                            <button class="filter-number"><span class="mdi mdi-chevron-left"></span></button>
+                            <button class="filter-number active"><span class="mdi mdi-chevron-right active"></span></button>
+                        </div>
+                    </div>
+                    <div class="ra-filter mr-1 mr-md-3">
+                        <div class="dropdown search-common">
+                            <button class="search-filter border-0 radius-5 d-flex gray-light-bg-color fw-500 d-flex align-items-center min-hieght-36" type="button" id="serach-filter" data-toggle="dropdown" aria-haspopup="true">
+                                <span class="mdi mdi-filter-outline fz20 pr-2"></span>
+                                <p class="fz14">Filter By</p>
+                                <span class="mdi mdi-chevron-up fz20 pl-2"></span>
+                            </button>
+                            <div class="dropdown-menu search-dropdown" aria-labelledby="serach-filter">
+                                <a class="dropdown-item" href="#">Campaign Name</a>
+                                <a class="dropdown-item" href="#">Type</a>
+                                <a class="dropdown-item" href="#">Budget</a>
+                                <a class="dropdown-item" href="#">Category</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ra-filter">
+                        <div class="dropdown search-common">
+                            <button class="search-filter border-0 radius-5 d-flex gray-light-bg-color fw-500 d-flex align-items-center min-hieght-36" type="button" id="serach-filter" data-toggle="dropdown" aria-haspopup="true">
+                                <span class="mdi mdi-sort-descending fz20 pr-2"></span>
+                                <p class="fz14">Sort By</p>
+                                <span class="mdi mdi-chevron-up fz20 pl-2"></span>
+                            </button>
+                            <div class="dropdown-menu search-dropdown" aria-labelledby="serach-filter">
+                                <a class="dropdown-item" href="#">Campaign Name</a>
+                                <a class="dropdown-item" href="#">Type</a>
+                                <a class="dropdown-item" href="#">Budget</a>
+                                <a class="dropdown-item" href="#">Category</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="dataTable table-responsive radius-4">
+                        <table id="createCampaignDataTable" class="display" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th class="custom-table-head">
+                                        <label class="checkbox-wrapper checkbox-head">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <p>Campaign Name</p>
+                                    </th>
+                                    <th class="custom-table-head">Status</th>
+                                    <th class="custom-table-head">Influencer</th>
+                                    <th class="custom-table-head">Budget</th>
+                                    <th class="custom-table-head">Imprsn.</th>
+                                    <th class="custom-table-head">Engmt.</th>
+                                    <th class="custom-table-head">CPE</th>
+                                    <th class="custom-table-head">CTR</th>
+                                    <th class="custom-table-head">Created </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="in-table-row">
+                                    <td class="custom-table-data d-flex align-items-center">
+                                        <label class="checkbox-wrapper">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+
+                                        <div class="d-flex justify-content-between w-100">
+                                            <a href="#" class="d-flex align-items-center">
+                                                <p class="c-title">
+                                                    Blendtec: Will It Blend Campaign
+                                                </p>
+                                            </a>
+                                            <span class="mdi mdi-star campaign-star"></span>
+                                        </div>
+                                    </td>
+                                    <td class="custom-table-data">
+                                        <a href="#" class="btn-4x12 radius-4">
+                                            Scheduled
+                                        </a>
+                                    </td>
+                                    <td class="custom-table-data">
+                                        <a href="#" target="_blank" class="w-100">
+                                            <div class="ra-progress-item custom">
+                                                <div class="progress-user-status">
+                                                    <div class="ra-progress-user">
+                                                        <img src="https://via.placeholder.com/300" class="img" alt="User Image">
+                                                    </div>
+                                                    <div class="ra-progress-social">
+                                                        <img src="https://image.flaticon.com/icons/png/512/1384/1384053.png" class="img" alt="User Image">
+                                                    </div>
+                                                </div>
+
+                                                <div class="ra-progress-body">
+                                                    <div class="ra-brand-name-title">
+                                                        <p class="fz14 fw-500 black-color pr-1">Raba Khan</p>
+                                                    </div>
+                                                    <div class="ra-brand-name-subtitle">
+                                                        <p class="fz12 gray-light-text-color fw-400 pr-1"><span class="fw-500 post-black">Post </span>22 Jun, 21</p>
+                                                        <span class="green-dot"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td class="custom-table-data">
+                                        <p class="c-title d-flex flex-column fw14 fw-500">50,000 <span class="fz12 fw-400 gray-light-text-color"></span></p>
+                                    </td>
+                                    <td class="custom-table-data">
+                                        <p class="c-title d-flex flex-column">
+                                            <span class="fz14 fw-500 c-date">-</span>
+                                            <span class="fz12 fw-400 gray-light-text-color"></span>
+                                        </p>
+                                    </td>
+                                    <td class="custom-table-data">
+                                        <p class="c-title d-flex flex-column">
+                                            <span class="fz14 fw-500 c-date">-</span>
+                                            <span class="fz12 fw-400 gray-light-text-color"></span>
+                                        </p>
+                                    </td>
+                                    <td class="custom-table-data">
+                                        <p class="c-title d-flex flex-column">
+                                            <span class="fz20 fw-600 c-date"><span class="fz14 fw-500">-</span></span>
+                                        </p>
+                                    </td>
+                                    <td class="custom-table-data">
+                                        <p class="c-title d-flex flex-column">
+                                            <span class="fz20 fw-600 c-date"><span class="fz14 fw-500">-</span></span>
+                                        </p>
+                                    </td>
+                                    <td class="custom-table-data">
+                                        <p class="c-title d-flex flex-column fw14 fw-500">
+                                            Shafayat
+                                            <span class="fz12 fw-400 gray-light-text-color">6 Jun, 21</span>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr class="in-table-row">
+                                    <td class="custom-table-data d-flex align-items-center">
+                                        <label class="checkbox-wrapper">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+
+                                        <div class="d-flex justify-content-between w-100">
+                                            <a href="#" class="d-flex align-items-center">
+                                                <p class="c-title">
+                                                    Blendtec: Will It Blend Campaign
+                                                </p>
+                                            </a>
+                                            <span class="mdi mdi-star campaign-star checked"></span>
+                                        </div>
+                                    </td>
+                                    <td class="custom-table-data">
+                                        <a href="#" class="btn-4x12 radius-4">
+                                            Ongoing
+                                        </a>
+                                    </td>
+                                    <td class="custom-table-data">
+                                        <a href="#" target="_blank" class="w-100">
+                                            <div class="ra-progress-item custom">
+                                                <div class="progress-user-status">
+                                                    <div class="ra-progress-user">
+                                                        <img src="https://via.placeholder.com/300" class="img" alt="User Image">
+                                                    </div>
+                                                    <div class="ra-progress-social">
+                                                        <img src="https://image.flaticon.com/icons/png/512/1384/1384053.png" class="img" alt="User Image">
+                                                    </div>
+                                                </div>
+
+                                                <div class="ra-progress-body">
+                                                    <div class="ra-brand-name-title">
+                                                        <p class="fz14 fw-500 black-color pr-1">Tahsan Khan</p>
+                                                    </div>
+                                                    <div class="ra-brand-name-subtitle">
+                                                        <p class="fz12 gray-light-text-color fw-400 pr-1"><span class="fw-500 post-blue">Story </span>6 Jun, 21</p>
+                                                        <span class="green-dot"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td class="custom-table-data">
+                                        <p class="c-title d-flex flex-column fw14 fw-500">50,000 <span class="fz12 fw-400 gray-light-text-color"></span></p>
+                                    </td>
+                                    <td class="custom-table-data">
+                                        <p class="c-title d-flex flex-column">
+                                            <span class="fz14 fw-500 c-date">20,123</span>
+                                            <span class="fz12 fw-400 gray-light-text-color">9.26%</span>
+                                        </p>
+                                    </td>
+                                    <td class="custom-table-data">
+                                        <p class="c-title d-flex flex-column">
+                                            <span class="fz14 fw-500 c-date">5,087</span>
+                                            <span class="fz12 fw-400 gray-light-text-color">2.56%</span>
+                                        </p>
+                                    </td>
+                                    <td class="custom-table-data">
+                                        <p class="c-title d-flex flex-column">
+                                            <span class="fz20 fw-600 c-date">৳ <span class="fz14 fw-500">2.4</span></span>
+                                        </p>
+                                    </td>
+                                    <td class="custom-table-data">
+                                        <p class="c-title d-flex flex-column">
+                                            <span class="fz20 fw-600 c-date">৳ <span class="fz14 fw-500">5.2</span></span>
+                                        </p>
+                                    </td>
+                                    <td class="custom-table-data">
+                                        <p class="c-title d-flex flex-column fw14 fw-500">
+                                            Shafayat
+                                            <span class="fz12 fw-400 gray-light-text-color">6 Jun, 21</span>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr class="in-table-row">
+                                    <td class="custom-table-data d-flex align-items-center">
+                                        <label class="checkbox-wrapper">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+
+                                        <div class="d-flex justify-content-between w-100">
+                                            <a href="#" class="d-flex align-items-center">
+                                                <p class="c-title">
+                                                    State Bicycle Co: 12 Days of State
+                                                </p>
+                                            </a>
+                                            <span class="mdi mdi-star campaign-star unseen checked"></span>
+                                        </div>
+                                    </td>
+                                    <td class="custom-table-data">
+                                        <a href="#" class="btn-4x12 radius-4">
+                                            Completed
+                                        </a>
+                                    </td>
+                                    <td class="custom-table-data">
+                                        <a href="#" target="_blank" class="w-100">
+                                            <div class="ra-progress-item custom">
+                                                <div class="progress-user-status">
+                                                    <div class="ra-progress-user">
+                                                        <img src="https://via.placeholder.com/300" class="img" alt="User Image">
+                                                    </div>
+                                                    <div class="ra-progress-social">
+                                                        <img src="https://image.flaticon.com/icons/png/512/1384/1384053.png" class="img" alt="User Image">
+                                                    </div>
+                                                </div>
+
+                                                <div class="ra-progress-body">
+                                                    <div class="ra-brand-name-title">
+                                                        <p class="fz14 fw-500 black-color pr-1">Rafayet</p>
+                                                    </div>
+                                                    <div class="ra-brand-name-subtitle">
+                                                        <p class="fz12 gray-light-text-color fw-400 pr-1"><span class="fw-500 post-blue">Story </span>22 Jun, 21</p>
+                                                        <span class="green-dot"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td class="custom-table-data">
+                                        <p class="c-title d-flex flex-column fw14 fw-500">50,000 <span class="fz12 fw-400 gray-light-text-color"></span></p>
+                                    </td>
+                                    <td class="custom-table-data">
+                                        <p class="c-title d-flex flex-column">
+                                            <span class="fz14 fw-500 c-date">20,123</span>
+                                            <span class="fz12 fw-400 gray-light-text-color">9.26%</span>
+                                        </p>
+                                    </td>
+                                    <td class="custom-table-data">
+                                        <p class="c-title d-flex flex-column">
+                                            <span class="fz14 fw-500 c-date">5,087</span>
+                                            <span class="fz12 fw-400 gray-light-text-color">2.56%</span>
+                                        </p>
+                                    </td>
+                                    <td class="custom-table-data">
+                                        <p class="c-title d-flex flex-column">
+                                            <span class="fz20 fw-600 c-date">৳ <span class="fz14 fw-500">2.4</span></span>
+                                        </p>
+                                    </td>
+                                    <td class="custom-table-data">
+                                        <p class="c-title d-flex flex-column">
+                                            <span class="fz20 fw-600 c-date">৳ <span class="fz14 fw-500">5.2</span></span>
+                                        </p>
+                                    </td>
+                                    <td class="custom-table-data">
+                                        <p class="c-title d-flex flex-column fw14 fw-500">
+                                            Shafayat
+                                            <span class="fz12 fw-400 gray-light-text-color">6 Jun, 21</span>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr class="in-table-row">
+                                    <td class="custom-table-data d-flex align-items-center">
+                                        <label class="checkbox-wrapper">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+
+                                        <div class="d-flex justify-content-between w-100">
+                                            <a href="#" class="d-flex align-items-center">
+                                                <p class="c-title">
+                                                    Qdoba: Queso Bliss Contest
+                                                </p>
+                                            </a>
+                                            <span class="mdi mdi-star campaign-star"></span>
+                                        </div>
+                                    </td>
+                                    <td class="custom-table-data">
+                                        <a href="#" class="btn-4x12 radius-4">
+                                            Pending
+                                        </a>
+                                    </td>
+                                    <td class="custom-table-data">
+                                        <a href="#" target="_blank" class="w-100">
+                                            <div class="ra-progress-item custom">
+                                                <div class="progress-user-status">
+                                                    <div class="ra-progress-user">
+                                                        <img src="https://via.placeholder.com/300" class="img" alt="User Image">
+                                                    </div>
+                                                    <div class="ra-progress-social">
+                                                        <img src="https://image.flaticon.com/icons/png/512/1384/1384053.png" class="img" alt="User Image">
+                                                    </div>
+                                                </div>
+
+                                                <div class="ra-progress-body">
+                                                    <div class="ra-brand-name-title">
+                                                        <p class="fz14 fw-500 black-color pr-1">Annette Black</p>
+                                                    </div>
+                                                    <div class="ra-brand-name-subtitle">
+                                                        <p class="fz12 gray-light-text-color fw-400 pr-1"><span class="fw-500">Post </span>22 Jun, 21</p>
+                                                        <span class="green-dot"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td class="custom-table-data">
+                                        <p class="c-title d-flex flex-column fw14 fw-500">50,000 <span class="fz12 fw-400 gray-light-text-color">Proposed</span></p>
+                                    </td>
+                                    <td class="custom-table-data">
+                                        <p class="c-title d-flex flex-column">
+                                            <span class="fz14 fw-500 c-date">-</span>
+                                            <span class="fz12 fw-400 gray-light-text-color"></span>
+                                        </p>
+                                    </td>
+                                    <td class="custom-table-data">
+                                        <p class="c-title d-flex flex-column">
+                                            <span class="fz14 fw-500 c-date">-</span>
+                                            <span class="fz12 fw-400 gray-light-text-color"></span>
+                                        </p>
+                                    </td>
+                                    <td class="custom-table-data">
+                                        <p class="c-title d-flex flex-column">
+                                            <span class="fz20 fw-600 c-date"><span class="fz14 fw-500">-</span></span>
+                                        </p>
+                                    </td>
+                                    <td class="custom-table-data">
+                                        <p class="c-title d-flex flex-column">
+                                            <span class="fz20 fw-600 c-date"><span class="fz14 fw-500">-</span></span>
+                                        </p>
+                                    </td>
+                                    <td class="custom-table-data">
+                                        <p class="c-title d-flex flex-column fw14 fw-500">
+                                            Shafayat
+                                            <span class="fz12 fw-400 gray-light-text-color">6 Jun, 21</span>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr class="in-table-row">
+                                    <td class="custom-table-data d-flex align-items-center">
+                                        <label class="checkbox-wrapper">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+
+                                        <div class="d-flex justify-content-between w-100">
+                                            <a href="#" class="d-flex align-items-center">
+                                                <p class="c-title">
+                                                    Qdoba: Queso Bliss Contest
+                                                </p>
+                                            </a>
+                                            <span class="mdi mdi-star campaign-star"></span>
+                                        </div>
+                                    </td>
+                                    <td class="custom-table-data">
+                                        <a href="#" class="btn-4x12 radius-4">
+                                            Pending
+                                        </a>
+                                    </td>
+                                    <td class="custom-table-data">
+                                        <a href="#" target="_blank" class="w-100">
+                                            <div class="ra-progress-item custom">
+                                                <div class="progress-user-status">
+                                                    <div class="ra-progress-user">
+                                                        <img src="https://via.placeholder.com/300" class="img" alt="User Image">
+                                                    </div>
+                                                    <div class="ra-progress-social">
+                                                        <img src="https://image.flaticon.com/icons/png/512/1384/1384053.png" class="img" alt="User Image">
+                                                    </div>
+                                                </div>
+
+                                                <div class="ra-progress-body">
+                                                    <div class="ra-brand-name-title">
+                                                        <p class="fz14 fw-500 black-color pr-1">Annette Black</p>
+                                                    </div>
+                                                    <div class="ra-brand-name-subtitle">
+                                                        <p class="fz12 gray-light-text-color fw-400 pr-1"><span class="fw-500">Post </span>22 Jun, 21</p>
+                                                        <span class="green-dot"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td class="custom-table-data">
+                                        <p class="c-title d-flex flex-column fw14 fw-500">50,000 <span class="fz12 fw-400 gray-light-text-color">Proposed</span></p>
+                                    </td>
+                                    <td class="custom-table-data">
+                                        <p class="c-title d-flex flex-column">
+                                            <span class="fz14 fw-500 c-date">-</span>
+                                            <span class="fz12 fw-400 gray-light-text-color"></span>
+                                        </p>
+                                    </td>
+                                    <td class="custom-table-data">
+                                        <p class="c-title d-flex flex-column">
+                                            <span class="fz14 fw-500 c-date">-</span>
+                                            <span class="fz12 fw-400 gray-light-text-color"></span>
+                                        </p>
+                                    </td>
+                                    <td class="custom-table-data">
+                                        <p class="c-title d-flex flex-column">
+                                            <span class="fz20 fw-600 c-date"><span class="fz14 fw-500">-</span></span>
+                                        </p>
+                                    </td>
+                                    <td class="custom-table-data">
+                                        <p class="c-title d-flex flex-column">
+                                            <span class="fz20 fw-600 c-date"><span class="fz14 fw-500">-</span></span>
+                                        </p>
+                                    </td>
+                                    <td class="custom-table-data">
+                                        <p class="c-title d-flex flex-column fw14 fw-500">
+                                            Shafayat
+                                            <span class="fz12 fw-400 gray-light-text-color">6 Jun, 21</span>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr class="in-table-row">
+                                    <td class="custom-table-data d-flex align-items-center">
+                                        <label class="checkbox-wrapper">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+
+                                        <div class="d-flex justify-content-between w-100">
+                                            <a href="#" class="d-flex align-items-center">
+                                                <p class="c-title">
+                                                    Qdoba: Queso Bliss Contest
+                                                </p>
+                                            </a>
+                                            <span class="mdi mdi-star campaign-star"></span>
+                                        </div>
+                                    </td>
+                                    <td class="custom-table-data">
+                                        <a href="#" class="btn-4x12 radius-4">
+                                            Pending
+                                        </a>
+                                    </td>
+                                    <td class="custom-table-data">
+                                        <a href="#" target="_blank" class="w-100">
+                                            <div class="ra-progress-item custom">
+                                                <div class="progress-user-status">
+                                                    <div class="ra-progress-user">
+                                                        <img src="https://via.placeholder.com/300" class="img" alt="User Image">
+                                                    </div>
+                                                    <div class="ra-progress-social">
+                                                        <img src="https://image.flaticon.com/icons/png/512/1384/1384053.png" class="img" alt="User Image">
+                                                    </div>
+                                                </div>
+
+                                                <div class="ra-progress-body">
+                                                    <div class="ra-brand-name-title">
+                                                        <p class="fz14 fw-500 black-color pr-1">Annette Black</p>
+                                                    </div>
+                                                    <div class="ra-brand-name-subtitle">
+                                                        <p class="fz12 gray-light-text-color fw-400 pr-1"><span class="fw-500">Post </span>22 Jun, 21</p>
+                                                        <span class="green-dot"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td class="custom-table-data">
+                                        <p class="c-title d-flex flex-column fw14 fw-500">50,000 <span class="fz12 fw-400 gray-light-text-color">Proposed</span></p>
+                                    </td>
+                                    <td class="custom-table-data">
+                                        <p class="c-title d-flex flex-column">
+                                            <span class="fz14 fw-500 c-date">-</span>
+                                            <span class="fz12 fw-400 gray-light-text-color"></span>
+                                        </p>
+                                    </td>
+                                    <td class="custom-table-data">
+                                        <p class="c-title d-flex flex-column">
+                                            <span class="fz14 fw-500 c-date">-</span>
+                                            <span class="fz12 fw-400 gray-light-text-color"></span>
+                                        </p>
+                                    </td>
+                                    <td class="custom-table-data">
+                                        <p class="c-title d-flex flex-column">
+                                            <span class="fz20 fw-600 c-date"><span class="fz14 fw-500">-</span></span>
+                                        </p>
+                                    </td>
+                                    <td class="custom-table-data">
+                                        <p class="c-title d-flex flex-column">
+                                            <span class="fz20 fw-600 c-date"><span class="fz14 fw-500">-</span></span>
+                                        </p>
+                                    </td>
+                                    <td class="custom-table-data">
+                                        <p class="c-title d-flex flex-column fw14 fw-500">
+                                            Shafayat
+                                            <span class="fz12 fw-400 gray-light-text-color">6 Jun, 21</span>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr class="in-table-row">
+                                    <td class="custom-table-data d-flex align-items-center">
+                                        <label class="checkbox-wrapper">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+
+                                        <div class="d-flex justify-content-between w-100">
+                                            <a href="#" class="d-flex align-items-center">
+                                                <p class="c-title">
+                                                    Qdoba: Queso Bliss Contest
+                                                </p>
+                                            </a>
+                                            <span class="mdi mdi-star campaign-star"></span>
+                                        </div>
+                                    </td>
+                                    <td class="custom-table-data">
+                                        <a href="#" class="btn-4x12 radius-4">
+                                            Pending
+                                        </a>
+                                    </td>
+                                    <td class="custom-table-data">
+                                        <a href="#" target="_blank" class="w-100">
+                                            <div class="ra-progress-item custom">
+                                                <div class="progress-user-status">
+                                                    <div class="ra-progress-user">
+                                                        <img src="https://via.placeholder.com/300" class="img" alt="User Image">
+                                                    </div>
+                                                    <div class="ra-progress-social">
+                                                        <img src="https://image.flaticon.com/icons/png/512/1384/1384053.png" class="img" alt="User Image">
+                                                    </div>
+                                                </div>
+
+                                                <div class="ra-progress-body">
+                                                    <div class="ra-brand-name-title">
+                                                        <p class="fz14 fw-500 black-color pr-1">Annette Black</p>
+                                                    </div>
+                                                    <div class="ra-brand-name-subtitle">
+                                                        <p class="fz12 gray-light-text-color fw-400 pr-1"><span class="fw-500">Post </span>22 Jun, 21</p>
+                                                        <span class="green-dot"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td class="custom-table-data">
+                                        <p class="c-title d-flex flex-column fw14 fw-500">50,000 <span class="fz12 fw-400 gray-light-text-color">Proposed</span></p>
+                                    </td>
+                                    <td class="custom-table-data">
+                                        <p class="c-title d-flex flex-column">
+                                            <span class="fz14 fw-500 c-date">-</span>
+                                            <span class="fz12 fw-400 gray-light-text-color"></span>
+                                        </p>
+                                    </td>
+                                    <td class="custom-table-data">
+                                        <p class="c-title d-flex flex-column">
+                                            <span class="fz14 fw-500 c-date">-</span>
+                                            <span class="fz12 fw-400 gray-light-text-color"></span>
+                                        </p>
+                                    </td>
+                                    <td class="custom-table-data">
+                                        <p class="c-title d-flex flex-column">
+                                            <span class="fz20 fw-600 c-date"><span class="fz14 fw-500">-</span></span>
+                                        </p>
+                                    </td>
+                                    <td class="custom-table-data">
+                                        <p class="c-title d-flex flex-column">
+                                            <span class="fz20 fw-600 c-date"><span class="fz14 fw-500">-</span></span>
+                                        </p>
+                                    </td>
+                                    <td class="custom-table-data">
+                                        <p class="c-title d-flex flex-column fw14 fw-500">
+                                            Shafayat
+                                            <span class="fz12 fw-400 gray-light-text-color">6 Jun, 21</span>
+                                        </p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- build:js assets/js/vendor.min.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- Bootstrap Table Js Link -->
+    <script src="https://unpkg.com/bootstrap-table@1.18.1/dist/bootstrap-table.min.js"></script>
+    <!-- <script type="text/javascript" src="assets/vendor/aos/js/aos.js"></script> -->
+    <!-- endbuild -->
+    <script type="text/javascript" src="assets/js/script.js"></script>
+
+</body>
+
+</html>

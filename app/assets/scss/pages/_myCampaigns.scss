@@ -1,3 +1,7 @@
+.my-campaigns-wrapper {
+   padding-top: 20px;
+}
+
 .dot {
    position: relative;
 }
@@ -96,4 +100,8 @@
    @media (max-width: 767px) {
       width: 100%;
    }
+}
+
+.serach-number {
+   background: transparent;
 }
