@@ -203,13 +203,15 @@
 
 .draft-content-wrapper {
    background-color: $white;
-   display: flex;
-   justify-content: center;
 
-   .draft-body {
+   .draft-body .page {
       max-width: 555px;
       width: 100%;
       margin: 28px;
+   }
+
+   .draft-body .page.page-4 {
+      max-width: 100%;
    }
 }
 
@@ -465,7 +467,7 @@
  
  [slider] > div {
    position: absolute;
-   left: -5px;
+   left: 8px;
    right: 15px;
    height: 14px;
  }
