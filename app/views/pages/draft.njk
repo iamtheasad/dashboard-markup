@@ -1,0 +1,139 @@
+{% extends "layouts/layout2.njk" %}
+
+{% block content %}
+
+<!-- Top Bar -->
+<header class="topbar topbar2 d-flex justify-content-between align-items-center">
+   <div class="breadcumb fz16 fw-600">
+      <div class="d-flex align-items-center">
+         <a href="#" class="mr-20">
+            <img src="assets/images/icons/coolicon.svg" class="img long-arrow" alt="Arrow Icon">
+         </a>
+         <a href="#" class="btn-4x12 radius-4 fz12 fw-500">
+            Draft
+         </a>
+         <span class="pl-2 pr-3">Brand Name: 40% Sale Offer</span>
+         <button class="ra-three-dot-btn three-dot-draft">
+            <span></span>
+            <span></span>
+            <span></span>
+         </button>
+      </div>
+   </div>
+   <div class="right-menu dropdown">
+      <a href="javascript:void(0)" class="account-menu d-flex align-items-center dropdown-toggle" type="button"
+         id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         <div class="avater">
+            <img src="http://via.placeholder.com/48x48" alt="">
+         </div>
+         <div class="acc-name">Publisher</div>
+
+         <button class="dropdown-icon">
+            <i class="mdi mdi-menu-down"></i>
+         </button>
+
+      </a>
+      <div class="dropdown-menu mt-1" aria-labelledby="dropdownMenuButton2">
+         <ul>
+            <li><a href="accountSettings.html">Account Settings</a></li>
+            <li><a href="index2.html">Advertiser Dashboard</a></li>
+            <li><a href="">বাংলা ভাষা নির্বাচন</a></li>
+            <li><a href="">Take a Tour</a></li>
+            <li><a href="login.html">Logout</a></li>
+         </ul>
+      </div>
+   </div>
+</header>
+
+<!-- Draft Message -->
+<div class="draft-top-message">
+   <p class="fz14 fw-400 black-color">Campaign created as a <span class="fw-500">Draft</span>. Please complete the flow
+      to make a deal with an <span class="fw-500">Influencer</span></p>
+</div>
+
+<!-- Draft Pogress Bar -->
+<div class="draft-progress-bar">
+
+   <div class="step">
+      <div class="draft-step-item selected active-text">
+         <div class="draft-position">
+            <p class="draft-step-number fz14">1</p>
+         </div>
+         <div class="draft-step-text">
+            <p class="draft-step-title fz16">Provide a Brief</p>
+            <span class="draft-step-subtitle fz12">on your Campaign</span>
+         </div>
+      </div>
+      <div class="draft-step-seperator"></div>
+   </div>
+   <div class="step">
+      <div class="draft-step-item selected active-text">
+         <div class="draft-position">
+            <p class="draft-step-number fz14">2</p>
+         </div>
+         <div class="draft-step-text">
+            <p class="draft-step-title fz16">Provide Contents</p>
+            <span class="draft-step-subtitle fz12">for your Campaign</span>
+         </div>
+      </div>
+      <div class="draft-step-seperator"></div>
+   </div>
+   <div class="step">
+      <div class="draft-step-item ongoing active-text">
+         <div class="draft-position">
+            <p class="draft-step-number fz14">3</p>
+         </div>
+         <div class="draft-step-text">
+            <p class="draft-step-title fz16">Set your Parameters</p>
+            <span class="draft-step-subtitle fz12">to find Influencers</span>
+         </div>
+      </div>
+      <div class="draft-step-seperator"></div>
+   </div>
+   <div class="step">
+      <div class="draft-step-item lock active-text">
+         <div class="draft-position">
+            <p class="draft-step-number fz14">4</p>
+         </div>
+         <div class="draft-step-text">
+            <p class="draft-step-title fz16">Browse Influencers &</p>
+            <span class="draft-step-subtitle fz12">select to connect</span>
+         </div>
+      </div>
+      <div class="draft-step-seperator"></div>
+   </div>
+   <div class="step">
+      <div class="draft-step-item blur active-text">
+         <div class="draft-position">
+            <p class="draft-step-number fz14">5</p>
+         </div>
+         <div class="draft-step-text">
+            <p class="draft-step-title fz16">Make the Deal &</p>
+            <span class="draft-step-subtitle fz12">move to Scheduled</span>
+         </div>
+      </div>
+   </div>
+</div>
+
+<!-- Draft Content -->
+<div class="draft-content-wrapper min-vh-100">
+   <div class="draft-body">
+      <form action="#" class="d-none">
+         <div class="page page-1">
+            {% include 'sections/draftTab/draftTab1.njk' %}
+         </div> <!-- Page End -->
+      </form>
+      <form class="d-none">
+         <div class="page page-2">
+            {% include 'sections/draftTab/draftTab2.njk' %}
+         </div> <!-- Page End -->
+      </form>
+      <form class="">
+         <div class="page page-3">
+            {% include 'sections/draftTab/draftTab3.njk' %}
+         </div> <!-- Page End -->
+      </form>
+   </div>
+</div>
+
+{% endblock %}

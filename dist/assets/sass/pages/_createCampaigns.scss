@@ -1,0 +1,125 @@
+.search-custom {
+   font-size: 31px;
+
+   @media screen and (max-width: 767px) {
+      font-size: 20px;
+   }
+}
+
+.filter-number {
+   border-radius: 4px;
+   height: 24px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border: none;
+   margin: 8px 8px 8px 0px;
+   opacity: .5;
+   background-color: $grayLight1;
+   color: $black;
+}
+
+.filter-number.active {
+   background-color: $grayLight1;
+   color: $black;
+   opacity: 1;
+}
+
+.filter-wrapper-custom {
+   min-height: 61px;
+   padding: 16px 20px;
+   border-bottom: 1px solid #dedede;
+   margin-bottom: 20px;
+
+   @media screen and (max-width: 575px) {
+      padding: 5px 10px;
+   }
+}
+
+.campaign-star {
+   color: $grayProgressLight;
+   font-size: 25px;
+}
+
+.campaign-star.checked {
+   color: $grayLightTextColor;
+}
+
+.ra-progress-item.custom {
+   height: unset;
+}
+
+.img {
+   object-fit: cover;
+}
+
+.post-black {
+   color: $black;
+}
+
+.post-blue {
+   color: $darkBlueColor;
+}
+
+.search-icon {
+   width: 25px;
+   height: 25px;
+}
+
+.create-campaign-form {
+   display: flex;
+   justify-content: flex-start;
+
+   @media screen and(max-width: 767px) {
+      justify-content: center;
+   }
+}
+
+.create-campaign-filter {
+   @media screen and (max-width: 767px) {
+      flex-direction: column-reverse;
+      justify-content: space-evenly !important;
+      height: 129px;
+   }
+}
+
+.create-campaign-wrapper {
+   display: flex;
+   align-items: center;
+   white-space: nowrap;
+
+   @media screen and(max-width: 767px) {
+      flex-direction: column;
+      height: 65px;
+      justify-content: space-between;
+      width: 100%;
+   }
+}
+
+.custom-border {
+   background-color: $grayLightBgColor;
+   height: 1px;
+   width: 100%;
+}
+
+.custom-modal-body {
+   padding: 0px;
+}
+
+.create-campaign-modal-social img {
+   width: 40px;
+}
+
+.create-campaign-modal-social img {
+   height: 40px;
+   width: 174px;
+}
+
+.create-campaign-modal-content {
+   width: 410px;
+   margin: 0 auto;
+}
+
+.create-campaign-th {
+   padding-left: 35px !important;
+}

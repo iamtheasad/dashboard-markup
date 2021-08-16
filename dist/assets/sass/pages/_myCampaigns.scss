@@ -1,3 +1,7 @@
+.my-campaigns-wrapper {
+   padding-top: 20px;
+}
+
 .dot {
    position: relative;
 }
@@ -51,7 +55,7 @@
 }
 
 .ra-custom-nav-link.active {
-   background-color: $tabBtnBg !important;
+   background-color: $darkPrimaryColor !important;
    color: #fff;
 }
 
@@ -96,4 +100,8 @@
    @media (max-width: 767px) {
       width: 100%;
    }
+}
+
+.serach-number {
+   background: transparent;
 }

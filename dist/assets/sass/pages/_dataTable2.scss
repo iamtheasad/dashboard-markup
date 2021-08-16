@@ -208,7 +208,7 @@ tbody td.custom-table-data {
 
 /* When the checkbox is checked, add a background */
 .checkbox-wrapper input:checked~.checkmark {
-   background-color: $tabBtnBg;
+   background-color: $darkPrimaryColor;
    border-color: $grayCheckboxLight;
 }
 
