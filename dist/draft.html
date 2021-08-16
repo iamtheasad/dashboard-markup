@@ -344,7 +344,8 @@
    <button class="ra-btn ra-btn-dark-bg draft-btn fz15 fw-500" type="submit">Next</button>
 </div> -->
                         </div> <!-- Page End -->
-
+                    </form>
+                    <form>
                         <div class="page page-2">
                             <!-- <p class="fz14 fw-400 black-color pb-20">Lorem Ipsum has been the industry's standard dummy text ever since
    the 1500s, when an unknown printer took. Lorem Ipsum has been the industry's standard dummy text.</p>
@@ -398,7 +399,8 @@
    <button class="ra-btn ra-btn-dark-bg draft-btn fz15 fw-500" type="button">Next</button>
 </div> -->
                         </div> <!-- Page End -->
-
+                    </form>
+                    <form>
                         <div class="page page-3">
                             <p class="fz14 fw-400 black-color pb-20">Set a few parameters to search Influencers matches best with the business goal
                                 of this campaign.</p>
@@ -409,16 +411,16 @@
                                     <label class="fz14 fw-600 mb-12 black-color" for="draftTab3">Location of your Audience</label>
                                     <select class="form-control ra-select-form-control" id="draftTab3">
                                         <option selected>Any Location</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
+                                        <option>Dhaka</option>
+                                        <option>Khulna</option>
+                                        <option>Barishal</option>
+                                        <option>Syhlet</option>
                                     </select>
                                     <span class="mdi mdi-chevron-down select-custom-icon"></span>
                                 </div>
                             </div>
 
-                            <div class="mb-28">
+                            <div>
                                 <h3 class="fz14 fw-600 black-color mb-12">Select Interest of your Audience (5 max)</h3>
                                 <div class="promotion-tag">
 
@@ -462,6 +464,104 @@
                                         <label class="btn-checkbox-label" for="audienceListTag_8">Gadgets</label>
                                     </div>
 
+                                </div>
+                            </div>
+
+                            <div>
+                                <h3 class="fz14 fw-600 black-color mb-12">Any Gender Preference?</h3>
+                                <div class="d-flex mb-28">
+                                    <span class="mr-4">
+         <input type="radio" id="male" name="radio-group" checked>
+         <label for="male">Male</label>
+      </span>
+                                    <span class="mr-4">
+         <input type="radio" id="female" name="radio-group">
+         <label for="female">Female</label>
+      </span>
+                                    <span>
+         <input type="radio" id="any" name="radio-group">
+         <label for="any">Any</label>
+      </span>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h3 class="fz14 fw-600 black-color mb-12">Any Age Preference?</h3>
+
+                                <div slider id="slider-distance">
+                                    <div>
+                                        <div inverse-left style="width:70%;"></div>
+                                        <div inverse-right style="width:70%;"></div>
+                                        <div range style="left:30%;right:40%;"></div>
+                                        <span thumb style="left:30%;"></span>
+                                        <span thumb style="left:60%;"></span>
+                                        <div sign style="left:30%;">
+                                            <span id="value">30</span>
+                                        </div>
+                                        <div sign style="left:60%;">
+                                            <span id="value">60</span>
+                                        </div>
+                                    </div>
+
+                                    <input id="rangeSliderMin" type="range" tabindex="0" value="30" max="100" min="0" step="1" oninput="
+         this.value=Math.min(this.value,this.parentNode.childNodes[5].value-1);
+         var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
+         var children = this.parentNode.childNodes[1].childNodes;
+         children[1].style.width=value+'%';
+         children[5].style.left=value+'%';
+         children[7].style.left=value+'%';children[11].style.left=value+'%';
+         children[11].childNodes[1].innerHTML=this.value;
+         " />
+
+                                    <input id="rangeSliderMax" type="range" tabindex="0" value="60" max="100" min="0" step="1" oninput="
+         this.value=Math.max(this.value,this.parentNode.childNodes[3].value-(-1));
+         var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
+         var children = this.parentNode.childNodes[1].childNodes;
+         children[3].style.width=(100-value)+'%';
+         children[5].style.right=(100-value)+'%';
+         children[9].style.left=value+'%';children[13].style.left=value+'%';
+         children[13].childNodes[1].innerHTML=this.value;
+         " />
+                                </div>
+                            </div>
+
+                            <div>
+                                <h3 class="fz14 fw-600 black-color mb-12">Set Your Budget</h3>
+
+                                <div slider id="slider-distance2">
+                                    <div>
+                                        <div inverse-left style="width:70%;"></div>
+                                        <div inverse-right style="width:70%;"></div>
+                                        <div range style="left:30%;right:40%;"></div>
+                                        <span thumb style="left:30%;"></span>
+                                        <span thumb style="left:60%;"></span>
+                                        <div sign style="left:30%;">
+                                            <span id="value">30</span>
+                                        </div>
+                                        <div sign style="left:60%;">
+                                            <span id="value">60</span>
+                                        </div>
+                                    </div>
+
+                                    <input id="rangeSliderMin2" type="range" tabindex="0" value="30" max="100" min="0" step="1" oninput="
+         this.value=Math.min(this.value,this.parentNode.childNodes[5].value-1);
+         var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
+         var children = this.parentNode.childNodes[1].childNodes;
+         children[1].style.width=value+'%';
+         children[5].style.left=value+'%';
+         children[7].style.left=value+'%';children[11].style.left=value+'%';
+         children[11].childNodes[1].innerHTML=this.value;
+         " />
+
+                                    <input id="rangeSliderMax2" type="range" tabindex="0" value="60" max="100" min="0" step="1" oninput="
+         this.value=Math.max(this.value,this.parentNode.childNodes[3].value-(-1));
+         var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
+         var children = this.parentNode.childNodes[1].childNodes;
+         children[3].style.width=(100-value)+'%';
+         children[5].style.right=(100-value)+'%';
+         children[9].style.left=value+'%';children[13].style.left=value+'%';
+         children[13].childNodes[1].innerHTML=this.value;
+         " />
                                 </div>
                             </div>
                         </div> <!-- Page End -->
