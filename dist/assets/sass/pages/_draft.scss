@@ -207,11 +207,12 @@
    .draft-body .page {
       max-width: 555px;
       width: 100%;
-      margin: 28px;
+      margin: 20px;
    }
 
    .draft-body .page.page-4 {
-      max-width: 100%;
+      max-width: 98%;
+      margin: 20px;
    }
 }
 
@@ -396,109 +397,111 @@
 
 [type="radio"]:checked,
 [type="radio"]:not(:checked) {
-    position: absolute;
-    left: -9999px;
-}
-[type="radio"]:checked + label,
-[type="radio"]:not(:checked) + label
-{
-    position: relative;
-    padding-left: 28px;
-    cursor: pointer;
-    line-height: 13px;
-    display: inline-block;
-    color: $black;
+   position: absolute;
+   left: -9999px;
 }
 
-[type="radio"]:not(:checked) + label
-{
-    color: $grayLightTextColor;
+[type="radio"]:checked+label,
+[type="radio"]:not(:checked)+label {
+   position: relative;
+   padding-left: 28px;
+   cursor: pointer;
+   line-height: 13px;
+   display: inline-block;
+   color: $black;
 }
 
-[type="radio"]:checked + label:before,
-[type="radio"]:not(:checked) + label:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 16px;
-    height: 16px;
-    border: 2px solid $black;
-    border-radius: 50%;
-    background: $white;
-}
-[type="radio"]:not(:checked) + label:before {
-    border: 2px solid $grayCheckboxLight;
+[type="radio"]:not(:checked)+label {
+   color: $grayLightTextColor;
 }
 
-[type="radio"]:checked + label:after,
-[type="radio"]:not(:checked) + label:after {
-    content: '';
-    width: 8px;
-    height: 8px;
-    background: $black;
-    position: absolute;
-    top: 4px;
-    left: 4px;
-    border-radius: 50%;
-    -webkit-transition: all 0.2s ease;
-    transition: all 0.2s ease;
+[type="radio"]:checked+label:before,
+[type="radio"]:not(:checked)+label:before {
+   content: '';
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 16px;
+   height: 16px;
+   border: 2px solid $black;
+   border-radius: 50%;
+   background: $white;
 }
-[type="radio"]:not(:checked) + label:after {
-    opacity: 0;
-    -webkit-transform: scale(0);
-    transform: scale(0);
+
+[type="radio"]:not(:checked)+label:before {
+   border: 2px solid $grayCheckboxLight;
 }
-[type="radio"]:checked + label:after {
-    opacity: 1;
-    -webkit-transform: scale(1);
-    transform: scale(1);
+
+[type="radio"]:checked+label:after,
+[type="radio"]:not(:checked)+label:after {
+   content: '';
+   width: 8px;
+   height: 8px;
+   background: $black;
+   position: absolute;
+   top: 4px;
+   left: 4px;
+   border-radius: 50%;
+   -webkit-transition: all 0.2s ease;
+   transition: all 0.2s ease;
+}
+
+[type="radio"]:not(:checked)+label:after {
+   opacity: 0;
+   -webkit-transform: scale(0);
+   transform: scale(0);
+}
+
+[type="radio"]:checked+label:after {
+   opacity: 1;
+   -webkit-transform: scale(1);
+   transform: scale(1);
 }
 
 // Range Slider For Any Age Preference
 
- [slider] {
+[slider] {
    position: relative;
    height: 14px;
    border-radius: 10px;
    text-align: left;
    margin: 20px 0px;
- }
- 
- [slider] > div {
+}
+
+[slider]>div {
    position: absolute;
    left: 8px;
    right: 15px;
    height: 14px;
- }
- 
- [slider] > div > [inverse-left] {
+}
+
+[slider]>div>[inverse-left] {
    position: absolute;
    left: 0;
    height: 2px;
    border-radius: 200px;
    background-color: $grayCheckboxLight;
    margin: 0 7px;
- }
- 
- [slider] > div > [inverse-right] {
+}
+
+[slider]>div>[inverse-right] {
    position: absolute;
    right: 0;
    height: 2px;
    border-radius: 200px;
    background-color: $grayCheckboxLight;
    margin: 0 7px;
- }
- 
- [slider] > div > [range] {
+}
+
+[slider]>div>[range] {
    position: absolute;
    left: 0;
    height: 2px;
    border-radius: 14px;
    background-color: $grayCheckboxLight;
- }
- 
- [slider] > div > [thumb] {
+}
+
+[slider]>div>[thumb] {
    position: absolute;
    top: -10px;
    z-index: 2;
@@ -511,9 +514,9 @@
    border-radius: 50%;
    outline: none;
    border: 1px solid $grayCheckboxLight;
- }
- 
- [slider] > input[type=range] {
+}
+
+[slider]>input[type=range] {
    position: absolute;
    pointer-events: none;
    -webkit-appearance: none;
@@ -526,48 +529,48 @@
    -moz-opacity: 0;
    -khtml-opacity: 0;
    opacity: 0;
- }
- 
- div[slider] > input[type=range]::-ms-track {
+}
+
+div[slider]>input[type=range]::-ms-track {
    -webkit-appearance: none;
    background: transparent;
    color: transparent;
- }
- 
- div[slider] > input[type=range]::-moz-range-track {
+}
+
+div[slider]>input[type=range]::-moz-range-track {
    -moz-appearance: none;
    background: transparent;
    color: transparent;
- }
- 
- div[slider] > input[type=range]:focus::-webkit-slider-runnable-track {
+}
+
+div[slider]>input[type=range]:focus::-webkit-slider-runnable-track {
    background: transparent;
    border: transparent;
- }
- 
- div[slider] > input[type=range]:focus {
+}
+
+div[slider]>input[type=range]:focus {
    outline: none;
- }
- 
- div[slider] > input[type=range]::-ms-thumb {
+}
+
+div[slider]>input[type=range]::-ms-thumb {
    pointer-events: all;
    width: 28px;
    height: 28px;
    border-radius: 0px;
    border: 0 none;
    background: red;
- }
- 
- div[slider] > input[type=range]::-moz-range-thumb {
+}
+
+div[slider]>input[type=range]::-moz-range-thumb {
    pointer-events: all;
    width: 28px;
    height: 28px;
    border-radius: 0px;
    border: 0 none;
    background: red;
- }
- 
- div[slider] > input[type=range]::-webkit-slider-thumb {
+}
+
+div[slider]>input[type=range]::-webkit-slider-thumb {
    pointer-events: all;
    width: 28px;
    height: 28px;
@@ -575,28 +578,28 @@
    border: 0 none;
    background: red;
    -webkit-appearance: none;
- }
- 
- div[slider] > input[type=range]::-ms-fill-lower {
+}
+
+div[slider]>input[type=range]::-ms-fill-lower {
    background: transparent;
    border: 0 none;
- }
- 
- div[slider] > input[type=range]::-ms-fill-upper {
+}
+
+div[slider]>input[type=range]::-ms-fill-upper {
    background: transparent;
    border: 0 none;
- }
- 
- div[slider] > input[type=range]::-ms-tooltip {
+}
+
+div[slider]>input[type=range]::-ms-tooltip {
    display: none;
- }
- 
- [slider] > div > [sign] {
+}
+
+[slider]>div>[sign] {
    opacity: 0;
    position: absolute;
    margin-left: -11px;
    top: -39px;
-   z-index:3;
+   z-index: 3;
    background-color: $darkPrimaryColor;
    color: $white;
    width: 28px;
@@ -607,9 +610,9 @@
    -webkit-justify-content: center;
    justify-content: center;
    text-align: center;
- }
- 
- [slider] > div > [sign]:after {
+}
+
+[slider]>div>[sign]:after {
    position: absolute;
    content: '';
    left: 0;
@@ -620,14 +623,27 @@
    border-top-width: 16px;
    border-top-style: solid;
    border-top-color: $darkPrimaryColor;
- }
- 
- [slider] > div > [sign] > span {
+}
+
+[slider]>div>[sign]>span {
    font-size: 12px;
    font-weight: 700;
    line-height: 28px;
- }
- 
- [slider]:hover > div > [sign] {
+}
+
+[slider]:hover>div>[sign] {
    opacity: 1;
- }
+}
+
+// Tab page 4
+.influencer-connect {
+   display: flex;
+   justify-content: space-between;
+   padding: 20px;
+   background: $grayLight2;
+   border-radius: 4px;
+
+   h3 {
+      line-height: 28px;
+   }
+}

@@ -212,7 +212,6 @@
 
    .draft-body .page.page-4 {
       max-width: 98%;
-      margin: 20px;
    }
 }
 
@@ -636,9 +635,9 @@ div[slider]>input[type=range]::-ms-tooltip {
 }
 
 // Tab page 4
-.influencer-connect {
+.influencer-select {
    display: flex;
-   justify-content: space-between;
+   align-items: center;
    padding: 20px;
    background: $grayLight2;
    border-radius: 4px;
@@ -646,4 +645,27 @@ div[slider]>input[type=range]::-ms-tooltip {
    h3 {
       line-height: 28px;
    }
+}
+
+.influencer-select-btn {
+   display: flex;
+   justify-content: flex-end;
+}
+
+.connect-influencer {
+   display: flex;
+   align-items: center;
+
+   p{
+      color: $grayDark;
+   }
+}
+
+.influencer-connect-btn {
+   display: flex;
+   justify-content: flex-end;
+}
+
+.social-details {
+   background-color: transparent;
 }
