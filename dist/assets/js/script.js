@@ -249,6 +249,7 @@
         dataTable2('#pendingApproval');
         dataTable2('#myDealsCancelled');
         dataTable2('#createCampaignDataTable');
+        dataTable2('#draftTab4ataTable');
 
         dataTable('#propertyDataTable');
         dataTable('#propertyDetailsDataTable');
