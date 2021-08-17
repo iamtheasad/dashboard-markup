@@ -356,17 +356,17 @@
    -o-appearance: none;
 
    min-height: 40px;
-   border: 1px solid #E2E2E2;
+   border: 1px solid $grayBorderColor;
    border-radius: 4px;
-   color: #7A7A7A;
+   color: $grayLightTextColor;
    font-size: 14px;
    font-weight: 400;
    padding-left: 12px;
 }
 
 .ra-select-form-control:focus {
-   color: #7A7A7A;
-   border-color: #484848;
+   color: $grayLightTextColor;
+   border-color: $darkPrimaryColor;
    box-shadow: none;
 }
 
@@ -393,15 +393,14 @@
 
 
 //  Radio Button
-
-[type="radio"]:checked,
-[type="radio"]:not(:checked) {
+.custom-radio-input:checked,
+.custom-radio-input:not(:checked) {
    position: absolute;
    left: -9999px;
 }
 
-[type="radio"]:checked+label,
-[type="radio"]:not(:checked)+label {
+.custom-radio-input:checked+.custom-radio-label,
+.custom-radio-input:not(:checked)+.custom-radio-label {
    position: relative;
    padding-left: 28px;
    cursor: pointer;
@@ -410,12 +409,12 @@
    color: $black;
 }
 
-[type="radio"]:not(:checked)+label {
+.custom-radio-input:not(:checked)+.custom-radio-label {
    color: $grayLightTextColor;
 }
 
-[type="radio"]:checked+label:before,
-[type="radio"]:not(:checked)+label:before {
+.custom-radio-input:checked+.custom-radio-label:before,
+.custom-radio-input:not(:checked)+.custom-radio-label:before {
    content: '';
    position: absolute;
    left: 0;
@@ -427,12 +426,12 @@
    background: $white;
 }
 
-[type="radio"]:not(:checked)+label:before {
+.custom-radio-input:not(:checked)+.custom-radio-label:before {
    border: 2px solid $grayCheckboxLight;
 }
 
-[type="radio"]:checked+label:after,
-[type="radio"]:not(:checked)+label:after {
+.custom-radio-input:checked+.custom-radio-label:after,
+.custom-radio-input:not(:checked)+.custom-radio-label:after {
    content: '';
    width: 8px;
    height: 8px;
@@ -445,17 +444,18 @@
    transition: all 0.2s ease;
 }
 
-[type="radio"]:not(:checked)+label:after {
+.custom-radio-input:not(:checked)+.custom-radio-label:after {
    opacity: 0;
    -webkit-transform: scale(0);
    transform: scale(0);
 }
 
-[type="radio"]:checked+label:after {
+.custom-radio-input:checked+.custom-radio-label:after {
    opacity: 1;
    -webkit-transform: scale(1);
    transform: scale(1);
 }
+
 
 // Range Slider For Any Age Preference
 
@@ -636,8 +636,11 @@ div[slider]>input[type=range]::-ms-tooltip {
 
 // Tab page 4
 .influencer-select {
+<<<<<<< HEAD
    display: flex;
    align-items: center;
+=======
+>>>>>>> influencer2
    padding: 20px;
    background: $grayLight2;
    border-radius: 4px;
@@ -653,10 +656,15 @@ div[slider]>input[type=range]::-ms-tooltip {
 }
 
 .connect-influencer {
+<<<<<<< HEAD
    display: flex;
    align-items: center;
 
    p{
+=======
+
+   p {
+>>>>>>> influencer2
       color: $grayDark;
    }
 }
