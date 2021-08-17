@@ -30,20 +30,36 @@
                   <div class="col-md-12">
                      <div class="p-20">
                         <p class="fz14 fw-600 mb-3">Give a Name to your Campaign</p>
-                        <a href="#" target="_blank" class="create-campaign-modal-social mr-2">
-                           <img class="img" src="assets/images/icons/fb.svg" alt="Facebook Icon">
-                        </a>
-                        <a href="#" target="_blank" class="create-campaign-modal-social">
-                           <img class="img" src="assets/images/icons/ig.svg" alt="Facebook Icon">
-                        </a>
+                        <div class="d-flex">
+                           <div>
+                              <label for="fbBtn" class="create-campaign-modal-social mr-2">
+                                 <img class="img" src="assets/images/icons/fb.svg" alt="Facebook Icon">
+                              </label>
+                              <input type="radio" class="d-none" name="" id="fbBtn">
+                           </div>
+
+                           <div>
+                              <label for="igBtn" class="create-campaign-modal-social mr-2">
+                                 <img class="img" src="assets/images/icons/ig.svg" alt="Facebook Icon">
+                              </label>
+                              <input type="radio" class="d-none" name="" id="igBtn">
+                           </div>
+                        </div>
                      </div>
                   </div>
                   <div class="col-md-12">
                      <div class="p-20">
                         <p class="fz14 fw-600 mb-3">How do you want to Promote?</p>
                         <div class="d-flex">
-                           <button class="ra-btn btn-12x12 fz14 fw-400 black-color mr-2">As a Post</button>
-                           <button class="ra-btn btn-12x12 fz14 fw-400 black-color">As a Story</button>
+                           <div>
+                              <label for="asAPost" class="ra-btn btn-12x12 fz14 fw-400 black-color mr-2">As a
+                                 Post</label>
+                              <input type="radio" class="d-none" name="" id="asAPost">
+                           </div>
+                           <div>
+                              <label for="asAStory" class="ra-btn btn-12x12 fz14 fw-400 black-color">As a Story</label>
+                              <input type="radio" class="d-none" name="" id="asAStory">
+                           </div>
                         </div>
                      </div>
                   </div>
