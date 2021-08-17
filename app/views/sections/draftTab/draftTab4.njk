@@ -24,25 +24,26 @@
 <!-- Modal -->
 {% include 'snippets/modals/publishConnectModal.njk' %}
 
-
-<!-- <div class="row">
+<div class="row">
    <div class="col-md-12">
       <div class="dataTable table-responsive">
          <table id="connectRequestsDataTable" class="display" style="width:100%">
             <thead>
                <tr>
-                  <th class="custom-table-head">
-                     {% include "snippets/myDeals/checkBoxHead.njk" %}
-                     <p>Campaign Name</p>
+                  <th class="custom-table-head d-flex align-items-center">
+                     <label class="checkbox-wrapper d-block">
+                        <input type="checkbox">
+                        <span class="checkmark checkmark-remove"></span>
+                     </label>
+                     <p>Influencer Name</p>
                   </th>
-                  <th class="custom-table-head">Type</th>
-                  <th class="custom-table-head">Category</th>
-                  <th class="custom-table-head">Created by</th>
-                  <th class="custom-table-head">Start Date</th>
-                  <th class="custom-table-head">Offered</th>
-                  <th class="custom-table-head">Connects</th>
-                  <th class="custom-table-head no-icon">&nbsp;</th>
-                  <th class="custom-table-head no-icon">&nbsp;</th>
+                  <th class="custom-table-head">Follower</th>
+                  <th class="custom-table-head">Age</th>
+                  <th class="custom-table-head">Gender</th>
+                  <th class="custom-table-head">Location</th>
+                  <th class="custom-table-head">Avg. Budget</th>
+                  <th class="custom-table-head">Avg. Imprsn.</th>
+                  <th class="custom-table-head no-icon">Avg. Engmt.</th>
                </tr>
             </thead>
             <tbody>
@@ -50,15 +51,23 @@
                   <td class="custom-table-data active d-flex align-items-center">
                      {% include "snippets/myDeals/checkBox.njk" %}
 
-                     <a href="#" class="d-flex align-items-center">
-                        <div class="notification active">
-                           <div class="c-user-img">
-                              <img src="https://via.placeholder.com/300" class="img" alt="Campaign Holder Image">
+                     <a href="#" class="w-100">
+                        <div class="ra-progress-item social-details">
+                           <div class="progress-user-status">
+                              <div class="ra-progress-user">
+                                 <img src="https://via.placeholder.com/300" class="img" alt="User Image">
+                              </div>
+                              <div class="ra-progress-social">
+                                 <img src="https://image.flaticon.com/icons/png/512/1384/1384053.png" class="img" alt="User Image">
+                              </div>
+                           </div>
+            
+                           <div class="ra-progress-body">
+                              <div class="ra-brand-name-title">
+                                 <p class="fz16 fw-600 black-color pr-1">Raba Khan</p>
+                              </div>
                            </div>
                         </div>
-                        <p class="c-title">
-                           Airbnb: We Are Here Campaign
-                        </p>
                      </a>
                   </td>
                   <td class="custom-table-data active">
@@ -105,78 +114,6 @@
                   <td class="custom-table-data active">
                      <button class="c-title c-start-campaign active c-datatable-btn">
                         Connect
-                     </button>
-                  </td>
-                  <td class="custom-table-data active">
-                     <button class="c-title c-start-campaign active c-datatable-btn">
-                        Decline
-                     </button>
-                  </td>
-               </tr>
-               <tr class="in-table-row">
-                  <td class="custom-table-data d-flex align-items-center">
-                     {% include "snippets/myDeals/checkBox.njk" %}
-
-                     <a href="#" class="d-flex align-items-center">
-                        <div class="notification">
-                           <div class="c-user-img">
-                              <img src="https://via.placeholder.com/300" class="img" alt="Campaign Holder Image">
-                           </div>
-                        </div>
-                        <p class="c-title">
-                           Airbnb: We Are Here Campaign
-                        </p>
-                     </a>
-                  </td>
-                  <td class="custom-table-data">
-                     <a href="#" class="d-flex align-items-center">
-                        <div class="c-social-img">
-                           <img src="https://image.flaticon.com/icons/png/512/1384/1384053.png" class="img"
-                              alt="Social Icon">
-                        </div>
-                        <p class="c-title c-ongoing-title">
-                           FB Post
-                        </p>
-                     </a>
-                  </td>
-                  <td class="custom-table-data">
-                     <a href="#">
-                        <p class="c-title d-flex flex-column">
-                           Brand
-                           <span class="fz12 fw-400 gray-light-text-color">BDT 50,000</span>
-                        </p>
-                     </a>
-                  </td>
-                  <td class="custom-table-data">
-                     <p class="c-title d-flex flex-column">
-                        Kashef
-                        <span class="fz12 fw-400 gray-light-text-color">BDT 50,000</span>
-                     </p>
-                  </td>
-                  <td class="custom-table-data">
-                     <p class="c-title d-flex flex-column">
-                        <span class="fz14 fw-500 c-date">24 JUL, 21</span>
-                        <span class="fz12 fw-400 gray-light-text-color">09:00 PM</span>
-                     </p>
-                  </td>
-                  <td class="custom-table-data">
-                     <p class="c-title d-flex flex-column">
-                        <span class="fz14 fw-500 c-date">20,000</span>
-                     </p>
-                  </td>
-                  <td class="custom-table-data">
-                     <p class="c-title d-flex flex-column">
-                        <span class="fz14 fw-500 c-date">5</span>
-                     </p>
-                  </td>
-                  <td class="custom-table-data">
-                     <button class="c-title c-start-campaign active c-datatable-btn">
-                        Connect
-                     </button>
-                  </td>
-                  <td class="custom-table-data">
-                     <button class="c-title c-start-campaign active c-datatable-btn">
-                        Decline
                      </button>
                   </td>
                </tr>
@@ -184,4 +121,4 @@
          </table>
       </div>
    </div>
-</div> -->
+</div>

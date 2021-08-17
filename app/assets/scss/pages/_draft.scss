@@ -212,7 +212,6 @@
 
    .draft-body .page.page-4 {
       max-width: 98%;
-      margin: 20px;
    }
 }
 
@@ -665,4 +664,8 @@ div[slider]>input[type=range]::-ms-tooltip {
 .influencer-connect-btn {
    display: flex;
    justify-content: flex-end;
+}
+
+.social-details {
+   background-color: transparent;
 }

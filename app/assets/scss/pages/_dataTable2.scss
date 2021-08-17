@@ -230,9 +230,21 @@ tbody td.custom-table-data {
    top: 0px;
    width: 5px;
    height: 10px;
-   border: solid #fff;
+   border: solid $white;
    border-width: 0 2px 2px 0;
    transform: rotate(45deg);
+}
+
+.checkbox-wrapper .checkmark.checkmark-remove:after {
+   left: 3px;
+   top: 6px;
+   width: 8px;
+   height: 2px;
+   background: $white;
+   border-radius: 20px;
+   border: unset;
+   border-width: unset;
+   transform: unset;
 }
 
 .c-datatable-btn {
