@@ -20,7 +20,10 @@
          </button>
       </div>
    </div>
-   <div class="right-menu dropdown">
+   <div class="right-menu dropdown d-flex">
+      <button class="topbar-notification">
+         <img src="assets/images/icons/notification_outline.svg" alt="Bell Icon">
+      </button>
       <a href="javascript:void(0)" class="account-menu d-flex align-items-center dropdown-toggle" type="button"
          id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
          <div class="avater">
@@ -79,7 +82,7 @@
       <div class="draft-step-seperator"></div>
    </div>
    <div class="step">
-      <div class="draft-step-item ongoing active-text">
+      <div class="draft-step-item lock active-text">
          <div class="draft-position">
             <p class="draft-step-number fz14">3</p>
          </div>
@@ -91,7 +94,7 @@
       <div class="draft-step-seperator"></div>
    </div>
    <div class="step">
-      <div class="draft-step-item lock active-text">
+      <div class="draft-step-item ongoing active-text">
          <div class="draft-position">
             <p class="draft-step-number fz14">4</p>
          </div>
@@ -118,19 +121,24 @@
 <!-- Draft Content -->
 <div class="draft-content-wrapper min-vh-100">
    <div class="draft-body">
-      <form action="#" class="d-none">
-         <div class="page page-1">
+      <form action="#" class="d-flex justify-content-center">
+         <div class="page page-1 d-none">
             {% include 'sections/draftTab/draftTab1.njk' %}
          </div> <!-- Page End -->
       </form>
-      <form class="d-none">
-         <div class="page page-2">
+      <form class="d-flex justify-content-center">
+         <div class="page page-2 d-none">
             {% include 'sections/draftTab/draftTab2.njk' %}
          </div> <!-- Page End -->
       </form>
-      <form class="">
-         <div class="page page-3">
+      <form class="d-flex justify-content-center">
+         <div class="page page-3 d-none">
             {% include 'sections/draftTab/draftTab3.njk' %}
+         </div> <!-- Page End -->
+      </form>
+      <form class="">
+         <div class="page page-4">
+            {% include 'sections/draftTab/draftTab4.njk' %}
          </div> <!-- Page End -->
       </form>
    </div>

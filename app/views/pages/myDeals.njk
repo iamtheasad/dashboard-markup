@@ -1,6 +1,44 @@
-{% extends "layouts/layout.njk" %}
+{% extends "layouts/layout2.njk" %}
 
 {% block content %}
+
+<!-- Top Bar -->
+<header class="topbar topbar2 d-flex justify-content-between align-items-center">
+   <div class="breadcumb fz16 fw-600">
+      <div class="d-flex align-items-center">
+         <a href="#" class="mr-20">
+            <img src="assets/images/icons/coolicon.svg" class="img long-arrow" alt="Arrow Icon">
+         </a>
+         <span class="pl-2 pr-3">My Deals</span>
+      </div>
+   </div>
+   <div class="right-menu dropdown d-flex">
+      <button class="topbar-notification">
+         <img src="assets/images/icons/notification_outline.svg" alt="Bell Icon">
+      </button>
+      <a href="javascript:void(0)" class="account-menu d-flex align-items-center dropdown-toggle" type="button"
+         id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         <div class="avater">
+            <img src="http://via.placeholder.com/48x48" alt="">
+         </div>
+         <div class="acc-name">Publisher</div>
+
+         <button class="dropdown-icon">
+            <i class="mdi mdi-menu-down"></i>
+         </button>
+      </a>
+      <div class="dropdown-menu mt-1" aria-labelledby="dropdownMenuButton2">
+         <ul>
+            <li><a href="accountSettings.html">Account Settings</a></li>
+            <li><a href="index2.html">Advertiser Dashboard</a></li>
+            <li><a href="">বাংলা ভাষা নির্বাচন</a></li>
+            <li><a href="">Take a Tour</a></li>
+            <li><a href="login.html">Logout</a></li>
+         </ul>
+      </div>
+   </div>
+</header>
+
 
 <div class="ra-gray-light-bg my-deals-wrapper">
    <ul class="nav d-flex justify-content-center nav-pills bg-transparent tab-wrapper" id="pills-tab" role="tablist">
@@ -25,31 +63,47 @@
    <div class="tab-content" id="pills-tabContent">
       <div class="tab-pane fade show active" id="request" role="tabpanel" aria-labelledby="request-tab">
          {% set data = {
-            searchTitle : 'Search in Connect Requests'
+         searchTitle : 'Search in Connect Requests'
          }%}
-         {% include "snippets/searchBar.njk"%}
-         {% include "sections/myDeals/connectRequestsDataTable.njk"%}
+         <div class="ml-20 mr-20">
+            {% include "snippets/searchBar.njk"%}
+         </div>
+         <div class="wrapper">
+            {% include "sections/myDeals/connectRequestsDataTable.njk"%}
+         </div>
       </div>
       <div class="tab-pane fade" id="progress" role="tabpanel" aria-labelledby="progress-tab">
          {% set data = {
-            searchTitle : 'Search in In Progress'
+         searchTitle : 'Search in In Progress'
          }%}
-         {% include "snippets/searchBar.njk"%}
-         {% include "sections/myDeals/inProgressDataTable.njk"%}
+         <div class="ml-20 mr-20">
+            {% include "snippets/searchBar.njk"%}
+         </div>
+         <div class="wrapper">
+            {% include "sections/myDeals/inProgressDataTable.njk"%}
+         </div>
       </div>
       <div class="tab-pane fade" id="approval" role="tabpanel" aria-labelledby="approval-tab">
          {% set data = {
-            searchTitle : 'Search in Pending Approval'
+         searchTitle : 'Search in Pending Approval'
          }%}
-         {% include "snippets/searchBar.njk"%}
-         {% include "sections/myDeals/pendingApproval.njk"%}
+         <div class="ml-20 mr-20">
+            {% include "snippets/searchBar.njk"%}
+         </div>
+         <div class="wrapper">
+            {% include "sections/myDeals/pendingApproval.njk"%}
+         </div>
       </div>
       <div class="tab-pane fade" id="cancelled" role="tabpanel" aria-labelledby="cancelled-tab">
          {% set data = {
-            searchTitle : 'Search in Cancelled'
+         searchTitle : 'Search in Cancelled'
          }%}
-         {% include "snippets/searchBar.njk"%}
-         {% include "sections/myDeals/cancelled.njk"%}
+         <div class="ml-20 mr-20">
+            {% include "snippets/searchBar.njk"%}
+         </div>
+         <div class="wrapper">
+            {% include "sections/myDeals/cancelled.njk"%}
+         </div>
       </div>
    </div>
 </div>

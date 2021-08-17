@@ -159,7 +159,10 @@
                         </button>
                     </div>
                 </div>
-                <div class="right-menu dropdown">
+                <div class="right-menu dropdown d-flex">
+                    <button class="topbar-notification">
+                        <img src="assets/images/icons/notification_outline.svg" alt="Bell Icon">
+                    </button>
                     <a href="javascript:void(0)" class="account-menu d-flex align-items-center dropdown-toggle" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <div class="avater">
                             <img src="http://via.placeholder.com/48x48" alt="">
@@ -217,7 +220,7 @@
                     <div class="draft-step-seperator"></div>
                 </div>
                 <div class="step">
-                    <div class="draft-step-item ongoing active-text">
+                    <div class="draft-step-item lock active-text">
                         <div class="draft-position">
                             <p class="draft-step-number fz14">3</p>
                         </div>
@@ -229,7 +232,7 @@
                     <div class="draft-step-seperator"></div>
                 </div>
                 <div class="step">
-                    <div class="draft-step-item lock active-text">
+                    <div class="draft-step-item ongoing active-text">
                         <div class="draft-position">
                             <p class="draft-step-number fz14">4</p>
                         </div>
@@ -256,8 +259,8 @@
             <!-- Draft Content -->
             <div class="draft-content-wrapper min-vh-100">
                 <div class="draft-body">
-                    <form action="#" class="d-none">
-                        <div class="page page-1">
+                    <form action="#" class="d-flex justify-content-center">
+                        <div class="page page-1 d-none">
                             <p class="fz14 fw-400 black-color pb-20">Lorem Ipsum has been the industry's standard dummy text ever since
                                 the 1500s, when an unknown printer took. Lorem Ipsum has been the industry's standard dummy text.</p>
                             <div class="draft-brand-tag">
@@ -344,8 +347,8 @@
                             </div>
                         </div> <!-- Page End -->
                     </form>
-                    <form class="d-none">
-                        <div class="page page-2">
+                    <form class="d-flex justify-content-center">
+                        <div class="page page-2 d-none">
                             <p class="fz14 fw-400 black-color pb-20">Lorem Ipsum has been the industry's standard dummy text ever since
                                 the 1500s, when an unknown printer took. Lorem Ipsum has been the industry's standard dummy text.</p>
 
@@ -400,8 +403,8 @@
                             </div>
                         </div> <!-- Page End -->
                     </form>
-                    <form class="">
-                        <div class="page page-3">
+                    <form class="d-flex justify-content-center">
+                        <div class="page page-3 d-none">
                             <p class="fz14 fw-400 black-color pb-20">Set a few parameters to search Influencers matches best with the business goal
                                 of this campaign.</p>
 
@@ -566,8 +569,160 @@
                             </div>
 
                             <div class="d-flex justify-content-center btn-custom">
-                                <button class="ra-btn  draft-btn fz15 fw-500" type="button">Previous</button>
+                                <button class="ra-btn draft-btn fz15 fw-500" type="button">Previous</button>
                                 <button class="ra-btn ra-btn-dark-bg draft-btn fz15 fw-500" type="button">Next</button>
+                            </div>
+                        </div> <!-- Page End -->
+                    </form>
+                    <form class="">
+                        <div class="page page-4">
+                            <div class="influencer-connect mb-16">
+                                <div>
+                                    <h3 class="fz18 fw-600 black-color">Select Influencers to Connect</h3>
+                                    <p class="fz14 fw-400 black-color pb-20">We have found 16 influencers that matches your campaign parameters. Select upto 5 influencers from this list to connect.
+                                        You CAN NOT edit this campaign once you start connecting with them.</p>
+                                </div>
+                                <div class="d-flex justify-content-center btn-custom">
+                                    <button class="ra-btn draft-btn fz15 fw-500" type="button">View Campaign</button>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="filter-wrapper mb-1 mb-md-2 mt-2 mt-md-0">
+                                    <form action="" class="rs-form custom-form d-flex justify-content-between align-items-center mb-md-0 mb-3">
+                                        <button type="submit" class="position-absolute search-icon border-0 bg-transparent pl-3" for="searchInput">
+                                            <span class="mdi mdi-magnify search-img gray-light-text-color fz20"></span>
+                                        </button>
+                                        <input type="search" class="rs-input border-0 ra-data-table-bg gray-light-text-color fz14 fw-500 min-hieght-36 pl-5" id="searchInput" placeholder="Search influencer">
+                                    </form>
+
+                                    <div class="search-right d-flex align-items-center justify-content-center">
+                                        <div class="mr-1 mr-md-3">
+                                            <button class="serach-number border-0 fw-500 d-flex align-items-center min-hieght-36">
+                                                <p class="fz14"><span>1</span>-<span>4</span></p>
+                                            </button>
+                                        </div>
+                                        <div class="ra-filter mr-1 mr-md-3">
+                                            <div class="dropdown search-common">
+                                                <button class="search-filter border-0 radius-5 d-flex gray-light-bg-color fw-500 d-flex align-items-center min-hieght-36" type="button" id="serach-filter" data-toggle="dropdown" aria-haspopup="true">
+                                                    <span class="mdi mdi-filter-outline fz20 pr-2"></span>
+                                                    <p class="fz14">Filter By</p>
+                                                    <span class="mdi mdi-chevron-up fz20 pl-2"></span>
+                                                </button>
+                                                <div class="dropdown-menu search-dropdown" aria-labelledby="serach-filter">
+                                                    <a class="dropdown-item" href="#">Campaign Name</a>
+                                                    <a class="dropdown-item" href="#">Type</a>
+                                                    <a class="dropdown-item" href="#">Budget</a>
+                                                    <a class="dropdown-item" href="#">Category</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ra-filter">
+                                            <div class="dropdown search-common">
+                                                <button class="search-filter border-0 radius-5 d-flex gray-light-bg-color fw-500 d-flex align-items-center min-hieght-36" type="button" id="serach-filter" data-toggle="dropdown" aria-haspopup="true">
+                                                    <span class="mdi mdi-sort-descending fz20 pr-2"></span>
+                                                    <p class="fz14">Sort By</p>
+                                                    <span class="mdi mdi-chevron-up fz20 pl-2"></span>
+                                                </button>
+                                                <div class="dropdown-menu search-dropdown" aria-labelledby="serach-filter">
+                                                    <a class="dropdown-item" href="#">Campaign Name</a>
+                                                    <a class="dropdown-item" href="#">Type</a>
+                                                    <a class="dropdown-item" href="#">Budget</a>
+                                                    <a class="dropdown-item" href="#">Category</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="dataTable table-responsive">
+                                        <table id="completedDataTable" class="display" style="width:100%">
+                                            <thead>
+                                                <tr>
+                                                    <th class="custom-table-head">Influencer Name</th>
+                                                    <th class="custom-table-head">Follower</th>
+                                                    <th class="custom-table-head">Age</th>
+                                                    <th class="custom-table-head">Gender</th>
+                                                    <th class="custom-table-head">Location</th>
+                                                    <th class="custom-table-head">Avg. Budget</th>
+                                                    <th class="custom-table-head">Avg. Imprsn</th>
+                                                    <th class="custom-table-head no-icon">Avg. Engmt.</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="in-table-row">
+                                                    <td class="custom-table-data active">
+                                                        <a href="#" class="d-flex align-items-center">
+                                                            <div class="notification active">
+                                                                <div class="c-user-img">
+                                                                    <img src="https://via.placeholder.com/300" class="img" alt="Campaign Holder Image">
+                                                                </div>
+                                                            </div>
+                                                            <p class="c-title">
+                                                                Blendtec: Will It Blend Campaign
+                                                            </p>
+                                                        </a>
+                                                    </td>
+                                                    <td class="custom-table-data active">
+                                                        <div class="progress c-progress">
+                                                            <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                                                <p class="c-title">
+                                                                    Ready
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="custom-table-data active">
+                                                        <a href="#">
+                                                            <p class="c-title d-flex flex-column">
+                                                                Shafayat
+                                                                <span class="fz12 fw-400 gray-light-text-color">BDT 50,000</span>
+                                                            </p>
+                                                        </a>
+                                                    </td>
+                                                    <td class="custom-table-data active">
+                                                        <p class="c-title d-flex flex-column">
+                                                            <span class="fz14 fw-500 c-date">17 JUL, 21</span>
+                                                            <span class="fz12 fw-400 gray-light-text-color">09:00 PM</span>
+                                                        </p>
+                                                    </td>
+                                                    <td class="custom-table-data active">
+                                                        <p class="c-title d-flex flex-column">
+                                                            <span class="fz14 fw-500 c-date">20,123</span>
+                                                            <span class="fz12 fw-400 gray-light-text-color">9.26%</span>
+                                                        </p>
+                                                    </td>
+                                                    <td class="custom-table-data active">
+                                                        <p class="c-title d-flex flex-column">
+                                                            <span class="fz14 fw-500 c-date">20,123</span>
+                                                            <span class="fz12 fw-400 gray-light-text-color">9.26%</span>
+                                                        </p>
+                                                    </td>
+                                                    <td class="custom-table-data active">
+                                                        <p class="c-title d-flex flex-column">
+                                                            <span class="fz14 fw-500 c-star mdi mdi-star-outline"><span class="pl-2">5.0</span></span>
+                                                        </p>
+                                                    </td>
+                                                    <td class="custom-table-data active">
+                                                        <button class="c-message-wrapper d-flex align-items-center border-0 bg-transparent">
+                                                            <p class="c-title">
+                                                                <span class="fz14 fw-400 gray-light-text-color">You gave <span
+                                 class="fw-600">5.0</span></span>
+                                                            </p>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-center btn-custom">
+                                <button class="ra-btn draft-btn fz15 fw-500" type="button">Previous</button>
                             </div>
                         </div> <!-- Page End -->
                     </form>
