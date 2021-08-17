@@ -126,8 +126,12 @@
 }
 
 .social-radio-input:checked~.create-campaign-modal-social.social-radio-label {
-   box-shadow: -1px 5px 17px -5px $black;
+   filter: drop-shadow(2px 4px 6px $black);
    border-radius: 4px;
+}
+
+.social-radio-input:checked~.create-campaign-modal-social.social-radio-label img {
+   filter: saturate(0.8);
 }
 
 .social-radio-input:checked~.radio-btn {

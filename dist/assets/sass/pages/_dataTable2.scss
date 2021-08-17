@@ -1,4 +1,9 @@
 // Data Table Start
+.datatable-border {
+   border: 1px solid $grayLightBgColor;
+   overflow: hidden;
+}
+
 table.dataTable>thead .custom-table-head.sorting:before,
 table.dataTable>thead .custom-table-head.sorting_asc:before,
 table.dataTable>thead .custom-table-head.sorting_desc:before {
@@ -30,11 +35,11 @@ table.dataTable>thead>tr>td:not(.sorting_disabled) {
    white-space: nowrap;
 }
 
-thead{
+thead {
    background: $white;
 }
 
-.custom-table-head {
+th.custom-table-head {
    background: $white;
    padding: 0px 20px;
    font-size: rem(14px);
@@ -42,13 +47,17 @@ thead{
    height: 56px;
    width: 100%;
    max-width: 250px;
-}
 
-.custom-table-head p {
-   display: flex;
-   align-items: center;
-   font-size: rem(14px);
-   font-weight: 500;
+   &.custom-table-head-2 {
+      border-bottom: 1px solid $grayLightBgColor;
+   }
+
+   p {
+      display: flex;
+      align-items: center;
+      font-size: rem(14px);
+      font-weight: 500;
+   }
 }
 
 tbody td.custom-table-data.active {
@@ -64,6 +73,10 @@ tbody td.custom-table-data {
    font-weight: 500;
    white-space: nowrap;
    height: 64px;
+}
+
+tbody td.custom-table-data.custom-table-data-2 {
+   border: none;
 }
 
 .c-user-img {
@@ -230,9 +243,21 @@ tbody td.custom-table-data {
    top: 0px;
    width: 5px;
    height: 10px;
-   border: solid #fff;
+   border: solid $white;
    border-width: 0 2px 2px 0;
    transform: rotate(45deg);
+}
+
+.checkbox-wrapper .checkmark.checkmark-remove:after {
+   left: 3px;
+   top: 6px;
+   width: 8px;
+   height: 2px;
+   background: $white;
+   border-radius: 20px;
+   border: unset;
+   border-width: unset;
+   transform: unset;
 }
 
 .c-datatable-btn {
