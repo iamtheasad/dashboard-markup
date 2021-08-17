@@ -187,7 +187,7 @@
             </header>
 
             <!-- Draft Message -->
-            <div class="draft-top-message">
+            <div class="draft-top-message d-none">
                 <p class="fz14 fw-400 black-color">Campaign created as a <span class="fw-500">Draft</span>. Please complete the flow
                     to make a deal with an <span class="fw-500">Influencer</span></p>
             </div>
@@ -574,158 +574,200 @@
                             </div>
                         </div> <!-- Page End -->
                     </form>
-                    <form class="">
-                        <div class="page page-4">
-                            <div class="influencer-connect mb-16">
-                                <div>
-                                    <h3 class="fz18 fw-600 black-color">Select Influencers to Connect</h3>
-                                    <p class="fz14 fw-400 black-color pb-20">We have found 16 influencers that matches your campaign parameters. Select upto 5 influencers from this list to connect.
-                                        You CAN NOT edit this campaign once you start connecting with them.</p>
-                                </div>
-                                <div class="d-flex justify-content-center btn-custom">
-                                    <button class="ra-btn draft-btn fz15 fw-500" type="button">View Campaign</button>
-                                </div>
+                    <div class="page page-4">
+                        <div class="row mb-16 influencer-select">
+                            <div class="col-md-7">
+                                <h3 class="fz18 fw-600 black-color">Select Influencers to Connect</h3>
+                                <p class="fz14 fw-400 black-color pb-20">We have found 16 influencers that matches your campaign parameters.
+                                    Select upto 5 influencers from this list to connect.
+                                    You CAN NOT edit this campaign once you start connecting with them.</p>
                             </div>
 
-                            <div>
-                                <div class="filter-wrapper mb-1 mb-md-2 mt-2 mt-md-0">
-                                    <form action="" class="rs-form custom-form d-flex justify-content-between align-items-center mb-md-0 mb-3">
-                                        <button type="submit" class="position-absolute search-icon border-0 bg-transparent pl-3" for="searchInput">
-                                            <span class="mdi mdi-magnify search-img gray-light-text-color fz20"></span>
-                                        </button>
-                                        <input type="search" class="rs-input border-0 ra-data-table-bg gray-light-text-color fz14 fw-500 min-hieght-36 pl-5" id="searchInput" placeholder="Search influencer">
-                                    </form>
+                            <div class="col-md-5 influencer-select-btn">
+                                <button class="ra-btn ra-btn-dark-bg ra-btn-8x11 fz15 fw-500" type="button">View Campaign</button>
+                            </div>
+                        </div>
 
-                                    <div class="search-right d-flex align-items-center justify-content-center">
-                                        <div class="mr-1 mr-md-3">
-                                            <button class="serach-number border-0 fw-500 d-flex align-items-center min-hieght-36">
-                                                <p class="fz14"><span>1</span>-<span>4</span></p>
-                                            </button>
-                                        </div>
-                                        <div class="ra-filter mr-1 mr-md-3">
-                                            <div class="dropdown search-common">
-                                                <button class="search-filter border-0 radius-5 d-flex gray-light-bg-color fw-500 d-flex align-items-center min-hieght-36" type="button" id="serach-filter" data-toggle="dropdown" aria-haspopup="true">
-                                                    <span class="mdi mdi-filter-outline fz20 pr-2"></span>
-                                                    <p class="fz14">Filter By</p>
-                                                    <span class="mdi mdi-chevron-up fz20 pl-2"></span>
-                                                </button>
-                                                <div class="dropdown-menu search-dropdown" aria-labelledby="serach-filter">
-                                                    <a class="dropdown-item" href="#">Campaign Name</a>
-                                                    <a class="dropdown-item" href="#">Type</a>
-                                                    <a class="dropdown-item" href="#">Budget</a>
-                                                    <a class="dropdown-item" href="#">Category</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="ra-filter">
-                                            <div class="dropdown search-common">
-                                                <button class="search-filter border-0 radius-5 d-flex gray-light-bg-color fw-500 d-flex align-items-center min-hieght-36" type="button" id="serach-filter" data-toggle="dropdown" aria-haspopup="true">
-                                                    <span class="mdi mdi-sort-descending fz20 pr-2"></span>
-                                                    <p class="fz14">Sort By</p>
-                                                    <span class="mdi mdi-chevron-up fz20 pl-2"></span>
-                                                </button>
-                                                <div class="dropdown-menu search-dropdown" aria-labelledby="serach-filter">
-                                                    <a class="dropdown-item" href="#">Campaign Name</a>
-                                                    <a class="dropdown-item" href="#">Type</a>
-                                                    <a class="dropdown-item" href="#">Budget</a>
-                                                    <a class="dropdown-item" href="#">Category</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                        <div class="row mb-16 connect-influencer">
+                            <div class="col-md-7">
+                                <p class="fz14 fw-400 pb-20">You have selected 1 Influencer</p>
                             </div>
 
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="dataTable table-responsive">
-                                        <table id="completedDataTable" class="display" style="width:100%">
-                                            <thead>
-                                                <tr>
-                                                    <th class="custom-table-head">Influencer Name</th>
-                                                    <th class="custom-table-head">Follower</th>
-                                                    <th class="custom-table-head">Age</th>
-                                                    <th class="custom-table-head">Gender</th>
-                                                    <th class="custom-table-head">Location</th>
-                                                    <th class="custom-table-head">Avg. Budget</th>
-                                                    <th class="custom-table-head">Avg. Imprsn</th>
-                                                    <th class="custom-table-head no-icon">Avg. Engmt.</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr class="in-table-row">
-                                                    <td class="custom-table-data active">
-                                                        <a href="#" class="d-flex align-items-center">
-                                                            <div class="notification active">
-                                                                <div class="c-user-img">
-                                                                    <img src="https://via.placeholder.com/300" class="img" alt="Campaign Holder Image">
-                                                                </div>
-                                                            </div>
-                                                            <p class="c-title">
-                                                                Blendtec: Will It Blend Campaign
-                                                            </p>
-                                                        </a>
-                                                    </td>
-                                                    <td class="custom-table-data active">
-                                                        <div class="progress c-progress">
-                                                            <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-                                                                <p class="c-title">
-                                                                    Ready
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td class="custom-table-data active">
-                                                        <a href="#">
-                                                            <p class="c-title d-flex flex-column">
-                                                                Shafayat
-                                                                <span class="fz12 fw-400 gray-light-text-color">BDT 50,000</span>
-                                                            </p>
-                                                        </a>
-                                                    </td>
-                                                    <td class="custom-table-data active">
-                                                        <p class="c-title d-flex flex-column">
-                                                            <span class="fz14 fw-500 c-date">17 JUL, 21</span>
-                                                            <span class="fz12 fw-400 gray-light-text-color">09:00 PM</span>
-                                                        </p>
-                                                    </td>
-                                                    <td class="custom-table-data active">
-                                                        <p class="c-title d-flex flex-column">
-                                                            <span class="fz14 fw-500 c-date">20,123</span>
-                                                            <span class="fz12 fw-400 gray-light-text-color">9.26%</span>
-                                                        </p>
-                                                    </td>
-                                                    <td class="custom-table-data active">
-                                                        <p class="c-title d-flex flex-column">
-                                                            <span class="fz14 fw-500 c-date">20,123</span>
-                                                            <span class="fz12 fw-400 gray-light-text-color">9.26%</span>
-                                                        </p>
-                                                    </td>
-                                                    <td class="custom-table-data active">
-                                                        <p class="c-title d-flex flex-column">
-                                                            <span class="fz14 fw-500 c-star mdi mdi-star-outline"><span class="pl-2">5.0</span></span>
-                                                        </p>
-                                                    </td>
-                                                    <td class="custom-table-data active">
-                                                        <button class="c-message-wrapper d-flex align-items-center border-0 bg-transparent">
-                                                            <p class="c-title">
-                                                                <span class="fz14 fw-400 gray-light-text-color">You gave <span
-                                 class="fw-600">5.0</span></span>
-                                                            </p>
-                                                        </button>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
+                            <div class="col-md-5 influencer-connect-btn">
+                                <button class="ra-btn ra-btn-dark-bg ra-btn-8x16 fz15 fw-500" type="button">Connect Influencers</button>
                             </div>
+                        </div>
 
-                            <div class="d-flex justify-content-center btn-custom">
-                                <button class="ra-btn draft-btn fz15 fw-500" type="button">Previous</button>
-                            </div>
-                        </div> <!-- Page End -->
-                    </form>
+                        <!-- <div class="row">
+   <div class="col-md-12">
+      <div class="dataTable table-responsive">
+         <table id="connectRequestsDataTable" class="display" style="width:100%">
+            <thead>
+               <tr>
+                  <th class="custom-table-head">
+                     <label class="checkbox-wrapper checkbox-head">
+   <input type="checkbox">
+   <span class="checkmark"></span>
+</label>
+                     <p>Campaign Name</p>
+                  </th>
+                  <th class="custom-table-head">Type</th>
+                  <th class="custom-table-head">Category</th>
+                  <th class="custom-table-head">Created by</th>
+                  <th class="custom-table-head">Start Date</th>
+                  <th class="custom-table-head">Offered</th>
+                  <th class="custom-table-head">Connects</th>
+                  <th class="custom-table-head no-icon">&nbsp;</th>
+                  <th class="custom-table-head no-icon">&nbsp;</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr class="in-table-row">
+                  <td class="custom-table-data active d-flex align-items-center">
+                     <label class="checkbox-wrapper">
+   <input type="checkbox">
+   <span class="checkmark"></span>
+</label>
+
+                     <a href="#" class="d-flex align-items-center">
+                        <div class="notification active">
+                           <div class="c-user-img">
+                              <img src="https://via.placeholder.com/300" class="img" alt="Campaign Holder Image">
+                           </div>
+                        </div>
+                        <p class="c-title">
+                           Airbnb: We Are Here Campaign
+                        </p>
+                     </a>
+                  </td>
+                  <td class="custom-table-data active">
+                     <a href="#" class="d-flex align-items-center">
+                        <div class="c-social-img">
+                           <img src="https://image.flaticon.com/icons/png/512/1384/1384053.png" class="img"
+                              alt="Social Icon">
+                        </div>
+                        <p class="c-title c-ongoing-title">
+                           FB Post
+                        </p>
+                     </a>
+                  </td>
+                  <td class="custom-table-data active">
+                     <a href="#">
+                        <p class="c-title d-flex flex-column">
+                           Brand
+                           <span class="fz12 fw-400 gray-light-text-color">BDT 50,000</span>
+                        </p>
+                     </a>
+                  </td>
+                  <td class="custom-table-data active">
+                     <p class="c-title d-flex flex-column">
+                        Kashef
+                        <span class="fz12 fw-400 gray-light-text-color">BDT 50,000</span>
+                     </p>
+                  </td>
+                  <td class="custom-table-data active">
+                     <p class="c-title d-flex flex-column">
+                        <span class="fz14 fw-500 c-date">24 JUL, 21</span>
+                        <span class="fz12 fw-400 gray-light-text-color">09:00 PM</span>
+                     </p>
+                  </td>
+                  <td class="custom-table-data active">
+                     <p class="c-title d-flex flex-column">
+                        <span class="fz14 fw-500 c-date">20,000</span>
+                     </p>
+                  </td>
+                  <td class="custom-table-data active">
+                     <p class="c-title d-flex flex-column">
+                        <span class="fz14 fw-500 c-date">5</span>
+                     </p>
+                  </td>
+                  <td class="custom-table-data active">
+                     <button class="c-title c-start-campaign active c-datatable-btn">
+                        Connect
+                     </button>
+                  </td>
+                  <td class="custom-table-data active">
+                     <button class="c-title c-start-campaign active c-datatable-btn">
+                        Decline
+                     </button>
+                  </td>
+               </tr>
+               <tr class="in-table-row">
+                  <td class="custom-table-data d-flex align-items-center">
+                     <label class="checkbox-wrapper">
+   <input type="checkbox">
+   <span class="checkmark"></span>
+</label>
+
+                     <a href="#" class="d-flex align-items-center">
+                        <div class="notification">
+                           <div class="c-user-img">
+                              <img src="https://via.placeholder.com/300" class="img" alt="Campaign Holder Image">
+                           </div>
+                        </div>
+                        <p class="c-title">
+                           Airbnb: We Are Here Campaign
+                        </p>
+                     </a>
+                  </td>
+                  <td class="custom-table-data">
+                     <a href="#" class="d-flex align-items-center">
+                        <div class="c-social-img">
+                           <img src="https://image.flaticon.com/icons/png/512/1384/1384053.png" class="img"
+                              alt="Social Icon">
+                        </div>
+                        <p class="c-title c-ongoing-title">
+                           FB Post
+                        </p>
+                     </a>
+                  </td>
+                  <td class="custom-table-data">
+                     <a href="#">
+                        <p class="c-title d-flex flex-column">
+                           Brand
+                           <span class="fz12 fw-400 gray-light-text-color">BDT 50,000</span>
+                        </p>
+                     </a>
+                  </td>
+                  <td class="custom-table-data">
+                     <p class="c-title d-flex flex-column">
+                        Kashef
+                        <span class="fz12 fw-400 gray-light-text-color">BDT 50,000</span>
+                     </p>
+                  </td>
+                  <td class="custom-table-data">
+                     <p class="c-title d-flex flex-column">
+                        <span class="fz14 fw-500 c-date">24 JUL, 21</span>
+                        <span class="fz12 fw-400 gray-light-text-color">09:00 PM</span>
+                     </p>
+                  </td>
+                  <td class="custom-table-data">
+                     <p class="c-title d-flex flex-column">
+                        <span class="fz14 fw-500 c-date">20,000</span>
+                     </p>
+                  </td>
+                  <td class="custom-table-data">
+                     <p class="c-title d-flex flex-column">
+                        <span class="fz14 fw-500 c-date">5</span>
+                     </p>
+                  </td>
+                  <td class="custom-table-data">
+                     <button class="c-title c-start-campaign active c-datatable-btn">
+                        Connect
+                     </button>
+                  </td>
+                  <td class="custom-table-data">
+                     <button class="c-title c-start-campaign active c-datatable-btn">
+                        Decline
+                     </button>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+   </div>
+</div> -->
+                    </div> <!-- Page End -->
                 </div>
             </div>
 

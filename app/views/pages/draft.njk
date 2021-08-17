@@ -49,7 +49,7 @@
 </header>
 
 <!-- Draft Message -->
-<div class="draft-top-message">
+<div class="draft-top-message d-none">
    <p class="fz14 fw-400 black-color">Campaign created as a <span class="fw-500">Draft</span>. Please complete the flow
       to make a deal with an <span class="fw-500">Influencer</span></p>
 </div>
@@ -136,11 +136,9 @@
             {% include 'sections/draftTab/draftTab3.njk' %}
          </div> <!-- Page End -->
       </form>
-      <form class="">
-         <div class="page page-4">
-            {% include 'sections/draftTab/draftTab4.njk' %}
-         </div> <!-- Page End -->
-      </form>
+      <div class="page page-4">
+         {% include 'sections/draftTab/draftTab4.njk' %}
+      </div> <!-- Page End -->
    </div>
 </div>
 
