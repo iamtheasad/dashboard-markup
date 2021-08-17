@@ -181,19 +181,19 @@
                                                     <div class="p-20">
                                                         <p class="fz14 fw-600 mb-3">Give a Name to your Campaign</p>
                                                         <div class="d-flex">
-                                                            <div>
-                                                                <label for="fbBtn" class="create-campaign-modal-social mr-2">
+                                                            <fieldset>
+                                                                <input type="radio" class="social-radio-input d-none" name="socialOptions" id="fbBtn">
+                                                                <label for="fbBtn" class="create-campaign-modal-social social-radio-label mr-2">
                                                                     <img class="img" src="assets/images/icons/fb.svg" alt="Facebook Icon">
                                                                 </label>
-                                                                <input type="radio" class="d-none" name="" id="fbBtn">
-                                                            </div>
+                                                            </fieldset>
 
-                                                            <div>
-                                                                <label for="igBtn" class="create-campaign-modal-social mr-2">
+                                                            <fieldset>
+                                                                <input type="radio" class="social-radio-input d-none" name="socialOptions" id="igBtn">
+                                                                <label for="igBtn" class="create-campaign-modal-social social-radio-label mr-2">
                                                                     <img class="img" src="assets/images/icons/ig.svg" alt="Facebook Icon">
                                                                 </label>
-                                                                <input type="radio" class="d-none" name="" id="igBtn">
-                                                            </div>
+                                                            </fieldset>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -201,15 +201,14 @@
                                                     <div class="p-20">
                                                         <p class="fz14 fw-600 mb-3">How do you want to Promote?</p>
                                                         <div class="d-flex">
-                                                            <div>
-                                                                <label for="asAPost" class="ra-btn btn-12x12 fz14 fw-400 black-color mr-2">As a
-                                                                    Post</label>
-                                                                <input type="radio" class="d-none" name="" id="asAPost">
-                                                            </div>
-                                                            <div>
-                                                                <label for="asAStory" class="ra-btn btn-12x12 fz14 fw-400 black-color">As a Story</label>
-                                                                <input type="radio" class="d-none" name="" id="asAStory">
-                                                            </div>
+                                                            <fieldset>
+                                                                <input type="radio" class="social-radio-input d-none" name="postOptions" id="post1">
+                                                                <label for="post1" class="ra-btn btn-12x12 fz14 fw-400 black-color mr-2 radio-btn">As a Post</label>
+                                                            </fieldset>
+                                                            <fieldset>
+                                                                <input type="radio" class="social-radio-input d-none" name="postOptions" id="story1">
+                                                                <label for="story1" class="ra-btn btn-12x12 fz14 fw-400 black-color radio-btn">As a Story</label>
+                                                            </fieldset>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -314,7 +313,7 @@
                                 <thead>
                                     <tr>
                                         <th class="custom-table-head">
-                                            <label class="checkbox-wrapper checkbox-head">
+                                            <label class="checkbox-wrapper d-block">
                                                 <input type="checkbox">
                                                 <span class="checkmark"></span>
                                             </label>
