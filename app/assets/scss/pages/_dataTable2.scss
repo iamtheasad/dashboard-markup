@@ -60,13 +60,29 @@ th.custom-table-head {
    }
 }
 
-tbody td.custom-table-data.active {
-   background: $whiteLight;
-   border-top: 1px solid $grayLightBgColor;
+tbody tr.in-table-row {
+   background: $white;
+   transition: .2s;
+
+   &:hover {
+      background: rgba(0, 0, 0, 0.1);
+   }
+
+   &.row-blur {
+      background: grey;
+      opacity: .5;
+   }
+
+   &.active {
+      background: $whiteLight;
+   
+      &:hover {
+         background: rgba(0, 0, 0, 0.1);
+      }
+   }
 }
 
 tbody td.custom-table-data {
-   background: $white;
    border-top: 1px solid $grayLightBgColor;
    padding: 0px 20px;
    font-size: rem(14px);
@@ -115,6 +131,7 @@ tbody td.custom-table-data.custom-table-data-2 {
    width: 16px;
    overflow: hidden;
    display: flex;
+   border-radius: 2px;
 }
 
 .c-date.active {
@@ -150,6 +167,10 @@ tbody td.custom-table-data.custom-table-data-2 {
 .c-start-campaign.in-porgress {
    color: $black;
    font-weight: 600;
+
+   &.active {
+      color: $darkBlueColor;
+   }
 }
 
 .c-ongoing-title.active {
@@ -272,9 +293,4 @@ label.checkbox-wrapper.checkbox-head {
 
 label.checkbox-wrapper.checkbox-head~p {
    padding-left: 25px;
-}
-
-.row-blur {
-   background: gray;
-   opacity: .5;
 }
