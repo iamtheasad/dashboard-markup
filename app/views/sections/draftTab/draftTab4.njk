@@ -2,7 +2,7 @@
    <div class="row align-items-center">
       <div class="col-md-5">
          <h3 class="fz18 fw-600 black-color">Select Influencers to Connect</h3>
-         <p class="fz14 fw-400 black-color pb-20">We have found 16 influencers that matches your campaign parameters.
+         <p class="fz14 fw-400 black-color">We have found 16 influencers that matches your campaign parameters.
             Select upto 5 influencers from this list to connect.
             You CAN NOT edit this campaign once you start connecting with them.</p>
       </div>
@@ -14,6 +14,63 @@
       </div>
    </div>
 </div>
+
+<!-- Filter Bar -->
+<div class="filter-wrapper mb-1 mb-md-2 mt-2 mt-md-0">
+   <form action="" class="rs-form ra-form custom-form d-flex justify-content-between align-items-center mb-md-0 mb-3">
+      <button type="submit" class="position-absolute search-icon border-0 bg-transparent pl-3" for="searchInput">
+         <span class="mdi mdi-magnify search-img gray-light-text-color fz20"></span>
+      </button>
+      <input type="search"
+         class="rs-input ra-input animate search-input-custom border-0 ra-data-table-bg gray-light-text-color fz14 fw-500 min-hieght-36 pl-5"
+         id="searchInput" placeholder="{{ data.searchTitle }}">
+   </form>
+
+   <div class="search-right d-flex align-items-center justify-content-center">
+      <div class="mr-1 mr-md-3">
+         <div class="serach-number border-0 fw-500 d-flex align-items-center min-hieght-36">
+            <p class="fz14 mr-2"><span>1</span>-<span>6</span></p>
+            <button class="filter-number"><span class="mdi mdi-chevron-left"></span></button>
+            <button class="filter-number active"><span class="mdi mdi-chevron-right active"></span></button>
+         </div>
+      </div>
+      <div class="ra-filter mr-1 mr-md-3">
+         <div class="dropdown search-common">
+            <button
+               class="search-filter border-0 radius-5 d-flex gray-light-bg-color fw-500 d-flex align-items-center min-hieght-36"
+               type="button" id="serach-filter" data-toggle="dropdown" aria-haspopup="true">
+               <span class="mdi mdi-filter-outline fz20 pr-2"></span>
+               <p class="fz14">Filter By</p>
+               <span class="mdi mdi-chevron-up fz20 pl-2"></span>
+            </button>
+            <div class="dropdown-menu search-dropdown" aria-labelledby="serach-filter">
+               <a class="dropdown-item" href="#">Campaign Name</a>
+               <a class="dropdown-item" href="#">Type</a>
+               <a class="dropdown-item" href="#">Budget</a>
+               <a class="dropdown-item" href="#">Category</a>
+            </div>
+         </div>
+      </div>
+      <div class="ra-filter">
+         <div class="dropdown search-common">
+            <button
+               class="search-filter border-0 radius-5 d-flex gray-light-bg-color fw-500 d-flex align-items-center min-hieght-36"
+               type="button" id="serach-filter" data-toggle="dropdown" aria-haspopup="true">
+               <span class="mdi mdi-sort-descending fz20 pr-2"></span>
+               <p class="fz14">Sort By</p>
+               <span class="mdi mdi-chevron-up fz20 pl-2"></span>
+            </button>
+            <div class="dropdown-menu search-dropdown" aria-labelledby="serach-filter">
+               <a class="dropdown-item" href="#">Campaign Name</a>
+               <a class="dropdown-item" href="#">Type</a>
+               <a class="dropdown-item" href="#">Budget</a>
+               <a class="dropdown-item" href="#">Category</a>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
 
 <div class="connect-influencer mb-16">
    <div class="row align-items-center">
@@ -33,8 +90,8 @@
 
 <div class="row">
    <div class="col-md-12">
-      <div class="dataTable table-responsive">
-         <table id="draftTab4ataTable" class="display datatable-border radius-4" style="width:100%">
+      <div class="dataTable table-responsive mb-20">
+         <table id="draftTab4ataTable" class="display all-side-border radius-4" style="width:100%">
             <thead>
                <tr>
                   <th class="custom-table-head custom-table-head-2">
@@ -292,4 +349,9 @@
          </table>
       </div>
    </div>
+</div>
+
+<!-- Button -->
+<div class="d-flex justify-content-center btn-custom">
+   <button class="ra-btn draft-btn fz15 fw-500" type="button">Previous</button>
 </div>
