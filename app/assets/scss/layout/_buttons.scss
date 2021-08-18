@@ -111,9 +111,17 @@
         padding: 8px 11px;
     }
 
+    &.ra-btn-10x20 {
+        padding: 10px 20px;
+    }
+
     &.ra-btn-border {
         border: 1px solid;
         border-color: $grayBorderColor;
+    } 
+    &.ra-btn-border-dark {
+        border: 1px solid;
+        border-color: $grayLight1;
     } 
     &.btn-12x12 {
         padding: 12px;
