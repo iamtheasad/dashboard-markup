@@ -17,7 +17,7 @@
       %}
       {% for item in promuteItems %}
       <div class="btn-checkbox">
-         <input type="checkbox" name="" id="promoteTag_{{ loop.index }}" class="d-none btn-checkbox-input">
+         <input type="radio" name="promotionOptions" id="promoteTag_{{ loop.index }}" class="d-none btn-checkbox-input">
          <label class="btn-checkbox-label" for="promoteTag_{{ loop.index }}">{{ item.name }}</label>
       </div>
       {% endfor %}
