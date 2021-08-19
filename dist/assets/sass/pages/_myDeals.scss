@@ -47,7 +47,6 @@
    display: flex;
    padding: 0px 20px;
    align-items: center;
-   background-color: $white;
    height: 72px;
 }
 
@@ -98,20 +97,6 @@
 
 .ra-time {
    white-space: nowrap;
-}
-
-.green-dot.active {
-   width: 8px;
-   height: 8px;
-   background-color: $greenDark;
-   border-radius: 50%;
-   display: block;
-   align-self: flex-start;
-   margin-top: 6px;
-}
-
-.green-dot {
-   display: none;
 }
 
 .rs-btn.in-btn-primary {
@@ -192,7 +177,7 @@
 .deals-details {
    padding: 16px 20px;
 
-   @media  screen and(max-width: 767px) {
+   @media screen and(max-width: 767px) {
       padding: 0px;
    }
 }

@@ -210,8 +210,10 @@
       margin: 20px;
    }
 
-   .draft-body .page.page-4 {
-      max-width: 98%;
+   .draft-body .page.page-4,
+   .draft-body .page.page-5 {
+      max-width: 100%;
+      margin: 0px;
    }
 }
 
@@ -664,4 +666,87 @@ div[slider]>input[type=range]::-ms-tooltip {
 
 .social-details {
    background-color: transparent;
+}
+
+
+// Tab page 5
+.limit-notification {
+   display: flex;
+   justify-content: space-between;
+}
+
+.limit-notification,
+.limit-box {
+   background-color: $grayProgressLight !important;
+}
+
+.chat-msg {
+   height: 72px;
+}
+
+.msg-white-bg {
+   background-color: $white;
+
+   .msg-short {
+      font-weight: 400;
+      color: #7A7A7A;
+   }
+}
+
+.msg-light-bg {
+   background-color: $primaryBg;
+
+   .msg-short {
+      font-weight: 400;
+      color: #7A7A7A;
+   }
+}
+
+.msg-dark-bg {
+   background-color: $dataTableSearchBgColor;
+
+   .msg-short {
+      font-weight: 500;
+      color: #484848;
+   }
+}
+
+.msg-dot {
+   .green-dot {
+      width: 8px;
+      height: 8px;
+      background-color: $greenDark;
+      border-radius: 50%;
+      display: block;
+      align-self: flex-start;
+      margin-top: 6px;
+   }
+}
+
+.msg-blur {
+   opacity: .6;
+}
+
+.msg-interest {
+   background-color: $dataTableSearchBgColor;
+
+   .msg-short {
+      font-weight: 500;
+      color: $darkBlueColor;
+   }
+}
+
+.msg-btn {
+   display: none;
+   background-color: $grayProgressLight;
+   height: 20px;
+   margin-left: 4px;
+}
+
+.msg-interest {
+   .msg-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
 }
