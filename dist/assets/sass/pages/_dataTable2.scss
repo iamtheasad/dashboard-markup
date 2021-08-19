@@ -167,6 +167,10 @@ tbody td.custom-table-data.custom-table-data-2 {
 .c-start-campaign.in-porgress {
    color: $black;
    font-weight: 600;
+
+   &.active {
+      color: $darkBlueColor;
+   }
 }
 
 .c-ongoing-title.active {
