@@ -134,6 +134,7 @@
 }
 
 .my-deals-form {
+   display: flex;
    padding: 16px 20px;
    background-color: $dataTableSearchBgColor;
 }
@@ -149,18 +150,18 @@
    color: $white;
 }
 
-.my-deals-form {
-   display: flex;
-}
-
 .my-deals-form input {
    background: $white;
-   border: 1px solid $grayProgressLight;
+   border: 1px solid $grayBorderColor;
    border-radius: 4px;
    font-size: 14px;
    width: 100%;
    padding: 10px 15px;
    color: $black;
+}
+
+.my-deals-form input::placeholder {
+   color: $grayLightTextColor;
 }
 
 .my-deals-form-height {

@@ -103,6 +103,11 @@
         color: $black;
     }
 
+    &.ra-btn-light-grey {
+        background-color: $grayLight3;
+        color: $black;
+    }
+
     &.ra-btn-8x16 {
         padding: 8px 16px;
     }
@@ -143,6 +148,9 @@
             background-color: $darkPrimaryColor;
             color: $white;
         }
+    }
+    &.blur {
+        opacity: .6;
     }
 }
 

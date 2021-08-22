@@ -750,3 +750,47 @@ div[slider]>input[type=range]::-ms-tooltip {
       align-items: center;
    }
 }
+
+.offer-details {
+   background-color: $dataTableSearchBgColor;
+}
+
+.offer-status p {
+   color: $darkPrimaryColor;
+}
+
+.chat-wrapper {
+   min-height: calc(100vh-196px);
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+
+   @media screen and (max-width: 992px) {
+      min-height: 100vh;
+   }
+}
+
+.msg-input {
+   display: flex;
+   justify-content: center;
+   background-color: $dataTableSearchBgColor;
+   position: relative;
+}
+
+.offer-label {
+   position: absolute;
+   left: 71.7%;
+   top: 50%;
+   transform: translateY(-50%);
+   background: transparent;
+   padding: 9px 16px;
+   cursor: inherit;
+}
+
+.offer-input-box {
+   background-color: $dataTableSearchBgColor;
+}
+
+.rs-input.ra-input.offer-input {
+   padding-right: 50px;
+}
