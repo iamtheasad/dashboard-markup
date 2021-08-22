@@ -10,6 +10,7 @@
     padding-left: 20px;
     padding-right: 20px;
   }
+
   @media(max-width: 575px) {
     padding-left: 15px;
     padding-right: 15px;
@@ -23,7 +24,7 @@
   background: $grayLight;
 }
 
-.wrapper{
+.wrapper {
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -72,8 +73,12 @@
       border-right: 1px solid $white;
     }
 
-    .nav-item:last-child{
+    .nav-item:last-child {
       border-right: none;
     }
   }
+}
+
+.modal-backdrop {
+  opacity: 0.3 !important;
 }
