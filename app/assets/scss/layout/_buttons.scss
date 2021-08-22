@@ -93,12 +93,12 @@
         color: $primaryColor;
     }
 
-    &.ra-btn-dark-bg{
+    &.ra-btn-dark-bg {
         background-color: $darkPrimaryColor;
         color: $white;
     }
 
-    &.ra-btn-light-bg{
+    &.ra-btn-light-bg {
         background-color: $grayLight1;
         color: $black;
     }
@@ -123,11 +123,13 @@
     &.ra-btn-border {
         border: 1px solid;
         border-color: $grayBorderColor;
-    } 
+    }
+
     &.ra-btn-border-dark {
         border: 1px solid;
         border-color: $grayLight1;
-    } 
+    }
+
     &.btn-12x12 {
         padding: 12px;
         border: 1px solid #dedede;
@@ -138,28 +140,41 @@
         justify-content: center;
         align-items: center;
         letter-spacing: normal;
-    } 
-    &.btn-6x16{
+    }
+
+    &.btn-6x16 {
         padding: 6px 16px;
         background-color: transparent;
         color: $black;
 
-        &.active{
+        &.active {
             background-color: $darkPrimaryColor;
             color: $white;
         }
     }
+
     &.blur {
         opacity: .6;
     }
 }
 
-.btn-4x12 {
-    color: $black;
-    background: $grayProgressLight;
-    padding: 4px 12px;
-    display: inline-flex;
+.btn-tag {
+    height: 24px;
+    display: flex;
     justify-content: center;
     align-items: center;
-} 
 
+    &.bg-grey {
+        background-color: $grayProgressLight;
+        color: $black;
+    }
+
+    &.bg-green {
+        background-color: $greenDark;
+        color: $white;
+    }
+}
+
+.btn-4x12 {
+    padding: 4px 12px;
+}

@@ -88,15 +88,91 @@
         border-bottom: 1px solid $grayLightBgColor;
         padding: 0px 20px 0px;
 
+        .account-menu {
+            background-color: rgba($greenDark, .15);
+            border-radius: 50px;
+
+            &:after {
+                display: none;
+            }
+
+            .avater {
+                border-radius: 50%;
+                margin-right: 10px;
+                overflow: hidden;
+                width: 36px;
+                height: 36px;
+                background: $greenDark;
+                color: $white;
+                position: relative;
+
+                p {
+                    position: absolute;
+                    top: 15%;
+                    left: 50%;
+                    transform: translate(-50%);
+                }
+
+                img {
+                    object-fit: cover;
+                    object-position: center;
+                }
+
+                @media(max-width: 757px) {
+                    margin-right: 0;
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+
+            .acc-name {
+                color: $purleDark;
+                font-weight: 500;
+                font-size: rem(14);
+                margin-right: 10px;
+
+                @media(max-width: 757px) {
+                    display: none;
+                }
+            }
+
+            .dropdown-icon {
+                width: 40px;
+                height: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: rem(30);
+                color: $white;
+                border-radius: 50%;
+                background-color: transparent;
+                transition: .3s ease-in-out;
+                border: none;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: rgba($greenDark, .80);
+                }
+
+                &:after {
+                    display: none;
+                }
+
+                @media(max-width: 757px) {
+                    display: none;
+                }
+            }
+        }
+
         .breadcumb {
             i {
                 font-size: 24px;
             }
         }
 
-        .plusIcon{
+        .plusIcon {
             width: 18px;
-            margin: 0px 10px 0px 0px; 
+            margin: 0px 10px 0px 0px;
         }
     }
 }
@@ -109,8 +185,8 @@
     border: none;
     background: transparent;
     margin-right: 20px;
-   
-    img{
+
+    img {
         width: 20px;
         height: 20px;
     }

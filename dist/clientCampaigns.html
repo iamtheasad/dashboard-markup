@@ -13,6 +13,8 @@
     <!-- <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.18.1/dist/bootstrap-table.min.css"> -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css">
 
+    <link rel="stylesheet" href="assets/vendor/datepicker/css/daterangepicker.css">
+
     <!-- build:css assets/css/all.min.css -->
     <link rel="stylesheet" href="assets/css/vendor.css">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -138,27 +140,40 @@
                 </ul>
             </div>
         </section>
-        <main class="dashboard-main">
-            <header class="topbar sticky-top d-flex justify-content-between align-items-center">
-                <div class="breadcumb fz24 fw-500 py-3">
+        <main class="main-wrapper">
+
+            <!-- Top Bar -->
+            <header class="topbar topbar2 d-flex justify-content-between align-items-center">
+                <div class="breadcumb fz16 fw-700">
                     <div class="d-flex align-items-center">
-                        <!-- <i class="mdi mdi-arrow-left"></i> -->
-                        <span>Wecome to Publisher Dashboard</span>
+                        <a href="#" class="mr-20">
+                            <img src="assets/images/icons/left-arrow.svg" class="img long-arrow" alt="Arrow Icon">
+                        </a>
+                        <div class="d-flex flex-column pr-3">
+                            <span class="purple-color fz16 fw-700">Sharetrip Summer Campaign 21</span>
+                            <span class="purple-light-color fz12 fw-400">18 June - 17 July 2021</span>
+                        </div>
+                        <button class="btn-tag bg-green btn-4x12 radius-4 fz12 fw-600 border-0">Ongoing</button>
                     </div>
                 </div>
-                <div class="right-menu dropdown">
-                    <a href="javascript:void(0)" class="account-menu d-flex align-items-center dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div class="right-menu dropdown d-flex">
+                    <button class="topbar-notification">
+                        <img src="assets/images/icons/notification_outline.svg" alt="Bell Icon">
+                    </button>
+                    <a href="javascript:void(0)" class="account-menu d-flex align-items-center dropdown-toggle" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <div class="avater">
-                            <img src="http://via.placeholder.com/48x48" alt="">
+                            <p class="">S</p>
+                            <div class="d-none">
+                                <img src="http://via.placeholder.com/48x48" alt="">
+                            </div>
                         </div>
-                        <div class="acc-name">Publisher</div>
+                        <div class="acc-name">Shafayat</div>
 
                         <button class="dropdown-icon">
-                            <i class="mdi mdi-menu-down"></i>
+                            <img src="assets/images/icons/arrow-down.svg" alt="Icon" style="width: 8px;">
                         </button>
-
                     </a>
-                    <div class="dropdown-menu mt-1" aria-labelledby="dropdownMenuButton">
+                    <div class="dropdown-menu mt-1" aria-labelledby="dropdownMenuButton2">
                         <ul>
                             <li><a href="accountSettings.html">Account Settings</a></li>
                             <li><a href="index2.html">Advertiser Dashboard</a></li>
@@ -169,123 +184,6 @@
                     </div>
                 </div>
             </header>
-
-            <!-- Add Place Details Page -->
-
-            <div class="d-card mb-5">
-                <div class="location-info">
-                    <div class="row ">
-                        <div class="col">
-                            <p class="fz24 fw-500 mb-3">AdPlaceName 1</p>
-                        </div>
-                        <div class="col d-flex justify-content-end align-items-center">
-                            <p class="fz12 gray-color">Est. m/m Growth</p>
-                            <div class="ra-property-details-head d-flex align-items-center">
-                                <p class="fz24 pl-3 pr-2 fw-700">36.5%</p>
-                                <span class="mdi mdi-menu-up green-color fz44"></span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col">
-                            <p class="fz12 gray-color mb-1">ID</p>
-                            <div class="d-flex align-items-center">
-                                <p class="fz14 fw-500">88876</p>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <p class="fz12 gray-color mb-1">Property Name</p>
-                            <div class="d-flex align-items-center">
-                                <p class="fz14 fw-500">PropertyName</p>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <p class="fz12 gray-color mb-1">Property Type</p>
-                            <div class="d-flex align-items-center">
-                                <p class="fz14 fw-500">Website</p>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <p class="fz12 gray-color mb-1">Request</p>
-                            <div class="d-flex align-items-center">
-                                <p class="fz14 fw-500">1,625,790,161</p>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <p class="fz12 gray-color mb-1">Impressions</p>
-                            <div class="d-flex align-items-center">
-                                <p class="fz14 fw-500">1,625,790,161</p>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <p class="fz12 gray-color mb-1">Fill Rate</p>
-                            <div class="d-flex align-items-center">
-                                <p class="fz14 fw-500">85.29%</p>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <p class="fz12 gray-color mb-1">Clicks</p>
-                            <div class="d-flex align-items-center">
-                                <p class="fz14 fw-500">148,673</p>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <p class="fz12 gray-color mb-1">Revenue</p>
-                            <div class="d-flex align-items-center">
-                                <p class="fz14 fw-500">৳ 1,702,908</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="proper-button-wrapper d-flex mt-4">
-                        <div class="user_btn mr-2">
-                            <a href="javascript:void(0)" class="rs-btn rs-btn-lg rs-btn-primary uppercase fz20">Get Code</a>
-                        </div>
-
-                        <div class="user_btn mr-2">
-                            <a href="javascript:void(0)" class="rs-btn rs-btn-lg uppercase fz20">Reports</a>
-                        </div>
-
-                        <div class="user_btn mr-2">
-                            <button data-target="#placeEditModal" data-toggle="modal" class="rs-btn rs-btn-lg uppercase fz20">edit</button>
-                        </div>
-
-                        <!-- Modal -->
-                        <div class="modal fade" id="placeEditModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-lg" role="document">
-                                <div class="modal-content p-xl-5 p-lg-3 p-md-1 changePasswordModal-content">
-                                    <form action="">
-                                        <div class="modal-header border-bottom-0">
-                                            <h5 class="modal-title" id="exampleModalLabel">Edit Ad Place</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span class="mdi mdi-close" aria-hidden="true"></span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body pb-5">
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                    <fieldset class="rs-form mb-2">
-                                                        <label for="editName" class="rs-label fz10">Edit Ad Place Name</label>
-                                                        <input type="text" class="rs-input fw-500 fz18" value="Ad Place Name">
-                                                    </fieldset>
-                                                </div>
-                                            </div>
-                                            <div class="d-flex mt-3">
-                                                <button href="propertyDetailsPage.html" type="submit" class="rs-btn rs-btn-primary rs-btn-lg uppercase mr-3">Update</button>
-                                            </div>
-
-                                            <div class="guide-line fw-500 mt-5">
-                                                Need Help? Visit here <a href="#" class="ra-primary-color fw-700">Guideline</a>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
         </main>
     </div>
@@ -299,6 +197,7 @@
     <script src="https://unpkg.com/bootstrap-table@1.18.1/dist/bootstrap-table.min.js"></script>
     <!-- <script type="text/javascript" src="assets/vendor/aos/js/aos.js"></script> -->
     <!-- endbuild -->
+
     <script type="text/javascript" src="assets/js/script.js"></script>
 
 </body>

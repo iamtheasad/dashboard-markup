@@ -1,0 +1,24 @@
+{% extends "layouts/layout2.njk" %}
+
+{% block content %}
+
+<!-- Top Bar -->
+<header class="topbar topbar2 d-flex justify-content-between align-items-center">
+   <div class="breadcumb fz16 fw-700">
+      <div class="d-flex align-items-center">
+         <a href="#" class="mr-20">
+            <img src="assets/images/icons/left-arrow.svg" class="img long-arrow" alt="Arrow Icon">
+         </a>
+         <div class="d-flex flex-column pr-3">
+            <span class="purple-color fz16 fw-700">Sharetrip Summer Campaign 21</span>
+            <span class="purple-light-color fz12 fw-400">18 June - 17 July 2021</span>
+         </div>
+         <button class="btn-tag bg-green btn-4x12 radius-4 fz12 fw-600 border-0">Ongoing</button>
+      </div>
+   </div>
+   <div class="right-menu dropdown d-flex">
+      {% include 'snippets/topBar2Right.njk' %}
+   </div>
+</header>
+
+{% endblock %}
