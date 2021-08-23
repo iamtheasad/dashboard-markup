@@ -1,0 +1,38 @@
+.dashboard-menu {
+   background-color: $white;
+   padding: 10px 20px;
+}
+
+.menu-content ul {
+   display: flex;
+   align-items: center;
+
+   li {
+      a {
+         color: $purpleLight;
+         font-size: 16px;
+         font-weight: 500;
+         padding: 5px 5px;
+      }
+
+      .active {
+         position: relative;
+         color: #383874;
+
+         &:after {
+            content: '';
+            position: absolute;
+            background: $greenDark;
+            width: 108px;
+            height: 3px;
+            border-radius: 20px;
+            top: 127%;
+            left: -14%;
+         }
+      }
+   }
+}
+
+.menu-content ul li:not(:last-child) {
+   margin-right: 28px;
+}

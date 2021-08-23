@@ -1,24 +1,426 @@
 {% extends "layouts/layout2.njk" %}
 
 {% block content %}
-
-<!-- Top Bar -->
-<header class="topbar topbar2 d-flex justify-content-between align-items-center">
-   <div class="breadcumb fz16 fw-700">
-      <div class="d-flex align-items-center">
-         <a href="#" class="mr-20">
-            <img src="assets/images/icons/left-arrow.svg" class="img long-arrow" alt="Arrow Icon">
-         </a>
-         <div class="d-flex flex-column pr-3">
-            <span class="purple-color fz16 fw-700">Sharetrip Summer Campaign 21</span>
-            <span class="purple-light-color fz12 fw-400">18 June - 17 July 2021</span>
+<div class="campaign-wrapper">
+   <!-- Top Bar -->
+   <header class="topbar topbar2 d-flex justify-content-between align-items-center">
+      <div class="breadcumb fz16 fw-700">
+         <div class="d-flex">
+            <a href="#" class="mr-20">
+               <img src="assets/images/icons/left-arrow.svg" class="img long-arrow" alt="Arrow Icon">
+            </a>
+            <div class="d-flex flex-column pr-3">
+               <span class="purple-color fz16 fw-700">Sharetrip Summer Campaign 21</span>
+               <span class="purple-light-color fz12 fw-400">18 June - 17 July 2021</span>
+            </div>
+            <button class="btn-tag bg-green btn-4x12 radius-4 fz12 fw-600 border-0">Ongoing</button>
          </div>
-         <button class="btn-tag bg-green btn-4x12 radius-4 fz12 fw-600 border-0">Ongoing</button>
+      </div>
+      <div class="right-menu dropdown d-flex">
+         {% include 'snippets/topBar2Right.njk' %}
+      </div>
+   </header>
+
+   <!-- Camaigns Dashboard Menu -->
+   <div class="filter-wrapper dashboard-menu ra-border-bottom">
+      <div class="menu-content">
+         <ul>
+            <li><a href="#" class="active">Overview</a></li>
+            <li><a href="#">Ad Groups</a></li>
+            <li><a href="#">Ad Banners</a></li>
+            <li><a href="#">Analytics</a></li>
+         </ul>
+      </div>
+
+      <div class="d-flex align-items-center">
+         <div class="ra-filter mr-1 mr-md-3">
+            <div class="dropdown">
+               <button class="filter-btn fw-500 fz14 d-flex align-items-center" type="button"
+                  id="campaignDetailsDashboard" data-toggle="dropdown" aria-haspopup="true">
+                  <span class="pr-2">
+                     <img src="assets/images/icons/select-section.svg" alt="Icon">
+                  </span>
+                  <p class="fz14">Select Sections</p>
+                  <span class="pl-2">
+                     <img src="assets/images/icons/arrow-down.svg" alt="Icon">
+                  </span>
+               </button>
+               <div class="dropdown-menu filter-dropdown" aria-labelledby="campaignDetailsDashboard">
+                  <a class="dropdown-item" href="#">Campaign Name</a>
+                  <a class="dropdown-item" href="#">Type</a>
+                  <a class="dropdown-item" href="#">Budget</a>
+                  <a class="dropdown-item" href="#">Category</a>
+               </div>
+            </div>
+         </div>
+
+         <div>
+            <button class="filter-btn custom d-flex align-items-center mr-20">
+               <span class="pr-2">
+                  <img src="assets/images/icons/export.svg" alt="Icon">
+               </span>
+               <p class="fz14 fw-500">Export</p>
+            </button>
+         </div>
+
+         <button class="ra-three-dot-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+         </button>
       </div>
    </div>
-   <div class="right-menu dropdown d-flex">
-      {% include 'snippets/topBar2Right.njk' %}
+
+   <!-- Campaign Dashbaord Filter -->
+   <div class="slection-tab mb-18">
+      <div class="row">
+         <div class="col-md-3 mb-4">
+            <form action="">
+               <div class="custom-selection">
+                  <div class="dropdown dropdwon-3">
+
+                     <button class="fw-500 fz14 d-flex align-items-center justify-content-between" type="button"
+                        data-toggle="dropdown">
+                        <p class="label-text">Select Campaign</p>
+
+                        <p class="fz14 blur">Sharetrip Summer Campaign...</p>
+                        <div class="d-flex align-items-center">
+                           <span class="number-notification mr-2 d-none">3</span>
+                           <span class="pl-2">
+                              <img src="assets/images/icons/arrow-down.svg" alt="Icon">
+                           </span>
+                        </div>
+                     </button>
+
+                     <div class="dropdown-menu">
+                        <div class="dropdown-search mb-3">
+                           <input type="search" id="dropdwonSearch" placeholder="Search" />
+                           <label for="dropdwonSearch">
+                              <button type="submit" class="bg-transparent border-0">
+                                 <img src="assets/images/icons/search.svg" alt="Icon">
+                              </button>
+                           </label>
+                        </div>
+
+                        <ul>
+                           <li>
+                              <label class="checkbox-wrapper">
+                                 <input type="checkbox">
+                                 <span class="checkmark checkmark-green"></span>
+                                 <span class="pl-4">Select All 3</span>
+                              </label>
+                           </li>
+                           <li>
+                              <label class="checkbox-wrapper">
+                                 <input type="checkbox">
+                                 <span class="checkmark checkmark-green"></span>
+                                 <span class="pl-4">Add Group for Dhaka</span>
+                              </label>
+                           </li>
+                           <li>
+                              <label class="checkbox-wrapper">
+                                 <input type="checkbox">
+                                 <span class="checkmark checkmark-green"></span>
+                                 <span class="pl-4">Add Group for Chittagong</span>
+                              </label>
+                           </li>
+                           <li>
+                              <label class="checkbox-wrapper">
+                                 <input type="checkbox">
+                                 <span class="checkmark checkmark-green"></span>
+                                 <span class="pl-4">Add Group for Sylhet</span>
+                              </label>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </form>
+         </div>
+         <div class="col-md-3 mb-4">
+            <form action="">
+               <div class="custom-selection">
+                  <div class="dropdown dropdwon-3">
+
+                     <button class="fw-500 fz14 d-flex align-items-center justify-content-between" type="button"
+                        data-toggle="dropdown">
+                        <p class="label-text">Select Ad Group</p>
+
+                        <p class="fz14 blur">All Ad Groups</p>
+                        <div class="d-flex align-items-center">
+                           <span class="number-notification mr-2">3</span>
+                           <span class="pl-2">
+                              <img src="assets/images/icons/arrow-down.svg" alt="Icon">
+                           </span>
+                        </div>
+                     </button>
+
+                     <div class="dropdown-menu">
+                        <div class="dropdown-search mb-3">
+                           <input type="search" id="dropdwonSearch" placeholder="Search" />
+                           <label for="dropdwonSearch">
+                              <button type="submit" class="bg-transparent border-0">
+                                 <img src="assets/images/icons/search.svg" alt="Icon">
+                              </button>
+                           </label>
+                        </div>
+
+                        <ul>
+                           <li>
+                              <label class="checkbox-wrapper">
+                                 <input type="checkbox">
+                                 <span class="checkmark checkmark-green"></span>
+                                 <span class="pl-4">Select All 3</span>
+                              </label>
+                           </li>
+                           <li>
+                              <label class="checkbox-wrapper">
+                                 <input type="checkbox">
+                                 <span class="checkmark checkmark-green"></span>
+                                 <span class="pl-4">Add Group for Dhaka</span>
+                              </label>
+                           </li>
+                           <li>
+                              <label class="checkbox-wrapper">
+                                 <input type="checkbox">
+                                 <span class="checkmark checkmark-green"></span>
+                                 <span class="pl-4">Add Group for Chittagong</span>
+                              </label>
+                           </li>
+                           <li>
+                              <label class="checkbox-wrapper">
+                                 <input type="checkbox">
+                                 <span class="checkmark checkmark-green"></span>
+                                 <span class="pl-4">Add Group for Sylhet</span>
+                              </label>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </form>
+         </div>
+         <div class="col-md-3 mb-4">
+            <form action="">
+               <div class="custom-selection">
+                  <div class="dropdown dropdwon-3">
+
+                     <button class="fw-500 fz14 d-flex align-items-center justify-content-between" type="button"
+                        data-toggle="dropdown">
+                        <p class="label-text">Select Ad Banner</p>
+
+                        <p class="fz14 blur">All Ad Banners</p>
+                        <div class="d-flex align-items-center">
+                           <span class="number-notification mr-2">3</span>
+                           <span class="pl-2">
+                              <img src="assets/images/icons/arrow-down.svg" alt="Icon">
+                           </span>
+                        </div>
+                     </button>
+
+                     <div class="dropdown-menu">
+                        <div class="dropdown-search mb-3">
+                           <input type="search" id="dropdwonSearch" placeholder="Search" />
+                           <label for="dropdwonSearch">
+                              <button type="submit" class="bg-transparent border-0">
+                                 <img src="assets/images/icons/search.svg" alt="Icon">
+                              </button>
+                           </label>
+                        </div>
+
+                        <ul>
+                           <li>
+                              <label class="checkbox-wrapper">
+                                 <input type="checkbox">
+                                 <span class="checkmark checkmark-green"></span>
+                                 <span class="pl-4">Select All 3</span>
+                              </label>
+                           </li>
+                           <li>
+                              <label class="checkbox-wrapper">
+                                 <input type="checkbox">
+                                 <span class="checkmark checkmark-green"></span>
+                                 <span class="pl-4">Add Group for Dhaka</span>
+                              </label>
+                           </li>
+                           <li>
+                              <label class="checkbox-wrapper">
+                                 <input type="checkbox">
+                                 <span class="checkmark checkmark-green"></span>
+                                 <span class="pl-4">Add Group for Chittagong</span>
+                              </label>
+                           </li>
+                           <li>
+                              <label class="checkbox-wrapper">
+                                 <input type="checkbox">
+                                 <span class="checkmark checkmark-green"></span>
+                                 <span class="pl-4">Add Group for Sylhet</span>
+                              </label>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </form>
+         </div>
+         <div class="col-md-3 mb-4">
+            <form action="">
+               <div class="custom-selection">
+                  <div class="dropdown dropdwon-3">
+
+                     <button class="fw-500 fz14 d-flex align-items-center justify-content-between" type="button"
+                        data-toggle="dropdown">
+                        <p class="label-text">Select Date</p>
+
+                        <p class="fz14 blur">18 June 21 - 29 June 21</p>
+                        <div class="d-flex align-items-center">
+                           <span class="number-notification mr-2">3</span>
+                           <span class="pl-2">
+                              <img src="assets/images/icons/arrow-down.svg" alt="Icon">
+                           </span>
+                        </div>
+                     </button>
+
+                     <div class="dropdown-menu">
+                        <div class="dropdown-search mb-3">
+                           <input type="search" id="dropdwonSearch" placeholder="Search" />
+                           <label for="dropdwonSearch">
+                              <button type="submit" class="bg-transparent border-0">
+                                 <img src="assets/images/icons/search.svg" alt="Icon">
+                              </button>
+                           </label>
+                        </div>
+
+                        <ul>
+                           <li>
+                              <label class="checkbox-wrapper">
+                                 <input type="checkbox">
+                                 <span class="checkmark checkmark-green"></span>
+                                 <span class="pl-4">Select All 3</span>
+                              </label>
+                           </li>
+                           <li>
+                              <label class="checkbox-wrapper">
+                                 <input type="checkbox">
+                                 <span class="checkmark checkmark-green"></span>
+                                 <span class="pl-4">Add Group for Dhaka</span>
+                              </label>
+                           </li>
+                           <li>
+                              <label class="checkbox-wrapper">
+                                 <input type="checkbox">
+                                 <span class="checkmark checkmark-green"></span>
+                                 <span class="pl-4">Add Group for Chittagong</span>
+                              </label>
+                           </li>
+                           <li>
+                              <label class="checkbox-wrapper">
+                                 <input type="checkbox">
+                                 <span class="checkmark checkmark-green"></span>
+                                 <span class="pl-4">Add Group for Sylhet</span>
+                              </label>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </form>
+         </div>
+      </div>
    </div>
-</header>
+
+   <div class="card-wrapper mb-18">
+      <div class="result-card">
+         <div class="result-icon">
+            <img src="assets/images/icons/total-reach.svg" alt="icon">
+         </div>
+         <div class="result-detials">
+            <p class="fz12 fw-500">Total Reach</p>
+            <span class="fz18 fw-700">997,098</span>
+         </div>
+      </div>
+      <div class="result-card">
+         <div class="result-icon">
+            <img src="assets/images/icons/total-clicks.svg" alt="icon">
+         </div>
+         <div class="result-detials">
+            <p class="fz12 fw-500">Total Clicks</p>
+            <span class="fz18 fw-700">11,354</span>
+         </div>
+      </div>
+      <div class="result-card">
+         <div class="result-icon">
+            <img src="assets/images/icons/total-impressions.svg" alt="icon">
+         </div>
+         <div class="result-detials">
+            <p class="fz12 fw-500">Total Impressions</p>
+            <span class="fz18 fw-700">1,109,789</span>
+         </div>
+      </div>
+      <div class="result-card">
+         <div class="result-icon">
+            <img src="assets/images/icons/total-conversions.svg" alt="icon">
+         </div>
+         <div class="result-detials">
+            <p class="fz12 fw-500">Total Conversions</p>
+            <span class="fz18 fw-700">1,019</span>
+         </div>
+      </div>
+      <div class="result-card">
+         <div class="result-icon">
+            <img src="assets/images/icons/total-spent.svg" alt="icon">
+         </div>
+         <div class="result-detials">
+            <p class="fz12 fw-500">Total Spent</p>
+            <span class="fz18 fw-700">BDT 7,990</span>
+         </div>
+      </div>
+      <div class="result-card">
+         <div class="result-icon">
+            <img src="assets/images/icons/ctr.svg" alt="icon">
+         </div>
+         <div class="result-detials">
+            <p class="fz12 fw-500">CTR</p>
+            <span class="fz18 fw-700">0.85%</span>
+         </div>
+      </div>
+      <div class="result-card">
+         <div class="result-icon">
+            <img src="assets/images/icons/cpc.svg" alt="icon">
+         </div>
+         <div class="result-detials">
+            <p class="fz12 fw-500">CPC</p>
+            <span class="fz18 fw-700">BDT 0.54</span>
+         </div>
+      </div>
+      <div class="result-card">
+         <div class="result-icon">
+            <img src="assets/images/icons/cpm.svg" alt="icon">
+         </div>
+         <div class="result-detials">
+            <p class="fz12 fw-500">CPM</p>
+            <span class="fz18 fw-700">BDT 1.14</span>
+         </div>
+      </div>
+      <div class="result-card">
+         <div class="result-icon">
+            <img src="assets/images/icons/cpa.svg" alt="icon">
+         </div>
+         <div class="result-detials">
+            <p class="fz12 fw-500">CPA</p>
+            <span class="fz18 fw-700">BDT 7.97</span>
+         </div>
+      </div>
+      <div class="result-card">
+         <div class="result-icon">
+            <img src="assets/images/icons/cvr.svg" alt="icon">
+         </div>
+         <div class="result-detials">
+            <p class="fz12 fw-500">CVR</p>
+            <span class="fz18 fw-700">0.02%</span>
+         </div>
+      </div>
+   </div>
+</div>
 
 {% endblock %}

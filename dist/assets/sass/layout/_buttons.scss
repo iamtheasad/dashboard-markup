@@ -93,12 +93,12 @@
         color: $primaryColor;
     }
 
-    &.ra-btn-dark-bg{
+    &.ra-btn-dark-bg {
         background-color: $darkPrimaryColor;
         color: $white;
     }
 
-    &.ra-btn-light-bg{
+    &.ra-btn-light-bg {
         background-color: $grayLight1;
         color: $black;
     }
@@ -123,11 +123,13 @@
     &.ra-btn-border {
         border: 1px solid;
         border-color: $grayBorderColor;
-    } 
+    }
+
     &.ra-btn-border-dark {
         border: 1px solid;
         border-color: $grayLight1;
-    } 
+    }
+
     &.btn-12x12 {
         padding: 12px;
         border: 1px solid #dedede;
@@ -138,28 +140,75 @@
         justify-content: center;
         align-items: center;
         letter-spacing: normal;
-    } 
-    &.btn-6x16{
+    }
+
+    &.btn-6x16 {
         padding: 6px 16px;
         background-color: transparent;
         color: $black;
 
-        &.active{
+        &.active {
             background-color: $darkPrimaryColor;
             color: $white;
         }
     }
+
     &.blur {
         opacity: .6;
     }
 }
 
-.btn-4x12 {
-    color: $black;
-    background: $grayProgressLight;
-    padding: 4px 12px;
-    display: inline-flex;
+.btn-tag {
+    height: 24px;
+    display: flex;
     justify-content: center;
     align-items: center;
-} 
+    padding-bottom: 6px !important;
 
+    &.bg-grey {
+        background-color: $grayProgressLight;
+        color: $black;
+    }
+
+    &.bg-green {
+        background-color: $greenDark;
+        color: $white;
+    }
+}
+
+.btn-4x12 {
+    padding: 4px 12px;
+}
+
+.filter-btn {
+    height: 36px;
+    background: $purpleLight2;
+    padding: 8px 12px;
+    border-radius: 4px;
+    color: $primaryColor;
+    border: 1px solid transparent;
+
+    &.active {
+        border: 1px solid $greenDark;
+    }
+
+    &.custom {
+        background: $greenDark;
+        color: $white
+    }
+}
+
+.dropdown-menu {
+    &.filter-dropdown {
+        padding: 0px;
+        margin-top: -7px;
+        border: none;
+
+        .dropdown-item {
+            &:hover {
+                background-color: $greenDark;
+                color: $white;
+            }
+        }
+    }
+}

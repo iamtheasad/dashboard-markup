@@ -229,6 +229,22 @@
 
     }
 
+    function dropdown () {
+        let wrapper = $('.dropdown.dropdwon-3');
+        if(wrapper.length){
+            wrapper.find('[data-toggle="dropdown"]').on('click', function () {
+                $(this).siblings('.dropdown-menu').toggleClass('show');
+            })    
+            $(document).click(function(e) {
+                wrapper
+                  .not($('.dropdown').has($(e.target)))
+                  .children('.dropdown-menu')
+                  .removeClass('show');
+            });
+        }
+    }
+
+
 
     /*==========================================================================
         WHEN DOCUMENT LOADING
@@ -239,6 +255,7 @@
         menuToggler();
         getFileName();
         filePreview();
+        dropdown();
 
         dataTable2('#myCampaignDatatTable');
         dataTable2('#ongoingDataTable');
