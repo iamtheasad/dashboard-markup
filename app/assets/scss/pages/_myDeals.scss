@@ -9,6 +9,12 @@
    background: $primaryBg;
 }
 
+.dropdown {
+   &.dot-dropdown {
+      display: flex;
+   }
+}
+
 .ra-three-dot-btn {
    position: relative;
    background-color: transparent;

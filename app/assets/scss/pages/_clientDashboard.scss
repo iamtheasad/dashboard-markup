@@ -1,6 +1,5 @@
 .campaign-wrapper {
    background-color: rgba($purpleLight3, .3);
-   height: 100%;
 }
 
 .dashboard-menu {
@@ -24,6 +23,30 @@
          font-size: 16px;
          font-weight: 500;
          padding: 5px 5px;
+         position: relative;
+         transition: .2s ease-in-out;
+
+         &:after {
+            content: '';
+            position: absolute;
+            background: transparent;
+            width: 100px;
+            height: 3px;
+            border-radius: 20px;
+            top: 100%;
+            left: -14%;
+            color: $purple;
+            transition: .2s ease-in-out;
+         }
+
+         &:hover {
+            color: $purple;
+         }
+
+         &:hover:after {
+            top: 127%;
+            background: $greenDark;
+         }
       }
 
       .active {

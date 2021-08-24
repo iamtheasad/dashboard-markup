@@ -82,7 +82,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li><a href="clientCampaigns.html"><img class="icon" src="assets/images/icons/connect.svg" alt="Icon">Client Campaigns</a></li>
+                    <li><a href="clientDashboardOverview.html"><img class="icon" src="assets/images/icons/connect.svg" alt="Icon">Client Campaigns</a></li>
                     <li>
                         <a href="#advertiserCampaigns" data-toggle="collapse">
                             <img class="icon" src="assets/images/icons/arrow-up.svg" alt="">Campaigns
@@ -190,10 +190,10 @@
                 <div class="filter-wrapper dashboard-menu ra-border-bottom">
                     <div class="menu-content">
                         <ul>
-                            <li><a href="#" class="active">Overview</a></li>
-                            <li><a href="#">Ad Groups</a></li>
-                            <li><a href="#">Ad Banners</a></li>
-                            <li><a href="#">Analytics</a></li>
+                            <li><a href="clientDashboardOverview.html" class="active">Overview</a></li>
+                            <li><a href="clientDashbaordAdGroups.html">Ad Groups</a></li>
+                            <li><a href="clientDashboardAdBanners.html">Ad Banners</a></li>
+                            <li><a href="clientDashboardAnalytics.html">Analytics</a></li>
                         </ul>
                     </div>
 
@@ -227,11 +227,19 @@
                             </button>
                         </div>
 
-                        <button class="ra-three-dot-btn">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </button>
+                        <div class="dropdown dot-dropdown">
+                            <button type="button" class="ra-three-dot-btn" id="campaignDetailsDashboardDot" data-toggle="dropdown" aria-haspopup="true">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                            <div class="dropdown-menu filter-dropdown" aria-labelledby="campaignDetailsDashboardDot">
+                                <a class="dropdown-item" href="#">Demo Text 1</a>
+                                <a class="dropdown-item" href="#">Demo Text 2</a>
+                                <a class="dropdown-item" href="#">Demo Text 3</a>
+                                <a class="dropdown-item" href="#">Demo Text 4</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
 

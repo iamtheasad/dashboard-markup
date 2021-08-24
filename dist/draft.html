@@ -82,7 +82,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li><a href="clientCampaigns.html"><img class="icon" src="assets/images/icons/connect.svg" alt="Icon">Client Campaigns</a></li>
+                    <li><a href="clientDashboardOverview.html"><img class="icon" src="assets/images/icons/connect.svg" alt="Icon">Client Campaigns</a></li>
                     <li>
                         <a href="#advertiserCampaigns" data-toggle="collapse">
                             <img class="icon" src="assets/images/icons/arrow-up.svg" alt="">Campaigns
@@ -153,11 +153,19 @@
                             Draft
                         </a>
                         <span class="pl-2 pr-3">Brand Name: 40% Sale Offer</span>
-                        <button class="ra-three-dot-btn three-dot-draft">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </button>
+                        <div class="dropdown dot-dropdown">
+                            <button type="button" class="ra-three-dot-btn three-dot-draft" id="campaignDetailsDashboardDot" data-toggle="dropdown" aria-haspopup="true">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                            <div class="dropdown-menu filter-dropdown" aria-labelledby="campaignDetailsDashboardDot">
+                                <a class="dropdown-item" href="#">Demo Text 1</a>
+                                <a class="dropdown-item" href="#">Demo Text 2</a>
+                                <a class="dropdown-item" href="#">Demo Text 3</a>
+                                <a class="dropdown-item" href="#">Demo Text 4</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="right-menu dropdown d-flex">

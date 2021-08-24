@@ -257,36 +257,37 @@ input[type="text"] {
   }
 }
 
-.ra-select {
-  &.ra-select-2 {
-    padding: 10px;
-    /* Replacing Default Arrow */
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background-image: url('data:image/svg+xml;utf8,<svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M7.77552 0.232761C7.63333 0.0836789 7.44099 0 7.2405 0C7.04001 0 6.84766 0.0836789 6.70547 0.232761L3.98103 3.06631L1.29453 0.232761C1.15234 0.0836789 0.959994 0 0.759504 0C0.559014 0 0.36667 0.0836789 0.224481 0.232761C0.15335 0.307172 0.0968926 0.395701 0.0583643 0.493242C0.0198361 0.590782 0 0.695404 0 0.801071C0 0.906738 0.0198361 1.01136 0.0583643 1.1089C0.0968926 1.20644 0.15335 1.29497 0.224481 1.36938L3.44221 4.76323C3.51276 4.83826 3.59669 4.8978 3.68917 4.93844C3.78165 4.97908 3.88084 5 3.98103 5C4.08121 5 4.1804 4.97908 4.27288 4.93844C4.36536 4.8978 4.4493 4.83826 4.51985 4.76323L7.77552 1.36938C7.84665 1.29497 7.90311 1.20644 7.94163 1.1089C7.98016 1.01136 8 0.906738 8 0.801071C8 0.695404 7.98016 0.590782 7.94163 0.493242C7.90311 0.395701 7.84665 0.307172 7.77552 0.232761Z" fill="%23373773"/></svg>');
-    background-repeat: no-repeat;
-    background-position-y: 50%;
-    background-position-x: 95%;
-    min-height: 56px;
-    border-radius: 4px;
-    background-color: $white;
-    cursor: pointer;
-  
-    @media (max-width: 992px) {
-      min-height: 40px;
-    }
+// .ra-select {
+//   &.ra-select-2 {
+//     padding: 10px;
+//     appearance: none;
+//     -webkit-appearance: none;
+//     -moz-appearance: none;
+//     background-image: url('data:image/svg+xml;utf8,<svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.77552 0.232761C7.63333 0.0836789 7.44099 0 7.2405 0C7.04001 0 6.84766 0.0836789 6.70547 0.232761L3.98103 3.06631L1.29453 0.232761C1.15234 0.0836789 0.959994 0 0.759504 0C0.559014 0 0.36667 0.0836789 0.224481 0.232761C0.15335 0.307172 0.0968926 0.395701 0.0583643 0.493242C0.0198361 0.590782 0 0.695404 0 0.801071C0 0.906738 0.0198361 1.01136 0.0583643 1.1089C0.0968926 1.20644 0.15335 1.29497 0.224481 1.36938L3.44221 4.76323C3.51276 4.83826 3.59669 4.8978 3.68917 4.93844C3.78165 4.97908 3.88084 5 3.98103 5C4.08121 5 4.1804 4.97908 4.27288 4.93844C4.36536 4.8978 4.4493 4.83826 4.51985 4.76323L7.77552 1.36938C7.84665 1.29497 7.90311 1.20644 7.94163 1.1089C7.98016 1.01136 8 0.906738 8 0.801071C8 0.695404 7.98016 0.590782 7.94163 0.493242C7.90311 0.395701 7.84665 0.307172 7.77552 0.232761Z" fill="%23373773"/></svg>');
+//     background-repeat: no-repeat;
+//     background-position-y: 50%;
+//     background-position-x: 95%;
+//     color: $primaryColor;
+//     min-height: 52px !important;
+//     border-radius: 3px;
+//     background-color: $white;
+//     cursor: pointer;
+//     border: 1px solid $purpleLight3;
+
+//     @media (max-width: 992px) {
+//       min-height: 40px;
+//     }
+
+//     option {
+//       color: $primaryColor;
+//     }
+//   }
+// }
+
+.selection-filter {
+  label {
+    color: $purpleLight !important;
   }
-}
-
-.campaign-selection label {
-  color: #83839F !important;
-}
-
-.campaign-selection select {
-  color: #475364;
-  min-height: 52px !important;
 }
 
 .form-width {
@@ -300,8 +301,14 @@ input[type="text"] {
   border: 1px solid $borderColor;
 }
 
+// .ra-select.ra-select-2:focus {
+//   outline: none;
+//   border: 1px solid $purpleLight;
+//   color: rgba(71, 83, 100, .6);
+// }
+
 .ra-select option {
-  background-color: #fff;
+  background-color: $white;
 }
 
 /***********************************
@@ -519,6 +526,7 @@ input[type="text"] {
         transform: translateY(-50%);
         counter-reset: $grayLightTextColor;
         transition: 0.2s ease-in-out;
+        z-index: 10;
       }
     }
 
@@ -610,4 +618,133 @@ input[type="text"] {
     left: 0;
     opacity: 0;
   }
+}
+
+.dropdown {
+  &.dropdwon-3 {
+    button {
+      min-height: 52px;
+      background: $white;
+      padding: 8px 12px;
+      border-radius: 3px;
+      color: $primaryColor;
+      border: 1px solid $purpleLight3;
+      width: 100%;
+      position: relative;
+    }
+
+    .dropdown-menu {
+      top: 12% !important;
+      width: 100%;
+      border: none;
+      padding: 0px;
+
+      ul {
+        li {
+          padding: 10px 20px;
+
+          .checkbox-wrapper {
+            font-size: 14px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            color: $primaryColor;
+            padding: unset;
+            margin-bottom: 0px;
+            width: 100%;
+          }
+
+          &:hover {
+            background-color: $purpleLight3;
+          }
+        }
+      }
+    }
+  }
+}
+
+.label-text {
+  position: absolute;
+  top: -12px;
+  background: $white;
+  color: $purpleLight;
+  padding: 0px 5px;
+  left: 11px;
+  font-size: 12px;
+  font-weight: 500;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  border: 0px;
+}
+
+.number-notification {
+  font-size: 14px;
+  font-weight: 600;
+  color: $white;
+  background: $orangDark;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 10px;
+}
+
+
+.dropdown-search {
+  position: relative;
+  border-bottom: 1px solid $purpleLight3;
+}
+
+.dropdown-search {
+  label {
+    position: absolute;
+    right: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: .6;
+  }
+
+  input {
+    border: 1px solid transparent;
+    width: 100%;
+    padding: 5px 45px 5px 10px;
+    position: relative;
+
+    &:focus {
+      border: 1px solid $greenDark;
+    }
+  }
+}
+
+.dropdown {
+  &.dropdwon-3 {
+    button:focus {
+      border: 1px solid $greenDark;
+    }
+  }
+}
+
+.dropdown.dropdwon-3 button:focus .label-text {
+  color: $greenDark;
+}
+
+.dropdown.dropdwon-3 button:focus .blur {
+  opacity: .6;
+}
+
+.checkbox-wrapper input~.checkmark.checkmark-green,
+.checkbox-green {
+  background-color: $purpleLight3;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.checkbox-wrapper input:checked~.checkmark.checkmark-green {
+  background-color: $greenDark;
+  border-color: transparent;
 }
