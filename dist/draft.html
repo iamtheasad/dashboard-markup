@@ -153,13 +153,14 @@
                             Draft
                         </a>
                         <span class="pl-2 pr-3">Brand Name: 40% Sale Offer</span>
+
                         <div class="dropdown dot-dropdown">
-                            <button type="button" class="ra-three-dot-btn three-dot-draft" id="campaignDetailsDashboardDot" data-toggle="dropdown" aria-haspopup="true">
+                            <button type="button" class="ra-three-dot-btn" data-toggle="dropdown" aria-haspopup="true">
                                 <span></span>
                                 <span></span>
                                 <span></span>
                             </button>
-                            <div class="dropdown-menu filter-dropdown" aria-labelledby="campaignDetailsDashboardDot">
+                            <div class="dropdown-menu filter-dropdown">
                                 <a class="dropdown-item" href="#">Demo Text 1</a>
                                 <a class="dropdown-item" href="#">Demo Text 2</a>
                                 <a class="dropdown-item" href="#">Demo Text 3</a>
@@ -271,7 +272,7 @@
             <div class="draft-content-wrapper min-vh-100">
                 <div class="draft-body">
                     <form action="#" class="d-flex justify-content-center">
-                        <div class="page page-1 ">
+                        <div class="page page-1 d-none">
                             <p class="fz14 fw-400 black-color pb-20">Lorem Ipsum has been the industry's standard dummy text ever since
                                 the 1500s, when an unknown printer took. Lorem Ipsum has been the industry's standard dummy text.</p>
                             <div class="draft-brand-tag">
@@ -987,7 +988,7 @@
                             <button class="ra-btn draft-btn fz15 fw-500 ra-btn-dark-bg" type="button">Move to Chat</button>
                         </div>
                     </div> <!-- Page End -->
-                    <div class="page page-5 d-none">
+                    <div class="page page-5">
                         <div class="row no-gutter">
                             <div class="col-md-4">
                                 <div class="ra-progress ra-border-top mb-md-0 mb-4">
@@ -1194,8 +1195,8 @@
                                         </button>
                                     </div>
                                     <div class="chat-wrapper">
-                                        <div>
-                                            <form action="#" class="rs-form ra-form offer-input-box p-16x20">
+                                        <div class="chat-top">
+                                            <form action="#" class="rs-form ra-form offer-input-box p-16x20 d-none">
                                                 <p class="fz14 fw-400 black-color mb-16">You have added Raba to chat. Let her Know your offer first to
                                                     connect. She’ll respond once she reviews it.</p>
 
@@ -1272,12 +1273,21 @@
                                                 <p class="fz14 fw-400 blue-color">Raba is interested to your offer</p>
                                                 <span class="fz12 fw-500 gray-light-text-color mb-16 d-block">8:08 PM</span>
                                             </div>
+                                            <div class="chat-content">
+                                                <p class="fz14 fw-400 chat-text sent">Hi! Could you raise the budget by 2k?</p>
+                                                <p class="fz14 fw-400 chat-text recieved">ok</p>
+                                                <p class="fz14 fw-400 chat-text recieved">I’m Updating the Budget to 22K</p>
+                                                <p class="fz14 fw-400 chat-text sent">Hi! Could you raise the salary?</p>
+                                                <p class="fz14 fw-400 chat-text recieved">OOps!!!</p>
+                                                <p class="fz14 fw-400 chat-text recieved">I did it by Thanos time stone</p>
+                                                <p class="fz14 fw-400 chat-text recieved">Hehe</p>
+                                                <p class="fz14 fw-400 chat-text sent">Ok.... </p>
+                                                <p class="fz14 fw-400 chat-text sent">What is Lorem Ipsum?
+                                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                                            </div>
                                         </div>
 
                                         <div>
-                                            <div class="chat-content">
-                                                &nbsp;
-                                            </div>
                                             <form action="#" class="rs-form ra-form">
                                                 <div class="msg-input p-16x20">
                                                     <input type="text" class="rs-input ra-input ra-input-border-primary min-height-40 gray-light-text-color fz14 fw-400" name="mydealsmsg" id="mydealsmsg" placeholder="Write your message">

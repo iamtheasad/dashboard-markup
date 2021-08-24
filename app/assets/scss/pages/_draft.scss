@@ -208,6 +208,7 @@
       max-width: 555px;
       width: 100%;
       margin: 20px;
+      overflow: hidden;
    }
 
    .draft-body .page.page-4,
@@ -669,6 +670,39 @@ div[slider]>input[type=range]::-ms-tooltip {
 }
 
 
+
+
+
+.chat-content {
+   display: flex;
+   flex-direction: column;
+   padding: 15px;
+
+   .chat-text {
+      min-height: 44px;
+      padding: 12px 16px;
+      border-radius: 24px;
+      width: fit-content;
+      max-width: 70%;
+   
+      &.sent {
+         background: #484848;
+         color: #fff;
+         margin-bottom: 24px;
+         margin-left: auto;
+      }
+   
+      &.recieved {
+         background: #d6d6d6;
+         color: #000;
+         margin-bottom: 4px;
+      }
+   }
+}
+
+
+
+
 // Tab page 5
 .limit-notification {
    display: flex;
@@ -741,6 +775,7 @@ div[slider]>input[type=range]::-ms-tooltip {
    background-color: $grayProgressLight;
    height: 20px;
    margin-left: 4px;
+   padding-bottom: 5px;
 }
 
 .msg-interest {
@@ -760,14 +795,38 @@ div[slider]>input[type=range]::-ms-tooltip {
 }
 
 .chat-wrapper {
-   min-height: calc(100vh-196px);
    display: flex;
    flex-direction: column;
    justify-content: space-between;
 
-   @media screen and (max-width: 992px) {
-      min-height: 100vh;
+   .chat-top {
+      max-height: 70vh;
+      overflow-y: auto;
    }
+
+   /* width */
+::-webkit-scrollbar {
+   width: 7px;
+ }
+ 
+ /* Track */
+ ::-webkit-scrollbar-track {
+   background: #f1f1f1;
+ }
+ 
+ /* Handle */
+ ::-webkit-scrollbar-thumb {
+   background: #484848;
+   border-radius: 24px;
+   height: 30px;
+   transition: .2s;
+ }
+ 
+ /* Handle on hover */
+ ::-webkit-scrollbar-thumb:hover {
+   background: rgba(72, 72, 72, 0.615);
+ }
+
 }
 
 .msg-input {

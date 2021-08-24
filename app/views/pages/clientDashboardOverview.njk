@@ -63,20 +63,8 @@
             </button>
          </div>
 
-         <div class="dropdown dot-dropdown">
-            <button type="button" class="ra-three-dot-btn" id="campaignDetailsDashboardDot" data-toggle="dropdown"
-               aria-haspopup="true">
-               <span></span>
-               <span></span>
-               <span></span>
-            </button>
-            <div class="dropdown-menu filter-dropdown" aria-labelledby="campaignDetailsDashboardDot">
-               <a class="dropdown-item" href="#">Demo Text 1</a>
-               <a class="dropdown-item" href="#">Demo Text 2</a>
-               <a class="dropdown-item" href="#">Demo Text 3</a>
-               <a class="dropdown-item" href="#">Demo Text 4</a>
-            </div>
-         </div>
+         {% include 'snippets/threeDot.njk' %}
+
       </div>
    </div>
 
