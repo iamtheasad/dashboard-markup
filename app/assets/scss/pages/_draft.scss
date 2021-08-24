@@ -846,3 +846,25 @@ div[slider]>input[type=range]::-ms-tooltip {
 .rs-input.ra-input.offer-input {
    padding-right: 50px;
 }
+
+.c-row {
+   display: flex;
+
+   @media screen and (max-width: 992px) {
+      flex-wrap: wrap;
+      margin-bottom: 36px;
+   }
+
+   @media screen and (max-width: 575px) {
+      flex-wrap: wrap;
+      margin-bottom: 25px;
+   }
+
+   .c-col {
+      width: 33%;
+
+      @media screen and (max-width: 992px) {
+         width: 100%;
+      }
+   }
+}

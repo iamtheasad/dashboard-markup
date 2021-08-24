@@ -262,9 +262,17 @@ main {
 }
 
 .ra-border-top {
-  border-top: 1px solid $grayBorderColor;
+  border-top: 1px solid $grayBorderColor !important;
 }
 
 .ra-border-bottom {
-  border-bottom: 1px solid $purpleLight3;
+  border-bottom: 1px solid $grayBorderColor !important;
+}
+
+.ra-border-left {
+  border-left: 1px solid $grayBorderColor !important;
+}
+
+.ra-border-right {
+  border-right: 1px solid $grayBorderColor !important;
 }

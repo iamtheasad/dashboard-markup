@@ -669,14 +669,10 @@ div[slider]>input[type=range]::-ms-tooltip {
    background-color: transparent;
 }
 
-
-
-
-
 .chat-content {
    display: flex;
    flex-direction: column;
-   padding: 15px;
+   padding: 16px;
 
    .chat-text {
       min-height: 44px;
@@ -684,24 +680,21 @@ div[slider]>input[type=range]::-ms-tooltip {
       border-radius: 24px;
       width: fit-content;
       max-width: 70%;
-   
+
       &.sent {
-         background: #484848;
-         color: #fff;
+         background: $darkPrimaryColor;
+         color: $white;
          margin-bottom: 24px;
          margin-left: auto;
       }
-   
+
       &.recieved {
-         background: #d6d6d6;
-         color: #000;
+         background: $grayProgressLight;
+         color: $black;
          margin-bottom: 4px;
       }
    }
 }
-
-
-
 
 // Tab page 5
 .limit-notification {
@@ -723,7 +716,7 @@ div[slider]>input[type=range]::-ms-tooltip {
 
    .msg-short {
       font-weight: 400;
-      color: #7A7A7A;
+      color: $grayLightTextColor;
    }
 }
 
@@ -732,7 +725,7 @@ div[slider]>input[type=range]::-ms-tooltip {
 
    .msg-short {
       font-weight: 400;
-      color: #7A7A7A;
+      color: $grayLightTextColor;
    }
 }
 
@@ -741,7 +734,7 @@ div[slider]>input[type=range]::-ms-tooltip {
 
    .msg-short {
       font-weight: 500;
-      color: #484848;
+      color: $darkPrimaryColor;
    }
 }
 
@@ -805,27 +798,27 @@ div[slider]>input[type=range]::-ms-tooltip {
    }
 
    /* width */
-::-webkit-scrollbar {
-   width: 7px;
- }
- 
- /* Track */
- ::-webkit-scrollbar-track {
-   background: #f1f1f1;
- }
- 
- /* Handle */
- ::-webkit-scrollbar-thumb {
-   background: #484848;
-   border-radius: 24px;
-   height: 30px;
-   transition: .2s;
- }
- 
- /* Handle on hover */
- ::-webkit-scrollbar-thumb:hover {
-   background: rgba(72, 72, 72, 0.615);
- }
+   ::-webkit-scrollbar {
+      width: 7px;
+   }
+
+   /* Track */
+   ::-webkit-scrollbar-track {
+      background: rgba($darkPrimaryColor, .2);
+   }
+
+   /* Handle */
+   ::-webkit-scrollbar-thumb {
+      background: rgba($darkPrimaryColor, .6);
+      border-radius: 24px;
+      height: 30px;
+      transition: .2s;
+   }
+
+   /* Handle on hover */
+   ::-webkit-scrollbar-thumb:hover {
+      background: $darkPrimaryColor;
+   }
 
 }
 
