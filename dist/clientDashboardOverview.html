@@ -158,30 +158,41 @@
                         </div>
                     </div>
                     <div class="right-menu dropdown d-flex">
-                        <button class="topbar-notification">
-                            <img src="assets/images/icons/notification_outline.svg" alt="Bell Icon">
-                        </button>
-                        <a href="javascript:void(0)" class="account-menu d-flex align-items-center dropdown-toggle" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <div class="avater">
-                                <p class="">S</p>
-                                <div class="d-none">
-                                    <img src="http://via.placeholder.com/48x48" alt="">
-                                </div>
-                            </div>
-                            <div class="acc-name">Shafayat</div>
-
-                            <button class="dropdown-icon">
-                                <img src="assets/images/icons/arrow-down.svg" alt="Icon" style="width: 8px;">
+                        <div class="dropdown dot-dropdown">
+                            <button type="button" class="topbar-notification" id="topbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img src="assets/images/icons/notification_outline.svg" alt="Bell Icon">
                             </button>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu2" aria-labelledby="dropdownMenuButton2">
-                            <ul>
-                                <li><a href="accountSettings.html">Account Settings</a></li>
-                                <li><a href="index2.html">Advertiser Dashboard</a></li>
-                                <li><a href="">বাংলা ভাষা নির্বাচন</a></li>
-                                <li><a href="">Take a Tour</a></li>
-                                <li><a href="login.html">Logout</a></li>
-                            </ul>
+                            <div class="dropdown-menu filter-dropdown" aria-labelledby="topbarDropdown">
+                                <a class="dropdown-item" href="#">Demo Text 1</a>
+                                <a class="dropdown-item" href="#">Demo Text 2</a>
+                                <a class="dropdown-item" href="#">Demo Text 3</a>
+                                <a class="dropdown-item" href="#">Demo Text 4</a>
+                            </div>
+                        </div>
+
+                        <div class="right-menu dropdown ml-4">
+                            <a href="javascript:void(0)" class="account-menu d-flex align-items-center dropdown-toggle" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <div class="avater">
+                                    <p class="">S</p>
+                                    <div class="d-none">
+                                        <img src="http://via.placeholder.com/48x48" alt="">
+                                    </div>
+                                </div>
+                                <div class="acc-name">Shafayat</div>
+
+                                <button class="dropdown-icon">
+                                    <img src="assets/images/icons/arrow-down.svg" alt="Icon" style="width: 8px;">
+                                </button>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu2" aria-labelledby="dropdownMenuButton2">
+                                <ul>
+                                    <li><a href="accountSettings.html">Account Settings</a></li>
+                                    <li><a href="index2.html">Advertiser Dashboard</a></li>
+                                    <li><a href="">বাংলা ভাষা নির্বাচন</a></li>
+                                    <li><a href="">Take a Tour</a></li>
+                                    <li><a href="login.html">Logout</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </header>
@@ -220,7 +231,7 @@
 
                         <div>
                             <button class="filter-btn custom d-flex align-items-center mr-20">
-                                <span class="pr-2">
+                                <span class="pr-2 disabled">
                   <img src="assets/images/icons/export.svg" alt="Icon">
                </span>
                                 <p class="fz14 fw-500">Export</p>
@@ -252,59 +263,17 @@
                                 <div class="custom-selection">
                                     <div class="dropdown dropdwon-3">
 
-                                        <button class="fw-500 fz14 d-flex align-items-center justify-content-between" type="button" data-toggle="dropdown">
+                                        <button class="disabled fw-500 fz14 d-flex align-items-center justify-content-between" type="button" data-toggle="dropdown">
                                             <p class="label-text">Select Campaign</p>
 
-                                            <p class="fz14 blur">Sharetrip Summer Campaign...</p>
+                                            <p class="fz14 disable-title blur">Sharetrip Summer Campaign...</p>
                                             <div class="d-flex align-items-center">
                                                 <span class="number-notification mr-2 d-none">3</span>
                                                 <span class="pl-2">
-                              <img src="assets/images/icons/arrow-down.svg" alt="Icon">
+                              <img src="assets/images/icons/arrow-down.svg" class="disable-img" alt="Icon">
                            </span>
                                             </div>
                                         </button>
-
-                                        <div class="dropdown-menu">
-                                            <div class="dropdown-search mb-3">
-                                                <input type="search" id="dropdwonSearch" placeholder="Search" />
-                                                <label for="dropdwonSearch">
-                                                    <button type="submit" class="bg-transparent border-0">
-                                                        <img src="assets/images/icons/search.svg" alt="Icon">
-                                                    </button>
-                                                </label>
-                                            </div>
-
-                                            <ul>
-                                                <li>
-                                                    <label class="checkbox-wrapper">
-                                                        <input type="checkbox">
-                                                        <span class="checkmark checkmark-green"></span>
-                                                        <span class="pl-4">Select All 3</span>
-                                                    </label>
-                                                </li>
-                                                <li>
-                                                    <label class="checkbox-wrapper">
-                                                        <input type="checkbox">
-                                                        <span class="checkmark checkmark-green"></span>
-                                                        <span class="pl-4">Add Group for Dhaka</span>
-                                                    </label>
-                                                </li>
-                                                <li>
-                                                    <label class="checkbox-wrapper">
-                                                        <input type="checkbox">
-                                                        <span class="checkmark checkmark-green"></span>
-                                                        <span class="pl-4">Add Group for Chittagong</span>
-                                                    </label>
-                                                </li>
-                                                <li>
-                                                    <label class="checkbox-wrapper">
-                                                        <input type="checkbox">
-                                                        <span class="checkmark checkmark-green"></span>
-                                                        <span class="pl-4">Add Group for Sylhet</span>
-                                                    </label>
-                                                </li>
-                                            </ul>
-                                        </div>
                                     </div>
                                 </div>
                             </form>
@@ -319,7 +288,7 @@
 
                                             <p class="fz14 blur">All Ad Groups</p>
                                             <div class="d-flex align-items-center">
-                                                <span class="number-notification mr-2">3</span>
+                                                <span class="number-notification mr-2">99</span>
                                                 <span class="pl-2">
                               <img src="assets/images/icons/arrow-down.svg" alt="Icon">
                            </span>
@@ -492,6 +461,14 @@
                                             </ul>
                                         </div>
                                     </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-md-12">
+                            <form action="">
+                                <div class="d-flex justify-content-end mb-3">
+                                    <button class="ra-btn blue-color-2 ra-btn-6x12 bg-transparent min-hieght-32 fz14 fw-500" type="button">Clear All</button>
+                                    <button class="ra-btn ra-btn-blue-bg ra-btn-6x12 min-hieght-32 fz14 fw-500" type="submit">Apply Filters</button>
                                 </div>
                             </form>
                         </div>

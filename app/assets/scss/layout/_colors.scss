@@ -6,10 +6,14 @@
 }
 
 .green-color{
-    color: #72BF44;
+    color: $greenDark;
 }
 .red-color{
-    color: #ED1C24;
+    color: $chartRedColor;
+}
+
+.white-color {
+    color: $white;
 }
 
 .black-color{
@@ -53,6 +57,10 @@
 }
 .blue-color {
     color: $darkBlueColor;
+}
+
+.blue-color-2 {
+    color: $darkBlueColor2 !important;
 }
 
 .darkPrimaryColor {

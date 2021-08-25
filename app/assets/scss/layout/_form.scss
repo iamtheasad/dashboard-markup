@@ -660,6 +660,19 @@ input[type="text"] {
         }
       }
     }
+
+    .disabled {
+      .label-text {
+        color: rgba($purpleLight, 0.6);
+      }
+      .disable-title {
+        color: rgba($primaryColor, 0.6);
+      }
+
+      .disable-img {
+        opacity: .4;
+      }
+    }
   }
 }
 
@@ -693,6 +706,37 @@ input[type="text"] {
   padding: 10px;
 }
 
+.dropdown.dropdwon-3 button:focus {
+  border: 1px solid $greenDark;
+}
+.dropdown.dropdwon-3 button.disabled:focus {
+  border: 1px solid $purpleLight3;
+}
+
+.dropdown.dropdwon-3 button:focus .label-text {
+  color: $greenDark;
+}
+
+.dropdown.dropdwon-3 button.disabled:focus .label-text {
+  color: rgba($purpleLight, 0.6);
+}
+
+.dropdown.dropdwon-3 button:focus .blur {
+  color: rgba($primaryColor, 0.6);
+}
+
+.checkbox-wrapper input~.checkmark.checkmark-green,
+.checkbox-green {
+  background-color: $purpleLight3;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.checkbox-wrapper input:checked~.checkmark.checkmark-green {
+  background-color: $greenDark;
+  border-color: transparent;
+}
 
 .dropdown-search {
   position: relative;
@@ -718,33 +762,4 @@ input[type="text"] {
       border: 1px solid $greenDark;
     }
   }
-}
-
-.dropdown {
-  &.dropdwon-3 {
-    button:focus {
-      border: 1px solid $greenDark;
-    }
-  }
-}
-
-.dropdown.dropdwon-3 button:focus .label-text {
-  color: $greenDark;
-}
-
-.dropdown.dropdwon-3 button:focus .blur {
-  opacity: .6;
-}
-
-.checkbox-wrapper input~.checkmark.checkmark-green,
-.checkbox-green {
-  background-color: $purpleLight3;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.checkbox-wrapper input:checked~.checkmark.checkmark-green {
-  background-color: $greenDark;
-  border-color: transparent;
 }
