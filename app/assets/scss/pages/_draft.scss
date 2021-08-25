@@ -707,10 +707,6 @@ div[slider]>input[type=range]::-ms-tooltip {
    background-color: $grayProgressLight !important;
 }
 
-.chat-msg {
-   height: 72px;
-}
-
 .msg-white-bg {
    background-color: $white;
 
@@ -768,7 +764,7 @@ div[slider]>input[type=range]::-ms-tooltip {
    background-color: $grayProgressLight;
    height: 20px;
    margin-left: 4px;
-   padding-bottom: 5px;
+   padding-bottom: 3px;
 }
 
 .msg-interest {
@@ -793,8 +789,12 @@ div[slider]>input[type=range]::-ms-tooltip {
    justify-content: space-between;
 
    .chat-top {
-      max-height: 70vh;
+      max-height: 71vh;
       overflow-y: auto;
+
+      &.chat-top-2 {
+         max-height: 79vh;
+      }
    }
 
    /* width */
@@ -866,5 +866,38 @@ div[slider]>input[type=range]::-ms-tooltip {
       @media screen and (max-width: 992px) {
          width: 100%;
       }
+   }
+}
+
+.c-row-2 {
+   display: flex;
+
+   @media screen and (max-width: 992px) {
+      flex-wrap: wrap;
+      margin-bottom: 36px;
+   }
+
+   @media screen and (max-width: 575px) {
+      flex-wrap: wrap;
+      margin-bottom: 25px;
+   }
+
+   .c-col-2 {
+
+      @media screen and (max-width: 992px) {
+         width: 100% !important;
+      }
+   }
+
+   .custom-1 {
+      width: 33.33%;
+   }
+
+   .custom-2 {
+      width: 66.66%;
+   }
+
+   .custom-3 {
+      width: 50%;
    }
 }
