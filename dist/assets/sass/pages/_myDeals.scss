@@ -50,7 +50,11 @@
    display: flex;
    padding: 0px 20px;
    align-items: center;
-   height: 72px;
+   min-height: 72px;
+
+   @media screen and (max-width: 1202px) {
+      padding: 0px 10px;
+   }
 }
 
 .ra-progress-item.active {
@@ -96,6 +100,7 @@
    display: flex;
    justify-content: space-between;
    align-items: center;
+   text-align: left;
 }
 
 .ra-time {

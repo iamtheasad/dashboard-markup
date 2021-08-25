@@ -861,7 +861,7 @@ div[slider]>input[type=range]::-ms-tooltip {
    }
 
    .c-col {
-      width: 33%;
+      width: 33.33%;
 
       @media screen and (max-width: 992px) {
          width: 100%;
@@ -899,5 +899,46 @@ div[slider]>input[type=range]::-ms-tooltip {
 
    .custom-3 {
       width: 50%;
+   }
+}
+
+// Client Details
+.user-image {
+   position: relative;
+   height: 136px;
+
+   .cover-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 75px;
+      background-color: rgba($darkPrimaryColor, .5);
+
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         object-position: center;
+      }
+   }
+
+   .profile-image {
+      position: absolute;
+      background-color: rgba($darkPrimaryColor, 1);
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      left: 50%;
+      top: 20%;
+      transform: translate(-50%);
+
+      img {
+         width: 100%;
+         height: 100%;
+         border-radius: 50%;
+         object-fit: cover;
+         object-position: center;
+      }
    }
 }
