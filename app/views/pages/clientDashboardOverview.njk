@@ -56,7 +56,7 @@
 
          <div>
             <button class="filter-btn custom d-flex align-items-center mr-20">
-               <span class="pr-2">
+               <span class="pr-2 disabled">
                   <img src="assets/images/icons/export.svg" alt="Icon">
                </span>
                <p class="fz14 fw-500">Export</p>
@@ -75,19 +75,27 @@
             <form action="">
                <div class="custom-selection">
                   <div class="dropdown dropdwon-3">
-
-                     <button class="fw-500 fz14 d-flex align-items-center justify-content-between" type="button"
-                        data-toggle="dropdown">
+                     <button class="disabled fw-500 fz14 d-flex align-items-center justify-content-between"
+                        type="button" data-toggle="dropdown">
                         <p class="label-text">Select Campaign</p>
 
-                        <p class="fz14 blur">Sharetrip Summer Campaign...</p>
+                        <p class="fz14 disable-title blur">Sharetrip Summer Campaign...</p>
                         <div class="d-flex align-items-center">
-                           <span class="number-notification mr-2 d-none">3</span>
-                           <span class="pl-2">
-                              <img src="assets/images/icons/arrow-down.svg" alt="Icon">
-                           </span>
+                           <div>
+                              <span class="dropdown-icon">
+                                 <img src="assets/images/icons/arrow-down.svg" class="disable-img" alt="Icon">
+                              </span>
+                           </div>
                         </div>
                      </button>
+                  </div>
+               </div>
+            </form>
+         </div>
+         <div class="col-md-3 mb-4">
+            <form action="">
+               <div class="custom-selection">
+                  <div class="dropdown dropdwon-3">
 
                      <div class="dropdown-menu">
                         <div class="dropdown-search mb-3">
@@ -130,14 +138,6 @@
                            </li>
                         </ul>
                      </div>
-                  </div>
-               </div>
-            </form>
-         </div>
-         <div class="col-md-3 mb-4">
-            <form action="">
-               <div class="custom-selection">
-                  <div class="dropdown dropdwon-3">
 
                      <button class="fw-500 fz14 d-flex align-items-center justify-content-between" type="button"
                         data-toggle="dropdown">
@@ -145,13 +145,26 @@
 
                         <p class="fz14 blur">All Ad Groups</p>
                         <div class="d-flex align-items-center">
-                           <span class="number-notification mr-2">3</span>
-                           <span class="pl-2">
-                              <img src="assets/images/icons/arrow-down.svg" alt="Icon">
-                           </span>
+                           <span class="number-notification mr-4">99</span>
+                           <div>
+                              <span class="dropdown-icon down">
+                                 <img src="assets/images/icons/arrow-down.svg" alt="Icon">
+                              </span>
+                              <span class="dropdown-icon up">
+                                 <img src="assets/images/icons/arrow-down.svg" alt="Icon">
+                              </span>
+                           </div>
                         </div>
                      </button>
 
+                  </div>
+               </div>
+            </form>
+         </div>
+         <div class="col-md-3 mb-4">
+            <form action="">
+               <div class="custom-selection">
+                  <div class="dropdown dropdwon-3">
                      <div class="dropdown-menu">
                         <div class="dropdown-search mb-3">
                            <input type="search" id="dropdwonSearch" placeholder="Search" />
@@ -193,14 +206,7 @@
                            </li>
                         </ul>
                      </div>
-                  </div>
-               </div>
-            </form>
-         </div>
-         <div class="col-md-3 mb-4">
-            <form action="">
-               <div class="custom-selection">
-                  <div class="dropdown dropdwon-3">
+
 
                      <button class="fw-500 fz14 d-flex align-items-center justify-content-between" type="button"
                         data-toggle="dropdown">
@@ -208,54 +214,19 @@
 
                         <p class="fz14 blur">All Ad Banners</p>
                         <div class="d-flex align-items-center">
-                           <span class="number-notification mr-2">3</span>
-                           <span class="pl-2">
-                              <img src="assets/images/icons/arrow-down.svg" alt="Icon">
-                           </span>
+                           <span class="number-notification mr-4">3</span>
+                           <div>
+                              <span class="dropdown-icon down">
+                                 <img src="assets/images/icons/arrow-down.svg" alt="Icon">
+                              </span>
+                              <span class="dropdown-icon up">
+                                 <img src="assets/images/icons/arrow-down.svg" alt="Icon">
+                              </span>
+                           </div>
                         </div>
                      </button>
 
-                     <div class="dropdown-menu">
-                        <div class="dropdown-search mb-3">
-                           <input type="search" id="dropdwonSearch" placeholder="Search" />
-                           <label for="dropdwonSearch">
-                              <button type="submit" class="bg-transparent border-0">
-                                 <img src="assets/images/icons/search.svg" alt="Icon">
-                              </button>
-                           </label>
-                        </div>
 
-                        <ul>
-                           <li>
-                              <label class="checkbox-wrapper">
-                                 <input type="checkbox">
-                                 <span class="checkmark checkmark-green"></span>
-                                 <span class="pl-4">Select All 3</span>
-                              </label>
-                           </li>
-                           <li>
-                              <label class="checkbox-wrapper">
-                                 <input type="checkbox">
-                                 <span class="checkmark checkmark-green"></span>
-                                 <span class="pl-4">Add Group for Dhaka</span>
-                              </label>
-                           </li>
-                           <li>
-                              <label class="checkbox-wrapper">
-                                 <input type="checkbox">
-                                 <span class="checkmark checkmark-green"></span>
-                                 <span class="pl-4">Add Group for Chittagong</span>
-                              </label>
-                           </li>
-                           <li>
-                              <label class="checkbox-wrapper">
-                                 <input type="checkbox">
-                                 <span class="checkmark checkmark-green"></span>
-                                 <span class="pl-4">Add Group for Sylhet</span>
-                              </label>
-                           </li>
-                        </ul>
-                     </div>
                   </div>
                </div>
             </form>
@@ -264,69 +235,56 @@
             <form action="">
                <div class="custom-selection">
                   <div class="dropdown dropdwon-3">
-
-                     <button class="fw-500 fz14 d-flex align-items-center justify-content-between" type="button"
-                        data-toggle="dropdown">
-                        <p class="label-text">Select Date</p>
-
-                        <p class="fz14 blur">18 June 21 - 29 June 21</p>
-                        <div class="d-flex align-items-center">
-                           <span class="number-notification mr-2">3</span>
-                           <span class="pl-2">
-                              <img src="assets/images/icons/arrow-down.svg" alt="Icon">
+                     <fieldset class="multi-date-range">
+                        <label for="multiDateRange">
+                           <span class="daterange-label-text">Select Date</span>
+                           <span class="label-img">
+                              <svg width="18" height="21" class="daterange-svg-icon" viewBox="0 0 18 21" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M5.30769 0.5C5.69004 0.5 6 0.812359 6 1.19767V3.98837C6 4.37369 5.69004 4.68605 5.30769 4.68605C4.92534 4.68605 4.61538 4.37369 4.61538 3.98837V1.19767C4.61538 0.812359 4.92534 0.5 5.30769 0.5Z"
+                                    fill="#475364" />
+                                 <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M12.6923 0.5C13.0747 0.5 13.3846 0.812359 13.3846 1.19767V3.98837C13.3846 4.37369 13.0747 4.68605 12.6923 4.68605C12.31 4.68605 12 4.37369 12 3.98837V1.19767C12 0.812359 12.31 0.5 12.6923 0.5Z"
+                                    fill="#475364" />
+                                 <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M0.461538 7.79302C0.461538 7.40771 0.771495 7.09535 1.15385 7.09535H16.8462C17.2285 7.09535 17.5385 7.40771 17.5385 7.79302C17.5385 8.17834 17.2285 8.49069 16.8462 8.49069H1.15385C0.771495 8.49069 0.461538 8.17834 0.461538 7.79302Z"
+                                    fill="#475364" />
+                                 <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M2.29578 4.34683C1.70434 4.9887 1.38462 5.95579 1.38462 7.24419V15.1512C1.38462 16.4396 1.70434 17.4066 2.29578 18.0485C2.8786 18.681 3.82426 19.1047 5.30769 19.1047H12.6923C14.1757 19.1047 15.1214 18.681 15.7042 18.0485C16.2957 17.4066 16.6154 16.4396 16.6154 15.1512V7.24419C16.6154 5.95579 16.2957 4.9887 15.7042 4.34683C15.1214 3.71431 14.1757 3.2907 12.6923 3.2907H5.30769C3.82426 3.2907 2.8786 3.71431 2.29578 4.34683ZM1.28114 3.39736C2.19833 2.40197 3.56035 1.89535 5.30769 1.89535H12.6923C14.4396 1.89535 15.8017 2.40197 16.7189 3.39736C17.6274 4.38339 18 5.74189 18 7.24419V15.1512C18 16.6535 17.6274 18.012 16.7189 18.998C15.8017 19.9934 14.4396 20.5 12.6923 20.5H5.30769C3.56035 20.5 2.19833 19.9934 1.28114 18.998C0.372585 18.012 0 16.6535 0 15.1512V7.24419C0 5.74189 0.372585 4.38339 1.28114 3.39736Z"
+                                    fill="#475364" />
+                                 <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M8.07275 12.0814C8.07275 11.5677 8.48603 11.1512 8.99583 11.1512H9.00412C9.51392 11.1512 9.9272 11.5677 9.9272 12.0814C9.9272 12.5952 9.51392 13.0116 9.00412 13.0116H8.99583C8.48603 13.0116 8.07275 12.5952 8.07275 12.0814Z"
+                                    fill="#475364" />
+                                 <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M4.65629 12.0814C4.65629 11.5677 5.06956 11.1512 5.57936 11.1512H5.58766C6.09746 11.1512 6.51073 11.5677 6.51073 12.0814C6.51073 12.5952 6.09746 13.0116 5.58766 13.0116H5.57936C5.06956 13.0116 4.65629 12.5952 4.65629 12.0814Z"
+                                    fill="#475364" />
+                                 <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M4.65629 14.8721C4.65629 14.3584 5.06956 13.9419 5.57936 13.9419H5.58766C6.09746 13.9419 6.51073 14.3584 6.51073 14.8721C6.51073 15.3859 6.09746 15.8023 5.58766 15.8023H5.57936C5.06956 15.8023 4.65629 15.3859 4.65629 14.8721Z"
+                                    fill="#475364" />
+                              </svg>
                            </span>
-                        </div>
-                     </button>
-
-                     <div class="dropdown-menu">
-                        <div class="dropdown-search mb-3">
-                           <input type="search" id="dropdwonSearch" placeholder="Search" />
-                           <label for="dropdwonSearch">
-                              <button type="submit" class="bg-transparent border-0">
-                                 <img src="assets/images/icons/search.svg" alt="Icon">
-                              </button>
-                           </label>
-                        </div>
-
-                        <ul>
-                           <li>
-                              <label class="checkbox-wrapper">
-                                 <input type="checkbox">
-                                 <span class="checkmark checkmark-green"></span>
-                                 <span class="pl-4">Select All 3</span>
-                              </label>
-                           </li>
-                           <li>
-                              <label class="checkbox-wrapper">
-                                 <input type="checkbox">
-                                 <span class="checkmark checkmark-green"></span>
-                                 <span class="pl-4">Add Group for Dhaka</span>
-                              </label>
-                           </li>
-                           <li>
-                              <label class="checkbox-wrapper">
-                                 <input type="checkbox">
-                                 <span class="checkmark checkmark-green"></span>
-                                 <span class="pl-4">Add Group for Chittagong</span>
-                              </label>
-                           </li>
-                           <li>
-                              <label class="checkbox-wrapper">
-                                 <input type="checkbox">
-                                 <span class="checkmark checkmark-green"></span>
-                                 <span class="pl-4">Add Group for Sylhet</span>
-                              </label>
-                           </li>
-                        </ul>
-                     </div>
+                        </label>
+                        <input type="text" class="date-range" id="multiDateRange" name="daterange" value="" />
+                     </fieldset>
                   </div>
+               </div>
+            </form>
+         </div>
+         <div class="col-md-12">
+            <form action="">
+               <div class="d-flex justify-content-end mb-3">
+                  <button class="ra-btn blue-color-2 ra-btn-6x12 bg-transparent min-hieght-32 fz14 fw-500"
+                     type="button">Clear All</button>
+                  <button class="ra-btn ra-btn-blue-bg ra-btn-6x12 min-hieght-32 fz14 fw-500" type="submit">Apply
+                     Filters</button>
                </div>
             </form>
          </div>
       </div>
    </div>
 
-   <div class="card-wrapper mb-18">
+   <div class="card-wrapper">
       <div class="result-card">
          <div class="result-icon">
             <img src="assets/images/icons/total-reach.svg" alt="icon">
@@ -372,6 +330,9 @@
             <span class="fz18 fw-700">BDT 7,990</span>
          </div>
       </div>
+   </div>
+
+   <div class="card-wrapper mb-18">
       <div class="result-card">
          <div class="result-icon">
             <img src="assets/images/icons/ctr.svg" alt="icon">

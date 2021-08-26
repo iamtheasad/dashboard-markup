@@ -1,18 +1,23 @@
 /*--------------------------------------------------------------
 #2.1 Theme Colors
 --------------------------------------------------------------*/
-.gray-color{
+.gray-color {
     color: $darkGray;
 }
 
-.green-color{
-    color: #72BF44;
-}
-.red-color{
-    color: #ED1C24;
+.green-color {
+    color: $greenDark;
 }
 
-.black-color{
+.red-color {
+    color: $chartRedColor;
+}
+
+.white-color {
+    color: $white;
+}
+
+.black-color {
     color: $black;
 }
 
@@ -20,11 +25,11 @@
     color: $primaryColor;
 }
 
-.ra-data-table-bg{
+.ra-data-table-bg {
     background: $primaryBg;
 }
 
-.data-table-search-bg{
+.data-table-search-bg {
     background-color: $dataTableSearchBgColor;
 }
 
@@ -40,7 +45,7 @@
     color: $paymentInputColor3 !important;
 }
 
-.table-row-bg-color{
+.table-row-bg-color {
     background-color: $tableRowColor;
 }
 
@@ -51,8 +56,13 @@
 .gray-light-bg-color {
     background-color: $grayLightBgColor;
 }
+
 .blue-color {
     color: $darkBlueColor;
+}
+
+.blue-color-2 {
+    color: $darkBlueColor2 !important;
 }
 
 .darkPrimaryColor {
@@ -62,6 +72,7 @@
 .purple-color {
     color: $purple;
 }
+
 .purple-light-color {
     color: $purpleLight;
 }

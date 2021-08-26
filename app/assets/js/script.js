@@ -206,7 +206,7 @@
         }
     }
 
-    function filePreview () {
+    function filePreview() {
         var wrapper = $('.img-video');
         if (wrapper.length) {
             var fileInput = wrapper.find('input.file-input');
@@ -229,21 +229,39 @@
 
     }
 
-    function dropdown () {
+    function dropdown() {
         let wrapper = $('.dropdown.dropdwon-3');
-        if(wrapper.length){
+        if (wrapper.length) {
             wrapper.find('[data-toggle="dropdown"]').on('click', function () {
                 $(this).siblings('.dropdown-menu').toggleClass('show');
-            })    
-            $(document).click(function(e) {
+            })
+            $(document).click(function (e) {
                 wrapper
-                  .not($('.dropdown').has($(e.target)))
-                  .children('.dropdown-menu')
-                  .removeClass('show');
+                    .not($('.dropdown').has($(e.target)))
+                    .children('.dropdown-menu')
+                    .removeClass('show');
             });
         }
     }
 
+    function multiDateRangePicker() {
+        if(window.daterangepicker){
+            $('.date-range').daterangepicker({
+                opens: 'left',
+                "autoApply": true,
+            }, function (start, end, label) {
+                console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+            });
+
+            $('.date-range').on('show.daterangepicker', function(ev, picker) {
+                $(".multi-date-range").addClass("focus")
+            });
+
+            $('.date-range').on('hide.daterangepicker', function(ev, picker) {
+                $(".multi-date-range").removeClass("focus")
+            });
+        } 
+    }
 
     /*==========================================================================
         WHEN DOCUMENT LOADING
@@ -255,6 +273,7 @@
         getFileName();
         filePreview();
         dropdown();
+        multiDateRangePicker();
 
         dataTable2('#myCampaignDatatTable');
         dataTable2('#ongoingDataTable');
