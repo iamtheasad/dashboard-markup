@@ -239,7 +239,6 @@ input[type="text"] {
 
 .ra-select {
   padding: 10px;
-  /* Replacing Default Arrow */
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -257,33 +256,6 @@ input[type="text"] {
   }
 }
 
-// .ra-select {
-//   &.ra-select-2 {
-//     padding: 10px;
-//     appearance: none;
-//     -webkit-appearance: none;
-//     -moz-appearance: none;
-//     background-image: url('data:image/svg+xml;utf8,<svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.77552 0.232761C7.63333 0.0836789 7.44099 0 7.2405 0C7.04001 0 6.84766 0.0836789 6.70547 0.232761L3.98103 3.06631L1.29453 0.232761C1.15234 0.0836789 0.959994 0 0.759504 0C0.559014 0 0.36667 0.0836789 0.224481 0.232761C0.15335 0.307172 0.0968926 0.395701 0.0583643 0.493242C0.0198361 0.590782 0 0.695404 0 0.801071C0 0.906738 0.0198361 1.01136 0.0583643 1.1089C0.0968926 1.20644 0.15335 1.29497 0.224481 1.36938L3.44221 4.76323C3.51276 4.83826 3.59669 4.8978 3.68917 4.93844C3.78165 4.97908 3.88084 5 3.98103 5C4.08121 5 4.1804 4.97908 4.27288 4.93844C4.36536 4.8978 4.4493 4.83826 4.51985 4.76323L7.77552 1.36938C7.84665 1.29497 7.90311 1.20644 7.94163 1.1089C7.98016 1.01136 8 0.906738 8 0.801071C8 0.695404 7.98016 0.590782 7.94163 0.493242C7.90311 0.395701 7.84665 0.307172 7.77552 0.232761Z" fill="%23373773"/></svg>');
-//     background-repeat: no-repeat;
-//     background-position-y: 50%;
-//     background-position-x: 95%;
-//     color: $primaryColor;
-//     min-height: 52px !important;
-//     border-radius: 3px;
-//     background-color: $white;
-//     cursor: pointer;
-//     border: 1px solid $purpleLight3;
-
-//     @media (max-width: 992px) {
-//       min-height: 40px;
-//     }
-
-//     option {
-//       color: $primaryColor;
-//     }
-//   }
-// }
-
 .selection-filter {
   label {
     color: $purpleLight !important;
@@ -300,12 +272,6 @@ input[type="text"] {
   outline: none;
   border: 1px solid $borderColor;
 }
-
-// .ra-select.ra-select-2:focus {
-//   outline: none;
-//   border: 1px solid $purpleLight;
-//   color: rgba(71, 83, 100, .6);
-// }
 
 .ra-select option {
   background-color: $white;
@@ -394,10 +360,6 @@ input[type="text"] {
   border-radius: 8px;
 }
 
-.influRadioBtn {
-  border: 2px solid red;
-}
-
 .campagnDetailsInput {
   width: 75%;
 
@@ -481,7 +443,6 @@ input[type="text"] {
     }
   }
 }
-
 
 .rs-form {
   &.ra-form {
@@ -620,10 +581,13 @@ input[type="text"] {
   }
 }
 
+/***********************************
+// Client Dashboard Dropdown
+**************************************/
 .dropdown {
   &.dropdwon-3 {
     button {
-      min-height: 52px;
+      height: 52px;
       background: $white;
       padding: 8px 12px;
       border-radius: 3px;
@@ -631,6 +595,7 @@ input[type="text"] {
       border: 1px solid $purpleLight3;
       width: 100%;
       position: relative;
+      transition: .2s;
     }
 
     .dropdown-menu {
@@ -660,6 +625,95 @@ input[type="text"] {
         }
       }
     }
+
+    .disabled {
+      .label-text {
+        color: rgba($purpleLight, 0.6);
+      }
+
+      .disable-title {
+        color: rgba($primaryColor, 0.6);
+      }
+
+      .disable-img {
+        opacity: .4;
+      }
+
+      .dropdown-icon {
+        position: absolute;
+        left: 94%;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    .dropdown-icon {
+      display: flex;
+      position: absolute;
+    }
+
+    .dropdown-icon.up {
+      transform: rotate(180deg) translateY(-50%);
+      top: 21%;
+      left: 94%;
+      display: none;
+    }
+
+    .dropdown-icon.down {
+      top: 53%;
+      left: 94%;
+      transform: translateY(-50%);
+    }
+
+    button:focus {
+      border: 1px solid $greenDark;
+    }
+
+    button.disabled:focus {
+      border: 1px solid $purpleLight3;
+    }
+
+    button:focus .label-text {
+      color: $greenDark;
+    }
+
+    button:focus .dropdown-icon.down {
+      display: none;
+    }
+
+    button:focus .dropdown-icon.up {
+      display: block;
+    }
+
+    button.disabled:focus .label-text {
+      color: rgba($purpleLight, 0.6);
+    }
+
+    button:focus .blur {
+      color: rgba($primaryColor, 0.6);
+      transition: .2s;
+    }
+
+    .dropdown-menu.show~button {
+      border: 1px solid $greenDark;
+    }
+
+    .dropdown-menu.show~button.disabled {
+      border: 1px solid $purpleLight3;
+    }
+
+    .dropdown-menu.show~button .label-text {
+      color: $greenDark;
+    }
+
+    .dropdown-menu.show~button.disabled .label-text {
+      color: rgba($purpleLight, 0.6);
+    }
+
+    .dropdown-menu.show~button:focus .blur {
+      color: rgba($primaryColor, 0.6);
+      transition: .2s;
+    }
   }
 }
 
@@ -670,12 +724,13 @@ input[type="text"] {
   color: $purpleLight;
   padding: 0px 5px;
   left: 11px;
-  font-size: 12px;
+  font-size: rem(12);
   font-weight: 500;
   height: 20px;
   display: flex;
   align-items: center;
   border: 0px;
+  transition: .2s;
 }
 
 .number-notification {
@@ -693,6 +748,78 @@ input[type="text"] {
   padding: 10px;
 }
 
+.multi-date-range {
+  position: relative;
+
+  .date-range {
+    width: 98%;
+    height: 52px;
+    background: $white;
+    padding: 8px 12px;
+    border-radius: 3px;
+    color: $primaryColor;
+    border: 1px solid $purpleLight3;
+    font-size: rem(14) !important;
+    font-weight: 500;
+    transition: .2s;
+  }
+
+  .daterange-label-text {
+    position: absolute;
+    top: -11px;
+    left: 11px;
+    z-index: 1;
+    background: $white;
+    color: $purpleLight;
+    padding: 0px 5px;
+    font-size: rem(12);
+    font-weight: 500;
+    transition: .2s;
+  }
+
+  .label-img {
+    position: absolute;
+    left: 91%;
+    top: 55%;
+    transform: translateY(-50%);
+
+    .daterange-svg-icon [fill] {
+      transition: .2s;
+    }
+  }
+}
+
+.multi-date-range {
+  &.focus {
+    .date-range {
+      color: rgba($purpleLight, 0.6);
+      border: 1px solid $greenDark;
+    }
+
+    .daterange-label-text {
+      color: $greenDark;
+    }
+
+    .label-img {
+      .daterange-svg-icon [fill] {
+        fill: $greenDark;
+      }
+    }
+  }
+}
+
+.checkbox-wrapper input~.checkmark.checkmark-green,
+.checkbox-green {
+  background-color: $purpleLight3;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.checkbox-wrapper input:checked~.checkmark.checkmark-green {
+  background-color: $greenDark;
+  border-color: transparent;
+}
 
 .dropdown-search {
   position: relative;
@@ -713,6 +840,8 @@ input[type="text"] {
     width: 100%;
     padding: 5px 45px 5px 10px;
     position: relative;
+    transition: .2s;
+    border-radius: 4px;
 
     &:focus {
       border: 1px solid $greenDark;
@@ -720,31 +849,106 @@ input[type="text"] {
   }
 }
 
-.dropdown {
-  &.dropdwon-3 {
-    button:focus {
-      border: 1px solid $greenDark;
-    }
-  }
+
+/***********************************
+// Custom Daterange Picker
+**************************************/
+.daterangepicker .calendar-table .prev span {
+  background-image: url("../images/icons/arrow-short-left.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 16px;
+  transform: rotate(0deg);
 }
 
-.dropdown.dropdwon-3 button:focus .label-text {
-  color: $greenDark;
+.daterangepicker .calendar-table .next span {
+  background-image: url("../images/icons/arrow-short-left.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 16px;
+  transform: rotate(180deg);
 }
 
-.dropdown.dropdwon-3 button:focus .blur {
-  opacity: .6;
+.daterangepicker .calendar-table .next span,
+.daterangepicker .calendar-table .prev span {
+  color: $white;
+  border: unset;
+  padding: 3px;
+  height: 12px;
+  width: 18px;
 }
 
-.checkbox-wrapper input~.checkmark.checkmark-green,
-.checkbox-green {
-  background-color: $purpleLight3;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+.prev.available,
+.next.available {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.checkbox-wrapper input:checked~.checkmark.checkmark-green {
-  background-color: $greenDark;
+.daterangepicker td.available,
+.daterangepicker th.available {
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.daterangepicker td.available:hover,
+.daterangepicker th.available:hover {
+  background-color: rgba($orangDark, .10);
+  color: $purpleLight;
+}
+
+.month {
+  color: $purple;
+  font-size: rem(20);
+  font-weight: 700;
+}
+
+.daterangepicker .calendar-table th {
+  color: $purple;
+  font-size: rem(14);
+  font-weight: 700;
+}
+
+.daterangepicker .calendar-table td {
+  color: $purpleLight;
+  font-size: rem(14);
+  font-weight: 500;
+}
+
+.daterangepicker .calendar-table tr {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.daterangepicker td.active,
+.daterangepicker td.active:hover {
+  background-color: $orangDark !important;
   border-color: transparent;
+  color: $white !important;
+  border-radius: 50% !important;
+  height: 32px;
+  width: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.daterangepicker td.start-date {
+  border-radius: 0px;
+  font-weight: 600;
+}
+
+.daterangepicker td.in-range {
+  background-color: $purple;
+  border-color: transparent;
+  color: $orangDark;
+  border-radius: 50%;
+  font-weight: 600;
 }
