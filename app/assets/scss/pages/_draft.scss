@@ -787,6 +787,7 @@ div[slider]>input[type=range]::-ms-tooltip {
    display: flex;
    flex-direction: column;
    justify-content: space-between;
+   background-color: $primaryBg;
 
    .chat-top {
       max-height: 71vh;

@@ -667,6 +667,74 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Filter Bar -->
+                <div class="filter-wrapper filter-wrapper-custom ra-data-table-bg">
+                    <form action="" class="rs-form create-campaign-form custom-form mb-md-0 mb-3">
+                        <div class="create-campaign-wrapper">
+                            <div class="fz18 fw-700 purple-color mr-2">Campaign Metrics</div>
+                            <div>
+                                <button type="submit" class="search-icon border-0 bg-transparent pl-md-3 pl-0 d-flex align-items-center" for="campaignSearch">
+                                    <!-- <span class="mdi mdi-magnify search-img black-color fw-600 search-custom d-none"></span> -->
+                                    <span class="search-img search-custom">
+                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.8034 12.8176L11.208 10.2416C12.2154 8.98472 12.7033 7.38934 12.5713 5.78354C12.4393 4.17774 11.6974 2.68358 10.4983 1.60828C9.29906 0.532985 7.7337 -0.0417126 6.12404 0.00235967C4.51437 0.046432 2.98276 0.705924 1.84413 1.84523C0.705504 2.98454 0.0464044 4.51706 0.00235827 6.12768C-0.0416878 7.7383 0.532668 9.30459 1.60733 10.5045C2.68198 11.7044 4.17526 12.4467 5.7801 12.5788C7.38495 12.7109 8.97938 12.2227 10.2355 11.2146L12.81 13.7906C12.8751 13.8562 12.9524 13.9083 13.0377 13.9439C13.1229 13.9794 13.2144 13.9977 13.3067 13.9977C13.3991 13.9977 13.4905 13.9794 13.5758 13.9439C13.661 13.9083 13.7384 13.8562 13.8034 13.7906C13.9295 13.6601 14 13.4857 14 13.3041C14 13.1226 13.9295 12.9482 13.8034 12.8176ZM6.31088 11.2146C5.34233 11.2146 4.39552 10.9273 3.5902 10.3888C2.78488 9.85041 2.15721 9.08514 1.78656 8.18978C1.41591 7.29442 1.31893 6.3092 1.50789 5.35869C1.69684 4.40818 2.16324 3.53508 2.84811 2.84981C3.53298 2.16453 4.40556 1.69785 5.3555 1.50878C6.30545 1.31971 7.29009 1.41675 8.18491 1.78762C9.07974 2.15849 9.84456 2.78654 10.3827 3.59234C10.9208 4.39814 11.208 5.3455 11.208 6.31463C11.208 7.61419 10.692 8.86053 9.77364 9.77945C8.85526 10.6984 7.60967 11.2146 6.31088 11.2146Z" fill="#383874"/>
+                        </svg>                        
+                  </span>
+                                </button>
+
+                                <div class="dropdown-search border-0 w-100  d-none">
+                                    <input type="search" placeholder="Search" />
+                                    <label for="dropdwonSearch">
+                                        <button type="submit" class="bg-transparent border-0">
+                                            <img src="assets/images/icons/search-purple.svg" alt="Icon">
+                                        </button>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="search-right create-campaign-filter d-flex align-items-center justify-content-center">
+                        <div class="mr-1 mr-md-3">
+                            <div class="serach-number border-0 fw-500 d-flex align-items-center min-hieght-36">
+                                <p class="fz14 mr-2"><span>1</span>-<span>10</span> of <span>11</span></p>
+                                <button class="filter-number"><span class="mdi mdi-chevron-left"></span></button>
+                                <button class="filter-number active"><span class="mdi mdi-chevron-right active"></span></button>
+                            </div>
+                        </div>
+                        <div class="ra-filter mr-1 mr-md-3">
+                            <div class="dropdown search-common">
+                                <button class="search-filter border-0 radius-5 d-flex gray-light-bg-color fw-500 d-flex align-items-center min-hieght-36" type="button" id="serach-filter" data-toggle="dropdown" aria-haspopup="true">
+                                    <span class="mdi mdi-filter-outline fz20 pr-2"></span>
+                                    <p class="fz14">Filter By</p>
+                                    <span class="mdi mdi-chevron-up fz20 pl-2"></span>
+                                </button>
+                                <div class="dropdown-menu search-dropdown" aria-labelledby="serach-filter">
+                                    <a class="dropdown-item" href="#">Campaign Name</a>
+                                    <a class="dropdown-item" href="#">Type</a>
+                                    <a class="dropdown-item" href="#">Budget</a>
+                                    <a class="dropdown-item" href="#">Category</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ra-filter">
+                            <div class="dropdown search-common">
+                                <button class="search-filter border-0 radius-5 d-flex gray-light-bg-color fw-500 d-flex align-items-center min-hieght-36" type="button" id="serach-filter" data-toggle="dropdown" aria-haspopup="true">
+                                    <span class="mdi mdi-sort-descending fz20 pr-2"></span>
+                                    <p class="fz14">Sort By</p>
+                                    <span class="mdi mdi-chevron-up fz20 pl-2"></span>
+                                </button>
+                                <div class="dropdown-menu search-dropdown" aria-labelledby="serach-filter">
+                                    <a class="dropdown-item" href="#">Campaign Name</a>
+                                    <a class="dropdown-item" href="#">Type</a>
+                                    <a class="dropdown-item" href="#">Budget</a>
+                                    <a class="dropdown-item" href="#">Category</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
         </main>
