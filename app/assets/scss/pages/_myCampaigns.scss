@@ -80,16 +80,6 @@
    background-color: #484848;
 }
 
-.filter-wrapper {
-   display: flex;
-   justify-content: space-between;
-
-   @media (max-width: 767px) {
-      flex-direction: column;
-      ;
-   }
-}
-
 .custom-form {
    width: 35%;
 
