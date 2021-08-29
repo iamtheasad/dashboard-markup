@@ -189,24 +189,6 @@
     padding: 4px 12px;
 }
 
-.filter-btn {
-    height: 36px;
-    background: $purpleLight2;
-    padding: 8px 12px;
-    border-radius: 4px;
-    color: $primaryColor;
-    border: 1px solid transparent;
-
-    &.active {
-        border: 1px solid $greenDark;
-    }
-
-    &.custom {
-        background: $greenDark;
-        color: $white
-    }
-}
-
 .dropdown-menu {
     &.filter-dropdown {
         padding: 0px;
