@@ -93,15 +93,18 @@
       align-items: center;
       background: $white;
       padding: 12px 16px;
-      margin-bottom: 4px;
+      margin-bottom: 2px;
       width: 20%;
+      border: 1px solid $purpleLight3;
+      border-left-width: 0px;
 
       @media screen and(max-width: 767px) {
          width: 25%;
+         border: 1px solid $purpleLight3;
       }
 
       @media screen and(max-width: 575px) {
-         width: 50%;
+         width: 33%;
       }
 
       .result-icon {
@@ -120,12 +123,10 @@
       }
    }
 
-   .result-card:not(:last-child) {
-      border-right: 1px solid $purpleLight3;
-   }
-
    .result-card:first-child {
       border-radius: 4px 0px 0px 4px;
+      border: 1px solid $purpleLight3;
+      border-left-width: 1px;
    }
 
    .result-card:last-child {

@@ -208,7 +208,6 @@
       max-width: 555px;
       width: 100%;
       margin: 20px;
-      overflow: hidden;
    }
 
    .draft-body .page.page-4,
@@ -604,7 +603,7 @@ div[slider]>input[type=range]::-ms-tooltip {
    z-index: 3;
    background-color: $darkPrimaryColor;
    color: $white;
-   width: 28px;
+   width:75px;
    height: 28px;
    border-radius: 28px;
    -webkit-border-radius: 28px;

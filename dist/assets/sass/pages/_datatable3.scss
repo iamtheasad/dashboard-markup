@@ -1,0 +1,10 @@
+.data-table-3 thead th, .data-table-3 tbody td {
+   border: 1px solid red !important;
+   // border-width: 0px !important;
+   // border-left-width: 0px !important;
+
+   table.table-bordered.dataTable th, table.table-bordered.dataTable td {
+      border-left-width: 0px !important;
+   }
+}
+

@@ -142,6 +142,17 @@
         }
     }
 
+    /* Datatable 3 */
+    function dataTable3(element) {
+        var element = $(element);
+        if (element.length) {
+            $(element).DataTable({
+                "paging": false,
+                "searching": false,
+            });
+        }
+    }
+
     function getFileName() {
         $(document).on('change', '.file-input', function (e) {
             var fileName = e.target.files[0].name;
@@ -245,7 +256,7 @@
     }
 
     function multiDateRangePicker() {
-        if(window.daterangepicker){
+        if (window.daterangepicker) {
             $('.date-range').daterangepicker({
                 opens: 'left',
                 "autoApply": true,
@@ -253,14 +264,14 @@
                 console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
             });
 
-            $('.date-range').on('show.daterangepicker', function(ev, picker) {
+            $('.date-range').on('show.daterangepicker', function (ev, picker) {
                 $(".multi-date-range").addClass("focus")
             });
 
-            $('.date-range').on('hide.daterangepicker', function(ev, picker) {
+            $('.date-range').on('hide.daterangepicker', function (ev, picker) {
                 $(".multi-date-range").removeClass("focus")
             });
-        } 
+        }
     }
 
     /*==========================================================================
@@ -285,6 +296,7 @@
         dataTable2('#myDealsCancelled');
         dataTable2('#createCampaignDataTable');
         dataTable2('#draftTab4ataTable');
+        dataTable2('#clientDashboardOverviewDataTable');
 
         dataTable('#propertyDataTable');
         dataTable('#propertyDetailsDataTable');
