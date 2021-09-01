@@ -1,10 +1,57 @@
-.data-table-3 thead th, .data-table-3 tbody td {
-   border: 1px solid red !important;
-   // border-width: 0px !important;
-   // border-left-width: 0px !important;
+.data-table-3 {
+   thead th:not(:last-child) {
+      border-right: 1px solid #FAFAFC !important;
+   }
 
-   table.table-bordered.dataTable th, table.table-bordered.dataTable td {
-      border-left-width: 0px !important;
+   thead {
+      background: #FAFAFC;
+   }
+
+   table.dataTable {
+      border-collapse: collapse !important;
+      margin-top: 0px !important;
+   }
+
+   .table-bordered,
+   .table-bordered td,
+   .table-bordered th {
+      border: 1px solid #E6E9F5 !important;
+   }
+
+   table.table-bordered.dataTable {
+      border-right-width: 0 !important;
+      border-left-width: 0 !important;
+      border-top-width: 0 !important;
+      border-bottom-width: 0 !important;
+   }
+
+   .table-striped tbody tr:nth-of-type(odd) {
+      background-color: $white;
+   }
+
+   .table-striped tbody tr:nth-of-type(even) {
+      background-color: #FAFAFC;
+   }
+
+   .table-hover tbody tr:hover {
+      background-color: #FAFAFC;
+   }
+
+   table.dataTable>thead .sorting:before,
+   table.dataTable>thead .sorting_asc:before,
+   table.dataTable>thead .sorting_desc:before {
+      display: none;
+   }
+
+   table.dataTable>thead .sorting:after,
+   table.dataTable>thead .sorting_asc:after,
+   table.dataTable>thead .sorting_desc:after {
+      top: 50%;
+      background-color: unset;
+      background-image: url('data:image/svg+xml;utf8,<svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.60957 5.01196C3.80973 5.26216 4.19027 5.26216 4.39043 5.01196L7.35012 1.31235C7.61203 0.984966 7.37894 0.5 6.95969 0.5L1.04031 0.5C0.621059 0.5 0.387972 0.984966 0.649878 1.31235L3.60957 5.01196Z" fill="%23383874"/></svg>');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      clip-path: unset;
    }
 }
-
