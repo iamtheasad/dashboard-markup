@@ -335,6 +335,14 @@ $(document).ajaxSuccess(function() {
         }
     }
 
+    function animateSearch(){
+        if($(".animate-search").length){
+            $(document).on('click', ".hidden-search-icon", function() {
+                $(this).siblings('.hidden-search').toggleClass('show')
+            })
+        }
+    }
+
     /*==========================================================================
         WHEN DOCUMENT LOADING
     ==========================================================================*/
@@ -347,6 +355,7 @@ $(document).ajaxSuccess(function() {
         dropdown();
         multiDateRangePicker();
         rangeSlider();
+        animateSearch();
 
         dataTable3('#clientDashboardOverviewDataTable');
 
