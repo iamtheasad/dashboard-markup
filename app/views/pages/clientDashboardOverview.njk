@@ -525,11 +525,10 @@
       <div class="filter-wrapper campaign-metrics flex-column mb-0 bg-white p-16x20">
          <div class="d-flex align-items-center justify-content-between">
             <form action="" class="rs-form create-campaign-form custom-form mb-md-0 mb-3">
-               <div class="create-campaign-wrapper">
+               <div class="create-campaign-wrapper w-100">
                   <div class="fz18 fw-700 purple-color mr-2">Campaign Metrics</div>
-                  <div>
-                     <button class="search-icon border-0 bg-transparent pl-md-3 pl-0 d-flex align-items-center"
-                        for="campaignSearch">
+                  <div class="animate-search w-100">
+                     <button type="button" class="hidden-search-icon search-icon border-0 bg-transparent pl-md-3 pl-0 d-flex align-items-center">
                         <span class="search-img search-custom mb-2">
                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
                               xmlns="http://www.w3.org/2000/svg">
@@ -540,7 +539,7 @@
                         </span>
                      </button>
 
-                     <div class="dropdown-search border-0 w-100 d-none">
+                     <div class="dropdown-search hidden-search">
                         <input type="search" placeholder="Search" />
                         <label for="dropdwonSearch">
                            <button type="submit" class="bg-transparent border-0">
