@@ -770,6 +770,31 @@ input[type="text"] {
   }
 }
 
+.dropdown-icon {
+  &.up-3 {
+    position: absolute;
+    transform: rotate(180deg) translateY(-50%);
+    top: 0%;
+    left: 84%;
+    display: none;
+  }
+
+  &.down-3 {
+    position: absolute;
+    top: 50%;
+    left: 84%;
+    transform: translateY(-50%);
+  }
+}
+
+button:focus .dropdown-icon.down-3 {
+  display: none;
+}
+
+button:focus .dropdown-icon.up-3 {
+  display: block;
+}
+
 .filter-btn {
   &.custom {
     height: 36px;
@@ -902,7 +927,7 @@ input[type="text"] {
   label {
     position: absolute;
     right: 6px;
-    top: 50%;
+    top: 44%;
     transform: translateY(-50%);
     opacity: .6;
   }

@@ -152,7 +152,13 @@
                 cursor: pointer;
 
                 &:hover {
-                    background-color: rgba($greenDark, .80);
+                    background-color: rgba($greenDark, .70);
+                }
+
+                &:hover {
+                    .topbar-dropdown-icon [fill] {
+                        fill: $white;
+                      }
                 }
 
                 &:after {
