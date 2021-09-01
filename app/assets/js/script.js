@@ -1,64 +1,67 @@
 /* ********************************** */
 /* Custom Scripts */
 /* ********************************** */
+
+function inputAnimate() {
+    if ($('.rs-form').length) {
+        // Check if has value
+        $('.rs-input').each(function () {
+            if ($(this).val()) {
+                $(this).parent(".rs-form").addClass('animate');
+            }
+        })
+
+        // Events
+        $('.rs-input').focus(function () {
+            $(this).parent(".rs-form").addClass('animate');
+        });
+
+        $(document).on('click', '.rs-label', function () {
+            $(this).siblings(".rs-input").focus();
+        });
+
+        $(".rs-input").focusout(function () {
+            if ($(this).val() == '' || $(this).val() == null) {
+                $(this).parent(".rs-form").removeClass('animate');
+            }
+            ;
+        });
+
+
+        $(document).on('change keyup paste','.rs-input', function (e) {
+            // alert($(this).val());
+            if ($(this).val() == '' || $(this).val() == null) {
+                $(this).parent(".rs-form").addClass('error');
+            } else {
+                $(this).parent(".rs-form").removeClass('error');
+                $(this).parent(".rs-form").addClass('animate');
+            }
+        });
+
+        $('.type-toggle').on('click', function () {
+            var input = $(this).siblings('.rs-input');
+            if (input.val()) {
+                if (input.attr('type') == 'text') {
+                    input.attr('type', 'password');
+                    $(this).removeClass('mdi-eye-off');
+                    $(this).addClass('mdi-eye');
+                } else {
+                    input.attr('type', 'text');
+                    $(this).removeClass('mdi-eye');
+                    $(this).addClass('mdi-eye-off');
+                }
+            }
+        })
+    }
+}
+
+
 (function ($) {
     "use strict";
 
     /*==========================================================================
         :: All Essential Functions
     ==========================================================================*/
-
-    function inputAnimate() {
-        if ($('.rs-form').length) {
-            // Check if has value
-            $('.rs-input').each(function () {
-                if ($(this).val()) {
-                    $(this).parent(".rs-form").addClass('animate');
-                }
-            })
-
-            // Events
-            $('.rs-input').focus(function () {
-                $(this).parent(".rs-form").addClass('animate');
-            });
-
-            $('.rs-label').on('click', function () {
-                $(this).siblings(".rs-input").focus();
-            });
-
-            $(".rs-input").focusout(function () {
-                if ($(this).val() == '' || $(this).val() == null) {
-                    $(this).parent(".rs-form").removeClass('animate');
-                }
-                ;
-            });
-
-            $(".rs-input").on('change keyup paste', function (e) {
-                // alert($(this).val());
-                if ($(this).val() == '' || $(this).val() == null) {
-                    $(this).parent(".rs-form").addClass('error');
-                } else {
-                    $(this).parent(".rs-form").removeClass('error');
-                    $(this).parent(".rs-form").addClass('animate');
-                }
-            });
-
-            $('.type-toggle').on('click', function () {
-                var input = $(this).siblings('.rs-input');
-                if (input.val()) {
-                    if (input.attr('type') == 'text') {
-                        input.attr('type', 'password');
-                        $(this).removeClass('mdi-eye-off');
-                        $(this).addClass('mdi-eye');
-                    } else {
-                        input.attr('type', 'text');
-                        $(this).removeClass('mdi-eye');
-                        $(this).addClass('mdi-eye-off');
-                    }
-                }
-            })
-        }
-    }
 
     function checkbox() {
         $('.rs-checkbox-input').on('change', function () {
