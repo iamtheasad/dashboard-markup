@@ -147,6 +147,7 @@
         <main class="main-wrapper">
 
             <div class="campaign-wrapper">
+
                 <!-- Top Bar -->
                 <header class="topbar topbar2 d-flex justify-content-between align-items-center">
                     <div class="breadcumb fz16 fw-700">
@@ -671,6 +672,62 @@
                         <div class="result-detials">
                             <p class="fz12 fw-500">CVR</p>
                             <span class="fz18 fw-700">0.02%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Current Update Chart -->
+                <div class="bg-white tab-top radius-4 p-20 m-20 d-flex justify-content-between">
+                    <div class="tab-left">
+                        <ul class="nav" id="chartTab" role="tablist">
+                            <li class="nav-item">
+                                <h3 class="fz18 fw-700 mr-2">Current Update</h3>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fz14 fw-500 p-6x16 active" id="update-tab" data-toggle="pill" href="#today" role="tab" aria-controls="today" aria-selected="true">Today</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fz14 fw-500 p-6x16" id="yesterday-tab" data-toggle="pill" href="#yesterday" role="tab" aria-controls="yesterday" aria-selected="false">Yesterday</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fz14 fw-500 p-6x16" id="days-tab" data-toggle="pill" href="#days" role="tab" aria-controls="days" aria-selected="false">Last 7 days</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fz14 fw-500 p-6x16" id="lifetime-tab" data-toggle="pill" href="#lifetime" role="tab" aria-controls="lifetime" aria-selected="false">Lifetime</a>
+                            </li>
+                            <li class="nav-item ml-auto">
+                                <div class="tab-right d-flex">
+                                    <p class="fz12 fw-400 purple-light-color pt-1 mr-3">12:00 AM - 17:00 PM, 29 June 2021</p>
+                                    <div class="dropdown dot-dropdown">
+                                        <button type="button" class="ra-three-dot-btn" data-toggle="dropdown" aria-haspopup="true">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </button>
+                                        <div class="dropdown-menu filter-dropdown">
+                                            <a class="dropdown-item" href="#">Demo Text 1</a>
+                                            <a class="dropdown-item" href="#">Demo Text 2</a>
+                                            <a class="dropdown-item" href="#">Demo Text 3</a>
+                                            <a class="dropdown-item" href="#">Demo Text 4</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content" id="chartTabContent">
+                            <div class="tab-pane fade show active" id="today" role="tabpanel" aria-labelledby="today-tab">
+                                <img src="assets/images/icons/graph.jpg" alt="">
+                            </div>
+                            <div class="tab-pane fade" id="yesterday" role="tabpanel" aria-labelledby="yesterday-tab">
+                                <img src="assets/images/icons/graph.jpg" alt="">
+                            </div>
+                            <div class="tab-pane fade" id="days" role="tabpanel" aria-labelledby="days-tab">
+                                <img src="assets/images/icons/graph.jpg" alt="">
+                            </div>
+                            <div class="tab-pane fade" id="lifetime" role="tabpanel" aria-labelledby="lifetime-tab">
+                                <img src="assets/images/icons/graph.jpg" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>

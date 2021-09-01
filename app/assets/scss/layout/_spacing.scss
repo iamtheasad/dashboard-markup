@@ -23,6 +23,22 @@
     padding: 0px 20px;
 }
 
+.p-8x20 {
+    padding: 8px 20px;
+}
+
+.p-2x8 {
+    padding: 2px 8px;
+}
+
+.p-10x20 {
+    padding: 10px 20px;
+}
+
+.p-6x16 {
+    padding: 6px 16px;
+}
+
 .p-20 {
     padding: 20px;
 }
@@ -45,22 +61,6 @@
 
 .pb-16 {
     padding-bottom: 16px;
-}
-
-.p-8x20 {
-    padding: 8px 20px;
-}
-
-.p-2x8 {
-    padding: 2px 8px;
-}
-
-.p-16x20 {
-    padding: 16px 20px;
-}
-
-.p-10x20 {
-    padding: 10px 20px;
 }
 
 .mt-20 {
@@ -101,6 +101,10 @@
     @media screen and(max-width: 767px) {
         margin-bottom: 16px;
     }
+}
+
+.m-20 {
+    margin: 20px;
 }
 
 .min-hieght-36 {
