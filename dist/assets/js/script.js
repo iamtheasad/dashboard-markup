@@ -55,6 +55,64 @@ function inputAnimate() {
     }
 }
 
+function rangeSlider(){
+    // Range slider
+    function collision($div1, $div2) {
+        var x1 = $div1.offset().left;
+        var w1 = 40;
+        var r1 = x1 + w1;
+        var x2 = $div2.offset().left;
+        var w2 = 40;
+        var r2 = x2 + w2;
+
+        if (r1 < x2 || x1 > r2) return false;
+        return true;
+
+    }
+
+    // slider call
+    let slider = $('.range-slider');
+
+    if (slider.length) {
+        slider.each(function (index, slide) {
+            let sliderEl = slider.eq(index)
+            sliderEl.slider({
+                range: true,
+                min: sliderEl.attr('min'),
+                max: sliderEl.attr('max'),
+                step: JSON.parse(sliderEl.attr('step')),
+                values: sliderEl.attr('defaultValue').split(','),
+                slide: function (event, ui) {
+                    let thisSlider = $(this);
+
+                    $(thisSlider).find('.ui-slider-handle:eq(0) .price-range-min').html(thisSlider.attr('prefix') + ui.values[0]);
+                    $(thisSlider).find('.min-value').val(ui.values[0]);
+                    $(thisSlider).find('.ui-slider-handle:eq(1) .price-range-max').html(thisSlider.attr('prefix') + ui.values[1]);
+                    $(thisSlider).find('.max-value').val(ui.values[1]);
+                    $(thisSlider).find('.price-range-both').html('<i>$' + ui.values[0] + ' - </i>' + thisSlider.attr('prefix') + ui.values[1]);
+
+                    if (collision($(thisSlider).find('.price-range-min'), $(thisSlider).find('.price-range-max')) == true) {
+                        $(thisSlider).find('.price-range-min, .price-range-max').css('opacity', '0');
+                        $(thisSlider).find('.price-range-both').css('display', 'block');
+                    } else {
+                        $(thisSlider).find('.price-range-min, .price-range-max').css('opacity', '1');
+                        $(thisSlider).find('.price-range-both').css('display', 'none');
+                    }
+                }
+            });
+
+            sliderEl.find('.ui-slider-handle:eq(0)').append('<span class="price-range-min value">' + sliderEl.attr('prefix') + sliderEl.slider('values', 0) + '</span>');
+            sliderEl.find('.ui-slider-handle:eq(1)').append('<span class="price-range-max value">' + sliderEl.attr('prefix') + sliderEl.slider('values', 1) + '</span>');
+        })
+
+    }
+}
+
+
+$(document).ajaxSuccess(function() {
+    rangeSlider();
+    inputAnimate();
+});
 
 (function ($) {
     "use strict";
@@ -276,60 +334,6 @@ function inputAnimate() {
             });
         }
     }
-
-    function rangeSlider(){
-        // Range slider
-        function collision($div1, $div2) {
-            var x1 = $div1.offset().left;
-            var w1 = 40;
-            var r1 = x1 + w1;
-            var x2 = $div2.offset().left;
-            var w2 = 40;
-            var r2 = x2 + w2;
-    
-            if (r1 < x2 || x1 > r2) return false;
-            return true;
-    
-        }
-    
-        // slider call
-        let slider = $('.range-slider');
-    
-        if (slider.length) {
-            slider.each(function (index, slide) {
-                let sliderEl = slider.eq(index)
-                sliderEl.slider({
-                    range: true,
-                    min: sliderEl.attr('min'),
-                    max: sliderEl.attr('max'),
-                    step: JSON.parse(sliderEl.attr('step')),
-                    values: sliderEl.attr('defaultValue').split(','),
-                    slide: function (event, ui) {
-                        let thisSlider = $(this);
-    
-                        $(thisSlider).find('.ui-slider-handle:eq(0) .price-range-min').html(thisSlider.attr('prefix') + ui.values[0]);
-                        $(thisSlider).find('.min-value').val(ui.values[0]);
-                        $(thisSlider).find('.ui-slider-handle:eq(1) .price-range-max').html(thisSlider.attr('prefix') + ui.values[1]);
-                        $(thisSlider).find('.max-value').val(ui.values[1]);
-                        $(thisSlider).find('.price-range-both').html('<i>$' + ui.values[0] + ' - </i>' + thisSlider.attr('prefix') + ui.values[1]);
-    
-                        if (collision($(thisSlider).find('.price-range-min'), $(thisSlider).find('.price-range-max')) == true) {
-                            $(thisSlider).find('.price-range-min, .price-range-max').css('opacity', '0');
-                            $(thisSlider).find('.price-range-both').css('display', 'block');
-                        } else {
-                            $(thisSlider).find('.price-range-min, .price-range-max').css('opacity', '1');
-                            $(thisSlider).find('.price-range-both').css('display', 'none');
-                        }
-                    }
-                });
-    
-                sliderEl.find('.ui-slider-handle:eq(0)').append('<span class="price-range-min value">' + sliderEl.attr('prefix') + sliderEl.slider('values', 0) + '</span>');
-                sliderEl.find('.ui-slider-handle:eq(1)').append('<span class="price-range-max value">' + sliderEl.attr('prefix') + sliderEl.slider('values', 1) + '</span>');
-            })
-    
-        }
-    }
-
 
     /*==========================================================================
         WHEN DOCUMENT LOADING
