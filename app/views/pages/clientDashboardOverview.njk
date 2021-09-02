@@ -169,7 +169,7 @@
                      <div class="dropdown dropdwon-3">
 
                         <div class="dropdown-menu">
-                           <div class="dropdown-search mb-3">
+                           <div class="dropdown-search searchInDropdown mb-3">
                               <input type="search" id="dropdwonSearch2" placeholder="Search" />
                               <label for="dropdwonSearch2">
                                  <button type="submit" class="bg-transparent border-0">
@@ -236,7 +236,7 @@
                   <div class="custom-selection">
                      <div class="dropdown dropdwon-3">
                         <div class="dropdown-menu">
-                           <div class="dropdown-search mb-3">
+                           <div class="dropdown-search searchInDropdown mb-3">
                               <input type="search" id="dropdwonSearch" placeholder="Search" />
                               <label for="dropdwonSearch">
                                  <button type="submit" class="bg-transparent border-0">
@@ -460,7 +460,7 @@
 
 
    <!-- Current Update Chart -->
-   <div class="bg-white tab-top radius-4 p-20 m-20 d-flex justify-content-between">
+   <div class="bg-white tab-top ra-border-2 radius-4 p-20 m-20 d-flex justify-content-between">
       <div class="tab-left">
          <ul class="nav" id="chartTab" role="tablist">
             <li class="nav-item">
@@ -522,14 +522,15 @@
 
    <!-- Filter Bar -->
    <div class="p-0x20">
-      <div class="filter-wrapper campaign-metrics flex-column mb-0 bg-white p-16x20">
-         <div class="d-flex align-items-center justify-content-between">
-            <form action="" class="rs-form create-campaign-form custom-form mb-md-0 mb-3">
+      <div class="filter-wrapper campaign-metrics mb-0 bg-white p-16x20">
+         <div class="fitler-top w-100">
+            <form action="" class="rs-form create-campaign-form custom-form">
                <div class="create-campaign-wrapper w-100">
                   <div class="fz18 fw-700 purple-color mr-2">Campaign Metrics</div>
                   <div class="animate-search w-100">
-                     <button type="button" class="hidden-search-icon search-icon border-0 bg-transparent pl-md-3 pl-0 d-flex align-items-center">
-                        <span class="search-img search-custom mb-2">
+                     <button type="button"
+                        class="hidden-search-icon search-icon border-0 bg-transparent ml-md-3 ml-0 d-flex align-items-center">
+                        <span class="search-img search-custom ml-3">
                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
                               xmlns="http://www.w3.org/2000/svg">
                               <path
@@ -551,8 +552,8 @@
                </div>
             </form>
 
-            <div class="search-right create-campaign-filter d-flex align-items-center justify-content-center">
-               <div class="mr-1 mr-md-3">
+            <div class="search-right create-campaign-filter text-nowrap">
+               <div class="mr-0 mr-md-3 pages-number">
                   <div class="serach-number border-0 fw-500 d-flex align-items-center min-hieght-36">
                      <p class="fz14 mr-2"><span>1</span>-<span>10</span> of <span>11</span></p>
                      <button class="filter-number custom"><span class="mdi mdi-chevron-left"></span></button>
@@ -560,10 +561,9 @@
                   </div>
                </div>
 
-               <div class="ra-filter mr-1 mr-md-3">
+               <div class="ra-filter mr-3 mr-md-3">
                   <div class="dropdown search-common">
-                     <button
-                        class="search-filter ra-primary-color border-0 radius-5 d-flex purpleLight2-bg fw-500 d-flex align-items-center min-hieght-36"
+                     <button class="search-filter ra-primary-color border-0 radius-4 d-flex purpleLight2-bg fw-500 d-flex align-items-center min-hieght-36 p-2x8"
                         type="button" data-toggle="dropdown" aria-haspopup="true">
                         <span class="pr-2 d-flex">
                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
@@ -603,10 +603,10 @@
                   </div>
                </div>
 
-               <div class="ra-filter">
+               <div class="ra-filter mr-3 mr-md-0">
                   <div class="dropdown search-common">
                      <button
-                        class="search-filter ra-primary-color border-0 radius-5 d-flex purpleLight2-bg fw-500 d-flex align-items-center min-hieght-36"
+                        class="search-filter ra-primary-color border-0 radius-4 d-flex purpleLight2-bg fw-500 d-flex align-items-center min-hieght-36 p-2x8"
                         type="button" data-toggle="dropdown" aria-haspopup="true">
                         <span class="pr-2 d-flex">
                            <svg width="18" height="16" viewBox="0 0 18 16" fill="none"
@@ -666,7 +666,7 @@
          </div>
       </div>
 
-
+      <!-- Datatabel -->
       <div class="row">
          <div class="col-md-12">
             <div class="table-responsive data-table-3">
