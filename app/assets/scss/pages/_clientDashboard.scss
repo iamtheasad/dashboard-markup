@@ -1,3 +1,10 @@
+.campaign-metrics {
+   border-top: 1px solid $purpleLight3;
+   border-left: 1px solid $purpleLight3;
+   border-right: 1px solid $purpleLight3;
+   border-radius: 4px 4px 0 0;
+}
+
 .campaign-wrapper {
    background-color: $purpleLight4;
    min-height: 100vh;
@@ -147,6 +154,7 @@
 // Current Update
 .tab-left {
    width: 100%;
+
    .nav {
       display: flex;
       align-items: center;

@@ -305,7 +305,8 @@ $(document).ajaxSuccess(function() {
         let wrapper = $('.dropdown.dropdwon-3');
         if (wrapper.length) {
             wrapper.find('[data-toggle="dropdown"]').on('click', function () {
-                $(this).siblings('.dropdown-menu').toggleClass('show');
+                $('.dropdown-menu').removeClass('show');
+                $(this).siblings('.dropdown-menu').addClass('show');
             })
             $(document).click(function (e) {
                 wrapper

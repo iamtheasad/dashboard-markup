@@ -939,9 +939,27 @@ button:focus .dropdown-icon.up-3 {
     position: relative;
     transition: .2s;
     border-radius: 4px;
+  }
+}
 
-    &:focus {
-      border: 1px solid $greenDark;
+.animate-search{
+  position: relative;
+  .hidden-search-icon{
+    position: relative;
+    z-index: 1;
+  }
+  .hidden-search{
+    position: absolute;
+    width: 0%;
+    transition: .3s ease-in-out;
+    top: -4px;
+    left: 0;
+    border-radius: 4px;
+    border-color: $greenDark;
+    &.show {
+      border: 1px solid $greenDark !important;
+      width: 100%;
+      z-index: 2;
     }
   }
 }
