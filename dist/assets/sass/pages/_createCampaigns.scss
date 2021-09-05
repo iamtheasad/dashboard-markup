@@ -9,6 +9,7 @@
 
 .search-custom {
    font-size: 31px;
+
    svg {
       display: block;
    }
@@ -116,8 +117,22 @@
 }
 
 .create-campaign-filter {
+   display: flex;
+
    @media screen and (max-width: 767px) {
       flex-direction: row-reverse;
+   }
+
+   @media screen and (max-width: 394px) {
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+   }
+}
+
+.pages-number {
+   @media screen and (max-width: 394px) {
+      order: 3;
    }
 }
 

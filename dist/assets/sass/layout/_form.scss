@@ -83,13 +83,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #475364;
+    color: $primaryColor;
     font-size: rem(16);
     min-height: 40px;
     padding: 8px 12px;
     border-radius: 4px;
-    background: #eceef3;
-    border: 1px solid #475364;
+    background: $tableRowColor;
+    border: 1px solid $primaryColor;
     opacity: 0.5;
     cursor: pointer;
     transition: 0.3s ease-in-out;
@@ -141,7 +141,7 @@
     }
 
     &:before {
-      border: 2px solid #8e8e93;
+      border: 2px solid $paymentInputColor3;
       z-index: 1;
     }
 
@@ -774,14 +774,14 @@ input[type="text"] {
   &.up-3 {
     position: absolute;
     transform: rotate(180deg) translateY(-50%);
-    top: 0%;
+    top: -3%;
     left: 84%;
     display: none;
   }
 
   &.down-3 {
     position: absolute;
-    top: 50%;
+    top: 43%;
     left: 84%;
     transform: translateY(-50%);
   }
@@ -940,15 +940,29 @@ button:focus .dropdown-icon.up-3 {
     transition: .2s;
     border-radius: 4px;
   }
+
+  &.searchInDropdown {
+    input {
+  
+      &:active,
+      &:focus,
+      &:visited {
+        border: 1px solid $greenDark;
+      }
+  
+    }
+  }
 }
 
-.animate-search{
+.animate-search {
   position: relative;
-  .hidden-search-icon{
+
+  .hidden-search-icon {
     position: relative;
     z-index: 1;
   }
-  .hidden-search{
+
+  .hidden-search {
     position: absolute;
     width: 0%;
     transition: .3s ease-in-out;
@@ -956,10 +970,15 @@ button:focus .dropdown-icon.up-3 {
     left: 0;
     border-radius: 4px;
     border-color: $greenDark;
+    opacity: 0;
+    visibility: hidden;
+
     &.show {
       border: 1px solid $greenDark !important;
       width: 100%;
       z-index: 2;
+      opacity: 1;
+      visibility: visible;
     }
   }
 }
