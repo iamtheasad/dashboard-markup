@@ -459,22 +459,22 @@
 }
 
 // Range Slider
-.ui-slider { 
-	height: 2px !important;
-	margin-top: 25px;
-    margin-bottom: 25px;
+.ui-slider {
+   height: 2px !important;
+   margin-top: 25px;
+   margin-bottom: 25px;
 
 
-	.ui-slider-handle { 
-		width: 20px;
-		height: 20px;
-		border-radius: 50%;
-		border: 2px solid #C4C4C4;
-		background: #fff;
-		top: 0;
-		transform: translateY(-50%);
-		outline: none;
-		cursor: pointer;
+   .ui-slider-handle {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 2px solid #C4C4C4;
+      background: #fff;
+      top: 0;
+      transform: translateY(-50%);
+      outline: none;
+      cursor: pointer;
 
       &:hover .value,
       &.ui-state-focus .value {
@@ -483,32 +483,33 @@
          opacity: 1;
       }
 
-		.value { 
-			top: -30px;
-			position: absolute;
-			white-space: nowrap;
-			font-size: 12px;
-			background-color: #000;
-			color: #fff;
-			padding: 3px 4px;
-			border-radius: 3px;
-			left: 50%;
-			transform: translateX(-50%) scale(.5);
+      .value {
+         top: -30px;
+         position: absolute;
+         white-space: nowrap;
+         font-size: 12px;
+         background-color: #000;
+         color: #fff;
+         padding: 3px 4px;
+         border-radius: 3px;
+         left: 50%;
+         transform: translateX(-50%) scale(.5);
          visibility: hidden;
          opacity: 0;
          transition: .3s ease-in-out;
-			&:after {
-				content: '';
-				position: absolute;
-				width: 6px;
-				height: 6px;
-				background-color: #000;
-				transform: rotate(-45deg);
-				bottom: -3px;
-				left: calc(50% - 3px);
-			}
-		}
-	}
+
+         &:after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background-color: #000;
+            transform: rotate(-45deg);
+            bottom: -3px;
+            left: calc(50% - 3px);
+         }
+      }
+   }
 }
 
 
@@ -663,10 +664,12 @@
    flex-direction: column;
    justify-content: space-between;
    background-color: $primaryBg;
+   align-items: stretch;
+   height: calc(100vh - 193px);
 
    .chat-top {
-      max-height: 71vh;
       overflow-y: auto;
+      flex-grow: 1;
 
       &.chat-top-2 {
          max-height: 79vh;
