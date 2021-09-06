@@ -1,0 +1,45 @@
+.sidebar-menu-2 {
+   max-width: 272px;
+   width: 100%;
+   background-color: #F2F2F2;
+
+   .site-logo-2 {
+      display: flex;
+      padding: 14px;
+      border-bottom: 1px solid #dedede;
+      height: 65px;
+
+      .sidebar-user-info {
+         display: flex;
+         flex-direction: column;
+         margin-left: 14px;
+         line-height: 8px;
+         color: #000;
+
+         .user {
+            margin-bottom: 10px;
+            font-size: rem(16);
+            font-weight: 700;
+        }
+
+        .amount{
+           font-size: rem(12);
+           font-weight: 400;
+        }
+      }
+   }
+
+   .menu-area-2 {
+      ul {
+         li {
+            .sidebar-icon-left {
+               width: 20px;
+            }
+
+            .sidebar-icon-right {
+               width: 8px;
+            }
+         }
+      }
+   }
+}
