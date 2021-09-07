@@ -1,12 +1,12 @@
 .sidebar-menu-2 {
    max-width: 272px;
    width: 100%;
-   background-color: #F2F2F2;
+   background-color: $grayLight2;
 
    .site-logo-2 {
       display: flex;
       padding: 14px;
-      border-bottom: 1px solid #dedede;
+      border-bottom: 1px solid $grayLightBgColor;
       height: 65px;
 
       .sidebar-user-info {
@@ -14,7 +14,7 @@
          flex-direction: column;
          margin-left: 14px;
          line-height: 8px;
-         color: #000;
+         color: $black;
 
          .user {
             margin-bottom: 10px;
@@ -32,29 +32,31 @@
 
    .menu-area-2 {
       overflow-y: auto;
-      height: calc(100vh - 68px);
+      height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      background-color: $grayLight2;
 
       ul {
          li {
             .sidebar-icon-left {
                width: 20px;
                line-height: 0px;
+               text-align: center;
 
                &.sidebar-dropdown-icon-left svg {
                   width: 10px;
                }
 
-               &.sidebar-dropdown-icon-left svg [fill] {
-                  fill: #000000;
+               svg [fill] {
+                  fill: $black;
                }
             }
 
             .sidebar-link {
                display: flex;
-               color: #000;
+               color: $black;
                padding: 0px 14px;
                transition: all .2s;
                height: 40px;
@@ -63,17 +65,21 @@
                &:hover,
                &:active,
                &:focus {
-                  background-color: #EBEBEB;
+                  background-color: $grayLight1;
                   color: $greenDark;
                }
 
                &:hover .sidebar-icon-right svg [fill],
                &:active .sidebar-icon-right svg [fill],
                &:focus .sidebar-icon-right svg [fill],
-               &:hover .sidebar-dropdown-icon-left svg [fill],
-               &:active .sidebar-dropdown-icon-left svg [fill],
-               &:focus .sidebar-dropdown-icon-left svg [fill] {
+               &:hover .sidebar-icon-left svg [fill],
+               &:active .sidebar-icon-left svg [fill],
+               &:focus .sidebar-icon-left svg [fill],
+               &:hover .sidebar-text-box,
+               &:active .sidebar-text-box,
+               &:focus .sidebar-text-box {
                   fill: $greenDark;
+                  color: $greenDark;
                }
 
                .sidebar-text-box {
@@ -84,18 +90,21 @@
                   padding-left: 22px;
                   font-size: 15px;
                   font-weight: 500;
+                  color: $black;
+                  transition: all .2s ease;
 
                   .sidebar-icon-right svg {
                      width: 20px;
-                     background: #D6D6D6;
+                     height: 20px;
                      display: flex;
                      justify-content: center;
                      align-items: center;
                      padding: 5px;
                      border-radius: 2px;
+                     background-color: $grayProgressLight;
 
                      [fill] {
-                        transition: .2s;
+                        transition: all .2s ease;
                      }
                   }
                }
@@ -103,13 +112,22 @@
 
             .sidebar-dropdwon-2 {
                .card {
-                  border: navajowhite;
+                  border: none;
                   border-radius: 0px;
                }
 
                .card-body {
                   padding: 0px 0px;
                }
+            }
+
+            .active .sidebar-icon-right svg [fill],
+            .active .sidebar-icon-right svg [fill],
+            .active .sidebar-icon-right svg [fill],
+            .active .sidebar-icon-left svg [fill],
+            .active .sidebar-icon-left svg [fill],
+            .active .sidebar-icon-left svg [fill] {
+               fill: $greenDark;
             }
          }
       }
