@@ -105,3 +105,7 @@ tfoot {
 .data-table-3 .table-bordered tfoot th:not(:last-child) {
    border-right-color: $white !important;
 }
+
+.dataTables_filter {
+   display: none;
+}

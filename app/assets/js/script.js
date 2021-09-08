@@ -188,16 +188,51 @@ $(document).ajaxSuccess(function () {
             $(element).DataTable({
                 "paging": false,
                 "searching": false,
+                "info": false,
             });
         }
     }
 
     /* Influencer Looping Data Table Id */
     function dataTable2() {
-        $(".tableData-2").DataTable({
+        var paginationIconLeft = "../assets/images/icons/arrow-left.svg"
+        var paginationIconRight = "../assets/images/icons/arrow-right.svg"
+        var iTable2 = $(".datatableActivator-2").DataTable({
             "paging": true,
-            "searching": true
+            "info": true,
+            "searching": true,
+            "pagingType": "simple",
+            "pageLength": 2,
+            "lengthMenu": [[2, 25, 50, -1], [2, 25, 50, "All"]],
+            "infoCallback": function (settings, start, end, max, total, pre) {
+                return start + " - " + end + " of " + total;
+            },
+            "dom": "<'row'<'col-sm-8'><'col-sm-4 d-flex justify-content-end align-items-center'ip>>" +
+            "<'row'<'col-sm-12'>>" +
+            "<'row'<'col-sm-4'><'col-sm-4 text-center'><'col-sm-4'>>",
+            "language": {
+                "paginate": {
+                  "previous": "<img src='" + paginationIconLeft + "'/>",
+                  "next": "<img src='" + paginationIconRight + "'/>",
+                }
+              }
         });
+
+        $(".dataTable-search-activator").keyup(function () {
+            iTable2.search($(this).val()).draw();
+        })
+
+        // var iTable2 = $(".datatableActivator-2").DataTable();
+
+        // var info = iTable2.page.info();
+        // if ($('.ra-custom-pagination').length) {
+        //     $('.ra-custom-pagination').html(
+        //         'Currently showing page ' + (info.page + 1) + ' of ' + info.pages + ' pages.'
+        //     );
+        // }
+
+
+
     }
 
     function getFileName() {

@@ -1002,7 +1002,7 @@
                                         <div class="dropdown dropdwon-3">
 
                                             <div class="dropdown-menu">
-                                                <div class="dropdown-search mb-3">
+                                                <div class="dropdown-search searchInDropdown mb-3">
                                                     <input type="search" id="dropdwonSearch2" placeholder="Search" />
                                                     <label for="dropdwonSearch2">
                                                         <button type="submit" class="bg-transparent border-0">
@@ -1068,7 +1068,7 @@
                                     <div class="custom-selection">
                                         <div class="dropdown dropdwon-3">
                                             <div class="dropdown-menu">
-                                                <div class="dropdown-search mb-3">
+                                                <div class="dropdown-search searchInDropdown mb-3">
                                                     <input type="search" id="dropdwonSearch" placeholder="Search" />
                                                     <label for="dropdwonSearch">
                                                         <button type="submit" class="bg-transparent border-0">
@@ -1317,7 +1317,7 @@
                 </div>
 
                 <!-- Current Update Chart -->
-                <div class="bg-white tab-top radius-4 p-20 m-20 d-flex justify-content-between">
+                <div class="bg-white tab-top ra-border-2 radius-4 p-20 m-20 d-flex justify-content-between">
                     <div class="tab-left">
                         <ul class="nav" id="chartTab" role="tablist">
                             <li class="nav-item">
@@ -1336,7 +1336,7 @@
                                 <a class="nav-link fz14 fw-500 p-6x16" id="lifetime-tab" data-toggle="pill" href="#lifetime" role="tab" aria-controls="lifetime" aria-selected="false">Lifetime</a>
                             </li>
                             <li class="nav-item ml-auto">
-                                <div class="tab-right d-flex">
+                                <div class="d-flex">
                                     <p class="fz12 fw-400 purple-light-color pt-1 mr-3">12:00 AM - 17:00 PM, 29 June 2021</p>
                                     <div class="dropdown dot-dropdown">
                                         <button type="button" class="ra-three-dot-btn" data-toggle="dropdown" aria-haspopup="true">
@@ -1374,14 +1374,14 @@
 
                 <!-- Filter Bar -->
                 <div class="p-0x20">
-                    <div class="filter-wrapper campaign-metrics flex-column mb-0 bg-white p-16x20">
-                        <div class="d-flex align-items-center justify-content-between">
-                            <form action="" class="rs-form create-campaign-form custom-form mb-md-0 mb-3">
-                                <div class="create-campaign-wrapper">
+                    <div class="filter-wrapper campaign-metrics mb-0 bg-white p-16x20">
+                        <div class="fitler-top w-100">
+                            <form action="" class="rs-form create-campaign-form custom-form">
+                                <div class="create-campaign-wrapper w-100">
                                     <div class="fz18 fw-700 purple-color mr-2">Campaign Metrics</div>
-                                    <div>
-                                        <button class="search-icon border-0 bg-transparent pl-md-3 pl-0 d-flex align-items-center" for="campaignSearch">
-                                            <span class="search-img search-custom mb-2">
+                                    <div class="animate-search w-100">
+                                        <button type="button" class="hidden-search-icon search-icon border-0 bg-transparent ml-md-3 ml-0 d-flex align-items-center">
+                                            <span class="search-img search-custom ml-3">
                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
                               xmlns="http://www.w3.org/2000/svg">
                               <path
@@ -1391,10 +1391,10 @@
                         </span>
                                         </button>
 
-                                        <div class="dropdown-search border-0 w-100 d-none">
-                                            <input type="search" placeholder="Search" />
+                                        <div class="dropdown-search hidden-search">
+                                            <input type="search" class="dataTable-search-activator" placeholder="Search" />
                                             <label for="dropdwonSearch">
-                                                <button type="submit" class="bg-transparent border-0">
+                                                <button class="bg-transparent border-0">
                                                     <img src="assets/images/icons/search-purple.svg" alt="Icon">
                                                 </button>
                                             </label>
@@ -1403,18 +1403,10 @@
                                 </div>
                             </form>
 
-                            <div class="search-right create-campaign-filter d-flex align-items-center justify-content-center">
-                                <div class="mr-1 mr-md-3">
-                                    <div class="serach-number border-0 fw-500 d-flex align-items-center min-hieght-36">
-                                        <p class="fz14 mr-2"><span>1</span>-<span>10</span> of <span>11</span></p>
-                                        <button class="filter-number custom"><span class="mdi mdi-chevron-left"></span></button>
-                                        <button class="filter-number custom active"><span class="mdi mdi-chevron-right"></span></button>
-                                    </div>
-                                </div>
-
-                                <div class="ra-filter mr-1 mr-md-3">
+                            <div class="search-right create-campaign-filter text-nowrap">
+                                <div class="ra-filter mr-3 mr-md-3">
                                     <div class="dropdown search-common">
-                                        <button class="search-filter ra-primary-color border-0 radius-5 d-flex purpleLight2-bg fw-500 d-flex align-items-center min-hieght-36" type="button" data-toggle="dropdown" aria-haspopup="true">
+                                        <button class="search-filter ra-primary-color border-0 radius-4 d-flex purpleLight2-bg fw-500 d-flex align-items-center min-hieght-36 p-2x8" type="button" data-toggle="dropdown" aria-haspopup="true">
                                             <span class="pr-2 d-flex">
                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                               xmlns="http://www.w3.org/2000/svg">
@@ -1444,7 +1436,7 @@
                            </span>
                                             </div>
                                         </button>
-                                        <div class="dropdown-menu search-dropdown">
+                                        <div class="dropdown-menu filter-dropdown">
                                             <a class="dropdown-item ra-primary-color" href="#">Campaign Name</a>
                                             <a class="dropdown-item ra-primary-color" href="#">Type</a>
                                             <a class="dropdown-item ra-primary-color" href="#">Budget</a>
@@ -1453,9 +1445,9 @@
                                     </div>
                                 </div>
 
-                                <div class="ra-filter">
+                                <div class="ra-filter mr-3 mr-md-0">
                                     <div class="dropdown search-common">
-                                        <button class="search-filter ra-primary-color border-0 radius-5 d-flex purpleLight2-bg fw-500 d-flex align-items-center min-hieght-36" type="button" data-toggle="dropdown" aria-haspopup="true">
+                                        <button class="search-filter ra-primary-color border-0 radius-4 d-flex purpleLight2-bg fw-500 d-flex align-items-center min-hieght-36 p-2x8" type="button" data-toggle="dropdown" aria-haspopup="true">
                                             <span class="pr-2 d-flex">
                            <svg width="18" height="16" viewBox="0 0 18 16" fill="none"
                               xmlns="http://www.w3.org/2000/svg">
@@ -1502,7 +1494,7 @@
                            </span>
                                             </div>
                                         </button>
-                                        <div class="dropdown-menu search-dropdown">
+                                        <div class="dropdown-menu filter-dropdown">
                                             <a class="dropdown-item ra-primary-color" href="#">Campaign Name</a>
                                             <a class="dropdown-item ra-primary-color" href="#">Type</a>
                                             <a class="dropdown-item ra-primary-color" href="#">Budget</a>
@@ -1514,11 +1506,12 @@
                         </div>
                     </div>
 
+                    <!-- Datatabel -->
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="table-responsive data-table-3">
+                            <div class="table-responsive data-table-3 all-datatable">
 
-                                <table class="table table-striped table-hover table-bordered tableData-2" style="width:100%">
+                                <table class="table table-striped table-hover table-bordered datatableActivator-2" style="width:100%">
                                     <thead>
                                         <tr>
                                             <th class="fz13 fw-400 purple-color">Date</th>
@@ -1772,7 +1765,7 @@
                                         </tr>
                                         <tr>
                                             <td>
-                                                <span class="fz16 fw-500 purple-color">29 June, 2022</span>
+                                                <span class="fz16 fw-500 purple-color">29 Aug, 2022</span>
                                             </td>
                                             <td>
                                                 <span class="fz14 fw-500 purple-color">0.04%</span>
@@ -1800,6 +1793,147 @@
                                             </td>
                                             <td>
                                                 <span class="fz14 fw-500 purple-color">৳95,486</span>
+                                            </td>
+                                            <td>
+                                                <div class="dropdown dot-dropdown justify-content-center">
+                                                    <button type="button" class="ra-three-dot-btn" data-toggle="dropdown" aria-haspopup="true">
+                                                        <span></span>
+                                                        <span></span>
+                                                        <span></span>
+                                                    </button>
+                                                    <div class="dropdown-menu filter-dropdown">
+                                                        <a class="dropdown-item" href="#">Demo Text 1</a>
+                                                        <a class="dropdown-item" href="#">Demo Text 2</a>
+                                                        <a class="dropdown-item" href="#">Demo Text 3</a>
+                                                        <a class="dropdown-item" href="#">Demo Text 4</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="fz16 fw-500 purple-color">2 June, 2021</span>
+                                            </td>
+                                            <td>
+                                                <span class="fz14 fw-500 purple-color">0.02%</span>
+                                            </td>
+                                            <td>
+                                                <span class="fz14 fw-500 purple-color">2,308</span>
+                                            </td>
+                                            <td>
+                                                <span class="fz14 fw-500 purple-color">654,232</span>
+                                            </td>
+                                            <td>
+                                                <span class="fz14 fw-500 purple-color">34</span>
+                                            </td>
+                                            <td>
+                                                <span class="fz14 fw-500 purple-color">৳ 23.96</span>
+                                            </td>
+                                            <td>
+                                                <span class="fz14 fw-500 purple-color">৳ 7.60</span>
+                                            </td>
+                                            <td>
+                                                <span class="fz14 fw-500 purple-color">৳ 27.60</span>
+                                            </td>
+                                            <td>
+                                                <span class="fz14 fw-500 purple-color">0.85%</span>
+                                            </td>
+                                            <td>
+                                                <span class="fz14 fw-500 purple-color">৳15,486</span>
+                                            </td>
+                                            <td>
+                                                <div class="dropdown dot-dropdown justify-content-center">
+                                                    <button type="button" class="ra-three-dot-btn" data-toggle="dropdown" aria-haspopup="true">
+                                                        <span></span>
+                                                        <span></span>
+                                                        <span></span>
+                                                    </button>
+                                                    <div class="dropdown-menu filter-dropdown">
+                                                        <a class="dropdown-item" href="#">Demo Text 1</a>
+                                                        <a class="dropdown-item" href="#">Demo Text 2</a>
+                                                        <a class="dropdown-item" href="#">Demo Text 3</a>
+                                                        <a class="dropdown-item" href="#">Demo Text 4</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="fz16 fw-500 purple-color">1 June, 2021</span>
+                                            </td>
+                                            <td>
+                                                <span class="fz14 fw-500 purple-color">0.20%</span>
+                                            </td>
+                                            <td>
+                                                <span class="fz14 fw-500 purple-color">2,5608</span>
+                                            </td>
+                                            <td>
+                                                <span class="fz14 fw-500 purple-color">746,232</span>
+                                            </td>
+                                            <td>
+                                                <span class="fz14 fw-500 purple-color">84</span>
+                                            </td>
+                                            <td>
+                                                <span class="fz14 fw-500 purple-color">৳ 93.96</span>
+                                            </td>
+                                            <td>
+                                                <span class="fz14 fw-500 purple-color">৳ 7.60</span>
+                                            </td>
+                                            <td>
+                                                <span class="fz14 fw-500 purple-color">৳ 2.60</span>
+                                            </td>
+                                            <td>
+                                                <span class="fz14 fw-500 purple-color">0.75%</span>
+                                            </td>
+                                            <td>
+                                                <span class="fz14 fw-500 purple-color">৳55,786</span>
+                                            </td>
+                                            <td>
+                                                <div class="dropdown dot-dropdown justify-content-center">
+                                                    <button type="button" class="ra-three-dot-btn" data-toggle="dropdown" aria-haspopup="true">
+                                                        <span></span>
+                                                        <span></span>
+                                                        <span></span>
+                                                    </button>
+                                                    <div class="dropdown-menu filter-dropdown">
+                                                        <a class="dropdown-item" href="#">Demo Text 1</a>
+                                                        <a class="dropdown-item" href="#">Demo Text 2</a>
+                                                        <a class="dropdown-item" href="#">Demo Text 3</a>
+                                                        <a class="dropdown-item" href="#">Demo Text 4</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="fz16 fw-500 purple-color">4 June, 2021</span>
+                                            </td>
+                                            <td>
+                                                <span class="fz14 fw-500 purple-color">0.02%</span>
+                                            </td>
+                                            <td>
+                                                <span class="fz14 fw-500 purple-color">2,308</span>
+                                            </td>
+                                            <td>
+                                                <span class="fz14 fw-500 purple-color">454,232</span>
+                                            </td>
+                                            <td>
+                                                <span class="fz14 fw-500 purple-color">34</span>
+                                            </td>
+                                            <td>
+                                                <span class="fz14 fw-500 purple-color">৳ 23.96</span>
+                                            </td>
+                                            <td>
+                                                <span class="fz14 fw-500 purple-color">৳ 7.60</span>
+                                            </td>
+                                            <td>
+                                                <span class="fz14 fw-500 purple-color">৳ 27.60</span>
+                                            </td>
+                                            <td>
+                                                <span class="fz14 fw-500 purple-color">0.85%</span>
+                                            </td>
+                                            <td>
+                                                <span class="fz14 fw-500 purple-color">৳15,486</span>
                                             </td>
                                             <td>
                                                 <div class="dropdown dot-dropdown justify-content-center">
@@ -1878,8 +2012,6 @@
     <!-- Daterangepicker -->
     <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-
-    <!-- <script type="text/javascript" src="assets/vendor/aos/js/aos.js"></script> -->
     <!-- endbuild -->
 
     <script type="text/javascript" src="assets/js/script.js"></script>

@@ -836,6 +836,10 @@ button:focus .dropdown-icon.up-3 {
   align-items: center;
   overflow: hidden;
   padding: 10px;
+
+  @media screen and(max-width: 767px) {
+   margin-right: 40px !important; 
+  }
 }
 
 .multi-date-range {

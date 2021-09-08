@@ -937,7 +937,7 @@
                                 </button>
 
                                 <div class="dropdown-search hidden-search">
-                                    <input type="search" placeholder="Search" />
+                                    <input type="search" class="dataTable-search-activator" placeholder="Search" />
                                     <label for="dropdwonSearch">
                                         <button type="submit" class="bg-transparent border-0">
                                             <img src="assets/images/icons/search-purple.svg" alt="Icon">
@@ -949,14 +949,6 @@
                     </form>
 
                     <div class="search-right create-campaign-filter text-nowrap">
-                        <div class="mr-0 mr-md-3 pages-number">
-                            <div class="serach-number border-0 fw-500 d-flex align-items-center min-hieght-36">
-                                <p class="fz14 mr-2"><span>1</span>-<span>10</span> of <span>11</span></p>
-                                <button class="filter-number custom"><span class="mdi mdi-chevron-left"></span></button>
-                                <button class="filter-number custom active"><span class="mdi mdi-chevron-right"></span></button>
-                            </div>
-                        </div>
-
                         <div class="ra-filter mr-3 mr-md-3">
                             <div class="dropdown search-common">
                                 <button class="search-filter ra-primary-color border-0 radius-4 d-flex fw-500 d-flex align-items-center min-hieght-36 p-2x8" type="button" data-toggle="dropdown" aria-haspopup="true">
@@ -1059,11 +1051,11 @@
                 </div>
             </div>
 
-            <div class="wrapper">
+            <div class="wrapper-item">
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="dataTable table-responsive radius-4">
-                            <table class="display tableData-2" style="width:100%">
+                        <div class="dataTable table-responsive radius-4 all-datatable">
+                            <table class="display datatableActivator-2" style="width:100%">
                                 <thead>
                                     <tr>
                                         <th class="custom-table-head">
@@ -1660,8 +1652,6 @@
     <!-- Daterangepicker -->
     <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-
-    <!-- <script type="text/javascript" src="assets/vendor/aos/js/aos.js"></script> -->
     <!-- endbuild -->
 
     <script type="text/javascript" src="assets/js/script.js"></script>
