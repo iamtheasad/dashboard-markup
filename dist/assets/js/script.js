@@ -28,7 +28,7 @@ function inputAnimate() {
         });
 
 
-        $(document).on('change keyup paste','.rs-input', function (e) {
+        $(document).on('change keyup paste', '.rs-input', function (e) {
             // alert($(this).val());
             if ($(this).val() == '' || $(this).val() == null) {
                 $(this).parent(".rs-form").addClass('error');
@@ -55,7 +55,7 @@ function inputAnimate() {
     }
 }
 
-function rangeSlider(){
+function rangeSlider() {
     // Range slider
     function collision($div1, $div2) {
         var x1 = $div1.offset().left;
@@ -109,7 +109,7 @@ function rangeSlider(){
 }
 
 
-$(document).ajaxSuccess(function() {
+$(document).ajaxSuccess(function () {
     rangeSlider();
     inputAnimate();
 });
@@ -193,25 +193,11 @@ $(document).ajaxSuccess(function() {
     }
 
     /* Influencer Looping Data Table Id */
-    function dataTable2(element) {
-        var element = $(element);
-        if (element.length) {
-            $(element).DataTable({
-                "paging": false,
-                "searching": false,
-            });
-        }
-    }
-
-    /* Datatable 3 */
-    function dataTable3(element) {
-        var element = $(element);
-        if (element.length) {
-            $(element).DataTable({
-                "paging": false,
-                "searching": false,
-            });
-        }
+    function dataTable2() {
+        $(".tableData-2").DataTable({
+            "paging": true,
+            "searching": true
+        });
     }
 
     function getFileName() {
@@ -336,9 +322,9 @@ $(document).ajaxSuccess(function() {
         }
     }
 
-    function animateSearch(){
-        if($(".animate-search").length){
-            $(document).on('click', ".hidden-search-icon", function() {
+    function animateSearch() {
+        if ($(".animate-search").length) {
+            $(document).on('click', ".hidden-search-icon", function () {
                 $(this).siblings('.hidden-search').toggleClass('show')
             })
         }
@@ -358,18 +344,7 @@ $(document).ajaxSuccess(function() {
         rangeSlider();
         animateSearch();
 
-        dataTable3('#clientDashboardOverviewDataTable');
-
-        dataTable2('#myCampaignDatatTable');
-        dataTable2('#ongoingDataTable');
-        dataTable2('#completedDataTable');
-        dataTable2('#archievedDataTable');
-        dataTable2('#connectRequestsDataTable');
-        dataTable2('#inProgressDataTable');
-        dataTable2('#pendingApproval');
-        dataTable2('#myDealsCancelled');
-        dataTable2('#createCampaignDataTable');
-        dataTable2('#draftTab4ataTable');
+        dataTable2();
 
         dataTable('#propertyDataTable');
         dataTable('#propertyDetailsDataTable');
