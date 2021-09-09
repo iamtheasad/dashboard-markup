@@ -684,12 +684,13 @@
    /* Track */
    ::-webkit-scrollbar-track {
       background: rgba($darkPrimaryColor, .2);
+      border-radius: 20px;
    }
 
    /* Handle */
    ::-webkit-scrollbar-thumb {
       background: rgba($darkPrimaryColor, .6);
-      border-radius: 24px;
+      border-radius: 20px;
       height: 30px;
       transition: .2s;
    }
