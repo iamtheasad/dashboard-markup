@@ -9,6 +9,10 @@
       right: 32vh;
       top: -5vh;
       width: 580px;
+
+      @media screen  and (max-width: 1230px){
+         right: 1vh;
+      }
    }
 
    .dataTables_info {
@@ -46,6 +50,22 @@
    .page-item .page-link {
       border-radius: 4px;
    }
+}
+
+.all-datatable-myDeals {
+   .dataTables_wrapper {
+      top: -4.2vh;
+   }
+
+   .page-item.disabled .page-link {
+      color: rgba(71,83,100,.8);
+      background-color: rgba( $grayLightBgColor, .6);
+  }
+
+  .page-link {
+   background-color: $grayLightBgColor;
+  }
+
 }
 
 .all-side-border {

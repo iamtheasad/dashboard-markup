@@ -208,31 +208,19 @@ $(document).ajaxSuccess(function () {
                 return start + " - " + end + " of " + total;
             },
             "dom": "<'row'<'col-sm-8'><'col-sm-4 d-flex justify-content-end align-items-center'ip>>" +
-            "<'row'<'col-sm-12'>>" +
-            "<'row'<'col-sm-4'><'col-sm-4 text-center'><'col-sm-4'>>",
+                "<'row'<'col-sm-12'>>" +
+                "<'row'<'col-sm-4'><'col-sm-4 text-center'><'col-sm-4'>>",
             "language": {
                 "paginate": {
-                  "previous": "<img src='" + paginationIconLeft + "'/>",
-                  "next": "<img src='" + paginationIconRight + "'/>",
+                    "previous": "<img src='" + paginationIconLeft + "'/>",
+                    "next": "<img src='" + paginationIconRight + "'/>",
                 }
-              }
+            }
         });
 
         $(".dataTable-search-activator").keyup(function () {
             iTable2.search($(this).val()).draw();
         })
-
-        // var iTable2 = $(".datatableActivator-2").DataTable();
-
-        // var info = iTable2.page.info();
-        // if ($('.ra-custom-pagination').length) {
-        //     $('.ra-custom-pagination').html(
-        //         'Currently showing page ' + (info.page + 1) + ' of ' + info.pages + ' pages.'
-        //     );
-        // }
-
-
-
     }
 
     function getFileName() {
