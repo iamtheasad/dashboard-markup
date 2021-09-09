@@ -837,8 +837,12 @@ button:focus .dropdown-icon.up-3 {
   overflow: hidden;
   padding: 10px;
 
-  @media screen and(max-width: 767px) {
-    margin-right: 40px !important;
+  @media screen and(max-width: 991px) {
+    margin-right: 57px !important;
+  }
+
+  @media screen and(max-width: 576px) {
+    margin-right: 30px !important;
   }
 }
 
@@ -856,13 +860,6 @@ button:focus .dropdown-icon.up-3 {
     font-size: rem(14) !important;
     font-weight: 500;
     transition: .2s;
-
-    // @media screen and (max-width: 1040px) {
-    //   font-size: rem(11);
-    // }
-
-    @media screen and (max-width: 1040px) {
-      width: 48%;
   }
 
   .daterange-label-text {
@@ -887,41 +884,8 @@ button:focus .dropdown-icon.up-3 {
     .daterange-svg-icon [fill] {
       transition: .2s;
     }
-
-    @media screen and (max-width: 1252px) {
-      left: 90%;
-
-      svg {
-        width: 12px;
-      }
-    }
   }
 }
-
-.custom-row {
-  display: flex;
-  width: calc(100% - 48px);
-  margin: 0 auto;
-  
-  @media screen and (max-width: 1100) {
-    flex-wrap: wrap;
-  }
-}
-
-.a {
-  margin-right: 16px;
-  margin-bottom: 20px;
-  width: 100%;
-
-  @media screen and (max-width: 1100) {
-    width: 47%;
-  }
-}
-
-.a:last-child {
-  margin-right: 0px;
-}
-
 
 .multi-date-range {
   &.focus {
