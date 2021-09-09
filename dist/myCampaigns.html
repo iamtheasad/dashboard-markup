@@ -34,112 +34,752 @@
 
 <body class="preloader">
     <div class="d-flex">
-        <section class="sidebar-menu scrollbar">
-            <div class="menu-toggler">
+        <section class="sidebar-menu-2">
+            <div class="menu-toggler-2 d-none">
                 <i class="mdi mdi-menu"></i>
             </div>
-            <div class="site-logo">
-                <a class="d-block" href="/">
-                    <img src="assets/images/logo.svg" alt="G&R">
-                </a>
+            <div class="site-logo-2">
+                <a href="/"><img src="assets/images/icons/logo-2.svg" alt="G&R Logo"></a>
+                <div class="sidebar-user-info">
+                    <a href="#"><span class="user">G&R Admin</span></a>
+                    <span class="amount">BDT 10,000</span>
+                </div>
             </div>
-            <div class="menu-area">
+            <div class="menu-area-2">
                 <ul>
-                    <li class="active"><a href="/"><img class="icon" src="assets/images/icons/dashboard.svg" alt="">
-                            Dashboard</a></li>
-                    <li><a href="properties.html"><img class="icon" src="assets/images/icons/ad-properties.svg" alt="">Properties</a></li>
+                    <li class="active">
+                        <a href="/" class="sidebar-link">
+                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                            <div class="sidebar-text-box">
+                                <span class="sidebar-text">Dashboard</span>
+                                <span class="sidebar-notification">&nbsp;</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="properties.html" class="sidebar-link">
+                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                            <div class="sidebar-text-box">
+                                <span class="sidebar-text">Properties</span>
+                                <span class="sidebar-notification">&nbsp;</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="sidebar-link">
+                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                            <div class="sidebar-text-box">
+                                <span class="sidebar-text">Favorites</span>
+                                <span class="sidebar-notification">5</span>
+                            </div>
+                        </a>
+                    </li>
+                    <!-- Dropdown -->
+                    <li>
+                        <a href="#InfluncersSidebar2Dropdwon" class="sidebar-link" data-toggle="collapse" role="button" aria-expanded="false">
+                            <!-- <img src="assets/images/icons/arrow-down.svg" class="sidebar-icon-left sidebar-dropdown-icon-left" alt="Menu Icon"> -->
+                            <span class="sidebar-icon-left sidebar-dropdown-icon-left">
+                        <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M7.77552 0.232761C7.63333 0.0836789 7.44099 0 7.2405 0C7.04001 0 6.84766 0.0836789 6.70547 0.232761L3.98103 3.06631L1.29453 0.232761C1.15234 0.0836789 0.959994 0 0.759504 0C0.559014 0 0.36667 0.0836789 0.224481 0.232761C0.15335 0.307172 0.0968926 0.395701 0.0583643 0.493242C0.0198361 0.590782 0 0.695404 0 0.801071C0 0.906738 0.0198361 1.01136 0.0583643 1.1089C0.0968926 1.20644 0.15335 1.29497 0.224481 1.36938L3.44221 4.76323C3.51276 4.83826 3.59669 4.8978 3.68917 4.93844C3.78165 4.97908 3.88084 5 3.98103 5C4.08121 5 4.1804 4.97908 4.27288 4.93844C4.36536 4.8978 4.4493 4.83826 4.51985 4.76323L7.77552 1.36938C7.84665 1.29497 7.90311 1.20644 7.94163 1.1089C7.98016 1.01136 8 0.906738 8 0.801071C8 0.695404 7.98016 0.590782 7.94163 0.493242C7.90311 0.395701 7.84665 0.307172 7.77552 0.232761Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
 
-                    <li>
-                        <a href="#influencer-sidebar-menu" data-toggle="collapse"><img class="icon" src="assets/images/icons/influencer.svg" alt="">Influncers</a>
-                        <div id="influencer-sidebar-menu" class="collapse">
-                            <ul>
-                                <li><a href="influencerPlatform">Platform</a></li>
-                                <li><a href="influencer">Influencer Posts</a></li>
-                                <li><a href="influencerPost">Influencer Posts (Type: Advertiser)</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li><a href="placesAllAdded.html"><img class="icon" src="assets/images/icons/adplace.svg" alt="">Ad Place</a></li>
-                    <li><a href="connects.html"><img class="icon" src="assets/images/icons/connect.svg" alt="">Connects</a></li>
+                            <div class="sidebar-text-box">
+                                <span class="sidebar-text">Influncers</span>
+                                <span class="sidebar-icon-right">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M27.9688 15.9688H15.9688V27.9688H12.0312V15.9688H0.03125V12.0312H12.0312V0.03125H15.9688V12.0312H27.9688V15.9688Z"
+                                    fill="#000000" />
+                            </svg>
+                        </span>
+                            </div>
+                        </a>
 
-                    <li>
-                        <a href="#report-sidebar-menu" data-toggle="collapse">
-                            <img class="icon" src="assets/images/icons/report.svg" alt="">Report
-                        </a>
-                        <div id="report-sidebar-menu" class="collapse">
-                            <ul>
-                                <li><a href="overview.html">Overview</a></li>
-                                <li><a href="location.html">Location</a></li>
-                                <li><a href="revenue.html">Revenue</a></li>
-                                <li><a href="technology.html">Technology</a></li>
-                            </ul>
+                        <div class="collapse sidebar-dropdwon-2" id="InfluncersSidebar2Dropdwon">
+                            <div class="card card-body">
+                                <ul>
+                                    <li>
+                                        <a href="influencerPlatform" class="sidebar-link">
+                                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                                            <div class="sidebar-text-box">
+                                                <span class="sidebar-text">Platform</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                    <li>
+                                        <a href="influencer" class="sidebar-link">
+                                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                                            <div class="sidebar-text-box">
+                                                <span class="sidebar-text">Influencer Posts</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="influencerPost" class="sidebar-link">
+                                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                                            <div class="sidebar-text-box">
+                                                <span class="sidebar-text">Influencer Posts (Type: Advertiser)</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </li>
+                    <li>
+                        <a href="placesAllAdded.html" class="sidebar-link">
+                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                            <div class="sidebar-text-box">
+                                <span class="sidebar-text">Ad Place</span>
+                                <span class="sidebar-notification">&nbsp;</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="connects.html" class="sidebar-link">
+                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                            <div class="sidebar-text-box">
+                                <span class="sidebar-text">Connects</span>
+                                <span class="sidebar-notification">&nbsp;</span>
+                            </div>
+                        </a>
+                    </li>
+                    <!-- Dropdown -->
+                    <li>
+                        <a href="#reportSidebar2Dropdwon" class="sidebar-link" data-toggle="collapse" role="button" aria-expanded="false">
+                            <!-- <img src="assets/images/icons/arrow-down.svg" class="sidebar-icon-left sidebar-dropdown-icon-left" alt="Menu Icon"> -->
+                            <span class="sidebar-icon-left sidebar-dropdown-icon-left">
+                        <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M7.77552 0.232761C7.63333 0.0836789 7.44099 0 7.2405 0C7.04001 0 6.84766 0.0836789 6.70547 0.232761L3.98103 3.06631L1.29453 0.232761C1.15234 0.0836789 0.959994 0 0.759504 0C0.559014 0 0.36667 0.0836789 0.224481 0.232761C0.15335 0.307172 0.0968926 0.395701 0.0583643 0.493242C0.0198361 0.590782 0 0.695404 0 0.801071C0 0.906738 0.0198361 1.01136 0.0583643 1.1089C0.0968926 1.20644 0.15335 1.29497 0.224481 1.36938L3.44221 4.76323C3.51276 4.83826 3.59669 4.8978 3.68917 4.93844C3.78165 4.97908 3.88084 5 3.98103 5C4.08121 5 4.1804 4.97908 4.27288 4.93844C4.36536 4.8978 4.4493 4.83826 4.51985 4.76323L7.77552 1.36938C7.84665 1.29497 7.90311 1.20644 7.94163 1.1089C7.98016 1.01136 8 0.906738 8 0.801071C8 0.695404 7.98016 0.590782 7.94163 0.493242C7.90311 0.395701 7.84665 0.307172 7.77552 0.232761Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
 
-                    <li>
-                        <a href="#payment-sidebar-menu" data-toggle="collapse"><img class="icon" src="assets/images/icons/money.svg" alt="">Payments</a>
-                        <div id="payment-sidebar-menu" class="collapse">
-                            <ul>
-                                <li><a href="estimatedRevenuePage.html">Estimated Revennue</a></li>
-                                <li><a href="finilizedPayment.html">Finilized Payments</a></li>
-                                <li><a href="balance.html">Balance</a></li>
-                            </ul>
+                            <div class="sidebar-text-box">
+                                <span class="sidebar-text">Report</span>
+                                <span class="sidebar-icon-right">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M27.9688 15.9688H15.9688V27.9688H12.0312V15.9688H0.03125V12.0312H12.0312V0.03125H15.9688V12.0312H27.9688V15.9688Z"
+                                    fill="#000000" />
+                            </svg>
+                        </span>
+                            </div>
+                        </a>
+
+                        <div class="collapse sidebar-dropdwon-2" id="reportSidebar2Dropdwon">
+                            <div class="card card-body">
+                                <ul>
+                                    <li>
+                                        <a href="overview.html" class="sidebar-link">
+                                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                                            <div class="sidebar-text-box">
+                                                <span class="sidebar-text">Overview</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                    <li>
+                                        <a href="location.html" class="sidebar-link">
+                                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                                            <div class="sidebar-text-box">
+                                                <span class="sidebar-text">Location</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="revenue.html" class="sidebar-link">
+                                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                                            <div class="sidebar-text-box">
+                                                <span class="sidebar-text">Revenue</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="technology.html" class="sidebar-link">
+                                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                                            <div class="sidebar-text-box">
+                                                <span class="sidebar-text">Technology</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </li>
-                    <li><a href="clientDashboardOverview.html"><img class="icon" src="assets/images/icons/connect.svg" alt="Icon">Client Campaigns</a></li>
+                    <!-- Dropdown -->
                     <li>
-                        <a href="#advertiserCampaigns" data-toggle="collapse">
-                            <img class="icon" src="assets/images/icons/arrow-up.svg" alt="">Campaigns
+                        <a href="#paymentsSidebar2Dropdwon" class="sidebar-link" data-toggle="collapse" role="button" aria-expanded="false">
+                            <!-- <img src="assets/images/icons/arrow-down.svg" class="sidebar-icon-left sidebar-dropdown-icon-left" alt="Menu Icon"> -->
+                            <span class="sidebar-icon-left sidebar-dropdown-icon-left">
+                        <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M7.77552 0.232761C7.63333 0.0836789 7.44099 0 7.2405 0C7.04001 0 6.84766 0.0836789 6.70547 0.232761L3.98103 3.06631L1.29453 0.232761C1.15234 0.0836789 0.959994 0 0.759504 0C0.559014 0 0.36667 0.0836789 0.224481 0.232761C0.15335 0.307172 0.0968926 0.395701 0.0583643 0.493242C0.0198361 0.590782 0 0.695404 0 0.801071C0 0.906738 0.0198361 1.01136 0.0583643 1.1089C0.0968926 1.20644 0.15335 1.29497 0.224481 1.36938L3.44221 4.76323C3.51276 4.83826 3.59669 4.8978 3.68917 4.93844C3.78165 4.97908 3.88084 5 3.98103 5C4.08121 5 4.1804 4.97908 4.27288 4.93844C4.36536 4.8978 4.4493 4.83826 4.51985 4.76323L7.77552 1.36938C7.84665 1.29497 7.90311 1.20644 7.94163 1.1089C7.98016 1.01136 8 0.906738 8 0.801071C8 0.695404 7.98016 0.590782 7.94163 0.493242C7.90311 0.395701 7.84665 0.307172 7.77552 0.232761Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+
+                            <div class="sidebar-text-box">
+                                <span class="sidebar-text">Payments</span>
+                                <span class="sidebar-icon-right">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M27.9688 15.9688H15.9688V27.9688H12.0312V15.9688H0.03125V12.0312H12.0312V0.03125H15.9688V12.0312H27.9688V15.9688Z"
+                                    fill="#000000" />
+                            </svg>
+                        </span>
+                            </div>
                         </a>
-                        <div id="advertiserCampaigns" class="collapse">
-                            <ul>
-                                <li><a href="createCampaign.html"><img class="icon" src="assets/images/icons/all.svg" alt=""> All</a></li>
-                                <li><a href="createCampaign.html">Scheduled</a></li>
-                                <li><a href="createCampaign.html">Ongoing</a></li>
-                                <li><a href="createCampaign.html">Completed</a></li>
-                                <li><a href="draft.html">Draft</a></li>
-                                <li><a href="createCampaign.html">Archieved</a></li>
-                            </ul>
+
+                        <div class="collapse sidebar-dropdwon-2" id="paymentsSidebar2Dropdwon">
+                            <div class="card card-body">
+                                <ul>
+                                    <li>
+                                        <a href="estimatedRevenuePage.html" class="sidebar-link">
+                                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                                            <div class="sidebar-text-box">
+                                                <span class="sidebar-text">Estimated Revennue</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                    <li>
+                                        <a href="finilizedPayment.html" class="sidebar-link">
+                                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                                            <div class="sidebar-text-box">
+                                                <span class="sidebar-text">Finilized Payments</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="balance.html" class="sidebar-link">
+                                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                                            <div class="sidebar-text-box">
+                                                <span class="sidebar-text">Balance</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </li>
                     <li>
-                        <a href="#my-deals-sidebar-menu" data-toggle="collapse">
-                            <img class="icon" src="assets/images/icons/arrow-up.svg" alt="">My Deals
+                        <a href="clientDashboardOverview.html" class="sidebar-link">
+                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                            <div class="sidebar-text-box">
+                                <span class="sidebar-text">Client Campaigns</span>
+                                <span class="sidebar-notification">&nbsp;</span>
+                            </div>
                         </a>
-                        <div id="my-deals-sidebar-menu" class="collapse">
-                            <ul>
-                                <li><a href="myDeals.html">Connect Requests</a></li>
-                                <li><a href="myDeals.html">In Progress</a></li>
-                                <li><a href="myDeals.html">Pending Approval</a></li>
-                                <li><a href="myDeals.html">Cancelled</a></li>
-                            </ul>
+                    </li>
+                    <!-- Dropdown -->
+                    <li>
+                        <a href="#campaignsSidebar2Dropdwon" class="sidebar-link" data-toggle="collapse" role="button" aria-expanded="false">
+                            <!-- <img src="assets/images/icons/arrow-down.svg" class="sidebar-icon-left sidebar-dropdown-icon-left" alt="Menu Icon"> -->
+                            <span class="sidebar-icon-left sidebar-dropdown-icon-left">
+                        <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M7.77552 0.232761C7.63333 0.0836789 7.44099 0 7.2405 0C7.04001 0 6.84766 0.0836789 6.70547 0.232761L3.98103 3.06631L1.29453 0.232761C1.15234 0.0836789 0.959994 0 0.759504 0C0.559014 0 0.36667 0.0836789 0.224481 0.232761C0.15335 0.307172 0.0968926 0.395701 0.0583643 0.493242C0.0198361 0.590782 0 0.695404 0 0.801071C0 0.906738 0.0198361 1.01136 0.0583643 1.1089C0.0968926 1.20644 0.15335 1.29497 0.224481 1.36938L3.44221 4.76323C3.51276 4.83826 3.59669 4.8978 3.68917 4.93844C3.78165 4.97908 3.88084 5 3.98103 5C4.08121 5 4.1804 4.97908 4.27288 4.93844C4.36536 4.8978 4.4493 4.83826 4.51985 4.76323L7.77552 1.36938C7.84665 1.29497 7.90311 1.20644 7.94163 1.1089C7.98016 1.01136 8 0.906738 8 0.801071C8 0.695404 7.98016 0.590782 7.94163 0.493242C7.90311 0.395701 7.84665 0.307172 7.77552 0.232761Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+
+                            <div class="sidebar-text-box">
+                                <span class="sidebar-text">Campaigns</span>
+                                <span class="sidebar-icon-right">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M27.9688 15.9688H15.9688V27.9688H12.0312V15.9688H0.03125V12.0312H12.0312V0.03125H15.9688V12.0312H27.9688V15.9688Z"
+                                    fill="#000000" />
+                            </svg>
+                        </span>
+                            </div>
+                        </a>
+
+                        <div class="collapse sidebar-dropdwon-2" id="campaignsSidebar2Dropdwon">
+                            <div class="card card-body">
+                                <ul>
+                                    <li>
+                                        <a href="createCampaign.html" class="sidebar-link">
+                                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                                            <div class="sidebar-text-box">
+                                                <span class="sidebar-text">All</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                    <li>
+                                        <a href="createCampaign.html" class="sidebar-link">
+                                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                                            <div class="sidebar-text-box">
+                                                <span class="sidebar-text">Scheduled</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="createCampaign.html" class="sidebar-link">
+                                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                                            <div class="sidebar-text-box">
+                                                <span class="sidebar-text">Ongoing</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="createCampaign.html" class="sidebar-link">
+                                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                                            <div class="sidebar-text-box">
+                                                <span class="sidebar-text">Completed</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="draft.html" class="sidebar-link">
+                                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                                            <div class="sidebar-text-box">
+                                                <span class="sidebar-text">Draft</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="createCampaign.html" class="sidebar-link">
+                                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                                            <div class="sidebar-text-box">
+                                                <span class="sidebar-text">Archieved</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </li>
+                    <!-- Dropdown -->
                     <li>
-                        <a href="#my-campaigns-sidebar-menu" data-toggle="collapse">
-                            <img class="icon" src="assets/images/icons/arrow-up.svg" alt="">My Campaigns
+                        <a href="#myDealsSidebar2Dropdwon" class="sidebar-link" data-toggle="collapse" role="button" aria-expanded="false">
+                            <!-- <img src="assets/images/icons/arrow-down.svg" class="sidebar-icon-left sidebar-dropdown-icon-left" alt="Menu Icon"> -->
+                            <span class="sidebar-icon-left sidebar-dropdown-icon-left">
+                        <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M7.77552 0.232761C7.63333 0.0836789 7.44099 0 7.2405 0C7.04001 0 6.84766 0.0836789 6.70547 0.232761L3.98103 3.06631L1.29453 0.232761C1.15234 0.0836789 0.959994 0 0.759504 0C0.559014 0 0.36667 0.0836789 0.224481 0.232761C0.15335 0.307172 0.0968926 0.395701 0.0583643 0.493242C0.0198361 0.590782 0 0.695404 0 0.801071C0 0.906738 0.0198361 1.01136 0.0583643 1.1089C0.0968926 1.20644 0.15335 1.29497 0.224481 1.36938L3.44221 4.76323C3.51276 4.83826 3.59669 4.8978 3.68917 4.93844C3.78165 4.97908 3.88084 5 3.98103 5C4.08121 5 4.1804 4.97908 4.27288 4.93844C4.36536 4.8978 4.4493 4.83826 4.51985 4.76323L7.77552 1.36938C7.84665 1.29497 7.90311 1.20644 7.94163 1.1089C7.98016 1.01136 8 0.906738 8 0.801071C8 0.695404 7.98016 0.590782 7.94163 0.493242C7.90311 0.395701 7.84665 0.307172 7.77552 0.232761Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+
+                            <div class="sidebar-text-box">
+                                <span class="sidebar-text">My Deals</span>
+                                <span class="sidebar-icon-right">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M27.9688 15.9688H15.9688V27.9688H12.0312V15.9688H0.03125V12.0312H12.0312V0.03125H15.9688V12.0312H27.9688V15.9688Z"
+                                    fill="#000000" />
+                            </svg>
+                        </span>
+                            </div>
                         </a>
-                        <div id="my-campaigns-sidebar-menu" class="collapse">
-                            <ul>
-                                <li><a href="myCampaigns.html">Scheduled</a></li>
-                                <li><a href="myCampaigns.html">Ongoing</a></li>
-                                <li><a href="myCampaigns.html">Completed</a></li>
-                                <li><a href="myCampaigns.html">Archieved</a></li>
-                            </ul>
+
+                        <div class="collapse sidebar-dropdwon-2" id="myDealsSidebar2Dropdwon">
+                            <div class="card card-body">
+                                <ul>
+                                    <li>
+                                        <a href="myDeals.html" class="sidebar-link">
+                                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                                            <div class="sidebar-text-box">
+                                                <span class="sidebar-text">Connect Requests</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                    <li>
+                                        <a href="myDeals.html" class="sidebar-link">
+                                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                                            <div class="sidebar-text-box">
+                                                <span class="sidebar-text">In Progress</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="myDeals.html" class="sidebar-link">
+                                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                                            <div class="sidebar-text-box">
+                                                <span class="sidebar-text">Pending Approval</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="myDeals.html" class="sidebar-link">
+                                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                                            <div class="sidebar-text-box">
+                                                <span class="sidebar-text">Cancelled</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </li>
+                    <!-- Dropdown -->
                     <li>
-                        <a href="#settings-sidebar-menu" data-toggle="collapse">
-                            <img class="icon" src="assets/images/icons/settings.svg" alt="">Settings
+                        <a href="#myCampaignsSidebar2Dropdwon" class="sidebar-link" data-toggle="collapse" role="button" aria-expanded="false">
+                            <!-- <img src="assets/images/icons/arrow-down.svg" class="sidebar-icon-left sidebar-dropdown-icon-left" alt="Menu Icon"> -->
+                            <span class="sidebar-icon-left sidebar-dropdown-icon-left">
+                        <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M7.77552 0.232761C7.63333 0.0836789 7.44099 0 7.2405 0C7.04001 0 6.84766 0.0836789 6.70547 0.232761L3.98103 3.06631L1.29453 0.232761C1.15234 0.0836789 0.959994 0 0.759504 0C0.559014 0 0.36667 0.0836789 0.224481 0.232761C0.15335 0.307172 0.0968926 0.395701 0.0583643 0.493242C0.0198361 0.590782 0 0.695404 0 0.801071C0 0.906738 0.0198361 1.01136 0.0583643 1.1089C0.0968926 1.20644 0.15335 1.29497 0.224481 1.36938L3.44221 4.76323C3.51276 4.83826 3.59669 4.8978 3.68917 4.93844C3.78165 4.97908 3.88084 5 3.98103 5C4.08121 5 4.1804 4.97908 4.27288 4.93844C4.36536 4.8978 4.4493 4.83826 4.51985 4.76323L7.77552 1.36938C7.84665 1.29497 7.90311 1.20644 7.94163 1.1089C7.98016 1.01136 8 0.906738 8 0.801071C8 0.695404 7.98016 0.590782 7.94163 0.493242C7.90311 0.395701 7.84665 0.307172 7.77552 0.232761Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+
+                            <div class="sidebar-text-box">
+                                <span class="sidebar-text">My Campaigns</span>
+                                <span class="sidebar-icon-right">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M27.9688 15.9688H15.9688V27.9688H12.0312V15.9688H0.03125V12.0312H12.0312V0.03125H15.9688V12.0312H27.9688V15.9688Z"
+                                    fill="#000000" />
+                            </svg>
+                        </span>
+                            </div>
                         </a>
-                        <div id="settings-sidebar-menu" class="collapse">
-                            <ul>
-                                <li><a href="accountSettings.html">Account Settings</a></li>
-                                <li><a href="users.html">Users</a></li>
-                                <li><a href="activityLogPage.html">Activity Log</a></li>
-                                <li><a href="login.html">Logout</a></li>
-                            </ul>
+
+                        <div class="collapse sidebar-dropdwon-2" id="myCampaignsSidebar2Dropdwon">
+                            <div class="card card-body">
+                                <ul>
+                                    <li>
+                                        <a href="myCampaigns.html" class="sidebar-link">
+                                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                                            <div class="sidebar-text-box">
+                                                <span class="sidebar-text">Scheduled</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                    <li>
+                                        <a href="myCampaigns.html" class="sidebar-link">
+                                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                                            <div class="sidebar-text-box">
+                                                <span class="sidebar-text">Ongoing</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="myCampaigns.html" class="sidebar-link">
+                                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                                            <div class="sidebar-text-box">
+                                                <span class="sidebar-text">Completed</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="myCampaigns.html" class="sidebar-link">
+                                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                                            <div class="sidebar-text-box">
+                                                <span class="sidebar-text">Archieved</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
+                    </li>
+                    <!-- Dropdown -->
+                    <li>
+                        <a href="#settingsSidebar2Dropdwon" class="sidebar-link" data-toggle="collapse" role="button" aria-expanded="false">
+                            <!-- <img src="assets/images/icons/arrow-down.svg" class="sidebar-icon-left sidebar-dropdown-icon-left" alt="Menu Icon"> -->
+                            <span class="sidebar-icon-left sidebar-dropdown-icon-left">
+                        <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M7.77552 0.232761C7.63333 0.0836789 7.44099 0 7.2405 0C7.04001 0 6.84766 0.0836789 6.70547 0.232761L3.98103 3.06631L1.29453 0.232761C1.15234 0.0836789 0.959994 0 0.759504 0C0.559014 0 0.36667 0.0836789 0.224481 0.232761C0.15335 0.307172 0.0968926 0.395701 0.0583643 0.493242C0.0198361 0.590782 0 0.695404 0 0.801071C0 0.906738 0.0198361 1.01136 0.0583643 1.1089C0.0968926 1.20644 0.15335 1.29497 0.224481 1.36938L3.44221 4.76323C3.51276 4.83826 3.59669 4.8978 3.68917 4.93844C3.78165 4.97908 3.88084 5 3.98103 5C4.08121 5 4.1804 4.97908 4.27288 4.93844C4.36536 4.8978 4.4493 4.83826 4.51985 4.76323L7.77552 1.36938C7.84665 1.29497 7.90311 1.20644 7.94163 1.1089C7.98016 1.01136 8 0.906738 8 0.801071C8 0.695404 7.98016 0.590782 7.94163 0.493242C7.90311 0.395701 7.84665 0.307172 7.77552 0.232761Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+
+                            <div class="sidebar-text-box">
+                                <span class="sidebar-text">Settings</span>
+                                <span class="sidebar-icon-right">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M27.9688 15.9688H15.9688V27.9688H12.0312V15.9688H0.03125V12.0312H12.0312V0.03125H15.9688V12.0312H27.9688V15.9688Z"
+                                    fill="#000000" />
+                            </svg>
+                        </span>
+                            </div>
+                        </a>
+
+                        <div class="collapse sidebar-dropdwon-2" id="settingsSidebar2Dropdwon">
+                            <div class="card card-body">
+                                <ul>
+                                    <li>
+                                        <a href="accountSettings.html" class="sidebar-link">
+                                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                                            <div class="sidebar-text-box">
+                                                <span class="sidebar-text">Account Settings</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                    <li>
+                                        <a href="users.html" class="sidebar-link">
+                                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                                            <div class="sidebar-text-box">
+                                                <span class="sidebar-text">Users</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="activityLogPage.html" class="sidebar-link">
+                                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                                            <div class="sidebar-text-box">
+                                                <span class="sidebar-text">Activity Log</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="login.html" class="sidebar-link">
+                                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                                            <div class="sidebar-text-box">
+                                                <span class="sidebar-text">Logout</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+                <ul>
+                    <li>
+                        <a href="#" class="sidebar-link">
+                            <span class="sidebar-icon-left">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path opacity="0.12"
+                                d="M12 15.5156C11.0312 15.5156 10.2031 15.1719 9.51562 14.4844C8.82812 13.7969 8.48438 12.9688 8.48438 12C8.48438 11.0312 8.82812 10.2031 9.51562 9.51562C10.2031 8.82812 11.0312 8.48438 12 8.48438C12.9688 8.48438 13.7969 8.82812 14.4844 9.51562C15.1719 10.2031 15.5156 11.0312 15.5156 12C15.5156 12.9688 15.1719 13.7969 14.4844 14.4844C13.7969 15.1719 12.9688 15.5156 12 15.5156Z"
+                                fill="#475364" />
+                            <path
+                                d="M12 15.5156C11.0312 15.5156 10.2031 15.1719 9.51562 14.4844C8.82812 13.7969 8.48438 12.9688 8.48438 12C8.48438 11.0312 8.82812 10.2031 9.51562 9.51562C10.2031 8.82812 11.0312 8.48438 12 8.48438C12.9688 8.48438 13.7969 8.82812 14.4844 9.51562C15.1719 10.2031 15.5156 11.0312 15.5156 12C15.5156 12.9688 15.1719 13.7969 14.4844 14.4844C13.7969 15.1719 12.9688 15.5156 12 15.5156ZM19.4531 12.9844C19.4844 12.6094 19.5 12.2812 19.5 12C19.5 11.7188 19.4844 11.3906 19.4531 11.0156L21.5625 9.375C21.6562 9.28125 21.7031 9.1875 21.7031 9.09375C21.7344 8.96875 21.7188 8.84375 21.6562 8.71875L19.6406 5.25C19.6094 5.15625 19.5312 5.09375 19.4062 5.0625C19.2812 5 19.1562 5 19.0312 5.0625L16.5469 6.04688C15.9844 5.60938 15.4219 5.28125 14.8594 5.0625L14.4844 2.4375C14.4844 2.3125 14.4375 2.21875 14.3438 2.15625C14.25 2.0625 14.1406 2.01562 14.0156 2.01562H9.98438C9.85938 2.01562 9.75 2.0625 9.65625 2.15625C9.5625 2.21875 9.51562 2.3125 9.51562 2.4375L9.14062 5.0625C8.57812 5.28125 8.01562 5.60938 7.45312 6.04688L4.96875 5.0625C4.84375 5 4.71875 5 4.59375 5.0625C4.46875 5.09375 4.39062 5.15625 4.35938 5.25L2.34375 8.71875C2.28125 8.84375 2.25 8.96875 2.25 9.09375C2.28125 9.1875 2.34375 9.28125 2.4375 9.375L4.54688 11.0156C4.51562 11.3906 4.5 11.7188 4.5 12C4.5 12.2812 4.51562 12.6094 4.54688 12.9844L2.4375 14.625C2.34375 14.7188 2.28125 14.8281 2.25 14.9531C2.25 15.0469 2.28125 15.1562 2.34375 15.2812L4.35938 18.75C4.39062 18.8438 4.46875 18.9219 4.59375 18.9844C4.71875 19.0156 4.84375 19 4.96875 18.9375L7.45312 17.9531C8.01562 18.3906 8.57812 18.7188 9.14062 18.9375L9.51562 21.5625C9.51562 21.6875 9.5625 21.7812 9.65625 21.8438C9.75 21.9375 9.85938 21.9844 9.98438 21.9844H14.0156C14.1406 21.9844 14.25 21.9375 14.3438 21.8438C14.4375 21.7812 14.4844 21.6875 14.4844 21.5625L14.8594 18.9375C15.4531 18.6875 16.0156 18.3594 16.5469 17.9531L19.0312 18.9375C19.1562 19 19.2812 19.0156 19.4062 18.9844C19.5312 18.9219 19.6094 18.8438 19.6406 18.75L21.6562 15.2812C21.7188 15.1562 21.7344 15.0469 21.7031 14.9531C21.7031 14.8281 21.6562 14.7188 21.5625 14.625L19.4531 12.9844Z"
+                                fill="#475364" />
+                        </svg>
+                    </span>
+                            <div class="sidebar-text-box">
+                                <span class="sidebar-text">Settings</span>
+                                <span class="sidebar-notification">&nbsp;</span>
+                            </div>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -223,56 +863,132 @@
                         <div class="ml-20 mr-20">
                             <div class="filter-wrapper mb-1 mb-md-2 mt-2 mt-md-0">
                                 <form action="" class="rs-form ra-form custom-form d-flex justify-content-between align-items-center mb-md-0 mb-3">
-                                    <button type="submit" class="position-absolute search-icon border-0 bg-transparent pl-3" for="searchInput">
+                                    <button type="submit" class="position-absolute border-0 bg-transparent pl-3" for="searchInput">
                                         <span class="mdi mdi-magnify search-img gray-light-text-color fz20"></span>
                                     </button>
-                                    <input type="search" class="rs-input ra-input ra-input-border-transparent ra-input-primary-bg animate search-input-custom border-0 ra-data-table-bg gray-light-text-color fz14 fw-500 min-hieght-36 pl-5" id="searchInput" placeholder="Search in Scheduled">
+                                    <input type="search" class="rs-input ra-input ra-input-border-transparent ra-input-primary-bg animate search-input-custom border-0 ra-data-table-bg gray-light-text-color fz14 fw-500 min-hieght-36 pl-5 dataTable-search-activator" id="searchInput" placeholder="Search in Scheduled">
                                 </form>
 
-                                <div class="search-right d-flex align-items-center justify-content-center">
-                                    <div class="mr-1 mr-md-3">
-                                        <button class="serach-number border-0 fw-500 d-flex align-items-center min-hieght-36">
-                                            <p class="fz14"><span>1</span>-<span>4</span></p>
-                                        </button>
-                                    </div>
-                                    <div class="ra-filter mr-1 mr-md-3">
+                                <div class="search-right create-campaign-filter text-nowrap">
+                                    <div class="ra-filter mr-3 mr-md-3">
                                         <div class="dropdown search-common">
-                                            <button class="search-filter border-0 radius-5 d-flex gray-light-bg-color fw-500 d-flex align-items-center min-hieght-36" type="button" id="serach-filter" data-toggle="dropdown" aria-haspopup="true">
-                                                <span class="mdi mdi-filter-outline fz20 pr-2"></span>
+                                            <button class="search-filter ra-primary-color border-0 radius-4 d-flex gray-light-bg-color fw-500 d-flex align-items-center min-hieght-36 p-2x8" type="button" data-toggle="dropdown" aria-haspopup="true">
+                                                <span class="pr-2 d-flex">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                   <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M4.33274 2.25581C3.72727 2.25581 3.23077 2.73671 3.23077 3.40408V5.34941C3.23077 5.4789 3.28063 5.70253 3.39893 5.96247C3.51443 6.21627 3.66744 6.44332 3.8156 6.58925L3.82681 6.60058L7.08978 9.98377C7.10207 9.99651 7.11381 10.0098 7.12499 10.0235C7.3421 10.2909 7.5436 10.6432 7.69195 11.0085C7.83874 11.37 7.95349 11.7932 7.95349 12.2004V16.6831C7.95349 17.0912 8.18028 17.4211 8.531 17.6044C8.88648 17.7902 9.32367 17.7982 9.68112 17.5839L10.8777 16.8262C10.8797 16.8249 10.8817 16.8237 10.8837 16.8224C10.887 16.8204 10.8904 16.8184 10.8937 16.8164C10.9781 16.7665 11.1017 16.6391 11.2078 16.4382C11.3125 16.2398 11.3596 16.0461 11.3596 15.9219V12.2849C11.3596 11.8465 11.4688 11.38 11.6477 10.9645C11.8245 10.554 12.0893 10.1474 12.4404 9.85654L16.1107 6.66171C16.2579 6.51261 16.4268 6.26821 16.5595 5.98059C16.697 5.68275 16.7692 5.39579 16.7692 5.18025V3.3195C16.7692 2.75659 16.2926 2.25581 15.6673 2.25581H4.33274ZM2 3.40408C2 2.04154 3.04911 1 4.33274 1H15.6673C16.931 1 18 2.02166 18 3.3195V5.18025C18 5.64136 17.8576 6.11561 17.673 6.51556C17.4874 6.91778 17.2327 7.30221 16.9533 7.57734C16.9443 7.58628 16.9349 7.59493 16.9253 7.60328L13.233 10.8173C13.2305 10.8195 13.228 10.8216 13.2255 10.8238C13.2235 10.8255 13.2214 10.8272 13.2194 10.8289C13.059 10.9605 12.8969 11.1854 12.7745 11.4698C12.6529 11.7521 12.5903 12.0468 12.5903 12.2849V15.9219C12.5903 16.3051 12.4657 16.7034 12.2913 17.0337C12.1199 17.3585 11.8602 17.6932 11.5197 17.8977L10.3245 18.6545L10.3143 18.6608C9.55631 19.1202 8.66477 19.0853 7.96989 18.7221C7.26873 18.3556 6.72272 17.6282 6.72272 16.6831V12.2004C6.72272 12.0155 6.66573 11.7621 6.55492 11.4892C6.45002 11.2309 6.31496 10.9996 6.19251 10.8438L2.9547 7.48674C2.67624 7.21052 2.44503 6.84819 2.28264 6.49138C2.12187 6.13812 2 5.7274 2 5.34941V3.40408Z"
+                      fill="#475364" stroke="#475364" stroke-width="0.4" stroke-miterlimit="10"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+             </span>
                                                 <p class="fz14">Filter By</p>
-                                                <span class="mdi mdi-chevron-up fz20 pl-2"></span>
+                                                <div class="pl-2 pr-3 d-flex">
+                                                    <span class="dropdown-icon down-3">
+                   <svg width="8" height="5" viewBox="0 0 8 5" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                         d="M7.77552 0.232761C7.63333 0.0836789 7.44099 0 7.2405 0C7.04001 0 6.84766 0.0836789 6.70547 0.232761L3.98103 3.06631L1.29453 0.232761C1.15234 0.0836789 0.959994 0 0.759504 0C0.559014 0 0.36667 0.0836789 0.224481 0.232761C0.15335 0.307172 0.0968926 0.395701 0.0583643 0.493242C0.0198361 0.590782 0 0.695404 0 0.801071C0 0.906738 0.0198361 1.01136 0.0583643 1.1089C0.0968926 1.20644 0.15335 1.29497 0.224481 1.36938L3.44221 4.76323C3.51276 4.83826 3.59669 4.8978 3.68917 4.93844C3.78165 4.97908 3.88084 5 3.98103 5C4.08121 5 4.1804 4.97908 4.27288 4.93844C4.36536 4.8978 4.4493 4.83826 4.51985 4.76323L7.77552 1.36938C7.84665 1.29497 7.90311 1.20644 7.94163 1.1089C7.98016 1.01136 8 0.906738 8 0.801071C8 0.695404 7.98016 0.590782 7.94163 0.493242C7.90311 0.395701 7.84665 0.307172 7.77552 0.232761Z"
+                         fill="#475364" />
+                   </svg>
+                </span>
+                                                    <span class="dropdown-icon up-3">
+                   <svg width="8" height="5" viewBox="0 0 8 5" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                         d="M7.77552 0.232761C7.63333 0.0836789 7.44099 0 7.2405 0C7.04001 0 6.84766 0.0836789 6.70547 0.232761L3.98103 3.06631L1.29453 0.232761C1.15234 0.0836789 0.959994 0 0.759504 0C0.559014 0 0.36667 0.0836789 0.224481 0.232761C0.15335 0.307172 0.0968926 0.395701 0.0583643 0.493242C0.0198361 0.590782 0 0.695404 0 0.801071C0 0.906738 0.0198361 1.01136 0.0583643 1.1089C0.0968926 1.20644 0.15335 1.29497 0.224481 1.36938L3.44221 4.76323C3.51276 4.83826 3.59669 4.8978 3.68917 4.93844C3.78165 4.97908 3.88084 5 3.98103 5C4.08121 5 4.1804 4.97908 4.27288 4.93844C4.36536 4.8978 4.4493 4.83826 4.51985 4.76323L7.77552 1.36938C7.84665 1.29497 7.90311 1.20644 7.94163 1.1089C7.98016 1.01136 8 0.906738 8 0.801071C8 0.695404 7.98016 0.590782 7.94163 0.493242C7.90311 0.395701 7.84665 0.307172 7.77552 0.232761Z"
+                         fill="#475364" />
+                   </svg>
+                </span>
+                                                </div>
                                             </button>
-                                            <div class="dropdown-menu search-dropdown" aria-labelledby="serach-filter">
-                                                <a class="dropdown-item" href="#">Campaign Name</a>
-                                                <a class="dropdown-item" href="#">Type</a>
-                                                <a class="dropdown-item" href="#">Budget</a>
-                                                <a class="dropdown-item" href="#">Category</a>
+                                            <div class="dropdown-menu filter-dropdown">
+                                                <a class="dropdown-item ra-primary-color" href="#">Campaign Name</a>
+                                                <a class="dropdown-item ra-primary-color" href="#">Type</a>
+                                                <a class="dropdown-item ra-primary-color" href="#">Budget</a>
+                                                <a class="dropdown-item ra-primary-color" href="#">Category</a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="ra-filter">
+
+                                    <div class="ra-filter mr-3 mr-md-0">
                                         <div class="dropdown search-common">
-                                            <button class="search-filter border-0 radius-5 d-flex gray-light-bg-color fw-500 d-flex align-items-center min-hieght-36" type="button" id="serach-filter" data-toggle="dropdown" aria-haspopup="true">
-                                                <span class="mdi mdi-sort-descending fz20 pr-2"></span>
-                                                <p class="fz14">Sort By</p>
-                                                <span class="mdi mdi-chevron-up fz20 pl-2"></span>
+                                            <button class="search-filter ra-primary-color border-0 radius-4 d-flex gray-light-bg-color fw-500 d-flex align-items-center min-hieght-36 p-2x8" type="button" data-toggle="dropdown" aria-haspopup="true">
+                                                <span class="pr-2 d-flex">
+              <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.86389 8.09902L3.60295 8.37401V1.41665C3.60295 1.17354 3.50814 0.940385 3.3394 0.76848C3.17065 0.596575 2.94178 0.5 2.70313 0.5C2.46448 0.5 2.23561 0.596575 2.06686 0.76848C1.89812 0.940385 1.80331 1.17354 1.80331 1.41665V8.37401L1.54237 8.09902C1.37293 7.92641 1.14312 7.82944 0.903498 7.82944C0.663875 7.82944 0.434067 7.92641 0.264628 8.09902C0.0951896 8.27163 0 8.50573 0 8.74984C0 8.99395 0.0951896 9.22805 0.264628 9.40066L2.06426 11.234C2.14984 11.3174 2.25075 11.3828 2.3612 11.4265C2.46891 11.4749 2.58537 11.5 2.70313 11.5C2.82089 11.5 2.93735 11.4749 3.04506 11.4265C3.15551 11.3828 3.25642 11.3174 3.342 11.234L5.14163 9.40066C5.22553 9.31519 5.29208 9.21373 5.33748 9.10206C5.38289 8.99039 5.40626 8.87071 5.40626 8.74984C5.40626 8.62897 5.38289 8.50929 5.33748 8.39762C5.29208 8.28595 5.22553 8.18449 5.14163 8.09902C5.05773 8.01355 4.95813 7.94576 4.84852 7.8995C4.7389 7.85325 4.62141 7.82944 4.50276 7.82944C4.38411 7.82944 4.26663 7.85325 4.15701 7.8995C4.04739 7.94576 3.94779 8.01355 3.86389 8.09902ZM8.10203 2.3333H17.1002C17.3388 2.3333 17.5677 2.23672 17.7365 2.06482C17.9052 1.89291 18 1.65976 18 1.41665C18 1.17354 17.9052 0.940385 17.7365 0.76848C17.5677 0.596575 17.3388 0.5 17.1002 0.5H8.10203C7.86338 0.5 7.63451 0.596575 7.46576 0.76848C7.29701 0.940385 7.20221 1.17354 7.20221 1.41665C7.20221 1.65976 7.29701 1.89291 7.46576 2.06482C7.63451 2.23672 7.86338 2.3333 8.10203 2.3333ZM17.1002 5.08324H8.10203C7.86338 5.08324 7.63451 5.17982 7.46576 5.35172C7.29701 5.52363 7.20221 5.75678 7.20221 5.99989C7.20221 6.243 7.29701 6.47616 7.46576 6.64806C7.63451 6.81997 7.86338 6.91654 8.10203 6.91654H17.1002C17.3388 6.91654 17.5677 6.81997 17.7365 6.64806C17.9052 6.47616 18 6.243 18 5.99989C18 5.75678 17.9052 5.52363 17.7365 5.35172C17.5677 5.17982 17.3388 5.08324 17.1002 5.08324ZM17.1002 9.66649H8.10203C7.86338 9.66649 7.63451 9.76306 7.46576 9.93497C7.29701 10.1069 7.20221 10.34 7.20221 10.5831C7.20221 10.8262 7.29701 11.0594 7.46576 11.2313C7.63451 11.4032 7.86338 11.4998 8.10203 11.4998H17.1002C17.3388 11.4998 17.5677 11.4032 17.7365 11.2313C17.9052 11.0594 18 10.8262 18 10.5831C18 10.34 17.9052 10.1069 17.7365 9.93497C17.5677 9.76306 17.3388 9.66649 17.1002 9.66649Z" fill="black"/>
+                </svg>                
+             </span>
+                                                <p class="fz14">Short By</p>
+                                                <div class="pl-2 pr-3 d-flex">
+                                                    <span class="dropdown-icon down-3">
+                   <svg width="8" height="5" viewBox="0 0 8 5" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                         d="M7.77552 0.232761C7.63333 0.0836789 7.44099 0 7.2405 0C7.04001 0 6.84766 0.0836789 6.70547 0.232761L3.98103 3.06631L1.29453 0.232761C1.15234 0.0836789 0.959994 0 0.759504 0C0.559014 0 0.36667 0.0836789 0.224481 0.232761C0.15335 0.307172 0.0968926 0.395701 0.0583643 0.493242C0.0198361 0.590782 0 0.695404 0 0.801071C0 0.906738 0.0198361 1.01136 0.0583643 1.1089C0.0968926 1.20644 0.15335 1.29497 0.224481 1.36938L3.44221 4.76323C3.51276 4.83826 3.59669 4.8978 3.68917 4.93844C3.78165 4.97908 3.88084 5 3.98103 5C4.08121 5 4.1804 4.97908 4.27288 4.93844C4.36536 4.8978 4.4493 4.83826 4.51985 4.76323L7.77552 1.36938C7.84665 1.29497 7.90311 1.20644 7.94163 1.1089C7.98016 1.01136 8 0.906738 8 0.801071C8 0.695404 7.98016 0.590782 7.94163 0.493242C7.90311 0.395701 7.84665 0.307172 7.77552 0.232761Z"
+                         fill="#475364" />
+                   </svg>
+                </span>
+                                                    <span class="dropdown-icon up-3">
+                   <svg width="8" height="5" viewBox="0 0 8 5" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                         d="M7.77552 0.232761C7.63333 0.0836789 7.44099 0 7.2405 0C7.04001 0 6.84766 0.0836789 6.70547 0.232761L3.98103 3.06631L1.29453 0.232761C1.15234 0.0836789 0.959994 0 0.759504 0C0.559014 0 0.36667 0.0836789 0.224481 0.232761C0.15335 0.307172 0.0968926 0.395701 0.0583643 0.493242C0.0198361 0.590782 0 0.695404 0 0.801071C0 0.906738 0.0198361 1.01136 0.0583643 1.1089C0.0968926 1.20644 0.15335 1.29497 0.224481 1.36938L3.44221 4.76323C3.51276 4.83826 3.59669 4.8978 3.68917 4.93844C3.78165 4.97908 3.88084 5 3.98103 5C4.08121 5 4.1804 4.97908 4.27288 4.93844C4.36536 4.8978 4.4493 4.83826 4.51985 4.76323L7.77552 1.36938C7.84665 1.29497 7.90311 1.20644 7.94163 1.1089C7.98016 1.01136 8 0.906738 8 0.801071C8 0.695404 7.98016 0.590782 7.94163 0.493242C7.90311 0.395701 7.84665 0.307172 7.77552 0.232761Z"
+                         fill="#475364" />
+                   </svg>
+                </span>
+                                                </div>
                                             </button>
-                                            <div class="dropdown-menu search-dropdown" aria-labelledby="serach-filter">
-                                                <a class="dropdown-item" href="#">Campaign Name</a>
-                                                <a class="dropdown-item" href="#">Type</a>
-                                                <a class="dropdown-item" href="#">Budget</a>
-                                                <a class="dropdown-item" href="#">Category</a>
+                                            <div class="dropdown-menu filter-dropdown">
+                                                <a class="dropdown-item ra-primary-color" href="#">Campaign Name</a>
+                                                <a class="dropdown-item ra-primary-color" href="#">Type</a>
+                                                <a class="dropdown-item ra-primary-color" href="#">Budget</a>
+                                                <a class="dropdown-item ra-primary-color" href="#">Category</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                <!-- <div class="search-right d-flex align-items-center justify-content-center">
+    <div class="ra-filter mr-1 mr-md-3">
+      <div class="dropdown search-common">
+        <button class="search-filter border-0 radius-5 d-flex gray-light-bg-color fw-500 d-flex align-items-center min-hieght-36"
+          type="button" id="serach-filter" data-toggle="dropdown" aria-haspopup="true">
+          <span class="mdi mdi-filter-outline fz20 pr-2"></span>
+          <p class="fz14">Filter By</p>
+          <span class="mdi mdi-chevron-up fz20 pl-2"></span>
+        </button>
+        <div class="dropdown-menu search-dropdown" aria-labelledby="serach-filter">
+          <a class="dropdown-item" href="#">Campaign Name</a>
+          <a class="dropdown-item" href="#">Type</a>
+          <a class="dropdown-item" href="#">Budget</a>
+          <a class="dropdown-item" href="#">Category</a>
+        </div>
+      </div>
+    </div>
+    <div class="ra-filter">
+      <div class="dropdown search-common">
+        <button class="search-filter border-0 radius-5 d-flex gray-light-bg-color fw-500 d-flex align-items-center min-hieght-36"
+          type="button" id="serach-filter" data-toggle="dropdown" aria-haspopup="true">
+          <span class="mdi mdi-sort-descending fz20 pr-2"></span>
+          <p class="fz14">Sort By</p>
+          <span class="mdi mdi-chevron-up fz20 pl-2"></span>
+        </button>
+        <div class="dropdown-menu search-dropdown" aria-labelledby="serach-filter">
+          <a class="dropdown-item" href="#">Campaign Name</a>
+          <a class="dropdown-item" href="#">Type</a>
+          <a class="dropdown-item" href="#">Budget</a>
+          <a class="dropdown-item" href="#">Category</a>
+        </div>
+      </div>
+    </div>
+  </div> -->
                             </div>
                         </div>
-                        <div class="wrapper">
+                        <div class="wrapper-item">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <div class="dataTable table-responsive">
-                                        <table id="myCampaignDatatTable" class="display" style="width:100%">
+                                    <div class="dataTable table-responsive all-datatable all-datatable-myDeals">
+                                        <table class="display datatableActivator-2" style="width:100%">
                                             <thead>
                                                 <tr>
                                                     <th class="custom-table-head">Campaign Name</th>
@@ -701,56 +1417,132 @@
                         <div class="ml-20 mr-20">
                             <div class="filter-wrapper mb-1 mb-md-2 mt-2 mt-md-0">
                                 <form action="" class="rs-form ra-form custom-form d-flex justify-content-between align-items-center mb-md-0 mb-3">
-                                    <button type="submit" class="position-absolute search-icon border-0 bg-transparent pl-3" for="searchInput">
+                                    <button type="submit" class="position-absolute border-0 bg-transparent pl-3" for="searchInput">
                                         <span class="mdi mdi-magnify search-img gray-light-text-color fz20"></span>
                                     </button>
-                                    <input type="search" class="rs-input ra-input ra-input-border-transparent ra-input-primary-bg animate search-input-custom border-0 ra-data-table-bg gray-light-text-color fz14 fw-500 min-hieght-36 pl-5" id="searchInput" placeholder="Search in Ongoing">
+                                    <input type="search" class="rs-input ra-input ra-input-border-transparent ra-input-primary-bg animate search-input-custom border-0 ra-data-table-bg gray-light-text-color fz14 fw-500 min-hieght-36 pl-5 dataTable-search-activator" id="searchInput" placeholder="Search in Ongoing">
                                 </form>
 
-                                <div class="search-right d-flex align-items-center justify-content-center">
-                                    <div class="mr-1 mr-md-3">
-                                        <button class="serach-number border-0 fw-500 d-flex align-items-center min-hieght-36">
-                                            <p class="fz14"><span>1</span>-<span>4</span></p>
-                                        </button>
-                                    </div>
-                                    <div class="ra-filter mr-1 mr-md-3">
+                                <div class="search-right create-campaign-filter text-nowrap">
+                                    <div class="ra-filter mr-3 mr-md-3">
                                         <div class="dropdown search-common">
-                                            <button class="search-filter border-0 radius-5 d-flex gray-light-bg-color fw-500 d-flex align-items-center min-hieght-36" type="button" id="serach-filter" data-toggle="dropdown" aria-haspopup="true">
-                                                <span class="mdi mdi-filter-outline fz20 pr-2"></span>
+                                            <button class="search-filter ra-primary-color border-0 radius-4 d-flex gray-light-bg-color fw-500 d-flex align-items-center min-hieght-36 p-2x8" type="button" data-toggle="dropdown" aria-haspopup="true">
+                                                <span class="pr-2 d-flex">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                   <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M4.33274 2.25581C3.72727 2.25581 3.23077 2.73671 3.23077 3.40408V5.34941C3.23077 5.4789 3.28063 5.70253 3.39893 5.96247C3.51443 6.21627 3.66744 6.44332 3.8156 6.58925L3.82681 6.60058L7.08978 9.98377C7.10207 9.99651 7.11381 10.0098 7.12499 10.0235C7.3421 10.2909 7.5436 10.6432 7.69195 11.0085C7.83874 11.37 7.95349 11.7932 7.95349 12.2004V16.6831C7.95349 17.0912 8.18028 17.4211 8.531 17.6044C8.88648 17.7902 9.32367 17.7982 9.68112 17.5839L10.8777 16.8262C10.8797 16.8249 10.8817 16.8237 10.8837 16.8224C10.887 16.8204 10.8904 16.8184 10.8937 16.8164C10.9781 16.7665 11.1017 16.6391 11.2078 16.4382C11.3125 16.2398 11.3596 16.0461 11.3596 15.9219V12.2849C11.3596 11.8465 11.4688 11.38 11.6477 10.9645C11.8245 10.554 12.0893 10.1474 12.4404 9.85654L16.1107 6.66171C16.2579 6.51261 16.4268 6.26821 16.5595 5.98059C16.697 5.68275 16.7692 5.39579 16.7692 5.18025V3.3195C16.7692 2.75659 16.2926 2.25581 15.6673 2.25581H4.33274ZM2 3.40408C2 2.04154 3.04911 1 4.33274 1H15.6673C16.931 1 18 2.02166 18 3.3195V5.18025C18 5.64136 17.8576 6.11561 17.673 6.51556C17.4874 6.91778 17.2327 7.30221 16.9533 7.57734C16.9443 7.58628 16.9349 7.59493 16.9253 7.60328L13.233 10.8173C13.2305 10.8195 13.228 10.8216 13.2255 10.8238C13.2235 10.8255 13.2214 10.8272 13.2194 10.8289C13.059 10.9605 12.8969 11.1854 12.7745 11.4698C12.6529 11.7521 12.5903 12.0468 12.5903 12.2849V15.9219C12.5903 16.3051 12.4657 16.7034 12.2913 17.0337C12.1199 17.3585 11.8602 17.6932 11.5197 17.8977L10.3245 18.6545L10.3143 18.6608C9.55631 19.1202 8.66477 19.0853 7.96989 18.7221C7.26873 18.3556 6.72272 17.6282 6.72272 16.6831V12.2004C6.72272 12.0155 6.66573 11.7621 6.55492 11.4892C6.45002 11.2309 6.31496 10.9996 6.19251 10.8438L2.9547 7.48674C2.67624 7.21052 2.44503 6.84819 2.28264 6.49138C2.12187 6.13812 2 5.7274 2 5.34941V3.40408Z"
+                      fill="#475364" stroke="#475364" stroke-width="0.4" stroke-miterlimit="10"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+             </span>
                                                 <p class="fz14">Filter By</p>
-                                                <span class="mdi mdi-chevron-up fz20 pl-2"></span>
+                                                <div class="pl-2 pr-3 d-flex">
+                                                    <span class="dropdown-icon down-3">
+                   <svg width="8" height="5" viewBox="0 0 8 5" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                         d="M7.77552 0.232761C7.63333 0.0836789 7.44099 0 7.2405 0C7.04001 0 6.84766 0.0836789 6.70547 0.232761L3.98103 3.06631L1.29453 0.232761C1.15234 0.0836789 0.959994 0 0.759504 0C0.559014 0 0.36667 0.0836789 0.224481 0.232761C0.15335 0.307172 0.0968926 0.395701 0.0583643 0.493242C0.0198361 0.590782 0 0.695404 0 0.801071C0 0.906738 0.0198361 1.01136 0.0583643 1.1089C0.0968926 1.20644 0.15335 1.29497 0.224481 1.36938L3.44221 4.76323C3.51276 4.83826 3.59669 4.8978 3.68917 4.93844C3.78165 4.97908 3.88084 5 3.98103 5C4.08121 5 4.1804 4.97908 4.27288 4.93844C4.36536 4.8978 4.4493 4.83826 4.51985 4.76323L7.77552 1.36938C7.84665 1.29497 7.90311 1.20644 7.94163 1.1089C7.98016 1.01136 8 0.906738 8 0.801071C8 0.695404 7.98016 0.590782 7.94163 0.493242C7.90311 0.395701 7.84665 0.307172 7.77552 0.232761Z"
+                         fill="#475364" />
+                   </svg>
+                </span>
+                                                    <span class="dropdown-icon up-3">
+                   <svg width="8" height="5" viewBox="0 0 8 5" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                         d="M7.77552 0.232761C7.63333 0.0836789 7.44099 0 7.2405 0C7.04001 0 6.84766 0.0836789 6.70547 0.232761L3.98103 3.06631L1.29453 0.232761C1.15234 0.0836789 0.959994 0 0.759504 0C0.559014 0 0.36667 0.0836789 0.224481 0.232761C0.15335 0.307172 0.0968926 0.395701 0.0583643 0.493242C0.0198361 0.590782 0 0.695404 0 0.801071C0 0.906738 0.0198361 1.01136 0.0583643 1.1089C0.0968926 1.20644 0.15335 1.29497 0.224481 1.36938L3.44221 4.76323C3.51276 4.83826 3.59669 4.8978 3.68917 4.93844C3.78165 4.97908 3.88084 5 3.98103 5C4.08121 5 4.1804 4.97908 4.27288 4.93844C4.36536 4.8978 4.4493 4.83826 4.51985 4.76323L7.77552 1.36938C7.84665 1.29497 7.90311 1.20644 7.94163 1.1089C7.98016 1.01136 8 0.906738 8 0.801071C8 0.695404 7.98016 0.590782 7.94163 0.493242C7.90311 0.395701 7.84665 0.307172 7.77552 0.232761Z"
+                         fill="#475364" />
+                   </svg>
+                </span>
+                                                </div>
                                             </button>
-                                            <div class="dropdown-menu search-dropdown" aria-labelledby="serach-filter">
-                                                <a class="dropdown-item" href="#">Campaign Name</a>
-                                                <a class="dropdown-item" href="#">Type</a>
-                                                <a class="dropdown-item" href="#">Budget</a>
-                                                <a class="dropdown-item" href="#">Category</a>
+                                            <div class="dropdown-menu filter-dropdown">
+                                                <a class="dropdown-item ra-primary-color" href="#">Campaign Name</a>
+                                                <a class="dropdown-item ra-primary-color" href="#">Type</a>
+                                                <a class="dropdown-item ra-primary-color" href="#">Budget</a>
+                                                <a class="dropdown-item ra-primary-color" href="#">Category</a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="ra-filter">
+
+                                    <div class="ra-filter mr-3 mr-md-0">
                                         <div class="dropdown search-common">
-                                            <button class="search-filter border-0 radius-5 d-flex gray-light-bg-color fw-500 d-flex align-items-center min-hieght-36" type="button" id="serach-filter" data-toggle="dropdown" aria-haspopup="true">
-                                                <span class="mdi mdi-sort-descending fz20 pr-2"></span>
-                                                <p class="fz14">Sort By</p>
-                                                <span class="mdi mdi-chevron-up fz20 pl-2"></span>
+                                            <button class="search-filter ra-primary-color border-0 radius-4 d-flex gray-light-bg-color fw-500 d-flex align-items-center min-hieght-36 p-2x8" type="button" data-toggle="dropdown" aria-haspopup="true">
+                                                <span class="pr-2 d-flex">
+              <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.86389 8.09902L3.60295 8.37401V1.41665C3.60295 1.17354 3.50814 0.940385 3.3394 0.76848C3.17065 0.596575 2.94178 0.5 2.70313 0.5C2.46448 0.5 2.23561 0.596575 2.06686 0.76848C1.89812 0.940385 1.80331 1.17354 1.80331 1.41665V8.37401L1.54237 8.09902C1.37293 7.92641 1.14312 7.82944 0.903498 7.82944C0.663875 7.82944 0.434067 7.92641 0.264628 8.09902C0.0951896 8.27163 0 8.50573 0 8.74984C0 8.99395 0.0951896 9.22805 0.264628 9.40066L2.06426 11.234C2.14984 11.3174 2.25075 11.3828 2.3612 11.4265C2.46891 11.4749 2.58537 11.5 2.70313 11.5C2.82089 11.5 2.93735 11.4749 3.04506 11.4265C3.15551 11.3828 3.25642 11.3174 3.342 11.234L5.14163 9.40066C5.22553 9.31519 5.29208 9.21373 5.33748 9.10206C5.38289 8.99039 5.40626 8.87071 5.40626 8.74984C5.40626 8.62897 5.38289 8.50929 5.33748 8.39762C5.29208 8.28595 5.22553 8.18449 5.14163 8.09902C5.05773 8.01355 4.95813 7.94576 4.84852 7.8995C4.7389 7.85325 4.62141 7.82944 4.50276 7.82944C4.38411 7.82944 4.26663 7.85325 4.15701 7.8995C4.04739 7.94576 3.94779 8.01355 3.86389 8.09902ZM8.10203 2.3333H17.1002C17.3388 2.3333 17.5677 2.23672 17.7365 2.06482C17.9052 1.89291 18 1.65976 18 1.41665C18 1.17354 17.9052 0.940385 17.7365 0.76848C17.5677 0.596575 17.3388 0.5 17.1002 0.5H8.10203C7.86338 0.5 7.63451 0.596575 7.46576 0.76848C7.29701 0.940385 7.20221 1.17354 7.20221 1.41665C7.20221 1.65976 7.29701 1.89291 7.46576 2.06482C7.63451 2.23672 7.86338 2.3333 8.10203 2.3333ZM17.1002 5.08324H8.10203C7.86338 5.08324 7.63451 5.17982 7.46576 5.35172C7.29701 5.52363 7.20221 5.75678 7.20221 5.99989C7.20221 6.243 7.29701 6.47616 7.46576 6.64806C7.63451 6.81997 7.86338 6.91654 8.10203 6.91654H17.1002C17.3388 6.91654 17.5677 6.81997 17.7365 6.64806C17.9052 6.47616 18 6.243 18 5.99989C18 5.75678 17.9052 5.52363 17.7365 5.35172C17.5677 5.17982 17.3388 5.08324 17.1002 5.08324ZM17.1002 9.66649H8.10203C7.86338 9.66649 7.63451 9.76306 7.46576 9.93497C7.29701 10.1069 7.20221 10.34 7.20221 10.5831C7.20221 10.8262 7.29701 11.0594 7.46576 11.2313C7.63451 11.4032 7.86338 11.4998 8.10203 11.4998H17.1002C17.3388 11.4998 17.5677 11.4032 17.7365 11.2313C17.9052 11.0594 18 10.8262 18 10.5831C18 10.34 17.9052 10.1069 17.7365 9.93497C17.5677 9.76306 17.3388 9.66649 17.1002 9.66649Z" fill="black"/>
+                </svg>                
+             </span>
+                                                <p class="fz14">Short By</p>
+                                                <div class="pl-2 pr-3 d-flex">
+                                                    <span class="dropdown-icon down-3">
+                   <svg width="8" height="5" viewBox="0 0 8 5" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                         d="M7.77552 0.232761C7.63333 0.0836789 7.44099 0 7.2405 0C7.04001 0 6.84766 0.0836789 6.70547 0.232761L3.98103 3.06631L1.29453 0.232761C1.15234 0.0836789 0.959994 0 0.759504 0C0.559014 0 0.36667 0.0836789 0.224481 0.232761C0.15335 0.307172 0.0968926 0.395701 0.0583643 0.493242C0.0198361 0.590782 0 0.695404 0 0.801071C0 0.906738 0.0198361 1.01136 0.0583643 1.1089C0.0968926 1.20644 0.15335 1.29497 0.224481 1.36938L3.44221 4.76323C3.51276 4.83826 3.59669 4.8978 3.68917 4.93844C3.78165 4.97908 3.88084 5 3.98103 5C4.08121 5 4.1804 4.97908 4.27288 4.93844C4.36536 4.8978 4.4493 4.83826 4.51985 4.76323L7.77552 1.36938C7.84665 1.29497 7.90311 1.20644 7.94163 1.1089C7.98016 1.01136 8 0.906738 8 0.801071C8 0.695404 7.98016 0.590782 7.94163 0.493242C7.90311 0.395701 7.84665 0.307172 7.77552 0.232761Z"
+                         fill="#475364" />
+                   </svg>
+                </span>
+                                                    <span class="dropdown-icon up-3">
+                   <svg width="8" height="5" viewBox="0 0 8 5" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                         d="M7.77552 0.232761C7.63333 0.0836789 7.44099 0 7.2405 0C7.04001 0 6.84766 0.0836789 6.70547 0.232761L3.98103 3.06631L1.29453 0.232761C1.15234 0.0836789 0.959994 0 0.759504 0C0.559014 0 0.36667 0.0836789 0.224481 0.232761C0.15335 0.307172 0.0968926 0.395701 0.0583643 0.493242C0.0198361 0.590782 0 0.695404 0 0.801071C0 0.906738 0.0198361 1.01136 0.0583643 1.1089C0.0968926 1.20644 0.15335 1.29497 0.224481 1.36938L3.44221 4.76323C3.51276 4.83826 3.59669 4.8978 3.68917 4.93844C3.78165 4.97908 3.88084 5 3.98103 5C4.08121 5 4.1804 4.97908 4.27288 4.93844C4.36536 4.8978 4.4493 4.83826 4.51985 4.76323L7.77552 1.36938C7.84665 1.29497 7.90311 1.20644 7.94163 1.1089C7.98016 1.01136 8 0.906738 8 0.801071C8 0.695404 7.98016 0.590782 7.94163 0.493242C7.90311 0.395701 7.84665 0.307172 7.77552 0.232761Z"
+                         fill="#475364" />
+                   </svg>
+                </span>
+                                                </div>
                                             </button>
-                                            <div class="dropdown-menu search-dropdown" aria-labelledby="serach-filter">
-                                                <a class="dropdown-item" href="#">Campaign Name</a>
-                                                <a class="dropdown-item" href="#">Type</a>
-                                                <a class="dropdown-item" href="#">Budget</a>
-                                                <a class="dropdown-item" href="#">Category</a>
+                                            <div class="dropdown-menu filter-dropdown">
+                                                <a class="dropdown-item ra-primary-color" href="#">Campaign Name</a>
+                                                <a class="dropdown-item ra-primary-color" href="#">Type</a>
+                                                <a class="dropdown-item ra-primary-color" href="#">Budget</a>
+                                                <a class="dropdown-item ra-primary-color" href="#">Category</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                <!-- <div class="search-right d-flex align-items-center justify-content-center">
+    <div class="ra-filter mr-1 mr-md-3">
+      <div class="dropdown search-common">
+        <button class="search-filter border-0 radius-5 d-flex gray-light-bg-color fw-500 d-flex align-items-center min-hieght-36"
+          type="button" id="serach-filter" data-toggle="dropdown" aria-haspopup="true">
+          <span class="mdi mdi-filter-outline fz20 pr-2"></span>
+          <p class="fz14">Filter By</p>
+          <span class="mdi mdi-chevron-up fz20 pl-2"></span>
+        </button>
+        <div class="dropdown-menu search-dropdown" aria-labelledby="serach-filter">
+          <a class="dropdown-item" href="#">Campaign Name</a>
+          <a class="dropdown-item" href="#">Type</a>
+          <a class="dropdown-item" href="#">Budget</a>
+          <a class="dropdown-item" href="#">Category</a>
+        </div>
+      </div>
+    </div>
+    <div class="ra-filter">
+      <div class="dropdown search-common">
+        <button class="search-filter border-0 radius-5 d-flex gray-light-bg-color fw-500 d-flex align-items-center min-hieght-36"
+          type="button" id="serach-filter" data-toggle="dropdown" aria-haspopup="true">
+          <span class="mdi mdi-sort-descending fz20 pr-2"></span>
+          <p class="fz14">Sort By</p>
+          <span class="mdi mdi-chevron-up fz20 pl-2"></span>
+        </button>
+        <div class="dropdown-menu search-dropdown" aria-labelledby="serach-filter">
+          <a class="dropdown-item" href="#">Campaign Name</a>
+          <a class="dropdown-item" href="#">Type</a>
+          <a class="dropdown-item" href="#">Budget</a>
+          <a class="dropdown-item" href="#">Category</a>
+        </div>
+      </div>
+    </div>
+  </div> -->
                             </div>
                         </div>
-                        <div class="wrapper">
+                        <div class="wrapper-item">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <div class="dataTable table-responsive">
-                                        <table id="ongoingDataTable" class="display" style="width:100%">
+                                    <div class="dataTable table-responsive all-datatable all-datatable-myDeals">
+                                        <table class="display datatableActivator-2" style="width:100%">
                                             <thead>
                                                 <tr>
                                                     <th class="custom-table-head">Campaign Name</th>
@@ -990,56 +1782,132 @@
                         <div class="ml-20 mr-20">
                             <div class="filter-wrapper mb-1 mb-md-2 mt-2 mt-md-0">
                                 <form action="" class="rs-form ra-form custom-form d-flex justify-content-between align-items-center mb-md-0 mb-3">
-                                    <button type="submit" class="position-absolute search-icon border-0 bg-transparent pl-3" for="searchInput">
+                                    <button type="submit" class="position-absolute border-0 bg-transparent pl-3" for="searchInput">
                                         <span class="mdi mdi-magnify search-img gray-light-text-color fz20"></span>
                                     </button>
-                                    <input type="search" class="rs-input ra-input ra-input-border-transparent ra-input-primary-bg animate search-input-custom border-0 ra-data-table-bg gray-light-text-color fz14 fw-500 min-hieght-36 pl-5" id="searchInput" placeholder="Search in Completed">
+                                    <input type="search" class="rs-input ra-input ra-input-border-transparent ra-input-primary-bg animate search-input-custom border-0 ra-data-table-bg gray-light-text-color fz14 fw-500 min-hieght-36 pl-5 dataTable-search-activator" id="searchInput" placeholder="Search in Completed">
                                 </form>
 
-                                <div class="search-right d-flex align-items-center justify-content-center">
-                                    <div class="mr-1 mr-md-3">
-                                        <button class="serach-number border-0 fw-500 d-flex align-items-center min-hieght-36">
-                                            <p class="fz14"><span>1</span>-<span>4</span></p>
-                                        </button>
-                                    </div>
-                                    <div class="ra-filter mr-1 mr-md-3">
+                                <div class="search-right create-campaign-filter text-nowrap">
+                                    <div class="ra-filter mr-3 mr-md-3">
                                         <div class="dropdown search-common">
-                                            <button class="search-filter border-0 radius-5 d-flex gray-light-bg-color fw-500 d-flex align-items-center min-hieght-36" type="button" id="serach-filter" data-toggle="dropdown" aria-haspopup="true">
-                                                <span class="mdi mdi-filter-outline fz20 pr-2"></span>
+                                            <button class="search-filter ra-primary-color border-0 radius-4 d-flex gray-light-bg-color fw-500 d-flex align-items-center min-hieght-36 p-2x8" type="button" data-toggle="dropdown" aria-haspopup="true">
+                                                <span class="pr-2 d-flex">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                   <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M4.33274 2.25581C3.72727 2.25581 3.23077 2.73671 3.23077 3.40408V5.34941C3.23077 5.4789 3.28063 5.70253 3.39893 5.96247C3.51443 6.21627 3.66744 6.44332 3.8156 6.58925L3.82681 6.60058L7.08978 9.98377C7.10207 9.99651 7.11381 10.0098 7.12499 10.0235C7.3421 10.2909 7.5436 10.6432 7.69195 11.0085C7.83874 11.37 7.95349 11.7932 7.95349 12.2004V16.6831C7.95349 17.0912 8.18028 17.4211 8.531 17.6044C8.88648 17.7902 9.32367 17.7982 9.68112 17.5839L10.8777 16.8262C10.8797 16.8249 10.8817 16.8237 10.8837 16.8224C10.887 16.8204 10.8904 16.8184 10.8937 16.8164C10.9781 16.7665 11.1017 16.6391 11.2078 16.4382C11.3125 16.2398 11.3596 16.0461 11.3596 15.9219V12.2849C11.3596 11.8465 11.4688 11.38 11.6477 10.9645C11.8245 10.554 12.0893 10.1474 12.4404 9.85654L16.1107 6.66171C16.2579 6.51261 16.4268 6.26821 16.5595 5.98059C16.697 5.68275 16.7692 5.39579 16.7692 5.18025V3.3195C16.7692 2.75659 16.2926 2.25581 15.6673 2.25581H4.33274ZM2 3.40408C2 2.04154 3.04911 1 4.33274 1H15.6673C16.931 1 18 2.02166 18 3.3195V5.18025C18 5.64136 17.8576 6.11561 17.673 6.51556C17.4874 6.91778 17.2327 7.30221 16.9533 7.57734C16.9443 7.58628 16.9349 7.59493 16.9253 7.60328L13.233 10.8173C13.2305 10.8195 13.228 10.8216 13.2255 10.8238C13.2235 10.8255 13.2214 10.8272 13.2194 10.8289C13.059 10.9605 12.8969 11.1854 12.7745 11.4698C12.6529 11.7521 12.5903 12.0468 12.5903 12.2849V15.9219C12.5903 16.3051 12.4657 16.7034 12.2913 17.0337C12.1199 17.3585 11.8602 17.6932 11.5197 17.8977L10.3245 18.6545L10.3143 18.6608C9.55631 19.1202 8.66477 19.0853 7.96989 18.7221C7.26873 18.3556 6.72272 17.6282 6.72272 16.6831V12.2004C6.72272 12.0155 6.66573 11.7621 6.55492 11.4892C6.45002 11.2309 6.31496 10.9996 6.19251 10.8438L2.9547 7.48674C2.67624 7.21052 2.44503 6.84819 2.28264 6.49138C2.12187 6.13812 2 5.7274 2 5.34941V3.40408Z"
+                      fill="#475364" stroke="#475364" stroke-width="0.4" stroke-miterlimit="10"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+             </span>
                                                 <p class="fz14">Filter By</p>
-                                                <span class="mdi mdi-chevron-up fz20 pl-2"></span>
+                                                <div class="pl-2 pr-3 d-flex">
+                                                    <span class="dropdown-icon down-3">
+                   <svg width="8" height="5" viewBox="0 0 8 5" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                         d="M7.77552 0.232761C7.63333 0.0836789 7.44099 0 7.2405 0C7.04001 0 6.84766 0.0836789 6.70547 0.232761L3.98103 3.06631L1.29453 0.232761C1.15234 0.0836789 0.959994 0 0.759504 0C0.559014 0 0.36667 0.0836789 0.224481 0.232761C0.15335 0.307172 0.0968926 0.395701 0.0583643 0.493242C0.0198361 0.590782 0 0.695404 0 0.801071C0 0.906738 0.0198361 1.01136 0.0583643 1.1089C0.0968926 1.20644 0.15335 1.29497 0.224481 1.36938L3.44221 4.76323C3.51276 4.83826 3.59669 4.8978 3.68917 4.93844C3.78165 4.97908 3.88084 5 3.98103 5C4.08121 5 4.1804 4.97908 4.27288 4.93844C4.36536 4.8978 4.4493 4.83826 4.51985 4.76323L7.77552 1.36938C7.84665 1.29497 7.90311 1.20644 7.94163 1.1089C7.98016 1.01136 8 0.906738 8 0.801071C8 0.695404 7.98016 0.590782 7.94163 0.493242C7.90311 0.395701 7.84665 0.307172 7.77552 0.232761Z"
+                         fill="#475364" />
+                   </svg>
+                </span>
+                                                    <span class="dropdown-icon up-3">
+                   <svg width="8" height="5" viewBox="0 0 8 5" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                         d="M7.77552 0.232761C7.63333 0.0836789 7.44099 0 7.2405 0C7.04001 0 6.84766 0.0836789 6.70547 0.232761L3.98103 3.06631L1.29453 0.232761C1.15234 0.0836789 0.959994 0 0.759504 0C0.559014 0 0.36667 0.0836789 0.224481 0.232761C0.15335 0.307172 0.0968926 0.395701 0.0583643 0.493242C0.0198361 0.590782 0 0.695404 0 0.801071C0 0.906738 0.0198361 1.01136 0.0583643 1.1089C0.0968926 1.20644 0.15335 1.29497 0.224481 1.36938L3.44221 4.76323C3.51276 4.83826 3.59669 4.8978 3.68917 4.93844C3.78165 4.97908 3.88084 5 3.98103 5C4.08121 5 4.1804 4.97908 4.27288 4.93844C4.36536 4.8978 4.4493 4.83826 4.51985 4.76323L7.77552 1.36938C7.84665 1.29497 7.90311 1.20644 7.94163 1.1089C7.98016 1.01136 8 0.906738 8 0.801071C8 0.695404 7.98016 0.590782 7.94163 0.493242C7.90311 0.395701 7.84665 0.307172 7.77552 0.232761Z"
+                         fill="#475364" />
+                   </svg>
+                </span>
+                                                </div>
                                             </button>
-                                            <div class="dropdown-menu search-dropdown" aria-labelledby="serach-filter">
-                                                <a class="dropdown-item" href="#">Campaign Name</a>
-                                                <a class="dropdown-item" href="#">Type</a>
-                                                <a class="dropdown-item" href="#">Budget</a>
-                                                <a class="dropdown-item" href="#">Category</a>
+                                            <div class="dropdown-menu filter-dropdown">
+                                                <a class="dropdown-item ra-primary-color" href="#">Campaign Name</a>
+                                                <a class="dropdown-item ra-primary-color" href="#">Type</a>
+                                                <a class="dropdown-item ra-primary-color" href="#">Budget</a>
+                                                <a class="dropdown-item ra-primary-color" href="#">Category</a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="ra-filter">
+
+                                    <div class="ra-filter mr-3 mr-md-0">
                                         <div class="dropdown search-common">
-                                            <button class="search-filter border-0 radius-5 d-flex gray-light-bg-color fw-500 d-flex align-items-center min-hieght-36" type="button" id="serach-filter" data-toggle="dropdown" aria-haspopup="true">
-                                                <span class="mdi mdi-sort-descending fz20 pr-2"></span>
-                                                <p class="fz14">Sort By</p>
-                                                <span class="mdi mdi-chevron-up fz20 pl-2"></span>
+                                            <button class="search-filter ra-primary-color border-0 radius-4 d-flex gray-light-bg-color fw-500 d-flex align-items-center min-hieght-36 p-2x8" type="button" data-toggle="dropdown" aria-haspopup="true">
+                                                <span class="pr-2 d-flex">
+              <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.86389 8.09902L3.60295 8.37401V1.41665C3.60295 1.17354 3.50814 0.940385 3.3394 0.76848C3.17065 0.596575 2.94178 0.5 2.70313 0.5C2.46448 0.5 2.23561 0.596575 2.06686 0.76848C1.89812 0.940385 1.80331 1.17354 1.80331 1.41665V8.37401L1.54237 8.09902C1.37293 7.92641 1.14312 7.82944 0.903498 7.82944C0.663875 7.82944 0.434067 7.92641 0.264628 8.09902C0.0951896 8.27163 0 8.50573 0 8.74984C0 8.99395 0.0951896 9.22805 0.264628 9.40066L2.06426 11.234C2.14984 11.3174 2.25075 11.3828 2.3612 11.4265C2.46891 11.4749 2.58537 11.5 2.70313 11.5C2.82089 11.5 2.93735 11.4749 3.04506 11.4265C3.15551 11.3828 3.25642 11.3174 3.342 11.234L5.14163 9.40066C5.22553 9.31519 5.29208 9.21373 5.33748 9.10206C5.38289 8.99039 5.40626 8.87071 5.40626 8.74984C5.40626 8.62897 5.38289 8.50929 5.33748 8.39762C5.29208 8.28595 5.22553 8.18449 5.14163 8.09902C5.05773 8.01355 4.95813 7.94576 4.84852 7.8995C4.7389 7.85325 4.62141 7.82944 4.50276 7.82944C4.38411 7.82944 4.26663 7.85325 4.15701 7.8995C4.04739 7.94576 3.94779 8.01355 3.86389 8.09902ZM8.10203 2.3333H17.1002C17.3388 2.3333 17.5677 2.23672 17.7365 2.06482C17.9052 1.89291 18 1.65976 18 1.41665C18 1.17354 17.9052 0.940385 17.7365 0.76848C17.5677 0.596575 17.3388 0.5 17.1002 0.5H8.10203C7.86338 0.5 7.63451 0.596575 7.46576 0.76848C7.29701 0.940385 7.20221 1.17354 7.20221 1.41665C7.20221 1.65976 7.29701 1.89291 7.46576 2.06482C7.63451 2.23672 7.86338 2.3333 8.10203 2.3333ZM17.1002 5.08324H8.10203C7.86338 5.08324 7.63451 5.17982 7.46576 5.35172C7.29701 5.52363 7.20221 5.75678 7.20221 5.99989C7.20221 6.243 7.29701 6.47616 7.46576 6.64806C7.63451 6.81997 7.86338 6.91654 8.10203 6.91654H17.1002C17.3388 6.91654 17.5677 6.81997 17.7365 6.64806C17.9052 6.47616 18 6.243 18 5.99989C18 5.75678 17.9052 5.52363 17.7365 5.35172C17.5677 5.17982 17.3388 5.08324 17.1002 5.08324ZM17.1002 9.66649H8.10203C7.86338 9.66649 7.63451 9.76306 7.46576 9.93497C7.29701 10.1069 7.20221 10.34 7.20221 10.5831C7.20221 10.8262 7.29701 11.0594 7.46576 11.2313C7.63451 11.4032 7.86338 11.4998 8.10203 11.4998H17.1002C17.3388 11.4998 17.5677 11.4032 17.7365 11.2313C17.9052 11.0594 18 10.8262 18 10.5831C18 10.34 17.9052 10.1069 17.7365 9.93497C17.5677 9.76306 17.3388 9.66649 17.1002 9.66649Z" fill="black"/>
+                </svg>                
+             </span>
+                                                <p class="fz14">Short By</p>
+                                                <div class="pl-2 pr-3 d-flex">
+                                                    <span class="dropdown-icon down-3">
+                   <svg width="8" height="5" viewBox="0 0 8 5" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                         d="M7.77552 0.232761C7.63333 0.0836789 7.44099 0 7.2405 0C7.04001 0 6.84766 0.0836789 6.70547 0.232761L3.98103 3.06631L1.29453 0.232761C1.15234 0.0836789 0.959994 0 0.759504 0C0.559014 0 0.36667 0.0836789 0.224481 0.232761C0.15335 0.307172 0.0968926 0.395701 0.0583643 0.493242C0.0198361 0.590782 0 0.695404 0 0.801071C0 0.906738 0.0198361 1.01136 0.0583643 1.1089C0.0968926 1.20644 0.15335 1.29497 0.224481 1.36938L3.44221 4.76323C3.51276 4.83826 3.59669 4.8978 3.68917 4.93844C3.78165 4.97908 3.88084 5 3.98103 5C4.08121 5 4.1804 4.97908 4.27288 4.93844C4.36536 4.8978 4.4493 4.83826 4.51985 4.76323L7.77552 1.36938C7.84665 1.29497 7.90311 1.20644 7.94163 1.1089C7.98016 1.01136 8 0.906738 8 0.801071C8 0.695404 7.98016 0.590782 7.94163 0.493242C7.90311 0.395701 7.84665 0.307172 7.77552 0.232761Z"
+                         fill="#475364" />
+                   </svg>
+                </span>
+                                                    <span class="dropdown-icon up-3">
+                   <svg width="8" height="5" viewBox="0 0 8 5" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                         d="M7.77552 0.232761C7.63333 0.0836789 7.44099 0 7.2405 0C7.04001 0 6.84766 0.0836789 6.70547 0.232761L3.98103 3.06631L1.29453 0.232761C1.15234 0.0836789 0.959994 0 0.759504 0C0.559014 0 0.36667 0.0836789 0.224481 0.232761C0.15335 0.307172 0.0968926 0.395701 0.0583643 0.493242C0.0198361 0.590782 0 0.695404 0 0.801071C0 0.906738 0.0198361 1.01136 0.0583643 1.1089C0.0968926 1.20644 0.15335 1.29497 0.224481 1.36938L3.44221 4.76323C3.51276 4.83826 3.59669 4.8978 3.68917 4.93844C3.78165 4.97908 3.88084 5 3.98103 5C4.08121 5 4.1804 4.97908 4.27288 4.93844C4.36536 4.8978 4.4493 4.83826 4.51985 4.76323L7.77552 1.36938C7.84665 1.29497 7.90311 1.20644 7.94163 1.1089C7.98016 1.01136 8 0.906738 8 0.801071C8 0.695404 7.98016 0.590782 7.94163 0.493242C7.90311 0.395701 7.84665 0.307172 7.77552 0.232761Z"
+                         fill="#475364" />
+                   </svg>
+                </span>
+                                                </div>
                                             </button>
-                                            <div class="dropdown-menu search-dropdown" aria-labelledby="serach-filter">
-                                                <a class="dropdown-item" href="#">Campaign Name</a>
-                                                <a class="dropdown-item" href="#">Type</a>
-                                                <a class="dropdown-item" href="#">Budget</a>
-                                                <a class="dropdown-item" href="#">Category</a>
+                                            <div class="dropdown-menu filter-dropdown">
+                                                <a class="dropdown-item ra-primary-color" href="#">Campaign Name</a>
+                                                <a class="dropdown-item ra-primary-color" href="#">Type</a>
+                                                <a class="dropdown-item ra-primary-color" href="#">Budget</a>
+                                                <a class="dropdown-item ra-primary-color" href="#">Category</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                <!-- <div class="search-right d-flex align-items-center justify-content-center">
+    <div class="ra-filter mr-1 mr-md-3">
+      <div class="dropdown search-common">
+        <button class="search-filter border-0 radius-5 d-flex gray-light-bg-color fw-500 d-flex align-items-center min-hieght-36"
+          type="button" id="serach-filter" data-toggle="dropdown" aria-haspopup="true">
+          <span class="mdi mdi-filter-outline fz20 pr-2"></span>
+          <p class="fz14">Filter By</p>
+          <span class="mdi mdi-chevron-up fz20 pl-2"></span>
+        </button>
+        <div class="dropdown-menu search-dropdown" aria-labelledby="serach-filter">
+          <a class="dropdown-item" href="#">Campaign Name</a>
+          <a class="dropdown-item" href="#">Type</a>
+          <a class="dropdown-item" href="#">Budget</a>
+          <a class="dropdown-item" href="#">Category</a>
+        </div>
+      </div>
+    </div>
+    <div class="ra-filter">
+      <div class="dropdown search-common">
+        <button class="search-filter border-0 radius-5 d-flex gray-light-bg-color fw-500 d-flex align-items-center min-hieght-36"
+          type="button" id="serach-filter" data-toggle="dropdown" aria-haspopup="true">
+          <span class="mdi mdi-sort-descending fz20 pr-2"></span>
+          <p class="fz14">Sort By</p>
+          <span class="mdi mdi-chevron-up fz20 pl-2"></span>
+        </button>
+        <div class="dropdown-menu search-dropdown" aria-labelledby="serach-filter">
+          <a class="dropdown-item" href="#">Campaign Name</a>
+          <a class="dropdown-item" href="#">Type</a>
+          <a class="dropdown-item" href="#">Budget</a>
+          <a class="dropdown-item" href="#">Category</a>
+        </div>
+      </div>
+    </div>
+  </div> -->
                             </div>
                         </div>
-                        <div class="wrapper">
+                        <div class="wrapper-item">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <div class="dataTable table-responsive">
-                                        <table id="completedDataTable" class="display" style="width:100%">
+                                    <div class="dataTable table-responsive all-datatable all-datatable-myDeals">
+                                        <table class="display datatableActivator-2" style="width:100%">
                                             <thead>
                                                 <tr>
                                                     <th class="custom-table-head">Campaign Name</th>
@@ -1264,56 +2132,132 @@
                         <div class="ml-20 mr-20">
                             <div class="filter-wrapper mb-1 mb-md-2 mt-2 mt-md-0">
                                 <form action="" class="rs-form ra-form custom-form d-flex justify-content-between align-items-center mb-md-0 mb-3">
-                                    <button type="submit" class="position-absolute search-icon border-0 bg-transparent pl-3" for="searchInput">
+                                    <button type="submit" class="position-absolute border-0 bg-transparent pl-3" for="searchInput">
                                         <span class="mdi mdi-magnify search-img gray-light-text-color fz20"></span>
                                     </button>
-                                    <input type="search" class="rs-input ra-input ra-input-border-transparent ra-input-primary-bg animate search-input-custom border-0 ra-data-table-bg gray-light-text-color fz14 fw-500 min-hieght-36 pl-5" id="searchInput" placeholder="Search in Archieved">
+                                    <input type="search" class="rs-input ra-input ra-input-border-transparent ra-input-primary-bg animate search-input-custom border-0 ra-data-table-bg gray-light-text-color fz14 fw-500 min-hieght-36 pl-5 dataTable-search-activator" id="searchInput" placeholder="Search in Archieved">
                                 </form>
 
-                                <div class="search-right d-flex align-items-center justify-content-center">
-                                    <div class="mr-1 mr-md-3">
-                                        <button class="serach-number border-0 fw-500 d-flex align-items-center min-hieght-36">
-                                            <p class="fz14"><span>1</span>-<span>4</span></p>
-                                        </button>
-                                    </div>
-                                    <div class="ra-filter mr-1 mr-md-3">
+                                <div class="search-right create-campaign-filter text-nowrap">
+                                    <div class="ra-filter mr-3 mr-md-3">
                                         <div class="dropdown search-common">
-                                            <button class="search-filter border-0 radius-5 d-flex gray-light-bg-color fw-500 d-flex align-items-center min-hieght-36" type="button" id="serach-filter" data-toggle="dropdown" aria-haspopup="true">
-                                                <span class="mdi mdi-filter-outline fz20 pr-2"></span>
+                                            <button class="search-filter ra-primary-color border-0 radius-4 d-flex gray-light-bg-color fw-500 d-flex align-items-center min-hieght-36 p-2x8" type="button" data-toggle="dropdown" aria-haspopup="true">
+                                                <span class="pr-2 d-flex">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                   <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M4.33274 2.25581C3.72727 2.25581 3.23077 2.73671 3.23077 3.40408V5.34941C3.23077 5.4789 3.28063 5.70253 3.39893 5.96247C3.51443 6.21627 3.66744 6.44332 3.8156 6.58925L3.82681 6.60058L7.08978 9.98377C7.10207 9.99651 7.11381 10.0098 7.12499 10.0235C7.3421 10.2909 7.5436 10.6432 7.69195 11.0085C7.83874 11.37 7.95349 11.7932 7.95349 12.2004V16.6831C7.95349 17.0912 8.18028 17.4211 8.531 17.6044C8.88648 17.7902 9.32367 17.7982 9.68112 17.5839L10.8777 16.8262C10.8797 16.8249 10.8817 16.8237 10.8837 16.8224C10.887 16.8204 10.8904 16.8184 10.8937 16.8164C10.9781 16.7665 11.1017 16.6391 11.2078 16.4382C11.3125 16.2398 11.3596 16.0461 11.3596 15.9219V12.2849C11.3596 11.8465 11.4688 11.38 11.6477 10.9645C11.8245 10.554 12.0893 10.1474 12.4404 9.85654L16.1107 6.66171C16.2579 6.51261 16.4268 6.26821 16.5595 5.98059C16.697 5.68275 16.7692 5.39579 16.7692 5.18025V3.3195C16.7692 2.75659 16.2926 2.25581 15.6673 2.25581H4.33274ZM2 3.40408C2 2.04154 3.04911 1 4.33274 1H15.6673C16.931 1 18 2.02166 18 3.3195V5.18025C18 5.64136 17.8576 6.11561 17.673 6.51556C17.4874 6.91778 17.2327 7.30221 16.9533 7.57734C16.9443 7.58628 16.9349 7.59493 16.9253 7.60328L13.233 10.8173C13.2305 10.8195 13.228 10.8216 13.2255 10.8238C13.2235 10.8255 13.2214 10.8272 13.2194 10.8289C13.059 10.9605 12.8969 11.1854 12.7745 11.4698C12.6529 11.7521 12.5903 12.0468 12.5903 12.2849V15.9219C12.5903 16.3051 12.4657 16.7034 12.2913 17.0337C12.1199 17.3585 11.8602 17.6932 11.5197 17.8977L10.3245 18.6545L10.3143 18.6608C9.55631 19.1202 8.66477 19.0853 7.96989 18.7221C7.26873 18.3556 6.72272 17.6282 6.72272 16.6831V12.2004C6.72272 12.0155 6.66573 11.7621 6.55492 11.4892C6.45002 11.2309 6.31496 10.9996 6.19251 10.8438L2.9547 7.48674C2.67624 7.21052 2.44503 6.84819 2.28264 6.49138C2.12187 6.13812 2 5.7274 2 5.34941V3.40408Z"
+                      fill="#475364" stroke="#475364" stroke-width="0.4" stroke-miterlimit="10"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+             </span>
                                                 <p class="fz14">Filter By</p>
-                                                <span class="mdi mdi-chevron-up fz20 pl-2"></span>
+                                                <div class="pl-2 pr-3 d-flex">
+                                                    <span class="dropdown-icon down-3">
+                   <svg width="8" height="5" viewBox="0 0 8 5" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                         d="M7.77552 0.232761C7.63333 0.0836789 7.44099 0 7.2405 0C7.04001 0 6.84766 0.0836789 6.70547 0.232761L3.98103 3.06631L1.29453 0.232761C1.15234 0.0836789 0.959994 0 0.759504 0C0.559014 0 0.36667 0.0836789 0.224481 0.232761C0.15335 0.307172 0.0968926 0.395701 0.0583643 0.493242C0.0198361 0.590782 0 0.695404 0 0.801071C0 0.906738 0.0198361 1.01136 0.0583643 1.1089C0.0968926 1.20644 0.15335 1.29497 0.224481 1.36938L3.44221 4.76323C3.51276 4.83826 3.59669 4.8978 3.68917 4.93844C3.78165 4.97908 3.88084 5 3.98103 5C4.08121 5 4.1804 4.97908 4.27288 4.93844C4.36536 4.8978 4.4493 4.83826 4.51985 4.76323L7.77552 1.36938C7.84665 1.29497 7.90311 1.20644 7.94163 1.1089C7.98016 1.01136 8 0.906738 8 0.801071C8 0.695404 7.98016 0.590782 7.94163 0.493242C7.90311 0.395701 7.84665 0.307172 7.77552 0.232761Z"
+                         fill="#475364" />
+                   </svg>
+                </span>
+                                                    <span class="dropdown-icon up-3">
+                   <svg width="8" height="5" viewBox="0 0 8 5" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                         d="M7.77552 0.232761C7.63333 0.0836789 7.44099 0 7.2405 0C7.04001 0 6.84766 0.0836789 6.70547 0.232761L3.98103 3.06631L1.29453 0.232761C1.15234 0.0836789 0.959994 0 0.759504 0C0.559014 0 0.36667 0.0836789 0.224481 0.232761C0.15335 0.307172 0.0968926 0.395701 0.0583643 0.493242C0.0198361 0.590782 0 0.695404 0 0.801071C0 0.906738 0.0198361 1.01136 0.0583643 1.1089C0.0968926 1.20644 0.15335 1.29497 0.224481 1.36938L3.44221 4.76323C3.51276 4.83826 3.59669 4.8978 3.68917 4.93844C3.78165 4.97908 3.88084 5 3.98103 5C4.08121 5 4.1804 4.97908 4.27288 4.93844C4.36536 4.8978 4.4493 4.83826 4.51985 4.76323L7.77552 1.36938C7.84665 1.29497 7.90311 1.20644 7.94163 1.1089C7.98016 1.01136 8 0.906738 8 0.801071C8 0.695404 7.98016 0.590782 7.94163 0.493242C7.90311 0.395701 7.84665 0.307172 7.77552 0.232761Z"
+                         fill="#475364" />
+                   </svg>
+                </span>
+                                                </div>
                                             </button>
-                                            <div class="dropdown-menu search-dropdown" aria-labelledby="serach-filter">
-                                                <a class="dropdown-item" href="#">Campaign Name</a>
-                                                <a class="dropdown-item" href="#">Type</a>
-                                                <a class="dropdown-item" href="#">Budget</a>
-                                                <a class="dropdown-item" href="#">Category</a>
+                                            <div class="dropdown-menu filter-dropdown">
+                                                <a class="dropdown-item ra-primary-color" href="#">Campaign Name</a>
+                                                <a class="dropdown-item ra-primary-color" href="#">Type</a>
+                                                <a class="dropdown-item ra-primary-color" href="#">Budget</a>
+                                                <a class="dropdown-item ra-primary-color" href="#">Category</a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="ra-filter">
+
+                                    <div class="ra-filter mr-3 mr-md-0">
                                         <div class="dropdown search-common">
-                                            <button class="search-filter border-0 radius-5 d-flex gray-light-bg-color fw-500 d-flex align-items-center min-hieght-36" type="button" id="serach-filter" data-toggle="dropdown" aria-haspopup="true">
-                                                <span class="mdi mdi-sort-descending fz20 pr-2"></span>
-                                                <p class="fz14">Sort By</p>
-                                                <span class="mdi mdi-chevron-up fz20 pl-2"></span>
+                                            <button class="search-filter ra-primary-color border-0 radius-4 d-flex gray-light-bg-color fw-500 d-flex align-items-center min-hieght-36 p-2x8" type="button" data-toggle="dropdown" aria-haspopup="true">
+                                                <span class="pr-2 d-flex">
+              <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.86389 8.09902L3.60295 8.37401V1.41665C3.60295 1.17354 3.50814 0.940385 3.3394 0.76848C3.17065 0.596575 2.94178 0.5 2.70313 0.5C2.46448 0.5 2.23561 0.596575 2.06686 0.76848C1.89812 0.940385 1.80331 1.17354 1.80331 1.41665V8.37401L1.54237 8.09902C1.37293 7.92641 1.14312 7.82944 0.903498 7.82944C0.663875 7.82944 0.434067 7.92641 0.264628 8.09902C0.0951896 8.27163 0 8.50573 0 8.74984C0 8.99395 0.0951896 9.22805 0.264628 9.40066L2.06426 11.234C2.14984 11.3174 2.25075 11.3828 2.3612 11.4265C2.46891 11.4749 2.58537 11.5 2.70313 11.5C2.82089 11.5 2.93735 11.4749 3.04506 11.4265C3.15551 11.3828 3.25642 11.3174 3.342 11.234L5.14163 9.40066C5.22553 9.31519 5.29208 9.21373 5.33748 9.10206C5.38289 8.99039 5.40626 8.87071 5.40626 8.74984C5.40626 8.62897 5.38289 8.50929 5.33748 8.39762C5.29208 8.28595 5.22553 8.18449 5.14163 8.09902C5.05773 8.01355 4.95813 7.94576 4.84852 7.8995C4.7389 7.85325 4.62141 7.82944 4.50276 7.82944C4.38411 7.82944 4.26663 7.85325 4.15701 7.8995C4.04739 7.94576 3.94779 8.01355 3.86389 8.09902ZM8.10203 2.3333H17.1002C17.3388 2.3333 17.5677 2.23672 17.7365 2.06482C17.9052 1.89291 18 1.65976 18 1.41665C18 1.17354 17.9052 0.940385 17.7365 0.76848C17.5677 0.596575 17.3388 0.5 17.1002 0.5H8.10203C7.86338 0.5 7.63451 0.596575 7.46576 0.76848C7.29701 0.940385 7.20221 1.17354 7.20221 1.41665C7.20221 1.65976 7.29701 1.89291 7.46576 2.06482C7.63451 2.23672 7.86338 2.3333 8.10203 2.3333ZM17.1002 5.08324H8.10203C7.86338 5.08324 7.63451 5.17982 7.46576 5.35172C7.29701 5.52363 7.20221 5.75678 7.20221 5.99989C7.20221 6.243 7.29701 6.47616 7.46576 6.64806C7.63451 6.81997 7.86338 6.91654 8.10203 6.91654H17.1002C17.3388 6.91654 17.5677 6.81997 17.7365 6.64806C17.9052 6.47616 18 6.243 18 5.99989C18 5.75678 17.9052 5.52363 17.7365 5.35172C17.5677 5.17982 17.3388 5.08324 17.1002 5.08324ZM17.1002 9.66649H8.10203C7.86338 9.66649 7.63451 9.76306 7.46576 9.93497C7.29701 10.1069 7.20221 10.34 7.20221 10.5831C7.20221 10.8262 7.29701 11.0594 7.46576 11.2313C7.63451 11.4032 7.86338 11.4998 8.10203 11.4998H17.1002C17.3388 11.4998 17.5677 11.4032 17.7365 11.2313C17.9052 11.0594 18 10.8262 18 10.5831C18 10.34 17.9052 10.1069 17.7365 9.93497C17.5677 9.76306 17.3388 9.66649 17.1002 9.66649Z" fill="black"/>
+                </svg>                
+             </span>
+                                                <p class="fz14">Short By</p>
+                                                <div class="pl-2 pr-3 d-flex">
+                                                    <span class="dropdown-icon down-3">
+                   <svg width="8" height="5" viewBox="0 0 8 5" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                         d="M7.77552 0.232761C7.63333 0.0836789 7.44099 0 7.2405 0C7.04001 0 6.84766 0.0836789 6.70547 0.232761L3.98103 3.06631L1.29453 0.232761C1.15234 0.0836789 0.959994 0 0.759504 0C0.559014 0 0.36667 0.0836789 0.224481 0.232761C0.15335 0.307172 0.0968926 0.395701 0.0583643 0.493242C0.0198361 0.590782 0 0.695404 0 0.801071C0 0.906738 0.0198361 1.01136 0.0583643 1.1089C0.0968926 1.20644 0.15335 1.29497 0.224481 1.36938L3.44221 4.76323C3.51276 4.83826 3.59669 4.8978 3.68917 4.93844C3.78165 4.97908 3.88084 5 3.98103 5C4.08121 5 4.1804 4.97908 4.27288 4.93844C4.36536 4.8978 4.4493 4.83826 4.51985 4.76323L7.77552 1.36938C7.84665 1.29497 7.90311 1.20644 7.94163 1.1089C7.98016 1.01136 8 0.906738 8 0.801071C8 0.695404 7.98016 0.590782 7.94163 0.493242C7.90311 0.395701 7.84665 0.307172 7.77552 0.232761Z"
+                         fill="#475364" />
+                   </svg>
+                </span>
+                                                    <span class="dropdown-icon up-3">
+                   <svg width="8" height="5" viewBox="0 0 8 5" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                         d="M7.77552 0.232761C7.63333 0.0836789 7.44099 0 7.2405 0C7.04001 0 6.84766 0.0836789 6.70547 0.232761L3.98103 3.06631L1.29453 0.232761C1.15234 0.0836789 0.959994 0 0.759504 0C0.559014 0 0.36667 0.0836789 0.224481 0.232761C0.15335 0.307172 0.0968926 0.395701 0.0583643 0.493242C0.0198361 0.590782 0 0.695404 0 0.801071C0 0.906738 0.0198361 1.01136 0.0583643 1.1089C0.0968926 1.20644 0.15335 1.29497 0.224481 1.36938L3.44221 4.76323C3.51276 4.83826 3.59669 4.8978 3.68917 4.93844C3.78165 4.97908 3.88084 5 3.98103 5C4.08121 5 4.1804 4.97908 4.27288 4.93844C4.36536 4.8978 4.4493 4.83826 4.51985 4.76323L7.77552 1.36938C7.84665 1.29497 7.90311 1.20644 7.94163 1.1089C7.98016 1.01136 8 0.906738 8 0.801071C8 0.695404 7.98016 0.590782 7.94163 0.493242C7.90311 0.395701 7.84665 0.307172 7.77552 0.232761Z"
+                         fill="#475364" />
+                   </svg>
+                </span>
+                                                </div>
                                             </button>
-                                            <div class="dropdown-menu search-dropdown" aria-labelledby="serach-filter">
-                                                <a class="dropdown-item" href="#">Campaign Name</a>
-                                                <a class="dropdown-item" href="#">Type</a>
-                                                <a class="dropdown-item" href="#">Budget</a>
-                                                <a class="dropdown-item" href="#">Category</a>
+                                            <div class="dropdown-menu filter-dropdown">
+                                                <a class="dropdown-item ra-primary-color" href="#">Campaign Name</a>
+                                                <a class="dropdown-item ra-primary-color" href="#">Type</a>
+                                                <a class="dropdown-item ra-primary-color" href="#">Budget</a>
+                                                <a class="dropdown-item ra-primary-color" href="#">Category</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                <!-- <div class="search-right d-flex align-items-center justify-content-center">
+    <div class="ra-filter mr-1 mr-md-3">
+      <div class="dropdown search-common">
+        <button class="search-filter border-0 radius-5 d-flex gray-light-bg-color fw-500 d-flex align-items-center min-hieght-36"
+          type="button" id="serach-filter" data-toggle="dropdown" aria-haspopup="true">
+          <span class="mdi mdi-filter-outline fz20 pr-2"></span>
+          <p class="fz14">Filter By</p>
+          <span class="mdi mdi-chevron-up fz20 pl-2"></span>
+        </button>
+        <div class="dropdown-menu search-dropdown" aria-labelledby="serach-filter">
+          <a class="dropdown-item" href="#">Campaign Name</a>
+          <a class="dropdown-item" href="#">Type</a>
+          <a class="dropdown-item" href="#">Budget</a>
+          <a class="dropdown-item" href="#">Category</a>
+        </div>
+      </div>
+    </div>
+    <div class="ra-filter">
+      <div class="dropdown search-common">
+        <button class="search-filter border-0 radius-5 d-flex gray-light-bg-color fw-500 d-flex align-items-center min-hieght-36"
+          type="button" id="serach-filter" data-toggle="dropdown" aria-haspopup="true">
+          <span class="mdi mdi-sort-descending fz20 pr-2"></span>
+          <p class="fz14">Sort By</p>
+          <span class="mdi mdi-chevron-up fz20 pl-2"></span>
+        </button>
+        <div class="dropdown-menu search-dropdown" aria-labelledby="serach-filter">
+          <a class="dropdown-item" href="#">Campaign Name</a>
+          <a class="dropdown-item" href="#">Type</a>
+          <a class="dropdown-item" href="#">Budget</a>
+          <a class="dropdown-item" href="#">Category</a>
+        </div>
+      </div>
+    </div>
+  </div> -->
                             </div>
                         </div>
-                        <div class="wrapper">
+                        <div class="wrapper-item">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <div class="dataTable table-responsive">
-                                        <table id="archievedDataTable" class="display" style="width:100%">
+                                    <div class="dataTable table-responsive all-datatable all-datatable-myDeals">
+                                        <table class="display datatableActivator-2" style="width:100%">
                                             <thead>
                                                 <tr>
                                                     <th class="custom-table-head">Campaign Name</th>
@@ -2014,8 +2958,6 @@
     <!-- Daterangepicker -->
     <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-
-    <!-- <script type="text/javascript" src="assets/vendor/aos/js/aos.js"></script> -->
     <!-- endbuild -->
 
     <script type="text/javascript" src="assets/js/script.js"></script>

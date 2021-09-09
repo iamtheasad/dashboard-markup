@@ -28,7 +28,7 @@ function inputAnimate() {
         });
 
 
-        $(document).on('change keyup paste','.rs-input', function (e) {
+        $(document).on('change keyup paste', '.rs-input', function (e) {
             // alert($(this).val());
             if ($(this).val() == '' || $(this).val() == null) {
                 $(this).parent(".rs-form").addClass('error');
@@ -55,7 +55,7 @@ function inputAnimate() {
     }
 }
 
-function rangeSlider(){
+function rangeSlider() {
     // Range slider
     function collision($div1, $div2) {
         var x1 = $div1.offset().left;
@@ -109,7 +109,7 @@ function rangeSlider(){
 }
 
 
-$(document).ajaxSuccess(function() {
+$(document).ajaxSuccess(function () {
     rangeSlider();
     inputAnimate();
 });
@@ -188,30 +188,39 @@ $(document).ajaxSuccess(function() {
             $(element).DataTable({
                 "paging": false,
                 "searching": false,
+                "info": false,
             });
         }
     }
 
     /* Influencer Looping Data Table Id */
-    function dataTable2(element) {
-        var element = $(element);
-        if (element.length) {
-            $(element).DataTable({
-                "paging": false,
-                "searching": false,
-            });
-        }
-    }
+    function dataTable2() {
+        var paginationIconLeft = "../assets/images/icons/arrow-left.svg"
+        var paginationIconRight = "../assets/images/icons/arrow-right.svg"
+        var iTable2 = $(".datatableActivator-2").DataTable({
+            "paging": true,
+            "info": true,
+            "searching": true,
+            "pagingType": "simple",
+            "pageLength": 2,
+            "lengthMenu": [[2, 25, 50, -1], [2, 25, 50, "All"]],
+            "infoCallback": function (settings, start, end, max, total, pre) {
+                return start + " - " + end + " of " + total;
+            },
+            "dom": "<'row'<'col-sm-8'><'col-sm-4 d-flex justify-content-end align-items-center'ip>>" +
+                "<'row'<'col-sm-12'>>" +
+                "<'row'<'col-sm-4'><'col-sm-4 text-center'><'col-sm-4'>>",
+            "language": {
+                "paginate": {
+                    "previous": "<img src='" + paginationIconLeft + "'/>",
+                    "next": "<img src='" + paginationIconRight + "'/>",
+                }
+            }
+        });
 
-    /* Datatable 3 */
-    function dataTable3(element) {
-        var element = $(element);
-        if (element.length) {
-            $(element).DataTable({
-                "paging": false,
-                "searching": false,
-            });
-        }
+        $(".dataTable-search-activator").keyup(function () {
+            iTable2.search($(this).val()).draw();
+        })
     }
 
     function getFileName() {
@@ -336,9 +345,9 @@ $(document).ajaxSuccess(function() {
         }
     }
 
-    function animateSearch(){
-        if($(".animate-search").length){
-            $(document).on('click', ".hidden-search-icon", function() {
+    function animateSearch() {
+        if ($(".animate-search").length) {
+            $(document).on('click', ".hidden-search-icon", function () {
                 $(this).siblings('.hidden-search').toggleClass('show')
             })
         }
@@ -358,18 +367,7 @@ $(document).ajaxSuccess(function() {
         rangeSlider();
         animateSearch();
 
-        dataTable3('#clientDashboardOverviewDataTable');
-
-        dataTable2('#myCampaignDatatTable');
-        dataTable2('#ongoingDataTable');
-        dataTable2('#completedDataTable');
-        dataTable2('#archievedDataTable');
-        dataTable2('#connectRequestsDataTable');
-        dataTable2('#inProgressDataTable');
-        dataTable2('#pendingApproval');
-        dataTable2('#myDealsCancelled');
-        dataTable2('#createCampaignDataTable');
-        dataTable2('#draftTab4ataTable');
+        dataTable2();
 
         dataTable('#propertyDataTable');
         dataTable('#propertyDetailsDataTable');
