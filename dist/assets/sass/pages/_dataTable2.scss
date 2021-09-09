@@ -1,4 +1,73 @@
 // Data Table Start
+.all-datatable {
+   .dataTables_length {
+      display: none;
+   }
+
+   .dataTables_wrapper {
+      position: absolute;
+      right: 32vh;
+      top: -5vh;
+      width: 580px;
+
+      @media screen  and (max-width: 1230px){
+         right: 1vh;
+      }
+   }
+
+   .dataTables_info {
+      font-size: rem(14);
+      font-weight: 500;
+      padding-top: 0px !important;
+      margin-right: 20px;
+   }
+
+   .dataTables_paginate {
+      margin-right: 20px !important;
+   }
+
+   .page-item.disabled .page-link {
+      color: rgba(71, 83, 100, 0.8);
+      background-color: rgba(237, 239, 247, .6);
+      border-color: transparent;
+   }
+
+   .page-link {
+
+      display: flex;
+      padding: 8px !important;
+      margin-left: 13px;
+      background-color: #EDEFF7;
+      color: #475364;
+      width: 24px;
+      height: 24px;
+
+      &:focus {
+         box-shadow: none;
+      }
+   }
+
+   .page-item .page-link {
+      border-radius: 4px;
+   }
+}
+
+.all-datatable-myDeals {
+   .dataTables_wrapper {
+      top: -4.2vh;
+   }
+
+   .page-item.disabled .page-link {
+      color: rgba(71,83,100,.8);
+      background-color: rgba( $grayLightBgColor, .6);
+  }
+
+  .page-link {
+   background-color: $grayLightBgColor;
+  }
+
+}
+
 .all-side-border {
    border: 1px solid $grayLightBgColor;
    overflow: hidden;
@@ -75,7 +144,7 @@ tbody tr.in-table-row {
 
    &.active {
       background: $whiteLight;
-   
+
       &:hover {
          background: rgba(0, 0, 0, 0.1);
       }
