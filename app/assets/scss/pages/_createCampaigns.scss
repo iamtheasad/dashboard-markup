@@ -113,21 +113,42 @@
    @media screen and(max-width:1230px) {
       flex-direction: column;
       align-items: flex-start;
-      height: 100px;
    }
 }
 
-.create-campaign-filter {
+.search-right {
    display: flex;
 
    @media screen and (max-width: 767px) {
-      flex-direction: row-reverse;
+      margin-bottom: 50px;
    }
 
    @media screen and (max-width: 394px) {
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
+   }
+
+}
+
+.dashboard-menu .ra-filter {
+   margin-top: unset;
+}
+
+.ra-filter {
+   @media screen and(max-width:1230px) {
+      margin-top: 30px;
+   }
+
+   @media screen and(max-width:767px) {
+      margin-top: 20px;
+   }
+}
+
+.create-campaign-filter {
+
+   @media screen and (min-width: 768px) and (max-width: 1230px) {
+      height: 101px;
    }
 }
 
@@ -144,7 +165,6 @@
 
    @media screen and(max-width: 767px) {
       flex-direction: row;
-      height: 65px;
       justify-content: flex-start;
       width: 100%;
    }

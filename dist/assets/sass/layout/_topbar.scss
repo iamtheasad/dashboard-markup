@@ -3,6 +3,8 @@
     background-color: $white;
     margin-bottom: 15px;
     z-index: 1 !important;
+    position: sticky;
+    top: 0;
 
     @media(max-width: 992px) {
         padding-left: 30px;
@@ -86,12 +88,17 @@
         background: $primaryBg;
         margin: 0;
         border-bottom: 1px solid $grayLightBgColor;
-        padding: 0px 20px 0px;
+        padding: 0px 20px;
+
+        @media screen and (max-width: 460px) {
+            flex-direction: column;
+            padding: 20px 10px;
+            height: 120px;
+        }
 
         .account-menu {
             background-color: rgba($greenDark, .15);
             border-radius: 50px;
-            height: 38px;
 
             &:after {
                 display: none;
@@ -105,14 +112,8 @@
                 height: 36px;
                 background: $greenDark;
                 color: $white;
-                position: relative;
-
-                p {
-                    position: absolute;
-                    top: 15%;
-                    left: 50%;
-                    transform: translate(-50%);
-                }
+                justify-content: center;
+                align-items: center;
 
                 img {
                     object-fit: cover;
@@ -158,7 +159,7 @@
                 &:hover {
                     .topbar-dropdown-icon [fill] {
                         fill: $white;
-                      }
+                    }
                 }
 
                 &:after {
@@ -172,6 +173,11 @@
         }
 
         .breadcumb {
+
+            @media screen and (max-width: 460px) {
+                padding-bottom: 13px;
+            }
+
             i {
                 font-size: 24px;
             }

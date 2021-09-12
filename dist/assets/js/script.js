@@ -212,7 +212,7 @@ $(document).ajaxSuccess(function () {
             "infoCallback": function (settings, start, end, max, total, pre) {
                 return start + " - " + end + " of " + total;
             },
-            "dom": "<'row'<'col-sm-8'><'col-sm-4 d-flex justify-content-end align-items-center'ip>>" +
+            "dom": "<'row'<'col-sm-12 d-flex justify-content-end align-items-center'ip>>" +
                 "<'row'<'col-sm-12'>>" +
                 "<'row'<'col-sm-4'><'col-sm-4 text-center'><'col-sm-4'>>",
             "language": {
