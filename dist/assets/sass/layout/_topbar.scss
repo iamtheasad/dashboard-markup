@@ -90,12 +90,6 @@
         border-bottom: 1px solid $grayLightBgColor;
         padding: 0px 20px;
 
-        @media screen and (max-width: 460px) {
-            flex-direction: column;
-            padding: 20px 10px;
-            height: 120px;
-        }
-
         .account-menu {
             background-color: rgba($greenDark, .15);
             border-radius: 50px;
@@ -118,6 +112,8 @@
                 img {
                     object-fit: cover;
                     object-position: center;
+                    width: 36px;
+                    height: 36px;
                 }
 
                 @media(max-width: 757px) {
@@ -197,9 +193,6 @@
 .topbar-notification {
     border: none;
     background: transparent;
-
-    img {
-        width: 20px;
-        height: 20px;
-    }
+    width: 16px;
+    padding: 2px;
 }
