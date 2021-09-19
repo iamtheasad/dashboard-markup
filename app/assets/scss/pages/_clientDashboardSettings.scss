@@ -402,3 +402,67 @@
       padding: 0 12px;
    }
 }
+
+// Campaign Settings Content
+.campaign-status-bar {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+   .ra-btn {
+      padding: 0 30px;
+   }
+}
+
+.color-box-status {
+   display: flex;
+   justify-content: space-around;
+   border-bottom: 1px solid $purpleLight3;
+   padding: 12px;
+
+   .box {
+      position: relative;
+      padding-left: 30px;
+
+      &:before {
+         content: '';
+         width: 20px;
+         height: 20px;
+         display: inline-block;
+         position: absolute;
+         left: 0px;
+         top: 4px;
+         border-radius: 4px;
+         border: 1px solid transparent;
+      }
+   }
+
+   .spent {
+
+      &:before {
+         background: $orangDark3;
+      }
+   }
+
+   .remaining {
+
+      &:before {
+         background: $greenDark;
+      }
+   }
+
+   .unallocated {
+
+      &:before {
+         background: $greenLight;
+      }
+   }
+
+   .available {
+
+      &:before {
+         background: $purpleLight4;
+         border: 1px solid $grayLight8;
+      }
+   }
+}
