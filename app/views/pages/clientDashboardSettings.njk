@@ -22,8 +22,9 @@
    </header>
 
    <!-- Modal -->
-   <div class="client-settings-modal-all create-add-group-modal client-settings-modal--btn modal fade"
-      id="createAddGroup" tabindex="-1" role="dialog" aria-labelledby="createAddGroup" aria-hidden="true"> <!-- .loading class add for blur effect -->
+   <div class="client-settings-modal-all create-add-group-modal modal fade"
+      id="createAddGroup" tabindex="-1" role="dialog" aria-labelledby="createAddGroup" aria-hidden="true">
+      <!-- .loading class add for blur effect -->
       <div class="modal-dialog modal-dialog-centered" role="document">
          <div class="modal-content">
             <form action="#">
@@ -120,8 +121,8 @@
                                     </span>
                                     <span class="radio-text">CPC</span>
                                  </label>
-                               </div>
-                               <div class="radio-btn-wrapper">
+                              </div>
+                              <div class="radio-btn-wrapper">
                                  <input class="radio-btn-input" type="radio" name="cpc" id="cpm" value="option2">
                                  <label class="radio-check-label" for="cpm">
                                     <span class="radio-box">
@@ -129,7 +130,7 @@
                                     </span>
                                     <span class="radio-text">CPC</span>
                                  </label>
-                               </div>
+                              </div>
                            </div>
                         </div>
                         <div class="card-body">
@@ -146,7 +147,9 @@
                                  </div>
                               </div>
                               <div class="col-md-12">
-                                 <p class="fz12 fw-400 darkPrimaryColor">**You need to add the function below in your conversion event: `___gnr_conversion()` to track Conversions. You need to add the function below in your conversion event</p>
+                                 <p class="fz12 fw-400 darkPrimaryColor">**You need to add the function below in your
+                                    conversion event: `___gnr_conversion()` to track Conversions. You need to add the
+                                    function below in your conversion event</p>
                               </div>
                            </div>
                         </div>
@@ -156,33 +159,41 @@
                         <div class="card-header card-header-custom border-0">
                            <div class="settings-radio-group">
                               <div class="radio-btn-wrapper">
-                                 <input class="radio-btn-input" type="radio" name="schedule" id="defualtSchedule" value="option2">
+                                 <input class="radio-btn-input" type="radio" name="schedule" id="defualtSchedule"
+                                    value="option2">
                                  <label class="radio-check-label" for="defualtSchedule">
                                     <span class="radio-box">
                                        <span>&nbsp;</span>
                                     </span>
                                     <span class="radio-text">Default Schedule</span>
                                  </label>
-                               </div>
-                               <div class="radio-btn-wrapper">
-                                 <input class="radio-btn-input" type="radio" name="schedule" id="customSchedule" value="option2">
+                              </div>
+                              <div class="radio-btn-wrapper">
+                                 <input class="radio-btn-input" type="radio" name="schedule" id="customSchedule"
+                                    value="option2">
                                  <label class="radio-check-label" for="customSchedule">
                                     <span class="radio-box">
                                        <span>&nbsp;</span>
                                     </span>
                                     <span class="radio-text">Custom Schedule</span>
                                  </label>
-                               </div>
+                              </div>
                            </div>
                         </div>
                      </div>
                   </div>
                </div>
                <div class="modal-footer">
-                  <button type="submit" class="ra-btn w-100">Create Ad Group</button>
+                  <button type="submit" class="ra-btn client-settings-modal--btn w-100">Create Ad Group</button>
                </div>
                <div class="modal-footer">
-                  <button type="submit" class="ra-btn opacity w-100">Create Ad Group</button>
+                  <button type="submit" class="ra-btn client-settings-modal--btn opacity w-100">Create Ad Group</button>
+               </div>
+               <div class="modal-footer">
+                  <button type="submit" class="ra-btn client-settings-modal--btn w-100 btn-loader">
+                     <div class="spinner-border text-success mr-2" role="status"><span class="sr-only">Loading...</span></div>
+                     Creating New Ad Group 
+                  </button>
                </div>
             </form>
          </div>
@@ -612,7 +623,6 @@
             </ul>
          </div>
       </div>
-
       <div class="campaign-settings-content">
          <div class="card settings-card">
             <div class="card-header card-header-custom">

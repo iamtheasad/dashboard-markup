@@ -233,7 +233,7 @@
       .modal-header,
       .modal-body,
       .modal-footer {
-         background-color: #fff;
+         background-color: $white;
          opacity: .6;
       }
    }
@@ -247,10 +247,10 @@
    .modal-header {
       position: sticky;
       top: 0;
-      border-bottom: 1px solid #E6E9F5;
+      border-bottom: 1px solid $purpleLight3;
       padding: 24px 24px 20px;
       z-index: 11;
-      background: #fff;
+      background: $white;
    }
 
    .modal-body {
@@ -259,17 +259,17 @@
 
    .modal-footer {
       padding: 20px 24px;
-      border-top: 1px solid #E6E9F5;
+      border-top: 1px solid $purpleLight3;
    }
 
    .close {
-      color: #83839F;
+      color: $purpleLight;
       opacity: 1;
    }
 
    .close:focus,
    .close:hover {
-      color: #83839F;
+      color: $purpleLight;
       opacity: .75;
    }
 
@@ -280,8 +280,9 @@
    }
 }
 
-.client-settings-modal--btn {
-   .ra-btn {
+.ra-btn {
+   &.client-settings-modal--btn {
+
       background-color: rgba($darkBlueColor2, 0.6);
       color: $white;
       font-size: rem(16);
@@ -295,6 +296,31 @@
 
       &.opacity {
          background-color: rgba($darkBlueColor2, 1);
+      }
+
+      &.btn-loader {
+         background-color: $darkBlueColor3;
+
+         .text-success {
+            color: $grayLight6 !important;
+         }
+
+         .spinner-border {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            vertical-align: text-bottom;
+            border: 3px solid currentColor;
+            border-right-color: $darkBlueColor4;
+            border-radius: 50%;
+            animation: spinner-border .75s linear infinite;
+         }
+
+         @keyframes spinner-border {
+            to {
+               transform: rotate(360deg);
+            }
+         }
       }
    }
 }
