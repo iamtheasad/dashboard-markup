@@ -2,7 +2,7 @@
    display: flex;
    flex-wrap: wrap;
    background-color: $white;
-   height: 100%;
+   padding-bottom: 100px;
 }
 
 .side-tree-menu {
@@ -160,7 +160,7 @@
 .tree-menu-content ul,
 .tree-menu-content li {
    position: relative;
-   line-height: 30px;
+   padding-bottom: 10px;
 }
 
 .tree-menu-content ul {
@@ -202,7 +202,7 @@
 }
 
 .tree-menu-content ul>li:last-child::after {
-   height: 8px;
+   height: 80%;
 }
 
 .tree-menu-content li.list-item:before {

@@ -539,23 +539,22 @@ input[type="text"] {
 }
 
 .ra-form {
-
   &.ra-form-2 {
     position: relative;
 
     .ra-input-2 {
       width: 100%;
-      border: 1px solid #E6E9F5;
+      border: 1px solid $purpleLight3;
       border-radius: 4px;
       padding: 0 65px 0px 16px;
       font-size: rem(14);
-      color: #475364;
+      color: $primaryColor;
       min-height: 44px;
       font-weight: 500;
       transition: all .2s ease-in-out;
 
       &::placeholder {
-        color: #475364;
+        color: $primaryColor;
         opacity: .4;
         font-size: rem(14);
         font-weight: 500;
@@ -568,8 +567,23 @@ input[type="text"] {
       }
 
       &.selected-bg {
-        background: #F6F7FB;
+        background: $purpleLight4;
+
+        &::placeholder {
+          color: $primaryColor;
+          opacity: 1;
+        }
       }
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    input[type=number] {
+      -moz-appearance: textfield;
     }
 
     .ra-label-2 {
@@ -577,62 +591,65 @@ input[type="text"] {
       font-size: 12px;
 
       &.left {
-        left: 2%;
+        left: 13px;
         top: 1%;
         z-index: 1;
-        background: #fff;
+        background: $white;
         padding: 0px 4px;
-        color: #83839F;
+        color: $purpleLight;
         font-weight: 500;
         transform: translateY(-50%);
       }
 
       &.right {
         top: 50%;
-        left: 91%;
+        right: 17px;
         z-index: 1;
         transform: translateY(-50%);
-        color: #8A9995;
+        color: $grayLight7;
         font-weight: 400;
       }
     }
+  }
+}
 
-    &.ra-form-2--select {
-      .ra-select-2 {
-        width: 100%;
-        padding-left: 16px;
-        border-radius: 4px;
-        border: 1px solid #E6E9F5;
-        min-height: 44px;
-        -webkit-appearance: none;
-        background-image: url('data:image/svg+xml;utf8,<svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M7.77552 0.232761C7.63333 0.0836789 7.44099 0 7.2405 0C7.04001 0 6.84766 0.0836789 6.70547 0.232761L3.98103 3.06631L1.29453 0.232761C1.15234 0.0836789 0.959994 0 0.759504 0C0.559014 0 0.36667 0.0836789 0.224481 0.232761C0.15335 0.307172 0.0968926 0.395701 0.0583643 0.493242C0.0198361 0.590782 0 0.695404 0 0.801071C0 0.906738 0.0198361 1.01136 0.0583643 1.1089C0.0968926 1.20644 0.15335 1.29497 0.224481 1.36938L3.44221 4.76323C3.51276 4.83826 3.59669 4.8978 3.68917 4.93844C3.78165 4.97908 3.88084 5 3.98103 5C4.08121 5 4.1804 4.97908 4.27288 4.93844C4.36536 4.8978 4.4493 4.83826 4.51985 4.76323L7.77552 1.36938C7.84665 1.29497 7.90311 1.20644 7.94163 1.1089C7.98016 1.01136 8 0.906738 8 0.801071C8 0.695404 7.98016 0.590782 7.94163 0.493242C7.90311 0.395701 7.84665 0.307172 7.77552 0.232761Z"fill="%2383839F"/> </svg>');
+.ra-select-2 {
+  width: 100%;
+  padding-left: 16px;
+  border-radius: 4px;
+  border: 1px solid $purpleLight3;
+  min-height: 44px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.77552 0.232761C7.63333 0.0836789 7.44099 0 7.2405 0C7.04001 0 6.84766 0.0836789 6.70547 0.232761L3.98103 3.06631L1.29453 0.232761C1.15234 0.0836789 0.959994 0 0.759504 0C0.559014 0 0.36667 0.0836789 0.224481 0.232761C0.15335 0.307172 0.0968926 0.395701 0.0583643 0.493242C0.0198361 0.590782 0 0.695404 0 0.801071C0 0.906738 0.0198361 1.01136 0.0583643 1.1089C0.0968926 1.20644 0.15335 1.29497 0.224481 1.36938L3.44221 4.76323C3.51276 4.83826 3.59669 4.8978 3.68917 4.93844C3.78165 4.97908 3.88084 5 3.98103 5C4.08121 5 4.1804 4.97908 4.27288 4.93844C4.36536 4.8978 4.4493 4.83826 4.51985 4.76323L7.77552 1.36938C7.84665 1.29497 7.90311 1.20644 7.94163 1.1089C7.98016 1.01136 8 0.906738 8 0.801071C8 0.695404 7.98016 0.590782 7.94163 0.493242C7.90311 0.395701 7.84665 0.307172 7.77552 0.232761Z"fill="%2$purpleLight"/> </svg>');
 
-            background-repeat: no-repeat;
-            background-position-x: 97%;
-            background-position-y: 50%;
-            cursor: pointer;
-            transition: all .2s ease-in-out;
+      background-repeat: no-repeat;
+      background-position-x: 97%;
+      background-position-y: 50%;
+      cursor: pointer;
+      transition: all .2s ease-in-out;
+      color: rgba($primaryColor, .4);
+      font-weight: 500;
 
-            color: #475364;
-            font-weight: 500;
-            opacity: .4;
+      &:focus,
+      &:visited,
+      &:hover {
+      border: 1px solid $greenDark;
+      outline: none;
+    }
 
-            &:focus,
-            &:visited,
-            &:hover {
-            border: 1px solid $greenDark;
-            outline: none;
-          }
+    option {
+      color: $black;
+    }
 
-          &.selected {
-            opacity: 1;
-          }
-        }
-      }
+    &.selected {
+      color: rgba($primaryColor, 1);
     }
   }
 
+  // Checkbox
   .btn-checkbox {
     .btn-checkbox-label {
       height: 36px;
@@ -672,6 +689,99 @@ input[type="text"] {
       top: 0;
       left: 0;
       opacity: 0;
+    }
+  }
+
+  // Radio Buttons
+  .settings-radio-group {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    .radio-btn-wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 16px;
+
+      &:last-child {
+        margin-left: 0px;
+      }
+
+      .radio-btn-input {
+        appearance: none;
+
+        &:checked ~ label.radio-check-label {
+          background-color: $greenDark;
+
+          .radio-box {
+            border: 2px solid $white;
+
+            span {
+              background: $white;
+            }
+          }
+
+          .radio-text {
+            color: $white;
+          }
+        }
+      }
+
+      .radio-check-label {
+        display: inline-flex;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        min-height: 44px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background-color: $white;
+        border-radius: 4px;
+      }
+
+      .radio-box {
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        border-radius: 50%;
+        border: 2px solid $purpleLight;
+        padding: 7px;
+        position: relative;
+      }
+
+      .radio-box span {
+        width: 8px;
+        height: 8px;
+        display: inline-block;
+        background: $purpleLight;
+        border-radius: 50%;
+        position: absolute;
+        top: 3px;
+        right: 3px;
+      }
+
+      .radio-text {
+        font-size: 14px;
+        font-weight: 500;
+        color: $purpleLight;
+        padding-left: 10px;
+      }
+    }
+  }
+
+  .card {
+    &.settings-card {
+      &.radio-btn-card {
+        .card-header {
+          &.card-header-custom {
+            padding: 0px;
+            background-color: $purpleLight4;
+          }
+        }
+      }
     }
   }
 
