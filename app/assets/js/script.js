@@ -371,7 +371,6 @@ $(document).ajaxSuccess(function () {
               $('.duration-time-activator').daterangepicker({
                 timePicker: true,
                 singleDatePicker:true,
-                timePicker24Hour: true,
                 timePickerIncrement: 1,
                 timePickerSeconds: true,
                 parentEl: ".campaign-wrapper",

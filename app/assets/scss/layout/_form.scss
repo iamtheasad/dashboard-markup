@@ -741,6 +741,10 @@ input[type="text"] {
         justify-content: center;
         background-color: $white;
         border-radius: 4px;
+
+        &.light-bg {
+          background-color: $purpleLight4;
+        }
       }
 
       .radio-box {
@@ -769,6 +773,20 @@ input[type="text"] {
         font-weight: 500;
         color: $purpleLight;
         padding-left: 10px;
+      }
+    }
+  }
+
+  .campaign-type {
+    .settings-radio-group {
+      padding: 20px;
+    }
+
+    .radio-btn-wrapper {
+      margin: 0;
+
+      &:not(:last-child) {
+        margin-right: 16px;
       }
     }
   }
