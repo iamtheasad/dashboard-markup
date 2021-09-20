@@ -116,7 +116,7 @@ $(document).ajaxSuccess(function () {
 
 (function ($) {
     "use strict";
-
+    
     /*==========================================================================
         :: All Essential Functions
     ==========================================================================*/
@@ -212,7 +212,7 @@ $(document).ajaxSuccess(function () {
             "infoCallback": function (settings, start, end, max, total, pre) {
                 return start + " - " + end + " of " + total;
             },
-            "dom": "<'row'<'col-sm-8'><'col-sm-4 d-flex justify-content-end align-items-center'ip>>" +
+            "dom": "<'row'<'col-sm-12 d-flex justify-content-end align-items-center'ip>>" +
                 "<'row'<'col-sm-12'>>" +
                 "<'row'<'col-sm-4'><'col-sm-4 text-center'><'col-sm-4'>>",
             "language": {
@@ -333,19 +333,53 @@ $(document).ajaxSuccess(function () {
 
     function multiDateRangePicker() {
         if (window.daterangepicker) {
-            $('.date-range').daterangepicker({
+            $('.date-range-activator').daterangepicker({
                 opens: 'left',
                 "autoApply": true,
+                parentEl: ".campaign-wrapper",
             }, function (start, end, label) {
                 console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
             });
 
             $('.date-range').on('show.daterangepicker', function (ev, picker) {
-                $(".multi-date-range").addClass("focus")
+                $(this).parents(".multi-date-range").addClass("focus")
             });
 
             $('.date-range').on('hide.daterangepicker', function (ev, picker) {
-                $(".multi-date-range").removeClass("focus")
+                $(this).parents(".multi-date-range").removeClass("focus")
+            });
+        }
+    }
+
+    function datePicker() {
+        if (window.daterangepicker) {
+            $('.duration-date-activator').daterangepicker({
+                opens: 'left',
+                "autoApply": true,
+                "singleDatePicker": true,
+                "startDate": "09/14/2021",
+                "endDate": "09/20/2021",
+                parentEl: ".campaign-wrapper",
+            }, function(start, end, label) {
+              console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
+            });
+        }
+    }
+
+    function timePicker() {
+        if (window.daterangepicker) {
+              $('.duration-time-activator').daterangepicker({
+                timePicker: true,
+                singleDatePicker:true,
+                timePickerIncrement: 1,
+                timePickerSeconds: true,
+                parentEl: ".campaign-wrapper",
+                locale: {
+                    format: 'HH:mm:ss'
+                },
+                "autoApply": false,
+            }).on('show.daterangepicker', function (ev, picker) {
+                picker.container.find(".calendar-table").hide();
             });
         }
     }
@@ -358,6 +392,7 @@ $(document).ajaxSuccess(function () {
         }
     }
 
+
     /*==========================================================================
         WHEN DOCUMENT LOADING
     ==========================================================================*/
@@ -369,6 +404,8 @@ $(document).ajaxSuccess(function () {
         filePreview();
         dropdown();
         multiDateRangePicker();
+        datePicker();
+        timePicker();
         rangeSlider();
         animateSearch();
 

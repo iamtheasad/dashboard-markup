@@ -1,0 +1,178 @@
+<div class="client-settings-modal-all create-add-group-modal modal fade" id="createAddGroup" tabindex="-1"
+role="dialog" aria-labelledby="createAddGroup" aria-hidden="true">
+<!-- .loading class add for blur effect -->
+<div class="modal-dialog modal-dialog-centered" role="document">
+   <div class="modal-content">
+      <form action="#">
+         <div class="modal-header">
+            <h5 class="modal-title">Create Ad Group</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+            </button>
+         </div>
+         <div class="modal-body">
+            <div class="scrollable">
+               <div class="row">
+                  <div class="col-md-12 mb-20">
+                     <div class="ra-form ra-form-2">
+                        <fieldset>
+                           <label for="adGroupName" class="ra-label-2 left">Ad Group Name</label>
+                           <input type="text" class="ra-input-2" id="adGroupName" placeholder="Set a name">
+                           <!-- .selected-bg class for adding input background color -->
+                           <label for="adGroupName" class="ra-label-2 right">0/100</label>
+                        </fieldset>
+                     </div>
+                  </div>
+                  <div class="col-md-12 mb-20">
+                     <div class="ra-form ra-form-2">
+                        <fieldset>
+                           <label for="adGroupName" class="ra-label-2 left">Ad Group Name</label>
+                           <input type="text" class="ra-input-2 selected-bg" id="adGroupName"
+                              placeholder="Set a name">
+                           <!-- .selected-bg class for adding input background color -->
+                           <label for="adGroupName" class="ra-label-2 right">0/100</label>
+                        </fieldset>
+                     </div>
+                  </div>
+                  <div class="col-md-12 mb-20">
+                     <div class="ra-form ra-form-2 ra-form-2--select">
+                        <fieldset>
+                           <label for="audienceSelectField" class="ra-label-2 left">Audience</label>
+                           <select name="selectField" class="ra-select-2" id="audienceSelectField">
+                              <!-- .selected class add for opacity -->
+                              <option value="SelectAudience" selected>Select Audience</option>
+                              <option value="Demo2">Demo2</option>
+                              <option value="Demo3">Demo3</option>
+                              <option value="Demo4">Demo4</option>
+                           </select>
+                        </fieldset>
+                     </div>
+                  </div>
+                  <div class="col-md-12 mb-20">
+                     <div class="ra-form ra-form-2 ra-form-2--select">
+                        <fieldset>
+                           <label for="audienceSelectField" class="ra-label-2 left">Audience</label>
+                           <select name="selectField" class="ra-select-2 selected" id="audienceSelectField">
+                              <!-- .selected class add for opacity -->
+                              <option value="SelectAudience" selected>Select Audience</option>
+                              <option value="Demo2">Demo2</option>
+                              <option value="Demo3">Demo3</option>
+                              <option value="Demo4">Demo4</option>
+                           </select>
+                        </fieldset>
+                     </div>
+                  </div>
+
+                  <div class="col-md-6 mb-20">
+                     <div class="ra-form ra-form-2">
+                        <fieldset>
+                           <label for="addGroupBudget" class="ra-label-2 left">Ad Group Budget</label>
+                           <input type="number" class="ra-input-2" id="addGroupBudget" placeholder="Set a Budget">
+                           <!-- .selected-bg class for adding input background color -->
+                           <label for="addGroupBudget" class="ra-label-2 right fw-500">BDT</label>
+                        </fieldset>
+                     </div>
+                  </div>
+                  <div class="col-md-6 mb-20">
+                     <div class="ra-form ra-form-2">
+                        <fieldset>
+                           <label for="unallocatedBalance" class="ra-label-2 left">Unallocated Balance</label>
+                           <input type="number" class="ra-input-2 selected-bg" id="unallocatedBalance"
+                              placeholder="20,000">
+                           <!-- .selected-bg class for adding input background color -->
+                           <label for="unallocatedBalance" class="ra-label-2 right fw-500">BDT</label>
+                        </fieldset>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="card settings-card radio-btn-card mb-20">
+                  <div class="card-header card-header-custom">
+                     <div class="settings-radio-group">
+                        <div class="radio-btn-wrapper">
+                           <input class="radio-btn-input" type="radio" name="cpc" id="cpc" value="option2">
+                           <label class="radio-check-label" for="cpc">
+                              <span class="radio-box">
+                                 <span>&nbsp;</span>
+                              </span>
+                              <span class="radio-text">CPC</span>
+                           </label>
+                        </div>
+                        <div class="radio-btn-wrapper">
+                           <input class="radio-btn-input" type="radio" name="cpc" id="cpm" value="option2">
+                           <label class="radio-check-label" for="cpm">
+                              <span class="radio-box">
+                                 <span>&nbsp;</span>
+                              </span>
+                              <span class="radio-text">CPC</span>
+                           </label>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="card-body">
+                     <div class="row">
+                        <div class="col-md-12 mb-16">
+                           <div class="ra-form ra-form-2">
+                              <fieldset>
+                                 <label for="unallocatedBalance" class="ra-label-2 left">Pricing</label>
+                                 <input type="text" class="ra-input-2 selected-bg" id="unallocatedBalance"
+                                    placeholder="10.00 ~ 30.00">
+                                 <!-- .selected-bg class for adding input background color -->
+                                 <label for="unallocatedBalance" class="ra-label-2 right fw-500">BDT</label>
+                              </fieldset>
+                           </div>
+                        </div>
+                        <div class="col-md-12">
+                           <p class="fz12 fw-400 darkPrimaryColor">**You need to add the function below in your
+                              conversion event: `___gnr_conversion()` to track Conversions. You need to add the
+                              function below in your conversion event</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="card settings-card radio-btn-card">
+                  <div class="card-header card-header-custom border-0">
+                     <div class="settings-radio-group">
+                        <div class="radio-btn-wrapper">
+                           <input class="radio-btn-input" type="radio" name="schedule" id="defualtSchedule"
+                              value="option2">
+                           <label class="radio-check-label" for="defualtSchedule">
+                              <span class="radio-box">
+                                 <span>&nbsp;</span>
+                              </span>
+                              <span class="radio-text">Default Schedule</span>
+                           </label>
+                        </div>
+                        <div class="radio-btn-wrapper">
+                           <input class="radio-btn-input" type="radio" name="schedule" id="customSchedule"
+                              value="option2">
+                           <label class="radio-check-label" for="customSchedule">
+                              <span class="radio-box">
+                                 <span>&nbsp;</span>
+                              </span>
+                              <span class="radio-text">Custom Schedule</span>
+                           </label>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="modal-footer">
+            <button type="submit" class="ra-btn client-settings-modal--btn w-100">Create Ad Group</button>
+         </div>
+         <div class="modal-footer">
+            <button type="submit" class="ra-btn client-settings-modal--btn opacity w-100">Create Ad Group</button>
+         </div>
+         <div class="modal-footer">
+            <button type="submit" class="ra-btn client-settings-modal--btn w-100 btn-loader">
+               <div class="spinner-border text-success mr-2" role="status"><span class="sr-only">Loading...</span>
+               </div>
+               Creating New Ad Group
+            </button>
+         </div>
+      </form>
+   </div>
+</div>
+</div>

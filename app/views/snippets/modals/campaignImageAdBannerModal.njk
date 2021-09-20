@@ -1,0 +1,88 @@
+   <div class="client-settings-modal-all create-add-group-modal modal fade" id="campaignImageUpload" tabindex="-1"
+      role="dialog" aria-labelledby="campaignImageUpload" aria-hidden="true">
+      <!-- .loading class add for blur effect -->
+      <div class="modal-dialog modal-dialog-centered" role="document">
+         <div class="modal-content">
+            <form action="#">
+               <div class="modal-header">
+                  <h5 class="modal-title">Upload Image Ad Banner(s)</h5>
+                  <div>
+                     <span class="upload-initial mr-2">Upload HTML?</span>
+                     <span class="upload-completed mr-2">2/4 Uploading</span>
+                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                     </button>
+                  </div>
+               </div>
+               <div class="modal-body">
+                  <div class="scrollable">
+                     <div class="row">
+                        <div class="col-md-12 mb-20">
+                           <div class="ra-form ra-form-2">
+                              <fieldset>
+                                 <label for="adBannerName" class="ra-label-2 left">Ad Banner Name</label>
+                                 <!-- .selected-bg class for adding input background color -->
+                                 <input type="text" class="ra-input-2" id="adBannerName" placeholder="Set a name">
+                                 <label for="adBannerName" class="ra-label-2 right">0/100</label>
+                              </fieldset>
+                           </div>
+                        </div>
+                        <div class="col-md-12 mb-20">
+                           <div class="ra-form ra-form-2">
+                              <fieldset>
+                                 <label for="ridirectUrl" class="ra-label-2 left">Redirect URL</label>
+                                 <!-- .selected-bg class for adding input background color -->
+                                 <input type="url" class="ra-input-2" id="ridirectUrl"
+                                    placeholder="Set the Redirect URL">
+                              </fieldset>
+                           </div>
+                        </div>
+                        <div class="col-md-12">
+                           <input type="file" id="uploadHtmlorImage" class="invisible">
+
+                           <label for="uploadHtmlorImage">
+                              <div class="drop-image">
+                                 <div class="create-add-group">
+                                    <h4>Drop Images to Upload</h4>
+                                    <p>See our <a href="#" target="_blank">Ad Banner Guideline</a> to know about the
+                                       supported
+                                       Banner sizes.
+                                       File sizes should not be within 3.0 MB. Maximum 10 files at once.</p>
+                                    <span class="or">or,</span>
+
+                                    <div class="d-flex justify-content-center">
+                                       <div class="ra-btn bg-green min-height-36">
+                                          <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path
+                                                d="M27.9688 15.9688H15.9688V27.9688H12.0312V15.9688H0.03125V12.0312H12.0312V0.03125H15.9688V12.0312H27.9688V15.9688Z"
+                                                fill="#ffffff" />
+                                          </svg>
+                                          </span>
+                                          <span>Select Images</span>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </label>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="modal-footer">
+                  <button type="submit" class="ra-btn client-settings-modal--btn w-100">Create Ad Group</button>
+               </div>
+               <div class="modal-footer">
+                  <button type="submit" class="ra-btn client-settings-modal--btn opacity w-100">Create Ad Group</button>
+               </div>
+               <div class="modal-footer">
+                  <button type="submit" class="ra-btn client-settings-modal--btn w-100 btn-loader">
+                     <div class="spinner-border text-success mr-2" role="status"><span class="sr-only">Loading...</span>
+                     </div>
+                     Creating New Ad Group
+                  </button>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>

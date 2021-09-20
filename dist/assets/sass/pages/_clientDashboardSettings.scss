@@ -1,0 +1,491 @@
+.campaign-settings-wrapper {
+   display: flex;
+   background-color: $white;
+   padding-bottom: 100px;
+
+   @media screen and(max-width: 1100px) {
+      flex-wrap: wrap;
+      justify-content: center;
+   }
+}
+
+.side-tree-menu {
+   max-width: 320px;
+   width: 100%;
+   margin: 20px;
+
+   @media screen and (max-width: 992px) {
+      width: 100%
+   }
+}
+
+.campaign-settings-content {
+   max-width: 600px;
+   width: 100%;
+   margin: 20px;
+
+   @media screen and (max-width: 992px) {
+      width: 100%
+   }
+}
+
+.card {
+   &.settings-card {
+      border: 1px solid $purpleLight3;
+      border-radius: 6px;
+      overflow: hidden;
+
+      .card-header-custom {
+         padding: 12px 16px 12px 20px;
+         background-color: $purpleLight5;
+         border-bottom: 1px solid $purpleLight3;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+      }
+
+      .card-body {
+         background-color: $white;
+      }
+   }
+}
+
+.tree-play-icon {
+   line-height: 0px;
+   padding-right: 10px;
+}
+
+.selected-title {
+   padding: 8px 12px;
+   background: $purpleLight4;
+   border-radius: 4px;
+   height: 36px;
+   display: flex;
+
+   &.unselected {
+      background: transparent;
+
+      .plus {
+         display: none;
+      }
+
+      .ra-three-dot-btn-2 {
+         display: none;
+      }
+
+      .title-content {
+         font-weight: 500;
+      }
+   }
+
+   .ra-three-dot-btn {
+      &.ra-three-dot-btn-2 {
+         span {
+            background-color: $purpleLight;
+         }
+      }
+   }
+
+   .selected-title-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+   }
+
+   .tree-play-icon svg {
+      width: 16px;
+   }
+
+   .plus {
+      border: none;
+      background: transparent;
+      line-height: 0px;
+      margin-right: 5px;
+
+      svg {
+         width: 20px;
+         height: 20px;
+         padding: 5px;
+         background-color: $purpleLight3;
+         border-radius: 2px;
+      }
+   }
+
+   .title-content {
+      font-size: rem(14);
+      font-weight: 600;
+      color: $purple;
+      display: flex;
+      align-items: center;
+   }
+}
+
+.ellipsis {
+   white-space: nowrap;
+   text-overflow: ellipsis;
+   overflow: hidden;
+   width: 220px;
+}
+
+.campaign--title {
+   margin-bottom: 8px;
+}
+
+.on-hold {
+   .tree-hold {
+      display: none;
+   }
+
+   .tree-unhold {
+      display: inline-block;
+   }
+}
+
+.tree-hold {
+   display: inline-block;
+}
+
+.tree-unhold {
+   display: none;
+}
+
+.tree-menu-content {
+   a {
+      font-weight: 500;
+      font-size: rem(14);
+      width: 80%;
+      display: flex;
+      align-items: center;
+   }
+}
+
+.tree-menu-content,
+.tree-menu-content ul,
+.tree-menu-content li {
+   position: relative;
+   padding-bottom: 10px;
+}
+
+.tree-menu-content ul {
+   list-style: none;
+   padding-left: 44px;
+}
+
+.tree-menu-content .border-wrapper {
+   padding-left: 45px;
+}
+
+.tree-menu-content li::before,
+.tree-menu-content li::after {
+   content: "";
+   position: absolute;
+   left: -26px;
+}
+
+.tree-menu-content li::before {
+   border-top: 1px solid $greenDark;
+   top: 16px;
+   width: 10px;
+   height: 0;
+}
+
+.tree-menu-content li::after {
+   border-left: 1px solid $greenDark;
+   height: 100%;
+   width: 0px;
+   top: 9px;
+}
+
+.tree-menu-content .on-hold li:after {
+   border-color: $purpleLight3;
+}
+
+.tree-menu-content .on-hold li:before {
+   border-color: $purpleLight3;
+}
+
+.tree-menu-content ul>li:last-child::after {
+   height: 80%;
+}
+
+.tree-menu-content li.list-item:before {
+   top: 19px;
+}
+
+.tree-menu-content li.list-item:after {
+   top: 15px;
+}
+
+.create-add-group {
+   background: rgba(114, 191, 68, 0.1);
+   border: 1px dashed $greenDark;
+   padding: 20px 16px;
+   border-radius: 4px;
+
+   svg {
+      width: 12px;
+      margin-right: 10px;
+   }
+}
+
+// Modals
+
+.client-settings-modal-all {
+   &.loading {
+
+      .modal-header,
+      .modal-body,
+      .modal-footer {
+         background-color: $white;
+         opacity: .6;
+      }
+   }
+
+   .modal-title {
+      font-size: rem(18);
+      font-weight: 700;
+      color: $purleDark;
+   }
+
+   .modal-content {
+      border-radius: 6px;
+      border: 1px solid transparent;
+      filter: drop-shadow(0px 4px 10px rgba(36, 48, 97, 0.09));
+   }
+
+   .modal-header {
+      border-bottom: 1px solid $purpleLight3;
+      padding: 24px 24px 20px;
+      z-index: 11;
+      background: $white;
+
+      .upload-initial {
+         font-size: rem(16);
+         font-weight: 600;
+         color: $darkBlueColor2;
+      }
+
+      .upload-completed {
+         font-size: rem(14);
+         font-weight: 400;
+         color: $purpleLight7;
+      }
+   }
+
+   .modal-body {
+      padding: 24px;
+      height: 60vh;
+      overflow: auto;
+   }
+
+   /* width */
+   ::-webkit-scrollbar {
+      width: 8px;
+   }
+
+   /* Track */
+   ::-webkit-scrollbar-track {
+      background: rgba($greenDark, .2);
+      border-radius: 20px;
+   }
+
+   /* Handle */
+   ::-webkit-scrollbar-thumb {
+      background: rgba($greenDark, .5);
+      border-radius: 20px;
+      height: 30px;
+      transition: .2s;
+   }
+
+   /* Handle on hover */
+   ::-webkit-scrollbar-thumb:hover {
+      background: rgba($greenDark, .7);
+   }
+
+   .modal-footer {
+      padding: 20px 24px;
+      border-top: 1px solid $purpleLight3;
+   }
+
+   .close {
+      color: $purpleLight;
+      opacity: 1;
+   }
+
+   .close:focus,
+   .close:hover {
+      color: $purpleLight;
+      opacity: .75;
+   }
+
+   .modal-dialog {
+      @media (min-width: 576px) {
+         max-width: 600px;
+      }
+   }
+}
+
+.ra-btn {
+   &.client-settings-modal--btn {
+
+      background-color: rgba($darkBlueColor2, 0.6);
+      color: $white;
+      font-size: rem(16);
+      transition: .2s;
+      padding: 12px;
+      height: 44px;
+
+      &:hover {
+         color: $white;
+      }
+
+      &.opacity {
+         background-color: rgba($darkBlueColor2, 1);
+      }
+
+      &.btn-loader {
+         background-color: $darkBlueColor3;
+
+         .text-success {
+            color: $grayLight6 !important;
+         }
+
+         .spinner-border {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            vertical-align: text-bottom;
+            border: 3px solid currentColor;
+            border-right-color: $darkBlueColor4;
+            border-radius: 50%;
+            animation: spinner-border .75s linear infinite;
+         }
+
+         @keyframes spinner-border {
+            to {
+               transform: rotate(360deg);
+            }
+         }
+      }
+   }
+}
+
+.drop-image {
+   text-align: center;
+
+   h4 {
+      font-size: rem(16);
+      font-weight: 700;
+      color: $purleDark;
+      margin-bottom: 8px;
+   }
+
+   p {
+      font-size: rem(14);
+      font-weight: 400;
+      color: $primaryColor;
+      line-height: 20px;
+      margin-bottom: 8px;
+
+      a {
+         font-weight: 600;
+         color: $darkBlueColor2;
+      }
+   }
+
+   .or {
+      margin-bottom: 8px;
+      font-size: rem(12);
+      color: $grayLight7;
+      display: inline-block;
+   }
+
+   .ra-btn {
+      font-size: rem(14);
+      padding: 0 12px;
+   }
+}
+
+// Campaign Settings Content
+.campaign-status-bar {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.color-box-status {
+   display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+   align-items: center;
+   height: 100%;
+   padding: 12px 12px 0px 12px;
+   border-bottom: 1px solid $purpleLight3;
+
+   .item {
+      display: flex;
+      align-items: center;
+      margin-right: 5px;
+      margin-bottom: 12px;
+
+      .box {
+         width: 20px;
+         height: 20px;
+         display: inline-flex;
+         border-radius: 4px;
+         border: 1px solid transparent;
+         margin-right: 12px;
+
+         &.spent {
+            background: $orangDark3;
+         }
+
+         &.remaining {
+            background: $greenDark;
+         }
+
+         &.unallocated {
+            background: $greenLight;
+         }
+
+         &.available {
+            background: $purpleLight4;
+            border-color: $grayLight8;
+         }
+      }
+   }
+}
+
+.multi-color-progressbar {
+   display: flex;
+   padding: 20px;
+  
+  .amount {
+      text-align: center;
+      overflow: hidden;
+
+      .bg {
+         height: 4px;
+     }
+
+      span {
+         margin-bottom: 14px;
+         display: inline-block;
+     }
+
+     .orangDark3-bg {
+      border-radius: 2px 0px 0px 2px;
+   }
+
+     .purpleLight4-bg {
+        border-radius: 0px 2px 2px 0px;
+     }
+  }
+}
+
+.tracking-title {
+   background-color: $greenLight2;
+   padding: 12px 16px;
+   border-radius: 2px;
+}
