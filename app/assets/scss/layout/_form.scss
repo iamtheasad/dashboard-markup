@@ -414,7 +414,7 @@ input[type="text"] {
 
   input[type="date"] {
     &::-webkit-calendar-picker-indicator {
-      background-image: url('../images/icons/date.svg')
+      background-image: url('../images/icons/Date.svg')
     }
   }
 
@@ -442,6 +442,7 @@ input[type="text"] {
     }
   }
 }
+
 
 .rs-form {
   &.ra-form {
@@ -1062,6 +1063,13 @@ input[type="text"] {
       font-size: rem(14) !important;
       font-weight: 500;
       transition: .2s;
+
+      &.duration-date,
+      &.duration-time {
+        &.bg {
+          background: $purpleLight4;
+        }
+      }
     }
 
     .daterange-label-text {

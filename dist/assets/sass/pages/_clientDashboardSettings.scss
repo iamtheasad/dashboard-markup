@@ -1,8 +1,12 @@
 .campaign-settings-wrapper {
    display: flex;
-   flex-wrap: wrap;
    background-color: $white;
-   height: 100%;
+   padding-bottom: 100px;
+
+   @media screen and(max-width: 1100px) {
+      flex-wrap: wrap;
+      justify-content: center;
+   }
 }
 
 .side-tree-menu {
@@ -160,7 +164,7 @@
 .tree-menu-content ul,
 .tree-menu-content li {
    position: relative;
-   line-height: 30px;
+   padding-bottom: 10px;
 }
 
 .tree-menu-content ul {
@@ -202,7 +206,7 @@
 }
 
 .tree-menu-content ul>li:last-child::after {
-   height: 8px;
+   height: 80%;
 }
 
 .tree-menu-content li.list-item:before {
@@ -238,6 +242,12 @@
       }
    }
 
+   .modal-title {
+      font-size: rem(18);
+      font-weight: 700;
+      color: $purleDark;
+   }
+
    .modal-content {
       border-radius: 6px;
       border: 1px solid transparent;
@@ -245,16 +255,52 @@
    }
 
    .modal-header {
-      position: sticky;
-      top: 0;
       border-bottom: 1px solid $purpleLight3;
       padding: 24px 24px 20px;
       z-index: 11;
       background: $white;
+
+      .upload-initial {
+         font-size: rem(16);
+         font-weight: 600;
+         color: $darkBlueColor2;
+      }
+
+      .upload-completed {
+         font-size: rem(14);
+         font-weight: 400;
+         color: $purpleLight7;
+      }
    }
 
    .modal-body {
       padding: 24px;
+      height: 60vh;
+      overflow: auto;
+   }
+
+   /* width */
+   ::-webkit-scrollbar {
+      width: 8px;
+   }
+
+   /* Track */
+   ::-webkit-scrollbar-track {
+      background: rgba($greenDark, .2);
+      border-radius: 20px;
+   }
+
+   /* Handle */
+   ::-webkit-scrollbar-thumb {
+      background: rgba($greenDark, .5);
+      border-radius: 20px;
+      height: 30px;
+      transition: .2s;
+   }
+
+   /* Handle on hover */
+   ::-webkit-scrollbar-thumb:hover {
+      background: rgba($greenDark, .7);
    }
 
    .modal-footer {
@@ -323,4 +369,117 @@
          }
       }
    }
+}
+
+.drop-image {
+   text-align: center;
+
+   h4 {
+      font-size: rem(16);
+      font-weight: 700;
+      color: $purleDark;
+      margin-bottom: 8px;
+   }
+
+   p {
+      font-size: rem(14);
+      font-weight: 400;
+      color: $primaryColor;
+      line-height: 20px;
+      margin-bottom: 8px;
+
+      a {
+         font-weight: 600;
+         color: $darkBlueColor2;
+      }
+   }
+
+   .or {
+      margin-bottom: 8px;
+      font-size: rem(12);
+      color: $grayLight7;
+      display: inline-block;
+   }
+
+   .ra-btn {
+      font-size: rem(14);
+      padding: 0 12px;
+   }
+}
+
+// Campaign Settings Content
+.campaign-status-bar {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.color-box-status {
+   display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+   align-items: center;
+   height: 100%;
+   padding: 12px 12px 0px 12px;
+   border-bottom: 1px solid $purpleLight3;
+
+   .item {
+      display: flex;
+      align-items: center;
+      margin-right: 5px;
+      margin-bottom: 12px;
+
+      .box {
+         width: 20px;
+         height: 20px;
+         display: inline-flex;
+         border-radius: 4px;
+         border: 1px solid transparent;
+         margin-right: 12px;
+
+         &.spent {
+            background: $orangDark3;
+         }
+
+         &.remaining {
+            background: $greenDark;
+         }
+
+         &.unallocated {
+            background: $greenLight;
+         }
+
+         &.available {
+            background: $purpleLight4;
+            border-color: $grayLight8;
+         }
+      }
+   }
+}
+
+.multi-color-progressbar {
+   display: flex;
+   padding: 20px;
+  
+  .amount {
+      text-align: center;
+      overflow: hidden;
+
+      .bg {
+         height: 4px;
+     }
+
+      span {
+         margin-bottom: 14px;
+         display: inline-block;
+     }
+
+     .orangDark3-bg {
+      border-radius: 2px 0px 0px 2px;
+   }
+
+     .purpleLight4-bg {
+        border-radius: 0px 2px 2px 0px;
+     }
+  }
 }
