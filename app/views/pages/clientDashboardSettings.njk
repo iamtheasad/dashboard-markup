@@ -233,7 +233,8 @@
                                     fill="#FC8B49" />
                               </svg>
                            </span>
-                           <span class="ellipsis" title="Sharetrip Summer Campaign 21">Sharetrip Summer Campaign 21</span>
+                           <span class="ellipsis" title="Sharetrip Summer Campaign 21">Sharetrip Summer Campaign
+                              21</span>
                         </a>
 
                         <div class="d-flex">
@@ -597,10 +598,10 @@
             <button class="ra-btn bg-green min-height-36">Active</button>
          </div>
 
-
+         <!-- Budget Start -->
          <div class="card settings-card mb-20">
             <div class="card-header card-header-custom">
-               <p class="fz16 fw-700">Budget : BDT 20,000</p>
+               <p class="fz16 fw-700 purleDark-color">Budget : BDT 20,000</p>
                <button type="button" class="ra-btn ra-btn-blue-bg ra-btn-8x11 height-32">
                   <span class="pr-2">
                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -617,20 +618,135 @@
             </div>
             <div class="card-body p-0">
                <div class="color-box-status">
-                  <span class="spent box">Spent</span>
-                  <span class="remaining box">Remaining</span>
-                  <span class="unallocated box">Unallocated</span>
-                  <span class="available box">Available</span>
+                  <span class="item">
+                     <span class="box spent">&nbsp;</span>
+                     <span class="fz14 fw-500 ra-primary-color">Spent</span>
+                  </span>
+                  <span class="item">
+                     <span class="box remaining">&nbsp;</span>
+                     <span class="fz14 fw-500 ra-primary-color">Remaining</span>
+                  </span>
+                  <span class="item">
+                     <span class="box unallocated">&nbsp;</span>
+                     <span class="fz14 fw-500 ra-primary-color">Unallocated</span>
+                  </span>
+                  <span class="item">
+                     <span class="box available">&nbsp;</span>
+                     <span class="fz14 fw-500 ra-primary-color">Available</span>
+                  </span>
                </div>
 
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem excepturi laborum officiis sit modi tempore cumque earum. Magni repellat quia, aliquid laborum corrupti mollitia doloribus quaerat ullam placeat pariatur quo culpa excepturi voluptas facilis fugiat sapiente illo commodi? Accusamus a explicabo expedita dignissimos tempore nesciunt reprehenderit tempora voluptatibus aliquid aspernatur voluptatum, sint, ad eaque animi, aperiam perspiciatis repellat blanditiis porro. Accusantium, cupiditate minima, sapiente culpa eligendi autem neque ducimus illo voluptatum delectus quos? Autem labore praesentium minima harum quae doloremque! Velit, consectetur asperiores excepturi neque nulla qui ratione aliquam eligendi incidunt. Magni id possimus nobis. Esse similique aliquid fugiat nobis?</p>
+               <!-- Progress Bar Start -->
+               <div class="multi-color-progressbar">
+                  <div class="amount spent-amount" style="width: 40%;">
+                     <span class="purple-light-color fz12 fw-500">12,000</span>
+                     <div class="bg orangDark3-bg"></div>
+                  </div>
+                  <div class="amount remaining-amount" style="width: 25%;">
+                     <span class="purple-light-color fz12 fw-500">3,000</span>
+                     <div class="bg greenDark-bg"></div>
+                  </div>
+                  <div class="amount unallocated-amount" style="width: 20%;">
+                     <span class="purple-light-color fz12 fw-500">5,000</span>
+                     <div class="bg greenLight-bg"></div>
+                  </div>
+                  <div class="amount available-amount" style="width: 15%;">
+                     <span class="purple-light-color fz12 fw-500">10,000</span>
+                     <div class="bg purpleLight4-bg"></div>
+                  </div>
+               </div>
+               <div class="pl-20 pr-20 pb-20">
+                  <div class="row">
+                     <div class="col-md-6">
+                        <span class="d-inline-block fz12 fw-500 purple-light-color">0</span>
+                     </div>
+                     <div class="col-md-3 text-right">
+                        <span class="d-inline-block fz14 fw-600 green-color">20,000</span>
+                     </div>
+                     <div class="col-md-3 text-right">
+                        <span class="d-inline-block fz12 fw-500 purple-light-color">30,000</span>
+                     </div>
+                  </div>
+               </div><!-- Progress Bar End -->
+
+               <form action="" class="p-20">
+                  <div class="row">
+                     <div class="col-md-6 mb-24">
+                        <div class="ra-form ra-form-2">
+                           <fieldset>
+                              <label for="adGroupName" class="ra-label-2 left">Total Budget</label>
+                              <input type="number" class="ra-input-2 selected-bg" id="adGroupName"
+                                 placeholder="20,000">
+                              <!-- .selected-bg class for adding input background color -->
+                              <label for="adGroupName" class="ra-label-2 right">BDT</label>
+                           </fieldset>
+                        </div>
+                     </div>
+                     <div class="col-md-6 mb-24">
+                        <div class="ra-form ra-form-2">
+                           <fieldset>
+                              <label for="adGroupName" class="ra-label-2 left">Account Balance</label>
+                              <input type="number" class="ra-input-2 selected-bg" id="adGroupName"
+                                 placeholder="10,000">
+                              <!-- .selected-bg class for adding input background color -->
+                              <label for="adGroupName" class="ra-label-2 right">BDT</label>
+                           </fieldset>
+                        </div>
+                     </div>
+                     <div class="col-md-6 mb-24">
+                        <div class="ra-form ra-form-2">
+                           <fieldset>
+                              <label for="adGroupName" class="ra-label-2 left">Allocated Budget</label>
+                              <input type="number" class="ra-input-2 selected-bg" id="adGroupName"
+                                 placeholder="15,000">
+                              <!-- .selected-bg class for adding input background color -->
+                              <label for="adGroupName" class="ra-label-2 right">BDT</label>
+                           </fieldset>
+                        </div>
+                     </div>
+                     <div class="col-md-6 mb-24">
+                        <div class="ra-form ra-form-2">
+                           <fieldset>
+                              <label for="adGroupName" class="ra-label-2 left">Unallocated Budget</label>
+                              <input type="number" class="ra-input-2 selected-bg" id="adGroupName"
+                                 placeholder="5,000">
+                              <!-- .selected-bg class for adding input background color -->
+                              <label for="adGroupName" class="ra-label-2 right">BDT</label>
+                           </fieldset>
+                        </div>
+                     </div>
+                     <div class="col-md-6">
+                        <div class="ra-form ra-form-2">
+                           <fieldset>
+                              <label for="adGroupName" class="ra-label-2 left">Spent</label>
+                              <input type="number" class="ra-input-2 selected-bg" id="adGroupName"
+                                 placeholder="12,000">
+                              <!-- .selected-bg class for adding input background color -->
+                              <label for="adGroupName" class="ra-label-2 right">BDT</label>
+                           </fieldset>
+                        </div>
+                     </div>
+                     <div class="col-md-6">
+                        <div class="ra-form ra-form-2">
+                           <fieldset>
+                              <label for="adGroupName" class="ra-label-2 left">Remaining</label>
+                              <input type="number" class="ra-input-2 selected-bg" id="adGroupName"
+                                 placeholder="3,000">
+                              <!-- .selected-bg class for adding input background color -->
+                              <label for="adGroupName" class="ra-label-2 right">BDT</label>
+                           </fieldset>
+                        </div>
+                     </div>
+                  </div>
+               </form>
             </div>
-         </div>
+         </div> <!-- Budget End -->
+
 
 
          <!-- <div class="card settings-card">
             <div class="card-header card-header-custom">
-               <p class="fz16 fw-700">Budget : BDT 20,000</p>
+               <p class="fz16 fw-700 purleDark-color">Budget : BDT 20,000</p>
                <button type="button" class="ra-btn ra-btn-blue-bg ra-btn-8x11 height-32">
                   <span class="pr-2">
                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
