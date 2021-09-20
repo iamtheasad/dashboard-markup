@@ -37,11 +37,12 @@
                      schedule this Campaign.</p>
                   <button type="button" class="ra-btn ra-btn-8x11 bg-green mx-auto" data-toggle="modal"
                      data-target="#createAddGroup">
-                     <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                           d="M27.9688 15.9688H15.9688V27.9688H12.0312V15.9688H0.03125V12.0312H12.0312V0.03125H15.9688V12.0312H27.9688V15.9688Z"
-                           fill="#ffffff" />
-                     </svg>
+                     <span>
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path
+                              d="M27.9688 15.9688H15.9688V27.9688H12.0312V15.9688H0.03125V12.0312H12.0312V0.03125H15.9688V12.0312H27.9688V15.9688Z"
+                              fill="#ffffff" />
+                        </svg>
                      </span>
                      <span>Create Ad Group</span>
                   </button>
@@ -595,14 +596,42 @@
       <div class="campaign-settings-content">
          <div class="campaign-status-bar mb-20">
             <p class="fz18 fw-700 purleDark-color">Sharetrip Summer Campaign 21</p>
-            <button class="ra-btn bg-green min-height-36">Active</button>
+
+            <button class="ra-btn min-height-36 campaign-status-btn active">
+               <span>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path
+                        d="M8 0C3.584 0 0 3.584 0 8C0 12.416 3.584 16 8 16C12.416 16 16 12.416 16 8C16 3.584 12.424 0 8 0ZM7 10.424C7 10.808 6.84 10.96 6.432 10.96H5.392C4.984 10.96 4.824 10.808 4.824 10.424V5.576C4.824 5.192 4.984 5.04 5.392 5.04H6.424C6.832 5.04 6.992 5.192 6.992 5.576V10.424H7ZM11.224 10.424C11.224 10.808 11.064 10.96 10.656 10.96H9.624C9.216 10.96 9.056 10.808 9.056 10.424V5.576C9.056 5.192 9.216 5.04 9.624 5.04H10.656C11.064 5.04 11.224 5.192 11.224 5.576V10.424Z"
+                        fill="#FC8B49" />
+                  </svg>
+               </span>
+               <span>Active</span>
+            </button>
+            <button class="ra-btn min-height-36 campaign-status-btn activate">
+               <span>
+                  <svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M0.416327 5.42217L3.70066 8.68037C4.13027 9.10657 4.83189 9.10654 5.26147 8.6803L11.5838 2.4072C12.1388 1.85651 12.1387 0.970136 11.5837 0.419494C11.0198 -0.139877 10.099 -0.139825 9.53518 0.419611L4.4811 5.43466L2.46474 3.43434C1.90092 2.87501 0.980145 2.87501 0.416326 3.43434C-0.138776 3.98503 -0.138775 4.87149 0.416327 5.42217Z" fill="white"/>
+                     </svg>
+               </span>
+               <span>Activate</span>
+            </button>
+            <button class="ra-btn min-height-36 campaign-status-btn on-hold">
+               <span>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path
+                        d="M8 0C3.584 0 0 3.584 0 8C0 12.416 3.584 16 8 16C12.416 16 16 12.416 16 8C16 3.584 12.424 0 8 0ZM7 10.424C7 10.808 6.84 10.96 6.432 10.96H5.392C4.984 10.96 4.824 10.808 4.824 10.424V5.576C4.824 5.192 4.984 5.04 5.392 5.04H6.424C6.832 5.04 6.992 5.192 6.992 5.576V10.424H7ZM11.224 10.424C11.224 10.808 11.064 10.96 10.656 10.96H9.624C9.216 10.96 9.056 10.808 9.056 10.424V5.576C9.056 5.192 9.216 5.04 9.624 5.04H10.656C11.064 5.04 11.224 5.192 11.224 5.576V10.424Z"
+                        fill="#fff" />
+                  </svg>
+               </span>
+               <span>On Hold</span>
+            </button>
          </div>
 
          <!-- Budget Start -->
          <div class="card settings-card mb-20">
             <div class="card-header card-header-custom">
                <p class="fz16 fw-700 purleDark-color">Budget : BDT 20,000</p>
-               <button type="button" class="ra-btn ra-btn-blue-bg ra-btn-8x11 height-32">
+               <button type="button" class="ra-btn ra-btn-blue-bg min-height-32 p-0x12">
                   <span class="pr-2">
                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -669,14 +698,13 @@
                   </div>
                </div><!-- Progress Bar End -->
 
-               <form action="" class="p-20">
+               <form action="#" class="p-20">
                   <div class="row">
                      <div class="col-md-6 mb-24">
                         <div class="ra-form ra-form-2">
                            <fieldset>
                               <label for="adGroupName" class="ra-label-2 left">Total Budget</label>
-                              <input type="number" class="ra-input-2 selected-bg" id="adGroupName"
-                                 placeholder="20,000">
+                              <input type="number" class="ra-input-2 selected-bg" id="adGroupName" placeholder="20,000">
                               <!-- .selected-bg class for adding input background color -->
                               <label for="adGroupName" class="ra-label-2 right">BDT</label>
                            </fieldset>
@@ -686,8 +714,7 @@
                         <div class="ra-form ra-form-2">
                            <fieldset>
                               <label for="adGroupName" class="ra-label-2 left">Account Balance</label>
-                              <input type="number" class="ra-input-2 selected-bg" id="adGroupName"
-                                 placeholder="10,000">
+                              <input type="number" class="ra-input-2 selected-bg" id="adGroupName" placeholder="10,000">
                               <!-- .selected-bg class for adding input background color -->
                               <label for="adGroupName" class="ra-label-2 right">BDT</label>
                            </fieldset>
@@ -697,8 +724,7 @@
                         <div class="ra-form ra-form-2">
                            <fieldset>
                               <label for="adGroupName" class="ra-label-2 left">Allocated Budget</label>
-                              <input type="number" class="ra-input-2 selected-bg" id="adGroupName"
-                                 placeholder="15,000">
+                              <input type="number" class="ra-input-2 selected-bg" id="adGroupName" placeholder="15,000">
                               <!-- .selected-bg class for adding input background color -->
                               <label for="adGroupName" class="ra-label-2 right">BDT</label>
                            </fieldset>
@@ -708,8 +734,7 @@
                         <div class="ra-form ra-form-2">
                            <fieldset>
                               <label for="adGroupName" class="ra-label-2 left">Unallocated Budget</label>
-                              <input type="number" class="ra-input-2 selected-bg" id="adGroupName"
-                                 placeholder="5,000">
+                              <input type="number" class="ra-input-2 selected-bg" id="adGroupName" placeholder="5,000">
                               <!-- .selected-bg class for adding input background color -->
                               <label for="adGroupName" class="ra-label-2 right">BDT</label>
                            </fieldset>
@@ -719,8 +744,7 @@
                         <div class="ra-form ra-form-2">
                            <fieldset>
                               <label for="adGroupName" class="ra-label-2 left">Spent</label>
-                              <input type="number" class="ra-input-2 selected-bg" id="adGroupName"
-                                 placeholder="12,000">
+                              <input type="number" class="ra-input-2 selected-bg" id="adGroupName" placeholder="12,000">
                               <!-- .selected-bg class for adding input background color -->
                               <label for="adGroupName" class="ra-label-2 right">BDT</label>
                            </fieldset>
@@ -730,8 +754,7 @@
                         <div class="ra-form ra-form-2">
                            <fieldset>
                               <label for="adGroupName" class="ra-label-2 left">Remaining</label>
-                              <input type="number" class="ra-input-2 selected-bg" id="adGroupName"
-                                 placeholder="3,000">
+                              <input type="number" class="ra-input-2 selected-bg" id="adGroupName" placeholder="3,000">
                               <!-- .selected-bg class for adding input background color -->
                               <label for="adGroupName" class="ra-label-2 right">BDT</label>
                            </fieldset>
@@ -742,12 +765,47 @@
             </div>
          </div> <!-- Budget End -->
 
+            <!-- Duration Start -->
+            <div class="card settings-card mb-20">
+               <div class="card-header card-header-custom">
+                  <p class="fz16 fw-700 purleDark-color">Duration : 30 Days</p>
+                  <button type="button" class="ra-btn ra-btn-blue-bg min-height-32 p-0x12">
+                     <span class="pr-2">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M5.97634 1.68927C6.38452 1.57589 6.80733 1.81487 6.92071 2.22305C7.30894 3.62068 8.39501 4.70675 9.79264 5.09498C10.2008 5.20837 10.4398 5.63118 10.3264 6.03936C10.213 6.44754 9.79023 6.68652 9.38204 6.57314C7.46597 6.04089 5.9748 4.54973 5.44256 2.63365C5.32917 2.22547 5.56815 1.80266 5.97634 1.68927Z"
+                              fill="white" />
+                           <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M8.41914 0.0126554C9.28409 -0.0762172 10.1128 0.305153 10.8962 1.08857C11.6853 1.87771 12.0717 2.70904 11.9858 3.57625C11.904 4.40291 11.4077 5.06766 10.8962 5.57916L5.47376 11.0016C5.29011 11.1951 5.05419 11.3439 4.84798 11.447C4.63359 11.5542 4.38104 11.647 4.1375 11.6854L4.12479 11.6874L2.05531 11.9786C1.47851 12.0607 0.906013 11.9075 0.499299 11.5008C0.0925738 11.0941 -0.0607542 10.5225 0.0214037 9.94572L0.314591 7.86261C0.35354 7.61593 0.447916 7.36585 0.55474 7.15469C0.66157 6.94352 0.808842 6.71614 0.990196 6.53479L6.42105 1.10393C6.93258 0.592403 7.59624 0.0972081 8.41914 0.0126554ZM8.57594 1.53874C8.27897 1.56926 7.93013 1.76443 7.50584 2.18872L2.07499 7.61958C2.04156 7.653 1.98174 7.73242 1.92366 7.84722C1.86733 7.95857 1.83887 8.05134 1.83075 8.0977L1.54046 10.1602L1.54024 10.1618C1.5153 10.3364 1.56914 10.4011 1.58409 10.416C1.59904 10.431 1.66377 10.4848 1.83836 10.4599L1.83993 10.4597L3.9025 10.1694C3.95196 10.1608 4.04982 10.1309 4.16196 10.0748C4.28132 10.0152 4.34671 9.96091 4.36094 9.94559C4.36738 9.93865 4.37395 9.93183 4.38064 9.92514L9.81141 4.49438C10.2357 4.07007 10.4298 3.72227 10.4592 3.42515C10.4846 3.1686 10.403 2.76493 9.81141 2.17336C9.22946 1.59141 8.83088 1.51255 8.57594 1.53874Z"
+                              fill="white" />
+                        </svg>
+                     </span>
+                     <span>Edit</span>
+                  </button>
+               </div>
+
+                  <form action="#" class="p-20">
+                     <div class="row">
+                        <div class="col-md-6 mb-24">
+                           <div class="ra-form ra-form-2">
+                              <fieldset>
+                                 <label for="adGroupName" class="ra-label-2 left">Total Budget</label>
+                                 <input type="number" class="ra-input-2 selected-bg" id="adGroupName" placeholder="20,000">
+                                 <!-- .selected-bg class for adding input background color -->
+                                 <label for="adGroupName" class="ra-label-2 right">BDT</label>
+                              </fieldset>
+                           </div>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+            </div> <!-- Duration End -->
 
 
          <!-- <div class="card settings-card">
             <div class="card-header card-header-custom">
-               <p class="fz16 fw-700 purleDark-color">Budget : BDT 20,000</p>
-               <button type="button" class="ra-btn ra-btn-blue-bg ra-btn-8x11 height-32">
+                <p class="fz16 fw-700 purleDark-color">Budget : BDT 20,000</p>
+               <button type="button" class="ra-btn ra-btn-blue-bg min-height-32 p-0x12">
                   <span class="pr-2">
                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"

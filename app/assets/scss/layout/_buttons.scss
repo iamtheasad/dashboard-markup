@@ -169,6 +169,37 @@
     &.blur {
         opacity: .6;
     }
+
+    &.campaign-status-btn {
+        color: $white;
+        font-size: rem(14);
+        white-space: nowrap;
+        padding: 10px 30px;
+
+        span {
+            line-height: 0;
+
+            svg {
+                margin-right: 5px;
+            }
+        }
+
+        &.active {
+            background: $greenDark;
+            
+            svg {
+                display: none;
+            }
+        }
+
+        &.activate {
+            background: $greenDark;
+        }
+
+        &.on-hold {
+            background: $orangDark;
+        }
+    }
 }
 
 .btn-tag {
