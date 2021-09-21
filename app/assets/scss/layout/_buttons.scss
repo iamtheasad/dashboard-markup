@@ -117,7 +117,7 @@
         color: $white;
     }
 
-    &.ra-btn-orange-bg{
+    &.ra-btn-orange-bg {
         background-color: $orangDark;
         color: $white;
     }
@@ -191,7 +191,7 @@
 
         &.active {
             background: $greenDark;
-            
+
             svg {
                 display: none;
             }
@@ -204,6 +204,10 @@
         &.on-hold {
             background: $orangDark;
         }
+    }
+
+    span {
+        line-height: 0;
     }
 }
 
@@ -241,5 +245,21 @@
                 color: $white;
             }
         }
+    }
+}
+
+.btn-ad-groups {
+    font-size: rem(12px);
+    font-weight: 600;
+    width: 84px;
+
+    &.hold {
+        background-color: $orangLight;
+        color: $orangDark !important;
+    }
+
+    &.activate {
+        background-color: $greenLight2;
+        color: $greenDark !important;
     }
 }

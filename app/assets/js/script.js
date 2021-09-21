@@ -336,6 +336,7 @@ $(document).ajaxSuccess(function () {
             $('.date-range-activator').daterangepicker({
                 opens: 'left',
                 "autoApply": true,
+                format: "dd MMMM yyyy",
                 parentEl: ".campaign-wrapper",
             }, function (start, end, label) {
                 console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
@@ -375,9 +376,9 @@ $(document).ajaxSuccess(function () {
                 timePickerSeconds: true,
                 parentEl: ".campaign-wrapper",
                 locale: {
-                    format: 'HH:mm:ss'
+                    format: 'HH:mm:ss A'
                 },
-                "autoApply": false,
+                "autoApply": true,
             }).on('show.daterangepicker', function (ev, picker) {
                 picker.container.find(".calendar-table").hide();
             });
@@ -390,6 +391,20 @@ $(document).ajaxSuccess(function () {
                 $(this).siblings('.hidden-search').toggleClass('show')
             })
         }
+    }
+
+    function redialProgressBar (){
+        var forEach = function (array, callback, scope) {
+            for (var i = 0; i < array.length; i++) {
+                callback.call(scope, i, array[i]);
+            }
+        };
+        var max = -219.99078369140625;
+        forEach(document.querySelectorAll('.progress'), function (index, value) {
+        let percent = value.getAttribute('data-progress');
+            value.querySelector('.fill').setAttribute('style', 'stroke-dashoffset: ' + ((100 - percent) / 100) * max);
+            value.querySelector('.value').innerHTML = percent + '%';
+        });
     }
 
 
@@ -408,6 +423,7 @@ $(document).ajaxSuccess(function () {
         timePicker();
         rangeSlider();
         animateSearch();
+        redialProgressBar();
 
         dataTable2();
 
