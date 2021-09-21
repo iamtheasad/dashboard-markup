@@ -492,66 +492,77 @@
 
 // Rounded Progress Bar
 
-#wrapper{
-	position: relative;
-}
-.center {
-	left: 50%;
-	transform: translate( -50% );
+#wrapper {
+   position: relative;
 }
 
-.progress{
-	width: 120px;
-	height: 120px;
+.center {
+   left: 50%;
+   transform: translate(-50%);
+}
+
+
+.radialProgress {
+   width: 120px;
+   height: 120px;
    background-color: transparent;
 }
-.progress .track, .progress .fill{
-	fill: rgba(0, 0, 0, 0);
-	stroke-width: 10;
-	transform: rotate(90deg)translate(0px, -80px);
-}
-.progress .track{
-	stroke: #F0F2FA;
-}
-.progress .fill {
-	stroke: rgb(255, 255, 255);
-	stroke-dasharray: 219.99078369140625;
-	stroke-dashoffset: -219.99078369140625;
-	transition: stroke-dashoffset 1s;
-}
-.progress.yellow .fill {
-	stroke: #F1A500;
-}
-.progress.green .fill {
-	stroke: rgb(186, 223, 172);
-}
-.progress .value, .progress .text {
-	text-anchor: middle;
+
+.radialProgress .track,
+.radialProgress .fill {
+   fill: rgba(0, 0, 0, 0);
+   stroke-width: 10;
+   transform: rotate(90deg)translate(0px, -80px);
 }
 
-.progress .value {
-	fill: #373773;
+.radialProgress .track {
+   stroke: #F0F2FA;
+}
+
+.radialProgress .fill {
+   stroke: rgb(255, 255, 255);
+   stroke-dasharray: 219.99078369140625;
+   stroke-dashoffset: -219.99078369140625;
+   transition: stroke-dashoffset 1s;
+}
+
+.radialProgress.yellow .fill {
+   stroke: #F1A500;
+}
+
+.radialProgress.green .fill {
+   stroke: rgb(186, 223, 172);
+}
+
+.radialProgress .value,
+.radialProgress .text {
+   text-anchor: middle;
+}
+
+.radialProgress .value {
+   fill: #373773;
    font-size: rem(12);
    font-weight: 700;
 }
 
-.progress .text {
-	font-size: rem(8);
+.radialProgress .text {
+   font-size: rem(8);
    font-weight: 500;
    fill: #83839F;
 }
+
 .noselect {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-		cursor: default;
+   -webkit-touch-callout: none;
+   -webkit-user-select: none;
+   -khtml-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+   cursor: default;
 }
 
 .ad-activate {
-   .progress.yellow .fill {
+   .radialProgress.yellow .fill {
       stroke: #FCEDCF;
    }
 }

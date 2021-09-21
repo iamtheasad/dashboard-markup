@@ -394,17 +394,20 @@ $(document).ajaxSuccess(function () {
     }
 
     function redialProgressBar (){
-        var forEach = function (array, callback, scope) {
-            for (var i = 0; i < array.length; i++) {
-                callback.call(scope, i, array[i]);
-            }
-        };
-        var max = -219.99078369140625;
-        forEach(document.querySelectorAll('.progress'), function (index, value) {
-        let percent = value.getAttribute('data-progress');
-            value.querySelector('.fill').setAttribute('style', 'stroke-dashoffset: ' + ((100 - percent) / 100) * max);
-            value.querySelector('.value').innerHTML = percent + '%';
-        });
+        let elm = '.radialProgress';
+        if($(elm).length){
+            var forEach = function (array, callback, scope) {
+                for (var i = 0; i < array.length; i++) {
+                    callback.call(scope, i, array[i]);
+                }
+            };
+            var max = -219.99078369140625;
+            forEach(document.querySelectorAll(elm), function (index, value) {
+            let percent = value.getAttribute('data-progress');
+                value.querySelector('.fill').setAttribute('style', 'stroke-dashoffset: ' + ((100 - percent) / 100) * max);
+                value.querySelector('.value').innerHTML = percent + '%';
+            });
+        }
     }
 
 

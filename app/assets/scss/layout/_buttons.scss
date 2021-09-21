@@ -203,6 +203,14 @@
 
         &.on-hold {
             background: $orangDark;
+
+            svg {
+                display: none;
+            }
+        }
+
+        &.hold {
+            background: $orangDark;
         }
     }
 
