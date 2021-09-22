@@ -280,29 +280,12 @@
       overflow: auto;
    }
 
-   /* width */
-   ::-webkit-scrollbar {
-      width: 8px;
-   }
+   /* Custom Scrollbar Start */
 
-   /* Track */
-   ::-webkit-scrollbar-track {
-      background: rgba($greenDark, .2);
-      border-radius: 20px;
-   }
+   @extend %green-scrollbar;
 
-   /* Handle */
-   ::-webkit-scrollbar-thumb {
-      background: rgba($greenDark, .5);
-      border-radius: 20px;
-      height: 30px;
-      transition: .2s;
-   }
+   /* Custom Scrollbar End */
 
-   /* Handle on hover */
-   ::-webkit-scrollbar-thumb:hover {
-      background: rgba($greenDark, .7);
-   }
 
    .modal-footer {
       padding: 20px 24px;
@@ -517,7 +500,7 @@
 }
 
 .radialProgress .track {
-   stroke: #F0F2FA;
+   stroke: $grayLight4;
 }
 
 .radialProgress .fill {
@@ -528,7 +511,7 @@
 }
 
 .radialProgress.yellow .fill {
-   stroke: #F1A500;
+   stroke: $orangDark3;
 }
 
 .radialProgress.green .fill {
@@ -541,7 +524,7 @@
 }
 
 .radialProgress .value {
-   fill: #373773;
+   fill: $purleDark;
    font-size: rem(12);
    font-weight: 700;
 }
@@ -549,7 +532,7 @@
 .radialProgress .text {
    font-size: rem(8);
    font-weight: 500;
-   fill: #83839F;
+   fill: $purpleLight;
 }
 
 .noselect {
@@ -564,7 +547,7 @@
 
 .ad-activate {
    .radialProgress.yellow .fill {
-      stroke: #FCEDCF;
+      stroke: $orangLight1;
    }
 }
 
@@ -575,23 +558,27 @@
 .image-box {
    width: 120px;
    height: 120px;
-   background: #F6F7FB;
-   border: 1px solid #E6E9F5;
+   background: $purpleLight4;
+   border: 1px solid $purpleLight3;
    border-radius: 4px;
-   display: flex;
-   align-items: center;
-   justify-content: center;
    overflow: hidden;
+   justify-content: center;
 }
 
 .image-banner-box {
    width: 600px;
    height: 100px;
-   background: #F6F7FB;
-   border: 1px solid #E6E9F5;
-   display: flex;
-   align-items: center;
-   justify-content: center;
+   background: $purpleLight4;
+   border: 1px solid $purpleLight3;
    border-radius: 4px;
    overflow: hidden;
+   justify-content: center;
+}
+
+.tracking-code-area {
+   /* Custom Scrollbar Start */
+
+   @extend %green-scrollbar;
+
+   /* Custom Scrollbar End */
 }

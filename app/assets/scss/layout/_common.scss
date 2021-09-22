@@ -55,11 +55,10 @@ html {
 
 .flex-contain-img {
   display: flex;
-  
+
   img {
     object-fit: contain;
     object-position: center;
-    max-width: initial;
   }
 }
 
@@ -290,4 +289,31 @@ main {
 
 .white-bg {
   background-color: $white;
+}
+
+/* Custom Scrollbar */
+%green-scrollbar {
+  /* width */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: rgba($greenDark, .2);
+    border-radius: 20px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgba($greenDark, .5);
+    border-radius: 20px;
+    height: 30px;
+    transition: .2s;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba($greenDark, .7);
+  }
 }

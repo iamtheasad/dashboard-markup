@@ -108,15 +108,30 @@ function rangeSlider() {
     }
 }
 
-
 $(document).ajaxSuccess(function () {
     rangeSlider();
     inputAnimate();
 });
 
+function copyAnyText() {
+    /* Get the text field */
+    var copyText = document.getElementById("tracking-code");
+
+    /* Select the text field */
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+    /* Copy the text inside the text field */
+    navigator.clipboard.writeText(copyText.value);
+
+    /* Show the copied text */
+    $(".btn-copy").html( "Text copied" )
+}
+
+
 (function ($) {
     "use strict";
-    
+
     /*==========================================================================
         :: All Essential Functions
     ==========================================================================*/
@@ -361,17 +376,17 @@ $(document).ajaxSuccess(function () {
                 "startDate": "09/14/2021",
                 "endDate": "09/20/2021",
                 parentEl: ".campaign-wrapper",
-            }, function(start, end, label) {
-              console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
+            }, function (start, end, label) {
+                console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
             });
         }
     }
 
     function timePicker() {
         if (window.daterangepicker) {
-              $('.duration-time-activator').daterangepicker({
+            $('.duration-time-activator').daterangepicker({
                 timePicker: true,
-                singleDatePicker:true,
+                singleDatePicker: true,
                 timePickerIncrement: 1,
                 timePickerSeconds: true,
                 parentEl: ".campaign-wrapper",
@@ -393,9 +408,9 @@ $(document).ajaxSuccess(function () {
         }
     }
 
-    function redialProgressBar (){
+    function redialProgressBar() {
         let elm = '.radialProgress';
-        if($(elm).length){
+        if ($(elm).length) {
             var forEach = function (array, callback, scope) {
                 for (var i = 0; i < array.length; i++) {
                     callback.call(scope, i, array[i]);
@@ -403,12 +418,15 @@ $(document).ajaxSuccess(function () {
             };
             var max = -219.99078369140625;
             forEach(document.querySelectorAll(elm), function (index, value) {
-            let percent = value.getAttribute('data-progress');
+                let percent = value.getAttribute('data-progress');
                 value.querySelector('.fill').setAttribute('style', 'stroke-dashoffset: ' + ((100 - percent) / 100) * max);
                 value.querySelector('.value').innerHTML = percent + '%';
             });
         }
     }
+
+
+
 
 
     /*==========================================================================
@@ -477,7 +495,3 @@ $(document).ajaxSuccess(function () {
     });
 
 })(window.jQuery);
-
-
-
-
