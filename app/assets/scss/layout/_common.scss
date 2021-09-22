@@ -53,6 +53,16 @@ html {
   height: auto;
 }
 
+.flex-contain-img {
+  display: flex;
+  
+  img {
+    object-fit: contain;
+    object-position: center;
+    max-width: initial;
+  }
+}
+
 // layout
 // ====================
 main {

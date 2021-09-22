@@ -581,10 +581,17 @@
    display: flex;
    align-items: center;
    justify-content: center;
+   overflow: hidden;
+}
 
-   img {
-      object-fit: contain;
-      object-position: center;
-      max-width: initial;
-   }
+.image-banner-box {
+   width: 600px;
+   height: 100px;
+   background: #F6F7FB;
+   border: 1px solid #E6E9F5;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 4px;
+   overflow: hidden;
 }
