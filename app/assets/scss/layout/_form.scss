@@ -1169,23 +1169,23 @@ input[type="text"] {
   .client-settings-checkbox {
 
     .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
-      background-color:#457AED;
+      background-color:$darkBlueColor2;
       box-shadow: none;
     }
 
     .custom-checkbox .custom-control-label span {
-      color: #83839F;
+      color: $purpleLight;
       font-weight: 500;
     }
 
     .custom-checkbox .custom-control-input:checked ~ .custom-control-label span {
-      color: #475364;
+      color: $primaryColor;
       font-weight: 600;
     }
 
     .custom-checkbox .custom-control-label::before {
-      background-color: #FAFAFC;
-      border: 1px solid #E6E9F5;
+      background-color: $purpleLight5;
+      border: 1px solid $purpleLight3;
       border-radius: 4px;
     }
 
@@ -1194,13 +1194,13 @@ input[type="text"] {
     }
 
     .custom-control-input:disabled~.custom-control-label::before {
-      background-color: #FAFAFC;
-      border: 1px solid #E6E9F5;
+      background-color: $purpleLight5;
+      border: 1px solid $purpleLight3;
       opacity: .5;
     }
 
     .custom-control-input:disabled:checked~.custom-control-label::before {
-      background-color: #457AED;
+      background-color: $darkBlueColor2;
       opacity: .5;
     }
   }
