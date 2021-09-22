@@ -33,7 +33,6 @@
    &.settings-card {
       border: 1px solid $purpleLight3;
       border-radius: 6px;
-      overflow: hidden;
 
       .card-header-custom {
          padding: 12px 16px 12px 20px;
@@ -42,10 +41,12 @@
          display: flex;
          justify-content: space-between;
          align-items: center;
+         border-radius: 6px 6px 0 0;
       }
 
       .card-body {
          background-color: $white;
+         border-radius: 6px;
       }
    }
 }
@@ -279,29 +280,12 @@
       overflow: auto;
    }
 
-   /* width */
-   ::-webkit-scrollbar {
-      width: 8px;
-   }
+   /* Custom Scrollbar Start */
 
-   /* Track */
-   ::-webkit-scrollbar-track {
-      background: rgba($greenDark, .2);
-      border-radius: 20px;
-   }
+   @extend %green-scrollbar;
 
-   /* Handle */
-   ::-webkit-scrollbar-thumb {
-      background: rgba($greenDark, .5);
-      border-radius: 20px;
-      height: 30px;
-      transition: .2s;
-   }
+   /* Custom Scrollbar End */
 
-   /* Handle on hover */
-   ::-webkit-scrollbar-thumb:hover {
-      background: rgba($greenDark, .7);
-   }
 
    .modal-footer {
       padding: 20px 24px;
@@ -460,32 +444,141 @@
 .multi-color-progressbar {
    display: flex;
    padding: 20px;
-  
-  .amount {
+
+   .amount {
       text-align: center;
       overflow: hidden;
 
       .bg {
          height: 4px;
-     }
+      }
 
       span {
          margin-bottom: 14px;
          display: inline-block;
-     }
+      }
 
-     .orangDark3-bg {
-      border-radius: 2px 0px 0px 2px;
+      .orangDark3-bg {
+         border-radius: 2px 0px 0px 2px;
+      }
+
+      .purpleLight4-bg {
+         border-radius: 0px 2px 2px 0px;
+      }
    }
-
-     .purpleLight4-bg {
-        border-radius: 0px 2px 2px 0px;
-     }
-  }
 }
 
 .tracking-title {
    background-color: $greenLight2;
    padding: 12px 16px;
    border-radius: 2px;
+}
+
+// Rounded Progress Bar
+
+#wrapper {
+   position: relative;
+}
+
+.center {
+   left: 50%;
+   transform: translate(-50%);
+}
+
+
+.radialProgress {
+   width: 120px;
+   height: 120px;
+   background-color: transparent;
+}
+
+.radialProgress .track,
+.radialProgress .fill {
+   fill: rgba(0, 0, 0, 0);
+   stroke-width: 10;
+   transform: rotate(90deg)translate(0px, -80px);
+}
+
+.radialProgress .track {
+   stroke: $grayLight4;
+}
+
+.radialProgress .fill {
+   stroke: rgb(255, 255, 255);
+   stroke-dasharray: 219.99078369140625;
+   stroke-dashoffset: -219.99078369140625;
+   transition: stroke-dashoffset 1s;
+}
+
+.radialProgress.yellow .fill {
+   stroke: $orangDark3;
+}
+
+.radialProgress.green .fill {
+   stroke: rgb(186, 223, 172);
+}
+
+.radialProgress .value,
+.radialProgress .text {
+   text-anchor: middle;
+}
+
+.radialProgress .value {
+   fill: $purleDark;
+   font-size: rem(12);
+   font-weight: 700;
+}
+
+.radialProgress .text {
+   font-size: rem(8);
+   font-weight: 500;
+   fill: $purpleLight;
+}
+
+.noselect {
+   -webkit-touch-callout: none;
+   -webkit-user-select: none;
+   -khtml-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+   cursor: default;
+}
+
+.ad-activate {
+   .radialProgress.yellow .fill {
+      stroke: $orangLight1;
+   }
+}
+
+.group-item-wrapper {
+   display: flex;
+}
+
+.image-box {
+   width: 120px;
+   height: 120px;
+   background: $purpleLight4;
+   border: 1px solid $purpleLight3;
+   border-radius: 4px;
+   overflow: hidden;
+   justify-content: center;
+}
+
+.image-banner-box {
+   width: 600px;
+   height: 100px;
+   background: $purpleLight4;
+   border: 1px solid $purpleLight3;
+   border-radius: 4px;
+   overflow: hidden;
+   justify-content: center;
+}
+
+.tracking-code-area {
+   /* Custom Scrollbar Start */
+
+   @extend %green-scrollbar;
+
+   /* Custom Scrollbar End */
 }

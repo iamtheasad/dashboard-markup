@@ -1,0 +1,1807 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G&R</title>
+    <base href="" />
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/jpg">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
+    <!-- Bootstrap Table Css Link -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.18.1/dist/bootstrap-table.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css">
+
+    <link rel="stylesheet" href="assets/vendor/datepicker/css/daterangepicker.css">
+    <!-- Daterange Picker -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
+
+    <!-- build:css assets/css/all.min.css -->
+    <link rel="stylesheet" href="assets/css/vendor.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- endbuild -->
+    <script type="text/javascript" src="assets/vendor/jQuery/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/maps.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/geodata/worldLow.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/geodata/usaLow.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+</head>
+
+<body class="preloader">
+    <div class="d-flex">
+        <section class="sidebar-menu sidebar-menu-2">
+            <div class="menu-toggler menu-toggler-2">
+                <i class="mdi mdi-menu"></i>
+            </div>
+            <div class="site-logo-2">
+                <a href="/"><img src="assets/images/icons/logo-2.svg" alt="G&R Logo"></a>
+                <div class="sidebar-user-info">
+                    <a href="#"><span class="user">G&R Admin</span></a>
+                    <span class="amount">BDT 10,000</span>
+                </div>
+            </div>
+            <div class="menu-area-2">
+                <ul>
+                    <li class="active">
+                        <a href="/" class="sidebar-link">
+                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                            <div class="sidebar-text-box">
+                                <span class="sidebar-text">Dashboard</span>
+                                <span class="sidebar-notification">&nbsp;</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="properties.html" class="sidebar-link">
+                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                            <div class="sidebar-text-box">
+                                <span class="sidebar-text">Properties</span>
+                                <span class="sidebar-notification">&nbsp;</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="sidebar-link">
+                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                            <div class="sidebar-text-box">
+                                <span class="sidebar-text">Favorites</span>
+                                <span class="sidebar-notification">5</span>
+                            </div>
+                        </a>
+                    </li>
+                    <!-- Dropdown -->
+                    <li>
+                        <a href="#InfluncersSidebar2Dropdwon" class="sidebar-link" data-toggle="collapse" role="button" aria-expanded="false">
+                            <!-- <img src="assets/images/icons/arrow-down.svg" class="sidebar-icon-left sidebar-dropdown-icon-left" alt="Menu Icon"> -->
+                            <span class="sidebar-icon-left sidebar-dropdown-icon-left">
+                        <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M7.77552 0.232761C7.63333 0.0836789 7.44099 0 7.2405 0C7.04001 0 6.84766 0.0836789 6.70547 0.232761L3.98103 3.06631L1.29453 0.232761C1.15234 0.0836789 0.959994 0 0.759504 0C0.559014 0 0.36667 0.0836789 0.224481 0.232761C0.15335 0.307172 0.0968926 0.395701 0.0583643 0.493242C0.0198361 0.590782 0 0.695404 0 0.801071C0 0.906738 0.0198361 1.01136 0.0583643 1.1089C0.0968926 1.20644 0.15335 1.29497 0.224481 1.36938L3.44221 4.76323C3.51276 4.83826 3.59669 4.8978 3.68917 4.93844C3.78165 4.97908 3.88084 5 3.98103 5C4.08121 5 4.1804 4.97908 4.27288 4.93844C4.36536 4.8978 4.4493 4.83826 4.51985 4.76323L7.77552 1.36938C7.84665 1.29497 7.90311 1.20644 7.94163 1.1089C7.98016 1.01136 8 0.906738 8 0.801071C8 0.695404 7.98016 0.590782 7.94163 0.493242C7.90311 0.395701 7.84665 0.307172 7.77552 0.232761Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+
+                            <div class="sidebar-text-box">
+                                <span class="sidebar-text">Influncers</span>
+                                <span class="sidebar-icon-right">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M27.9688 15.9688H15.9688V27.9688H12.0312V15.9688H0.03125V12.0312H12.0312V0.03125H15.9688V12.0312H27.9688V15.9688Z"
+                                    fill="#000000" />
+                            </svg>
+                        </span>
+                            </div>
+                        </a>
+
+                        <div class="collapse sidebar-dropdwon-2" id="InfluncersSidebar2Dropdwon">
+                            <div class="card card-body">
+                                <ul>
+                                    <li>
+                                        <a href="influencerPlatform" class="sidebar-link">
+                                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                                            <div class="sidebar-text-box">
+                                                <span class="sidebar-text">Platform</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                    <li>
+                                        <a href="influencer" class="sidebar-link">
+                                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                                            <div class="sidebar-text-box">
+                                                <span class="sidebar-text">Influencer Posts</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="influencerPost" class="sidebar-link">
+                                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                                            <div class="sidebar-text-box">
+                                                <span class="sidebar-text">Influencer Posts (Type: Advertiser)</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="placesAllAdded.html" class="sidebar-link">
+                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                            <div class="sidebar-text-box">
+                                <span class="sidebar-text">Ad Place</span>
+                                <span class="sidebar-notification">&nbsp;</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="connects.html" class="sidebar-link">
+                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                            <div class="sidebar-text-box">
+                                <span class="sidebar-text">Connects</span>
+                                <span class="sidebar-notification">&nbsp;</span>
+                            </div>
+                        </a>
+                    </li>
+                    <!-- Dropdown -->
+                    <li>
+                        <a href="#reportSidebar2Dropdwon" class="sidebar-link" data-toggle="collapse" role="button" aria-expanded="false">
+                            <!-- <img src="assets/images/icons/arrow-down.svg" class="sidebar-icon-left sidebar-dropdown-icon-left" alt="Menu Icon"> -->
+                            <span class="sidebar-icon-left sidebar-dropdown-icon-left">
+                        <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M7.77552 0.232761C7.63333 0.0836789 7.44099 0 7.2405 0C7.04001 0 6.84766 0.0836789 6.70547 0.232761L3.98103 3.06631L1.29453 0.232761C1.15234 0.0836789 0.959994 0 0.759504 0C0.559014 0 0.36667 0.0836789 0.224481 0.232761C0.15335 0.307172 0.0968926 0.395701 0.0583643 0.493242C0.0198361 0.590782 0 0.695404 0 0.801071C0 0.906738 0.0198361 1.01136 0.0583643 1.1089C0.0968926 1.20644 0.15335 1.29497 0.224481 1.36938L3.44221 4.76323C3.51276 4.83826 3.59669 4.8978 3.68917 4.93844C3.78165 4.97908 3.88084 5 3.98103 5C4.08121 5 4.1804 4.97908 4.27288 4.93844C4.36536 4.8978 4.4493 4.83826 4.51985 4.76323L7.77552 1.36938C7.84665 1.29497 7.90311 1.20644 7.94163 1.1089C7.98016 1.01136 8 0.906738 8 0.801071C8 0.695404 7.98016 0.590782 7.94163 0.493242C7.90311 0.395701 7.84665 0.307172 7.77552 0.232761Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+
+                            <div class="sidebar-text-box">
+                                <span class="sidebar-text">Report</span>
+                                <span class="sidebar-icon-right">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M27.9688 15.9688H15.9688V27.9688H12.0312V15.9688H0.03125V12.0312H12.0312V0.03125H15.9688V12.0312H27.9688V15.9688Z"
+                                    fill="#000000" />
+                            </svg>
+                        </span>
+                            </div>
+                        </a>
+
+                        <div class="collapse sidebar-dropdwon-2" id="reportSidebar2Dropdwon">
+                            <div class="card card-body">
+                                <ul>
+                                    <li>
+                                        <a href="overview.html" class="sidebar-link">
+                                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                                            <div class="sidebar-text-box">
+                                                <span class="sidebar-text">Overview</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                    <li>
+                                        <a href="location.html" class="sidebar-link">
+                                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                                            <div class="sidebar-text-box">
+                                                <span class="sidebar-text">Location</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="revenue.html" class="sidebar-link">
+                                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                                            <div class="sidebar-text-box">
+                                                <span class="sidebar-text">Revenue</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="technology.html" class="sidebar-link">
+                                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                                            <div class="sidebar-text-box">
+                                                <span class="sidebar-text">Technology</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Dropdown -->
+                    <li>
+                        <a href="#paymentsSidebar2Dropdwon" class="sidebar-link" data-toggle="collapse" role="button" aria-expanded="false">
+                            <!-- <img src="assets/images/icons/arrow-down.svg" class="sidebar-icon-left sidebar-dropdown-icon-left" alt="Menu Icon"> -->
+                            <span class="sidebar-icon-left sidebar-dropdown-icon-left">
+                        <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M7.77552 0.232761C7.63333 0.0836789 7.44099 0 7.2405 0C7.04001 0 6.84766 0.0836789 6.70547 0.232761L3.98103 3.06631L1.29453 0.232761C1.15234 0.0836789 0.959994 0 0.759504 0C0.559014 0 0.36667 0.0836789 0.224481 0.232761C0.15335 0.307172 0.0968926 0.395701 0.0583643 0.493242C0.0198361 0.590782 0 0.695404 0 0.801071C0 0.906738 0.0198361 1.01136 0.0583643 1.1089C0.0968926 1.20644 0.15335 1.29497 0.224481 1.36938L3.44221 4.76323C3.51276 4.83826 3.59669 4.8978 3.68917 4.93844C3.78165 4.97908 3.88084 5 3.98103 5C4.08121 5 4.1804 4.97908 4.27288 4.93844C4.36536 4.8978 4.4493 4.83826 4.51985 4.76323L7.77552 1.36938C7.84665 1.29497 7.90311 1.20644 7.94163 1.1089C7.98016 1.01136 8 0.906738 8 0.801071C8 0.695404 7.98016 0.590782 7.94163 0.493242C7.90311 0.395701 7.84665 0.307172 7.77552 0.232761Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+
+                            <div class="sidebar-text-box">
+                                <span class="sidebar-text">Payments</span>
+                                <span class="sidebar-icon-right">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M27.9688 15.9688H15.9688V27.9688H12.0312V15.9688H0.03125V12.0312H12.0312V0.03125H15.9688V12.0312H27.9688V15.9688Z"
+                                    fill="#000000" />
+                            </svg>
+                        </span>
+                            </div>
+                        </a>
+
+                        <div class="collapse sidebar-dropdwon-2" id="paymentsSidebar2Dropdwon">
+                            <div class="card card-body">
+                                <ul>
+                                    <li>
+                                        <a href="estimatedRevenuePage.html" class="sidebar-link">
+                                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                                            <div class="sidebar-text-box">
+                                                <span class="sidebar-text">Estimated Revennue</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                    <li>
+                                        <a href="finilizedPayment.html" class="sidebar-link">
+                                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                                            <div class="sidebar-text-box">
+                                                <span class="sidebar-text">Finilized Payments</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="balance.html" class="sidebar-link">
+                                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                                            <div class="sidebar-text-box">
+                                                <span class="sidebar-text">Balance</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="clientDashboardOverview.html" class="sidebar-link">
+                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                            <div class="sidebar-text-box">
+                                <span class="sidebar-text">Client Campaigns</span>
+                                <span class="sidebar-notification">&nbsp;</span>
+                            </div>
+                        </a>
+                    </li>
+                    <!-- Dropdown -->
+                    <li>
+                        <a href="#campaignsSidebar2Dropdwon" class="sidebar-link" data-toggle="collapse" role="button" aria-expanded="false">
+                            <!-- <img src="assets/images/icons/arrow-down.svg" class="sidebar-icon-left sidebar-dropdown-icon-left" alt="Menu Icon"> -->
+                            <span class="sidebar-icon-left sidebar-dropdown-icon-left">
+                        <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M7.77552 0.232761C7.63333 0.0836789 7.44099 0 7.2405 0C7.04001 0 6.84766 0.0836789 6.70547 0.232761L3.98103 3.06631L1.29453 0.232761C1.15234 0.0836789 0.959994 0 0.759504 0C0.559014 0 0.36667 0.0836789 0.224481 0.232761C0.15335 0.307172 0.0968926 0.395701 0.0583643 0.493242C0.0198361 0.590782 0 0.695404 0 0.801071C0 0.906738 0.0198361 1.01136 0.0583643 1.1089C0.0968926 1.20644 0.15335 1.29497 0.224481 1.36938L3.44221 4.76323C3.51276 4.83826 3.59669 4.8978 3.68917 4.93844C3.78165 4.97908 3.88084 5 3.98103 5C4.08121 5 4.1804 4.97908 4.27288 4.93844C4.36536 4.8978 4.4493 4.83826 4.51985 4.76323L7.77552 1.36938C7.84665 1.29497 7.90311 1.20644 7.94163 1.1089C7.98016 1.01136 8 0.906738 8 0.801071C8 0.695404 7.98016 0.590782 7.94163 0.493242C7.90311 0.395701 7.84665 0.307172 7.77552 0.232761Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+
+                            <div class="sidebar-text-box">
+                                <span class="sidebar-text">Campaigns</span>
+                                <span class="sidebar-icon-right">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M27.9688 15.9688H15.9688V27.9688H12.0312V15.9688H0.03125V12.0312H12.0312V0.03125H15.9688V12.0312H27.9688V15.9688Z"
+                                    fill="#000000" />
+                            </svg>
+                        </span>
+                            </div>
+                        </a>
+
+                        <div class="collapse sidebar-dropdwon-2" id="campaignsSidebar2Dropdwon">
+                            <div class="card card-body">
+                                <ul>
+                                    <li>
+                                        <a href="createCampaign.html" class="sidebar-link">
+                                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                                            <div class="sidebar-text-box">
+                                                <span class="sidebar-text">All</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                    <li>
+                                        <a href="createCampaign.html" class="sidebar-link">
+                                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                                            <div class="sidebar-text-box">
+                                                <span class="sidebar-text">Scheduled</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="createCampaign.html" class="sidebar-link">
+                                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                                            <div class="sidebar-text-box">
+                                                <span class="sidebar-text">Ongoing</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="createCampaign.html" class="sidebar-link">
+                                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                                            <div class="sidebar-text-box">
+                                                <span class="sidebar-text">Completed</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="draft.html" class="sidebar-link">
+                                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                                            <div class="sidebar-text-box">
+                                                <span class="sidebar-text">Draft</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="createCampaign.html" class="sidebar-link">
+                                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                                            <div class="sidebar-text-box">
+                                                <span class="sidebar-text">Archieved</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Dropdown -->
+                    <li>
+                        <a href="#myDealsSidebar2Dropdwon" class="sidebar-link" data-toggle="collapse" role="button" aria-expanded="false">
+                            <!-- <img src="assets/images/icons/arrow-down.svg" class="sidebar-icon-left sidebar-dropdown-icon-left" alt="Menu Icon"> -->
+                            <span class="sidebar-icon-left sidebar-dropdown-icon-left">
+                        <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M7.77552 0.232761C7.63333 0.0836789 7.44099 0 7.2405 0C7.04001 0 6.84766 0.0836789 6.70547 0.232761L3.98103 3.06631L1.29453 0.232761C1.15234 0.0836789 0.959994 0 0.759504 0C0.559014 0 0.36667 0.0836789 0.224481 0.232761C0.15335 0.307172 0.0968926 0.395701 0.0583643 0.493242C0.0198361 0.590782 0 0.695404 0 0.801071C0 0.906738 0.0198361 1.01136 0.0583643 1.1089C0.0968926 1.20644 0.15335 1.29497 0.224481 1.36938L3.44221 4.76323C3.51276 4.83826 3.59669 4.8978 3.68917 4.93844C3.78165 4.97908 3.88084 5 3.98103 5C4.08121 5 4.1804 4.97908 4.27288 4.93844C4.36536 4.8978 4.4493 4.83826 4.51985 4.76323L7.77552 1.36938C7.84665 1.29497 7.90311 1.20644 7.94163 1.1089C7.98016 1.01136 8 0.906738 8 0.801071C8 0.695404 7.98016 0.590782 7.94163 0.493242C7.90311 0.395701 7.84665 0.307172 7.77552 0.232761Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+
+                            <div class="sidebar-text-box">
+                                <span class="sidebar-text">My Deals</span>
+                                <span class="sidebar-icon-right">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M27.9688 15.9688H15.9688V27.9688H12.0312V15.9688H0.03125V12.0312H12.0312V0.03125H15.9688V12.0312H27.9688V15.9688Z"
+                                    fill="#000000" />
+                            </svg>
+                        </span>
+                            </div>
+                        </a>
+
+                        <div class="collapse sidebar-dropdwon-2" id="myDealsSidebar2Dropdwon">
+                            <div class="card card-body">
+                                <ul>
+                                    <li>
+                                        <a href="myDeals.html" class="sidebar-link">
+                                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                                            <div class="sidebar-text-box">
+                                                <span class="sidebar-text">Connect Requests</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                    <li>
+                                        <a href="myDeals.html" class="sidebar-link">
+                                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                                            <div class="sidebar-text-box">
+                                                <span class="sidebar-text">In Progress</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="myDeals.html" class="sidebar-link">
+                                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                                            <div class="sidebar-text-box">
+                                                <span class="sidebar-text">Pending Approval</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="myDeals.html" class="sidebar-link">
+                                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                                            <div class="sidebar-text-box">
+                                                <span class="sidebar-text">Cancelled</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Dropdown -->
+                    <li>
+                        <a href="#myCampaignsSidebar2Dropdwon" class="sidebar-link" data-toggle="collapse" role="button" aria-expanded="false">
+                            <!-- <img src="assets/images/icons/arrow-down.svg" class="sidebar-icon-left sidebar-dropdown-icon-left" alt="Menu Icon"> -->
+                            <span class="sidebar-icon-left sidebar-dropdown-icon-left">
+                        <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M7.77552 0.232761C7.63333 0.0836789 7.44099 0 7.2405 0C7.04001 0 6.84766 0.0836789 6.70547 0.232761L3.98103 3.06631L1.29453 0.232761C1.15234 0.0836789 0.959994 0 0.759504 0C0.559014 0 0.36667 0.0836789 0.224481 0.232761C0.15335 0.307172 0.0968926 0.395701 0.0583643 0.493242C0.0198361 0.590782 0 0.695404 0 0.801071C0 0.906738 0.0198361 1.01136 0.0583643 1.1089C0.0968926 1.20644 0.15335 1.29497 0.224481 1.36938L3.44221 4.76323C3.51276 4.83826 3.59669 4.8978 3.68917 4.93844C3.78165 4.97908 3.88084 5 3.98103 5C4.08121 5 4.1804 4.97908 4.27288 4.93844C4.36536 4.8978 4.4493 4.83826 4.51985 4.76323L7.77552 1.36938C7.84665 1.29497 7.90311 1.20644 7.94163 1.1089C7.98016 1.01136 8 0.906738 8 0.801071C8 0.695404 7.98016 0.590782 7.94163 0.493242C7.90311 0.395701 7.84665 0.307172 7.77552 0.232761Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+
+                            <div class="sidebar-text-box">
+                                <span class="sidebar-text">My Campaigns</span>
+                                <span class="sidebar-icon-right">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M27.9688 15.9688H15.9688V27.9688H12.0312V15.9688H0.03125V12.0312H12.0312V0.03125H15.9688V12.0312H27.9688V15.9688Z"
+                                    fill="#000000" />
+                            </svg>
+                        </span>
+                            </div>
+                        </a>
+
+                        <div class="collapse sidebar-dropdwon-2" id="myCampaignsSidebar2Dropdwon">
+                            <div class="card card-body">
+                                <ul>
+                                    <li>
+                                        <a href="myCampaigns.html" class="sidebar-link">
+                                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                                            <div class="sidebar-text-box">
+                                                <span class="sidebar-text">Scheduled</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                    <li>
+                                        <a href="myCampaigns.html" class="sidebar-link">
+                                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                                            <div class="sidebar-text-box">
+                                                <span class="sidebar-text">Ongoing</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="myCampaigns.html" class="sidebar-link">
+                                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                                            <div class="sidebar-text-box">
+                                                <span class="sidebar-text">Completed</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="myCampaigns.html" class="sidebar-link">
+                                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                                            <div class="sidebar-text-box">
+                                                <span class="sidebar-text">Archieved</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Dropdown -->
+                    <li>
+                        <a href="#settingsSidebar2Dropdwon" class="sidebar-link" data-toggle="collapse" role="button" aria-expanded="false">
+                            <!-- <img src="assets/images/icons/arrow-down.svg" class="sidebar-icon-left sidebar-dropdown-icon-left" alt="Menu Icon"> -->
+                            <span class="sidebar-icon-left sidebar-dropdown-icon-left">
+                        <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M7.77552 0.232761C7.63333 0.0836789 7.44099 0 7.2405 0C7.04001 0 6.84766 0.0836789 6.70547 0.232761L3.98103 3.06631L1.29453 0.232761C1.15234 0.0836789 0.959994 0 0.759504 0C0.559014 0 0.36667 0.0836789 0.224481 0.232761C0.15335 0.307172 0.0968926 0.395701 0.0583643 0.493242C0.0198361 0.590782 0 0.695404 0 0.801071C0 0.906738 0.0198361 1.01136 0.0583643 1.1089C0.0968926 1.20644 0.15335 1.29497 0.224481 1.36938L3.44221 4.76323C3.51276 4.83826 3.59669 4.8978 3.68917 4.93844C3.78165 4.97908 3.88084 5 3.98103 5C4.08121 5 4.1804 4.97908 4.27288 4.93844C4.36536 4.8978 4.4493 4.83826 4.51985 4.76323L7.77552 1.36938C7.84665 1.29497 7.90311 1.20644 7.94163 1.1089C7.98016 1.01136 8 0.906738 8 0.801071C8 0.695404 7.98016 0.590782 7.94163 0.493242C7.90311 0.395701 7.84665 0.307172 7.77552 0.232761Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+
+                            <div class="sidebar-text-box">
+                                <span class="sidebar-text">Settings</span>
+                                <span class="sidebar-icon-right">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M27.9688 15.9688H15.9688V27.9688H12.0312V15.9688H0.03125V12.0312H12.0312V0.03125H15.9688V12.0312H27.9688V15.9688Z"
+                                    fill="#000000" />
+                            </svg>
+                        </span>
+                            </div>
+                        </a>
+
+                        <div class="collapse sidebar-dropdwon-2" id="settingsSidebar2Dropdwon">
+                            <div class="card card-body">
+                                <ul>
+                                    <li>
+                                        <a href="accountSettings.html" class="sidebar-link">
+                                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                                            <div class="sidebar-text-box">
+                                                <span class="sidebar-text">Account Settings</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                    <li>
+                                        <a href="users.html" class="sidebar-link">
+                                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                                            <div class="sidebar-text-box">
+                                                <span class="sidebar-text">Users</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="activityLogPage.html" class="sidebar-link">
+                                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                                            <div class="sidebar-text-box">
+                                                <span class="sidebar-text">Activity Log</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="login.html" class="sidebar-link">
+                                            <span class="sidebar-icon-left">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                                            <div class="sidebar-text-box">
+                                                <span class="sidebar-text">Logout</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+                <ul>
+                    <li>
+                        <a href="#" class="sidebar-link">
+                            <span class="sidebar-icon-left">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path opacity="0.12"
+                                d="M12 15.5156C11.0312 15.5156 10.2031 15.1719 9.51562 14.4844C8.82812 13.7969 8.48438 12.9688 8.48438 12C8.48438 11.0312 8.82812 10.2031 9.51562 9.51562C10.2031 8.82812 11.0312 8.48438 12 8.48438C12.9688 8.48438 13.7969 8.82812 14.4844 9.51562C15.1719 10.2031 15.5156 11.0312 15.5156 12C15.5156 12.9688 15.1719 13.7969 14.4844 14.4844C13.7969 15.1719 12.9688 15.5156 12 15.5156Z"
+                                fill="#475364" />
+                            <path
+                                d="M12 15.5156C11.0312 15.5156 10.2031 15.1719 9.51562 14.4844C8.82812 13.7969 8.48438 12.9688 8.48438 12C8.48438 11.0312 8.82812 10.2031 9.51562 9.51562C10.2031 8.82812 11.0312 8.48438 12 8.48438C12.9688 8.48438 13.7969 8.82812 14.4844 9.51562C15.1719 10.2031 15.5156 11.0312 15.5156 12C15.5156 12.9688 15.1719 13.7969 14.4844 14.4844C13.7969 15.1719 12.9688 15.5156 12 15.5156ZM19.4531 12.9844C19.4844 12.6094 19.5 12.2812 19.5 12C19.5 11.7188 19.4844 11.3906 19.4531 11.0156L21.5625 9.375C21.6562 9.28125 21.7031 9.1875 21.7031 9.09375C21.7344 8.96875 21.7188 8.84375 21.6562 8.71875L19.6406 5.25C19.6094 5.15625 19.5312 5.09375 19.4062 5.0625C19.2812 5 19.1562 5 19.0312 5.0625L16.5469 6.04688C15.9844 5.60938 15.4219 5.28125 14.8594 5.0625L14.4844 2.4375C14.4844 2.3125 14.4375 2.21875 14.3438 2.15625C14.25 2.0625 14.1406 2.01562 14.0156 2.01562H9.98438C9.85938 2.01562 9.75 2.0625 9.65625 2.15625C9.5625 2.21875 9.51562 2.3125 9.51562 2.4375L9.14062 5.0625C8.57812 5.28125 8.01562 5.60938 7.45312 6.04688L4.96875 5.0625C4.84375 5 4.71875 5 4.59375 5.0625C4.46875 5.09375 4.39062 5.15625 4.35938 5.25L2.34375 8.71875C2.28125 8.84375 2.25 8.96875 2.25 9.09375C2.28125 9.1875 2.34375 9.28125 2.4375 9.375L4.54688 11.0156C4.51562 11.3906 4.5 11.7188 4.5 12C4.5 12.2812 4.51562 12.6094 4.54688 12.9844L2.4375 14.625C2.34375 14.7188 2.28125 14.8281 2.25 14.9531C2.25 15.0469 2.28125 15.1562 2.34375 15.2812L4.35938 18.75C4.39062 18.8438 4.46875 18.9219 4.59375 18.9844C4.71875 19.0156 4.84375 19 4.96875 18.9375L7.45312 17.9531C8.01562 18.3906 8.57812 18.7188 9.14062 18.9375L9.51562 21.5625C9.51562 21.6875 9.5625 21.7812 9.65625 21.8438C9.75 21.9375 9.85938 21.9844 9.98438 21.9844H14.0156C14.1406 21.9844 14.25 21.9375 14.3438 21.8438C14.4375 21.7812 14.4844 21.6875 14.4844 21.5625L14.8594 18.9375C15.4531 18.6875 16.0156 18.3594 16.5469 17.9531L19.0312 18.9375C19.1562 19 19.2812 19.0156 19.4062 18.9844C19.5312 18.9219 19.6094 18.8438 19.6406 18.75L21.6562 15.2812C21.7188 15.1562 21.7344 15.0469 21.7031 14.9531C21.7031 14.8281 21.6562 14.7188 21.5625 14.625L19.4531 12.9844Z"
+                                fill="#475364" />
+                        </svg>
+                    </span>
+                            <div class="sidebar-text-box">
+                                <span class="sidebar-text">Settings</span>
+                                <span class="sidebar-notification">&nbsp;</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <main class="main-wrapper">
+
+            <div class="campaign-wrapper">
+                <!-- Top Bar -->
+                <header class="topbar topbar2 d-flex justify-content-between align-items-center">
+                    <div class="breadcumb fz16 fw-700">
+                        <div class="d-flex">
+                            <a href="#" class="mr-20">
+                                <img src="assets/images/icons/left-arrow.svg" class="img long-arrow" alt="Arrow Icon">
+                            </a>
+                            <div class="d-flex flex-column pr-3">
+                                <span class="purple-color fz16 fw-700">Sharetrip Summer Campaign 21</span>
+                                <span class="purple-light-color fz12 fw-400">18 June - 17 July 2021</span>
+                            </div>
+                            <button class="btn-tag bg-green btn-4x12 radius-4 fz12 fw-600 border-0 ongoing">Ongoing</button>
+                            <button class="btn-tag orangDark4-bg white-color btn-4x12 radius-4 fz12 fw-600 border-0 pending">Pending</button>
+                        </div>
+                    </div>
+                    <div class="right-menu dropdown d-flex">
+                        <div class="dropdown dot-dropdown">
+                            <button type="button" class="topbar-notification" id="topbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img src="assets/images/icons/notification_outline.svg" alt="Bell Icon">
+                            </button>
+                            <div class="dropdown-menu filter-dropdown" aria-labelledby="topbarDropdown">
+                                <a class="dropdown-item" href="#">Demo Text 1</a>
+                                <a class="dropdown-item" href="#">Demo Text 2</a>
+                                <a class="dropdown-item" href="#">Demo Text 3</a>
+                                <a class="dropdown-item" href="#">Demo Text 4</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown ml-4">
+                            <a href="javascript:void(0)" class="account-menu d-flex align-items-center dropdown-toggle" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <div class="avater">
+                                    <p>S</p>
+                                    <div class="d-none">
+                                        <img src="http://via.placeholder.com/48x48" alt="Icon">
+                                    </div>
+                                </div>
+                                <div class="acc-name">Shafayat</div>
+
+                                <button class="dropdown-icon">
+                                    <!-- <img src="assets/images/icons/arrow-down.svg" alt="Icon" style="width: 8px;"> -->
+                                    <span class="topbar-dropdown-icon d-flex">
+            <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M7.77552 0.232761C7.63333 0.0836789 7.44099 0 7.2405 0C7.04001 0 6.84766 0.0836789 6.70547 0.232761L3.98103 3.06631L1.29453 0.232761C1.15234 0.0836789 0.959994 0 0.759504 0C0.559014 0 0.36667 0.0836789 0.224481 0.232761C0.15335 0.307172 0.0968926 0.395701 0.0583643 0.493242C0.0198361 0.590782 0 0.695404 0 0.801071C0 0.906738 0.0198361 1.01136 0.0583643 1.1089C0.0968926 1.20644 0.15335 1.29497 0.224481 1.36938L3.44221 4.76323C3.51276 4.83826 3.59669 4.8978 3.68917 4.93844C3.78165 4.97908 3.88084 5 3.98103 5C4.08121 5 4.1804 4.97908 4.27288 4.93844C4.36536 4.8978 4.4493 4.83826 4.51985 4.76323L7.77552 1.36938C7.84665 1.29497 7.90311 1.20644 7.94163 1.1089C7.98016 1.01136 8 0.906738 8 0.801071C8 0.695404 7.98016 0.590782 7.94163 0.493242C7.90311 0.395701 7.84665 0.307172 7.77552 0.232761Z" fill="#373773"/>
+               </svg>               
+         </span>
+                                </button>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu2" aria-labelledby="dropdownMenuButton2">
+                                <ul>
+                                    <li><a href="accountSettings.html">Account Settings</a></li>
+                                    <li><a href="index2.html">Advertiser Dashboard</a></li>
+                                    <li><a href="">বাংলা ভাষা নির্বাচন</a></li>
+                                    <li><a href="">Take a Tour</a></li>
+                                    <li><a href="login.html">Logout</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+
+                <!-- Camaigns Dashboard Menu -->
+                <div class="filter-wrapper dashboard-menu ra-border-bottom">
+                    <div class="menu-content">
+                        <ul>
+                            <li><a href="clientDashboardOverview.html" class="active">Overview</a></li>
+                            <li><a href="clientDashbaordAdGroups.html">Ad Groups</a></li>
+                            <li><a href="clientDashboardAdBanners.html">Ad Banners</a></li>
+                            <li><a href="clientDashboardAnalytics.html">Analytics</a></li>
+                            <li><a href="clientDashboardSettingsCampaign.html">Settings</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="d-flex align-items-center justify-content-md-between justify-content-between">
+                        <div class="dropdown dot-dropdown">
+                            <button type="button" class="ra-three-dot-btn" data-toggle="dropdown" aria-haspopup="true">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                            <div class="dropdown-menu filter-dropdown">
+                                <a class="dropdown-item" href="#">Demo Text 1</a>
+                                <a class="dropdown-item" href="#">Demo Text 2</a>
+                                <a class="dropdown-item" href="#">Demo Text 3</a>
+                                <a class="dropdown-item" href="#">Demo Text 4</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal For Create Ad Group-->
+                <div class="client-settings-modal-all create-add-group-modal modal fade" id="createAddGroup" tabindex="-1" role="dialog" aria-labelledby="createAddGroup" aria-hidden="true">
+                    <!-- .loading class add for blur effect -->
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <form action="#">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Create Ad Group</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="scrollable">
+                                        <div class="row">
+                                            <div class="col-md-12 mb-20">
+                                                <div class="ra-form ra-form-2">
+                                                    <fieldset>
+                                                        <label for="adGroupName" class="ra-label-2 left">Ad Group Name</label>
+                                                        <input type="text" class="ra-input-2" id="adGroupName" placeholder="Set a name">
+                                                        <!-- .selected-bg class for adding input background color -->
+                                                        <label for="adGroupName" class="ra-label-2 right">0/100</label>
+                                                    </fieldset>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 mb-20">
+                                                <div class="ra-form ra-form-2">
+                                                    <fieldset>
+                                                        <label for="adGroupName" class="ra-label-2 left">Ad Group Name</label>
+                                                        <input type="text" class="ra-input-2 selected-bg" id="adGroupName" placeholder="Set a name">
+                                                        <!-- .selected-bg class for adding input background color -->
+                                                        <label for="adGroupName" class="ra-label-2 right">0/100</label>
+                                                    </fieldset>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 mb-20">
+                                                <div class="ra-form ra-form-2 ra-form-2--select">
+                                                    <fieldset>
+                                                        <label for="audienceSelectField" class="ra-label-2 left">Audience</label>
+                                                        <select name="selectField" class="ra-select-2" id="audienceSelectField">
+                                                            <!-- .selected class add for opacity -->
+                                                            <option value="SelectAudience" selected>Select Audience</option>
+                                                            <option value="Demo2">Demo2</option>
+                                                            <option value="Demo3">Demo3</option>
+                                                            <option value="Demo4">Demo4</option>
+                                                        </select>
+                                                    </fieldset>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 mb-20">
+                                                <div class="ra-form ra-form-2 ra-form-2--select">
+                                                    <fieldset>
+                                                        <label for="audienceSelectField" class="ra-label-2 left">Audience</label>
+                                                        <select name="selectField" class="ra-select-2 selected" id="audienceSelectField">
+                                                            <!-- .selected class add for opacity -->
+                                                            <option value="SelectAudience" selected>Select Audience</option>
+                                                            <option value="Demo2">Demo2</option>
+                                                            <option value="Demo3">Demo3</option>
+                                                            <option value="Demo4">Demo4</option>
+                                                        </select>
+                                                    </fieldset>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6 mb-20">
+                                                <div class="ra-form ra-form-2">
+                                                    <fieldset>
+                                                        <label for="addGroupBudget" class="ra-label-2 left">Ad Group Budget</label>
+                                                        <input type="number" class="ra-input-2" id="addGroupBudget" placeholder="Set a Budget">
+                                                        <!-- .selected-bg class for adding input background color -->
+                                                        <label for="addGroupBudget" class="ra-label-2 right fw-500">BDT</label>
+                                                    </fieldset>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 mb-20">
+                                                <div class="ra-form ra-form-2">
+                                                    <fieldset>
+                                                        <label for="unallocatedBalance" class="ra-label-2 left">Unallocated Balance</label>
+                                                        <input type="number" class="ra-input-2 selected-bg" id="unallocatedBalance" placeholder="20,000">
+                                                        <!-- .selected-bg class for adding input background color -->
+                                                        <label for="unallocatedBalance" class="ra-label-2 right fw-500">BDT</label>
+                                                    </fieldset>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="card settings-card radio-btn-card mb-20">
+                                            <div class="card-header card-header-custom">
+                                                <div class="settings-radio-group">
+                                                    <div class="radio-btn-wrapper">
+                                                        <input class="radio-btn-input" type="radio" name="cpc" id="cpc" value="option2">
+                                                        <label class="radio-check-label" for="cpc">
+                                                            <span class="radio-box">
+                                 <span>&nbsp;</span>
+                                                            </span>
+                                                            <span class="radio-text">CPC</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="radio-btn-wrapper">
+                                                        <input class="radio-btn-input" type="radio" name="cpc" id="cpm" value="option2">
+                                                        <label class="radio-check-label" for="cpm">
+                                                            <span class="radio-box">
+                                 <span>&nbsp;</span>
+                                                            </span>
+                                                            <span class="radio-text">CPC</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-md-12 mb-16">
+                                                        <div class="ra-form ra-form-2">
+                                                            <fieldset>
+                                                                <label for="unallocatedBalance" class="ra-label-2 left">Pricing</label>
+                                                                <input type="text" class="ra-input-2 selected-bg" id="unallocatedBalance" placeholder="10.00 ~ 30.00">
+                                                                <!-- .selected-bg class for adding input background color -->
+                                                                <label for="unallocatedBalance" class="ra-label-2 right fw-500">BDT</label>
+                                                            </fieldset>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <p class="fz12 fw-400 darkPrimaryColor">**You need to add the function below in your
+                                                            conversion event: `___gnr_conversion()` to track Conversions. You need to add the
+                                                            function below in your conversion event</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="card settings-card radio-btn-card">
+                                            <div class="card-header card-header-custom border-0">
+                                                <div class="settings-radio-group">
+                                                    <div class="radio-btn-wrapper">
+                                                        <input class="radio-btn-input" type="radio" name="schedule" id="defualtSchedule" value="option2">
+                                                        <label class="radio-check-label" for="defualtSchedule">
+                                                            <span class="radio-box">
+                                 <span>&nbsp;</span>
+                                                            </span>
+                                                            <span class="radio-text">Default Schedule</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="radio-btn-wrapper">
+                                                        <input class="radio-btn-input" type="radio" name="schedule" id="customSchedule" value="option2">
+                                                        <label class="radio-check-label" for="customSchedule">
+                                                            <span class="radio-box">
+                                 <span>&nbsp;</span>
+                                                            </span>
+                                                            <span class="radio-text">Custom Schedule</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="submit" class="ra-btn client-settings-modal--btn w-100">Create Ad Group</button>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="submit" class="ra-btn client-settings-modal--btn opacity w-100">Create Ad Group</button>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="submit" class="ra-btn client-settings-modal--btn w-100 btn-loader">
+                                        <div class="spinner-border text-success mr-2" role="status"><span class="sr-only">Loading...</span>
+                                        </div>
+                                        Creating New Ad Group
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal For Upload Image Ad Banner -->
+                <div class="client-settings-modal-all create-add-group-modal modal fade" id="campaignImageUpload" tabindex="-1" role="dialog" aria-labelledby="campaignImageUpload" aria-hidden="true">
+                    <!-- .loading class add for blur effect -->
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <form action="#">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Upload Image Ad Banner(s)</h5>
+                                    <div>
+                                        <span class="upload-initial mr-2">Upload HTML?</span>
+                                        <span class="upload-completed mr-2">2/4 Uploading</span>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="scrollable">
+                                        <div class="row">
+                                            <div class="col-md-12 mb-20">
+                                                <div class="ra-form ra-form-2">
+                                                    <fieldset>
+                                                        <label for="adBannerName" class="ra-label-2 left">Ad Banner Name</label>
+                                                        <!-- .selected-bg class for adding input background color -->
+                                                        <input type="text" class="ra-input-2" id="adBannerName" placeholder="Set a name">
+                                                        <label for="adBannerName" class="ra-label-2 right">0/100</label>
+                                                    </fieldset>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 mb-20">
+                                                <div class="ra-form ra-form-2">
+                                                    <fieldset>
+                                                        <label for="ridirectUrl" class="ra-label-2 left">Redirect URL</label>
+                                                        <!-- .selected-bg class for adding input background color -->
+                                                        <input type="url" class="ra-input-2" id="ridirectUrl" placeholder="Set the Redirect URL">
+                                                    </fieldset>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <input type="file" id="uploadHtmlorImage" class="invisible">
+
+                                                <label for="uploadHtmlorImage">
+                                                    <div class="drop-image">
+                                                        <div class="create-add-group">
+                                                            <h4>Drop Images to Upload</h4>
+                                                            <p>See our <a href="#" target="_blank">Ad Banner Guideline</a> to know about the
+                                                                supported
+                                                                Banner sizes.
+                                                                File sizes should not be within 3.0 MB. Maximum 10 files at once.</p>
+                                                            <span class="or">or,</span>
+
+                                                            <div class="d-flex justify-content-center">
+                                                                <div class="ra-btn bg-green min-height-36">
+                                                                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M27.9688 15.9688H15.9688V27.9688H12.0312V15.9688H0.03125V12.0312H12.0312V0.03125H15.9688V12.0312H27.9688V15.9688Z" fill="#ffffff" />
+                                                                    </svg>
+                                                                    </span>
+                                                                    <span>Select Images</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="submit" class="ra-btn client-settings-modal--btn w-100">Create Ad Group</button>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="submit" class="ra-btn client-settings-modal--btn opacity w-100">Create Ad Group</button>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="submit" class="ra-btn client-settings-modal--btn w-100 btn-loader">
+                                        <div class="spinner-border text-success mr-2" role="status"><span class="sr-only">Loading...</span>
+                                        </div>
+                                        Creating New Ad Group
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="campaign-settings-wrapper">
+                    <div class="side-tree-menu">
+                        <ul>
+                            <li class="campaign--title">
+                                <div class="create-add-group">
+                                    <p class="fz14 fw-400 ra-primary-color mb-16">New Campaign has been created successfully. Currently
+                                        this campaign is Pending as it doesn’t have any Ad Groups (and Banners). Create Ad Groups first to
+                                        schedule this Campaign.</p>
+                                    <button type="button" class="ra-btn ra-btn-8x11 bg-green mx-auto" data-toggle="modal" data-target="#createAddGroup">
+                                        <span>
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path
+                              d="M27.9688 15.9688H15.9688V27.9688H12.0312V15.9688H0.03125V12.0312H12.0312V0.03125H15.9688V12.0312H27.9688V15.9688Z"
+                              fill="#ffffff" />
+                        </svg>
+                     </span>
+                                        <span>Create Ad Group</span>
+                                    </button>
+                                </div>
+                            </li>
+
+                            <li>
+                                <ul>
+                                    <li class="selected-title campaign--title campaign-name on-hold">
+                                        <div class="selected-title-wrapper">
+                                            <a href="clientDashboardSettingsCampaign.html" class="title-content">
+                                                <span class="tree-play-icon tree-hold">
+                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path
+                                    d="M8 0C3.584 0 0 3.584 0 8C0 12.416 3.584 16 8 16C12.416 16 16 12.416 16 8C16 3.584 12.424 0 8 0ZM10.4 9.784L8.08 11.12C7.792 11.288 7.472 11.368 7.16 11.368C6.84 11.368 6.528 11.288 6.24 11.12C5.664 10.784 5.32 10.192 5.32 9.52V6.84C5.32 6.176 5.664 5.576 6.24 5.24C6.816 4.904 7.504 4.904 8.088 5.24L10.408 6.576C10.984 6.912 11.328 7.504 11.328 8.176C11.328 8.848 10.984 9.448 10.4 9.784Z"
+                                    fill="#72BF44" />
+                              </svg>
+                           </span>
+                                                <span class="tree-play-icon tree-unhold">
+                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path
+                                    d="M8 0C3.584 0 0 3.584 0 8C0 12.416 3.584 16 8 16C12.416 16 16 12.416 16 8C16 3.584 12.424 0 8 0ZM7 10.424C7 10.808 6.84 10.96 6.432 10.96H5.392C4.984 10.96 4.824 10.808 4.824 10.424V5.576C4.824 5.192 4.984 5.04 5.392 5.04H6.424C6.832 5.04 6.992 5.192 6.992 5.576V10.424H7ZM11.224 10.424C11.224 10.808 11.064 10.96 10.656 10.96H9.624C9.216 10.96 9.056 10.808 9.056 10.424V5.576C9.056 5.192 9.216 5.04 9.624 5.04H10.656C11.064 5.04 11.224 5.192 11.224 5.576V10.424Z"
+                                    fill="#F2B93D" />
+                              </svg>
+                           </span>
+                                                <span class="ellipsis" title="Sharetrip October Campaign">Sharetrip October Campaign
+                              21</span>
+                                            </a>
+
+                                            <div class="d-flex">
+                                                <button class="plus" data-toggle="modal" data-target="#createAddGroup">
+                                                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M27.9688 15.9688H15.9688V27.9688H12.0312V15.9688H0.03125V12.0312H12.0312V0.03125H15.9688V12.0312H27.9688V15.9688Z" fill="#383874" />
+                                                    </svg>
+                                                </button>
+
+                                                <span>
+                              <div class="dropdown dot-dropdown">
+                                 <button type="button" class="ra-three-dot-btn ra-three-dot-btn-2"
+                                    data-toggle="dropdown" aria-haspopup="true">
+                                    <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                </button>
+                                                <div class="dropdown-menu filter-dropdown">
+                                                    <a class="dropdown-item" href="#">Demo Text 1</a>
+                                                    <a class="dropdown-item" href="#">Demo Text 2</a>
+                                                    <a class="dropdown-item" href="#">Demo Text 3</a>
+                                                    <a class="dropdown-item" href="#">Demo Text 4</a>
+                                                </div>
+                                            </div>
+                                            </span>
+                                        </div>
+                    </div>
+                    </li>
+
+                    <li>
+                        <div class="tree-menu-content">
+                            <ul class="border-wrapper">
+                                <!-- .unselected class for remove background color, plus & three dot menu  -->
+                                <li class="list-item">
+                                    <div class="selected-title unselected campaign-name on-hold">
+                                        <div class="selected-title-wrapper">
+                                            <a href="clientDashboardSettingsAdGroup.html" class="title-content">
+                                                <span class="tree-play-icon tree-hold">
+                                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path
+                                                d="M8 0C3.584 0 0 3.584 0 8C0 12.416 3.584 16 8 16C12.416 16 16 12.416 16 8C16 3.584 12.424 0 8 0ZM10.4 9.784L8.08 11.12C7.792 11.288 7.472 11.368 7.16 11.368C6.84 11.368 6.528 11.288 6.24 11.12C5.664 10.784 5.32 10.192 5.32 9.52V6.84C5.32 6.176 5.664 5.576 6.24 5.24C6.816 4.904 7.504 4.904 8.088 5.24L10.408 6.576C10.984 6.912 11.328 7.504 11.328 8.176C11.328 8.848 10.984 9.448 10.4 9.784Z"
+                                                fill="#72BF44" />
+                                          </svg>
+                                       </span>
+                                                <span class="tree-play-icon tree-unhold">
+                                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path
+                                                d="M8 0C3.584 0 0 3.584 0 8C0 12.416 3.584 16 8 16C12.416 16 16 12.416 16 8C16 3.584 12.424 0 8 0ZM7 10.424C7 10.808 6.84 10.96 6.432 10.96H5.392C4.984 10.96 4.824 10.808 4.824 10.424V5.576C4.824 5.192 4.984 5.04 5.392 5.04H6.424C6.832 5.04 6.992 5.192 6.992 5.576V10.424H7ZM11.224 10.424C11.224 10.808 11.064 10.96 10.656 10.96H9.624C9.216 10.96 9.056 10.808 9.056 10.424V5.576C9.056 5.192 9.216 5.04 9.624 5.04H10.656C11.064 5.04 11.224 5.192 11.224 5.576V10.424Z"
+                                                fill="#F2B93D" />
+                                          </svg>
+                                       </span>
+                                                <span class="ellipsis" title="Adgroup for Khulna">Adgroup for Khulna</span>
+                                            </a>
+
+                                            <div class="d-flex">
+                                                <button class="plus">
+                                                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M27.9688 15.9688H15.9688V27.9688H12.0312V15.9688H0.03125V12.0312H12.0312V0.03125H15.9688V12.0312H27.9688V15.9688Z" fill="#383874" />
+                                                    </svg>
+                                                </button>
+
+                                                <span>
+                                          <div class="dropdown dot-dropdown">
+                                             <button type="button" class="ra-three-dot-btn ra-three-dot-btn-2"
+                                                data-toggle="dropdown" aria-haspopup="true">
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                </button>
+                                                <div class="dropdown-menu filter-dropdown">
+                                                    <a class="dropdown-item" href="#">Demo Text 1</a>
+                                                    <a class="dropdown-item" href="#">Demo Text 2</a>
+                                                    <a class="dropdown-item" href="#">Demo Text 3</a>
+                                                    <a class="dropdown-item" href="#">Demo Text 4</a>
+                                                </div>
+                                            </div>
+                                            </span>
+                                        </div>
+                                    </div>
+                        </div>
+
+                        <ul>
+                            <li>
+                                <a href="clientDashboardSettingsAdBanner.html" class="title-content">
+                                    <span class="tree-play-icon">
+                                          <svg width="15" height="12" viewBox="0 0 15 12" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path
+                                                d="M2.25401 9.7551L5.63416 5.2638L8.23989 8.63227L10.141 6.38663L12.7468 9.7551H2.25401ZM13.5212 1.50908H7.50001L5.9857 0H1.47883C1.08141 0.0124966 0.703719 0.175525 0.422717 0.455868C0.283914 0.59339 0.174848 0.757788 0.102245 0.938926C0.0296424 1.12006 -0.00495964 1.3141 0.000572647 1.50908V10.4917C-0.00475854 10.6866 0.0300121 10.8805 0.102743 11.0615C0.175473 11.2425 0.284623 11.4068 0.423468 11.5441C0.704471 11.8245 1.08216 11.9875 1.47958 12H13.5212C13.9186 11.9875 14.2963 11.8245 14.5773 11.5441C14.716 11.4067 14.825 11.2424 14.8976 11.0614C14.9702 10.8804 15.0049 10.6865 14.9994 10.4917V3.01815C15.0039 2.82074 14.9689 2.62441 14.8964 2.44063C14.8239 2.25685 14.7154 2.08929 14.5773 1.94773C14.442 1.80482 14.2781 1.6919 14.0961 1.61632C13.9142 1.54074 13.7183 1.5042 13.5212 1.50908Z"
+                                                fill="#72BF44" />
+                                          </svg>
+                                       </span>
+                                    <span class="ellipsis"
+                                          title="Sharetrip Banner 300x250 Sharetrip Banner">Sharetrip Banner
+                                          300x250</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="clientDashboardSettingsAdBanner.html">
+                                    <span class="tree-play-icon">
+                                          <svg width="15" height="12" viewBox="0 0 15 12" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path
+                                                d="M2.25401 9.7551L5.63416 5.2638L8.23989 8.63227L10.141 6.38663L12.7468 9.7551H2.25401ZM13.5212 1.50908H7.50001L5.9857 0H1.47883C1.08141 0.0124966 0.703719 0.175525 0.422717 0.455868C0.283914 0.59339 0.174848 0.757788 0.102245 0.938926C0.0296424 1.12006 -0.00495964 1.3141 0.000572647 1.50908V10.4917C-0.00475854 10.6866 0.0300121 10.8805 0.102743 11.0615C0.175473 11.2425 0.284623 11.4068 0.423468 11.5441C0.704471 11.8245 1.08216 11.9875 1.47958 12H13.5212C13.9186 11.9875 14.2963 11.8245 14.5773 11.5441C14.716 11.4067 14.825 11.2424 14.8976 11.0614C14.9702 10.8804 15.0049 10.6865 14.9994 10.4917V3.01815C15.0039 2.82074 14.9689 2.62441 14.8964 2.44063C14.8239 2.25685 14.7154 2.08929 14.5773 1.94773C14.442 1.80482 14.2781 1.6919 14.0961 1.61632C13.9142 1.54074 13.7183 1.5042 13.5212 1.50908Z"
+                                                fill="#72BF44" />
+                                          </svg>
+                                       </span>
+                                    <span class="ellipsis" title="Sharetrip Banner 320x100">Sharetrip Banner
+                                          320x100</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="clientDashboardSettingsAdBanner.html">
+                                    <span class="tree-play-icon">
+                                          <svg width="15" height="12" viewBox="0 0 15 12" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path
+                                                d="M2.25401 9.7551L5.63416 5.2638L8.23989 8.63227L10.141 6.38663L12.7468 9.7551H2.25401ZM13.5212 1.50908H7.50001L5.9857 0H1.47883C1.08141 0.0124966 0.703719 0.175525 0.422717 0.455868C0.283914 0.59339 0.174848 0.757788 0.102245 0.938926C0.0296424 1.12006 -0.00495964 1.3141 0.000572647 1.50908V10.4917C-0.00475854 10.6866 0.0300121 10.8805 0.102743 11.0615C0.175473 11.2425 0.284623 11.4068 0.423468 11.5441C0.704471 11.8245 1.08216 11.9875 1.47958 12H13.5212C13.9186 11.9875 14.2963 11.8245 14.5773 11.5441C14.716 11.4067 14.825 11.2424 14.8976 11.0614C14.9702 10.8804 15.0049 10.6865 14.9994 10.4917V3.01815C15.0039 2.82074 14.9689 2.62441 14.8964 2.44063C14.8239 2.25685 14.7154 2.08929 14.5773 1.94773C14.442 1.80482 14.2781 1.6919 14.0961 1.61632C13.9142 1.54074 13.7183 1.5042 13.5212 1.50908Z"
+                                                fill="#72BF44" />
+                                          </svg>
+                                       </span>
+                                    <span class="ellipsis" title="Sharetrip Banner 160x600">Sharetrip Banner
+                                          160x600</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    </ul>
+                </div>
+                </li>
+                </ul>
+                </li>
+
+                <li>
+                    <ul>
+                        <li class="selected-title campaign--title campaign-name">
+                            <div class="selected-title-wrapper">
+                                <a href="clientDashboardSettingsCampaign.html" class="title-content">
+                                    <span class="tree-play-icon tree-hold">
+                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path
+                                    d="M8 0C3.584 0 0 3.584 0 8C0 12.416 3.584 16 8 16C12.416 16 16 12.416 16 8C16 3.584 12.424 0 8 0ZM10.4 9.784L8.08 11.12C7.792 11.288 7.472 11.368 7.16 11.368C6.84 11.368 6.528 11.288 6.24 11.12C5.664 10.784 5.32 10.192 5.32 9.52V6.84C5.32 6.176 5.664 5.576 6.24 5.24C6.816 4.904 7.504 4.904 8.088 5.24L10.408 6.576C10.984 6.912 11.328 7.504 11.328 8.176C11.328 8.848 10.984 9.448 10.4 9.784Z"
+                                    fill="#72BF44" />
+                              </svg>
+                           </span>
+                                    <span class="tree-play-icon tree-unhold">
+                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path
+                                    d="M8 0C3.584 0 0 3.584 0 8C0 12.416 3.584 16 8 16C12.416 16 16 12.416 16 8C16 3.584 12.424 0 8 0ZM7 10.424C7 10.808 6.84 10.96 6.432 10.96H5.392C4.984 10.96 4.824 10.808 4.824 10.424V5.576C4.824 5.192 4.984 5.04 5.392 5.04H6.424C6.832 5.04 6.992 5.192 6.992 5.576V10.424H7ZM11.224 10.424C11.224 10.808 11.064 10.96 10.656 10.96H9.624C9.216 10.96 9.056 10.808 9.056 10.424V5.576C9.056 5.192 9.216 5.04 9.624 5.04H10.656C11.064 5.04 11.224 5.192 11.224 5.576V10.424Z"
+                                    fill="#FC8B49" />
+                              </svg>
+                           </span>
+                                    <span class="ellipsis" title="Sharetrip Summer Campaign 21">Sharetrip Summer Campaign
+                              21</span>
+                                </a>
+
+                                <div class="d-flex">
+                                    <button class="plus" data-toggle="modal" data-target="#createAddGroup">
+                                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M27.9688 15.9688H15.9688V27.9688H12.0312V15.9688H0.03125V12.0312H12.0312V0.03125H15.9688V12.0312H27.9688V15.9688Z" fill="#383874" />
+                                        </svg>
+                                    </button>
+
+                                    <span>
+                              <div class="dropdown dot-dropdown">
+                                 <button type="button" class="ra-three-dot-btn ra-three-dot-btn-2"
+                                    data-toggle="dropdown" aria-haspopup="true">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    </button>
+                                    <div class="dropdown-menu filter-dropdown">
+                                        <a class="dropdown-item" href="#">Demo Text 1</a>
+                                        <a class="dropdown-item" href="#">Demo Text 2</a>
+                                        <a class="dropdown-item" href="#">Demo Text 3</a>
+                                        <a class="dropdown-item" href="#">Demo Text 4</a>
+                                    </div>
+                                </div>
+                                </span>
+                            </div>
+            </div>
+            </li>
+
+            <li>
+                <div class="tree-menu-content">
+                    <ul class="border-wrapper">
+                        <!-- .unselected class for remove background color, plus & three dot menu  -->
+                        <li class="list-item">
+                            <div class="selected-title unselected campaign-name">
+                                <div class="selected-title-wrapper">
+                                    <a href="clientDashboardSettingsAdGroup.html" class="title-content">
+                                        <span class="tree-play-icon tree-hold">
+                                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path
+                                                d="M8 0C3.584 0 0 3.584 0 8C0 12.416 3.584 16 8 16C12.416 16 16 12.416 16 8C16 3.584 12.424 0 8 0ZM10.4 9.784L8.08 11.12C7.792 11.288 7.472 11.368 7.16 11.368C6.84 11.368 6.528 11.288 6.24 11.12C5.664 10.784 5.32 10.192 5.32 9.52V6.84C5.32 6.176 5.664 5.576 6.24 5.24C6.816 4.904 7.504 4.904 8.088 5.24L10.408 6.576C10.984 6.912 11.328 7.504 11.328 8.176C11.328 8.848 10.984 9.448 10.4 9.784Z"
+                                                fill="#72BF44" />
+                                          </svg>
+                                       </span>
+                                        <span class="tree-play-icon tree-unhold">
+                                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path
+                                                d="M8 0C3.584 0 0 3.584 0 8C0 12.416 3.584 16 8 16C12.416 16 16 12.416 16 8C16 3.584 12.424 0 8 0ZM7 10.424C7 10.808 6.84 10.96 6.432 10.96H5.392C4.984 10.96 4.824 10.808 4.824 10.424V5.576C4.824 5.192 4.984 5.04 5.392 5.04H6.424C6.832 5.04 6.992 5.192 6.992 5.576V10.424H7ZM11.224 10.424C11.224 10.808 11.064 10.96 10.656 10.96H9.624C9.216 10.96 9.056 10.808 9.056 10.424V5.576C9.056 5.192 9.216 5.04 9.624 5.04H10.656C11.064 5.04 11.224 5.192 11.224 5.576V10.424Z"
+                                                fill="#FC8B49" />
+                                          </svg>
+                                       </span>
+                                        <span class="ellipsis" title="Adgroup for Dhaka">Adgroup for
+                                          Dhaka</span>
+                                    </a>
+
+                                    <div class="d-flex">
+                                        <button class="plus" data-toggle="modal" data-target="#campaignImageUpload">
+                                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M27.9688 15.9688H15.9688V27.9688H12.0312V15.9688H0.03125V12.0312H12.0312V0.03125H15.9688V12.0312H27.9688V15.9688Z" fill="#383874" />
+                                            </svg>
+                                        </button>
+
+                                        <span>
+                                          <div class="dropdown dot-dropdown">
+                                             <button type="button" class="ra-three-dot-btn ra-three-dot-btn-2"
+                                                data-toggle="dropdown" aria-haspopup="true">
+                                                <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        </button>
+                                        <div class="dropdown-menu filter-dropdown">
+                                            <a class="dropdown-item" href="#">Demo Text 1</a>
+                                            <a class="dropdown-item" href="#">Demo Text 2</a>
+                                            <a class="dropdown-item" href="#">Demo Text 3</a>
+                                            <a class="dropdown-item" href="#">Demo Text 4</a>
+                                        </div>
+                                    </div>
+                                    </span>
+                                </div>
+                            </div>
+                </div>
+
+                <ul>
+                    <li>
+                        <a href="clientDashboardSettingsAdBanner.html" class="title-content">
+                            <span class="tree-play-icon">
+                                          <svg width="15" height="12" viewBox="0 0 15 12" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path
+                                                d="M2.25401 9.7551L5.63416 5.2638L8.23989 8.63227L10.141 6.38663L12.7468 9.7551H2.25401ZM13.5212 1.50908H7.50001L5.9857 0H1.47883C1.08141 0.0124966 0.703719 0.175525 0.422717 0.455868C0.283914 0.59339 0.174848 0.757788 0.102245 0.938926C0.0296424 1.12006 -0.00495964 1.3141 0.000572647 1.50908V10.4917C-0.00475854 10.6866 0.0300121 10.8805 0.102743 11.0615C0.175473 11.2425 0.284623 11.4068 0.423468 11.5441C0.704471 11.8245 1.08216 11.9875 1.47958 12H13.5212C13.9186 11.9875 14.2963 11.8245 14.5773 11.5441C14.716 11.4067 14.825 11.2424 14.8976 11.0614C14.9702 10.8804 15.0049 10.6865 14.9994 10.4917V3.01815C15.0039 2.82074 14.9689 2.62441 14.8964 2.44063C14.8239 2.25685 14.7154 2.08929 14.5773 1.94773C14.442 1.80482 14.2781 1.6919 14.0961 1.61632C13.9142 1.54074 13.7183 1.5042 13.5212 1.50908Z"
+                                                fill="#72BF44" />
+                                          </svg>
+                                       </span>
+                            <span class="ellipsis"
+                                          title="Sharetrip Banner 300x250 Sharetrip Banner">Sharetrip Banner
+                                          300x250 Sharetrip Banner</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="clientDashboardSettingsAdBanner.html">
+                            <span class="tree-play-icon">
+                                          <svg width="15" height="12" viewBox="0 0 15 12" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path
+                                                d="M2.25401 9.7551L5.63416 5.2638L8.23989 8.63227L10.141 6.38663L12.7468 9.7551H2.25401ZM13.5212 1.50908H7.50001L5.9857 0H1.47883C1.08141 0.0124966 0.703719 0.175525 0.422717 0.455868C0.283914 0.59339 0.174848 0.757788 0.102245 0.938926C0.0296424 1.12006 -0.00495964 1.3141 0.000572647 1.50908V10.4917C-0.00475854 10.6866 0.0300121 10.8805 0.102743 11.0615C0.175473 11.2425 0.284623 11.4068 0.423468 11.5441C0.704471 11.8245 1.08216 11.9875 1.47958 12H13.5212C13.9186 11.9875 14.2963 11.8245 14.5773 11.5441C14.716 11.4067 14.825 11.2424 14.8976 11.0614C14.9702 10.8804 15.0049 10.6865 14.9994 10.4917V3.01815C15.0039 2.82074 14.9689 2.62441 14.8964 2.44063C14.8239 2.25685 14.7154 2.08929 14.5773 1.94773C14.442 1.80482 14.2781 1.6919 14.0961 1.61632C13.9142 1.54074 13.7183 1.5042 13.5212 1.50908Z"
+                                                fill="#72BF44" />
+                                          </svg>
+                                       </span>
+                            <span class="ellipsis" title="Sharetrip Banner 320x100">Sharetrip Banner
+                                          320x100</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="clientDashboardSettingsAdBanner.html">
+                            <span class="tree-play-icon">
+                                          <svg width="15" height="12" viewBox="0 0 15 12" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path
+                                                d="M2.25401 9.7551L5.63416 5.2638L8.23989 8.63227L10.141 6.38663L12.7468 9.7551H2.25401ZM13.5212 1.50908H7.50001L5.9857 0H1.47883C1.08141 0.0124966 0.703719 0.175525 0.422717 0.455868C0.283914 0.59339 0.174848 0.757788 0.102245 0.938926C0.0296424 1.12006 -0.00495964 1.3141 0.000572647 1.50908V10.4917C-0.00475854 10.6866 0.0300121 10.8805 0.102743 11.0615C0.175473 11.2425 0.284623 11.4068 0.423468 11.5441C0.704471 11.8245 1.08216 11.9875 1.47958 12H13.5212C13.9186 11.9875 14.2963 11.8245 14.5773 11.5441C14.716 11.4067 14.825 11.2424 14.8976 11.0614C14.9702 10.8804 15.0049 10.6865 14.9994 10.4917V3.01815C15.0039 2.82074 14.9689 2.62441 14.8964 2.44063C14.8239 2.25685 14.7154 2.08929 14.5773 1.94773C14.442 1.80482 14.2781 1.6919 14.0961 1.61632C13.9142 1.54074 13.7183 1.5042 13.5212 1.50908Z"
+                                                fill="#72BF44" />
+                                          </svg>
+                                       </span>
+                            <span class="ellipsis" title="Sharetrip Banner 160x600">Sharetrip Banner
+                                          160x600</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="clientDashboardSettingsAdBanner.html">
+                            <span class="tree-play-icon">
+                                          <svg width="15" height="12" viewBox="0 0 15 12" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path
+                                                d="M2.25401 9.7551L5.63416 5.2638L8.23989 8.63227L10.141 6.38663L12.7468 9.7551H2.25401ZM13.5212 1.50908H7.50001L5.9857 0H1.47883C1.08141 0.0124966 0.703719 0.175525 0.422717 0.455868C0.283914 0.59339 0.174848 0.757788 0.102245 0.938926C0.0296424 1.12006 -0.00495964 1.3141 0.000572647 1.50908V10.4917C-0.00475854 10.6866 0.0300121 10.8805 0.102743 11.0615C0.175473 11.2425 0.284623 11.4068 0.423468 11.5441C0.704471 11.8245 1.08216 11.9875 1.47958 12H13.5212C13.9186 11.9875 14.2963 11.8245 14.5773 11.5441C14.716 11.4067 14.825 11.2424 14.8976 11.0614C14.9702 10.8804 15.0049 10.6865 14.9994 10.4917V3.01815C15.0039 2.82074 14.9689 2.62441 14.8964 2.44063C14.8239 2.25685 14.7154 2.08929 14.5773 1.94773C14.442 1.80482 14.2781 1.6919 14.0961 1.61632C13.9142 1.54074 13.7183 1.5042 13.5212 1.50908Z"
+                                                fill="#72BF44" />
+                                          </svg>
+                                       </span>
+                            <span class="ellipsis" title="Sharetrip Banner 160x400">Sharetrip Banner
+                                          160x400</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="list-item on-hold">
+                <!-- .unselected class for remove background color, plus & three dot menu  -->
+                <div class="selected-title campaign-name">
+                    <div class="selected-title-wrapper">
+                        <a href="clientDashboardSettingsAdGroup.html" class="title-content">
+                            <span class="tree-play-icon tree-hold">
+                                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path
+                                                d="M8 0C3.584 0 0 3.584 0 8C0 12.416 3.584 16 8 16C12.416 16 16 12.416 16 8C16 3.584 12.424 0 8 0ZM10.4 9.784L8.08 11.12C7.792 11.288 7.472 11.368 7.16 11.368C6.84 11.368 6.528 11.288 6.24 11.12C5.664 10.784 5.32 10.192 5.32 9.52V6.84C5.32 6.176 5.664 5.576 6.24 5.24C6.816 4.904 7.504 4.904 8.088 5.24L10.408 6.576C10.984 6.912 11.328 7.504 11.328 8.176C11.328 8.848 10.984 9.448 10.4 9.784Z"
+                                                fill="#72BF44" />
+                                          </svg>
+                                       </span>
+                            <span class="tree-play-icon tree-unhold">
+                                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path
+                                                d="M8 0C3.584 0 0 3.584 0 8C0 12.416 3.584 16 8 16C12.416 16 16 12.416 16 8C16 3.584 12.424 0 8 0ZM7 10.424C7 10.808 6.84 10.96 6.432 10.96H5.392C4.984 10.96 4.824 10.808 4.824 10.424V5.576C4.824 5.192 4.984 5.04 5.392 5.04H6.424C6.832 5.04 6.992 5.192 6.992 5.576V10.424H7ZM11.224 10.424C11.224 10.808 11.064 10.96 10.656 10.96H9.624C9.216 10.96 9.056 10.808 9.056 10.424V5.576C9.056 5.192 9.216 5.04 9.624 5.04H10.656C11.064 5.04 11.224 5.192 11.224 5.576V10.424Z"
+                                                fill="#FC8B49" />
+                                          </svg>
+                                       </span>
+                            <span class="ellipsis" title="Adgroup for Chittagong">Adgroup for
+                                          Chittagong</span>
+                        </a>
+
+                        <div class="d-flex">
+                            <button class="plus" data-toggle="modal" data-target="#campaignImageUpload">
+                                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M27.9688 15.9688H15.9688V27.9688H12.0312V15.9688H0.03125V12.0312H12.0312V0.03125H15.9688V12.0312H27.9688V15.9688Z" fill="#383874" />
+                                </svg>
+                            </button>
+
+                            <span>
+                                          <div class="dropdown dot-dropdown">
+                                             <button type="button" class="ra-three-dot-btn ra-three-dot-btn-2"
+                                                data-toggle="dropdown" aria-haspopup="true">
+                                                <span></span>
+                            <span></span>
+                            <span></span>
+                            </button>
+                            <div class="dropdown-menu filter-dropdown">
+                                <a class="dropdown-item" href="#">Demo Text 1</a>
+                                <a class="dropdown-item" href="#">Demo Text 2</a>
+                                <a class="dropdown-item" href="#">Demo Text 3</a>
+                                <a class="dropdown-item" href="#">Demo Text 4</a>
+                            </div>
+                        </div>
+                        </span>
+                    </div>
+                </div>
+    </div>
+
+    <ul>
+        <li>
+            <a href="clientDashboardSettingsAdBanner.html">
+                <span class="tree-play-icon">
+                                          <svg width="15" height="12" viewBox="0 0 15 12" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path
+                                                d="M2.25401 9.7551L5.63416 5.2638L8.23989 8.63227L10.141 6.38663L12.7468 9.7551H2.25401ZM13.5212 1.50908H7.50001L5.9857 0H1.47883C1.08141 0.0124966 0.703719 0.175525 0.422717 0.455868C0.283914 0.59339 0.174848 0.757788 0.102245 0.938926C0.0296424 1.12006 -0.00495964 1.3141 0.000572647 1.50908V10.4917C-0.00475854 10.6866 0.0300121 10.8805 0.102743 11.0615C0.175473 11.2425 0.284623 11.4068 0.423468 11.5441C0.704471 11.8245 1.08216 11.9875 1.47958 12H13.5212C13.9186 11.9875 14.2963 11.8245 14.5773 11.5441C14.716 11.4067 14.825 11.2424 14.8976 11.0614C14.9702 10.8804 15.0049 10.6865 14.9994 10.4917V3.01815C15.0039 2.82074 14.9689 2.62441 14.8964 2.44063C14.8239 2.25685 14.7154 2.08929 14.5773 1.94773C14.442 1.80482 14.2781 1.6919 14.0961 1.61632C13.9142 1.54074 13.7183 1.5042 13.5212 1.50908Z"
+                                                fill="#72BF44" />
+                                          </svg>
+                                       </span>
+                <span class="ellipsis" title="Sharetrip Banner 300x250">Sharetrip Banner
+                                          300x250</span>
+            </a>
+        </li>
+        <li>
+            <a href="clientDashboardSettingsAdBanner.html">
+                <span class="tree-play-icon">
+                                          <svg width="15" height="12" viewBox="0 0 15 12" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path
+                                                d="M2.25401 9.7551L5.63416 5.2638L8.23989 8.63227L10.141 6.38663L12.7468 9.7551H2.25401ZM13.5212 1.50908H7.50001L5.9857 0H1.47883C1.08141 0.0124966 0.703719 0.175525 0.422717 0.455868C0.283914 0.59339 0.174848 0.757788 0.102245 0.938926C0.0296424 1.12006 -0.00495964 1.3141 0.000572647 1.50908V10.4917C-0.00475854 10.6866 0.0300121 10.8805 0.102743 11.0615C0.175473 11.2425 0.284623 11.4068 0.423468 11.5441C0.704471 11.8245 1.08216 11.9875 1.47958 12H13.5212C13.9186 11.9875 14.2963 11.8245 14.5773 11.5441C14.716 11.4067 14.825 11.2424 14.8976 11.0614C14.9702 10.8804 15.0049 10.6865 14.9994 10.4917V3.01815C15.0039 2.82074 14.9689 2.62441 14.8964 2.44063C14.8239 2.25685 14.7154 2.08929 14.5773 1.94773C14.442 1.80482 14.2781 1.6919 14.0961 1.61632C13.9142 1.54074 13.7183 1.5042 13.5212 1.50908Z"
+                                                fill="#72BF44" />
+                                          </svg>
+                                       </span>
+                <span class="ellipsis" title="Sharetrip Banner 320x100">Sharetrip Banner
+                                          320x100</span>
+            </a>
+        </li>
+        <li>
+            <a href="clientDashboardSettingsAdBanner.html">
+                <span class="tree-play-icon">
+                                          <svg width="15" height="12" viewBox="0 0 15 12" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path
+                                                d="M2.25401 9.7551L5.63416 5.2638L8.23989 8.63227L10.141 6.38663L12.7468 9.7551H2.25401ZM13.5212 1.50908H7.50001L5.9857 0H1.47883C1.08141 0.0124966 0.703719 0.175525 0.422717 0.455868C0.283914 0.59339 0.174848 0.757788 0.102245 0.938926C0.0296424 1.12006 -0.00495964 1.3141 0.000572647 1.50908V10.4917C-0.00475854 10.6866 0.0300121 10.8805 0.102743 11.0615C0.175473 11.2425 0.284623 11.4068 0.423468 11.5441C0.704471 11.8245 1.08216 11.9875 1.47958 12H13.5212C13.9186 11.9875 14.2963 11.8245 14.5773 11.5441C14.716 11.4067 14.825 11.2424 14.8976 11.0614C14.9702 10.8804 15.0049 10.6865 14.9994 10.4917V3.01815C15.0039 2.82074 14.9689 2.62441 14.8964 2.44063C14.8239 2.25685 14.7154 2.08929 14.5773 1.94773C14.442 1.80482 14.2781 1.6919 14.0961 1.61632C13.9142 1.54074 13.7183 1.5042 13.5212 1.50908Z"
+                                                fill="#72BF44" />
+                                          </svg>
+                                       </span>
+                <span class="ellipsis" title="Sharetrip Banner 160x600">Sharetrip Banner
+                                          160x600</span>
+            </a>
+        </li>
+        <li>
+            <a href="clientDashboardSettingsAdBanner.html">
+                <span class="tree-play-icon">
+                                          <svg width="15" height="12" viewBox="0 0 15 12" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path
+                                                d="M2.25401 9.7551L5.63416 5.2638L8.23989 8.63227L10.141 6.38663L12.7468 9.7551H2.25401ZM13.5212 1.50908H7.50001L5.9857 0H1.47883C1.08141 0.0124966 0.703719 0.175525 0.422717 0.455868C0.283914 0.59339 0.174848 0.757788 0.102245 0.938926C0.0296424 1.12006 -0.00495964 1.3141 0.000572647 1.50908V10.4917C-0.00475854 10.6866 0.0300121 10.8805 0.102743 11.0615C0.175473 11.2425 0.284623 11.4068 0.423468 11.5441C0.704471 11.8245 1.08216 11.9875 1.47958 12H13.5212C13.9186 11.9875 14.2963 11.8245 14.5773 11.5441C14.716 11.4067 14.825 11.2424 14.8976 11.0614C14.9702 10.8804 15.0049 10.6865 14.9994 10.4917V3.01815C15.0039 2.82074 14.9689 2.62441 14.8964 2.44063C14.8239 2.25685 14.7154 2.08929 14.5773 1.94773C14.442 1.80482 14.2781 1.6919 14.0961 1.61632C13.9142 1.54074 13.7183 1.5042 13.5212 1.50908Z"
+                                                fill="#72BF44" />
+                                          </svg>
+                                       </span>
+                <span class="ellipsis" title="Sharetrip Banner 300x600">Sharetrip Banner
+                                          300x600</span>
+            </a>
+        </li>
+    </ul>
+    </li>
+    <li class="list-item">
+        <!-- .unselected class for remove background color, plus & three dot menu  -->
+        <div class="selected-title unselected campaign-name">
+            <div class="selected-title-wrapper">
+                <a href="clientDashboardSettingsAdGroup.html" class="title-content">
+                    <span class="tree-play-icon tree-hold">
+                                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path
+                                                d="M8 0C3.584 0 0 3.584 0 8C0 12.416 3.584 16 8 16C12.416 16 16 12.416 16 8C16 3.584 12.424 0 8 0ZM10.4 9.784L8.08 11.12C7.792 11.288 7.472 11.368 7.16 11.368C6.84 11.368 6.528 11.288 6.24 11.12C5.664 10.784 5.32 10.192 5.32 9.52V6.84C5.32 6.176 5.664 5.576 6.24 5.24C6.816 4.904 7.504 4.904 8.088 5.24L10.408 6.576C10.984 6.912 11.328 7.504 11.328 8.176C11.328 8.848 10.984 9.448 10.4 9.784Z"
+                                                fill="#72BF44" />
+                                          </svg>
+                                       </span>
+                    <span class="tree-play-icon tree-unhold">
+                                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path
+                                                d="M8 0C3.584 0 0 3.584 0 8C0 12.416 3.584 16 8 16C12.416 16 16 12.416 16 8C16 3.584 12.424 0 8 0ZM7 10.424C7 10.808 6.84 10.96 6.432 10.96H5.392C4.984 10.96 4.824 10.808 4.824 10.424V5.576C4.824 5.192 4.984 5.04 5.392 5.04H6.424C6.832 5.04 6.992 5.192 6.992 5.576V10.424H7ZM11.224 10.424C11.224 10.808 11.064 10.96 10.656 10.96H9.624C9.216 10.96 9.056 10.808 9.056 10.424V5.576C9.056 5.192 9.216 5.04 9.624 5.04H10.656C11.064 5.04 11.224 5.192 11.224 5.576V10.424Z"
+                                                fill="#FC8B49" />
+                                          </svg>
+                                       </span>
+                    <span class="ellipsis" title="Adgroup for Sylhet">Adgroup for Sylhet</span>
+                </a>
+
+                <div class="d-flex">
+                    <button class="plus" data-toggle="modal" data-target="#campaignImageUpload">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M27.9688 15.9688H15.9688V27.9688H12.0312V15.9688H0.03125V12.0312H12.0312V0.03125H15.9688V12.0312H27.9688V15.9688Z" fill="#383874" />
+                        </svg>
+                    </button>
+
+                    <span>
+                                          <div class="dropdown dot-dropdown">
+                                             <button type="button" class="ra-three-dot-btn ra-three-dot-btn-2"
+                                                data-toggle="dropdown" aria-haspopup="true">
+                                                <span></span>
+                    <span></span>
+                    <span></span>
+                    </button>
+                    <div class="dropdown-menu filter-dropdown">
+                        <a class="dropdown-item" href="#">Demo Text 1</a>
+                        <a class="dropdown-item" href="#">Demo Text 2</a>
+                        <a class="dropdown-item" href="#">Demo Text 3</a>
+                        <a class="dropdown-item" href="#">Demo Text 4</a>
+                    </div>
+                </div>
+                </span>
+            </div>
+        </div>
+        </div>
+
+        <ul>
+            <li>
+                <a href="clientDashboardSettingsAdBanner.html">
+                    <span class="tree-play-icon">
+                                          <svg width="15" height="12" viewBox="0 0 15 12" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path
+                                                d="M2.25401 9.7551L5.63416 5.2638L8.23989 8.63227L10.141 6.38663L12.7468 9.7551H2.25401ZM13.5212 1.50908H7.50001L5.9857 0H1.47883C1.08141 0.0124966 0.703719 0.175525 0.422717 0.455868C0.283914 0.59339 0.174848 0.757788 0.102245 0.938926C0.0296424 1.12006 -0.00495964 1.3141 0.000572647 1.50908V10.4917C-0.00475854 10.6866 0.0300121 10.8805 0.102743 11.0615C0.175473 11.2425 0.284623 11.4068 0.423468 11.5441C0.704471 11.8245 1.08216 11.9875 1.47958 12H13.5212C13.9186 11.9875 14.2963 11.8245 14.5773 11.5441C14.716 11.4067 14.825 11.2424 14.8976 11.0614C14.9702 10.8804 15.0049 10.6865 14.9994 10.4917V3.01815C15.0039 2.82074 14.9689 2.62441 14.8964 2.44063C14.8239 2.25685 14.7154 2.08929 14.5773 1.94773C14.442 1.80482 14.2781 1.6919 14.0961 1.61632C13.9142 1.54074 13.7183 1.5042 13.5212 1.50908Z"
+                                                fill="#72BF44" />
+                                          </svg>
+                                       </span>
+                    <span class="ellipsis" title="Sharetrip Banner 300x250">Sharetrip Banner
+                                          300x250</span>
+                </a>
+            </li>
+            <li>
+                <a href="clientDashboardSettingsAdBanner.html">
+                    <span class="tree-play-icon">
+                                          <svg width="15" height="12" viewBox="0 0 15 12" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path
+                                                d="M2.25401 9.7551L5.63416 5.2638L8.23989 8.63227L10.141 6.38663L12.7468 9.7551H2.25401ZM13.5212 1.50908H7.50001L5.9857 0H1.47883C1.08141 0.0124966 0.703719 0.175525 0.422717 0.455868C0.283914 0.59339 0.174848 0.757788 0.102245 0.938926C0.0296424 1.12006 -0.00495964 1.3141 0.000572647 1.50908V10.4917C-0.00475854 10.6866 0.0300121 10.8805 0.102743 11.0615C0.175473 11.2425 0.284623 11.4068 0.423468 11.5441C0.704471 11.8245 1.08216 11.9875 1.47958 12H13.5212C13.9186 11.9875 14.2963 11.8245 14.5773 11.5441C14.716 11.4067 14.825 11.2424 14.8976 11.0614C14.9702 10.8804 15.0049 10.6865 14.9994 10.4917V3.01815C15.0039 2.82074 14.9689 2.62441 14.8964 2.44063C14.8239 2.25685 14.7154 2.08929 14.5773 1.94773C14.442 1.80482 14.2781 1.6919 14.0961 1.61632C13.9142 1.54074 13.7183 1.5042 13.5212 1.50908Z"
+                                                fill="#72BF44" />
+                                          </svg>
+                                       </span>
+                    <span class="ellipsis" title="Sharetrip Banner 320x100">Sharetrip Banner
+                                          320x100</span>
+                </a>
+            </li>
+        </ul>
+    </li>
+    </ul>
+    </div>
+    </li>
+    </ul>
+    </li>
+    </ul>
+    </div>
+
+    <div class="campaign-settings-content">
+        <div class="campaign-status-bar mb-20">
+            <p class="fz18 fw-700 purleDark-color">Sharetrip Banner 320x100 <span class="approved green-color fz14 fw-500 pl-1">Approved</span></p>
+
+            <button class="ra-btn min-height-36 campaign-status-btn active ml-1">
+                <span>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path
+                        d="M8 0C3.584 0 0 3.584 0 8C0 12.416 3.584 16 8 16C12.416 16 16 12.416 16 8C16 3.584 12.424 0 8 0ZM7 10.424C7 10.808 6.84 10.96 6.432 10.96H5.392C4.984 10.96 4.824 10.808 4.824 10.424V5.576C4.824 5.192 4.984 5.04 5.392 5.04H6.424C6.832 5.04 6.992 5.192 6.992 5.576V10.424H7ZM11.224 10.424C11.224 10.808 11.064 10.96 10.656 10.96H9.624C9.216 10.96 9.056 10.808 9.056 10.424V5.576C9.056 5.192 9.216 5.04 9.624 5.04H10.656C11.064 5.04 11.224 5.192 11.224 5.576V10.424Z"
+                        fill="#FC8B49" />
+                  </svg>
+               </span>
+                <span>Active</span>
+            </button>
+            <button class="ra-btn min-height-36 campaign-status-btn activate ml-1">
+                <span>
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M6 1.12497C3.3076 1.12497 1.12497 3.3076 1.12497 6C1.12497 8.6924 3.3076 10.875 6 10.875C8.6924 10.875 10.875 8.6924 10.875 6C10.875 3.3076 8.6924 1.12497 6 1.12497ZM0.334426 6C0.334426 2.87099 2.87099 0.334426 6 0.334426C9.12901 0.334426 11.6656 2.87099 11.6656 6C11.6656 9.12901 9.12901 11.6656 6 11.6656C2.87099 11.6656 0.334426 9.12901 0.334426 6Z"
+                        fill="#fff" />
+                     <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M0.0983607 6C0.0983607 2.74061 2.74061 0.0983607 6 0.0983607C9.25938 0.0983607 11.9016 2.74061 11.9016 6C11.9016 9.25938 9.25938 11.9016 6 11.9016C2.74061 11.9016 0.0983607 9.25938 0.0983607 6ZM6 0.570492C3.00137 0.570492 0.570492 3.00137 0.570492 6C0.570492 8.99863 3.00137 11.4295 6 11.4295C8.99863 11.4295 11.4295 8.99863 11.4295 6C11.4295 3.00137 8.99863 0.570492 6 0.570492ZM6 1.36104C3.43797 1.36104 1.36104 3.43797 1.36104 6C1.36104 8.56203 3.43797 10.639 6 10.639C8.56203 10.639 10.639 8.56203 10.639 6C10.639 3.43797 8.56203 1.36104 6 1.36104ZM0.888906 6C0.888906 3.17722 3.17722 0.888906 6 0.888906C8.82278 0.888906 11.1111 3.17722 11.1111 6C11.1111 8.82278 8.82278 11.1111 6 11.1111C3.17722 11.1111 0.888906 8.82278 0.888906 6Z"
+                        fill="#fff" />
+                     <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M0 6C0 2.68629 2.68629 0 6 0C9.31371 0 12 2.68629 12 6C12 9.31371 9.31371 12 6 12C2.68629 12 0 9.31371 0 6ZM6 0.196721C2.79494 0.196721 0.196721 2.79494 0.196721 6C0.196721 9.20506 2.79494 11.8033 6 11.8033C9.20506 11.8033 11.8033 9.20506 11.8033 6C11.8033 2.79494 9.20506 0.196721 6 0.196721ZM0.236066 6C0.236066 2.81667 2.81667 0.236066 6 0.236066C9.18333 0.236066 11.7639 2.81667 11.7639 6C11.7639 9.18333 9.18333 11.7639 6 11.7639C2.81667 11.7639 0.236066 9.18333 0.236066 6ZM6 0.432787C2.92531 0.432787 0.432787 2.92531 0.432787 6C0.432787 9.07469 2.92531 11.5672 6 11.5672C9.07469 11.5672 11.5672 9.07469 11.5672 6C11.5672 2.92531 9.07469 0.432787 6 0.432787ZM6 0.668852C3.05569 0.668852 0.668852 3.05569 0.668852 6C0.668852 8.94431 3.05569 11.3311 6 11.3311C8.94431 11.3311 11.3311 8.94431 11.3311 6C11.3311 3.05569 8.94431 0.668852 6 0.668852ZM0.472131 6C0.472131 2.94704 2.94704 0.472131 6 0.472131C9.05296 0.472131 11.5279 2.94704 11.5279 6C11.5279 9.05296 9.05296 11.5279 6 11.5279C2.94704 11.5279 0.472131 9.05296 0.472131 6ZM0.790545 6C0.790545 3.1229 3.1229 0.790545 6 0.790545C8.8771 0.790545 11.2095 3.1229 11.2095 6C11.2095 8.8771 8.8771 11.2095 6 11.2095C3.1229 11.2095 0.790545 8.8771 0.790545 6ZM6 0.987266C3.23154 0.987266 0.987266 3.23154 0.987266 6C0.987266 8.76846 3.23154 11.0127 6 11.0127C8.76846 11.0127 11.0127 8.76846 11.0127 6C11.0127 3.23154 8.76846 0.987266 6 0.987266ZM6 1.22333C3.36192 1.22333 1.22333 3.36192 1.22333 6C1.22333 8.63808 3.36192 10.7767 6 10.7767C8.63808 10.7767 10.7767 8.63808 10.7767 6C10.7767 3.36192 8.63808 1.22333 6 1.22333ZM1.02661 6C1.02661 3.25327 3.25327 1.02661 6 1.02661C8.74673 1.02661 10.9734 3.25327 10.9734 6C10.9734 8.74673 8.74673 10.9734 6 10.9734C3.25327 10.9734 1.02661 8.74673 1.02661 6ZM6 1.4594C3.49229 1.4594 1.4594 3.49229 1.4594 6C1.4594 8.5077 3.49229 10.5406 6 10.5406C8.5077 10.5406 10.5406 8.5077 10.5406 6C10.5406 3.49229 8.5077 1.4594 6 1.4594ZM1.26268 6C1.26268 3.38365 3.38365 1.26268 6 1.26268C8.61635 1.26268 10.7373 3.38365 10.7373 6C10.7373 8.61635 8.61635 10.7373 6 10.7373C3.38365 10.7373 1.26268 8.61635 1.26268 6Z"
+                        fill="#fff" />
+                     <path
+                        d="M5 7.25259V4.74741C5 4.42793 5.35606 4.23737 5.62188 4.41459L7.50077 5.66718C7.73826 5.82551 7.73826 6.17449 7.50077 6.33282L5.62188 7.58541C5.35606 7.76263 5 7.57207 5 7.25259Z"
+                        fill="#fff" />
+                     <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M5.5 4.93426V7.06574L7.09861 6L5.5 4.93426ZM4.5 4.74741C4.5 4.02858 5.30113 3.59983 5.89923 3.99856L7.77812 5.25115C8.31248 5.60739 8.31248 6.3926 7.77812 6.74885L5.89923 8.00144C5.30113 8.40017 4.5 7.97142 4.5 7.25259V4.74741Z"
+                        fill="#fff" />
+                  </svg>
+               </span>
+                <span>Activate</span>
+            </button>
+            <button class="ra-btn min-height-36 campaign-status-btn hold ml-1">
+                <span>
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M6 1.12497C3.3076 1.12497 1.12497 3.3076 1.12497 6C1.12497 8.6924 3.3076 10.875 6 10.875C8.6924 10.875 10.875 8.6924 10.875 6C10.875 3.3076 8.6924 1.12497 6 1.12497ZM0.334426 6C0.334426 2.87099 2.87099 0.334426 6 0.334426C9.12901 0.334426 11.6656 2.87099 11.6656 6C11.6656 9.12901 9.12901 11.6656 6 11.6656C2.87099 11.6656 0.334426 9.12901 0.334426 6Z"
+                        fill="#fff" />
+                     <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M0.0983607 6C0.0983607 2.74061 2.74061 0.0983607 6 0.0983607C9.25939 0.0983607 11.9016 2.74061 11.9016 6C11.9016 9.25939 9.25939 11.9016 6 11.9016C2.74061 11.9016 0.0983607 9.25939 0.0983607 6ZM6 0.570492C3.00137 0.570492 0.570492 3.00137 0.570492 6C0.570492 8.99863 3.00137 11.4295 6 11.4295C8.99863 11.4295 11.4295 8.99863 11.4295 6C11.4295 3.00137 8.99863 0.570492 6 0.570492ZM6 1.36104C3.43797 1.36104 1.36104 3.43797 1.36104 6C1.36104 8.56203 3.43797 10.639 6 10.639C8.56203 10.639 10.639 8.56203 10.639 6C10.639 3.43797 8.56203 1.36104 6 1.36104ZM0.888906 6C0.888906 3.17722 3.17722 0.888906 6 0.888906C8.82278 0.888906 11.1111 3.17722 11.1111 6C11.1111 8.82278 8.82278 11.1111 6 11.1111C3.17722 11.1111 0.888906 8.82278 0.888906 6Z"
+                        fill="#fff" />
+                     <path
+                        d="M3.78689 4.77049C3.78689 4.36307 4.11717 4.03279 4.52459 4.03279C4.93201 4.03279 5.26229 4.36307 5.26229 4.77049V7.22951C5.26229 7.63693 4.93201 7.96721 4.52459 7.96721C4.11717 7.96721 3.78689 7.63693 3.78689 7.22951V4.77049Z"
+                        fill="#fff" />
+                     <path
+                        d="M6.7377 4.77049C6.7377 4.36307 7.06799 4.03279 7.47541 4.03279C7.88283 4.03279 8.21311 4.36307 8.21311 4.77049V7.22951C8.21311 7.63693 7.88283 7.96721 7.47541 7.96721C7.06799 7.96721 6.7377 7.63693 6.7377 7.22951V4.77049Z"
+                        fill="#fff" />
+                     <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M0 6C0 2.68629 2.68629 0 6 0C9.31371 0 12 2.68629 12 6C12 9.31371 9.31371 12 6 12C2.68629 12 0 9.31371 0 6ZM6 0.196721C2.79494 0.196721 0.196721 2.79494 0.196721 6C0.196721 9.20506 2.79494 11.8033 6 11.8033C9.20506 11.8033 11.8033 9.20506 11.8033 6C11.8033 2.79494 9.20506 0.196721 6 0.196721ZM0.236066 6C0.236066 2.81667 2.81667 0.236066 6 0.236066C9.18333 0.236066 11.7639 2.81667 11.7639 6C11.7639 9.18333 9.18333 11.7639 6 11.7639C2.81667 11.7639 0.236066 9.18333 0.236066 6ZM6 0.432787C2.92531 0.432787 0.432787 2.92531 0.432787 6C0.432787 9.07469 2.92531 11.5672 6 11.5672C9.07469 11.5672 11.5672 9.07469 11.5672 6C11.5672 2.92531 9.07469 0.432787 6 0.432787ZM6 0.668852C3.05569 0.668852 0.668852 3.05569 0.668852 6C0.668852 8.94431 3.05569 11.3311 6 11.3311C8.94431 11.3311 11.3311 8.94431 11.3311 6C11.3311 3.05569 8.94431 0.668852 6 0.668852ZM0.472131 6C0.472131 2.94704 2.94704 0.472131 6 0.472131C9.05296 0.472131 11.5279 2.94704 11.5279 6C11.5279 9.05296 9.05296 11.5279 6 11.5279C2.94704 11.5279 0.472131 9.05296 0.472131 6ZM0.790545 6C0.790545 3.1229 3.1229 0.790545 6 0.790545C8.8771 0.790545 11.2095 3.1229 11.2095 6C11.2095 8.8771 8.8771 11.2095 6 11.2095C3.1229 11.2095 0.790545 8.8771 0.790545 6ZM6 0.987266C3.23154 0.987266 0.987266 3.23154 0.987266 6C0.987266 8.76846 3.23154 11.0127 6 11.0127C8.76846 11.0127 11.0127 8.76846 11.0127 6C11.0127 3.23154 8.76846 0.987266 6 0.987266ZM6 1.22333C3.36192 1.22333 1.22333 3.36192 1.22333 6C1.22333 8.63808 3.36192 10.7767 6 10.7767C8.63808 10.7767 10.7767 8.63808 10.7767 6C10.7767 3.36192 8.63808 1.22333 6 1.22333ZM1.02661 6C1.02661 3.25327 3.25327 1.02661 6 1.02661C8.74673 1.02661 10.9734 3.25327 10.9734 6C10.9734 8.74673 8.74673 10.9734 6 10.9734C3.25327 10.9734 1.02661 8.74673 1.02661 6ZM6 1.4594C3.49229 1.4594 1.4594 3.49229 1.4594 6C1.4594 8.5077 3.49229 10.5406 6 10.5406C8.5077 10.5406 10.5406 8.5077 10.5406 6C10.5406 3.49229 8.5077 1.4594 6 1.4594ZM1.26268 6C1.26268 3.38365 3.38365 1.26268 6 1.26268C8.61635 1.26268 10.7373 3.38365 10.7373 6C10.7373 8.61635 8.61635 10.7373 6 10.7373C3.38365 10.7373 1.26268 8.61635 1.26268 6ZM3.68852 4.77049C3.68852 4.30875 4.06284 3.93443 4.52459 3.93443C4.98634 3.93443 5.36066 4.30875 5.36066 4.77049V7.22951C5.36066 7.69125 4.98634 8.06557 4.52459 8.06557C4.06284 8.06557 3.68852 7.69125 3.68852 7.22951V4.77049ZM4.52459 4.13115C4.17149 4.13115 3.88525 4.41739 3.88525 4.77049V7.22951C3.88525 7.58261 4.17149 7.86885 4.52459 7.86885C4.87769 7.86885 5.16393 7.58261 5.16393 7.22951V4.77049C5.16393 4.41739 4.87769 4.13115 4.52459 4.13115ZM6.63934 4.77049C6.63934 4.30875 7.01366 3.93443 7.47541 3.93443C7.93716 3.93443 8.31148 4.30875 8.31148 4.77049V7.22951C8.31148 7.69125 7.93716 8.06557 7.47541 8.06557C7.01366 8.06557 6.63934 7.69125 6.63934 7.22951V4.77049ZM7.47541 4.13115C7.12231 4.13115 6.83607 4.41739 6.83607 4.77049V7.22951C6.83607 7.58261 7.12231 7.86885 7.47541 7.86885C7.82851 7.86885 8.11475 7.58261 8.11475 7.22951V4.77049C8.11475 4.41739 7.82851 4.13115 7.47541 4.13115Z"
+                        fill="#fff" />
+                  </svg>
+               </span>
+                <span>Hold</span>
+            </button>
+            <button class="ra-btn min-height-36 campaign-status-btn on-hold ml-1">
+                <span>
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M6 1.12497C3.3076 1.12497 1.12497 3.3076 1.12497 6C1.12497 8.6924 3.3076 10.875 6 10.875C8.6924 10.875 10.875 8.6924 10.875 6C10.875 3.3076 8.6924 1.12497 6 1.12497ZM0.334426 6C0.334426 2.87099 2.87099 0.334426 6 0.334426C9.12901 0.334426 11.6656 2.87099 11.6656 6C11.6656 9.12901 9.12901 11.6656 6 11.6656C2.87099 11.6656 0.334426 9.12901 0.334426 6Z"
+                        fill="#fff" />
+                     <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M0.0983607 6C0.0983607 2.74061 2.74061 0.0983607 6 0.0983607C9.25939 0.0983607 11.9016 2.74061 11.9016 6C11.9016 9.25939 9.25939 11.9016 6 11.9016C2.74061 11.9016 0.0983607 9.25939 0.0983607 6ZM6 0.570492C3.00137 0.570492 0.570492 3.00137 0.570492 6C0.570492 8.99863 3.00137 11.4295 6 11.4295C8.99863 11.4295 11.4295 8.99863 11.4295 6C11.4295 3.00137 8.99863 0.570492 6 0.570492ZM6 1.36104C3.43797 1.36104 1.36104 3.43797 1.36104 6C1.36104 8.56203 3.43797 10.639 6 10.639C8.56203 10.639 10.639 8.56203 10.639 6C10.639 3.43797 8.56203 1.36104 6 1.36104ZM0.888906 6C0.888906 3.17722 3.17722 0.888906 6 0.888906C8.82278 0.888906 11.1111 3.17722 11.1111 6C11.1111 8.82278 8.82278 11.1111 6 11.1111C3.17722 11.1111 0.888906 8.82278 0.888906 6Z"
+                        fill="#fff" />
+                     <path
+                        d="M3.78689 4.77049C3.78689 4.36307 4.11717 4.03279 4.52459 4.03279C4.93201 4.03279 5.26229 4.36307 5.26229 4.77049V7.22951C5.26229 7.63693 4.93201 7.96721 4.52459 7.96721C4.11717 7.96721 3.78689 7.63693 3.78689 7.22951V4.77049Z"
+                        fill="#fff" />
+                     <path
+                        d="M6.7377 4.77049C6.7377 4.36307 7.06799 4.03279 7.47541 4.03279C7.88283 4.03279 8.21311 4.36307 8.21311 4.77049V7.22951C8.21311 7.63693 7.88283 7.96721 7.47541 7.96721C7.06799 7.96721 6.7377 7.63693 6.7377 7.22951V4.77049Z"
+                        fill="#fff" />
+                     <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M0 6C0 2.68629 2.68629 0 6 0C9.31371 0 12 2.68629 12 6C12 9.31371 9.31371 12 6 12C2.68629 12 0 9.31371 0 6ZM6 0.196721C2.79494 0.196721 0.196721 2.79494 0.196721 6C0.196721 9.20506 2.79494 11.8033 6 11.8033C9.20506 11.8033 11.8033 9.20506 11.8033 6C11.8033 2.79494 9.20506 0.196721 6 0.196721ZM0.236066 6C0.236066 2.81667 2.81667 0.236066 6 0.236066C9.18333 0.236066 11.7639 2.81667 11.7639 6C11.7639 9.18333 9.18333 11.7639 6 11.7639C2.81667 11.7639 0.236066 9.18333 0.236066 6ZM6 0.432787C2.92531 0.432787 0.432787 2.92531 0.432787 6C0.432787 9.07469 2.92531 11.5672 6 11.5672C9.07469 11.5672 11.5672 9.07469 11.5672 6C11.5672 2.92531 9.07469 0.432787 6 0.432787ZM6 0.668852C3.05569 0.668852 0.668852 3.05569 0.668852 6C0.668852 8.94431 3.05569 11.3311 6 11.3311C8.94431 11.3311 11.3311 8.94431 11.3311 6C11.3311 3.05569 8.94431 0.668852 6 0.668852ZM0.472131 6C0.472131 2.94704 2.94704 0.472131 6 0.472131C9.05296 0.472131 11.5279 2.94704 11.5279 6C11.5279 9.05296 9.05296 11.5279 6 11.5279C2.94704 11.5279 0.472131 9.05296 0.472131 6ZM0.790545 6C0.790545 3.1229 3.1229 0.790545 6 0.790545C8.8771 0.790545 11.2095 3.1229 11.2095 6C11.2095 8.8771 8.8771 11.2095 6 11.2095C3.1229 11.2095 0.790545 8.8771 0.790545 6ZM6 0.987266C3.23154 0.987266 0.987266 3.23154 0.987266 6C0.987266 8.76846 3.23154 11.0127 6 11.0127C8.76846 11.0127 11.0127 8.76846 11.0127 6C11.0127 3.23154 8.76846 0.987266 6 0.987266ZM6 1.22333C3.36192 1.22333 1.22333 3.36192 1.22333 6C1.22333 8.63808 3.36192 10.7767 6 10.7767C8.63808 10.7767 10.7767 8.63808 10.7767 6C10.7767 3.36192 8.63808 1.22333 6 1.22333ZM1.02661 6C1.02661 3.25327 3.25327 1.02661 6 1.02661C8.74673 1.02661 10.9734 3.25327 10.9734 6C10.9734 8.74673 8.74673 10.9734 6 10.9734C3.25327 10.9734 1.02661 8.74673 1.02661 6ZM6 1.4594C3.49229 1.4594 1.4594 3.49229 1.4594 6C1.4594 8.5077 3.49229 10.5406 6 10.5406C8.5077 10.5406 10.5406 8.5077 10.5406 6C10.5406 3.49229 8.5077 1.4594 6 1.4594ZM1.26268 6C1.26268 3.38365 3.38365 1.26268 6 1.26268C8.61635 1.26268 10.7373 3.38365 10.7373 6C10.7373 8.61635 8.61635 10.7373 6 10.7373C3.38365 10.7373 1.26268 8.61635 1.26268 6ZM3.68852 4.77049C3.68852 4.30875 4.06284 3.93443 4.52459 3.93443C4.98634 3.93443 5.36066 4.30875 5.36066 4.77049V7.22951C5.36066 7.69125 4.98634 8.06557 4.52459 8.06557C4.06284 8.06557 3.68852 7.69125 3.68852 7.22951V4.77049ZM4.52459 4.13115C4.17149 4.13115 3.88525 4.41739 3.88525 4.77049V7.22951C3.88525 7.58261 4.17149 7.86885 4.52459 7.86885C4.87769 7.86885 5.16393 7.58261 5.16393 7.22951V4.77049C5.16393 4.41739 4.87769 4.13115 4.52459 4.13115ZM6.63934 4.77049C6.63934 4.30875 7.01366 3.93443 7.47541 3.93443C7.93716 3.93443 8.31148 4.30875 8.31148 4.77049V7.22951C8.31148 7.69125 7.93716 8.06557 7.47541 8.06557C7.01366 8.06557 6.63934 7.69125 6.63934 7.22951V4.77049ZM7.47541 4.13115C7.12231 4.13115 6.83607 4.41739 6.83607 4.77049V7.22951C6.83607 7.58261 7.12231 7.86885 7.47541 7.86885C7.82851 7.86885 8.11475 7.58261 8.11475 7.22951V4.77049C8.11475 4.41739 7.82851 4.13115 7.47541 4.13115Z"
+                        fill="#fff" />
+                  </svg>
+               </span>
+                <span>On Hold</span>
+            </button>
+        </div>
+
+        <div class="image-banner-box flex-contain-img mb-20">
+            <img src="assets/images/image-5.jpg" alt="Banner Image">
+        </div>
+
+        <div class="d-flex justify-content-between mb-20">
+            <div>
+                <h4 class="purleDark-color fz16 fw-600 mb-2">Sharetrip Banner.jpg</h4>
+                <p class="purpleLight7-color fz14 fw-400">Adgroup for Chittagong</p>
+                <p class="purpleLight7-color fz14 fw-400">Smartphone Banner - Image</p>
+                <a href="https://www.sharetrip.net" class="blue-color-2 fw-400 fz14">www.sharetrip.net</a>
+            </div>
+
+            <div>
+                <p class="purple-light-color fz12 fw-400">Created on 18 June, 2021</p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    </main>
+    </div>
+
+    <!-- build:js assets/js/vendor.min.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <!-- Bootstrap Datatable -->
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.18.1/dist/bootstrap-table.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- Daterangepicker -->
+    <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <!-- endbuild -->
+
+    <script type="text/javascript" src="assets/js/script.js"></script>
+
+</body>
+
+</html>

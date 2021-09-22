@@ -1,0 +1,1641 @@
+{% extends "layouts/layout2.njk" %}
+
+{% block content %}
+<div class="campaign-wrapper">
+   <!-- Top Bar -->
+   <header class="topbar topbar2 d-flex justify-content-between align-items-center">
+      <div class="breadcumb fz16 fw-700">
+         <div class="d-flex">
+            <a href="#" class="mr-20">
+               <img src="assets/images/icons/left-arrow.svg" class="img long-arrow" alt="Arrow Icon">
+            </a>
+            <div class="d-flex flex-column pr-3">
+               <span class="purple-color fz16 fw-700">Sharetrip Summer Campaign 21</span>
+               <span class="purple-light-color fz12 fw-400">18 June - 17 July 2021</span>
+            </div>
+            <button class="btn-tag bg-green btn-4x12 radius-4 fz12 fw-600 border-0 ongoing">Ongoing</button>
+            <button
+               class="btn-tag orangDark4-bg white-color btn-4x12 radius-4 fz12 fw-600 border-0 pending">Pending</button>
+         </div>
+      </div>
+      <div class="right-menu dropdown d-flex">
+         {% include 'snippets/topBar2Right.njk' %}
+      </div>
+   </header>
+
+
+   <!-- Camaigns Dashboard Menu -->
+   <div class="filter-wrapper dashboard-menu ra-border-bottom">
+      <div class="menu-content">
+         <ul>
+            <li><a href="clientDashboardOverview.html" class="active">Overview</a></li>
+            <li><a href="clientDashbaordAdGroups.html">Ad Groups</a></li>
+            <li><a href="clientDashboardAdBanners.html">Ad Banners</a></li>
+            <li><a href="clientDashboardAnalytics.html">Analytics</a></li>
+            <li><a href="clientDashboardSettingsCampaign.html">Settings</a></li>
+         </ul>
+      </div>
+
+      <div class="d-flex align-items-center justify-content-md-between justify-content-between">
+         {% include 'snippets/threeDot.njk' %}
+      </div>
+   </div>
+
+   <!-- Modal For Create Ad Group-->
+   {% include 'snippets/modals/campaignCreateAdGroupModal.njk' %}
+
+   <!-- Modal For Upload Image Ad Banner -->
+   {% include 'snippets/modals/campaignImageAdBannerModal.njk' %}
+
+   <div class="campaign-settings-wrapper">
+      <div class="side-tree-menu">
+         <ul>
+            <li class="campaign--title">
+               <div class="create-add-group">
+                  <p class="fz14 fw-400 ra-primary-color mb-16">New Campaign has been created successfully. Currently
+                     this campaign is Pending as it doesn’t have any Ad Groups (and Banners). Create Ad Groups first to
+                     schedule this Campaign.</p>
+                  <button type="button" class="ra-btn ra-btn-8x11 bg-green mx-auto" data-toggle="modal"
+                     data-target="#createAddGroup">
+                     <span>
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path
+                              d="M27.9688 15.9688H15.9688V27.9688H12.0312V15.9688H0.03125V12.0312H12.0312V0.03125H15.9688V12.0312H27.9688V15.9688Z"
+                              fill="#ffffff" />
+                        </svg>
+                     </span>
+                     <span>Create Ad Group</span>
+                  </button>
+               </div>
+            </li>
+
+            <li>
+               <ul>
+                  <li class="selected-title campaign--title campaign-name on-hold">
+                     <div class="selected-title-wrapper">
+                        <a href="clientDashboardSettingsCampaign.html" class="title-content">
+                           <span class="tree-play-icon tree-hold">
+                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path
+                                    d="M8 0C3.584 0 0 3.584 0 8C0 12.416 3.584 16 8 16C12.416 16 16 12.416 16 8C16 3.584 12.424 0 8 0ZM10.4 9.784L8.08 11.12C7.792 11.288 7.472 11.368 7.16 11.368C6.84 11.368 6.528 11.288 6.24 11.12C5.664 10.784 5.32 10.192 5.32 9.52V6.84C5.32 6.176 5.664 5.576 6.24 5.24C6.816 4.904 7.504 4.904 8.088 5.24L10.408 6.576C10.984 6.912 11.328 7.504 11.328 8.176C11.328 8.848 10.984 9.448 10.4 9.784Z"
+                                    fill="#72BF44" />
+                              </svg>
+                           </span>
+                           <span class="tree-play-icon tree-unhold">
+                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path
+                                    d="M8 0C3.584 0 0 3.584 0 8C0 12.416 3.584 16 8 16C12.416 16 16 12.416 16 8C16 3.584 12.424 0 8 0ZM7 10.424C7 10.808 6.84 10.96 6.432 10.96H5.392C4.984 10.96 4.824 10.808 4.824 10.424V5.576C4.824 5.192 4.984 5.04 5.392 5.04H6.424C6.832 5.04 6.992 5.192 6.992 5.576V10.424H7ZM11.224 10.424C11.224 10.808 11.064 10.96 10.656 10.96H9.624C9.216 10.96 9.056 10.808 9.056 10.424V5.576C9.056 5.192 9.216 5.04 9.624 5.04H10.656C11.064 5.04 11.224 5.192 11.224 5.576V10.424Z"
+                                    fill="#F2B93D" />
+                              </svg>
+                           </span>
+                           <span class="ellipsis" title="Sharetrip October Campaign">Sharetrip October Campaign
+                              21</span>
+                        </a>
+
+                        <div class="d-flex">
+                           <button class="plus" data-toggle="modal" data-target="#createAddGroup">
+                              <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path
+                                    d="M27.9688 15.9688H15.9688V27.9688H12.0312V15.9688H0.03125V12.0312H12.0312V0.03125H15.9688V12.0312H27.9688V15.9688Z"
+                                    fill="#383874" />
+                              </svg>
+                           </button>
+
+                           <span>
+                              <div class="dropdown dot-dropdown">
+                                 <button type="button" class="ra-three-dot-btn ra-three-dot-btn-2"
+                                    data-toggle="dropdown" aria-haspopup="true">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                 </button>
+                                 <div class="dropdown-menu filter-dropdown">
+                                    <a class="dropdown-item" href="#">Demo Text 1</a>
+                                    <a class="dropdown-item" href="#">Demo Text 2</a>
+                                    <a class="dropdown-item" href="#">Demo Text 3</a>
+                                    <a class="dropdown-item" href="#">Demo Text 4</a>
+                                 </div>
+                              </div>
+                           </span>
+                        </div>
+                     </div>
+                  </li>
+
+                  <li>
+                     <div class="tree-menu-content">
+                        <ul class="border-wrapper">
+                           <!-- .unselected class for remove background color, plus & three dot menu  -->
+                           <li class="list-item">
+                              <div class="selected-title unselected campaign-name on-hold">
+                                 <div class="selected-title-wrapper">
+                                    <a href="clientDashboardSettingsAdGroup.html" class="title-content">
+                                       <span class="tree-play-icon tree-hold">
+                                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path
+                                                d="M8 0C3.584 0 0 3.584 0 8C0 12.416 3.584 16 8 16C12.416 16 16 12.416 16 8C16 3.584 12.424 0 8 0ZM10.4 9.784L8.08 11.12C7.792 11.288 7.472 11.368 7.16 11.368C6.84 11.368 6.528 11.288 6.24 11.12C5.664 10.784 5.32 10.192 5.32 9.52V6.84C5.32 6.176 5.664 5.576 6.24 5.24C6.816 4.904 7.504 4.904 8.088 5.24L10.408 6.576C10.984 6.912 11.328 7.504 11.328 8.176C11.328 8.848 10.984 9.448 10.4 9.784Z"
+                                                fill="#72BF44" />
+                                          </svg>
+                                       </span>
+                                       <span class="tree-play-icon tree-unhold">
+                                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path
+                                                d="M8 0C3.584 0 0 3.584 0 8C0 12.416 3.584 16 8 16C12.416 16 16 12.416 16 8C16 3.584 12.424 0 8 0ZM7 10.424C7 10.808 6.84 10.96 6.432 10.96H5.392C4.984 10.96 4.824 10.808 4.824 10.424V5.576C4.824 5.192 4.984 5.04 5.392 5.04H6.424C6.832 5.04 6.992 5.192 6.992 5.576V10.424H7ZM11.224 10.424C11.224 10.808 11.064 10.96 10.656 10.96H9.624C9.216 10.96 9.056 10.808 9.056 10.424V5.576C9.056 5.192 9.216 5.04 9.624 5.04H10.656C11.064 5.04 11.224 5.192 11.224 5.576V10.424Z"
+                                                fill="#F2B93D" />
+                                          </svg>
+                                       </span>
+                                       <span class="ellipsis" title="Adgroup for Khulna">Adgroup for Khulna</span>
+                                    </a>
+
+                                    <div class="d-flex">
+                                       <button class="plus">
+                                          <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path
+                                                d="M27.9688 15.9688H15.9688V27.9688H12.0312V15.9688H0.03125V12.0312H12.0312V0.03125H15.9688V12.0312H27.9688V15.9688Z"
+                                                fill="#383874" />
+                                          </svg>
+                                       </button>
+
+                                       <span>
+                                          <div class="dropdown dot-dropdown">
+                                             <button type="button" class="ra-three-dot-btn ra-three-dot-btn-2"
+                                                data-toggle="dropdown" aria-haspopup="true">
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                             </button>
+                                             <div class="dropdown-menu filter-dropdown">
+                                                <a class="dropdown-item" href="#">Demo Text 1</a>
+                                                <a class="dropdown-item" href="#">Demo Text 2</a>
+                                                <a class="dropdown-item" href="#">Demo Text 3</a>
+                                                <a class="dropdown-item" href="#">Demo Text 4</a>
+                                             </div>
+                                          </div>
+                                       </span>
+                                    </div>
+                                 </div>
+                              </div>
+
+                              <ul>
+                                 <li>
+                                    <a href="clientDashboardSettingsAdBanner.html" class="title-content">
+                                       <span class="tree-play-icon">
+                                          <svg width="15" height="12" viewBox="0 0 15 12" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path
+                                                d="M2.25401 9.7551L5.63416 5.2638L8.23989 8.63227L10.141 6.38663L12.7468 9.7551H2.25401ZM13.5212 1.50908H7.50001L5.9857 0H1.47883C1.08141 0.0124966 0.703719 0.175525 0.422717 0.455868C0.283914 0.59339 0.174848 0.757788 0.102245 0.938926C0.0296424 1.12006 -0.00495964 1.3141 0.000572647 1.50908V10.4917C-0.00475854 10.6866 0.0300121 10.8805 0.102743 11.0615C0.175473 11.2425 0.284623 11.4068 0.423468 11.5441C0.704471 11.8245 1.08216 11.9875 1.47958 12H13.5212C13.9186 11.9875 14.2963 11.8245 14.5773 11.5441C14.716 11.4067 14.825 11.2424 14.8976 11.0614C14.9702 10.8804 15.0049 10.6865 14.9994 10.4917V3.01815C15.0039 2.82074 14.9689 2.62441 14.8964 2.44063C14.8239 2.25685 14.7154 2.08929 14.5773 1.94773C14.442 1.80482 14.2781 1.6919 14.0961 1.61632C13.9142 1.54074 13.7183 1.5042 13.5212 1.50908Z"
+                                                fill="#72BF44" />
+                                          </svg>
+                                       </span>
+                                       <span class="ellipsis"
+                                          title="Sharetrip Banner 300x250 Sharetrip Banner">Sharetrip Banner
+                                          300x250</span>
+                                    </a>
+                                 </li>
+                                 <li>
+                                    <a href="clientDashboardSettingsAdBanner.html">
+                                       <span class="tree-play-icon">
+                                          <svg width="15" height="12" viewBox="0 0 15 12" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path
+                                                d="M2.25401 9.7551L5.63416 5.2638L8.23989 8.63227L10.141 6.38663L12.7468 9.7551H2.25401ZM13.5212 1.50908H7.50001L5.9857 0H1.47883C1.08141 0.0124966 0.703719 0.175525 0.422717 0.455868C0.283914 0.59339 0.174848 0.757788 0.102245 0.938926C0.0296424 1.12006 -0.00495964 1.3141 0.000572647 1.50908V10.4917C-0.00475854 10.6866 0.0300121 10.8805 0.102743 11.0615C0.175473 11.2425 0.284623 11.4068 0.423468 11.5441C0.704471 11.8245 1.08216 11.9875 1.47958 12H13.5212C13.9186 11.9875 14.2963 11.8245 14.5773 11.5441C14.716 11.4067 14.825 11.2424 14.8976 11.0614C14.9702 10.8804 15.0049 10.6865 14.9994 10.4917V3.01815C15.0039 2.82074 14.9689 2.62441 14.8964 2.44063C14.8239 2.25685 14.7154 2.08929 14.5773 1.94773C14.442 1.80482 14.2781 1.6919 14.0961 1.61632C13.9142 1.54074 13.7183 1.5042 13.5212 1.50908Z"
+                                                fill="#72BF44" />
+                                          </svg>
+                                       </span>
+                                       <span class="ellipsis" title="Sharetrip Banner 320x100">Sharetrip Banner
+                                          320x100</span>
+                                    </a>
+                                 </li>
+                                 <li>
+                                    <a href="clientDashboardSettingsAdBanner.html">
+                                       <span class="tree-play-icon">
+                                          <svg width="15" height="12" viewBox="0 0 15 12" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path
+                                                d="M2.25401 9.7551L5.63416 5.2638L8.23989 8.63227L10.141 6.38663L12.7468 9.7551H2.25401ZM13.5212 1.50908H7.50001L5.9857 0H1.47883C1.08141 0.0124966 0.703719 0.175525 0.422717 0.455868C0.283914 0.59339 0.174848 0.757788 0.102245 0.938926C0.0296424 1.12006 -0.00495964 1.3141 0.000572647 1.50908V10.4917C-0.00475854 10.6866 0.0300121 10.8805 0.102743 11.0615C0.175473 11.2425 0.284623 11.4068 0.423468 11.5441C0.704471 11.8245 1.08216 11.9875 1.47958 12H13.5212C13.9186 11.9875 14.2963 11.8245 14.5773 11.5441C14.716 11.4067 14.825 11.2424 14.8976 11.0614C14.9702 10.8804 15.0049 10.6865 14.9994 10.4917V3.01815C15.0039 2.82074 14.9689 2.62441 14.8964 2.44063C14.8239 2.25685 14.7154 2.08929 14.5773 1.94773C14.442 1.80482 14.2781 1.6919 14.0961 1.61632C13.9142 1.54074 13.7183 1.5042 13.5212 1.50908Z"
+                                                fill="#72BF44" />
+                                          </svg>
+                                       </span>
+                                       <span class="ellipsis" title="Sharetrip Banner 160x600">Sharetrip Banner
+                                          160x600</span>
+                                    </a>
+                                 </li>
+                              </ul>
+                           </li>
+                        </ul>
+                     </div>
+                  </li>
+               </ul>
+            </li>
+
+            <li>
+               <ul>
+                  <li class="selected-title campaign--title campaign-name">
+                     <div class="selected-title-wrapper">
+                        <a href="clientDashboardSettingsCampaign.html" class="title-content">
+                           <span class="tree-play-icon tree-hold">
+                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path
+                                    d="M8 0C3.584 0 0 3.584 0 8C0 12.416 3.584 16 8 16C12.416 16 16 12.416 16 8C16 3.584 12.424 0 8 0ZM10.4 9.784L8.08 11.12C7.792 11.288 7.472 11.368 7.16 11.368C6.84 11.368 6.528 11.288 6.24 11.12C5.664 10.784 5.32 10.192 5.32 9.52V6.84C5.32 6.176 5.664 5.576 6.24 5.24C6.816 4.904 7.504 4.904 8.088 5.24L10.408 6.576C10.984 6.912 11.328 7.504 11.328 8.176C11.328 8.848 10.984 9.448 10.4 9.784Z"
+                                    fill="#72BF44" />
+                              </svg>
+                           </span>
+                           <span class="tree-play-icon tree-unhold">
+                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path
+                                    d="M8 0C3.584 0 0 3.584 0 8C0 12.416 3.584 16 8 16C12.416 16 16 12.416 16 8C16 3.584 12.424 0 8 0ZM7 10.424C7 10.808 6.84 10.96 6.432 10.96H5.392C4.984 10.96 4.824 10.808 4.824 10.424V5.576C4.824 5.192 4.984 5.04 5.392 5.04H6.424C6.832 5.04 6.992 5.192 6.992 5.576V10.424H7ZM11.224 10.424C11.224 10.808 11.064 10.96 10.656 10.96H9.624C9.216 10.96 9.056 10.808 9.056 10.424V5.576C9.056 5.192 9.216 5.04 9.624 5.04H10.656C11.064 5.04 11.224 5.192 11.224 5.576V10.424Z"
+                                    fill="#FC8B49" />
+                              </svg>
+                           </span>
+                           <span class="ellipsis" title="Sharetrip Summer Campaign 21">Sharetrip Summer Campaign
+                              21</span>
+                        </a>
+
+                        <div class="d-flex">
+                           <button class="plus" data-toggle="modal" data-target="#createAddGroup">
+                              <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path
+                                    d="M27.9688 15.9688H15.9688V27.9688H12.0312V15.9688H0.03125V12.0312H12.0312V0.03125H15.9688V12.0312H27.9688V15.9688Z"
+                                    fill="#383874" />
+                              </svg>
+                           </button>
+
+                           <span>
+                              <div class="dropdown dot-dropdown">
+                                 <button type="button" class="ra-three-dot-btn ra-three-dot-btn-2"
+                                    data-toggle="dropdown" aria-haspopup="true">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                 </button>
+                                 <div class="dropdown-menu filter-dropdown">
+                                    <a class="dropdown-item" href="#">Demo Text 1</a>
+                                    <a class="dropdown-item" href="#">Demo Text 2</a>
+                                    <a class="dropdown-item" href="#">Demo Text 3</a>
+                                    <a class="dropdown-item" href="#">Demo Text 4</a>
+                                 </div>
+                              </div>
+                           </span>
+                        </div>
+                     </div>
+                  </li>
+
+                  <li>
+                     <div class="tree-menu-content">
+                        <ul class="border-wrapper">
+                           <!-- .unselected class for remove background color, plus & three dot menu  -->
+                           <li class="list-item">
+                              <div class="selected-title unselected campaign-name">
+                                 <div class="selected-title-wrapper">
+                                    <a href="clientDashboardSettingsAdGroup.html" class="title-content">
+                                       <span class="tree-play-icon tree-hold">
+                                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path
+                                                d="M8 0C3.584 0 0 3.584 0 8C0 12.416 3.584 16 8 16C12.416 16 16 12.416 16 8C16 3.584 12.424 0 8 0ZM10.4 9.784L8.08 11.12C7.792 11.288 7.472 11.368 7.16 11.368C6.84 11.368 6.528 11.288 6.24 11.12C5.664 10.784 5.32 10.192 5.32 9.52V6.84C5.32 6.176 5.664 5.576 6.24 5.24C6.816 4.904 7.504 4.904 8.088 5.24L10.408 6.576C10.984 6.912 11.328 7.504 11.328 8.176C11.328 8.848 10.984 9.448 10.4 9.784Z"
+                                                fill="#72BF44" />
+                                          </svg>
+                                       </span>
+                                       <span class="tree-play-icon tree-unhold">
+                                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path
+                                                d="M8 0C3.584 0 0 3.584 0 8C0 12.416 3.584 16 8 16C12.416 16 16 12.416 16 8C16 3.584 12.424 0 8 0ZM7 10.424C7 10.808 6.84 10.96 6.432 10.96H5.392C4.984 10.96 4.824 10.808 4.824 10.424V5.576C4.824 5.192 4.984 5.04 5.392 5.04H6.424C6.832 5.04 6.992 5.192 6.992 5.576V10.424H7ZM11.224 10.424C11.224 10.808 11.064 10.96 10.656 10.96H9.624C9.216 10.96 9.056 10.808 9.056 10.424V5.576C9.056 5.192 9.216 5.04 9.624 5.04H10.656C11.064 5.04 11.224 5.192 11.224 5.576V10.424Z"
+                                                fill="#FC8B49" />
+                                          </svg>
+                                       </span>
+                                       <span class="ellipsis" title="Adgroup for Dhaka">Adgroup for
+                                          Dhaka</span>
+                                    </a>
+
+                                    <div class="d-flex">
+                                       <button class="plus" data-toggle="modal" data-target="#campaignImageUpload">
+                                          <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path
+                                                d="M27.9688 15.9688H15.9688V27.9688H12.0312V15.9688H0.03125V12.0312H12.0312V0.03125H15.9688V12.0312H27.9688V15.9688Z"
+                                                fill="#383874" />
+                                          </svg>
+                                       </button>
+
+                                       <span>
+                                          <div class="dropdown dot-dropdown">
+                                             <button type="button" class="ra-three-dot-btn ra-three-dot-btn-2"
+                                                data-toggle="dropdown" aria-haspopup="true">
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                             </button>
+                                             <div class="dropdown-menu filter-dropdown">
+                                                <a class="dropdown-item" href="#">Demo Text 1</a>
+                                                <a class="dropdown-item" href="#">Demo Text 2</a>
+                                                <a class="dropdown-item" href="#">Demo Text 3</a>
+                                                <a class="dropdown-item" href="#">Demo Text 4</a>
+                                             </div>
+                                          </div>
+                                       </span>
+                                    </div>
+                                 </div>
+                              </div>
+
+                              <ul>
+                                 <li>
+                                    <a href="clientDashboardSettingsAdBanner.html" class="title-content">
+                                       <span class="tree-play-icon">
+                                          <svg width="15" height="12" viewBox="0 0 15 12" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path
+                                                d="M2.25401 9.7551L5.63416 5.2638L8.23989 8.63227L10.141 6.38663L12.7468 9.7551H2.25401ZM13.5212 1.50908H7.50001L5.9857 0H1.47883C1.08141 0.0124966 0.703719 0.175525 0.422717 0.455868C0.283914 0.59339 0.174848 0.757788 0.102245 0.938926C0.0296424 1.12006 -0.00495964 1.3141 0.000572647 1.50908V10.4917C-0.00475854 10.6866 0.0300121 10.8805 0.102743 11.0615C0.175473 11.2425 0.284623 11.4068 0.423468 11.5441C0.704471 11.8245 1.08216 11.9875 1.47958 12H13.5212C13.9186 11.9875 14.2963 11.8245 14.5773 11.5441C14.716 11.4067 14.825 11.2424 14.8976 11.0614C14.9702 10.8804 15.0049 10.6865 14.9994 10.4917V3.01815C15.0039 2.82074 14.9689 2.62441 14.8964 2.44063C14.8239 2.25685 14.7154 2.08929 14.5773 1.94773C14.442 1.80482 14.2781 1.6919 14.0961 1.61632C13.9142 1.54074 13.7183 1.5042 13.5212 1.50908Z"
+                                                fill="#72BF44" />
+                                          </svg>
+                                       </span>
+                                       <span class="ellipsis"
+                                          title="Sharetrip Banner 300x250 Sharetrip Banner">Sharetrip Banner
+                                          300x250 Sharetrip Banner</span>
+                                    </a>
+                                 </li>
+                                 <li>
+                                    <a href="clientDashboardSettingsAdBanner.html">
+                                       <span class="tree-play-icon">
+                                          <svg width="15" height="12" viewBox="0 0 15 12" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path
+                                                d="M2.25401 9.7551L5.63416 5.2638L8.23989 8.63227L10.141 6.38663L12.7468 9.7551H2.25401ZM13.5212 1.50908H7.50001L5.9857 0H1.47883C1.08141 0.0124966 0.703719 0.175525 0.422717 0.455868C0.283914 0.59339 0.174848 0.757788 0.102245 0.938926C0.0296424 1.12006 -0.00495964 1.3141 0.000572647 1.50908V10.4917C-0.00475854 10.6866 0.0300121 10.8805 0.102743 11.0615C0.175473 11.2425 0.284623 11.4068 0.423468 11.5441C0.704471 11.8245 1.08216 11.9875 1.47958 12H13.5212C13.9186 11.9875 14.2963 11.8245 14.5773 11.5441C14.716 11.4067 14.825 11.2424 14.8976 11.0614C14.9702 10.8804 15.0049 10.6865 14.9994 10.4917V3.01815C15.0039 2.82074 14.9689 2.62441 14.8964 2.44063C14.8239 2.25685 14.7154 2.08929 14.5773 1.94773C14.442 1.80482 14.2781 1.6919 14.0961 1.61632C13.9142 1.54074 13.7183 1.5042 13.5212 1.50908Z"
+                                                fill="#72BF44" />
+                                          </svg>
+                                       </span>
+                                       <span class="ellipsis" title="Sharetrip Banner 320x100">Sharetrip Banner
+                                          320x100</span>
+                                    </a>
+                                 </li>
+                                 <li>
+                                    <a href="clientDashboardSettingsAdBanner.html">
+                                       <span class="tree-play-icon">
+                                          <svg width="15" height="12" viewBox="0 0 15 12" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path
+                                                d="M2.25401 9.7551L5.63416 5.2638L8.23989 8.63227L10.141 6.38663L12.7468 9.7551H2.25401ZM13.5212 1.50908H7.50001L5.9857 0H1.47883C1.08141 0.0124966 0.703719 0.175525 0.422717 0.455868C0.283914 0.59339 0.174848 0.757788 0.102245 0.938926C0.0296424 1.12006 -0.00495964 1.3141 0.000572647 1.50908V10.4917C-0.00475854 10.6866 0.0300121 10.8805 0.102743 11.0615C0.175473 11.2425 0.284623 11.4068 0.423468 11.5441C0.704471 11.8245 1.08216 11.9875 1.47958 12H13.5212C13.9186 11.9875 14.2963 11.8245 14.5773 11.5441C14.716 11.4067 14.825 11.2424 14.8976 11.0614C14.9702 10.8804 15.0049 10.6865 14.9994 10.4917V3.01815C15.0039 2.82074 14.9689 2.62441 14.8964 2.44063C14.8239 2.25685 14.7154 2.08929 14.5773 1.94773C14.442 1.80482 14.2781 1.6919 14.0961 1.61632C13.9142 1.54074 13.7183 1.5042 13.5212 1.50908Z"
+                                                fill="#72BF44" />
+                                          </svg>
+                                       </span>
+                                       <span class="ellipsis" title="Sharetrip Banner 160x600">Sharetrip Banner
+                                          160x600</span>
+                                    </a>
+                                 </li>
+                                 <li>
+                                    <a href="clientDashboardSettingsAdBanner.html">
+                                       <span class="tree-play-icon">
+                                          <svg width="15" height="12" viewBox="0 0 15 12" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path
+                                                d="M2.25401 9.7551L5.63416 5.2638L8.23989 8.63227L10.141 6.38663L12.7468 9.7551H2.25401ZM13.5212 1.50908H7.50001L5.9857 0H1.47883C1.08141 0.0124966 0.703719 0.175525 0.422717 0.455868C0.283914 0.59339 0.174848 0.757788 0.102245 0.938926C0.0296424 1.12006 -0.00495964 1.3141 0.000572647 1.50908V10.4917C-0.00475854 10.6866 0.0300121 10.8805 0.102743 11.0615C0.175473 11.2425 0.284623 11.4068 0.423468 11.5441C0.704471 11.8245 1.08216 11.9875 1.47958 12H13.5212C13.9186 11.9875 14.2963 11.8245 14.5773 11.5441C14.716 11.4067 14.825 11.2424 14.8976 11.0614C14.9702 10.8804 15.0049 10.6865 14.9994 10.4917V3.01815C15.0039 2.82074 14.9689 2.62441 14.8964 2.44063C14.8239 2.25685 14.7154 2.08929 14.5773 1.94773C14.442 1.80482 14.2781 1.6919 14.0961 1.61632C13.9142 1.54074 13.7183 1.5042 13.5212 1.50908Z"
+                                                fill="#72BF44" />
+                                          </svg>
+                                       </span>
+                                       <span class="ellipsis" title="Sharetrip Banner 160x400">Sharetrip Banner
+                                          160x400</span>
+                                    </a>
+                                 </li>
+                              </ul>
+                           </li>
+                           <li class="list-item on-hold">
+                              <!-- .unselected class for remove background color, plus & three dot menu  -->
+                              <div class="selected-title campaign-name">
+                                 <div class="selected-title-wrapper">
+                                    <a href="clientDashboardSettingsAdGroup.html" class="title-content">
+                                       <span class="tree-play-icon tree-hold">
+                                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path
+                                                d="M8 0C3.584 0 0 3.584 0 8C0 12.416 3.584 16 8 16C12.416 16 16 12.416 16 8C16 3.584 12.424 0 8 0ZM10.4 9.784L8.08 11.12C7.792 11.288 7.472 11.368 7.16 11.368C6.84 11.368 6.528 11.288 6.24 11.12C5.664 10.784 5.32 10.192 5.32 9.52V6.84C5.32 6.176 5.664 5.576 6.24 5.24C6.816 4.904 7.504 4.904 8.088 5.24L10.408 6.576C10.984 6.912 11.328 7.504 11.328 8.176C11.328 8.848 10.984 9.448 10.4 9.784Z"
+                                                fill="#72BF44" />
+                                          </svg>
+                                       </span>
+                                       <span class="tree-play-icon tree-unhold">
+                                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path
+                                                d="M8 0C3.584 0 0 3.584 0 8C0 12.416 3.584 16 8 16C12.416 16 16 12.416 16 8C16 3.584 12.424 0 8 0ZM7 10.424C7 10.808 6.84 10.96 6.432 10.96H5.392C4.984 10.96 4.824 10.808 4.824 10.424V5.576C4.824 5.192 4.984 5.04 5.392 5.04H6.424C6.832 5.04 6.992 5.192 6.992 5.576V10.424H7ZM11.224 10.424C11.224 10.808 11.064 10.96 10.656 10.96H9.624C9.216 10.96 9.056 10.808 9.056 10.424V5.576C9.056 5.192 9.216 5.04 9.624 5.04H10.656C11.064 5.04 11.224 5.192 11.224 5.576V10.424Z"
+                                                fill="#FC8B49" />
+                                          </svg>
+                                       </span>
+                                       <span class="ellipsis" title="Adgroup for Chittagong">Adgroup for
+                                          Chittagong</span>
+                                    </a>
+
+                                    <div class="d-flex">
+                                       <button class="plus" data-toggle="modal" data-target="#campaignImageUpload">
+                                          <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path
+                                                d="M27.9688 15.9688H15.9688V27.9688H12.0312V15.9688H0.03125V12.0312H12.0312V0.03125H15.9688V12.0312H27.9688V15.9688Z"
+                                                fill="#383874" />
+                                          </svg>
+                                       </button>
+
+                                       <span>
+                                          <div class="dropdown dot-dropdown">
+                                             <button type="button" class="ra-three-dot-btn ra-three-dot-btn-2"
+                                                data-toggle="dropdown" aria-haspopup="true">
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                             </button>
+                                             <div class="dropdown-menu filter-dropdown">
+                                                <a class="dropdown-item" href="#">Demo Text 1</a>
+                                                <a class="dropdown-item" href="#">Demo Text 2</a>
+                                                <a class="dropdown-item" href="#">Demo Text 3</a>
+                                                <a class="dropdown-item" href="#">Demo Text 4</a>
+                                             </div>
+                                          </div>
+                                       </span>
+                                    </div>
+                                 </div>
+                              </div>
+
+                              <ul>
+                                 <li>
+                                    <a href="clientDashboardSettingsAdBanner.html">
+                                       <span class="tree-play-icon">
+                                          <svg width="15" height="12" viewBox="0 0 15 12" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path
+                                                d="M2.25401 9.7551L5.63416 5.2638L8.23989 8.63227L10.141 6.38663L12.7468 9.7551H2.25401ZM13.5212 1.50908H7.50001L5.9857 0H1.47883C1.08141 0.0124966 0.703719 0.175525 0.422717 0.455868C0.283914 0.59339 0.174848 0.757788 0.102245 0.938926C0.0296424 1.12006 -0.00495964 1.3141 0.000572647 1.50908V10.4917C-0.00475854 10.6866 0.0300121 10.8805 0.102743 11.0615C0.175473 11.2425 0.284623 11.4068 0.423468 11.5441C0.704471 11.8245 1.08216 11.9875 1.47958 12H13.5212C13.9186 11.9875 14.2963 11.8245 14.5773 11.5441C14.716 11.4067 14.825 11.2424 14.8976 11.0614C14.9702 10.8804 15.0049 10.6865 14.9994 10.4917V3.01815C15.0039 2.82074 14.9689 2.62441 14.8964 2.44063C14.8239 2.25685 14.7154 2.08929 14.5773 1.94773C14.442 1.80482 14.2781 1.6919 14.0961 1.61632C13.9142 1.54074 13.7183 1.5042 13.5212 1.50908Z"
+                                                fill="#72BF44" />
+                                          </svg>
+                                       </span>
+                                       <span class="ellipsis" title="Sharetrip Banner 300x250">Sharetrip Banner
+                                          300x250</span>
+                                    </a>
+                                 </li>
+                                 <li>
+                                    <a href="clientDashboardSettingsAdBanner.html">
+                                       <span class="tree-play-icon">
+                                          <svg width="15" height="12" viewBox="0 0 15 12" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path
+                                                d="M2.25401 9.7551L5.63416 5.2638L8.23989 8.63227L10.141 6.38663L12.7468 9.7551H2.25401ZM13.5212 1.50908H7.50001L5.9857 0H1.47883C1.08141 0.0124966 0.703719 0.175525 0.422717 0.455868C0.283914 0.59339 0.174848 0.757788 0.102245 0.938926C0.0296424 1.12006 -0.00495964 1.3141 0.000572647 1.50908V10.4917C-0.00475854 10.6866 0.0300121 10.8805 0.102743 11.0615C0.175473 11.2425 0.284623 11.4068 0.423468 11.5441C0.704471 11.8245 1.08216 11.9875 1.47958 12H13.5212C13.9186 11.9875 14.2963 11.8245 14.5773 11.5441C14.716 11.4067 14.825 11.2424 14.8976 11.0614C14.9702 10.8804 15.0049 10.6865 14.9994 10.4917V3.01815C15.0039 2.82074 14.9689 2.62441 14.8964 2.44063C14.8239 2.25685 14.7154 2.08929 14.5773 1.94773C14.442 1.80482 14.2781 1.6919 14.0961 1.61632C13.9142 1.54074 13.7183 1.5042 13.5212 1.50908Z"
+                                                fill="#72BF44" />
+                                          </svg>
+                                       </span>
+                                       <span class="ellipsis" title="Sharetrip Banner 320x100">Sharetrip Banner
+                                          320x100</span>
+                                    </a>
+                                 </li>
+                                 <li>
+                                    <a href="clientDashboardSettingsAdBanner.html">
+                                       <span class="tree-play-icon">
+                                          <svg width="15" height="12" viewBox="0 0 15 12" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path
+                                                d="M2.25401 9.7551L5.63416 5.2638L8.23989 8.63227L10.141 6.38663L12.7468 9.7551H2.25401ZM13.5212 1.50908H7.50001L5.9857 0H1.47883C1.08141 0.0124966 0.703719 0.175525 0.422717 0.455868C0.283914 0.59339 0.174848 0.757788 0.102245 0.938926C0.0296424 1.12006 -0.00495964 1.3141 0.000572647 1.50908V10.4917C-0.00475854 10.6866 0.0300121 10.8805 0.102743 11.0615C0.175473 11.2425 0.284623 11.4068 0.423468 11.5441C0.704471 11.8245 1.08216 11.9875 1.47958 12H13.5212C13.9186 11.9875 14.2963 11.8245 14.5773 11.5441C14.716 11.4067 14.825 11.2424 14.8976 11.0614C14.9702 10.8804 15.0049 10.6865 14.9994 10.4917V3.01815C15.0039 2.82074 14.9689 2.62441 14.8964 2.44063C14.8239 2.25685 14.7154 2.08929 14.5773 1.94773C14.442 1.80482 14.2781 1.6919 14.0961 1.61632C13.9142 1.54074 13.7183 1.5042 13.5212 1.50908Z"
+                                                fill="#72BF44" />
+                                          </svg>
+                                       </span>
+                                       <span class="ellipsis" title="Sharetrip Banner 160x600">Sharetrip Banner
+                                          160x600</span>
+                                    </a>
+                                 </li>
+                                 <li>
+                                    <a href="clientDashboardSettingsAdBanner.html">
+                                       <span class="tree-play-icon">
+                                          <svg width="15" height="12" viewBox="0 0 15 12" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path
+                                                d="M2.25401 9.7551L5.63416 5.2638L8.23989 8.63227L10.141 6.38663L12.7468 9.7551H2.25401ZM13.5212 1.50908H7.50001L5.9857 0H1.47883C1.08141 0.0124966 0.703719 0.175525 0.422717 0.455868C0.283914 0.59339 0.174848 0.757788 0.102245 0.938926C0.0296424 1.12006 -0.00495964 1.3141 0.000572647 1.50908V10.4917C-0.00475854 10.6866 0.0300121 10.8805 0.102743 11.0615C0.175473 11.2425 0.284623 11.4068 0.423468 11.5441C0.704471 11.8245 1.08216 11.9875 1.47958 12H13.5212C13.9186 11.9875 14.2963 11.8245 14.5773 11.5441C14.716 11.4067 14.825 11.2424 14.8976 11.0614C14.9702 10.8804 15.0049 10.6865 14.9994 10.4917V3.01815C15.0039 2.82074 14.9689 2.62441 14.8964 2.44063C14.8239 2.25685 14.7154 2.08929 14.5773 1.94773C14.442 1.80482 14.2781 1.6919 14.0961 1.61632C13.9142 1.54074 13.7183 1.5042 13.5212 1.50908Z"
+                                                fill="#72BF44" />
+                                          </svg>
+                                       </span>
+                                       <span class="ellipsis" title="Sharetrip Banner 300x600">Sharetrip Banner
+                                          300x600</span>
+                                    </a>
+                                 </li>
+                              </ul>
+                           </li>
+                           <li class="list-item">
+                              <!-- .unselected class for remove background color, plus & three dot menu  -->
+                              <div class="selected-title unselected campaign-name">
+                                 <div class="selected-title-wrapper">
+                                    <a href="clientDashboardSettingsAdGroup.html" class="title-content">
+                                       <span class="tree-play-icon tree-hold">
+                                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path
+                                                d="M8 0C3.584 0 0 3.584 0 8C0 12.416 3.584 16 8 16C12.416 16 16 12.416 16 8C16 3.584 12.424 0 8 0ZM10.4 9.784L8.08 11.12C7.792 11.288 7.472 11.368 7.16 11.368C6.84 11.368 6.528 11.288 6.24 11.12C5.664 10.784 5.32 10.192 5.32 9.52V6.84C5.32 6.176 5.664 5.576 6.24 5.24C6.816 4.904 7.504 4.904 8.088 5.24L10.408 6.576C10.984 6.912 11.328 7.504 11.328 8.176C11.328 8.848 10.984 9.448 10.4 9.784Z"
+                                                fill="#72BF44" />
+                                          </svg>
+                                       </span>
+                                       <span class="tree-play-icon tree-unhold">
+                                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path
+                                                d="M8 0C3.584 0 0 3.584 0 8C0 12.416 3.584 16 8 16C12.416 16 16 12.416 16 8C16 3.584 12.424 0 8 0ZM7 10.424C7 10.808 6.84 10.96 6.432 10.96H5.392C4.984 10.96 4.824 10.808 4.824 10.424V5.576C4.824 5.192 4.984 5.04 5.392 5.04H6.424C6.832 5.04 6.992 5.192 6.992 5.576V10.424H7ZM11.224 10.424C11.224 10.808 11.064 10.96 10.656 10.96H9.624C9.216 10.96 9.056 10.808 9.056 10.424V5.576C9.056 5.192 9.216 5.04 9.624 5.04H10.656C11.064 5.04 11.224 5.192 11.224 5.576V10.424Z"
+                                                fill="#FC8B49" />
+                                          </svg>
+                                       </span>
+                                       <span class="ellipsis" title="Adgroup for Sylhet">Adgroup for Sylhet</span>
+                                    </a>
+
+                                    <div class="d-flex">
+                                       <button class="plus" data-toggle="modal" data-target="#campaignImageUpload">
+                                          <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path
+                                                d="M27.9688 15.9688H15.9688V27.9688H12.0312V15.9688H0.03125V12.0312H12.0312V0.03125H15.9688V12.0312H27.9688V15.9688Z"
+                                                fill="#383874" />
+                                          </svg>
+                                       </button>
+
+                                       <span>
+                                          <div class="dropdown dot-dropdown">
+                                             <button type="button" class="ra-three-dot-btn ra-three-dot-btn-2"
+                                                data-toggle="dropdown" aria-haspopup="true">
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                             </button>
+                                             <div class="dropdown-menu filter-dropdown">
+                                                <a class="dropdown-item" href="#">Demo Text 1</a>
+                                                <a class="dropdown-item" href="#">Demo Text 2</a>
+                                                <a class="dropdown-item" href="#">Demo Text 3</a>
+                                                <a class="dropdown-item" href="#">Demo Text 4</a>
+                                             </div>
+                                          </div>
+                                       </span>
+                                    </div>
+                                 </div>
+                              </div>
+
+                              <ul>
+                                 <li>
+                                    <a href="clientDashboardSettingsAdBanner.html">
+                                       <span class="tree-play-icon">
+                                          <svg width="15" height="12" viewBox="0 0 15 12" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path
+                                                d="M2.25401 9.7551L5.63416 5.2638L8.23989 8.63227L10.141 6.38663L12.7468 9.7551H2.25401ZM13.5212 1.50908H7.50001L5.9857 0H1.47883C1.08141 0.0124966 0.703719 0.175525 0.422717 0.455868C0.283914 0.59339 0.174848 0.757788 0.102245 0.938926C0.0296424 1.12006 -0.00495964 1.3141 0.000572647 1.50908V10.4917C-0.00475854 10.6866 0.0300121 10.8805 0.102743 11.0615C0.175473 11.2425 0.284623 11.4068 0.423468 11.5441C0.704471 11.8245 1.08216 11.9875 1.47958 12H13.5212C13.9186 11.9875 14.2963 11.8245 14.5773 11.5441C14.716 11.4067 14.825 11.2424 14.8976 11.0614C14.9702 10.8804 15.0049 10.6865 14.9994 10.4917V3.01815C15.0039 2.82074 14.9689 2.62441 14.8964 2.44063C14.8239 2.25685 14.7154 2.08929 14.5773 1.94773C14.442 1.80482 14.2781 1.6919 14.0961 1.61632C13.9142 1.54074 13.7183 1.5042 13.5212 1.50908Z"
+                                                fill="#72BF44" />
+                                          </svg>
+                                       </span>
+                                       <span class="ellipsis" title="Sharetrip Banner 300x250">Sharetrip Banner
+                                          300x250</span>
+                                    </a>
+                                 </li>
+                                 <li>
+                                    <a href="clientDashboardSettingsAdBanner.html">
+                                       <span class="tree-play-icon">
+                                          <svg width="15" height="12" viewBox="0 0 15 12" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path
+                                                d="M2.25401 9.7551L5.63416 5.2638L8.23989 8.63227L10.141 6.38663L12.7468 9.7551H2.25401ZM13.5212 1.50908H7.50001L5.9857 0H1.47883C1.08141 0.0124966 0.703719 0.175525 0.422717 0.455868C0.283914 0.59339 0.174848 0.757788 0.102245 0.938926C0.0296424 1.12006 -0.00495964 1.3141 0.000572647 1.50908V10.4917C-0.00475854 10.6866 0.0300121 10.8805 0.102743 11.0615C0.175473 11.2425 0.284623 11.4068 0.423468 11.5441C0.704471 11.8245 1.08216 11.9875 1.47958 12H13.5212C13.9186 11.9875 14.2963 11.8245 14.5773 11.5441C14.716 11.4067 14.825 11.2424 14.8976 11.0614C14.9702 10.8804 15.0049 10.6865 14.9994 10.4917V3.01815C15.0039 2.82074 14.9689 2.62441 14.8964 2.44063C14.8239 2.25685 14.7154 2.08929 14.5773 1.94773C14.442 1.80482 14.2781 1.6919 14.0961 1.61632C13.9142 1.54074 13.7183 1.5042 13.5212 1.50908Z"
+                                                fill="#72BF44" />
+                                          </svg>
+                                       </span>
+                                       <span class="ellipsis" title="Sharetrip Banner 320x100">Sharetrip Banner
+                                          320x100</span>
+                                    </a>
+                                 </li>
+                              </ul>
+                           </li>
+                        </ul>
+                     </div>
+                  </li>
+               </ul>
+            </li>
+         </ul>
+      </div>
+
+      <div class="campaign-settings-content">
+         <div class="campaign-status-bar mb-20">
+            <p class="fz18 fw-700 purleDark-color">Adgroup for Chittagong</p>
+
+            <button class="ra-btn min-height-36 campaign-status-btn active ml-1">
+               <span>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path
+                        d="M8 0C3.584 0 0 3.584 0 8C0 12.416 3.584 16 8 16C12.416 16 16 12.416 16 8C16 3.584 12.424 0 8 0ZM7 10.424C7 10.808 6.84 10.96 6.432 10.96H5.392C4.984 10.96 4.824 10.808 4.824 10.424V5.576C4.824 5.192 4.984 5.04 5.392 5.04H6.424C6.832 5.04 6.992 5.192 6.992 5.576V10.424H7ZM11.224 10.424C11.224 10.808 11.064 10.96 10.656 10.96H9.624C9.216 10.96 9.056 10.808 9.056 10.424V5.576C9.056 5.192 9.216 5.04 9.624 5.04H10.656C11.064 5.04 11.224 5.192 11.224 5.576V10.424Z"
+                        fill="#FC8B49" />
+                  </svg>
+               </span>
+               <span>Active</span>
+            </button>
+            <button class="ra-btn min-height-36 campaign-status-btn activate ml-1">
+               <span>
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M6 1.12497C3.3076 1.12497 1.12497 3.3076 1.12497 6C1.12497 8.6924 3.3076 10.875 6 10.875C8.6924 10.875 10.875 8.6924 10.875 6C10.875 3.3076 8.6924 1.12497 6 1.12497ZM0.334426 6C0.334426 2.87099 2.87099 0.334426 6 0.334426C9.12901 0.334426 11.6656 2.87099 11.6656 6C11.6656 9.12901 9.12901 11.6656 6 11.6656C2.87099 11.6656 0.334426 9.12901 0.334426 6Z"
+                        fill="#fff" />
+                     <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M0.0983607 6C0.0983607 2.74061 2.74061 0.0983607 6 0.0983607C9.25938 0.0983607 11.9016 2.74061 11.9016 6C11.9016 9.25938 9.25938 11.9016 6 11.9016C2.74061 11.9016 0.0983607 9.25938 0.0983607 6ZM6 0.570492C3.00137 0.570492 0.570492 3.00137 0.570492 6C0.570492 8.99863 3.00137 11.4295 6 11.4295C8.99863 11.4295 11.4295 8.99863 11.4295 6C11.4295 3.00137 8.99863 0.570492 6 0.570492ZM6 1.36104C3.43797 1.36104 1.36104 3.43797 1.36104 6C1.36104 8.56203 3.43797 10.639 6 10.639C8.56203 10.639 10.639 8.56203 10.639 6C10.639 3.43797 8.56203 1.36104 6 1.36104ZM0.888906 6C0.888906 3.17722 3.17722 0.888906 6 0.888906C8.82278 0.888906 11.1111 3.17722 11.1111 6C11.1111 8.82278 8.82278 11.1111 6 11.1111C3.17722 11.1111 0.888906 8.82278 0.888906 6Z"
+                        fill="#fff" />
+                     <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M0 6C0 2.68629 2.68629 0 6 0C9.31371 0 12 2.68629 12 6C12 9.31371 9.31371 12 6 12C2.68629 12 0 9.31371 0 6ZM6 0.196721C2.79494 0.196721 0.196721 2.79494 0.196721 6C0.196721 9.20506 2.79494 11.8033 6 11.8033C9.20506 11.8033 11.8033 9.20506 11.8033 6C11.8033 2.79494 9.20506 0.196721 6 0.196721ZM0.236066 6C0.236066 2.81667 2.81667 0.236066 6 0.236066C9.18333 0.236066 11.7639 2.81667 11.7639 6C11.7639 9.18333 9.18333 11.7639 6 11.7639C2.81667 11.7639 0.236066 9.18333 0.236066 6ZM6 0.432787C2.92531 0.432787 0.432787 2.92531 0.432787 6C0.432787 9.07469 2.92531 11.5672 6 11.5672C9.07469 11.5672 11.5672 9.07469 11.5672 6C11.5672 2.92531 9.07469 0.432787 6 0.432787ZM6 0.668852C3.05569 0.668852 0.668852 3.05569 0.668852 6C0.668852 8.94431 3.05569 11.3311 6 11.3311C8.94431 11.3311 11.3311 8.94431 11.3311 6C11.3311 3.05569 8.94431 0.668852 6 0.668852ZM0.472131 6C0.472131 2.94704 2.94704 0.472131 6 0.472131C9.05296 0.472131 11.5279 2.94704 11.5279 6C11.5279 9.05296 9.05296 11.5279 6 11.5279C2.94704 11.5279 0.472131 9.05296 0.472131 6ZM0.790545 6C0.790545 3.1229 3.1229 0.790545 6 0.790545C8.8771 0.790545 11.2095 3.1229 11.2095 6C11.2095 8.8771 8.8771 11.2095 6 11.2095C3.1229 11.2095 0.790545 8.8771 0.790545 6ZM6 0.987266C3.23154 0.987266 0.987266 3.23154 0.987266 6C0.987266 8.76846 3.23154 11.0127 6 11.0127C8.76846 11.0127 11.0127 8.76846 11.0127 6C11.0127 3.23154 8.76846 0.987266 6 0.987266ZM6 1.22333C3.36192 1.22333 1.22333 3.36192 1.22333 6C1.22333 8.63808 3.36192 10.7767 6 10.7767C8.63808 10.7767 10.7767 8.63808 10.7767 6C10.7767 3.36192 8.63808 1.22333 6 1.22333ZM1.02661 6C1.02661 3.25327 3.25327 1.02661 6 1.02661C8.74673 1.02661 10.9734 3.25327 10.9734 6C10.9734 8.74673 8.74673 10.9734 6 10.9734C3.25327 10.9734 1.02661 8.74673 1.02661 6ZM6 1.4594C3.49229 1.4594 1.4594 3.49229 1.4594 6C1.4594 8.5077 3.49229 10.5406 6 10.5406C8.5077 10.5406 10.5406 8.5077 10.5406 6C10.5406 3.49229 8.5077 1.4594 6 1.4594ZM1.26268 6C1.26268 3.38365 3.38365 1.26268 6 1.26268C8.61635 1.26268 10.7373 3.38365 10.7373 6C10.7373 8.61635 8.61635 10.7373 6 10.7373C3.38365 10.7373 1.26268 8.61635 1.26268 6Z"
+                        fill="#fff" />
+                     <path
+                        d="M5 7.25259V4.74741C5 4.42793 5.35606 4.23737 5.62188 4.41459L7.50077 5.66718C7.73826 5.82551 7.73826 6.17449 7.50077 6.33282L5.62188 7.58541C5.35606 7.76263 5 7.57207 5 7.25259Z"
+                        fill="#fff" />
+                     <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M5.5 4.93426V7.06574L7.09861 6L5.5 4.93426ZM4.5 4.74741C4.5 4.02858 5.30113 3.59983 5.89923 3.99856L7.77812 5.25115C8.31248 5.60739 8.31248 6.3926 7.77812 6.74885L5.89923 8.00144C5.30113 8.40017 4.5 7.97142 4.5 7.25259V4.74741Z"
+                        fill="#fff" />
+                  </svg>
+               </span>
+               <span>Activate</span>
+            </button>
+            <button class="ra-btn min-height-36 campaign-status-btn hold ml-1">
+               <span>
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M6 1.12497C3.3076 1.12497 1.12497 3.3076 1.12497 6C1.12497 8.6924 3.3076 10.875 6 10.875C8.6924 10.875 10.875 8.6924 10.875 6C10.875 3.3076 8.6924 1.12497 6 1.12497ZM0.334426 6C0.334426 2.87099 2.87099 0.334426 6 0.334426C9.12901 0.334426 11.6656 2.87099 11.6656 6C11.6656 9.12901 9.12901 11.6656 6 11.6656C2.87099 11.6656 0.334426 9.12901 0.334426 6Z"
+                        fill="#fff" />
+                     <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M0.0983607 6C0.0983607 2.74061 2.74061 0.0983607 6 0.0983607C9.25939 0.0983607 11.9016 2.74061 11.9016 6C11.9016 9.25939 9.25939 11.9016 6 11.9016C2.74061 11.9016 0.0983607 9.25939 0.0983607 6ZM6 0.570492C3.00137 0.570492 0.570492 3.00137 0.570492 6C0.570492 8.99863 3.00137 11.4295 6 11.4295C8.99863 11.4295 11.4295 8.99863 11.4295 6C11.4295 3.00137 8.99863 0.570492 6 0.570492ZM6 1.36104C3.43797 1.36104 1.36104 3.43797 1.36104 6C1.36104 8.56203 3.43797 10.639 6 10.639C8.56203 10.639 10.639 8.56203 10.639 6C10.639 3.43797 8.56203 1.36104 6 1.36104ZM0.888906 6C0.888906 3.17722 3.17722 0.888906 6 0.888906C8.82278 0.888906 11.1111 3.17722 11.1111 6C11.1111 8.82278 8.82278 11.1111 6 11.1111C3.17722 11.1111 0.888906 8.82278 0.888906 6Z"
+                        fill="#fff" />
+                     <path
+                        d="M3.78689 4.77049C3.78689 4.36307 4.11717 4.03279 4.52459 4.03279C4.93201 4.03279 5.26229 4.36307 5.26229 4.77049V7.22951C5.26229 7.63693 4.93201 7.96721 4.52459 7.96721C4.11717 7.96721 3.78689 7.63693 3.78689 7.22951V4.77049Z"
+                        fill="#fff" />
+                     <path
+                        d="M6.7377 4.77049C6.7377 4.36307 7.06799 4.03279 7.47541 4.03279C7.88283 4.03279 8.21311 4.36307 8.21311 4.77049V7.22951C8.21311 7.63693 7.88283 7.96721 7.47541 7.96721C7.06799 7.96721 6.7377 7.63693 6.7377 7.22951V4.77049Z"
+                        fill="#fff" />
+                     <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M0 6C0 2.68629 2.68629 0 6 0C9.31371 0 12 2.68629 12 6C12 9.31371 9.31371 12 6 12C2.68629 12 0 9.31371 0 6ZM6 0.196721C2.79494 0.196721 0.196721 2.79494 0.196721 6C0.196721 9.20506 2.79494 11.8033 6 11.8033C9.20506 11.8033 11.8033 9.20506 11.8033 6C11.8033 2.79494 9.20506 0.196721 6 0.196721ZM0.236066 6C0.236066 2.81667 2.81667 0.236066 6 0.236066C9.18333 0.236066 11.7639 2.81667 11.7639 6C11.7639 9.18333 9.18333 11.7639 6 11.7639C2.81667 11.7639 0.236066 9.18333 0.236066 6ZM6 0.432787C2.92531 0.432787 0.432787 2.92531 0.432787 6C0.432787 9.07469 2.92531 11.5672 6 11.5672C9.07469 11.5672 11.5672 9.07469 11.5672 6C11.5672 2.92531 9.07469 0.432787 6 0.432787ZM6 0.668852C3.05569 0.668852 0.668852 3.05569 0.668852 6C0.668852 8.94431 3.05569 11.3311 6 11.3311C8.94431 11.3311 11.3311 8.94431 11.3311 6C11.3311 3.05569 8.94431 0.668852 6 0.668852ZM0.472131 6C0.472131 2.94704 2.94704 0.472131 6 0.472131C9.05296 0.472131 11.5279 2.94704 11.5279 6C11.5279 9.05296 9.05296 11.5279 6 11.5279C2.94704 11.5279 0.472131 9.05296 0.472131 6ZM0.790545 6C0.790545 3.1229 3.1229 0.790545 6 0.790545C8.8771 0.790545 11.2095 3.1229 11.2095 6C11.2095 8.8771 8.8771 11.2095 6 11.2095C3.1229 11.2095 0.790545 8.8771 0.790545 6ZM6 0.987266C3.23154 0.987266 0.987266 3.23154 0.987266 6C0.987266 8.76846 3.23154 11.0127 6 11.0127C8.76846 11.0127 11.0127 8.76846 11.0127 6C11.0127 3.23154 8.76846 0.987266 6 0.987266ZM6 1.22333C3.36192 1.22333 1.22333 3.36192 1.22333 6C1.22333 8.63808 3.36192 10.7767 6 10.7767C8.63808 10.7767 10.7767 8.63808 10.7767 6C10.7767 3.36192 8.63808 1.22333 6 1.22333ZM1.02661 6C1.02661 3.25327 3.25327 1.02661 6 1.02661C8.74673 1.02661 10.9734 3.25327 10.9734 6C10.9734 8.74673 8.74673 10.9734 6 10.9734C3.25327 10.9734 1.02661 8.74673 1.02661 6ZM6 1.4594C3.49229 1.4594 1.4594 3.49229 1.4594 6C1.4594 8.5077 3.49229 10.5406 6 10.5406C8.5077 10.5406 10.5406 8.5077 10.5406 6C10.5406 3.49229 8.5077 1.4594 6 1.4594ZM1.26268 6C1.26268 3.38365 3.38365 1.26268 6 1.26268C8.61635 1.26268 10.7373 3.38365 10.7373 6C10.7373 8.61635 8.61635 10.7373 6 10.7373C3.38365 10.7373 1.26268 8.61635 1.26268 6ZM3.68852 4.77049C3.68852 4.30875 4.06284 3.93443 4.52459 3.93443C4.98634 3.93443 5.36066 4.30875 5.36066 4.77049V7.22951C5.36066 7.69125 4.98634 8.06557 4.52459 8.06557C4.06284 8.06557 3.68852 7.69125 3.68852 7.22951V4.77049ZM4.52459 4.13115C4.17149 4.13115 3.88525 4.41739 3.88525 4.77049V7.22951C3.88525 7.58261 4.17149 7.86885 4.52459 7.86885C4.87769 7.86885 5.16393 7.58261 5.16393 7.22951V4.77049C5.16393 4.41739 4.87769 4.13115 4.52459 4.13115ZM6.63934 4.77049C6.63934 4.30875 7.01366 3.93443 7.47541 3.93443C7.93716 3.93443 8.31148 4.30875 8.31148 4.77049V7.22951C8.31148 7.69125 7.93716 8.06557 7.47541 8.06557C7.01366 8.06557 6.63934 7.69125 6.63934 7.22951V4.77049ZM7.47541 4.13115C7.12231 4.13115 6.83607 4.41739 6.83607 4.77049V7.22951C6.83607 7.58261 7.12231 7.86885 7.47541 7.86885C7.82851 7.86885 8.11475 7.58261 8.11475 7.22951V4.77049C8.11475 4.41739 7.82851 4.13115 7.47541 4.13115Z"
+                        fill="#fff" />
+                  </svg>
+               </span>
+               <span>Hold</span>
+            </button>
+            <button class="ra-btn min-height-36 campaign-status-btn on-hold ml-1">
+               <span>
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M6 1.12497C3.3076 1.12497 1.12497 3.3076 1.12497 6C1.12497 8.6924 3.3076 10.875 6 10.875C8.6924 10.875 10.875 8.6924 10.875 6C10.875 3.3076 8.6924 1.12497 6 1.12497ZM0.334426 6C0.334426 2.87099 2.87099 0.334426 6 0.334426C9.12901 0.334426 11.6656 2.87099 11.6656 6C11.6656 9.12901 9.12901 11.6656 6 11.6656C2.87099 11.6656 0.334426 9.12901 0.334426 6Z"
+                        fill="#fff" />
+                     <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M0.0983607 6C0.0983607 2.74061 2.74061 0.0983607 6 0.0983607C9.25939 0.0983607 11.9016 2.74061 11.9016 6C11.9016 9.25939 9.25939 11.9016 6 11.9016C2.74061 11.9016 0.0983607 9.25939 0.0983607 6ZM6 0.570492C3.00137 0.570492 0.570492 3.00137 0.570492 6C0.570492 8.99863 3.00137 11.4295 6 11.4295C8.99863 11.4295 11.4295 8.99863 11.4295 6C11.4295 3.00137 8.99863 0.570492 6 0.570492ZM6 1.36104C3.43797 1.36104 1.36104 3.43797 1.36104 6C1.36104 8.56203 3.43797 10.639 6 10.639C8.56203 10.639 10.639 8.56203 10.639 6C10.639 3.43797 8.56203 1.36104 6 1.36104ZM0.888906 6C0.888906 3.17722 3.17722 0.888906 6 0.888906C8.82278 0.888906 11.1111 3.17722 11.1111 6C11.1111 8.82278 8.82278 11.1111 6 11.1111C3.17722 11.1111 0.888906 8.82278 0.888906 6Z"
+                        fill="#fff" />
+                     <path
+                        d="M3.78689 4.77049C3.78689 4.36307 4.11717 4.03279 4.52459 4.03279C4.93201 4.03279 5.26229 4.36307 5.26229 4.77049V7.22951C5.26229 7.63693 4.93201 7.96721 4.52459 7.96721C4.11717 7.96721 3.78689 7.63693 3.78689 7.22951V4.77049Z"
+                        fill="#fff" />
+                     <path
+                        d="M6.7377 4.77049C6.7377 4.36307 7.06799 4.03279 7.47541 4.03279C7.88283 4.03279 8.21311 4.36307 8.21311 4.77049V7.22951C8.21311 7.63693 7.88283 7.96721 7.47541 7.96721C7.06799 7.96721 6.7377 7.63693 6.7377 7.22951V4.77049Z"
+                        fill="#fff" />
+                     <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M0 6C0 2.68629 2.68629 0 6 0C9.31371 0 12 2.68629 12 6C12 9.31371 9.31371 12 6 12C2.68629 12 0 9.31371 0 6ZM6 0.196721C2.79494 0.196721 0.196721 2.79494 0.196721 6C0.196721 9.20506 2.79494 11.8033 6 11.8033C9.20506 11.8033 11.8033 9.20506 11.8033 6C11.8033 2.79494 9.20506 0.196721 6 0.196721ZM0.236066 6C0.236066 2.81667 2.81667 0.236066 6 0.236066C9.18333 0.236066 11.7639 2.81667 11.7639 6C11.7639 9.18333 9.18333 11.7639 6 11.7639C2.81667 11.7639 0.236066 9.18333 0.236066 6ZM6 0.432787C2.92531 0.432787 0.432787 2.92531 0.432787 6C0.432787 9.07469 2.92531 11.5672 6 11.5672C9.07469 11.5672 11.5672 9.07469 11.5672 6C11.5672 2.92531 9.07469 0.432787 6 0.432787ZM6 0.668852C3.05569 0.668852 0.668852 3.05569 0.668852 6C0.668852 8.94431 3.05569 11.3311 6 11.3311C8.94431 11.3311 11.3311 8.94431 11.3311 6C11.3311 3.05569 8.94431 0.668852 6 0.668852ZM0.472131 6C0.472131 2.94704 2.94704 0.472131 6 0.472131C9.05296 0.472131 11.5279 2.94704 11.5279 6C11.5279 9.05296 9.05296 11.5279 6 11.5279C2.94704 11.5279 0.472131 9.05296 0.472131 6ZM0.790545 6C0.790545 3.1229 3.1229 0.790545 6 0.790545C8.8771 0.790545 11.2095 3.1229 11.2095 6C11.2095 8.8771 8.8771 11.2095 6 11.2095C3.1229 11.2095 0.790545 8.8771 0.790545 6ZM6 0.987266C3.23154 0.987266 0.987266 3.23154 0.987266 6C0.987266 8.76846 3.23154 11.0127 6 11.0127C8.76846 11.0127 11.0127 8.76846 11.0127 6C11.0127 3.23154 8.76846 0.987266 6 0.987266ZM6 1.22333C3.36192 1.22333 1.22333 3.36192 1.22333 6C1.22333 8.63808 3.36192 10.7767 6 10.7767C8.63808 10.7767 10.7767 8.63808 10.7767 6C10.7767 3.36192 8.63808 1.22333 6 1.22333ZM1.02661 6C1.02661 3.25327 3.25327 1.02661 6 1.02661C8.74673 1.02661 10.9734 3.25327 10.9734 6C10.9734 8.74673 8.74673 10.9734 6 10.9734C3.25327 10.9734 1.02661 8.74673 1.02661 6ZM6 1.4594C3.49229 1.4594 1.4594 3.49229 1.4594 6C1.4594 8.5077 3.49229 10.5406 6 10.5406C8.5077 10.5406 10.5406 8.5077 10.5406 6C10.5406 3.49229 8.5077 1.4594 6 1.4594ZM1.26268 6C1.26268 3.38365 3.38365 1.26268 6 1.26268C8.61635 1.26268 10.7373 3.38365 10.7373 6C10.7373 8.61635 8.61635 10.7373 6 10.7373C3.38365 10.7373 1.26268 8.61635 1.26268 6ZM3.68852 4.77049C3.68852 4.30875 4.06284 3.93443 4.52459 3.93443C4.98634 3.93443 5.36066 4.30875 5.36066 4.77049V7.22951C5.36066 7.69125 4.98634 8.06557 4.52459 8.06557C4.06284 8.06557 3.68852 7.69125 3.68852 7.22951V4.77049ZM4.52459 4.13115C4.17149 4.13115 3.88525 4.41739 3.88525 4.77049V7.22951C3.88525 7.58261 4.17149 7.86885 4.52459 7.86885C4.87769 7.86885 5.16393 7.58261 5.16393 7.22951V4.77049C5.16393 4.41739 4.87769 4.13115 4.52459 4.13115ZM6.63934 4.77049C6.63934 4.30875 7.01366 3.93443 7.47541 3.93443C7.93716 3.93443 8.31148 4.30875 8.31148 4.77049V7.22951C8.31148 7.69125 7.93716 8.06557 7.47541 8.06557C7.01366 8.06557 6.63934 7.69125 6.63934 7.22951V4.77049ZM7.47541 4.13115C7.12231 4.13115 6.83607 4.41739 6.83607 4.77049V7.22951C6.83607 7.58261 7.12231 7.86885 7.47541 7.86885C7.82851 7.86885 8.11475 7.58261 8.11475 7.22951V4.77049C8.11475 4.41739 7.82851 4.13115 7.47541 4.13115Z"
+                        fill="#fff" />
+                  </svg>
+               </span>
+               <span>On Hold</span>
+            </button>
+         </div>
+
+
+         <!-- Budget Start -->
+         <div class="card settings-card mb-20">
+            <div class="card-header card-header-custom">
+               <p class="fz16 fw-700 purleDark-color">Budget : BDT 5,000</p>
+               <button type="button" class="ra-btn ra-btn-blue-bg min-height-32 p-0x12">
+                  <span class="pr-2">
+                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                           d="M5.97634 1.68927C6.38452 1.57589 6.80733 1.81487 6.92071 2.22305C7.30894 3.62068 8.39501 4.70675 9.79264 5.09498C10.2008 5.20837 10.4398 5.63118 10.3264 6.03936C10.213 6.44754 9.79023 6.68652 9.38204 6.57314C7.46597 6.04089 5.9748 4.54973 5.44256 2.63365C5.32917 2.22547 5.56815 1.80266 5.97634 1.68927Z"
+                           fill="white" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                           d="M8.41914 0.0126554C9.28409 -0.0762172 10.1128 0.305153 10.8962 1.08857C11.6853 1.87771 12.0717 2.70904 11.9858 3.57625C11.904 4.40291 11.4077 5.06766 10.8962 5.57916L5.47376 11.0016C5.29011 11.1951 5.05419 11.3439 4.84798 11.447C4.63359 11.5542 4.38104 11.647 4.1375 11.6854L4.12479 11.6874L2.05531 11.9786C1.47851 12.0607 0.906013 11.9075 0.499299 11.5008C0.0925738 11.0941 -0.0607542 10.5225 0.0214037 9.94572L0.314591 7.86261C0.35354 7.61593 0.447916 7.36585 0.55474 7.15469C0.66157 6.94352 0.808842 6.71614 0.990196 6.53479L6.42105 1.10393C6.93258 0.592403 7.59624 0.0972081 8.41914 0.0126554ZM8.57594 1.53874C8.27897 1.56926 7.93013 1.76443 7.50584 2.18872L2.07499 7.61958C2.04156 7.653 1.98174 7.73242 1.92366 7.84722C1.86733 7.95857 1.83887 8.05134 1.83075 8.0977L1.54046 10.1602L1.54024 10.1618C1.5153 10.3364 1.56914 10.4011 1.58409 10.416C1.59904 10.431 1.66377 10.4848 1.83836 10.4599L1.83993 10.4597L3.9025 10.1694C3.95196 10.1608 4.04982 10.1309 4.16196 10.0748C4.28132 10.0152 4.34671 9.96091 4.36094 9.94559C4.36738 9.93865 4.37395 9.93183 4.38064 9.92514L9.81141 4.49438C10.2357 4.07007 10.4298 3.72227 10.4592 3.42515C10.4846 3.1686 10.403 2.76493 9.81141 2.17336C9.22946 1.59141 8.83088 1.51255 8.57594 1.53874Z"
+                           fill="white" />
+                     </svg>
+                  </span>
+                  <span>Edit</span>
+               </button>
+            </div>
+            <div class="card-body p-0">
+               <div class="color-box-status">
+                  <span class="item">
+                     <span class="box spent">&nbsp;</span>
+                     <span class="fz14 fw-500 ra-primary-color">Spent</span>
+                  </span>
+                  <span class="item">
+                     <span class="box remaining">&nbsp;</span>
+                     <span class="fz14 fw-500 ra-primary-color">Remaining</span>
+                  </span>
+                  <span class="item">
+                     <span class="box unallocated">&nbsp;</span>
+                     <span class="fz14 fw-500 ra-primary-color">Unallocated</span>
+                  </span>
+               </div>
+
+               <!-- Progress Bar Start -->
+               <div class="multi-color-progressbar">
+                  <div class="amount spent-amount" style="width: 40%;">
+                     <span class="purple-light-color fz12 fw-500">4,000</span>
+                     <div class="bg orangDark3-bg">&nbsp;</div>
+                  </div>
+                  <div class="amount remaining-amount" style="width: 25%;">
+                     <span class="purple-light-color fz12 fw-500">1,000</span>
+                     <div class="bg greenDark-bg">&nbsp;</div>
+                  </div>
+                  <div class="amount unallocated-amount" style="width: 35%;">
+                     <span class="purple-light-color fz12 fw-500">5,000</span>
+                     <div class="bg greenLight-bg">&nbsp;</div>
+                  </div>
+               </div>
+
+               <div class="pl-20 pr-20 pb-20">
+                  <div class="row">
+                     <div class="col-md-4">
+                        <span class="d-inline-block fz12 fw-500 purple-light-color">0</span>
+                     </div>
+                     <div class="col-md-4 text-center">
+                        <span class="d-inline-block fz14 fw-600 green-color">5,000</span>
+                     </div>
+                     <div class="col-md-4 text-center">
+                        <span class="d-inline-block fz12 fw-500 purple-light-color">10,000</span>
+                     </div>
+                  </div>
+               </div><!-- Progress Bar End -->
+
+
+               <form action="#" class="p-20">
+                  <div class="row">
+                     <div class="col-md-6 mb-24">
+                        <div class="ra-form ra-form-2">
+                           <fieldset>
+                              <label for="adGroupName" class="ra-label-2 left">Ad Group Budget</label>
+                              <input type="number" class="ra-input-2" id="adGroupName" placeholder="5,000">
+                              <!-- .selected-bg class for adding input background color -->
+                              <label for="adGroupName" class="ra-label-2 right">BDT</label>
+                           </fieldset>
+                        </div>
+                     </div>
+                     <div class="col-md-6 mb-24">
+                        <div class="ra-form ra-form-2">
+                           <fieldset>
+                              <label for="adGroupName" class="ra-label-2 left">Unallocated Budget</label>
+                              <input type="number" class="ra-input-2 selected-bg" id="adGroupName" placeholder="10,000">
+                              <!-- .selected-bg class for adding input background color -->
+                              <label for="adGroupName" class="ra-label-2 right">BDT</label>
+                           </fieldset>
+                        </div>
+                     </div>
+                     <div class="col-md-6 mb-24">
+                        <div class="ra-form ra-form-2">
+                           <fieldset>
+                              <label for="adGroupName" class="ra-label-2 left">Spent</label>
+                              <input type="number" class="ra-input-2 selected-bg" id="adGroupName" placeholder="4,000">
+                              <!-- .selected-bg class for adding input background color -->
+                              <label for="adGroupName" class="ra-label-2 right">BDT</label>
+                           </fieldset>
+                        </div>
+                     </div>
+                     <div class="col-md-6 mb-24">
+                        <div class="ra-form ra-form-2">
+                           <fieldset>
+                              <label for="adGroupName" class="ra-label-2 left">Remaining</label>
+                              <input type="number" class="ra-input-2 selected-bg" id="adGroupName" placeholder="1,000">
+                              <!-- .selected-bg class for adding input background color -->
+                              <label for="adGroupName" class="ra-label-2 right">BDT</label>
+                           </fieldset>
+                        </div>
+                     </div>
+                  </div>
+               </form>
+            </div>
+         </div> <!-- Budget End -->
+
+
+         <!-- Audience Start -->
+         <div class="card settings-card mb-20">
+            <div class="card-header card-header-custom">
+               <p class="fz16 fw-700 purleDark-color">Audience : Rich Kids of Chittagong</p>
+               <button type="button" class="ra-btn ra-btn-blue-bg min-height-32 p-0x12">
+                  <span class="pr-2">
+                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                           d="M5.97634 1.68927C6.38452 1.57589 6.80733 1.81487 6.92071 2.22305C7.30894 3.62068 8.39501 4.70675 9.79264 5.09498C10.2008 5.20837 10.4398 5.63118 10.3264 6.03936C10.213 6.44754 9.79023 6.68652 9.38204 6.57314C7.46597 6.04089 5.9748 4.54973 5.44256 2.63365C5.32917 2.22547 5.56815 1.80266 5.97634 1.68927Z"
+                           fill="white" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                           d="M8.41914 0.0126554C9.28409 -0.0762172 10.1128 0.305153 10.8962 1.08857C11.6853 1.87771 12.0717 2.70904 11.9858 3.57625C11.904 4.40291 11.4077 5.06766 10.8962 5.57916L5.47376 11.0016C5.29011 11.1951 5.05419 11.3439 4.84798 11.447C4.63359 11.5542 4.38104 11.647 4.1375 11.6854L4.12479 11.6874L2.05531 11.9786C1.47851 12.0607 0.906013 11.9075 0.499299 11.5008C0.0925738 11.0941 -0.0607542 10.5225 0.0214037 9.94572L0.314591 7.86261C0.35354 7.61593 0.447916 7.36585 0.55474 7.15469C0.66157 6.94352 0.808842 6.71614 0.990196 6.53479L6.42105 1.10393C6.93258 0.592403 7.59624 0.0972081 8.41914 0.0126554ZM8.57594 1.53874C8.27897 1.56926 7.93013 1.76443 7.50584 2.18872L2.07499 7.61958C2.04156 7.653 1.98174 7.73242 1.92366 7.84722C1.86733 7.95857 1.83887 8.05134 1.83075 8.0977L1.54046 10.1602L1.54024 10.1618C1.5153 10.3364 1.56914 10.4011 1.58409 10.416C1.59904 10.431 1.66377 10.4848 1.83836 10.4599L1.83993 10.4597L3.9025 10.1694C3.95196 10.1608 4.04982 10.1309 4.16196 10.0748C4.28132 10.0152 4.34671 9.96091 4.36094 9.94559C4.36738 9.93865 4.37395 9.93183 4.38064 9.92514L9.81141 4.49438C10.2357 4.07007 10.4298 3.72227 10.4592 3.42515C10.4846 3.1686 10.403 2.76493 9.81141 2.17336C9.22946 1.59141 8.83088 1.51255 8.57594 1.53874Z"
+                           fill="white" />
+                     </svg>
+                  </span>
+                  <span>Edit</span>
+               </button>
+            </div>
+
+            <div class="card-body">
+               <form action="#">
+                  <div class="ra-form ra-form-2 ra-form-2--select">
+                     <fieldset>
+                        <label for="audienceSelectField" class="ra-label-2 left">Audience</label>
+                        <select name="selectField" class="ra-select-2 selected" id="audienceSelectField">
+                           <!-- .selected class add for opacity -->
+                           <option value="SelectAudience" selected>Rich Kids of Chittagong</option>
+                           <option value="Demo2">Demo2</option>
+                           <option value="Demo3">Demo3</option>
+                           <option value="Demo4">Demo4</option>
+                        </select>
+                     </fieldset>
+                  </div>
+               </form>
+            </div>
+         </div><!-- Audience End -->
+
+
+         <!-- Pricing Model : CPC Start -->
+         <div class="card settings-card mb-20">
+            <div class="card-header card-header-custom">
+               <p class="fz16 fw-700 purleDark-color">Pricing Model : CPC</p>
+               <button type="button" class="ra-btn ra-btn-blue-bg min-height-32 p-0x12">
+                  <span class="pr-2">
+                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                           d="M5.97634 1.68927C6.38452 1.57589 6.80733 1.81487 6.92071 2.22305C7.30894 3.62068 8.39501 4.70675 9.79264 5.09498C10.2008 5.20837 10.4398 5.63118 10.3264 6.03936C10.213 6.44754 9.79023 6.68652 9.38204 6.57314C7.46597 6.04089 5.9748 4.54973 5.44256 2.63365C5.32917 2.22547 5.56815 1.80266 5.97634 1.68927Z"
+                           fill="white" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                           d="M8.41914 0.0126554C9.28409 -0.0762172 10.1128 0.305153 10.8962 1.08857C11.6853 1.87771 12.0717 2.70904 11.9858 3.57625C11.904 4.40291 11.4077 5.06766 10.8962 5.57916L5.47376 11.0016C5.29011 11.1951 5.05419 11.3439 4.84798 11.447C4.63359 11.5542 4.38104 11.647 4.1375 11.6854L4.12479 11.6874L2.05531 11.9786C1.47851 12.0607 0.906013 11.9075 0.499299 11.5008C0.0925738 11.0941 -0.0607542 10.5225 0.0214037 9.94572L0.314591 7.86261C0.35354 7.61593 0.447916 7.36585 0.55474 7.15469C0.66157 6.94352 0.808842 6.71614 0.990196 6.53479L6.42105 1.10393C6.93258 0.592403 7.59624 0.0972081 8.41914 0.0126554ZM8.57594 1.53874C8.27897 1.56926 7.93013 1.76443 7.50584 2.18872L2.07499 7.61958C2.04156 7.653 1.98174 7.73242 1.92366 7.84722C1.86733 7.95857 1.83887 8.05134 1.83075 8.0977L1.54046 10.1602L1.54024 10.1618C1.5153 10.3364 1.56914 10.4011 1.58409 10.416C1.59904 10.431 1.66377 10.4848 1.83836 10.4599L1.83993 10.4597L3.9025 10.1694C3.95196 10.1608 4.04982 10.1309 4.16196 10.0748C4.28132 10.0152 4.34671 9.96091 4.36094 9.94559C4.36738 9.93865 4.37395 9.93183 4.38064 9.92514L9.81141 4.49438C10.2357 4.07007 10.4298 3.72227 10.4592 3.42515C10.4846 3.1686 10.403 2.76493 9.81141 2.17336C9.22946 1.59141 8.83088 1.51255 8.57594 1.53874Z"
+                           fill="white" />
+                     </svg>
+                  </span>
+                  <span>Edit</span>
+               </button>
+            </div>
+
+            <div class="card-body p-0">
+               <form action="#">
+                  <div class="campaign-type border-bottom-purpleLight3">
+                     <div class="settings-radio-group">
+                        <div class="radio-btn-wrapper">
+                           <input class="radio-btn-input" type="radio" name="pricingCpc" id="cpc2" value="option2">
+                           <label class="radio-check-label light-bg" for="cpc2">
+                              <span class="radio-box">
+                                 <span>&nbsp;</span>
+                              </span>
+                              <span class="radio-text">CPC</span>
+                           </label>
+                        </div>
+
+                        <div class="radio-btn-wrapper">
+                           <input class="radio-btn-input" type="radio" name="pricingCpc" id="cpm2" value="option2">
+                           <label class="radio-check-label light-bg" for="cpm2">
+                              <span class="radio-box">
+                                 <span>&nbsp;</span>
+                              </span>
+                              <span class="radio-text">CPM</span>
+                           </label>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="ra-form ra-form-2 m-20">
+                     <fieldset>
+                        <label for="adGroupName" class="ra-label-2 left">Pricing</label>
+                        <input type="number" class="ra-input-2 selected-bg" id="adGroupName"
+                           placeholder="10.00 ~ 30.00">
+                        <!-- .selected-bg class for adding input background color -->
+                        <label for="adGroupName" class="ra-label-2 right">BDT</label>
+                     </fieldset>
+                  </div>
+
+                  <p class="fz12 fw-400 ra-primary-color m-20">
+                     **You need to add the function below in your conversion event: `___gnr_conversion()` to track
+                     Conversions. You need to add the function below in your conversion event: `___gnr_conversion()` to
+                     track Conversions
+                  </p>
+               </form>
+            </div>
+         </div><!-- Pricing Model : CPC End -->
+
+
+         <!-- Schedule : Custom Start -->
+         <div class="card settings-card mb-20">
+            <div class="card-header card-header-custom">
+               <p class="fz16 fw-700 purleDark-color">Schedule : Custom</p>
+               <button type="button" class="ra-btn ra-btn-blue-bg min-height-32 p-0x12">
+                  <span class="pr-2">
+                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                           d="M5.97634 1.68927C6.38452 1.57589 6.80733 1.81487 6.92071 2.22305C7.30894 3.62068 8.39501 4.70675 9.79264 5.09498C10.2008 5.20837 10.4398 5.63118 10.3264 6.03936C10.213 6.44754 9.79023 6.68652 9.38204 6.57314C7.46597 6.04089 5.9748 4.54973 5.44256 2.63365C5.32917 2.22547 5.56815 1.80266 5.97634 1.68927Z"
+                           fill="white" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                           d="M8.41914 0.0126554C9.28409 -0.0762172 10.1128 0.305153 10.8962 1.08857C11.6853 1.87771 12.0717 2.70904 11.9858 3.57625C11.904 4.40291 11.4077 5.06766 10.8962 5.57916L5.47376 11.0016C5.29011 11.1951 5.05419 11.3439 4.84798 11.447C4.63359 11.5542 4.38104 11.647 4.1375 11.6854L4.12479 11.6874L2.05531 11.9786C1.47851 12.0607 0.906013 11.9075 0.499299 11.5008C0.0925738 11.0941 -0.0607542 10.5225 0.0214037 9.94572L0.314591 7.86261C0.35354 7.61593 0.447916 7.36585 0.55474 7.15469C0.66157 6.94352 0.808842 6.71614 0.990196 6.53479L6.42105 1.10393C6.93258 0.592403 7.59624 0.0972081 8.41914 0.0126554ZM8.57594 1.53874C8.27897 1.56926 7.93013 1.76443 7.50584 2.18872L2.07499 7.61958C2.04156 7.653 1.98174 7.73242 1.92366 7.84722C1.86733 7.95857 1.83887 8.05134 1.83075 8.0977L1.54046 10.1602L1.54024 10.1618C1.5153 10.3364 1.56914 10.4011 1.58409 10.416C1.59904 10.431 1.66377 10.4848 1.83836 10.4599L1.83993 10.4597L3.9025 10.1694C3.95196 10.1608 4.04982 10.1309 4.16196 10.0748C4.28132 10.0152 4.34671 9.96091 4.36094 9.94559C4.36738 9.93865 4.37395 9.93183 4.38064 9.92514L9.81141 4.49438C10.2357 4.07007 10.4298 3.72227 10.4592 3.42515C10.4846 3.1686 10.403 2.76493 9.81141 2.17336C9.22946 1.59141 8.83088 1.51255 8.57594 1.53874Z"
+                           fill="white" />
+                     </svg>
+                  </span>
+                  <span>Edit</span>
+               </button>
+            </div>
+
+            <div class="card-body p-0">
+               <form action="#">
+                  <div class="campaign-type border-bottom-purpleLight3 mb-20">
+                     <div class="settings-radio-group">
+                        <div class="radio-btn-wrapper">
+                           <input class="radio-btn-input" type="radio" name="pricingModel" id="scheduleDefault"
+                              value="option2">
+                           <label class="radio-check-label light-bg" for="scheduleDefault">
+                              <span class="radio-box">
+                                 <span>&nbsp;</span>
+                              </span>
+                              <span class="radio-text">Default</span>
+                           </label>
+                        </div>
+
+                        <div class="radio-btn-wrapper">
+                           <input class="radio-btn-input" type="radio" name="pricingModel" id="scheduleCustom"
+                              value="option2">
+                           <label class="radio-check-label light-bg" for="scheduleCustom">
+                              <span class="radio-box">
+                                 <span>&nbsp;</span>
+                              </span>
+                              <span class="radio-text">Custom</span>
+                           </label>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="campaign-duration">
+                     <div class="row">
+                        <div class="d-flex align-items-center w-100 pl-20 pr-20">
+                           <div class="col-md-2 mb-20">
+                              <div class="client-settings-checkbox">
+                                 <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheck-1" checked>
+                                    <label class="custom-control-label" for="customCheck-1">
+                                       <span class="fz14 text-uppercase">SAT</span>
+                                    </label>
+                                 </div>
+                              </div>
+                           </div>
+
+                           <div class="col-md-5 mb-20">
+                              <div class="custom-selection schedule">
+                                 <div class="dropdown dropdwon-3">
+                                    <fieldset class="multi-date-range">
+                                       <label for="startTime" class="position-absolute text-nowrap">
+                                          <span class="daterange-label-text">Start Time</span>
+                                       </label>
+                                       <label for="startTime" class="label-img text-nowrap">
+                                          <svg width="18" height="18" class="daterange-svg-icon" viewBox="0 0 18 18"
+                                             fill="none" xmlns="http://www.w3.org/2000/svg">
+                                             <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.00002 1.36241C4.78423 1.36241 1.36241 4.78423 1.36241 9.00002C1.36241 13.2158 4.78423 16.6376 9.00002 16.6376C13.2158 16.6376 16.6376 13.2158 16.6376 9.00002C16.6376 4.78423 13.2158 1.36241 9.00002 1.36241ZM0.123873 9.00002C0.123873 4.10021 4.10021 0.123873 9.00002 0.123873C13.8998 0.123873 17.8762 4.10021 17.8762 9.00002C17.8762 13.8998 13.8998 17.8762 9.00002 17.8762C4.10021 17.8762 0.123873 13.8998 0.123873 9.00002Z"
+                                                fill="#83839F" />
+                                             <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M8.69452 4.67342C9.03653 4.67342 9.31379 4.95068 9.31379 5.29269V8.67801C9.31379 8.80479 9.3622 8.98855 9.46984 9.17731C9.57751 9.36611 9.8194 9.56544 9.8194 9.56544L12.3807 11.0939C12.6744 11.2692 12.7704 11.6494 12.5951 11.9431C12.4198 12.2368 12.0397 12.3328 11.746 12.1575L9.18799 10.6309C9.18799 10.6309 8.57926 10.1158 8.39397 9.79086C8.20849 9.46563 8.07525 9.07141 8.07525 8.67801V5.29269C8.07525 4.95068 8.35251 4.67342 8.69452 4.67342Z"
+                                                fill="#83839F" />
+                                             <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M0 9C0 4.03179 4.03179 0 9 0C13.9682 0 18 4.03179 18 9C18 13.9682 13.9682 18 9 18C4.03179 18 0 13.9682 0 9ZM9 0.247706C4.16859 0.247706 0.247706 4.16859 0.247706 9C0.247706 13.8314 4.16859 17.7523 9 17.7523C13.8314 17.7523 17.7523 13.8314 17.7523 9C17.7523 4.16859 13.8314 0.247706 9 0.247706ZM9 1.48624C4.85262 1.48624 1.48624 4.85262 1.48624 9C1.48624 13.1474 4.85262 16.5138 9 16.5138C13.1474 16.5138 16.5138 13.1474 16.5138 9C16.5138 4.85262 13.1474 1.48624 9 1.48624ZM1.23853 9C1.23853 4.71581 4.71581 1.23853 9 1.23853C13.2842 1.23853 16.7615 4.71581 16.7615 9C16.7615 13.2842 13.2842 16.7615 9 16.7615C4.71581 16.7615 1.23853 13.2842 1.23853 9ZM7.95138 5.29267C7.95138 4.88226 8.28409 4.54955 8.6945 4.54955C9.10491 4.54955 9.43762 4.88226 9.43762 5.29267V8.67799C9.43762 8.77816 9.47758 8.94088 9.57741 9.11594C9.62273 9.1954 9.70041 9.28292 9.77226 9.35429C9.80725 9.38904 9.83911 9.41826 9.86215 9.43873C9.86785 9.44379 9.87299 9.4483 9.87748 9.45221C9.88206 9.45619 9.88598 9.45956 9.88914 9.46225L9.89144 9.4642L12.4441 10.9876C12.7966 11.1979 12.9118 11.6541 12.7014 12.0065C12.4911 12.3589 12.0349 12.4741 11.6825 12.2638L9.1245 10.7373C9.11867 10.7338 9.11314 10.7298 9.10796 10.7255L9.10597 10.7238L9.10058 10.7192L9.08039 10.7018C9.06301 10.6867 9.03807 10.665 9.00762 10.6379C8.94676 10.5837 8.86358 10.508 8.77439 10.4218C8.59992 10.2532 8.38892 10.032 8.28636 9.8522C8.09312 9.51335 7.95138 9.09808 7.95138 8.67799V5.29267ZM9.26042 10.5299L11.8094 12.0511C12.0444 12.1913 12.3485 12.1145 12.4887 11.8796C12.6289 11.6446 12.5521 11.3405 12.3172 11.2003L9.75591 9.67178C9.75054 9.66858 9.74543 9.66498 9.74061 9.661L9.73954 9.66012L9.7371 9.65808L9.72841 9.65073C9.72101 9.64442 9.71051 9.63535 9.69765 9.62393C9.67197 9.60112 9.63664 9.56871 9.59769 9.53003C9.52168 9.45453 9.42459 9.34798 9.36224 9.23865C9.24678 9.03618 9.18991 8.83138 9.18991 8.67799V5.29267C9.18991 5.01906 8.96811 4.79726 8.6945 4.79726C8.42089 4.79726 8.19909 5.01906 8.19909 5.29267V8.67799C8.19909 9.04471 8.32383 9.41788 8.50153 9.72949C8.58427 9.87456 8.77028 10.0734 8.9465 10.2437C9.03265 10.3269 9.11323 10.4003 9.17231 10.4528C9.20181 10.4791 9.22588 10.5001 9.24251 10.5145L9.26042 10.5299Z"
+                                                fill="#83839F" />
+                                          </svg>
+                                       </label>
+                                       <input type="text" class="date-range duration-time duration-time-activator"
+                                          id="startTime" name="startTime" value="" />
+                                    </fieldset>
+                                 </div>
+                              </div>
+                           </div>
+
+                           <div class="col-md-5 mb-20">
+                              <div class="custom-selection schedule">
+                                 <div class="dropdown dropdwon-3">
+                                    <fieldset class="multi-date-range">
+                                       <label for="endTime" class="position-absolute text-nowrap">
+                                          <span class="daterange-label-text">End Time</span>
+                                       </label>
+                                       <label for="endTime" class="label-img text-nowrap">
+                                          <svg width="18" height="18" class="daterange-svg-icon" viewBox="0 0 18 18"
+                                             fill="none" xmlns="http://www.w3.org/2000/svg">
+                                             <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.00002 1.36241C4.78423 1.36241 1.36241 4.78423 1.36241 9.00002C1.36241 13.2158 4.78423 16.6376 9.00002 16.6376C13.2158 16.6376 16.6376 13.2158 16.6376 9.00002C16.6376 4.78423 13.2158 1.36241 9.00002 1.36241ZM0.123873 9.00002C0.123873 4.10021 4.10021 0.123873 9.00002 0.123873C13.8998 0.123873 17.8762 4.10021 17.8762 9.00002C17.8762 13.8998 13.8998 17.8762 9.00002 17.8762C4.10021 17.8762 0.123873 13.8998 0.123873 9.00002Z"
+                                                fill="#83839F" />
+                                             <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M8.69452 4.67342C9.03653 4.67342 9.31379 4.95068 9.31379 5.29269V8.67801C9.31379 8.80479 9.3622 8.98855 9.46984 9.17731C9.57751 9.36611 9.8194 9.56544 9.8194 9.56544L12.3807 11.0939C12.6744 11.2692 12.7704 11.6494 12.5951 11.9431C12.4198 12.2368 12.0397 12.3328 11.746 12.1575L9.18799 10.6309C9.18799 10.6309 8.57926 10.1158 8.39397 9.79086C8.20849 9.46563 8.07525 9.07141 8.07525 8.67801V5.29269C8.07525 4.95068 8.35251 4.67342 8.69452 4.67342Z"
+                                                fill="#83839F" />
+                                             <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M0 9C0 4.03179 4.03179 0 9 0C13.9682 0 18 4.03179 18 9C18 13.9682 13.9682 18 9 18C4.03179 18 0 13.9682 0 9ZM9 0.247706C4.16859 0.247706 0.247706 4.16859 0.247706 9C0.247706 13.8314 4.16859 17.7523 9 17.7523C13.8314 17.7523 17.7523 13.8314 17.7523 9C17.7523 4.16859 13.8314 0.247706 9 0.247706ZM9 1.48624C4.85262 1.48624 1.48624 4.85262 1.48624 9C1.48624 13.1474 4.85262 16.5138 9 16.5138C13.1474 16.5138 16.5138 13.1474 16.5138 9C16.5138 4.85262 13.1474 1.48624 9 1.48624ZM1.23853 9C1.23853 4.71581 4.71581 1.23853 9 1.23853C13.2842 1.23853 16.7615 4.71581 16.7615 9C16.7615 13.2842 13.2842 16.7615 9 16.7615C4.71581 16.7615 1.23853 13.2842 1.23853 9ZM7.95138 5.29267C7.95138 4.88226 8.28409 4.54955 8.6945 4.54955C9.10491 4.54955 9.43762 4.88226 9.43762 5.29267V8.67799C9.43762 8.77816 9.47758 8.94088 9.57741 9.11594C9.62273 9.1954 9.70041 9.28292 9.77226 9.35429C9.80725 9.38904 9.83911 9.41826 9.86215 9.43873C9.86785 9.44379 9.87299 9.4483 9.87748 9.45221C9.88206 9.45619 9.88598 9.45956 9.88914 9.46225L9.89144 9.4642L12.4441 10.9876C12.7966 11.1979 12.9118 11.6541 12.7014 12.0065C12.4911 12.3589 12.0349 12.4741 11.6825 12.2638L9.1245 10.7373C9.11867 10.7338 9.11314 10.7298 9.10796 10.7255L9.10597 10.7238L9.10058 10.7192L9.08039 10.7018C9.06301 10.6867 9.03807 10.665 9.00762 10.6379C8.94676 10.5837 8.86358 10.508 8.77439 10.4218C8.59992 10.2532 8.38892 10.032 8.28636 9.8522C8.09312 9.51335 7.95138 9.09808 7.95138 8.67799V5.29267ZM9.26042 10.5299L11.8094 12.0511C12.0444 12.1913 12.3485 12.1145 12.4887 11.8796C12.6289 11.6446 12.5521 11.3405 12.3172 11.2003L9.75591 9.67178C9.75054 9.66858 9.74543 9.66498 9.74061 9.661L9.73954 9.66012L9.7371 9.65808L9.72841 9.65073C9.72101 9.64442 9.71051 9.63535 9.69765 9.62393C9.67197 9.60112 9.63664 9.56871 9.59769 9.53003C9.52168 9.45453 9.42459 9.34798 9.36224 9.23865C9.24678 9.03618 9.18991 8.83138 9.18991 8.67799V5.29267C9.18991 5.01906 8.96811 4.79726 8.6945 4.79726C8.42089 4.79726 8.19909 5.01906 8.19909 5.29267V8.67799C8.19909 9.04471 8.32383 9.41788 8.50153 9.72949C8.58427 9.87456 8.77028 10.0734 8.9465 10.2437C9.03265 10.3269 9.11323 10.4003 9.17231 10.4528C9.20181 10.4791 9.22588 10.5001 9.24251 10.5145L9.26042 10.5299Z"
+                                                fill="#83839F" />
+                                          </svg>
+                                       </label>
+                                       <input type="text" class="date-range duration-time duration-time-activator"
+                                          id="endTime" name="endTime" value="" />
+                                    </fieldset>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="row">
+                        <div class="d-flex align-items-center w-100 pl-20 pr-20">
+                           <div class="col-md-2 mb-20">
+                              <div class="client-settings-checkbox">
+                                 <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheck-2" checked
+                                       disabled>
+                                    <label class="custom-control-label" for="customCheck-2">
+                                       <span class="fz14 text-uppercase">sun</span>
+                                    </label>
+                                 </div>
+                              </div>
+                           </div>
+
+                           <div class="col-md-5 mb-20">
+                              <div class="custom-selection schedule">
+                                 <div class="dropdown dropdwon-3">
+                                    <fieldset class="multi-date-range">
+                                       <label for="startTime" class="position-absolute text-nowrap">
+                                          <span class="daterange-label-text">Start Time</span>
+                                       </label>
+                                       <label for="startTime" class="label-img text-nowrap">
+                                          <svg width="18" height="18" class="daterange-svg-icon" viewBox="0 0 18 18"
+                                             fill="none" xmlns="http://www.w3.org/2000/svg">
+                                             <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.00002 1.36241C4.78423 1.36241 1.36241 4.78423 1.36241 9.00002C1.36241 13.2158 4.78423 16.6376 9.00002 16.6376C13.2158 16.6376 16.6376 13.2158 16.6376 9.00002C16.6376 4.78423 13.2158 1.36241 9.00002 1.36241ZM0.123873 9.00002C0.123873 4.10021 4.10021 0.123873 9.00002 0.123873C13.8998 0.123873 17.8762 4.10021 17.8762 9.00002C17.8762 13.8998 13.8998 17.8762 9.00002 17.8762C4.10021 17.8762 0.123873 13.8998 0.123873 9.00002Z"
+                                                fill="#83839F" />
+                                             <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M8.69452 4.67342C9.03653 4.67342 9.31379 4.95068 9.31379 5.29269V8.67801C9.31379 8.80479 9.3622 8.98855 9.46984 9.17731C9.57751 9.36611 9.8194 9.56544 9.8194 9.56544L12.3807 11.0939C12.6744 11.2692 12.7704 11.6494 12.5951 11.9431C12.4198 12.2368 12.0397 12.3328 11.746 12.1575L9.18799 10.6309C9.18799 10.6309 8.57926 10.1158 8.39397 9.79086C8.20849 9.46563 8.07525 9.07141 8.07525 8.67801V5.29269C8.07525 4.95068 8.35251 4.67342 8.69452 4.67342Z"
+                                                fill="#83839F" />
+                                             <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M0 9C0 4.03179 4.03179 0 9 0C13.9682 0 18 4.03179 18 9C18 13.9682 13.9682 18 9 18C4.03179 18 0 13.9682 0 9ZM9 0.247706C4.16859 0.247706 0.247706 4.16859 0.247706 9C0.247706 13.8314 4.16859 17.7523 9 17.7523C13.8314 17.7523 17.7523 13.8314 17.7523 9C17.7523 4.16859 13.8314 0.247706 9 0.247706ZM9 1.48624C4.85262 1.48624 1.48624 4.85262 1.48624 9C1.48624 13.1474 4.85262 16.5138 9 16.5138C13.1474 16.5138 16.5138 13.1474 16.5138 9C16.5138 4.85262 13.1474 1.48624 9 1.48624ZM1.23853 9C1.23853 4.71581 4.71581 1.23853 9 1.23853C13.2842 1.23853 16.7615 4.71581 16.7615 9C16.7615 13.2842 13.2842 16.7615 9 16.7615C4.71581 16.7615 1.23853 13.2842 1.23853 9ZM7.95138 5.29267C7.95138 4.88226 8.28409 4.54955 8.6945 4.54955C9.10491 4.54955 9.43762 4.88226 9.43762 5.29267V8.67799C9.43762 8.77816 9.47758 8.94088 9.57741 9.11594C9.62273 9.1954 9.70041 9.28292 9.77226 9.35429C9.80725 9.38904 9.83911 9.41826 9.86215 9.43873C9.86785 9.44379 9.87299 9.4483 9.87748 9.45221C9.88206 9.45619 9.88598 9.45956 9.88914 9.46225L9.89144 9.4642L12.4441 10.9876C12.7966 11.1979 12.9118 11.6541 12.7014 12.0065C12.4911 12.3589 12.0349 12.4741 11.6825 12.2638L9.1245 10.7373C9.11867 10.7338 9.11314 10.7298 9.10796 10.7255L9.10597 10.7238L9.10058 10.7192L9.08039 10.7018C9.06301 10.6867 9.03807 10.665 9.00762 10.6379C8.94676 10.5837 8.86358 10.508 8.77439 10.4218C8.59992 10.2532 8.38892 10.032 8.28636 9.8522C8.09312 9.51335 7.95138 9.09808 7.95138 8.67799V5.29267ZM9.26042 10.5299L11.8094 12.0511C12.0444 12.1913 12.3485 12.1145 12.4887 11.8796C12.6289 11.6446 12.5521 11.3405 12.3172 11.2003L9.75591 9.67178C9.75054 9.66858 9.74543 9.66498 9.74061 9.661L9.73954 9.66012L9.7371 9.65808L9.72841 9.65073C9.72101 9.64442 9.71051 9.63535 9.69765 9.62393C9.67197 9.60112 9.63664 9.56871 9.59769 9.53003C9.52168 9.45453 9.42459 9.34798 9.36224 9.23865C9.24678 9.03618 9.18991 8.83138 9.18991 8.67799V5.29267C9.18991 5.01906 8.96811 4.79726 8.6945 4.79726C8.42089 4.79726 8.19909 5.01906 8.19909 5.29267V8.67799C8.19909 9.04471 8.32383 9.41788 8.50153 9.72949C8.58427 9.87456 8.77028 10.0734 8.9465 10.2437C9.03265 10.3269 9.11323 10.4003 9.17231 10.4528C9.20181 10.4791 9.22588 10.5001 9.24251 10.5145L9.26042 10.5299Z"
+                                                fill="#83839F" />
+                                          </svg>
+                                       </label>
+                                       <input type="text" class="date-range duration-time duration-time-activator"
+                                          id="startTime" name="startTime" value="" />
+                                    </fieldset>
+                                 </div>
+                              </div>
+                           </div>
+
+                           <div class="col-md-5 mb-20">
+                              <div class="custom-selection schedule">
+                                 <div class="dropdown dropdwon-3">
+                                    <fieldset class="multi-date-range">
+                                       <label for="endTime" class="position-absolute text-nowrap">
+                                          <span class="daterange-label-text">End Time</span>
+                                       </label>
+                                       <label for="endTime" class="label-img text-nowrap">
+                                          <svg width="18" height="18" class="daterange-svg-icon" viewBox="0 0 18 18"
+                                             fill="none" xmlns="http://www.w3.org/2000/svg">
+                                             <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.00002 1.36241C4.78423 1.36241 1.36241 4.78423 1.36241 9.00002C1.36241 13.2158 4.78423 16.6376 9.00002 16.6376C13.2158 16.6376 16.6376 13.2158 16.6376 9.00002C16.6376 4.78423 13.2158 1.36241 9.00002 1.36241ZM0.123873 9.00002C0.123873 4.10021 4.10021 0.123873 9.00002 0.123873C13.8998 0.123873 17.8762 4.10021 17.8762 9.00002C17.8762 13.8998 13.8998 17.8762 9.00002 17.8762C4.10021 17.8762 0.123873 13.8998 0.123873 9.00002Z"
+                                                fill="#83839F" />
+                                             <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M8.69452 4.67342C9.03653 4.67342 9.31379 4.95068 9.31379 5.29269V8.67801C9.31379 8.80479 9.3622 8.98855 9.46984 9.17731C9.57751 9.36611 9.8194 9.56544 9.8194 9.56544L12.3807 11.0939C12.6744 11.2692 12.7704 11.6494 12.5951 11.9431C12.4198 12.2368 12.0397 12.3328 11.746 12.1575L9.18799 10.6309C9.18799 10.6309 8.57926 10.1158 8.39397 9.79086C8.20849 9.46563 8.07525 9.07141 8.07525 8.67801V5.29269C8.07525 4.95068 8.35251 4.67342 8.69452 4.67342Z"
+                                                fill="#83839F" />
+                                             <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M0 9C0 4.03179 4.03179 0 9 0C13.9682 0 18 4.03179 18 9C18 13.9682 13.9682 18 9 18C4.03179 18 0 13.9682 0 9ZM9 0.247706C4.16859 0.247706 0.247706 4.16859 0.247706 9C0.247706 13.8314 4.16859 17.7523 9 17.7523C13.8314 17.7523 17.7523 13.8314 17.7523 9C17.7523 4.16859 13.8314 0.247706 9 0.247706ZM9 1.48624C4.85262 1.48624 1.48624 4.85262 1.48624 9C1.48624 13.1474 4.85262 16.5138 9 16.5138C13.1474 16.5138 16.5138 13.1474 16.5138 9C16.5138 4.85262 13.1474 1.48624 9 1.48624ZM1.23853 9C1.23853 4.71581 4.71581 1.23853 9 1.23853C13.2842 1.23853 16.7615 4.71581 16.7615 9C16.7615 13.2842 13.2842 16.7615 9 16.7615C4.71581 16.7615 1.23853 13.2842 1.23853 9ZM7.95138 5.29267C7.95138 4.88226 8.28409 4.54955 8.6945 4.54955C9.10491 4.54955 9.43762 4.88226 9.43762 5.29267V8.67799C9.43762 8.77816 9.47758 8.94088 9.57741 9.11594C9.62273 9.1954 9.70041 9.28292 9.77226 9.35429C9.80725 9.38904 9.83911 9.41826 9.86215 9.43873C9.86785 9.44379 9.87299 9.4483 9.87748 9.45221C9.88206 9.45619 9.88598 9.45956 9.88914 9.46225L9.89144 9.4642L12.4441 10.9876C12.7966 11.1979 12.9118 11.6541 12.7014 12.0065C12.4911 12.3589 12.0349 12.4741 11.6825 12.2638L9.1245 10.7373C9.11867 10.7338 9.11314 10.7298 9.10796 10.7255L9.10597 10.7238L9.10058 10.7192L9.08039 10.7018C9.06301 10.6867 9.03807 10.665 9.00762 10.6379C8.94676 10.5837 8.86358 10.508 8.77439 10.4218C8.59992 10.2532 8.38892 10.032 8.28636 9.8522C8.09312 9.51335 7.95138 9.09808 7.95138 8.67799V5.29267ZM9.26042 10.5299L11.8094 12.0511C12.0444 12.1913 12.3485 12.1145 12.4887 11.8796C12.6289 11.6446 12.5521 11.3405 12.3172 11.2003L9.75591 9.67178C9.75054 9.66858 9.74543 9.66498 9.74061 9.661L9.73954 9.66012L9.7371 9.65808L9.72841 9.65073C9.72101 9.64442 9.71051 9.63535 9.69765 9.62393C9.67197 9.60112 9.63664 9.56871 9.59769 9.53003C9.52168 9.45453 9.42459 9.34798 9.36224 9.23865C9.24678 9.03618 9.18991 8.83138 9.18991 8.67799V5.29267C9.18991 5.01906 8.96811 4.79726 8.6945 4.79726C8.42089 4.79726 8.19909 5.01906 8.19909 5.29267V8.67799C8.19909 9.04471 8.32383 9.41788 8.50153 9.72949C8.58427 9.87456 8.77028 10.0734 8.9465 10.2437C9.03265 10.3269 9.11323 10.4003 9.17231 10.4528C9.20181 10.4791 9.22588 10.5001 9.24251 10.5145L9.26042 10.5299Z"
+                                                fill="#83839F" />
+                                          </svg>
+                                       </label>
+                                       <input type="text" class="date-range duration-time duration-time-activator"
+                                          id="endTime" name="endTime" value="" />
+                                    </fieldset>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="row">
+                        <div class="d-flex align-items-center w-100 pl-20 pr-20">
+                           <div class="col-md-2 mb-20">
+                              <div class="client-settings-checkbox">
+                                 <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheck-3">
+                                    <label class="custom-control-label" for="customCheck-3">
+                                       <span class="fz14 text-uppercase">mon</span>
+                                    </label>
+                                 </div>
+                              </div>
+                           </div>
+
+                           <div class="col-md-5 mb-20">
+                              <div class="custom-selection schedule">
+                                 <div class="dropdown dropdwon-3">
+                                    <fieldset class="multi-date-range">
+                                       <label for="startTime" class="position-absolute text-nowrap">
+                                          <span class="daterange-label-text">Start Time</span>
+                                       </label>
+                                       <label for="startTime" class="label-img text-nowrap">
+                                          <svg width="18" height="18" class="daterange-svg-icon" viewBox="0 0 18 18"
+                                             fill="none" xmlns="http://www.w3.org/2000/svg">
+                                             <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.00002 1.36241C4.78423 1.36241 1.36241 4.78423 1.36241 9.00002C1.36241 13.2158 4.78423 16.6376 9.00002 16.6376C13.2158 16.6376 16.6376 13.2158 16.6376 9.00002C16.6376 4.78423 13.2158 1.36241 9.00002 1.36241ZM0.123873 9.00002C0.123873 4.10021 4.10021 0.123873 9.00002 0.123873C13.8998 0.123873 17.8762 4.10021 17.8762 9.00002C17.8762 13.8998 13.8998 17.8762 9.00002 17.8762C4.10021 17.8762 0.123873 13.8998 0.123873 9.00002Z"
+                                                fill="#83839F" />
+                                             <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M8.69452 4.67342C9.03653 4.67342 9.31379 4.95068 9.31379 5.29269V8.67801C9.31379 8.80479 9.3622 8.98855 9.46984 9.17731C9.57751 9.36611 9.8194 9.56544 9.8194 9.56544L12.3807 11.0939C12.6744 11.2692 12.7704 11.6494 12.5951 11.9431C12.4198 12.2368 12.0397 12.3328 11.746 12.1575L9.18799 10.6309C9.18799 10.6309 8.57926 10.1158 8.39397 9.79086C8.20849 9.46563 8.07525 9.07141 8.07525 8.67801V5.29269C8.07525 4.95068 8.35251 4.67342 8.69452 4.67342Z"
+                                                fill="#83839F" />
+                                             <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M0 9C0 4.03179 4.03179 0 9 0C13.9682 0 18 4.03179 18 9C18 13.9682 13.9682 18 9 18C4.03179 18 0 13.9682 0 9ZM9 0.247706C4.16859 0.247706 0.247706 4.16859 0.247706 9C0.247706 13.8314 4.16859 17.7523 9 17.7523C13.8314 17.7523 17.7523 13.8314 17.7523 9C17.7523 4.16859 13.8314 0.247706 9 0.247706ZM9 1.48624C4.85262 1.48624 1.48624 4.85262 1.48624 9C1.48624 13.1474 4.85262 16.5138 9 16.5138C13.1474 16.5138 16.5138 13.1474 16.5138 9C16.5138 4.85262 13.1474 1.48624 9 1.48624ZM1.23853 9C1.23853 4.71581 4.71581 1.23853 9 1.23853C13.2842 1.23853 16.7615 4.71581 16.7615 9C16.7615 13.2842 13.2842 16.7615 9 16.7615C4.71581 16.7615 1.23853 13.2842 1.23853 9ZM7.95138 5.29267C7.95138 4.88226 8.28409 4.54955 8.6945 4.54955C9.10491 4.54955 9.43762 4.88226 9.43762 5.29267V8.67799C9.43762 8.77816 9.47758 8.94088 9.57741 9.11594C9.62273 9.1954 9.70041 9.28292 9.77226 9.35429C9.80725 9.38904 9.83911 9.41826 9.86215 9.43873C9.86785 9.44379 9.87299 9.4483 9.87748 9.45221C9.88206 9.45619 9.88598 9.45956 9.88914 9.46225L9.89144 9.4642L12.4441 10.9876C12.7966 11.1979 12.9118 11.6541 12.7014 12.0065C12.4911 12.3589 12.0349 12.4741 11.6825 12.2638L9.1245 10.7373C9.11867 10.7338 9.11314 10.7298 9.10796 10.7255L9.10597 10.7238L9.10058 10.7192L9.08039 10.7018C9.06301 10.6867 9.03807 10.665 9.00762 10.6379C8.94676 10.5837 8.86358 10.508 8.77439 10.4218C8.59992 10.2532 8.38892 10.032 8.28636 9.8522C8.09312 9.51335 7.95138 9.09808 7.95138 8.67799V5.29267ZM9.26042 10.5299L11.8094 12.0511C12.0444 12.1913 12.3485 12.1145 12.4887 11.8796C12.6289 11.6446 12.5521 11.3405 12.3172 11.2003L9.75591 9.67178C9.75054 9.66858 9.74543 9.66498 9.74061 9.661L9.73954 9.66012L9.7371 9.65808L9.72841 9.65073C9.72101 9.64442 9.71051 9.63535 9.69765 9.62393C9.67197 9.60112 9.63664 9.56871 9.59769 9.53003C9.52168 9.45453 9.42459 9.34798 9.36224 9.23865C9.24678 9.03618 9.18991 8.83138 9.18991 8.67799V5.29267C9.18991 5.01906 8.96811 4.79726 8.6945 4.79726C8.42089 4.79726 8.19909 5.01906 8.19909 5.29267V8.67799C8.19909 9.04471 8.32383 9.41788 8.50153 9.72949C8.58427 9.87456 8.77028 10.0734 8.9465 10.2437C9.03265 10.3269 9.11323 10.4003 9.17231 10.4528C9.20181 10.4791 9.22588 10.5001 9.24251 10.5145L9.26042 10.5299Z"
+                                                fill="#83839F" />
+                                          </svg>
+                                       </label>
+                                       <input type="text" class="date-range duration-time duration-time-activator"
+                                          id="startTime" name="startTime" value="" />
+                                    </fieldset>
+                                 </div>
+                              </div>
+                           </div>
+
+                           <div class="col-md-5 mb-20">
+                              <div class="custom-selection schedule">
+                                 <div class="dropdown dropdwon-3">
+                                    <fieldset class="multi-date-range">
+                                       <label for="endTime" class="position-absolute text-nowrap">
+                                          <span class="daterange-label-text">End Time</span>
+                                       </label>
+                                       <label for="endTime" class="label-img text-nowrap">
+                                          <svg width="18" height="18" class="daterange-svg-icon" viewBox="0 0 18 18"
+                                             fill="none" xmlns="http://www.w3.org/2000/svg">
+                                             <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.00002 1.36241C4.78423 1.36241 1.36241 4.78423 1.36241 9.00002C1.36241 13.2158 4.78423 16.6376 9.00002 16.6376C13.2158 16.6376 16.6376 13.2158 16.6376 9.00002C16.6376 4.78423 13.2158 1.36241 9.00002 1.36241ZM0.123873 9.00002C0.123873 4.10021 4.10021 0.123873 9.00002 0.123873C13.8998 0.123873 17.8762 4.10021 17.8762 9.00002C17.8762 13.8998 13.8998 17.8762 9.00002 17.8762C4.10021 17.8762 0.123873 13.8998 0.123873 9.00002Z"
+                                                fill="#83839F" />
+                                             <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M8.69452 4.67342C9.03653 4.67342 9.31379 4.95068 9.31379 5.29269V8.67801C9.31379 8.80479 9.3622 8.98855 9.46984 9.17731C9.57751 9.36611 9.8194 9.56544 9.8194 9.56544L12.3807 11.0939C12.6744 11.2692 12.7704 11.6494 12.5951 11.9431C12.4198 12.2368 12.0397 12.3328 11.746 12.1575L9.18799 10.6309C9.18799 10.6309 8.57926 10.1158 8.39397 9.79086C8.20849 9.46563 8.07525 9.07141 8.07525 8.67801V5.29269C8.07525 4.95068 8.35251 4.67342 8.69452 4.67342Z"
+                                                fill="#83839F" />
+                                             <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M0 9C0 4.03179 4.03179 0 9 0C13.9682 0 18 4.03179 18 9C18 13.9682 13.9682 18 9 18C4.03179 18 0 13.9682 0 9ZM9 0.247706C4.16859 0.247706 0.247706 4.16859 0.247706 9C0.247706 13.8314 4.16859 17.7523 9 17.7523C13.8314 17.7523 17.7523 13.8314 17.7523 9C17.7523 4.16859 13.8314 0.247706 9 0.247706ZM9 1.48624C4.85262 1.48624 1.48624 4.85262 1.48624 9C1.48624 13.1474 4.85262 16.5138 9 16.5138C13.1474 16.5138 16.5138 13.1474 16.5138 9C16.5138 4.85262 13.1474 1.48624 9 1.48624ZM1.23853 9C1.23853 4.71581 4.71581 1.23853 9 1.23853C13.2842 1.23853 16.7615 4.71581 16.7615 9C16.7615 13.2842 13.2842 16.7615 9 16.7615C4.71581 16.7615 1.23853 13.2842 1.23853 9ZM7.95138 5.29267C7.95138 4.88226 8.28409 4.54955 8.6945 4.54955C9.10491 4.54955 9.43762 4.88226 9.43762 5.29267V8.67799C9.43762 8.77816 9.47758 8.94088 9.57741 9.11594C9.62273 9.1954 9.70041 9.28292 9.77226 9.35429C9.80725 9.38904 9.83911 9.41826 9.86215 9.43873C9.86785 9.44379 9.87299 9.4483 9.87748 9.45221C9.88206 9.45619 9.88598 9.45956 9.88914 9.46225L9.89144 9.4642L12.4441 10.9876C12.7966 11.1979 12.9118 11.6541 12.7014 12.0065C12.4911 12.3589 12.0349 12.4741 11.6825 12.2638L9.1245 10.7373C9.11867 10.7338 9.11314 10.7298 9.10796 10.7255L9.10597 10.7238L9.10058 10.7192L9.08039 10.7018C9.06301 10.6867 9.03807 10.665 9.00762 10.6379C8.94676 10.5837 8.86358 10.508 8.77439 10.4218C8.59992 10.2532 8.38892 10.032 8.28636 9.8522C8.09312 9.51335 7.95138 9.09808 7.95138 8.67799V5.29267ZM9.26042 10.5299L11.8094 12.0511C12.0444 12.1913 12.3485 12.1145 12.4887 11.8796C12.6289 11.6446 12.5521 11.3405 12.3172 11.2003L9.75591 9.67178C9.75054 9.66858 9.74543 9.66498 9.74061 9.661L9.73954 9.66012L9.7371 9.65808L9.72841 9.65073C9.72101 9.64442 9.71051 9.63535 9.69765 9.62393C9.67197 9.60112 9.63664 9.56871 9.59769 9.53003C9.52168 9.45453 9.42459 9.34798 9.36224 9.23865C9.24678 9.03618 9.18991 8.83138 9.18991 8.67799V5.29267C9.18991 5.01906 8.96811 4.79726 8.6945 4.79726C8.42089 4.79726 8.19909 5.01906 8.19909 5.29267V8.67799C8.19909 9.04471 8.32383 9.41788 8.50153 9.72949C8.58427 9.87456 8.77028 10.0734 8.9465 10.2437C9.03265 10.3269 9.11323 10.4003 9.17231 10.4528C9.20181 10.4791 9.22588 10.5001 9.24251 10.5145L9.26042 10.5299Z"
+                                                fill="#83839F" />
+                                          </svg>
+                                       </label>
+                                       <input type="text" class="date-range duration-time duration-time-activator"
+                                          id="endTime" name="endTime" value="" />
+                                    </fieldset>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="row">
+                        <div class="d-flex align-items-center w-100 pl-20 pr-20">
+                           <div class="col-md-2 mb-20">
+                              <div class="client-settings-checkbox">
+                                 <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheck-4" checked>
+                                    <label class="custom-control-label" for="customCheck-4">
+                                       <span class="fz14 text-uppercase">Tue</span>
+                                    </label>
+                                 </div>
+                              </div>
+                           </div>
+
+                           <div class="col-md-5 mb-20">
+                              <div class="custom-selection schedule">
+                                 <div class="dropdown dropdwon-3">
+                                    <fieldset class="multi-date-range">
+                                       <label for="startTime" class="position-absolute text-nowrap">
+                                          <span class="daterange-label-text">Start Time</span>
+                                       </label>
+                                       <label for="startTime" class="label-img text-nowrap">
+                                          <svg width="18" height="18" class="daterange-svg-icon" viewBox="0 0 18 18"
+                                             fill="none" xmlns="http://www.w3.org/2000/svg">
+                                             <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.00002 1.36241C4.78423 1.36241 1.36241 4.78423 1.36241 9.00002C1.36241 13.2158 4.78423 16.6376 9.00002 16.6376C13.2158 16.6376 16.6376 13.2158 16.6376 9.00002C16.6376 4.78423 13.2158 1.36241 9.00002 1.36241ZM0.123873 9.00002C0.123873 4.10021 4.10021 0.123873 9.00002 0.123873C13.8998 0.123873 17.8762 4.10021 17.8762 9.00002C17.8762 13.8998 13.8998 17.8762 9.00002 17.8762C4.10021 17.8762 0.123873 13.8998 0.123873 9.00002Z"
+                                                fill="#83839F" />
+                                             <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M8.69452 4.67342C9.03653 4.67342 9.31379 4.95068 9.31379 5.29269V8.67801C9.31379 8.80479 9.3622 8.98855 9.46984 9.17731C9.57751 9.36611 9.8194 9.56544 9.8194 9.56544L12.3807 11.0939C12.6744 11.2692 12.7704 11.6494 12.5951 11.9431C12.4198 12.2368 12.0397 12.3328 11.746 12.1575L9.18799 10.6309C9.18799 10.6309 8.57926 10.1158 8.39397 9.79086C8.20849 9.46563 8.07525 9.07141 8.07525 8.67801V5.29269C8.07525 4.95068 8.35251 4.67342 8.69452 4.67342Z"
+                                                fill="#83839F" />
+                                             <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M0 9C0 4.03179 4.03179 0 9 0C13.9682 0 18 4.03179 18 9C18 13.9682 13.9682 18 9 18C4.03179 18 0 13.9682 0 9ZM9 0.247706C4.16859 0.247706 0.247706 4.16859 0.247706 9C0.247706 13.8314 4.16859 17.7523 9 17.7523C13.8314 17.7523 17.7523 13.8314 17.7523 9C17.7523 4.16859 13.8314 0.247706 9 0.247706ZM9 1.48624C4.85262 1.48624 1.48624 4.85262 1.48624 9C1.48624 13.1474 4.85262 16.5138 9 16.5138C13.1474 16.5138 16.5138 13.1474 16.5138 9C16.5138 4.85262 13.1474 1.48624 9 1.48624ZM1.23853 9C1.23853 4.71581 4.71581 1.23853 9 1.23853C13.2842 1.23853 16.7615 4.71581 16.7615 9C16.7615 13.2842 13.2842 16.7615 9 16.7615C4.71581 16.7615 1.23853 13.2842 1.23853 9ZM7.95138 5.29267C7.95138 4.88226 8.28409 4.54955 8.6945 4.54955C9.10491 4.54955 9.43762 4.88226 9.43762 5.29267V8.67799C9.43762 8.77816 9.47758 8.94088 9.57741 9.11594C9.62273 9.1954 9.70041 9.28292 9.77226 9.35429C9.80725 9.38904 9.83911 9.41826 9.86215 9.43873C9.86785 9.44379 9.87299 9.4483 9.87748 9.45221C9.88206 9.45619 9.88598 9.45956 9.88914 9.46225L9.89144 9.4642L12.4441 10.9876C12.7966 11.1979 12.9118 11.6541 12.7014 12.0065C12.4911 12.3589 12.0349 12.4741 11.6825 12.2638L9.1245 10.7373C9.11867 10.7338 9.11314 10.7298 9.10796 10.7255L9.10597 10.7238L9.10058 10.7192L9.08039 10.7018C9.06301 10.6867 9.03807 10.665 9.00762 10.6379C8.94676 10.5837 8.86358 10.508 8.77439 10.4218C8.59992 10.2532 8.38892 10.032 8.28636 9.8522C8.09312 9.51335 7.95138 9.09808 7.95138 8.67799V5.29267ZM9.26042 10.5299L11.8094 12.0511C12.0444 12.1913 12.3485 12.1145 12.4887 11.8796C12.6289 11.6446 12.5521 11.3405 12.3172 11.2003L9.75591 9.67178C9.75054 9.66858 9.74543 9.66498 9.74061 9.661L9.73954 9.66012L9.7371 9.65808L9.72841 9.65073C9.72101 9.64442 9.71051 9.63535 9.69765 9.62393C9.67197 9.60112 9.63664 9.56871 9.59769 9.53003C9.52168 9.45453 9.42459 9.34798 9.36224 9.23865C9.24678 9.03618 9.18991 8.83138 9.18991 8.67799V5.29267C9.18991 5.01906 8.96811 4.79726 8.6945 4.79726C8.42089 4.79726 8.19909 5.01906 8.19909 5.29267V8.67799C8.19909 9.04471 8.32383 9.41788 8.50153 9.72949C8.58427 9.87456 8.77028 10.0734 8.9465 10.2437C9.03265 10.3269 9.11323 10.4003 9.17231 10.4528C9.20181 10.4791 9.22588 10.5001 9.24251 10.5145L9.26042 10.5299Z"
+                                                fill="#83839F" />
+                                          </svg>
+                                       </label>
+                                       <input type="text" class="date-range duration-time duration-time-activator"
+                                          id="startTime" name="startTime" value="" />
+                                    </fieldset>
+                                 </div>
+                              </div>
+                           </div>
+
+                           <div class="col-md-5 mb-20">
+                              <div class="custom-selection schedule">
+                                 <div class="dropdown dropdwon-3">
+                                    <fieldset class="multi-date-range">
+                                       <label for="endTime" class="position-absolute text-nowrap">
+                                          <span class="daterange-label-text">End Time</span>
+                                       </label>
+                                       <label for="endTime" class="label-img text-nowrap">
+                                          <svg width="18" height="18" class="daterange-svg-icon" viewBox="0 0 18 18"
+                                             fill="none" xmlns="http://www.w3.org/2000/svg">
+                                             <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.00002 1.36241C4.78423 1.36241 1.36241 4.78423 1.36241 9.00002C1.36241 13.2158 4.78423 16.6376 9.00002 16.6376C13.2158 16.6376 16.6376 13.2158 16.6376 9.00002C16.6376 4.78423 13.2158 1.36241 9.00002 1.36241ZM0.123873 9.00002C0.123873 4.10021 4.10021 0.123873 9.00002 0.123873C13.8998 0.123873 17.8762 4.10021 17.8762 9.00002C17.8762 13.8998 13.8998 17.8762 9.00002 17.8762C4.10021 17.8762 0.123873 13.8998 0.123873 9.00002Z"
+                                                fill="#83839F" />
+                                             <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M8.69452 4.67342C9.03653 4.67342 9.31379 4.95068 9.31379 5.29269V8.67801C9.31379 8.80479 9.3622 8.98855 9.46984 9.17731C9.57751 9.36611 9.8194 9.56544 9.8194 9.56544L12.3807 11.0939C12.6744 11.2692 12.7704 11.6494 12.5951 11.9431C12.4198 12.2368 12.0397 12.3328 11.746 12.1575L9.18799 10.6309C9.18799 10.6309 8.57926 10.1158 8.39397 9.79086C8.20849 9.46563 8.07525 9.07141 8.07525 8.67801V5.29269C8.07525 4.95068 8.35251 4.67342 8.69452 4.67342Z"
+                                                fill="#83839F" />
+                                             <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M0 9C0 4.03179 4.03179 0 9 0C13.9682 0 18 4.03179 18 9C18 13.9682 13.9682 18 9 18C4.03179 18 0 13.9682 0 9ZM9 0.247706C4.16859 0.247706 0.247706 4.16859 0.247706 9C0.247706 13.8314 4.16859 17.7523 9 17.7523C13.8314 17.7523 17.7523 13.8314 17.7523 9C17.7523 4.16859 13.8314 0.247706 9 0.247706ZM9 1.48624C4.85262 1.48624 1.48624 4.85262 1.48624 9C1.48624 13.1474 4.85262 16.5138 9 16.5138C13.1474 16.5138 16.5138 13.1474 16.5138 9C16.5138 4.85262 13.1474 1.48624 9 1.48624ZM1.23853 9C1.23853 4.71581 4.71581 1.23853 9 1.23853C13.2842 1.23853 16.7615 4.71581 16.7615 9C16.7615 13.2842 13.2842 16.7615 9 16.7615C4.71581 16.7615 1.23853 13.2842 1.23853 9ZM7.95138 5.29267C7.95138 4.88226 8.28409 4.54955 8.6945 4.54955C9.10491 4.54955 9.43762 4.88226 9.43762 5.29267V8.67799C9.43762 8.77816 9.47758 8.94088 9.57741 9.11594C9.62273 9.1954 9.70041 9.28292 9.77226 9.35429C9.80725 9.38904 9.83911 9.41826 9.86215 9.43873C9.86785 9.44379 9.87299 9.4483 9.87748 9.45221C9.88206 9.45619 9.88598 9.45956 9.88914 9.46225L9.89144 9.4642L12.4441 10.9876C12.7966 11.1979 12.9118 11.6541 12.7014 12.0065C12.4911 12.3589 12.0349 12.4741 11.6825 12.2638L9.1245 10.7373C9.11867 10.7338 9.11314 10.7298 9.10796 10.7255L9.10597 10.7238L9.10058 10.7192L9.08039 10.7018C9.06301 10.6867 9.03807 10.665 9.00762 10.6379C8.94676 10.5837 8.86358 10.508 8.77439 10.4218C8.59992 10.2532 8.38892 10.032 8.28636 9.8522C8.09312 9.51335 7.95138 9.09808 7.95138 8.67799V5.29267ZM9.26042 10.5299L11.8094 12.0511C12.0444 12.1913 12.3485 12.1145 12.4887 11.8796C12.6289 11.6446 12.5521 11.3405 12.3172 11.2003L9.75591 9.67178C9.75054 9.66858 9.74543 9.66498 9.74061 9.661L9.73954 9.66012L9.7371 9.65808L9.72841 9.65073C9.72101 9.64442 9.71051 9.63535 9.69765 9.62393C9.67197 9.60112 9.63664 9.56871 9.59769 9.53003C9.52168 9.45453 9.42459 9.34798 9.36224 9.23865C9.24678 9.03618 9.18991 8.83138 9.18991 8.67799V5.29267C9.18991 5.01906 8.96811 4.79726 8.6945 4.79726C8.42089 4.79726 8.19909 5.01906 8.19909 5.29267V8.67799C8.19909 9.04471 8.32383 9.41788 8.50153 9.72949C8.58427 9.87456 8.77028 10.0734 8.9465 10.2437C9.03265 10.3269 9.11323 10.4003 9.17231 10.4528C9.20181 10.4791 9.22588 10.5001 9.24251 10.5145L9.26042 10.5299Z"
+                                                fill="#83839F" />
+                                          </svg>
+                                       </label>
+                                       <input type="text" class="date-range duration-time duration-time-activator"
+                                          id="endTime" name="endTime" value="" />
+                                    </fieldset>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="row">
+                        <div class="d-flex align-items-center w-100 pl-20 pr-20">
+                           <div class="col-md-2 mb-20">
+                              <div class="client-settings-checkbox">
+                                 <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheck-5">
+                                    <label class="custom-control-label" for="customCheck-5">
+                                       <span class="fz14 text-uppercase">WED</span>
+                                    </label>
+                                 </div>
+                              </div>
+                           </div>
+
+                           <div class="col-md-5 mb-20">
+                              <div class="custom-selection schedule">
+                                 <div class="dropdown dropdwon-3">
+                                    <fieldset class="multi-date-range">
+                                       <label for="startTime" class="position-absolute text-nowrap">
+                                          <span class="daterange-label-text">Start Time</span>
+                                       </label>
+                                       <label for="startTime" class="label-img text-nowrap">
+                                          <svg width="18" height="18" class="daterange-svg-icon" viewBox="0 0 18 18"
+                                             fill="none" xmlns="http://www.w3.org/2000/svg">
+                                             <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.00002 1.36241C4.78423 1.36241 1.36241 4.78423 1.36241 9.00002C1.36241 13.2158 4.78423 16.6376 9.00002 16.6376C13.2158 16.6376 16.6376 13.2158 16.6376 9.00002C16.6376 4.78423 13.2158 1.36241 9.00002 1.36241ZM0.123873 9.00002C0.123873 4.10021 4.10021 0.123873 9.00002 0.123873C13.8998 0.123873 17.8762 4.10021 17.8762 9.00002C17.8762 13.8998 13.8998 17.8762 9.00002 17.8762C4.10021 17.8762 0.123873 13.8998 0.123873 9.00002Z"
+                                                fill="#83839F" />
+                                             <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M8.69452 4.67342C9.03653 4.67342 9.31379 4.95068 9.31379 5.29269V8.67801C9.31379 8.80479 9.3622 8.98855 9.46984 9.17731C9.57751 9.36611 9.8194 9.56544 9.8194 9.56544L12.3807 11.0939C12.6744 11.2692 12.7704 11.6494 12.5951 11.9431C12.4198 12.2368 12.0397 12.3328 11.746 12.1575L9.18799 10.6309C9.18799 10.6309 8.57926 10.1158 8.39397 9.79086C8.20849 9.46563 8.07525 9.07141 8.07525 8.67801V5.29269C8.07525 4.95068 8.35251 4.67342 8.69452 4.67342Z"
+                                                fill="#83839F" />
+                                             <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M0 9C0 4.03179 4.03179 0 9 0C13.9682 0 18 4.03179 18 9C18 13.9682 13.9682 18 9 18C4.03179 18 0 13.9682 0 9ZM9 0.247706C4.16859 0.247706 0.247706 4.16859 0.247706 9C0.247706 13.8314 4.16859 17.7523 9 17.7523C13.8314 17.7523 17.7523 13.8314 17.7523 9C17.7523 4.16859 13.8314 0.247706 9 0.247706ZM9 1.48624C4.85262 1.48624 1.48624 4.85262 1.48624 9C1.48624 13.1474 4.85262 16.5138 9 16.5138C13.1474 16.5138 16.5138 13.1474 16.5138 9C16.5138 4.85262 13.1474 1.48624 9 1.48624ZM1.23853 9C1.23853 4.71581 4.71581 1.23853 9 1.23853C13.2842 1.23853 16.7615 4.71581 16.7615 9C16.7615 13.2842 13.2842 16.7615 9 16.7615C4.71581 16.7615 1.23853 13.2842 1.23853 9ZM7.95138 5.29267C7.95138 4.88226 8.28409 4.54955 8.6945 4.54955C9.10491 4.54955 9.43762 4.88226 9.43762 5.29267V8.67799C9.43762 8.77816 9.47758 8.94088 9.57741 9.11594C9.62273 9.1954 9.70041 9.28292 9.77226 9.35429C9.80725 9.38904 9.83911 9.41826 9.86215 9.43873C9.86785 9.44379 9.87299 9.4483 9.87748 9.45221C9.88206 9.45619 9.88598 9.45956 9.88914 9.46225L9.89144 9.4642L12.4441 10.9876C12.7966 11.1979 12.9118 11.6541 12.7014 12.0065C12.4911 12.3589 12.0349 12.4741 11.6825 12.2638L9.1245 10.7373C9.11867 10.7338 9.11314 10.7298 9.10796 10.7255L9.10597 10.7238L9.10058 10.7192L9.08039 10.7018C9.06301 10.6867 9.03807 10.665 9.00762 10.6379C8.94676 10.5837 8.86358 10.508 8.77439 10.4218C8.59992 10.2532 8.38892 10.032 8.28636 9.8522C8.09312 9.51335 7.95138 9.09808 7.95138 8.67799V5.29267ZM9.26042 10.5299L11.8094 12.0511C12.0444 12.1913 12.3485 12.1145 12.4887 11.8796C12.6289 11.6446 12.5521 11.3405 12.3172 11.2003L9.75591 9.67178C9.75054 9.66858 9.74543 9.66498 9.74061 9.661L9.73954 9.66012L9.7371 9.65808L9.72841 9.65073C9.72101 9.64442 9.71051 9.63535 9.69765 9.62393C9.67197 9.60112 9.63664 9.56871 9.59769 9.53003C9.52168 9.45453 9.42459 9.34798 9.36224 9.23865C9.24678 9.03618 9.18991 8.83138 9.18991 8.67799V5.29267C9.18991 5.01906 8.96811 4.79726 8.6945 4.79726C8.42089 4.79726 8.19909 5.01906 8.19909 5.29267V8.67799C8.19909 9.04471 8.32383 9.41788 8.50153 9.72949C8.58427 9.87456 8.77028 10.0734 8.9465 10.2437C9.03265 10.3269 9.11323 10.4003 9.17231 10.4528C9.20181 10.4791 9.22588 10.5001 9.24251 10.5145L9.26042 10.5299Z"
+                                                fill="#83839F" />
+                                          </svg>
+                                       </label>
+                                       <input type="text" class="date-range duration-time duration-time-activator"
+                                          id="startTime" name="startTime" value="" />
+                                    </fieldset>
+                                 </div>
+                              </div>
+                           </div>
+
+                           <div class="col-md-5 mb-20">
+                              <div class="custom-selection schedule">
+                                 <div class="dropdown dropdwon-3">
+                                    <fieldset class="multi-date-range">
+                                       <label for="endTime" class="position-absolute text-nowrap">
+                                          <span class="daterange-label-text">End Time</span>
+                                       </label>
+                                       <label for="endTime" class="label-img text-nowrap">
+                                          <svg width="18" height="18" class="daterange-svg-icon" viewBox="0 0 18 18"
+                                             fill="none" xmlns="http://www.w3.org/2000/svg">
+                                             <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.00002 1.36241C4.78423 1.36241 1.36241 4.78423 1.36241 9.00002C1.36241 13.2158 4.78423 16.6376 9.00002 16.6376C13.2158 16.6376 16.6376 13.2158 16.6376 9.00002C16.6376 4.78423 13.2158 1.36241 9.00002 1.36241ZM0.123873 9.00002C0.123873 4.10021 4.10021 0.123873 9.00002 0.123873C13.8998 0.123873 17.8762 4.10021 17.8762 9.00002C17.8762 13.8998 13.8998 17.8762 9.00002 17.8762C4.10021 17.8762 0.123873 13.8998 0.123873 9.00002Z"
+                                                fill="#83839F" />
+                                             <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M8.69452 4.67342C9.03653 4.67342 9.31379 4.95068 9.31379 5.29269V8.67801C9.31379 8.80479 9.3622 8.98855 9.46984 9.17731C9.57751 9.36611 9.8194 9.56544 9.8194 9.56544L12.3807 11.0939C12.6744 11.2692 12.7704 11.6494 12.5951 11.9431C12.4198 12.2368 12.0397 12.3328 11.746 12.1575L9.18799 10.6309C9.18799 10.6309 8.57926 10.1158 8.39397 9.79086C8.20849 9.46563 8.07525 9.07141 8.07525 8.67801V5.29269C8.07525 4.95068 8.35251 4.67342 8.69452 4.67342Z"
+                                                fill="#83839F" />
+                                             <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M0 9C0 4.03179 4.03179 0 9 0C13.9682 0 18 4.03179 18 9C18 13.9682 13.9682 18 9 18C4.03179 18 0 13.9682 0 9ZM9 0.247706C4.16859 0.247706 0.247706 4.16859 0.247706 9C0.247706 13.8314 4.16859 17.7523 9 17.7523C13.8314 17.7523 17.7523 13.8314 17.7523 9C17.7523 4.16859 13.8314 0.247706 9 0.247706ZM9 1.48624C4.85262 1.48624 1.48624 4.85262 1.48624 9C1.48624 13.1474 4.85262 16.5138 9 16.5138C13.1474 16.5138 16.5138 13.1474 16.5138 9C16.5138 4.85262 13.1474 1.48624 9 1.48624ZM1.23853 9C1.23853 4.71581 4.71581 1.23853 9 1.23853C13.2842 1.23853 16.7615 4.71581 16.7615 9C16.7615 13.2842 13.2842 16.7615 9 16.7615C4.71581 16.7615 1.23853 13.2842 1.23853 9ZM7.95138 5.29267C7.95138 4.88226 8.28409 4.54955 8.6945 4.54955C9.10491 4.54955 9.43762 4.88226 9.43762 5.29267V8.67799C9.43762 8.77816 9.47758 8.94088 9.57741 9.11594C9.62273 9.1954 9.70041 9.28292 9.77226 9.35429C9.80725 9.38904 9.83911 9.41826 9.86215 9.43873C9.86785 9.44379 9.87299 9.4483 9.87748 9.45221C9.88206 9.45619 9.88598 9.45956 9.88914 9.46225L9.89144 9.4642L12.4441 10.9876C12.7966 11.1979 12.9118 11.6541 12.7014 12.0065C12.4911 12.3589 12.0349 12.4741 11.6825 12.2638L9.1245 10.7373C9.11867 10.7338 9.11314 10.7298 9.10796 10.7255L9.10597 10.7238L9.10058 10.7192L9.08039 10.7018C9.06301 10.6867 9.03807 10.665 9.00762 10.6379C8.94676 10.5837 8.86358 10.508 8.77439 10.4218C8.59992 10.2532 8.38892 10.032 8.28636 9.8522C8.09312 9.51335 7.95138 9.09808 7.95138 8.67799V5.29267ZM9.26042 10.5299L11.8094 12.0511C12.0444 12.1913 12.3485 12.1145 12.4887 11.8796C12.6289 11.6446 12.5521 11.3405 12.3172 11.2003L9.75591 9.67178C9.75054 9.66858 9.74543 9.66498 9.74061 9.661L9.73954 9.66012L9.7371 9.65808L9.72841 9.65073C9.72101 9.64442 9.71051 9.63535 9.69765 9.62393C9.67197 9.60112 9.63664 9.56871 9.59769 9.53003C9.52168 9.45453 9.42459 9.34798 9.36224 9.23865C9.24678 9.03618 9.18991 8.83138 9.18991 8.67799V5.29267C9.18991 5.01906 8.96811 4.79726 8.6945 4.79726C8.42089 4.79726 8.19909 5.01906 8.19909 5.29267V8.67799C8.19909 9.04471 8.32383 9.41788 8.50153 9.72949C8.58427 9.87456 8.77028 10.0734 8.9465 10.2437C9.03265 10.3269 9.11323 10.4003 9.17231 10.4528C9.20181 10.4791 9.22588 10.5001 9.24251 10.5145L9.26042 10.5299Z"
+                                                fill="#83839F" />
+                                          </svg>
+                                       </label>
+                                       <input type="text" class="date-range duration-time duration-time-activator"
+                                          id="endTime" name="endTime" value="" />
+                                    </fieldset>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="row">
+                        <div class="d-flex align-items-center w-100 pl-20 pr-20">
+                           <div class="col-md-2 mb-20">
+                              <div class="client-settings-checkbox">
+                                 <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheck-6">
+                                    <label class="custom-control-label" for="customCheck-6">
+                                       <span class="fz14 text-uppercase">THU</span>
+                                    </label>
+                                 </div>
+                              </div>
+                           </div>
+
+                           <div class="col-md-5 mb-20">
+                              <div class="custom-selection schedule">
+                                 <div class="dropdown dropdwon-3">
+                                    <fieldset class="multi-date-range">
+                                       <label for="startTime" class="position-absolute text-nowrap">
+                                          <span class="daterange-label-text">Start Time</span>
+                                       </label>
+                                       <label for="startTime" class="label-img text-nowrap">
+                                          <svg width="18" height="18" class="daterange-svg-icon" viewBox="0 0 18 18"
+                                             fill="none" xmlns="http://www.w3.org/2000/svg">
+                                             <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.00002 1.36241C4.78423 1.36241 1.36241 4.78423 1.36241 9.00002C1.36241 13.2158 4.78423 16.6376 9.00002 16.6376C13.2158 16.6376 16.6376 13.2158 16.6376 9.00002C16.6376 4.78423 13.2158 1.36241 9.00002 1.36241ZM0.123873 9.00002C0.123873 4.10021 4.10021 0.123873 9.00002 0.123873C13.8998 0.123873 17.8762 4.10021 17.8762 9.00002C17.8762 13.8998 13.8998 17.8762 9.00002 17.8762C4.10021 17.8762 0.123873 13.8998 0.123873 9.00002Z"
+                                                fill="#83839F" />
+                                             <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M8.69452 4.67342C9.03653 4.67342 9.31379 4.95068 9.31379 5.29269V8.67801C9.31379 8.80479 9.3622 8.98855 9.46984 9.17731C9.57751 9.36611 9.8194 9.56544 9.8194 9.56544L12.3807 11.0939C12.6744 11.2692 12.7704 11.6494 12.5951 11.9431C12.4198 12.2368 12.0397 12.3328 11.746 12.1575L9.18799 10.6309C9.18799 10.6309 8.57926 10.1158 8.39397 9.79086C8.20849 9.46563 8.07525 9.07141 8.07525 8.67801V5.29269C8.07525 4.95068 8.35251 4.67342 8.69452 4.67342Z"
+                                                fill="#83839F" />
+                                             <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M0 9C0 4.03179 4.03179 0 9 0C13.9682 0 18 4.03179 18 9C18 13.9682 13.9682 18 9 18C4.03179 18 0 13.9682 0 9ZM9 0.247706C4.16859 0.247706 0.247706 4.16859 0.247706 9C0.247706 13.8314 4.16859 17.7523 9 17.7523C13.8314 17.7523 17.7523 13.8314 17.7523 9C17.7523 4.16859 13.8314 0.247706 9 0.247706ZM9 1.48624C4.85262 1.48624 1.48624 4.85262 1.48624 9C1.48624 13.1474 4.85262 16.5138 9 16.5138C13.1474 16.5138 16.5138 13.1474 16.5138 9C16.5138 4.85262 13.1474 1.48624 9 1.48624ZM1.23853 9C1.23853 4.71581 4.71581 1.23853 9 1.23853C13.2842 1.23853 16.7615 4.71581 16.7615 9C16.7615 13.2842 13.2842 16.7615 9 16.7615C4.71581 16.7615 1.23853 13.2842 1.23853 9ZM7.95138 5.29267C7.95138 4.88226 8.28409 4.54955 8.6945 4.54955C9.10491 4.54955 9.43762 4.88226 9.43762 5.29267V8.67799C9.43762 8.77816 9.47758 8.94088 9.57741 9.11594C9.62273 9.1954 9.70041 9.28292 9.77226 9.35429C9.80725 9.38904 9.83911 9.41826 9.86215 9.43873C9.86785 9.44379 9.87299 9.4483 9.87748 9.45221C9.88206 9.45619 9.88598 9.45956 9.88914 9.46225L9.89144 9.4642L12.4441 10.9876C12.7966 11.1979 12.9118 11.6541 12.7014 12.0065C12.4911 12.3589 12.0349 12.4741 11.6825 12.2638L9.1245 10.7373C9.11867 10.7338 9.11314 10.7298 9.10796 10.7255L9.10597 10.7238L9.10058 10.7192L9.08039 10.7018C9.06301 10.6867 9.03807 10.665 9.00762 10.6379C8.94676 10.5837 8.86358 10.508 8.77439 10.4218C8.59992 10.2532 8.38892 10.032 8.28636 9.8522C8.09312 9.51335 7.95138 9.09808 7.95138 8.67799V5.29267ZM9.26042 10.5299L11.8094 12.0511C12.0444 12.1913 12.3485 12.1145 12.4887 11.8796C12.6289 11.6446 12.5521 11.3405 12.3172 11.2003L9.75591 9.67178C9.75054 9.66858 9.74543 9.66498 9.74061 9.661L9.73954 9.66012L9.7371 9.65808L9.72841 9.65073C9.72101 9.64442 9.71051 9.63535 9.69765 9.62393C9.67197 9.60112 9.63664 9.56871 9.59769 9.53003C9.52168 9.45453 9.42459 9.34798 9.36224 9.23865C9.24678 9.03618 9.18991 8.83138 9.18991 8.67799V5.29267C9.18991 5.01906 8.96811 4.79726 8.6945 4.79726C8.42089 4.79726 8.19909 5.01906 8.19909 5.29267V8.67799C8.19909 9.04471 8.32383 9.41788 8.50153 9.72949C8.58427 9.87456 8.77028 10.0734 8.9465 10.2437C9.03265 10.3269 9.11323 10.4003 9.17231 10.4528C9.20181 10.4791 9.22588 10.5001 9.24251 10.5145L9.26042 10.5299Z"
+                                                fill="#83839F" />
+                                          </svg>
+                                       </label>
+                                       <input type="text" class="date-range duration-time duration-time-activator"
+                                          id="startTime" name="startTime" value="" />
+                                    </fieldset>
+                                 </div>
+                              </div>
+                           </div>
+
+                           <div class="col-md-5 mb-20">
+                              <div class="custom-selection schedule">
+                                 <div class="dropdown dropdwon-3">
+                                    <fieldset class="multi-date-range">
+                                       <label for="endTime" class="position-absolute text-nowrap">
+                                          <span class="daterange-label-text">End Time</span>
+                                       </label>
+                                       <label for="endTime" class="label-img text-nowrap">
+                                          <svg width="18" height="18" class="daterange-svg-icon" viewBox="0 0 18 18"
+                                             fill="none" xmlns="http://www.w3.org/2000/svg">
+                                             <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.00002 1.36241C4.78423 1.36241 1.36241 4.78423 1.36241 9.00002C1.36241 13.2158 4.78423 16.6376 9.00002 16.6376C13.2158 16.6376 16.6376 13.2158 16.6376 9.00002C16.6376 4.78423 13.2158 1.36241 9.00002 1.36241ZM0.123873 9.00002C0.123873 4.10021 4.10021 0.123873 9.00002 0.123873C13.8998 0.123873 17.8762 4.10021 17.8762 9.00002C17.8762 13.8998 13.8998 17.8762 9.00002 17.8762C4.10021 17.8762 0.123873 13.8998 0.123873 9.00002Z"
+                                                fill="#83839F" />
+                                             <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M8.69452 4.67342C9.03653 4.67342 9.31379 4.95068 9.31379 5.29269V8.67801C9.31379 8.80479 9.3622 8.98855 9.46984 9.17731C9.57751 9.36611 9.8194 9.56544 9.8194 9.56544L12.3807 11.0939C12.6744 11.2692 12.7704 11.6494 12.5951 11.9431C12.4198 12.2368 12.0397 12.3328 11.746 12.1575L9.18799 10.6309C9.18799 10.6309 8.57926 10.1158 8.39397 9.79086C8.20849 9.46563 8.07525 9.07141 8.07525 8.67801V5.29269C8.07525 4.95068 8.35251 4.67342 8.69452 4.67342Z"
+                                                fill="#83839F" />
+                                             <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M0 9C0 4.03179 4.03179 0 9 0C13.9682 0 18 4.03179 18 9C18 13.9682 13.9682 18 9 18C4.03179 18 0 13.9682 0 9ZM9 0.247706C4.16859 0.247706 0.247706 4.16859 0.247706 9C0.247706 13.8314 4.16859 17.7523 9 17.7523C13.8314 17.7523 17.7523 13.8314 17.7523 9C17.7523 4.16859 13.8314 0.247706 9 0.247706ZM9 1.48624C4.85262 1.48624 1.48624 4.85262 1.48624 9C1.48624 13.1474 4.85262 16.5138 9 16.5138C13.1474 16.5138 16.5138 13.1474 16.5138 9C16.5138 4.85262 13.1474 1.48624 9 1.48624ZM1.23853 9C1.23853 4.71581 4.71581 1.23853 9 1.23853C13.2842 1.23853 16.7615 4.71581 16.7615 9C16.7615 13.2842 13.2842 16.7615 9 16.7615C4.71581 16.7615 1.23853 13.2842 1.23853 9ZM7.95138 5.29267C7.95138 4.88226 8.28409 4.54955 8.6945 4.54955C9.10491 4.54955 9.43762 4.88226 9.43762 5.29267V8.67799C9.43762 8.77816 9.47758 8.94088 9.57741 9.11594C9.62273 9.1954 9.70041 9.28292 9.77226 9.35429C9.80725 9.38904 9.83911 9.41826 9.86215 9.43873C9.86785 9.44379 9.87299 9.4483 9.87748 9.45221C9.88206 9.45619 9.88598 9.45956 9.88914 9.46225L9.89144 9.4642L12.4441 10.9876C12.7966 11.1979 12.9118 11.6541 12.7014 12.0065C12.4911 12.3589 12.0349 12.4741 11.6825 12.2638L9.1245 10.7373C9.11867 10.7338 9.11314 10.7298 9.10796 10.7255L9.10597 10.7238L9.10058 10.7192L9.08039 10.7018C9.06301 10.6867 9.03807 10.665 9.00762 10.6379C8.94676 10.5837 8.86358 10.508 8.77439 10.4218C8.59992 10.2532 8.38892 10.032 8.28636 9.8522C8.09312 9.51335 7.95138 9.09808 7.95138 8.67799V5.29267ZM9.26042 10.5299L11.8094 12.0511C12.0444 12.1913 12.3485 12.1145 12.4887 11.8796C12.6289 11.6446 12.5521 11.3405 12.3172 11.2003L9.75591 9.67178C9.75054 9.66858 9.74543 9.66498 9.74061 9.661L9.73954 9.66012L9.7371 9.65808L9.72841 9.65073C9.72101 9.64442 9.71051 9.63535 9.69765 9.62393C9.67197 9.60112 9.63664 9.56871 9.59769 9.53003C9.52168 9.45453 9.42459 9.34798 9.36224 9.23865C9.24678 9.03618 9.18991 8.83138 9.18991 8.67799V5.29267C9.18991 5.01906 8.96811 4.79726 8.6945 4.79726C8.42089 4.79726 8.19909 5.01906 8.19909 5.29267V8.67799C8.19909 9.04471 8.32383 9.41788 8.50153 9.72949C8.58427 9.87456 8.77028 10.0734 8.9465 10.2437C9.03265 10.3269 9.11323 10.4003 9.17231 10.4528C9.20181 10.4791 9.22588 10.5001 9.24251 10.5145L9.26042 10.5299Z"
+                                                fill="#83839F" />
+                                          </svg>
+                                       </label>
+                                       <input type="text" class="date-range duration-time duration-time-activator"
+                                          id="endTime" name="endTime" value="" />
+                                    </fieldset>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="row">
+                        <div class="d-flex align-items-center w-100 pl-20 pr-20">
+                           <div class="col-md-2 mb-20">
+                              <div class="client-settings-checkbox">
+                                 <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheck-7" checked>
+                                    <label class="custom-control-label" for="customCheck-7">
+                                       <span class="fz14 text-uppercase">FRI</span>
+                                    </label>
+                                 </div>
+                              </div>
+                           </div>
+
+                           <div class="col-md-5 mb-20">
+                              <div class="custom-selection schedule">
+                                 <div class="dropdown dropdwon-3">
+                                    <fieldset class="multi-date-range">
+                                       <label for="startTime" class="position-absolute text-nowrap">
+                                          <span class="daterange-label-text">Start Time</span>
+                                       </label>
+                                       <label for="startTime" class="label-img text-nowrap">
+                                          <svg width="18" height="18" class="daterange-svg-icon" viewBox="0 0 18 18"
+                                             fill="none" xmlns="http://www.w3.org/2000/svg">
+                                             <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.00002 1.36241C4.78423 1.36241 1.36241 4.78423 1.36241 9.00002C1.36241 13.2158 4.78423 16.6376 9.00002 16.6376C13.2158 16.6376 16.6376 13.2158 16.6376 9.00002C16.6376 4.78423 13.2158 1.36241 9.00002 1.36241ZM0.123873 9.00002C0.123873 4.10021 4.10021 0.123873 9.00002 0.123873C13.8998 0.123873 17.8762 4.10021 17.8762 9.00002C17.8762 13.8998 13.8998 17.8762 9.00002 17.8762C4.10021 17.8762 0.123873 13.8998 0.123873 9.00002Z"
+                                                fill="#83839F" />
+                                             <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M8.69452 4.67342C9.03653 4.67342 9.31379 4.95068 9.31379 5.29269V8.67801C9.31379 8.80479 9.3622 8.98855 9.46984 9.17731C9.57751 9.36611 9.8194 9.56544 9.8194 9.56544L12.3807 11.0939C12.6744 11.2692 12.7704 11.6494 12.5951 11.9431C12.4198 12.2368 12.0397 12.3328 11.746 12.1575L9.18799 10.6309C9.18799 10.6309 8.57926 10.1158 8.39397 9.79086C8.20849 9.46563 8.07525 9.07141 8.07525 8.67801V5.29269C8.07525 4.95068 8.35251 4.67342 8.69452 4.67342Z"
+                                                fill="#83839F" />
+                                             <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M0 9C0 4.03179 4.03179 0 9 0C13.9682 0 18 4.03179 18 9C18 13.9682 13.9682 18 9 18C4.03179 18 0 13.9682 0 9ZM9 0.247706C4.16859 0.247706 0.247706 4.16859 0.247706 9C0.247706 13.8314 4.16859 17.7523 9 17.7523C13.8314 17.7523 17.7523 13.8314 17.7523 9C17.7523 4.16859 13.8314 0.247706 9 0.247706ZM9 1.48624C4.85262 1.48624 1.48624 4.85262 1.48624 9C1.48624 13.1474 4.85262 16.5138 9 16.5138C13.1474 16.5138 16.5138 13.1474 16.5138 9C16.5138 4.85262 13.1474 1.48624 9 1.48624ZM1.23853 9C1.23853 4.71581 4.71581 1.23853 9 1.23853C13.2842 1.23853 16.7615 4.71581 16.7615 9C16.7615 13.2842 13.2842 16.7615 9 16.7615C4.71581 16.7615 1.23853 13.2842 1.23853 9ZM7.95138 5.29267C7.95138 4.88226 8.28409 4.54955 8.6945 4.54955C9.10491 4.54955 9.43762 4.88226 9.43762 5.29267V8.67799C9.43762 8.77816 9.47758 8.94088 9.57741 9.11594C9.62273 9.1954 9.70041 9.28292 9.77226 9.35429C9.80725 9.38904 9.83911 9.41826 9.86215 9.43873C9.86785 9.44379 9.87299 9.4483 9.87748 9.45221C9.88206 9.45619 9.88598 9.45956 9.88914 9.46225L9.89144 9.4642L12.4441 10.9876C12.7966 11.1979 12.9118 11.6541 12.7014 12.0065C12.4911 12.3589 12.0349 12.4741 11.6825 12.2638L9.1245 10.7373C9.11867 10.7338 9.11314 10.7298 9.10796 10.7255L9.10597 10.7238L9.10058 10.7192L9.08039 10.7018C9.06301 10.6867 9.03807 10.665 9.00762 10.6379C8.94676 10.5837 8.86358 10.508 8.77439 10.4218C8.59992 10.2532 8.38892 10.032 8.28636 9.8522C8.09312 9.51335 7.95138 9.09808 7.95138 8.67799V5.29267ZM9.26042 10.5299L11.8094 12.0511C12.0444 12.1913 12.3485 12.1145 12.4887 11.8796C12.6289 11.6446 12.5521 11.3405 12.3172 11.2003L9.75591 9.67178C9.75054 9.66858 9.74543 9.66498 9.74061 9.661L9.73954 9.66012L9.7371 9.65808L9.72841 9.65073C9.72101 9.64442 9.71051 9.63535 9.69765 9.62393C9.67197 9.60112 9.63664 9.56871 9.59769 9.53003C9.52168 9.45453 9.42459 9.34798 9.36224 9.23865C9.24678 9.03618 9.18991 8.83138 9.18991 8.67799V5.29267C9.18991 5.01906 8.96811 4.79726 8.6945 4.79726C8.42089 4.79726 8.19909 5.01906 8.19909 5.29267V8.67799C8.19909 9.04471 8.32383 9.41788 8.50153 9.72949C8.58427 9.87456 8.77028 10.0734 8.9465 10.2437C9.03265 10.3269 9.11323 10.4003 9.17231 10.4528C9.20181 10.4791 9.22588 10.5001 9.24251 10.5145L9.26042 10.5299Z"
+                                                fill="#83839F" />
+                                          </svg>
+                                       </label>
+                                       <input type="text" class="date-range duration-time duration-time-activator"
+                                          id="startTime" name="startTime" value="" />
+                                    </fieldset>
+                                 </div>
+                              </div>
+                           </div>
+
+                           <div class="col-md-5 mb-20">
+                              <div class="custom-selection schedule">
+                                 <div class="dropdown dropdwon-3">
+                                    <fieldset class="multi-date-range">
+                                       <label for="endTime" class="position-absolute text-nowrap">
+                                          <span class="daterange-label-text">End Time</span>
+                                       </label>
+                                       <label for="endTime" class="label-img text-nowrap">
+                                          <svg width="18" height="18" class="daterange-svg-icon" viewBox="0 0 18 18"
+                                             fill="none" xmlns="http://www.w3.org/2000/svg">
+                                             <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M9.00002 1.36241C4.78423 1.36241 1.36241 4.78423 1.36241 9.00002C1.36241 13.2158 4.78423 16.6376 9.00002 16.6376C13.2158 16.6376 16.6376 13.2158 16.6376 9.00002C16.6376 4.78423 13.2158 1.36241 9.00002 1.36241ZM0.123873 9.00002C0.123873 4.10021 4.10021 0.123873 9.00002 0.123873C13.8998 0.123873 17.8762 4.10021 17.8762 9.00002C17.8762 13.8998 13.8998 17.8762 9.00002 17.8762C4.10021 17.8762 0.123873 13.8998 0.123873 9.00002Z"
+                                                fill="#83839F" />
+                                             <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M8.69452 4.67342C9.03653 4.67342 9.31379 4.95068 9.31379 5.29269V8.67801C9.31379 8.80479 9.3622 8.98855 9.46984 9.17731C9.57751 9.36611 9.8194 9.56544 9.8194 9.56544L12.3807 11.0939C12.6744 11.2692 12.7704 11.6494 12.5951 11.9431C12.4198 12.2368 12.0397 12.3328 11.746 12.1575L9.18799 10.6309C9.18799 10.6309 8.57926 10.1158 8.39397 9.79086C8.20849 9.46563 8.07525 9.07141 8.07525 8.67801V5.29269C8.07525 4.95068 8.35251 4.67342 8.69452 4.67342Z"
+                                                fill="#83839F" />
+                                             <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M0 9C0 4.03179 4.03179 0 9 0C13.9682 0 18 4.03179 18 9C18 13.9682 13.9682 18 9 18C4.03179 18 0 13.9682 0 9ZM9 0.247706C4.16859 0.247706 0.247706 4.16859 0.247706 9C0.247706 13.8314 4.16859 17.7523 9 17.7523C13.8314 17.7523 17.7523 13.8314 17.7523 9C17.7523 4.16859 13.8314 0.247706 9 0.247706ZM9 1.48624C4.85262 1.48624 1.48624 4.85262 1.48624 9C1.48624 13.1474 4.85262 16.5138 9 16.5138C13.1474 16.5138 16.5138 13.1474 16.5138 9C16.5138 4.85262 13.1474 1.48624 9 1.48624ZM1.23853 9C1.23853 4.71581 4.71581 1.23853 9 1.23853C13.2842 1.23853 16.7615 4.71581 16.7615 9C16.7615 13.2842 13.2842 16.7615 9 16.7615C4.71581 16.7615 1.23853 13.2842 1.23853 9ZM7.95138 5.29267C7.95138 4.88226 8.28409 4.54955 8.6945 4.54955C9.10491 4.54955 9.43762 4.88226 9.43762 5.29267V8.67799C9.43762 8.77816 9.47758 8.94088 9.57741 9.11594C9.62273 9.1954 9.70041 9.28292 9.77226 9.35429C9.80725 9.38904 9.83911 9.41826 9.86215 9.43873C9.86785 9.44379 9.87299 9.4483 9.87748 9.45221C9.88206 9.45619 9.88598 9.45956 9.88914 9.46225L9.89144 9.4642L12.4441 10.9876C12.7966 11.1979 12.9118 11.6541 12.7014 12.0065C12.4911 12.3589 12.0349 12.4741 11.6825 12.2638L9.1245 10.7373C9.11867 10.7338 9.11314 10.7298 9.10796 10.7255L9.10597 10.7238L9.10058 10.7192L9.08039 10.7018C9.06301 10.6867 9.03807 10.665 9.00762 10.6379C8.94676 10.5837 8.86358 10.508 8.77439 10.4218C8.59992 10.2532 8.38892 10.032 8.28636 9.8522C8.09312 9.51335 7.95138 9.09808 7.95138 8.67799V5.29267ZM9.26042 10.5299L11.8094 12.0511C12.0444 12.1913 12.3485 12.1145 12.4887 11.8796C12.6289 11.6446 12.5521 11.3405 12.3172 11.2003L9.75591 9.67178C9.75054 9.66858 9.74543 9.66498 9.74061 9.661L9.73954 9.66012L9.7371 9.65808L9.72841 9.65073C9.72101 9.64442 9.71051 9.63535 9.69765 9.62393C9.67197 9.60112 9.63664 9.56871 9.59769 9.53003C9.52168 9.45453 9.42459 9.34798 9.36224 9.23865C9.24678 9.03618 9.18991 8.83138 9.18991 8.67799V5.29267C9.18991 5.01906 8.96811 4.79726 8.6945 4.79726C8.42089 4.79726 8.19909 5.01906 8.19909 5.29267V8.67799C8.19909 9.04471 8.32383 9.41788 8.50153 9.72949C8.58427 9.87456 8.77028 10.0734 8.9465 10.2437C9.03265 10.3269 9.11323 10.4003 9.17231 10.4528C9.20181 10.4791 9.22588 10.5001 9.24251 10.5145L9.26042 10.5299Z"
+                                                fill="#83839F" />
+                                          </svg>
+                                       </label>
+                                       <input type="text" class="date-range duration-time duration-time-activator"
+                                          id="endTime" name="endTime" value="" />
+                                    </fieldset>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+
+                  </div>
+               </form>
+            </div>
+         </div><!-- Schedule : Custom End -->
+
+
+         <!-- Ad Banners Start -->
+         <div class="campaign-status-bar mb-16">
+            <p class="fz18 fw-700 purleDark-color">Ad Banners : 3</p>
+
+            <button type="button" class="ra-btn ra-btn-blue-bg min-height-32 p-0x12">
+               <span class="pr-2">
+                  <svg width="12" height="12" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path
+                        d="M27.9688 15.9688H15.9688V27.9688H12.0312V15.9688H0.03125V12.0312H12.0312V0.03125H15.9688V12.0312H27.9688V15.9688Z"
+                        fill="#fff" />
+                  </svg>
+               </span>
+               <span>Add New</span>
+            </button>
+         </div>
+
+
+         <!-- Add Groups Item Start -->
+         <div class="card settings-card mb-20">
+            <div class="card-body">
+               <div class="row">
+                  <div class="col-md-3">
+                     <div class="image-box flex-contain-img">
+                        <img src="assets/images/image-2.jpg" alt="Banner Image">
+                     </div>
+                  </div>
+                  <div class="col-md-6">
+                     <h4 class="purleDark-color fz16 fw-600">Sharetrip Banner 300x250</h4>
+                     <p class="purple-light-color fz12 fw-400 mb-2"><span
+                           class="approved green-color fw-500">Approved</span> - Created on 18 June, 21</p>
+                     <p class="purpleLight7-color fz14 fw-400">Square - Image</p>
+                     <p class="purpleLight7-color fz14 fw-400">Adgroup for Chittagong</p>
+                     <a href="https://www.sharetrip.net" class="blue-color-2 fw-400 fz14">www.sharetrip.net</a>
+                  </div>
+                  <div class="col-md-3">
+                     <div class="group-item-wrapper">
+                        <button class="ra-btn btn-ad-groups hold min-height-28">
+                           <span class="pr-2">
+                              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M6 1.12497C3.3076 1.12497 1.12497 3.3076 1.12497 6C1.12497 8.6924 3.3076 10.875 6 10.875C8.6924 10.875 10.875 8.6924 10.875 6C10.875 3.3076 8.6924 1.12497 6 1.12497ZM0.334426 6C0.334426 2.87099 2.87099 0.334426 6 0.334426C9.12901 0.334426 11.6656 2.87099 11.6656 6C11.6656 9.12901 9.12901 11.6656 6 11.6656C2.87099 11.6656 0.334426 9.12901 0.334426 6Z"
+                                    fill="#FC8B49" />
+                                 <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M0.0983607 6C0.0983607 2.74061 2.74061 0.0983607 6 0.0983607C9.25939 0.0983607 11.9016 2.74061 11.9016 6C11.9016 9.25939 9.25939 11.9016 6 11.9016C2.74061 11.9016 0.0983607 9.25939 0.0983607 6ZM6 0.570492C3.00137 0.570492 0.570492 3.00137 0.570492 6C0.570492 8.99863 3.00137 11.4295 6 11.4295C8.99863 11.4295 11.4295 8.99863 11.4295 6C11.4295 3.00137 8.99863 0.570492 6 0.570492ZM6 1.36104C3.43797 1.36104 1.36104 3.43797 1.36104 6C1.36104 8.56203 3.43797 10.639 6 10.639C8.56203 10.639 10.639 8.56203 10.639 6C10.639 3.43797 8.56203 1.36104 6 1.36104ZM0.888906 6C0.888906 3.17722 3.17722 0.888906 6 0.888906C8.82278 0.888906 11.1111 3.17722 11.1111 6C11.1111 8.82278 8.82278 11.1111 6 11.1111C3.17722 11.1111 0.888906 8.82278 0.888906 6Z"
+                                    fill="#FC8B49" />
+                                 <path
+                                    d="M3.78689 4.77049C3.78689 4.36307 4.11717 4.03279 4.52459 4.03279C4.93201 4.03279 5.26229 4.36307 5.26229 4.77049V7.22951C5.26229 7.63693 4.93201 7.96721 4.52459 7.96721C4.11717 7.96721 3.78689 7.63693 3.78689 7.22951V4.77049Z"
+                                    fill="#FC8B49" />
+                                 <path
+                                    d="M6.7377 4.77049C6.7377 4.36307 7.06799 4.03279 7.47541 4.03279C7.88283 4.03279 8.21311 4.36307 8.21311 4.77049V7.22951C8.21311 7.63693 7.88283 7.96721 7.47541 7.96721C7.06799 7.96721 6.7377 7.63693 6.7377 7.22951V4.77049Z"
+                                    fill="#FC8B49" />
+                                 <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M0 6C0 2.68629 2.68629 0 6 0C9.31371 0 12 2.68629 12 6C12 9.31371 9.31371 12 6 12C2.68629 12 0 9.31371 0 6ZM6 0.196721C2.79494 0.196721 0.196721 2.79494 0.196721 6C0.196721 9.20506 2.79494 11.8033 6 11.8033C9.20506 11.8033 11.8033 9.20506 11.8033 6C11.8033 2.79494 9.20506 0.196721 6 0.196721ZM0.236066 6C0.236066 2.81667 2.81667 0.236066 6 0.236066C9.18333 0.236066 11.7639 2.81667 11.7639 6C11.7639 9.18333 9.18333 11.7639 6 11.7639C2.81667 11.7639 0.236066 9.18333 0.236066 6ZM6 0.432787C2.92531 0.432787 0.432787 2.92531 0.432787 6C0.432787 9.07469 2.92531 11.5672 6 11.5672C9.07469 11.5672 11.5672 9.07469 11.5672 6C11.5672 2.92531 9.07469 0.432787 6 0.432787ZM6 0.668852C3.05569 0.668852 0.668852 3.05569 0.668852 6C0.668852 8.94431 3.05569 11.3311 6 11.3311C8.94431 11.3311 11.3311 8.94431 11.3311 6C11.3311 3.05569 8.94431 0.668852 6 0.668852ZM0.472131 6C0.472131 2.94704 2.94704 0.472131 6 0.472131C9.05296 0.472131 11.5279 2.94704 11.5279 6C11.5279 9.05296 9.05296 11.5279 6 11.5279C2.94704 11.5279 0.472131 9.05296 0.472131 6ZM0.790545 6C0.790545 3.1229 3.1229 0.790545 6 0.790545C8.8771 0.790545 11.2095 3.1229 11.2095 6C11.2095 8.8771 8.8771 11.2095 6 11.2095C3.1229 11.2095 0.790545 8.8771 0.790545 6ZM6 0.987266C3.23154 0.987266 0.987266 3.23154 0.987266 6C0.987266 8.76846 3.23154 11.0127 6 11.0127C8.76846 11.0127 11.0127 8.76846 11.0127 6C11.0127 3.23154 8.76846 0.987266 6 0.987266ZM6 1.22333C3.36192 1.22333 1.22333 3.36192 1.22333 6C1.22333 8.63808 3.36192 10.7767 6 10.7767C8.63808 10.7767 10.7767 8.63808 10.7767 6C10.7767 3.36192 8.63808 1.22333 6 1.22333ZM1.02661 6C1.02661 3.25327 3.25327 1.02661 6 1.02661C8.74673 1.02661 10.9734 3.25327 10.9734 6C10.9734 8.74673 8.74673 10.9734 6 10.9734C3.25327 10.9734 1.02661 8.74673 1.02661 6ZM6 1.4594C3.49229 1.4594 1.4594 3.49229 1.4594 6C1.4594 8.5077 3.49229 10.5406 6 10.5406C8.5077 10.5406 10.5406 8.5077 10.5406 6C10.5406 3.49229 8.5077 1.4594 6 1.4594ZM1.26268 6C1.26268 3.38365 3.38365 1.26268 6 1.26268C8.61635 1.26268 10.7373 3.38365 10.7373 6C10.7373 8.61635 8.61635 10.7373 6 10.7373C3.38365 10.7373 1.26268 8.61635 1.26268 6ZM3.68852 4.77049C3.68852 4.30875 4.06284 3.93443 4.52459 3.93443C4.98634 3.93443 5.36066 4.30875 5.36066 4.77049V7.22951C5.36066 7.69125 4.98634 8.06557 4.52459 8.06557C4.06284 8.06557 3.68852 7.69125 3.68852 7.22951V4.77049ZM4.52459 4.13115C4.17149 4.13115 3.88525 4.41739 3.88525 4.77049V7.22951C3.88525 7.58261 4.17149 7.86885 4.52459 7.86885C4.87769 7.86885 5.16393 7.58261 5.16393 7.22951V4.77049C5.16393 4.41739 4.87769 4.13115 4.52459 4.13115ZM6.63934 4.77049C6.63934 4.30875 7.01366 3.93443 7.47541 3.93443C7.93716 3.93443 8.31148 4.30875 8.31148 4.77049V7.22951C8.31148 7.69125 7.93716 8.06557 7.47541 8.06557C7.01366 8.06557 6.63934 7.69125 6.63934 7.22951V4.77049ZM7.47541 4.13115C7.12231 4.13115 6.83607 4.41739 6.83607 4.77049V7.22951C6.83607 7.58261 7.12231 7.86885 7.47541 7.86885C7.82851 7.86885 8.11475 7.58261 8.11475 7.22951V4.77049C8.11475 4.41739 7.82851 4.13115 7.47541 4.13115Z"
+                                    fill="#FC8B49" />
+                              </svg>
+                           </span>
+                           <span>Hold</span>
+                        </button>
+                        <div class="ml-auto">
+                           {% include 'snippets/threeDot.njk' %}
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div> <!-- Add Groups Item End -->
+
+
+         <!-- Add Groups Item Start -->
+         <div class="card settings-card mb-20 ad-activate">
+            <div class="card-body">
+               <div class="row">
+                  <div class="col-md-3">
+                     <div class="image-box flex-contain-img">
+                        <img src="assets/images/image-3.jpg" alt="Banner Image">
+                     </div>
+                  </div>
+                  <div class="col-md-6">
+                     <h4 class="purleDark-color fz16 fw-600">Sharetrip Banner 320x100</h4>
+                     <p class="purple-light-color fz12 fw-400 mb-2"><span
+                           class="approved green-color fw-500">Approved</span> - Created on 18 June, 21</p>
+                     <p class="purpleLight7-color fz14 fw-400">Smartphone Banner - HTML</p>
+                     <p class="purpleLight7-color fz14 fw-400">Adgroup for Chittagong</p>
+                     <a href="https://www.sharetrip.net" class="blue-color-2 fw-400 fz14">www.sharetrip.net</a>
+                  </div>
+                  <div class="col-md-3">
+                     <div class="group-item-wrapper">
+                        <button class="ra-btn btn-ad-groups activate min-height-28">
+                           <span class="pr-2">
+                              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M6 1.12497C3.3076 1.12497 1.12497 3.3076 1.12497 6C1.12497 8.6924 3.3076 10.875 6 10.875C8.6924 10.875 10.875 8.6924 10.875 6C10.875 3.3076 8.6924 1.12497 6 1.12497ZM0.334426 6C0.334426 2.87099 2.87099 0.334426 6 0.334426C9.12901 0.334426 11.6656 2.87099 11.6656 6C11.6656 9.12901 9.12901 11.6656 6 11.6656C2.87099 11.6656 0.334426 9.12901 0.334426 6Z"
+                                    fill="#72BF44" />
+                                 <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M0.0983607 6C0.0983607 2.74061 2.74061 0.0983607 6 0.0983607C9.25938 0.0983607 11.9016 2.74061 11.9016 6C11.9016 9.25938 9.25938 11.9016 6 11.9016C2.74061 11.9016 0.0983607 9.25938 0.0983607 6ZM6 0.570492C3.00137 0.570492 0.570492 3.00137 0.570492 6C0.570492 8.99863 3.00137 11.4295 6 11.4295C8.99863 11.4295 11.4295 8.99863 11.4295 6C11.4295 3.00137 8.99863 0.570492 6 0.570492ZM6 1.36104C3.43797 1.36104 1.36104 3.43797 1.36104 6C1.36104 8.56203 3.43797 10.639 6 10.639C8.56203 10.639 10.639 8.56203 10.639 6C10.639 3.43797 8.56203 1.36104 6 1.36104ZM0.888906 6C0.888906 3.17722 3.17722 0.888906 6 0.888906C8.82278 0.888906 11.1111 3.17722 11.1111 6C11.1111 8.82278 8.82278 11.1111 6 11.1111C3.17722 11.1111 0.888906 8.82278 0.888906 6Z"
+                                    fill="#72BF44" />
+                                 <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M0 6C0 2.68629 2.68629 0 6 0C9.31371 0 12 2.68629 12 6C12 9.31371 9.31371 12 6 12C2.68629 12 0 9.31371 0 6ZM6 0.196721C2.79494 0.196721 0.196721 2.79494 0.196721 6C0.196721 9.20506 2.79494 11.8033 6 11.8033C9.20506 11.8033 11.8033 9.20506 11.8033 6C11.8033 2.79494 9.20506 0.196721 6 0.196721ZM0.236066 6C0.236066 2.81667 2.81667 0.236066 6 0.236066C9.18333 0.236066 11.7639 2.81667 11.7639 6C11.7639 9.18333 9.18333 11.7639 6 11.7639C2.81667 11.7639 0.236066 9.18333 0.236066 6ZM6 0.432787C2.92531 0.432787 0.432787 2.92531 0.432787 6C0.432787 9.07469 2.92531 11.5672 6 11.5672C9.07469 11.5672 11.5672 9.07469 11.5672 6C11.5672 2.92531 9.07469 0.432787 6 0.432787ZM6 0.668852C3.05569 0.668852 0.668852 3.05569 0.668852 6C0.668852 8.94431 3.05569 11.3311 6 11.3311C8.94431 11.3311 11.3311 8.94431 11.3311 6C11.3311 3.05569 8.94431 0.668852 6 0.668852ZM0.472131 6C0.472131 2.94704 2.94704 0.472131 6 0.472131C9.05296 0.472131 11.5279 2.94704 11.5279 6C11.5279 9.05296 9.05296 11.5279 6 11.5279C2.94704 11.5279 0.472131 9.05296 0.472131 6ZM0.790545 6C0.790545 3.1229 3.1229 0.790545 6 0.790545C8.8771 0.790545 11.2095 3.1229 11.2095 6C11.2095 8.8771 8.8771 11.2095 6 11.2095C3.1229 11.2095 0.790545 8.8771 0.790545 6ZM6 0.987266C3.23154 0.987266 0.987266 3.23154 0.987266 6C0.987266 8.76846 3.23154 11.0127 6 11.0127C8.76846 11.0127 11.0127 8.76846 11.0127 6C11.0127 3.23154 8.76846 0.987266 6 0.987266ZM6 1.22333C3.36192 1.22333 1.22333 3.36192 1.22333 6C1.22333 8.63808 3.36192 10.7767 6 10.7767C8.63808 10.7767 10.7767 8.63808 10.7767 6C10.7767 3.36192 8.63808 1.22333 6 1.22333ZM1.02661 6C1.02661 3.25327 3.25327 1.02661 6 1.02661C8.74673 1.02661 10.9734 3.25327 10.9734 6C10.9734 8.74673 8.74673 10.9734 6 10.9734C3.25327 10.9734 1.02661 8.74673 1.02661 6ZM6 1.4594C3.49229 1.4594 1.4594 3.49229 1.4594 6C1.4594 8.5077 3.49229 10.5406 6 10.5406C8.5077 10.5406 10.5406 8.5077 10.5406 6C10.5406 3.49229 8.5077 1.4594 6 1.4594ZM1.26268 6C1.26268 3.38365 3.38365 1.26268 6 1.26268C8.61635 1.26268 10.7373 3.38365 10.7373 6C10.7373 8.61635 8.61635 10.7373 6 10.7373C3.38365 10.7373 1.26268 8.61635 1.26268 6Z"
+                                    fill="#72BF44" />
+                                 <path
+                                    d="M5 7.25259V4.74741C5 4.42793 5.35606 4.23737 5.62188 4.41459L7.50077 5.66718C7.73826 5.82551 7.73826 6.17449 7.50077 6.33282L5.62188 7.58541C5.35606 7.76263 5 7.57207 5 7.25259Z"
+                                    fill="#72BF44" />
+                                 <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M5.5 4.93426V7.06574L7.09861 6L5.5 4.93426ZM4.5 4.74741C4.5 4.02858 5.30113 3.59983 5.89923 3.99856L7.77812 5.25115C8.31248 5.60739 8.31248 6.3926 7.77812 6.74885L5.89923 8.00144C5.30113 8.40017 4.5 7.97142 4.5 7.25259V4.74741Z"
+                                    fill="#72BF44" />
+                              </svg>
+                           </span>
+                           <span>Activate</span>
+                        </button>
+                        <div class="ml-auto">
+                           {% include 'snippets/threeDot.njk' %}
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div> <!-- Add Groups Item End -->
+
+
+         <!-- Add Groups Item Start -->
+         <div class="card settings-card mb-20">
+            <div class="card-body">
+               <div class="row">
+                  <div class="col-md-3">
+                     <div class="image-box flex-contain-img">
+                        <img src="assets/images/image-4.jpg" alt="Banner Image">
+                     </div>
+                  </div>
+                  <div class="col-md-6">
+                     <h4 class="purleDark-color fz16 fw-600">Sharetrip Banner 160x600</h4>
+                     <p class="purple-light-color fz12 fw-400 mb-2"><span
+                           class="pending orangDark4-color fw-500">Pending</span> - Created on 18 June, 21</p>
+                     <p class="purpleLight7-color fz14 fw-400">Skyscrapper - Image</p>
+                     <p class="purpleLight7-color fz14 fw-400">Adgroup for Chittagong</p>
+                     <a href="https://www.sharetrip.net" class="blue-color-2 fw-400 fz14">www.sharetrip.net</a>
+                  </div>
+                  <div class="col-md-3">
+                     <div class="group-item-wrapper">
+                        <button class="ra-btn btn-ad-groups activate min-height-28 d-none">
+                           <span class="pr-2">
+                              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M6 1.12497C3.3076 1.12497 1.12497 3.3076 1.12497 6C1.12497 8.6924 3.3076 10.875 6 10.875C8.6924 10.875 10.875 8.6924 10.875 6C10.875 3.3076 8.6924 1.12497 6 1.12497ZM0.334426 6C0.334426 2.87099 2.87099 0.334426 6 0.334426C9.12901 0.334426 11.6656 2.87099 11.6656 6C11.6656 9.12901 9.12901 11.6656 6 11.6656C2.87099 11.6656 0.334426 9.12901 0.334426 6Z"
+                                    fill="#72BF44" />
+                                 <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M0.0983607 6C0.0983607 2.74061 2.74061 0.0983607 6 0.0983607C9.25938 0.0983607 11.9016 2.74061 11.9016 6C11.9016 9.25938 9.25938 11.9016 6 11.9016C2.74061 11.9016 0.0983607 9.25938 0.0983607 6ZM6 0.570492C3.00137 0.570492 0.570492 3.00137 0.570492 6C0.570492 8.99863 3.00137 11.4295 6 11.4295C8.99863 11.4295 11.4295 8.99863 11.4295 6C11.4295 3.00137 8.99863 0.570492 6 0.570492ZM6 1.36104C3.43797 1.36104 1.36104 3.43797 1.36104 6C1.36104 8.56203 3.43797 10.639 6 10.639C8.56203 10.639 10.639 8.56203 10.639 6C10.639 3.43797 8.56203 1.36104 6 1.36104ZM0.888906 6C0.888906 3.17722 3.17722 0.888906 6 0.888906C8.82278 0.888906 11.1111 3.17722 11.1111 6C11.1111 8.82278 8.82278 11.1111 6 11.1111C3.17722 11.1111 0.888906 8.82278 0.888906 6Z"
+                                    fill="#72BF44" />
+                                 <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M0 6C0 2.68629 2.68629 0 6 0C9.31371 0 12 2.68629 12 6C12 9.31371 9.31371 12 6 12C2.68629 12 0 9.31371 0 6ZM6 0.196721C2.79494 0.196721 0.196721 2.79494 0.196721 6C0.196721 9.20506 2.79494 11.8033 6 11.8033C9.20506 11.8033 11.8033 9.20506 11.8033 6C11.8033 2.79494 9.20506 0.196721 6 0.196721ZM0.236066 6C0.236066 2.81667 2.81667 0.236066 6 0.236066C9.18333 0.236066 11.7639 2.81667 11.7639 6C11.7639 9.18333 9.18333 11.7639 6 11.7639C2.81667 11.7639 0.236066 9.18333 0.236066 6ZM6 0.432787C2.92531 0.432787 0.432787 2.92531 0.432787 6C0.432787 9.07469 2.92531 11.5672 6 11.5672C9.07469 11.5672 11.5672 9.07469 11.5672 6C11.5672 2.92531 9.07469 0.432787 6 0.432787ZM6 0.668852C3.05569 0.668852 0.668852 3.05569 0.668852 6C0.668852 8.94431 3.05569 11.3311 6 11.3311C8.94431 11.3311 11.3311 8.94431 11.3311 6C11.3311 3.05569 8.94431 0.668852 6 0.668852ZM0.472131 6C0.472131 2.94704 2.94704 0.472131 6 0.472131C9.05296 0.472131 11.5279 2.94704 11.5279 6C11.5279 9.05296 9.05296 11.5279 6 11.5279C2.94704 11.5279 0.472131 9.05296 0.472131 6ZM0.790545 6C0.790545 3.1229 3.1229 0.790545 6 0.790545C8.8771 0.790545 11.2095 3.1229 11.2095 6C11.2095 8.8771 8.8771 11.2095 6 11.2095C3.1229 11.2095 0.790545 8.8771 0.790545 6ZM6 0.987266C3.23154 0.987266 0.987266 3.23154 0.987266 6C0.987266 8.76846 3.23154 11.0127 6 11.0127C8.76846 11.0127 11.0127 8.76846 11.0127 6C11.0127 3.23154 8.76846 0.987266 6 0.987266ZM6 1.22333C3.36192 1.22333 1.22333 3.36192 1.22333 6C1.22333 8.63808 3.36192 10.7767 6 10.7767C8.63808 10.7767 10.7767 8.63808 10.7767 6C10.7767 3.36192 8.63808 1.22333 6 1.22333ZM1.02661 6C1.02661 3.25327 3.25327 1.02661 6 1.02661C8.74673 1.02661 10.9734 3.25327 10.9734 6C10.9734 8.74673 8.74673 10.9734 6 10.9734C3.25327 10.9734 1.02661 8.74673 1.02661 6ZM6 1.4594C3.49229 1.4594 1.4594 3.49229 1.4594 6C1.4594 8.5077 3.49229 10.5406 6 10.5406C8.5077 10.5406 10.5406 8.5077 10.5406 6C10.5406 3.49229 8.5077 1.4594 6 1.4594ZM1.26268 6C1.26268 3.38365 3.38365 1.26268 6 1.26268C8.61635 1.26268 10.7373 3.38365 10.7373 6C10.7373 8.61635 8.61635 10.7373 6 10.7373C3.38365 10.7373 1.26268 8.61635 1.26268 6Z"
+                                    fill="#72BF44" />
+                                 <path
+                                    d="M5 7.25259V4.74741C5 4.42793 5.35606 4.23737 5.62188 4.41459L7.50077 5.66718C7.73826 5.82551 7.73826 6.17449 7.50077 6.33282L5.62188 7.58541C5.35606 7.76263 5 7.57207 5 7.25259Z"
+                                    fill="#72BF44" />
+                                 <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M5.5 4.93426V7.06574L7.09861 6L5.5 4.93426ZM4.5 4.74741C4.5 4.02858 5.30113 3.59983 5.89923 3.99856L7.77812 5.25115C8.31248 5.60739 8.31248 6.3926 7.77812 6.74885L5.89923 8.00144C5.30113 8.40017 4.5 7.97142 4.5 7.25259V4.74741Z"
+                                    fill="#72BF44" />
+                              </svg>
+                           </span>
+                           <span>Activate</span>
+                        </button>
+                        <div class="ml-auto">
+                           {% include 'snippets/threeDot.njk' %}
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div> <!-- Add Groups Item End -->
+         <!-- Ad Banners End -->
+      </div>
+   </div>
+   {% endblock %}
