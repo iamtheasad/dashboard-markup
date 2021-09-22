@@ -1166,6 +1166,45 @@ input[type="text"] {
     }
   }
 
+  .client-settings-checkbox {
+
+    .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+      background-color:#457AED;
+      box-shadow: none;
+    }
+
+    .custom-checkbox .custom-control-label span {
+      color: #83839F;
+      font-weight: 500;
+    }
+
+    .custom-checkbox .custom-control-input:checked ~ .custom-control-label span {
+      color: #475364;
+      font-weight: 600;
+    }
+
+    .custom-checkbox .custom-control-label::before {
+      background-color: #FAFAFC;
+      border: 1px solid #E6E9F5;
+      border-radius: 4px;
+    }
+
+    .custom-control-label:hover.custom-control-label::before {
+      box-shadow: none;
+    }
+
+    .custom-control-input:disabled~.custom-control-label::before {
+      background-color: #FAFAFC;
+      border: 1px solid #E6E9F5;
+      opacity: .5;
+    }
+
+    .custom-control-input:disabled:checked~.custom-control-label::before {
+      background-color: #457AED;
+      opacity: .5;
+    }
+  }
+
   .dropdown-search {
     position: relative;
     border-bottom: 1px solid $purpleLight3;
