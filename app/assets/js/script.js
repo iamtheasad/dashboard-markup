@@ -128,6 +128,17 @@ function copyAnyText() {
     $(".btn-copy").html( "Text copied" )
 }
 
+// Tree Menu Collapse Along Screen Width
+function treeMenu(){
+    if(screen.width <= 900) {
+        $('.collapse').collapse(
+           'hide'
+        )
+    }
+}
+
+treeMenu();
+
 
 (function ($) {
     "use strict";
