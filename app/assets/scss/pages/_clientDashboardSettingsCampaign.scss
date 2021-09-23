@@ -57,14 +57,10 @@
 }
 
 .selected-title {
-   padding: 8px 12px;
-   background: $purpleLight4;
-   border-radius: 4px;
-   height: 36px;
-   display: flex;
-
    &.unselected {
-      background: transparent;
+      .selected-title-wrapper {
+         background: transparent;
+      }
 
       .plus {
          display: none;
@@ -91,7 +87,10 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      width: 100%;
+      padding: 8px 12px;
+      background: $purpleLight4;
+      border-radius: 4px;
+      height: 36px;
    }
 
    .tree-play-icon svg {
@@ -102,7 +101,7 @@
       border: none;
       background: transparent;
       line-height: 0px;
-      margin-right: 5px;
+      padding-right: 5px;
 
       svg {
          width: 20px;
@@ -119,7 +118,27 @@
       color: $purple;
       display: flex;
       align-items: center;
+      width: 75%;
    }
+}
+
+.tree-menu-collapse {
+   display: none;
+
+   @media screen and (max-width: 900px) {
+      display: flex;
+      align-items: center;
+      line-height: 0;
+      background: $purpleLight3;
+      width: 18px;
+      height: 16px;
+      border-radius: 2px;
+   }
+}
+
+.treemenu-right {
+   display: flex;
+   align-items: center;
 }
 
 .ellipsis {
@@ -230,8 +249,14 @@
    }
 }
 
-// Modals
+.settings-three-dot {
 
+   @media screen and (max-width: 768px) {
+      justify-content: right;
+   }
+}
+
+// Modals
 .client-settings-modal-all {
    &.loading {
 
