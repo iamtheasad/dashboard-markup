@@ -23,10 +23,6 @@
    max-width: 600px;
    width: 100%;
    margin: 20px;
-
-   @media screen and (max-width: 992px) {
-      width: 100%
-   }
 }
 
 .card {
@@ -48,6 +44,14 @@
          background-color: $white;
          border-radius: 6px;
       }
+   }
+}
+
+.settings-card--settings-campaign {
+   margin-bottom: 20px;
+
+   @media screen and (max-width: 767px) {
+      margin: 10px 15px 20px;
    }
 }
 
@@ -91,6 +95,10 @@
       background: $purpleLight4;
       border-radius: 4px;
       height: 36px;
+
+      @media screen and(max-width: 767px) {
+         margin: 10px 15px;
+      }
    }
 
    .tree-play-icon svg {
@@ -242,6 +250,10 @@
    border: 1px dashed $greenDark;
    padding: 20px 16px;
    border-radius: 4px;
+
+   @media screen and (max-width: 767px) {
+      margin: 0px 15px 15px;
+   }
 
    svg {
       width: 12px;
@@ -421,6 +433,10 @@
    display: flex;
    justify-content: space-between;
    align-items: center;
+
+   @media screen and (max-width: 767px) {
+      margin: 0px 15px;
+   }
 }
 
 .color-box-status {
@@ -581,7 +597,8 @@
 }
 
 .image-box {
-   width: 120px;
+   max-width: 120px;
+   width: 100%;
    height: 120px;
    background: $purpleLight4;
    border: 1px solid $purpleLight3;
@@ -591,13 +608,31 @@
 }
 
 .image-banner-box {
-   width: 600px;
+   max-width: 600px;
+   width: 100%;
    height: 100px;
    background: $purpleLight4;
    border: 1px solid $purpleLight3;
    border-radius: 4px;
    overflow: hidden;
    justify-content: center;
+
+   @media screen and(max-width: 767px) {
+      margin: 10px 15px;
+      width: auto;
+   }
+}
+
+.banner-items-info {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-bottom: 20px;
+
+   @media screen and(max-width: 767px) {
+      margin-left: 15px;
+      margin-right: 15px;
+   }
 }
 
 .tracking-code-area {

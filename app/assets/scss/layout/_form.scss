@@ -698,16 +698,18 @@ input[type="text"] {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    flex-wrap: wrap;
 
     .radio-btn-wrapper {
-      width: 100%;
+      width: 22%;
       display: flex;
       justify-content: center;
       align-items: center;
       margin: 16px;
 
-      &:last-child {
-        margin-left: 0px;
+      @media screen and (max-width: 575px) {
+        width: 46%;
+        margin-bottom: 16px !important;
       }
 
       .radio-btn-input {
@@ -787,6 +789,10 @@ input[type="text"] {
 
       &:not(:last-child) {
         margin-right: 16px;
+
+        @media screen and (max-width: 767px) {
+          margin-right: 0px;
+        }
       }
     }
   }
