@@ -698,18 +698,16 @@ input[type="text"] {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    flex-wrap: wrap;
 
     .radio-btn-wrapper {
-      width: 22%;
+      width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
       margin: 16px;
 
-      @media screen and (max-width: 575px) {
-        width: 46%;
-        margin-bottom: 16px !important;
+      &:last-child {
+        margin-left: 0px;
       }
 
       .radio-btn-input {
@@ -782,6 +780,10 @@ input[type="text"] {
   .campaign-type {
     .settings-radio-group {
       padding: 20px;
+
+      @media screen and (max-width: 575px) {
+        display: unset;
+      }
     }
 
     .radio-btn-wrapper {
@@ -790,9 +792,13 @@ input[type="text"] {
       &:not(:last-child) {
         margin-right: 16px;
 
-        @media screen and (max-width: 767px) {
+        @media screen and (max-width: 575px) {
           margin-right: 0px;
         }
+      }
+
+      @media screen and (max-width: 575px) {
+        padding: 8px 16px;
       }
     }
   }
