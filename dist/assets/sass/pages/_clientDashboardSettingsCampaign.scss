@@ -23,10 +23,6 @@
    max-width: 600px;
    width: 100%;
    margin: 20px;
-
-   @media screen and (max-width: 992px) {
-      width: 100%
-   }
 }
 
 .card {
@@ -48,6 +44,14 @@
          background-color: $white;
          border-radius: 6px;
       }
+   }
+}
+
+.settings-card--settings-campaign {
+   margin-bottom: 20px;
+
+   @media screen and (max-width: 767px) {
+      margin: 10px 15px 20px;
    }
 }
 
@@ -91,6 +95,10 @@
       background: $purpleLight4;
       border-radius: 4px;
       height: 36px;
+
+      @media screen and(max-width: 767px) {
+         margin: 10px 15px;
+      }
    }
 
    .tree-play-icon svg {
@@ -243,6 +251,10 @@
    padding: 20px 16px;
    border-radius: 4px;
 
+   @media screen and (max-width: 767px) {
+      margin: 0px 15px 15px;
+   }
+
    svg {
       width: 12px;
       margin-right: 10px;
@@ -335,6 +347,34 @@
    }
 }
 
+
+// Dropzone
+body {
+   background: rgb(243, 244, 245);
+   height: 100%;
+   color: rgb(100, 108, 127);
+   line-height: 1.4rem;
+   font-family: Roboto, "Open Sans", sans-serif;
+   font-size: 20px;
+   font-weight: 300;
+   text-rendering: optimizeLegibility;
+}
+
+h1 { text-align: center; }
+
+.dropzone {
+   background: white;
+   border-radius: 5px;
+   border: 2px dashed rgb(0, 135, 247);
+   border-image: none;
+   max-width: 500px;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+
+
+
 .ra-btn {
    &.client-settings-modal--btn {
 
@@ -421,6 +461,10 @@
    display: flex;
    justify-content: space-between;
    align-items: center;
+
+   @media screen and (max-width: 767px) {
+      margin: 0px 15px;
+   }
 }
 
 .color-box-status {
@@ -581,7 +625,8 @@
 }
 
 .image-box {
-   width: 120px;
+   max-width: 120px;
+   width: 100%;
    height: 120px;
    background: $purpleLight4;
    border: 1px solid $purpleLight3;
@@ -591,13 +636,31 @@
 }
 
 .image-banner-box {
-   width: 600px;
+   max-width: 600px;
+   width: 100%;
    height: 100px;
    background: $purpleLight4;
    border: 1px solid $purpleLight3;
    border-radius: 4px;
    overflow: hidden;
    justify-content: center;
+
+   @media screen and(max-width: 767px) {
+      margin: 10px 15px;
+      width: auto;
+   }
+}
+
+.banner-items-info {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-bottom: 20px;
+
+   @media screen and(max-width: 767px) {
+      margin-left: 15px;
+      margin-right: 15px;
+   }
 }
 
 .tracking-code-area {

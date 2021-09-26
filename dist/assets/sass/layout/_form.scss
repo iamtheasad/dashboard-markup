@@ -780,6 +780,10 @@ input[type="text"] {
   .campaign-type {
     .settings-radio-group {
       padding: 20px;
+
+      @media screen and (max-width: 575px) {
+        display: unset;
+      }
     }
 
     .radio-btn-wrapper {
@@ -787,6 +791,14 @@ input[type="text"] {
 
       &:not(:last-child) {
         margin-right: 16px;
+
+        @media screen and (max-width: 575px) {
+          margin-right: 0px;
+        }
+      }
+
+      @media screen and (max-width: 575px) {
+        padding: 8px 16px;
       }
     }
   }

@@ -125,14 +125,14 @@ function copyAnyText() {
     navigator.clipboard.writeText(copyText.value);
 
     /* Show the copied text */
-    $(".btn-copy").html( "Text copied" )
+    $(".btn-copy").html("Text copied")
 }
 
 // Tree Menu Collapse Along Screen Width
-function treeMenu(){
-    if(screen.width <= 900) {
+function treeMenu() {
+    if (screen.width <= 900) {
         $('.collapse').collapse(
-           'hide'
+            'hide'
         )
     }
 }
@@ -338,7 +338,6 @@ treeMenu();
                 }
             });
         }
-
     }
 
     function dropdown() {

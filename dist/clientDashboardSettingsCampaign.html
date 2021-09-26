@@ -18,6 +18,9 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
 
+    <!-- Dropzone -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.3.0/dropzone.css" />
+
     <!-- build:css assets/css/all.min.css -->
     <link rel="stylesheet" href="assets/css/vendor.css">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -1090,47 +1093,53 @@
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
-                                                <input type="file" id="uploadHtmlorImage" class="invisible">
 
-                                                <label for="uploadHtmlorImage">
-                                                    <div class="drop-image">
-                                                        <div class="create-add-group">
-                                                            <h4>Drop Images to Upload</h4>
-                                                            <p>See our <a href="#" target="_blank">Ad Banner Guideline</a> to know about the
-                                                                supported
-                                                                Banner sizes.
-                                                                File sizes should not be within 3.0 MB. Maximum 10 files at once.</p>
-                                                            <span class="or">or,</span>
+                                                <div class="file-upload">
+                                                    <div class="file-upload">
+                                                        <input type="file" id="uploadHtmlorImage" class="invisible file-input">
 
-                                                            <div class="d-flex justify-content-center">
-                                                                <div class="ra-btn bg-green min-height-36">
-                                                                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                        <path d="M27.9688 15.9688H15.9688V27.9688H12.0312V15.9688H0.03125V12.0312H12.0312V0.03125H15.9688V12.0312H27.9688V15.9688Z" fill="#ffffff" />
-                                                                    </svg>
-                                                                    </span>
-                                                                    <span>Select Images</span>
+                                                        <label for="uploadHtmlorImage">
+                                                            <div class="drop-image">
+                                                                <div class="create-add-group">
+                                                                    <h4>Drop Images to Upload</h4>
+                                                                    <p>See our <a href="#" target="_blank">Ad Banner Guideline</a> to know about the
+                                                                        supported Banner sizes. File sizes should not be within 3.0 MB. Maximum 10
+                                                                        files
+                                                                        at once.</p>
+                                                                    <p class="fz12 filename"></p>
+                                                                    <span class="or">or,</span>
+
+                                                                    <div class="d-flex justify-content-center">
+                                                                        <div class="ra-btn bg-green min-height-36">
+                                                                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                                <path d="M27.9688 15.9688H15.9688V27.9688H12.0312V15.9688H0.03125V12.0312H12.0312V0.03125H15.9688V12.0312H27.9688V15.9688Z" fill="#ffffff" />
+                                                                            </svg>
+                                                                            </span>
+                                                                            <span>Select Images</span>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
+                                                        </label>
                                                     </div>
-                                                </label>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="submit" class="ra-btn client-settings-modal--btn w-100">Create Ad Group</button>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="submit" class="ra-btn client-settings-modal--btn opacity w-100">Create Ad Group</button>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="submit" class="ra-btn client-settings-modal--btn w-100 btn-loader">
-                                        <div class="spinner-border text-success mr-2" role="status"><span class="sr-only">Loading...</span>
-                                        </div>
-                                        Creating New Ad Group
-                                    </button>
-                                </div>
+                                    <div class="modal-footer">
+                                        <button type="submit" class="ra-btn client-settings-modal--btn w-100">Create Ad Group</button>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="submit" class="ra-btn client-settings-modal--btn opacity w-100">Create Ad
+                                            Group</button>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="submit" class="ra-btn client-settings-modal--btn w-100 btn-loader">
+                                            <div class="spinner-border text-success mr-2" role="status"><span class="sr-only">Loading...</span>
+                                            </div>
+                                            Creating New Ad Group
+                                        </button>
+                                    </div>
                             </form>
                         </div>
                     </div>
@@ -2449,6 +2458,9 @@
     <!-- Daterangepicker -->
     <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+    <!-- Dropzone -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.3.0/dropzone.js"></script>
     <!-- endbuild -->
 
     <script type="text/javascript" src="assets/js/script.js"></script>
