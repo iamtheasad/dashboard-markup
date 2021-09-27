@@ -42,8 +42,101 @@
 
                <div class="row">
                   <div class="col-md-12">
-                     <div class="file-upload">
-                        <section>
+                     <div class="banners-upload">
+
+                        <div class="">
+                           <div class="all-files-uploder ulploads">
+                              <div class="drop-image">
+                                 <div>
+                                    <h4>Drop Images to Upload</h4>
+                                    <p>See our <a href="#" target="_blank">Ad Banner Guideline</a> to know about the
+                                       supported Banner sizes. File sizes should not be within 3.0 MB. Maximum 10 files
+                                       at once.</p>
+                                    <p class="fz12 filename"></p>
+                                    <span class="or">or,</span>
+
+                                    <!-- HTML heavily inspired by https://blueimp.github.io/jQuery-File-Upload/ -->
+                                    <div id="actions" class="row">
+                                       <div class="col-lg-12">
+                                          <div class="d-flex justify-content-center">
+                                             <div class="fileinput-button dz-clickable m-1">
+                                                <div class="ra-btn bg-green min-height-36">
+                                                   <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                                      xmlns="http://www.w3.org/2000/svg">
+                                                      <path
+                                                         d="M27.9688 15.9688H15.9688V27.9688H12.0312V15.9688H0.03125V12.0312H12.0312V0.03125H15.9688V12.0312H27.9688V15.9688Z"
+                                                         fill="#ffffff" />
+                                                   </svg>
+                                                   </span>
+                                                   <span>Select Images</span>
+                                                </div>
+                                             </div>
+                                             <button type="submit"
+                                                class="ra-btn ra-btn-blue-bg min-height-36 start m-1">
+                                                <i class="glyphicon glyphicon-upload"></i>
+                                                <span>Start upload</span>
+                                             </button>
+                                             <button type="reset"
+                                                class="ra-btn ra-btn-orange-bg min-height-36 cancel m-1">
+                                                <i class="glyphicon glyphicon-ban-circle"></i>
+                                                <span>Cancel upload</span>
+                                             </button>
+                                          </div>
+                                       </div>
+
+                                       <div class="col-lg-12">
+                                          <!-- The global file processing state -->
+                                          <span class="fileupload-process">
+                                             <div id="total-progress" class="progress progress-striped active"
+                                                role="progressbar" aria-valuemin="0" aria-valuemax="100"
+                                                aria-valuenow="0">
+                                                <div class="progress-bar progress-bar-success" style="width:0%;"
+                                                   data-dz-uploadprogress=""></div>
+                                             </div>
+                                          </span>
+                                       </div>
+                                    </div>
+
+                                 </div>
+                              </div>
+
+                              <div class="table-ad-item table-striped files previews">
+                                 <div id="template" class="file-row dz-image-preview">
+                                    <!-- This is used as the file preview template -->
+                                    <div>
+                                       <span class="preview"><img data-dz-thumbnail></span>
+                                    </div>
+                                    <p class="name" data-dz-name></p>
+                                    <strong class="error text-danger fz12" data-dz-errormessage></strong>
+                                    <div>
+                                       <p class="size" data-dz-size></p>
+                                       <div class="progress progress-striped active" role="progressbar"
+                                          aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                                          <div class="progress-bar progress-bar-success" style="width:0%;"
+                                             data-dz-uploadprogress></div>
+                                       </div>
+                                    </div>
+                                    <div>
+                                       <button class="btn btn-primary start">
+                                          <i class="glyphicon glyphicon-upload"></i>
+                                          <span>Start</span>
+                                       </button>
+                                       <button data-dz-remove class="btn btn-warning cancel">
+                                          <i class="glyphicon glyphicon-ban-circle"></i>
+                                          <span>Cancel</span>
+                                       </button>
+                                       <button data-dz-remove class="btn btn-danger delete">
+                                          <i class="glyphicon glyphicon-trash"></i>
+                                          <span>Delete</span>
+                                       </button>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+
+                        <!-- <section>
                            <div id="dropzone">
                               <div class="drop-image">
                                  <form class="dropzone needsclick create-add-group" id="all-files-uploder"
@@ -119,7 +212,7 @@
                                  </svg>
                               </div>
                            </div>
-                        </div>
+                        </div> -->
 
 
                         <!-- <input type="file" id="uploadHtmlorImage" class="invisible file-input">
