@@ -108,6 +108,43 @@ function rangeSlider() {
     }
 }
 
+function datePicker() {
+    if (window.daterangepicker) {
+        $('.duration-date-activator').daterangepicker({
+            opens: 'left',
+            "autoApply": true,
+            "singleDatePicker": true,
+            "startDate": "09/14/2021",
+            "endDate": "09/20/2021",
+            parentEl: ".campaign-wrapper",
+        }, function (start, end, label) {
+            console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
+        });
+    }
+}
+
+datePicker();
+
+function timePicker() {
+    if (window.daterangepicker) {
+        $('.duration-time-activator').daterangepicker({
+            timePicker: true,
+            singleDatePicker: true,
+            timePickerIncrement: 1,
+            timePickerSeconds: true,
+            parentEl: ".campaign-wrapper",
+            locale: {
+                format: 'HH:mm:ss A'
+            },
+            "autoApply": true,
+        }).on('show.daterangepicker', function (ev, picker) {
+            picker.container.find(".calendar-table").hide();
+        });
+    }
+}
+
+timePicker();
+
 $(document).ajaxSuccess(function () {
     rangeSlider();
     inputAnimate();
@@ -142,12 +179,10 @@ treeMenu();
 
 /* Dropzone All Kind of File Ulploader */
 
-
-
 if ($(".all-files-uploder").length) {
 
-    // Get the template HTML and remove it from the doumenthe template HTML and remove it from the doument
-    var previewNode = document.querySelector("#template");
+    // Get the dropzone-template HTML and remove it from the doumenthe dropzone-template HTML and remove it from the doument
+    var previewNode = document.querySelector(".dropzone-template");
     previewNode.id = "";
     var previewTemplate = previewNode.parentNode.innerHTML;
     previewNode.parentNode.removeChild(previewNode);
@@ -170,19 +205,19 @@ if ($(".all-files-uploder").length) {
 
     // Update the total progress bar
     myDropzone.on("totaluploadprogress", function (progress) {
-        document.querySelector("#total-progress .progress-bar").style.width = progress + "%";
+        document.querySelector(".total-progress .progress-bar").style.width = progress + "%";
     });
 
     myDropzone.on("sending", function (file) {
         // Show the total progress bar when upload starts
-        document.querySelector("#total-progress").style.opacity = "1";
+        document.querySelector(".total-progress").style.opacity = "1";
         // And disable the start button
         file.previewElement.querySelector(".start").setAttribute("disabled", "disabled");
     });
 
     // Hide the total progress bar when nothing's uploading anymore
     myDropzone.on("queuecomplete", function (progress) {
-        document.querySelector("#total-progress").style.opacity = "0";
+        document.querySelector(".total-progress").style.opacity = "0";
     });
 
     // Setup the buttons for all transfers
@@ -257,7 +292,6 @@ if ($(".all-files-uploder").length) {
 //         }
 //     }
 // }
-
 
 
 (function ($) {
@@ -497,39 +531,6 @@ if ($(".all-files-uploder").length) {
         }
     }
 
-    function datePicker() {
-        if (window.daterangepicker) {
-            $('.duration-date-activator').daterangepicker({
-                opens: 'left',
-                "autoApply": true,
-                "singleDatePicker": true,
-                "startDate": "09/14/2021",
-                "endDate": "09/20/2021",
-                parentEl: ".campaign-wrapper",
-            }, function (start, end, label) {
-                console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
-            });
-        }
-    }
-
-    function timePicker() {
-        if (window.daterangepicker) {
-            $('.duration-time-activator').daterangepicker({
-                timePicker: true,
-                singleDatePicker: true,
-                timePickerIncrement: 1,
-                timePickerSeconds: true,
-                parentEl: ".campaign-wrapper",
-                locale: {
-                    format: 'HH:mm:ss A'
-                },
-                "autoApply": true,
-            }).on('show.daterangepicker', function (ev, picker) {
-                picker.container.find(".calendar-table").hide();
-            });
-        }
-    }
-
     function animateSearch() {
         if ($(".animate-search").length) {
             $(document).on('click', ".hidden-search-icon", function () {
@@ -567,8 +568,6 @@ if ($(".all-files-uploder").length) {
         filePreview();
         dropdown();
         multiDateRangePicker();
-        datePicker();
-        timePicker();
         rangeSlider();
         animateSearch();
         redialProgressBar();

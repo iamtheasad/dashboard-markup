@@ -1100,195 +1100,129 @@
                                         <div class="col-md-12">
                                             <div class="banners-upload">
 
-                                                <div class="">
-                                                    <div class="all-files-uploder ulploads">
-                                                        <div class="drop-image">
-                                                            <div>
-                                                                <h4>Drop Images to Upload</h4>
-                                                                <p>See our <a href="#" target="_blank">Ad Banner Guideline</a> to know about the
-                                                                    supported Banner sizes. File sizes should not be within 3.0 MB. Maximum 10 files
-                                                                    at once.</p>
-                                                                <p class="fz12 filename"></p>
-                                                                <span class="or">or,</span>
+                                                <div class="all-files-uploder ulploads">
+                                                    <div class="drop-image">
+                                                        <div>
+                                                            <h4>Drop Images to Upload</h4>
+                                                            <p>See our <a href="#" target="_blank">Ad Banner Guideline</a> to know about the
+                                                                supported Banner sizes. File sizes should not be within 3.0 MB. Maximum 10 files
+                                                                at once.</p>
+                                                            <p class="fz12 filename"></p>
+                                                            <span class="or">or,</span>
 
-                                                                <!-- HTML heavily inspired by https://blueimp.github.io/jQuery-File-Upload/ -->
-                                                                <div id="actions" class="row">
-                                                                    <div class="col-lg-12">
-                                                                        <div class="d-flex justify-content-center">
-                                                                            <div class="fileinput-button dz-clickable m-1">
-                                                                                <div class="ra-btn bg-green min-height-36">
-                                                                                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                                        <path d="M27.9688 15.9688H15.9688V27.9688H12.0312V15.9688H0.03125V12.0312H12.0312V0.03125H15.9688V12.0312H27.9688V15.9688Z" fill="#ffffff" />
-                                                                                    </svg>
-                                                                                    </span>
-                                                                                    <span>Select Images</span>
-                                                                                </div>
+                                                            <!-- HTML heavily inspired by https://blueimp.github.io/jQuery-File-Upload/ -->
+                                                            <div id="actions" class="row">
+                                                                <div class="col-lg-12">
+                                                                    <div class="d-flex justify-content-center">
+                                                                        <div class="fileinput-button dz-clickable m-1">
+                                                                            <div class="ra-btn bg-green min-height-36">
+                                                                                <span>
+                                                   <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                                      xmlns="http://www.w3.org/2000/svg">
+                                                      <path
+                                                         d="M27.9688 15.9688H15.9688V27.9688H12.0312V15.9688H0.03125V12.0312H12.0312V0.03125H15.9688V12.0312H27.9688V15.9688Z"
+                                                         fill="#ffffff" />
+                                                   </svg>
+                                                </span>
+                                                                                <span>Select Images</span>
                                                                             </div>
-                                                                            <button type="submit" class="ra-btn ra-btn-blue-bg min-height-36 start m-1">
-                                                                                <i class="glyphicon glyphicon-upload"></i>
-                                                                                <span>Start upload</span>
-                                                                            </button>
-                                                                            <button type="reset" class="ra-btn ra-btn-orange-bg min-height-36 cancel m-1">
-                                                                                <i class="glyphicon glyphicon-ban-circle"></i>
-                                                                                <span>Cancel upload</span>
-                                                                            </button>
                                                                         </div>
+                                                                        <button type="submit" class="ra-btn ra-btn-blue-bg min-height-36 start m-1">
+                                                                            <i class="glyphicon glyphicon-upload"></i>
+                                                                            <span>Start upload</span>
+                                                                        </button>
+                                                                        <button type="reset" class="ra-btn ra-btn-orange-bg min-height-36 cancel m-1">
+                                                                            <i class="glyphicon glyphicon-ban-circle"></i>
+                                                                            <span>Cancel upload</span>
+                                                                        </button>
                                                                     </div>
+                                                                </div>
 
-                                                                    <div class="col-lg-12">
-                                                                        <!-- The global file processing state -->
-                                                                        <span class="fileupload-process">
-                                             <div id="total-progress" class="progress progress-striped active"
-                                                role="progressbar" aria-valuemin="0" aria-valuemax="100"
-                                                aria-valuenow="0">
-                                                <div class="progress-bar progress-bar-success" style="width:0%;"
-                                                   data-dz-uploadprogress=""></div>
+                                                                <div class="col-lg-12">
+                                                                    <!-- The global file processing state -->
+                                                                    <span class="fileupload-process">
+                                          <div class="total-progress progress progress-striped active"
+                                             role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"
+                                             style="height: 8px;">
+
+                                             <div class="progress-bar green" style="width:0%;" aria-valuenow="0"
+                                                aria-valuemin="0" aria-valuemax="100" data-dz-uploadprogress="">
                                              </div>
-                                          </span>
-                                                                    </div>
-                                                                </div>
 
+                                          </div>
+                                       </span>
+                                                                </div>
                                                             </div>
-                                                        </div>
 
-                                                        <div class="table-ad-item table-striped files previews">
-                                                            <div id="template" class="file-row dz-image-preview">
-                                                                <!-- This is used as the file preview template -->
-                                                                <div>
-                                                                    <span class="preview"><img data-dz-thumbnail></span>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="table-ad-item table-striped files previews">
+                                                        <div class="dropzone-template file-row dz-image-preview">
+                                                            <!-- .error & .selection class add for show / hide error & selection icon -->
+                                                            <!-- This is used as the file preview template -->
+                                                            <div class="uploaded-image-item">
+                                                                <span class="preview"><img data-dz-thumbnail></span>
+                                                            </div>
+                                                            <div class="files-description uploaded-description-item">
+                                                                <div class="title">
+                                                                    <p class="name" data-dz-name></p>
+                                                                    <span class="d-flex align-items-center error-icon pl-2">
+                                          <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M6.20368 0.485607C6.56432 -0.161868 7.43568 -0.161869 7.79632 0.485605L13.3663 10.4857C13.7375 11.1522 13.2917 12 12.57 12H1.43002C0.708291 12 0.262458 11.1522 0.633699 10.4857L6.20368 0.485607ZM6.31715 4.75437C6.31715 4.33933 6.62958 4.00288 7.01499 4.00288C7.4004 4.00288 7.71283 4.33933 7.71283 4.75437V6.24946C7.71283 6.6645 7.4004 7.00096 7.01499 7.00096C6.62958 7.00096 6.31715 6.6645 6.31715 6.24946V4.75437ZM7.94779 9.00045C7.94779 9.55271 7.53079 10.0004 7.0164 10.0004C6.50201 10.0004 6.08501 9.55271 6.08501 9.00045C6.08501 8.44818 6.50201 8.00048 7.0164 8.00048C7.53079 8.00048 7.94779 8.44818 7.94779 9.00045Z" fill="#F2B93D"/>
+                                             </svg>
+                                       </span>
+                                                                    <span class="d-flex align-items-center selection-icon pl-2">
+                                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                             <rect width="16" height="16" rx="8" fill="#72BF44"/>
+                                             <path d="M4.27755 8.61478L6.4671 10.7869C6.75352 11.071 7.22126 11.071 7.50765 10.7869L11.7225 6.6048C12.0925 6.23767 12.0925 5.64676 11.7225 5.27966C11.3465 4.90675 10.7326 4.90678 10.3568 5.27974L6.9874 8.62311L5.64316 7.28956C5.26728 6.91667 4.65343 6.91667 4.27755 7.28956C3.90748 7.65669 3.90748 8.24766 4.27755 8.61478Z" fill="white"/>
+                                             </svg>
+                                       </span>
                                                                 </div>
-                                                                <p class="name" data-dz-name></p>
-                                                                <strong class="error text-danger fz12" data-dz-errormessage></strong>
-                                                                <div>
-                                                                    <p class="size" data-dz-size></p>
-                                                                    <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
-                                                                        <div class="progress-bar progress-bar-success" style="width:0%;" data-dz-uploadprogress></div>
-                                                                    </div>
+                                                                <p class="dimension">320x100 - <span class="fw-500">Smartphone Banner</span></p>
+                                                                <p class="size" data-dz-size></p>
+                                                                <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" style="height: 3px;">
+                                                                    <div class="progress-bar green" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" data-dz-uploadprogress></div>
                                                                 </div>
-                                                                <div>
-                                                                    <button class="btn btn-primary start">
-                                                                        <i class="glyphicon glyphicon-upload"></i>
-                                                                        <span>Start</span>
-                                                                    </button>
-                                                                    <button data-dz-remove class="btn btn-warning cancel">
-                                                                        <i class="glyphicon glyphicon-ban-circle"></i>
-                                                                        <span>Cancel</span>
-                                                                    </button>
-                                                                    <button data-dz-remove class="btn btn-danger delete">
-                                                                        <i class="glyphicon glyphicon-trash"></i>
-                                                                        <span>Delete</span>
-                                                                    </button>
+                                                                <strong class="error" data-dz-errormessage></strong>
+                                                            </div>
+                                                            <div class="uploaded-remove-item">
+                                                                <button class="btn btn-primary start">
+                                                                    <span>Start</span>
+                                                                </button>
+                                                                <div data-dz-remove class="ra-btn min-height-36 cancel remove">
+                                                                    <span>
+                                          <svg width="16" height="18" viewBox="0 0 16 18" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path
+                                                d="M15.3086 4.63155C15.2924 4.63155 15.268 4.63155 15.2437 4.63155C10.9502 4.19222 6.6649 4.02644 2.42015 4.46576L0.764457 4.63155C0.423579 4.6647 0.123282 4.41603 0.0908174 4.06788C0.0583528 3.71974 0.301837 3.42133 0.634599 3.38817L2.29029 3.22239C6.60808 2.77478 10.9827 2.94885 15.3654 3.38817C15.6982 3.42133 15.9417 3.72803 15.9092 4.06788C15.8848 4.39116 15.617 4.63155 15.3086 4.63155Z"
+                                                fill="#FA5053" />
+                                             <path
+                                                d="M5.1619 3.79436C5.12943 3.79436 5.09697 3.79436 5.05639 3.78607C4.73174 3.72805 4.50449 3.40477 4.5613 3.07321L4.73986 1.98733C4.86972 1.19157 5.04827 0.0891085 6.93933 0.0891085H9.06577C10.9649 0.0891085 11.1435 1.23301 11.2652 1.99561L11.4438 3.07321C11.5006 3.41306 11.2734 3.73634 10.9487 3.78607C10.6159 3.8441 10.2994 3.612 10.2507 3.28043L10.0722 2.20284C9.95854 1.48169 9.93419 1.34077 9.07388 1.34077H6.94745C6.08714 1.34077 6.07091 1.45682 5.94917 2.19455L5.76249 3.27215C5.7138 3.57884 5.45408 3.79436 5.1619 3.79436Z"
+                                                fill="#FA5053" />
+                                             <path
+                                                d="M10.6097 17.9109H5.39916C2.56662 17.9109 2.453 16.3111 2.36372 15.018L1.83617 6.67079C1.81182 6.33094 2.07154 6.03253 2.4043 6.00766C2.74518 5.99108 3.02924 6.24805 3.05359 6.5879L3.58114 14.9351C3.67042 16.195 3.70288 16.6675 5.39916 16.6675H10.6097C12.3141 16.6675 12.3466 16.195 12.4277 14.9351L12.9553 6.5879C12.9796 6.24805 13.2718 5.99108 13.6046 6.00766C13.9373 6.03253 14.1971 6.32265 14.1727 6.67079L13.6452 15.018C13.5559 16.3111 13.4423 17.9109 10.6097 17.9109Z"
+                                                fill="#FA5053" />
+                                             <path
+                                                d="M9.35163 13.3517H6.64895C6.31619 13.3517 6.04024 13.0699 6.04024 12.73C6.04024 12.3901 6.31619 12.1083 6.64895 12.1083H9.35163C9.68439 12.1083 9.96034 12.3901 9.96034 12.73C9.96034 13.0699 9.68439 13.3517 9.35163 13.3517Z"
+                                                fill="#FA5053" />
+                                             <path
+                                                d="M10.0339 10.036H5.97584C5.64308 10.036 5.36713 9.75417 5.36713 9.41432C5.36713 9.07446 5.64308 8.79263 5.97584 8.79263H10.0339C10.3667 8.79263 10.6426 9.07446 10.6426 9.41432C10.6426 9.75417 10.3667 10.036 10.0339 10.036Z"
+                                                fill="#FA5053" />
+                                             <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M5.24768 0.795612C4.96711 1.14965 4.89212 1.60034 4.82659 2.00187L4.67111 2.94743C5.02625 2.9285 5.3817 2.91329 5.73742 2.90161L5.86246 2.17985L5.8644 2.16811C5.89363 1.99089 5.91795 1.84349 5.95095 1.7256C5.98495 1.60413 6.031 1.50269 6.11103 1.42619C6.19154 1.34922 6.29664 1.30676 6.43026 1.2827C6.56286 1.25881 6.73185 1.25166 6.94745 1.25166H9.07388C9.28998 1.25166 9.4598 1.26039 9.5935 1.28657C9.72833 1.31296 9.83373 1.35845 9.91416 1.43734C9.99405 1.51569 10.0402 1.61818 10.0739 1.73985C10.1072 1.86043 10.1308 2.01009 10.1589 2.18842C10.1589 2.18854 10.1589 2.18829 10.1589 2.18842L10.2816 2.92869C10.634 2.94323 10.9865 2.9604 11.3392 2.97999L11.1785 2.01037C11.1171 1.62569 11.044 1.17201 10.7631 0.811632C10.4871 0.457606 9.99686 0.178217 9.06577 0.178217H6.93933C6.01137 0.178217 5.52329 0.447842 5.24768 0.795612ZM11.3643 3.15988C11.0131 3.14021 10.6621 3.12295 10.3113 3.1083L10.3377 3.26731C10.379 3.54875 10.649 3.74792 10.9338 3.69826L10.9356 3.69795C11.1872 3.6594 11.3732 3.42445 11.3643 3.15988ZM10.1021 2.92151L9.98547 2.2176C9.95678 2.03551 9.93462 1.89655 9.90458 1.78796C9.87483 1.68038 9.83984 1.61243 9.7919 1.56541C9.7445 1.51892 9.6754 1.48411 9.56016 1.46155C9.44378 1.43877 9.28794 1.42988 9.07388 1.42988H6.94745C6.7329 1.42988 6.57724 1.43723 6.46103 1.45817C6.34584 1.47891 6.27797 1.51157 6.23166 1.55584C6.18488 1.60057 6.15027 1.66646 6.1201 1.77424C6.08979 1.88253 6.06683 2.02164 6.03627 2.20684L6.03587 2.20926L5.91691 2.89602C7.30832 2.85496 8.70393 2.86736 10.1021 2.92151ZM5.88586 3.07524C7.29692 3.03266 8.71279 3.04532 10.1319 3.10102L10.1639 3.29438C10.2203 3.67534 10.5826 3.93982 10.9627 3.87404C11.3011 3.82174 11.5441 3.51401 11.5404 3.16994C12.8108 3.24398 14.0833 3.3492 15.3568 3.47685C15.6399 3.50507 15.8496 3.76704 15.8217 4.0593L15.8215 4.0611C15.8008 4.33679 15.5722 4.54244 15.3086 4.54244H15.2487C10.9534 4.10311 6.6626 3.93712 2.41137 4.3771C2.41142 4.3771 2.41132 4.37711 2.41137 4.3771L0.75606 4.54285C0.756091 4.54284 0.756029 4.54285 0.75606 4.54285C0.463284 4.57127 0.206198 4.35825 0.178339 4.0595C0.150354 3.75939 0.359445 3.50513 0.6432 3.47685L2.29894 3.31107C3.01954 3.23636 3.74207 3.17897 4.46572 3.1373C4.4463 3.48806 4.69468 3.81135 5.04009 3.87364C5.0888 3.88348 5.12824 3.88347 5.16032 3.88347H5.1619C5.49651 3.88347 5.79329 3.63702 5.84919 3.28694L5.88586 3.07524ZM5.70636 3.08095C5.35151 3.09285 4.99697 3.10827 4.64277 3.12742C4.61758 3.39619 4.80701 3.65102 5.07165 3.69832L5.07376 3.6987C5.10492 3.70506 5.12957 3.70525 5.1619 3.70525C5.41145 3.70525 5.63394 3.52096 5.6757 3.25799L5.6759 3.25673L5.70636 3.08095ZM4.49123 2.95734L4.65313 1.97278L4.65474 1.9629C4.7188 1.57025 4.7993 1.07683 5.11061 0.684003C5.42951 0.281604 5.97624 0 6.93933 0H9.06577C10.0339 0 10.5825 0.292562 10.901 0.70114C11.2112 1.09908 11.29 1.59282 11.3501 1.96926L11.3519 1.98086L11.5192 2.9902C12.8029 3.0645 14.0883 3.17061 15.3741 3.2995C15.3741 3.2995 15.374 3.2995 15.3741 3.2995C15.7561 3.33759 16.0333 3.68849 15.9968 4.07556C15.9968 4.07527 15.9968 4.07497 15.9968 4.07467L15.9092 4.06788L15.9967 4.07647C15.9967 4.07617 15.9967 4.07587 15.9968 4.07556C15.9684 4.44598 15.6615 4.72066 15.3086 4.72066H15.2348C10.9447 4.28168 6.66584 4.11591 2.42908 4.55441L0.7731 4.72022C0.384158 4.75806 0.0403631 4.47378 0.00329538 4.07627C-0.033647 3.68011 0.244209 3.33756 0.625957 3.2995L2.28135 3.13374C3.01641 3.05754 3.75323 2.99932 4.49123 2.95734ZM2.40965 6.09661C2.12495 6.11851 1.90311 6.37477 1.92385 6.66434L2.45142 15.0118C2.45142 15.0118 2.45141 15.0117 2.45142 15.0118C2.49641 15.6635 2.54756 16.3601 2.92438 16.8977C3.29538 17.427 3.99875 17.8218 5.39916 17.8218H10.6097C12.0101 17.8218 12.7135 17.427 13.0845 16.8977C13.4613 16.3601 13.5125 15.6637 13.5575 15.012C13.5575 15.0119 13.5574 15.012 13.5575 15.012L14.085 6.6651C14.1058 6.36774 13.8845 6.11851 13.5992 6.09661C13.314 6.08299 13.064 6.30369 13.043 6.59398C13.043 6.59411 13.043 6.59386 13.043 6.59398L12.5155 14.9408C12.4953 15.2539 12.4778 15.526 12.4355 15.7538C12.3931 15.9826 12.3241 16.177 12.1944 16.3315C11.9343 16.6414 11.4601 16.7566 10.6097 16.7566H5.39916C4.55266 16.7566 4.08057 16.6413 3.82057 16.3315C3.691 16.1771 3.62149 15.9829 3.57801 15.7542C3.53502 15.528 3.51592 15.2586 3.49393 14.9482L3.49346 14.9415L2.96591 6.59436C2.9659 6.59424 2.96592 6.59447 2.96591 6.59436C2.94489 6.30341 2.70237 6.08298 2.40965 6.09661ZM2.40009 5.91865C2.7885 5.89976 3.11346 6.19323 3.14127 6.58145L3.66883 14.9287C3.66884 14.9288 3.66882 14.9286 3.66883 14.9287C3.69126 15.2453 3.70977 15.5054 3.75066 15.7205C3.79138 15.9347 3.85274 16.0948 3.95449 16.216C4.1571 16.4575 4.54938 16.5784 5.39916 16.5784H10.6097C11.4637 16.5784 11.8579 16.4574 12.0605 16.216C12.1621 16.0949 12.223 15.935 12.2627 15.7208C12.3026 15.5058 12.3196 15.246 12.34 14.9293L12.8676 6.5822C12.8954 6.19334 13.2292 5.89974 13.6089 5.91866L13.611 5.91877C13.9906 5.94713 14.2881 6.27835 14.2604 6.67678C14.2604 6.67688 14.2604 6.67667 14.2604 6.67678L13.7329 15.0237L13.7324 15.0315C13.6882 15.6712 13.6367 16.4177 13.2278 17.001C12.8116 17.5949 12.0419 18 10.6097 18H5.39916C3.96703 18 3.19733 17.5949 2.78105 17.001C2.37222 16.4177 2.32069 15.6712 2.27653 15.0315L2.27602 15.0242L1.74849 6.67725C1.74848 6.67712 1.7485 6.67738 1.74849 6.67725C1.72079 6.28765 2.01767 5.9472 2.39784 5.91879L2.40009 5.91865ZM5.97584 8.88174C5.69226 8.88174 5.45504 9.12304 5.45504 9.41432C5.45504 9.7056 5.69226 9.94689 5.97584 9.94689H10.0339C10.3175 9.94689 10.5547 9.7056 10.5547 9.41432C10.5547 9.12304 10.3175 8.88174 10.0339 8.88174H5.97584ZM5.27922 9.41432C5.27922 9.02589 5.5939 8.70352 5.97584 8.70352H10.0339C10.4159 8.70352 10.7305 9.02589 10.7305 9.41432C10.7305 9.80275 10.4159 10.1251 10.0339 10.1251H5.97584C5.5939 10.1251 5.27922 9.80275 5.27922 9.41432ZM6.64895 12.1974C6.36537 12.1974 6.12815 12.4387 6.12815 12.73C6.12815 13.0213 6.36537 13.2626 6.64895 13.2626H9.35163C9.63521 13.2626 9.87243 13.0213 9.87243 12.73C9.87243 12.4387 9.63521 12.1974 9.35163 12.1974H6.64895ZM5.95233 12.73C5.95233 12.3416 6.26701 12.0192 6.64895 12.0192H9.35163C9.73357 12.0192 10.0483 12.3416 10.0483 12.73C10.0483 13.1184 9.73357 13.4408 9.35163 13.4408H6.64895C6.26701 13.4408 5.95233 13.1184 5.95233 12.73Z"
+                                                fill="#FA5053" />
+                                          </svg>
+                                       </span>
+                                                                    <span>Remove</span>
                                                                 </div>
+                                                                <button data-dz-remove class="btn btn-danger delete">
+                                                                    <span>Delete</span>
+                                                                </button>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-
-                                                <!-- <section>
-                           <div id="dropzone">
-                              <div class="drop-image">
-                                 <form class="dropzone needsclick create-add-group" id="all-files-uploder"
-                                    action="/upload">
-                                    <div class="dz-message needsclick">
-
-                                       <h4>Drop Images to Upload</h4>
-                                       <p>See our <a href="#" target="_blank">Ad Banner Guideline</a> to know about the
-                                          supported Banner sizes. File sizes should not be within 3.0 MB. Maximum 10
-                                          files
-                                          at once.</p>
-                                       <span class="or">or,</span>
-
-                                       <div class="d-flex justify-content-center">
-                                          <div class="ra-btn bg-green min-height-36">
-                                             <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                   d="M27.9688 15.9688H15.9688V27.9688H12.0312V15.9688H0.03125V12.0312H12.0312V0.03125H15.9688V12.0312H27.9688V15.9688Z"
-                                                   fill="#ffffff" />
-                                             </svg>
-                                             </span>
-                                             <span>Select Images</span>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </form>
-                              </div>
-                           </div>
-                        </section>
-
-                        <div class="preview-template" style="display: none;">
-                           <div class="dz-preview dz-file-preview">
-                              <div class="dz-image"><img data-dz-thumbnail=""></div>
-                              <div class="dz-details">
-                                 <div class="dz-size"><span data-dz-size=""></span></div>
-                                 <div class="dz-filename"><span data-dz-name=""></span></div>
-                              </div>
-                              <div class="dz-progress"><span class="dz-upload" data-dz-uploadprogress=""></span></div>
-                              <div class="dz-error-message"><span data-dz-errormessage=""></span></div>
-                              <div class="dz-success-mark">
-                                 <svg width="54px" height="54px" viewBox="0 0 54 54" version="1.1"
-                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                    xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-                                    <title>Check</title>
-                                    <desc>Created with Sketch.</desc>
-                                    <defs></defs>
-                                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
-                                       sketch:type="MSPage">
-                                       <path
-                                          d="M23.5,31.8431458 L17.5852419,25.9283877 C16.0248253,24.3679711 13.4910294,24.366835 11.9289322,25.9289322 C10.3700136,27.4878508 10.3665912,30.0234455 11.9283877,31.5852419 L20.4147581,40.0716123 C20.5133999,40.1702541 20.6159315,40.2626649 20.7218615,40.3488435 C22.2835669,41.8725651 24.794234,41.8626202 26.3461564,40.3106978 L43.3106978,23.3461564 C44.8771021,21.7797521 44.8758057,19.2483887 43.3137085,17.6862915 C41.7547899,16.1273729 39.2176035,16.1255422 37.6538436,17.6893022 L23.5,31.8431458 Z M27,53 C41.3594035,53 53,41.3594035 53,27 C53,12.6405965 41.3594035,1 27,1 C12.6405965,1 1,12.6405965 1,27 C1,41.3594035 12.6405965,53 27,53 Z"
-                                          id="Oval-2" stroke-opacity="0.198794158" stroke="#747474"
-                                          fill-opacity="0.816519475" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
-                                    </g>
-                                 </svg>
-                              </div>
-                              <div class="dz-error-mark">
-                                 <svg width="54px" height="54px" viewBox="0 0 54 54" version="1.1"
-                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                    xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-                                    <title>error</title>
-                                    <desc>Created with Sketch.</desc>
-                                    <defs></defs>
-                                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
-                                       sketch:type="MSPage">
-                                       <g id="Check-+-Oval-2" sketch:type="MSLayerGroup" stroke="#747474"
-                                          stroke-opacity="0.198794158" fill="#FFFFFF" fill-opacity="0.816519475">
-                                          <path
-                                             d="M32.6568542,29 L38.3106978,23.3461564 C39.8771021,21.7797521 39.8758057,19.2483887 38.3137085,17.6862915 C36.7547899,16.1273729 34.2176035,16.1255422 32.6538436,17.6893022 L27,23.3431458 L21.3461564,17.6893022 C19.7823965,16.1255422 17.2452101,16.1273729 15.6862915,17.6862915 C14.1241943,19.2483887 14.1228979,21.7797521 15.6893022,23.3461564 L21.3431458,29 L15.6893022,34.6538436 C14.1228979,36.2202479 14.1241943,38.7516113 15.6862915,40.3137085 C17.2452101,41.8726271 19.7823965,41.8744578 21.3461564,40.3106978 L27,34.6568542 L32.6538436,40.3106978 C34.2176035,41.8744578 36.7547899,41.8726271 38.3137085,40.3137085 C39.8758057,38.7516113 39.8771021,36.2202479 38.3106978,34.6538436 L32.6568542,29 Z M27,53 C41.3594035,53 53,41.3594035 53,27 C53,12.6405965 41.3594035,1 27,1 C12.6405965,1 1,12.6405965 1,27 C1,41.3594035 12.6405965,53 27,53 Z"
-                                             id="Oval-2" sketch:type="MSShapeGroup"></path>
-                                       </g>
-                                    </g>
-                                 </svg>
-                              </div>
-                           </div>
-                        </div> -->
-
-                                                <!-- <input type="file" id="uploadHtmlorImage" class="invisible file-input">
-
-                           <label for="uploadHtmlorImage">
-                              <div class="drop-image">
-                                 <div class="create-add-group">
-                                    <h4>Drop Images to Upload</h4>
-                                    <p>See our <a href="#" target="_blank">Ad Banner Guideline</a> to know about the
-                                       supported Banner sizes. File sizes should not be within 3.0 MB. Maximum 10 files
-                                       at once.</p>
-                                    <p class="fz12 filename"></p>
-                                    <span class="or">or,</span>
-
-                                    <div class="d-flex justify-content-center">
-                                       <div class="ra-btn bg-green min-height-36">
-                                          <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                             <path
-                                                d="M27.9688 15.9688H15.9688V27.9688H12.0312V15.9688H0.03125V12.0312H12.0312V0.03125H15.9688V12.0312H27.9688V15.9688Z"
-                                                fill="#ffffff" />
-                                          </svg>
-                                          </span>
-                                          <span>Select Images</span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </label> -->
                                             </div>
                                         </div>
                                     </div>

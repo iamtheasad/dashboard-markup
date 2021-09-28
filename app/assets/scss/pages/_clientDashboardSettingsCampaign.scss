@@ -666,7 +666,6 @@
    div.table-ad-item .file-row {
       // display: table-row;
       display: flex;
-      justify-content: space-between;
    }
 
    div.table-ad-item .file-row>div {
@@ -681,9 +680,15 @@
    }
 
    /* The total progress gets shown by event listeners */
-   #total-progress {
+   .total-progress {
       opacity: 0;
       transition: opacity 0.3s linear;
+   }
+
+   .fileupload-process {
+      .progress {
+         background: transparent;
+      }
    }
 
    .preview {
@@ -694,13 +699,59 @@
    }
 
    .name {
-      font-size: 16px;
+      font-size: rem(16);
       font-weight: 600;
-      color: #373773;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      overflow: hidden;
-      width: 100px;
+      color: $purleDark;
+   }
+
+   .dimension {
+      font-size: rem(14);
+      color: $purpleLight7;
+      font-weight: 400;
+   }
+
+   .size {
+      color: $purpleLight7;
+      font-size: rem(14);
+      font-weight: 400;
+
+      strong {
+         font-weight: 400;
+      }
+   }
+
+   .files-description {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      padding: 0 10px;
+
+      .progress {
+         background: rgba($greenDark, .3);
+         margin-top: 8px;
+      }
+
+      .title {
+         display: flex;
+
+         .icon {
+            display: flex;
+            align-items: center;
+         }
+      }
+   }
+
+   .error {
+      font-size: rem(11);
+      font-weight: 700;
+      color: $redLight;
+      margin-top: 8px;
+   }
+
+   .remove {
+      font-size: rem(14);
+      font-weight: 500;
+      color: $redLight;
    }
 
    /* Hide the progress bar when finished */
@@ -710,7 +761,8 @@
    }
 
    /* Hide the delete button initially */
-   .previews .file-row .delete {
+   .previews .file-row .delete,
+   .previews .file-row .start {
       display: none;
    }
 
@@ -724,4 +776,51 @@
    .previews .file-row.dz-success .delete {
       display: block;
    }
+
+   .uploaded-image-item {
+      width: 15%;
+   }
+
+   .uploaded-description-item {
+      width: 60%;
+   }
+
+   .uploaded-remove-item {
+      width: 25%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+   }
+
+   .error {
+      .uploaded-image-item,
+      .files-description {
+         opacity: .5;
+      }
+   }
+
+   .file-row {
+      &.error {
+         .files-description {
+            .title {
+               .selection-icon {
+                  display: none !important;
+               }
+            }
+         }
+      }
+   }
+
+   .file-row {
+      &.selection {
+         .files-description {
+            .title {
+               .error-icon {
+                  display: none !important;
+               }
+            }
+         }
+      }
+   }
+
 }
