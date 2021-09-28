@@ -268,7 +268,9 @@
    }
 }
 
-// Modals
+/**********************************************
+   // Modals
+***********************************************/
 .client-settings-modal-all {
    &.loading {
 
@@ -428,7 +430,9 @@
    }
 }
 
-// Campaign Settings Content
+/**********************************************
+   // Campaign Settings Content
+***********************************************/
 .campaign-status-bar {
    display: flex;
    justify-content: space-between;
@@ -515,8 +519,9 @@
    border-radius: 2px;
 }
 
-// Rounded Progress Bar
-
+/***********************
+   // Rounded Progress Bar
+************************/
 #wrapper {
    position: relative;
 }
@@ -643,9 +648,11 @@
    /* Custom Scrollbar End */
 }
 
-// Dropzone
+/***********************
+   // Dropzone
+************************/
 
-.ulploads {
+.uploads {
    background: rgba(114, 191, 68, 0.1);
    border: 1px dashed $greenDark;
    padding: 20px 16px;
@@ -664,15 +671,7 @@
    }
 
    div.table-ad-item .file-row {
-      // display: table-row;
       display: flex;
-   }
-
-   div.table-ad-item .file-row>div {
-      // display: table-cell;
-      // vertical-align: top;
-      // border-top: 1px solid #ddd;
-      // padding: 8px;
    }
 
    div.table-ad-item .file-row:nth-child(odd) {
@@ -803,6 +802,10 @@
       &.error {
          .files-description {
             .title {
+               .name {
+                  color: $redLight;
+               }
+
                .selection-icon {
                   display: none !important;
                }
@@ -823,4 +826,4 @@
       }
    }
 
-}
+} 

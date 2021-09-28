@@ -134,7 +134,7 @@ function timePicker() {
             timePickerSeconds: true,
             parentEl: ".campaign-wrapper",
             locale: {
-                format: 'HH:mm:ss A'
+                format: "hh:mm:ss A"
             },
             "autoApply": true,
         }).on('show.daterangepicker', function (ev, picker) {
@@ -176,9 +176,7 @@ function treeMenu() {
 
 treeMenu();
 
-
 /* Dropzone All Kind of File Ulploader */
-
 if ($(".all-files-uploder").length) {
 
     // Get the dropzone-template HTML and remove it from the doumenthe dropzone-template HTML and remove it from the doument
@@ -223,75 +221,37 @@ if ($(".all-files-uploder").length) {
     // Setup the buttons for all transfers
     // The "add files" button doesn't need to be setup because the config
     // `clickable` has already been specified.
-    document.querySelector("#actions .start").onclick = function () {
+    document.querySelector(".dropzone-actions .start").onclick = function () {
         myDropzone.enqueueFiles(myDropzone.getFilesWithStatus(Dropzone.ADDED));
     };
-    document.querySelector("#actions .cancel").onclick = function () {
+    document.querySelector(".dropzone-actions .cancel").onclick = function () {
         myDropzone.removeAllFiles(true);
     };
 }
 
-// if ($("#all-files-uploder").length) {
-//     Dropzone.autoDiscover = false;
-//     var dropzone = new Dropzone('#all-files-uploder', {
-//         previewTemplate: document.querySelector('.preview-template').innerHTML,
-//         parallelUploads: 2,
-//         thumbnailHeight: 120,
-//         thumbnailWidth: 120,
-//         maxFilesize: 3,
-//         filesizeBase: 1000,
-//         thumbnail: function (file, dataUrl) {
-//             if (file.previewElement) {
-//                 file.previewElement.classList.remove("dz-file-preview");
-//                 var images = file.previewElement.querySelectorAll("[data-dz-thumbnail]");
-//                 for (var i = 0; i < images.length; i++) {
-//                     var thumbnailElement = images[i];
-//                     thumbnailElement.alt = file.name;
-//                     thumbnailElement.src = dataUrl;
-//                 }
-//                 setTimeout(function () { file.previewElement.classList.add("dz-image-preview"); }, 1);
-//             }
-//         }
-//     });
 
-//     var minSteps = 6,
-//         maxSteps = 60,
-//         timeBetweenSteps = 100,
-//         bytesPerStep = 100000;
+function sidebarDropdown() {
+    let btn = $('.sideBar .dropdown .menu-item');
+    btn.on('click', function () {
+        $(this).parent('.dropdown').toggleClass('open');
+        $(this).siblings('.dropdown-menus').slideToggle(200);
+    })
+}
+sidebarDropdown();
 
-//     dropzone.uploadFiles = function (files) {
-//         console.log(files);
-//         var self = this;
-
-//         for (var i = 0; i < files.length; i++) {
-
-//             var file = files[i];
-//             totalSteps = Math.round(Math.min(maxSteps, Math.max(minSteps, file.size / bytesPerStep)));
-
-//             for (var step = 0; step < totalSteps; step++) {
-//                 var duration = timeBetweenSteps * (step + 1);
-//                 setTimeout(function (file, totalSteps, step) {
-//                     return function () {
-//                         file.upload = {
-//                             progress: 100 * (step + 1) / totalSteps,
-//                             total: file.size,
-//                             bytesSent: (step + 1) * file.size / totalSteps
-//                         };
-
-//                         self.emit('uploadprogress', file, file.upload.progress, file.upload.bytesSent);
-//                         if (file.upload.progress == 100) {
-//                             file.status = Dropzone.SUCCESS;
-//                             self.emit("success", file, 'success', null);
-//                             self.emit("complete", file);
-//                             self.processQueue();
-//                             document.getElementsByClassName("dz-success-mark").style.opacity = "1";
-//                         }
-//                     };
-//                 }(file, totalSteps, step), duration);
-//             }
-//         }
-//     }
-// }
+function sidebarPopup() {
+    let btn = $('.sideBar .actionBar .actionIcon');
+    btn.on('click', function () {
+        $(this).siblings('.action-popup').slideToggle(200);
+    })
+    $(document).click(function (e) {
+        $('.actionBar')
+            .not($('.actionBar').has($(e.target)))
+            .children('.action-popup')
+            .slideUp(200);
+    });
+}
+sidebarPopup();
 
 
 (function ($) {

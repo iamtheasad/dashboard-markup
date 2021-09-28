@@ -40,22 +40,22 @@
                   </div>
                </form>
 
+               <!-- Dropzone Start -->
                <div class="row">
                   <div class="col-md-12">
                      <div class="banners-upload">
 
-                        <div class="all-files-uploder ulploads">
+                        <div class="all-files-uploder uploads">
                            <div class="drop-image">
                               <div>
                                  <h4>Drop Images to Upload</h4>
                                  <p>See our <a href="#" target="_blank">Ad Banner Guideline</a> to know about the
                                     supported Banner sizes. File sizes should not be within 3.0 MB. Maximum 10 files
                                     at once.</p>
-                                 <p class="fz12 filename"></p>
                                  <span class="or">or,</span>
 
                                  <!-- HTML heavily inspired by https://blueimp.github.io/jQuery-File-Upload/ -->
-                                 <div id="actions" class="row">
+                                 <div class="dropzone-actions row">
                                     <div class="col-lg-12">
                                        <div class="d-flex justify-content-center">
                                           <div class="fileinput-button dz-clickable m-1">
@@ -102,7 +102,9 @@
                            </div>
 
                            <div class="table-ad-item table-striped files previews">
-                              <div class="dropzone-template file-row dz-image-preview"> <!-- .error & .selection class add for show / hide error & selection icon -->
+                              <div class="dropzone-template file-row dz-image-preview">
+                                 <!-- .error & .selection class add for show / hide error & selection icon -->
+
                                  <!-- This is used as the file preview template -->
                                  <div class="uploaded-image-item">
                                     <span class="preview"><img data-dz-thumbnail></span>
@@ -111,15 +113,21 @@
                                     <div class="title">
                                        <p class="name" data-dz-name></p>
                                        <span class="d-flex align-items-center error-icon pl-2">
-                                          <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M6.20368 0.485607C6.56432 -0.161868 7.43568 -0.161869 7.79632 0.485605L13.3663 10.4857C13.7375 11.1522 13.2917 12 12.57 12H1.43002C0.708291 12 0.262458 11.1522 0.633699 10.4857L6.20368 0.485607ZM6.31715 4.75437C6.31715 4.33933 6.62958 4.00288 7.01499 4.00288C7.4004 4.00288 7.71283 4.33933 7.71283 4.75437V6.24946C7.71283 6.6645 7.4004 7.00096 7.01499 7.00096C6.62958 7.00096 6.31715 6.6645 6.31715 6.24946V4.75437ZM7.94779 9.00045C7.94779 9.55271 7.53079 10.0004 7.0164 10.0004C6.50201 10.0004 6.08501 9.55271 6.08501 9.00045C6.08501 8.44818 6.50201 8.00048 7.0164 8.00048C7.53079 8.00048 7.94779 8.44818 7.94779 9.00045Z" fill="#F2B93D"/>
-                                             </svg>
+                                          <svg width="14" height="12" viewBox="0 0 14 12" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M6.20368 0.485607C6.56432 -0.161868 7.43568 -0.161869 7.79632 0.485605L13.3663 10.4857C13.7375 11.1522 13.2917 12 12.57 12H1.43002C0.708291 12 0.262458 11.1522 0.633699 10.4857L6.20368 0.485607ZM6.31715 4.75437C6.31715 4.33933 6.62958 4.00288 7.01499 4.00288C7.4004 4.00288 7.71283 4.33933 7.71283 4.75437V6.24946C7.71283 6.6645 7.4004 7.00096 7.01499 7.00096C6.62958 7.00096 6.31715 6.6645 6.31715 6.24946V4.75437ZM7.94779 9.00045C7.94779 9.55271 7.53079 10.0004 7.0164 10.0004C6.50201 10.0004 6.08501 9.55271 6.08501 9.00045C6.08501 8.44818 6.50201 8.00048 7.0164 8.00048C7.53079 8.00048 7.94779 8.44818 7.94779 9.00045Z"
+                                                fill="#F2B93D" />
+                                          </svg>
                                        </span>
                                        <span class="d-flex align-items-center selection-icon pl-2">
-                                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                             <rect width="16" height="16" rx="8" fill="#72BF44"/>
-                                             <path d="M4.27755 8.61478L6.4671 10.7869C6.75352 11.071 7.22126 11.071 7.50765 10.7869L11.7225 6.6048C12.0925 6.23767 12.0925 5.64676 11.7225 5.27966C11.3465 4.90675 10.7326 4.90678 10.3568 5.27974L6.9874 8.62311L5.64316 7.28956C5.26728 6.91667 4.65343 6.91667 4.27755 7.28956C3.90748 7.65669 3.90748 8.24766 4.27755 8.61478Z" fill="white"/>
-                                             </svg>
+                                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <rect width="16" height="16" rx="8" fill="#72BF44" />
+                                             <path
+                                                d="M4.27755 8.61478L6.4671 10.7869C6.75352 11.071 7.22126 11.071 7.50765 10.7869L11.7225 6.6048C12.0925 6.23767 12.0925 5.64676 11.7225 5.27966C11.3465 4.90675 10.7326 4.90678 10.3568 5.27974L6.9874 8.62311L5.64316 7.28956C5.26728 6.91667 4.65343 6.91667 4.27755 7.28956C3.90748 7.65669 3.90748 8.24766 4.27755 8.61478Z"
+                                                fill="white" />
+                                          </svg>
                                        </span>
                                     </div>
                                     <p class="dimension">320x100 - <span class="fw-500">Smartphone Banner</span></p>
@@ -171,7 +179,7 @@
                         </div>
                      </div>
                   </div>
-               </div>
+               </div> <!-- Dropzone End -->
             </div>
          </div>
          <form>
