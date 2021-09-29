@@ -3,25 +3,25 @@
 {% block content %}
 <div class="campaign-wrapper">
    <!-- Top Bar -->
-   <header class="topbar topbar2 d-flex justify-content-between align-items-center">
-      <div class="breadcumb fz16 fw-700">
-         <div class="d-flex">
-            <a href="#" class="mr-20">
-               <img src="assets/images/icons/left-arrow.svg" class="img long-arrow" alt="Arrow Icon">
-            </a>
-            <div class="d-flex flex-column pr-3">
-               <span class="purple-color fz16 fw-700">Sharetrip Summer Campaign 21</span>
-               <span class="purple-light-color fz12 fw-400">18 June - 17 July 2021</span>
+   <div class="sticky-top">
+      <header class="topbar topbar2 d-flex justify-content-between align-items-center">
+         <div class="breadcumb fz16 fw-700">
+            <div class="d-flex">
+               <a href="#" class="mr-20">
+                  <img src="assets/images/icons/left-arrow.svg" class="img long-arrow" alt="Arrow Icon">
+               </a>
+               <div class="d-flex flex-column pr-3">
+                  <span class="purple-color fz16 fw-700">Sharetrip Summer Campaign 21</span>
+                  <span class="purple-light-color fz12 fw-400">18 June - 17 July 2021</span>
+               </div>
+               <button class="btn-tag bg-green btn-4x12 radius-4 fz12 fw-600 border-0">Ongoing</button>
             </div>
-            <button class="btn-tag bg-green btn-4x12 radius-4 fz12 fw-600 border-0 ongoing">Ongoing</button>
-            <button
-               class="btn-tag orangDark4-bg white-color btn-4x12 radius-4 fz12 fw-600 border-0 pending">Pending</button>
          </div>
-      </div>
-      <div class="right-menu dropdown d-flex">
-         {% include 'snippets/topBar2Right.njk' %}
-      </div>
-   </header>
+         <div class="right-menu dropdown d-flex">
+            {% include 'snippets/topBar2Right.njk' %}
+         </div>
+      </header>
+   </div>
 
 
    <!-- Camaigns Dashboard Menu -->
@@ -36,7 +36,7 @@
          </ul>
       </div>
 
-      <div class="d-flex align-items-center justify-content-md-between justify-content-between">
+      <div class="d-flex align-items-center settings-three-dot">
          {% include 'snippets/threeDot.njk' %}
       </div>
    </div>
@@ -778,7 +778,7 @@
             <img src="assets/images/image-5.jpg" alt="Banner Image">
          </div>
 
-         <div class="d-flex justify-content-between mb-20">
+         <div class="banner-items-info">
             <div>
                <h4 class="purleDark-color fz16 fw-600 mb-2">Sharetrip Banner.jpg</h4>
                <p class="purpleLight7-color fz14 fw-400">Adgroup for Chittagong</p>

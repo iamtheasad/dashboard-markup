@@ -23,10 +23,6 @@
    max-width: 600px;
    width: 100%;
    margin: 20px;
-
-   @media screen and (max-width: 992px) {
-      width: 100%
-   }
 }
 
 .card {
@@ -48,6 +44,14 @@
          background-color: $white;
          border-radius: 6px;
       }
+   }
+}
+
+.settings-card--settings-campaign {
+   margin-bottom: 20px;
+
+   @media screen and (max-width: 767px) {
+      margin: 10px 15px 20px;
    }
 }
 
@@ -91,6 +95,10 @@
       background: $purpleLight4;
       border-radius: 4px;
       height: 36px;
+
+      @media screen and(max-width: 767px) {
+         margin: 10px 15px;
+      }
    }
 
    .tree-play-icon svg {
@@ -243,6 +251,10 @@
    padding: 20px 16px;
    border-radius: 4px;
 
+   @media screen and (max-width: 767px) {
+      margin: 0px 15px 15px;
+   }
+
    svg {
       width: 12px;
       margin-right: 10px;
@@ -256,7 +268,9 @@
    }
 }
 
-// Modals
+/**********************************************
+   // Modals
+***********************************************/
 .client-settings-modal-all {
    &.loading {
 
@@ -416,11 +430,17 @@
    }
 }
 
-// Campaign Settings Content
+/**********************************************
+   // Campaign Settings Content
+***********************************************/
 .campaign-status-bar {
    display: flex;
    justify-content: space-between;
    align-items: center;
+
+   @media screen and (max-width: 767px) {
+      margin: 0px 15px;
+   }
 }
 
 .color-box-status {
@@ -499,8 +519,53 @@
    border-radius: 2px;
 }
 
-// Rounded Progress Bar
 
+
+#slider_element {
+   float: left;
+   clear: left;
+   background-color: #f6f7fb;
+   border: 0px solid;
+ }
+ 
+ #slider_element .ui-slider-range {
+   background: #B8DFA1;
+ }
+ #slider_element .ui-slider-handle {
+   border-color: #B8DFA1;
+ }
+ 
+//  .container {
+//    width: 600px;
+//    margin: 0 auto;
+//    margin-top: 10vh;
+//  }
+ 
+ .slider_wrapper {
+   .amount_wrapper {
+     display: flex;
+     text-align: center;
+     justify-content: center;
+     .amount {
+       flex: 1;
+     }
+     .left_amount {
+     }
+     .right_amount {
+       flex-grow: 1;
+     }
+   }
+ }
+ .tooltip {
+   position: relative;
+   top: 30px;
+   color: green;
+ }
+ 
+
+/***********************
+   // Rounded Progress Bar
+************************/
 #wrapper {
    position: relative;
 }
@@ -581,7 +646,8 @@
 }
 
 .image-box {
-   width: 120px;
+   max-width: 120px;
+   width: 100%;
    height: 120px;
    background: $purpleLight4;
    border: 1px solid $purpleLight3;
@@ -591,13 +657,31 @@
 }
 
 .image-banner-box {
-   width: 600px;
+   max-width: 600px;
+   width: 100%;
    height: 100px;
    background: $purpleLight4;
    border: 1px solid $purpleLight3;
    border-radius: 4px;
    overflow: hidden;
    justify-content: center;
+
+   @media screen and(max-width: 767px) {
+      margin: 10px 15px;
+      width: auto;
+   }
+}
+
+.banner-items-info {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-bottom: 20px;
+
+   @media screen and(max-width: 767px) {
+      margin-left: 15px;
+      margin-right: 15px;
+   }
 }
 
 .tracking-code-area {
@@ -606,4 +690,363 @@
    @extend %green-scrollbar;
 
    /* Custom Scrollbar End */
+}
+
+/***********************
+   // Dropzone
+************************/
+
+.uploads {
+   background: rgba(114, 191, 68, 0.1);
+   border: 1px dashed $greenDark;
+   padding: 20px 16px;
+   border-radius: 4px;
+
+   svg {
+      width: 12px;
+      margin-right: 10px;
+   }
+
+   /* Mimic table appearance */
+   div.table-ad-item {
+      display: table;
+      width: 100%;
+   }
+
+   div.table-ad-item .file-row {
+      display: flex;
+   }
+
+   div.table-ad-item .file-row:nth-child(odd) {
+      background: transparent;
+   }
+
+   /* The total progress gets shown by event listeners */
+   .total-progress {
+      opacity: 0;
+      transition: opacity 0.3s linear;
+   }
+
+   .fileupload-process {
+      .progress {
+         background: transparent;
+      }
+   }
+
+   .preview {
+      img {
+         border-radius: 4px;
+         max-width: 72px;
+      }
+   }
+
+   .name {
+      font-size: rem(16);
+      font-weight: 600;
+      color: $purleDark;
+   }
+
+   .dimension {
+      font-size: rem(14);
+      color: $purpleLight7;
+      font-weight: 400;
+   }
+
+   .size {
+      color: $purpleLight7;
+      font-size: rem(14);
+      font-weight: 400;
+
+      strong {
+         font-weight: 400;
+      }
+   }
+
+   .files-description {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      padding: 0 10px;
+
+      .progress {
+         background: rgba($greenDark, .3);
+         margin-top: 8px;
+      }
+
+      .title {
+         display: flex;
+
+         .icon {
+            display: flex;
+            align-items: center;
+         }
+      }
+   }
+
+   .error {
+      font-size: rem(11);
+      font-weight: 700;
+      color: $redLight;
+      margin-top: 8px;
+   }
+
+   .remove {
+      font-size: rem(14);
+      font-weight: 500;
+      color: $redLight;
+   }
+
+   .previews {
+
+      /* Hide the progress bar when finished */
+      .file-row.dz-success .progress {
+         opacity: 0;
+         transition: opacity 0.3s linear;
+      }
+
+      /* Hide the delete button initially */
+      .file-row .delete,
+      .file-row .start {
+         display: none;
+      }
+
+      /* Hide the start and cancel buttons and show the delete button */
+      .file-row.dz-success .start,
+      .file-row.dz-success .cancel {
+         display: none;
+      }
+
+      .file-row.dz-success .delete {
+         display: block;
+      }
+   }
+
+   .uploaded-image-item {
+      width: 15%;
+   }
+
+   .uploaded-description-item {
+      width: 60%;
+   }
+
+   .uploaded-remove-item {
+      width: 25%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+   }
+
+   .error {
+
+      .uploaded-image-item,
+      .files-description {
+         opacity: .5;
+      }
+   }
+
+   .file-row {
+      &.error {
+         .files-description {
+            .title {
+               .name {
+                  color: $redLight;
+               }
+
+               .selection-icon {
+                  display: none !important;
+               }
+            }
+         }
+      }
+   }
+
+   .file-row {
+      &.selection {
+         .files-description {
+            .title {
+               .error-icon {
+                  display: none !important;
+               }
+            }
+         }
+      }
+   }
+
+}
+
+.uploads {
+   &.uploads-2 {
+      background-color: $primaryBg;
+      border: 1px dashed $grayBorderColor;
+
+      svg {
+         width: 12px;
+         margin-right: 10px;
+      }
+
+      /* Mimic table appearance */
+      div.table-ad-item {
+         display: table;
+         width: 100%;
+      }
+
+      div.table-ad-item .file-row {
+         display: flex;
+      }
+
+      div.table-ad-item .file-row:nth-child(odd) {
+         background: transparent;
+      }
+
+      /* The total progress gets shown by event listeners */
+      .total-progress2 {
+         opacity: 0;
+         transition: opacity 0.3s linear;
+      }
+
+      .fileupload-process {
+         .progress {
+            background: transparent;
+         }
+      }
+
+      .preview {
+         img {
+            border-radius: 4px;
+            max-width: 72px;
+         }
+      }
+
+      .name {
+         font-size: rem(16);
+         font-weight: 600;
+         color: $purleDark;
+      }
+
+      .dimension {
+         font-size: rem(14);
+         color: $purpleLight7;
+         font-weight: 400;
+      }
+
+      .size {
+         color: $purpleLight7;
+         font-size: rem(14);
+         font-weight: 400;
+
+         strong {
+            font-weight: 400;
+         }
+      }
+
+      .files-description {
+         display: flex;
+         flex-direction: column;
+         justify-content: space-around;
+         padding: 0 10px;
+
+         .progress {
+            background: rgba($greenDark, .3);
+            margin-top: 8px;
+         }
+
+         .title {
+            display: flex;
+
+            .icon {
+               display: flex;
+               align-items: center;
+            }
+         }
+      }
+
+      .error {
+         font-size: rem(11);
+         font-weight: 700;
+         color: $redLight;
+         margin-top: 8px;
+      }
+
+      .remove {
+         font-size: rem(14);
+         font-weight: 500;
+         color: $redLight;
+      }
+
+      .previews2 {
+
+         /* Hide the progress bar when finished */
+         .file-row.dz-success .progress {
+            opacity: 0;
+            transition: opacity 0.3s linear;
+         }
+
+         /* Hide the delete button initially */
+         .file-row .delete,
+         .file-row .start {
+            display: none;
+         }
+
+         /* Hide the start and cancel buttons and show the delete button */
+         .file-row.dz-success .start,
+         .file-row.dz-success .cancel {
+            display: none;
+         }
+
+         .file-row.dz-success .delete {
+            display: block;
+         }
+      }
+
+      .uploaded-image-item {
+         width: 15%;
+      }
+
+      .uploaded-description-item {
+         width: 60%;
+      }
+
+      .uploaded-remove-item {
+         width: 25%;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+      }
+
+      .error {
+
+         .uploaded-image-item,
+         .files-description {
+            opacity: .5;
+         }
+      }
+
+      .file-row {
+         &.error {
+            .files-description {
+               .title {
+                  .name {
+                     color: $redLight;
+                  }
+
+                  .selection-icon {
+                     display: none !important;
+                  }
+               }
+            }
+         }
+      }
+
+      .file-row {
+         &.selection {
+            .files-description {
+               .title {
+                  .error-icon {
+                     display: none !important;
+                  }
+               }
+            }
+         }
+      }
+   }
 }

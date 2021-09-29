@@ -13,10 +13,13 @@
     <!-- <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.18.1/dist/bootstrap-table.min.css"> -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css">
 
-    <link rel="stylesheet" href="assets/vendor/datepicker/css/daterangepicker.css">
     <!-- Daterange Picker -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
+
+    <!-- Dropzone -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.3.0/dropzone.css" />
 
     <!-- build:css assets/css/all.min.css -->
     <link rel="stylesheet" href="assets/css/vendor.css">
@@ -34,756 +37,742 @@
 
 <body class="preloader">
     <div class="d-flex">
-        <section class="sidebar-menu sidebar-menu-2">
-            <div class="menu-toggler menu-toggler-2">
-                <i class="mdi mdi-menu"></i>
-            </div>
-            <div class="site-logo-2">
-                <a href="/"><img src="assets/images/icons/logo-2.svg" alt="G&R Logo"></a>
-                <div class="sidebar-user-info">
-                    <a href="#"><span class="user">G&R Admin</span></a>
-                    <span class="amount">BDT 10,000</span>
+        <div class="sideBar">
+            <div class="sideBarBody">
+                <div class="sideBarHeader">
+                    <div class="sideBarHeader__inner border-bottom d-flex">
+                        <img src="/assets/images/icons/sidebar/logo.svg" alt="Sidebar Icon">
+                        <div>
+                            <p class="fz16 fw-600 mb-0">G&R Client</p>
+                            <p class="balance">BDT 10,000</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sideBarMenus">
+                    <ul>
+                        <li class="sideBarMenu">
+                            <div class="menu-item active ">
+                                <a href="/" class="menuLink">
+                                    <div class="sidebar-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M20.0001 7.01673L14.0001 1.76302C13.4501 1.27165 12.738 1 12.0001 1C11.2622 1 10.5501 1.27165 10.0001 1.76302L4.00009 7.01673C3.68246 7.30047 3.42899 7.64853 3.25657 8.03776C3.08414 8.42698 2.99671 8.84842 3.00009 9.27403V18.0036C3.00009 18.7983 3.31617 19.5604 3.87877 20.1224C4.44138 20.6843 5.20445 21 6.00009 21H18.0001C18.7957 21 19.5588 20.6843 20.1214 20.1224C20.684 19.5604 21.0001 18.7983 21.0001 18.0036V9.26404C21.0021 8.84011 20.9139 8.42059 20.7416 8.0332C20.5692 7.6458 20.3165 7.29935 20.0001 7.01673ZM14.0001 19.0024H10.0001V14.0084C10.0001 13.7435 10.1055 13.4894 10.293 13.3021C10.4805 13.1148 10.7349 13.0096 11.0001 13.0096H13.0001C13.2653 13.0096 13.5197 13.1148 13.7072 13.3021C13.8947 13.4894 14.0001 13.7435 14.0001 14.0084V19.0024ZM19.0001 18.0036C19.0001 18.2685 18.8947 18.5225 18.7072 18.7098C18.5197 18.8972 18.2653 19.0024 18.0001 19.0024H16.0001V14.0084C16.0001 13.2137 15.684 12.4515 15.1214 11.8896C14.5588 11.3276 13.7957 11.012 13.0001 11.012H11.0001C10.2044 11.012 9.44138 11.3276 8.87877 11.8896C8.31616 12.4515 8.00009 13.2137 8.00009 14.0084V19.0024H6.00009C5.73488 19.0024 5.48052 18.8972 5.29299 18.7098C5.10545 18.5225 5.00009 18.2685 5.00009 18.0036V9.26404C5.00027 9.12223 5.03069 8.98208 5.08931 8.85291C5.14794 8.72375 5.23343 8.60854 5.3401 8.51494L11.3401 3.27121C11.5226 3.11109 11.7572 3.02278 12.0001 3.02278C12.243 3.02278 12.4776 3.11109 12.6601 3.27121L18.6601 8.51494C18.7668 8.60854 18.8523 8.72375 18.9109 8.85291C18.9695 8.98208 18.9999 9.12223 19.0001 9.26404V18.0036Z" fill="#383874" />
+                                        </svg>
+                                    </div>
+                                    <span>Dashboard</span>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="sideBarMenu">
+                            <div class="menu-item fw-700">
+                                <a href="properties.html" class="menuLink">
+                                    <div class="sidebar-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8 1C8 0.447715 8.44772 0 9 0H15C15.5523 0 16 0.447715 16 1C16 1.55228 15.5523 2 15 2H9C8.44772 2 8 1.55228 8 1Z" fill="#383874" />
+                                            <path d="M12 7C12.5523 7 13 7.44772 13 8V11C13 11.5523 12.5523 12 12 12C11.4477 12 11 11.5523 11 11V8C11 7.44772 11.4477 7 12 7Z" fill="#383874" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 20C16.1421 20 19.5 16.6421 19.5 12.5C19.5 8.35786 16.1421 5 12 5C7.85786 5 4.5 8.35786 4.5 12.5C4.5 16.6421 7.85786 20 12 20ZM12 22C17.2467 22 21.5 17.7467 21.5 12.5C21.5 7.25329 17.2467 3 12 3C6.75329 3 2.5 7.25329 2.5 12.5C2.5 17.7467 6.75329 22 12 22Z" fill="#383874" />
+                                        </svg>
+                                    </div>
+                                    <span>Properties</span>
+                                </a>
+                                <span class="counter">2</span>
+                            </div>
+                        </li>
+                        <li class="sideBarMenu">
+                            <div class="menu-item  fw-700 ">
+                                <a href="/" class="menuLink">
+                                    <div class="sidebar-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8 1C8 0.447715 8.44772 0 9 0H15C15.5523 0 16 0.447715 16 1C16 1.55228 15.5523 2 15 2H9C8.44772 2 8 1.55228 8 1Z" fill="#383874" />
+                                            <path d="M12 7C12.5523 7 13 7.44772 13 8V11C13 11.5523 12.5523 12 12 12C11.4477 12 11 11.5523 11 11V8C11 7.44772 11.4477 7 12 7Z" fill="#383874" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 20C16.1421 20 19.5 16.6421 19.5 12.5C19.5 8.35786 16.1421 5 12 5C7.85786 5 4.5 8.35786 4.5 12.5C4.5 16.6421 7.85786 20 12 20ZM12 22C17.2467 22 21.5 17.7467 21.5 12.5C21.5 7.25329 17.2467 3 12 3C6.75329 3 2.5 7.25329 2.5 12.5C2.5 17.7467 6.75329 22 12 22Z" fill="#383874" />
+                                        </svg>
+                                    </div>
+                                    <span>Favorites</span>
+                                </a>
+                                <span class="counter">5</span>
+                            </div>
+                        </li>
+                        <div class="actionBar">
+                            <span>Influncers</span>
+                            <a href="javascript:void(0)" class="actionIcon">
+                                <img src="/assets/images/icons/sidebar/plus.svg" alt="Sidebar Icon"></a>
+                            <div class="action-popup">
+                                <a href="">Create Properties</a>
+                                <a href="">Create Payment</a>
+                            </div>
+                        </div>
+                        <li class="sideBarMenu dropdown">
+                            <div class="menu-item">
+                                <a href="javascript:void(0) " class="menuLink">
+                                    <div class="sidebar-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8 1C8 0.447715 8.44772 0 9 0H15C15.5523 0 16 0.447715 16 1C16 1.55228 15.5523 2 15 2H9C8.44772 2 8 1.55228 8 1Z" fill="#383874" />
+                                            <path d="M12 7C12.5523 7 13 7.44772 13 8V11C13 11.5523 12.5523 12 12 12C11.4477 12 11 11.5523 11 11V8C11 7.44772 11.4477 7 12 7Z" fill="#383874" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 20C16.1421 20 19.5 16.6421 19.5 12.5C19.5 8.35786 16.1421 5 12 5C7.85786 5 4.5 8.35786 4.5 12.5C4.5 16.6421 7.85786 20 12 20ZM12 22C17.2467 22 21.5 17.7467 21.5 12.5C21.5 7.25329 17.2467 3 12 3C6.75329 3 2.5 7.25329 2.5 12.5C2.5 17.7467 6.75329 22 12 22Z" fill="#383874" />
+                                        </svg>
+                                    </div>
+                                    <span>Influncers</span>
+                                </a>
+                            </div>
+                            <ul class="dropdown-menus">
+                                <li class="sideBarMenu">
+                                    <div class="menu-item fw-700">
+                                        <a href="influencerPlatform" class="menuLink">
+                                            <div class="sidebar-icon">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M8 1C8 0.447715 8.44772 0 9 0H15C15.5523 0 16 0.447715 16 1C16 1.55228 15.5523 2 15 2H9C8.44772 2 8 1.55228 8 1Z" fill="#383874" />
+                                                    <path d="M12 7C12.5523 7 13 7.44772 13 8V11C13 11.5523 12.5523 12 12 12C11.4477 12 11 11.5523 11 11V8C11 7.44772 11.4477 7 12 7Z" fill="#383874" />
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 20C16.1421 20 19.5 16.6421 19.5 12.5C19.5 8.35786 16.1421 5 12 5C7.85786 5 4.5 8.35786 4.5 12.5C4.5 16.6421 7.85786 20 12 20ZM12 22C17.2467 22 21.5 17.7467 21.5 12.5C21.5 7.25329 17.2467 3 12 3C6.75329 3 2.5 7.25329 2.5 12.5C2.5 17.7467 6.75329 22 12 22Z" fill="#383874" />
+                                                </svg>
+                                            </div>
+                                            <span>Platform</span>
+                                        </a>
+                                        <span class="counter">2</span>
+                                    </div>
+                                </li>
+                                <li class="sideBarMenu">
+                                    <div class="menu-item">
+                                        <a href="influencerPost" class="menuLink">
+                                            <div class="sidebar-icon">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M8 1C8 0.447715 8.44772 0 9 0H15C15.5523 0 16 0.447715 16 1C16 1.55228 15.5523 2 15 2H9C8.44772 2 8 1.55228 8 1Z" fill="#383874" />
+                                                    <path d="M12 7C12.5523 7 13 7.44772 13 8V11C13 11.5523 12.5523 12 12 12C11.4477 12 11 11.5523 11 11V8C11 7.44772 11.4477 7 12 7Z" fill="#383874" />
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 20C16.1421 20 19.5 16.6421 19.5 12.5C19.5 8.35786 16.1421 5 12 5C7.85786 5 4.5 8.35786 4.5 12.5C4.5 16.6421 7.85786 20 12 20ZM12 22C17.2467 22 21.5 17.7467 21.5 12.5C21.5 7.25329 17.2467 3 12 3C6.75329 3 2.5 7.25329 2.5 12.5C2.5 17.7467 6.75329 22 12 22Z" fill="#383874" />
+                                                </svg>
+                                            </div>
+                                            <span>Influencer Posts</span>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="sideBarMenu">
+                                    <div class="menu-item">
+                                        <a href="influencer" class="menuLink">
+                                            <div class="sidebar-icon">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M8 1C8 0.447715 8.44772 0 9 0H15C15.5523 0 16 0.447715 16 1C16 1.55228 15.5523 2 15 2H9C8.44772 2 8 1.55228 8 1Z" fill="#383874" />
+                                                    <path d="M12 7C12.5523 7 13 7.44772 13 8V11C13 11.5523 12.5523 12 12 12C11.4477 12 11 11.5523 11 11V8C11 7.44772 11.4477 7 12 7Z" fill="#383874" />
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 20C16.1421 20 19.5 16.6421 19.5 12.5C19.5 8.35786 16.1421 5 12 5C7.85786 5 4.5 8.35786 4.5 12.5C4.5 16.6421 7.85786 20 12 20ZM12 22C17.2467 22 21.5 17.7467 21.5 12.5C21.5 7.25329 17.2467 3 12 3C6.75329 3 2.5 7.25329 2.5 12.5C2.5 17.7467 6.75329 22 12 22Z" fill="#383874" />
+                                                </svg>
+                                            </div>
+                                            <span>Influencer Posts (Type: Advertiser)</span>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="sideBarMenu fw-600">
+                                    <div class="menu-item">
+                                        <a href="connects.html" class="menuLink">
+                                            <div class="sidebar-icon">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M8 1C8 0.447715 8.44772 0 9 0H15C15.5523 0 16 0.447715 16 1C16 1.55228 15.5523 2 15 2H9C8.44772 2 8 1.55228 8 1Z" fill="#383874" />
+                                                    <path d="M12 7C12.5523 7 13 7.44772 13 8V11C13 11.5523 12.5523 12 12 12C11.4477 12 11 11.5523 11 11V8C11 7.44772 11.4477 7 12 7Z" fill="#383874" />
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 20C16.1421 20 19.5 16.6421 19.5 12.5C19.5 8.35786 16.1421 5 12 5C7.85786 5 4.5 8.35786 4.5 12.5C4.5 16.6421 7.85786 20 12 20ZM12 22C17.2467 22 21.5 17.7467 21.5 12.5C21.5 7.25329 17.2467 3 12 3C6.75329 3 2.5 7.25329 2.5 12.5C2.5 17.7467 6.75329 22 12 22Z" fill="#383874" />
+                                                </svg>
+                                            </div>
+                                            <span>Inbox</span>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sideBarMenu">
+                            <div class="menu-item fw-700">
+                                <a href="placesAllAdded.html" class="menuLink">
+                                    <div class="sidebar-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8 1C8 0.447715 8.44772 0 9 0H15C15.5523 0 16 0.447715 16 1C16 1.55228 15.5523 2 15 2H9C8.44772 2 8 1.55228 8 1Z" fill="#383874" />
+                                            <path d="M12 7C12.5523 7 13 7.44772 13 8V11C13 11.5523 12.5523 12 12 12C11.4477 12 11 11.5523 11 11V8C11 7.44772 11.4477 7 12 7Z" fill="#383874" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 20C16.1421 20 19.5 16.6421 19.5 12.5C19.5 8.35786 16.1421 5 12 5C7.85786 5 4.5 8.35786 4.5 12.5C4.5 16.6421 7.85786 20 12 20ZM12 22C17.2467 22 21.5 17.7467 21.5 12.5C21.5 7.25329 17.2467 3 12 3C6.75329 3 2.5 7.25329 2.5 12.5C2.5 17.7467 6.75329 22 12 22Z" fill="#383874" />
+                                        </svg>
+                                    </div>
+                                    <span>Ad Place</span>
+                                </a>
+                                <span class="counter">2</span>
+                            </div>
+                        </li>
+                        <li class="sideBarMenu">
+                            <div class="menu-item">
+                                <a href="connects.html" class="menuLink">
+                                    <div class="sidebar-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8 1C8 0.447715 8.44772 0 9 0H15C15.5523 0 16 0.447715 16 1C16 1.55228 15.5523 2 15 2H9C8.44772 2 8 1.55228 8 1Z" fill="#383874" />
+                                            <path d="M12 7C12.5523 7 13 7.44772 13 8V11C13 11.5523 12.5523 12 12 12C11.4477 12 11 11.5523 11 11V8C11 7.44772 11.4477 7 12 7Z" fill="#383874" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 20C16.1421 20 19.5 16.6421 19.5 12.5C19.5 8.35786 16.1421 5 12 5C7.85786 5 4.5 8.35786 4.5 12.5C4.5 16.6421 7.85786 20 12 20ZM12 22C17.2467 22 21.5 17.7467 21.5 12.5C21.5 7.25329 17.2467 3 12 3C6.75329 3 2.5 7.25329 2.5 12.5C2.5 17.7467 6.75329 22 12 22Z" fill="#383874" />
+                                        </svg>
+                                    </div>
+                                    <span>Connects</span>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="sideBarMenu dropdown">
+                            <div class="menu-item">
+                                <a href="javascript:void(0) " class="menuLink">
+                                    <div class="sidebar-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8 1C8 0.447715 8.44772 0 9 0H15C15.5523 0 16 0.447715 16 1C16 1.55228 15.5523 2 15 2H9C8.44772 2 8 1.55228 8 1Z" fill="#383874" />
+                                            <path d="M12 7C12.5523 7 13 7.44772 13 8V11C13 11.5523 12.5523 12 12 12C11.4477 12 11 11.5523 11 11V8C11 7.44772 11.4477 7 12 7Z" fill="#383874" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 20C16.1421 20 19.5 16.6421 19.5 12.5C19.5 8.35786 16.1421 5 12 5C7.85786 5 4.5 8.35786 4.5 12.5C4.5 16.6421 7.85786 20 12 20ZM12 22C17.2467 22 21.5 17.7467 21.5 12.5C21.5 7.25329 17.2467 3 12 3C6.75329 3 2.5 7.25329 2.5 12.5C2.5 17.7467 6.75329 22 12 22Z" fill="#383874" />
+                                        </svg>
+                                    </div>
+                                    <span>Report</span>
+                                </a>
+                            </div>
+                            <ul class="dropdown-menus">
+                                <li class="sideBarMenu">
+                                    <div class="menu-item fw-700">
+                                        <a href="overview.html" class="menuLink">
+                                            <div class="sidebar-icon">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M8 1C8 0.447715 8.44772 0 9 0H15C15.5523 0 16 0.447715 16 1C16 1.55228 15.5523 2 15 2H9C8.44772 2 8 1.55228 8 1Z" fill="#383874" />
+                                                    <path d="M12 7C12.5523 7 13 7.44772 13 8V11C13 11.5523 12.5523 12 12 12C11.4477 12 11 11.5523 11 11V8C11 7.44772 11.4477 7 12 7Z" fill="#383874" />
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 20C16.1421 20 19.5 16.6421 19.5 12.5C19.5 8.35786 16.1421 5 12 5C7.85786 5 4.5 8.35786 4.5 12.5C4.5 16.6421 7.85786 20 12 20ZM12 22C17.2467 22 21.5 17.7467 21.5 12.5C21.5 7.25329 17.2467 3 12 3C6.75329 3 2.5 7.25329 2.5 12.5C2.5 17.7467 6.75329 22 12 22Z" fill="#383874" />
+                                                </svg>
+                                            </div>
+                                            <span>Overview</span>
+                                        </a>
+                                        <span class="counter">2</span>
+                                    </div>
+                                </li>
+                                <li class="sideBarMenu">
+                                    <div class="menu-item">
+                                        <a href="location.html" class="menuLink">
+                                            <div class="sidebar-icon">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M8 1C8 0.447715 8.44772 0 9 0H15C15.5523 0 16 0.447715 16 1C16 1.55228 15.5523 2 15 2H9C8.44772 2 8 1.55228 8 1Z" fill="#383874" />
+                                                    <path d="M12 7C12.5523 7 13 7.44772 13 8V11C13 11.5523 12.5523 12 12 12C11.4477 12 11 11.5523 11 11V8C11 7.44772 11.4477 7 12 7Z" fill="#383874" />
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 20C16.1421 20 19.5 16.6421 19.5 12.5C19.5 8.35786 16.1421 5 12 5C7.85786 5 4.5 8.35786 4.5 12.5C4.5 16.6421 7.85786 20 12 20ZM12 22C17.2467 22 21.5 17.7467 21.5 12.5C21.5 7.25329 17.2467 3 12 3C6.75329 3 2.5 7.25329 2.5 12.5C2.5 17.7467 6.75329 22 12 22Z" fill="#383874" />
+                                                </svg>
+                                            </div>
+                                            <span>Location</span>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="sideBarMenu">
+                                    <div class="menu-item">
+                                        <a href="revenue.html" class="menuLink">
+                                            <div class="sidebar-icon">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M8 1C8 0.447715 8.44772 0 9 0H15C15.5523 0 16 0.447715 16 1C16 1.55228 15.5523 2 15 2H9C8.44772 2 8 1.55228 8 1Z" fill="#383874" />
+                                                    <path d="M12 7C12.5523 7 13 7.44772 13 8V11C13 11.5523 12.5523 12 12 12C11.4477 12 11 11.5523 11 11V8C11 7.44772 11.4477 7 12 7Z" fill="#383874" />
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 20C16.1421 20 19.5 16.6421 19.5 12.5C19.5 8.35786 16.1421 5 12 5C7.85786 5 4.5 8.35786 4.5 12.5C4.5 16.6421 7.85786 20 12 20ZM12 22C17.2467 22 21.5 17.7467 21.5 12.5C21.5 7.25329 17.2467 3 12 3C6.75329 3 2.5 7.25329 2.5 12.5C2.5 17.7467 6.75329 22 12 22Z" fill="#383874" />
+                                                </svg>
+                                            </div>
+                                            <span>Revenue</span>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="sideBarMenu">
+                                    <div class="menu-item">
+                                        <a href="technology.html" class="menuLink">
+                                            <div class="sidebar-icon">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M8 1C8 0.447715 8.44772 0 9 0H15C15.5523 0 16 0.447715 16 1C16 1.55228 15.5523 2 15 2H9C8.44772 2 8 1.55228 8 1Z" fill="#383874" />
+                                                    <path d="M12 7C12.5523 7 13 7.44772 13 8V11C13 11.5523 12.5523 12 12 12C11.4477 12 11 11.5523 11 11V8C11 7.44772 11.4477 7 12 7Z" fill="#383874" />
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 20C16.1421 20 19.5 16.6421 19.5 12.5C19.5 8.35786 16.1421 5 12 5C7.85786 5 4.5 8.35786 4.5 12.5C4.5 16.6421 7.85786 20 12 20ZM12 22C17.2467 22 21.5 17.7467 21.5 12.5C21.5 7.25329 17.2467 3 12 3C6.75329 3 2.5 7.25329 2.5 12.5C2.5 17.7467 6.75329 22 12 22Z" fill="#383874" />
+                                                </svg>
+                                            </div>
+                                            <span>Technology</span>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <div class="actionBar">
+                            <span>Payments</span>
+                            <a href="javascript:void(0)" class="actionIcon"><img src="/assets/images/icons/sidebar/plus.svg" alt="Sidebar Icon"></a>
+                            <div class="action-popup">
+                                <a href="">Create Properties</a>
+                                <a href="">Create Payment</a>
+                            </div>
+                        </div>
+                        <li class="sideBarMenu dropdown">
+                            <div class="menu-item">
+                                <a href="javascript:void(0) " class="menuLink">
+                                    <div class="sidebar-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8 1C8 0.447715 8.44772 0 9 0H15C15.5523 0 16 0.447715 16 1C16 1.55228 15.5523 2 15 2H9C8.44772 2 8 1.55228 8 1Z" fill="#383874" />
+                                            <path d="M12 7C12.5523 7 13 7.44772 13 8V11C13 11.5523 12.5523 12 12 12C11.4477 12 11 11.5523 11 11V8C11 7.44772 11.4477 7 12 7Z" fill="#383874" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 20C16.1421 20 19.5 16.6421 19.5 12.5C19.5 8.35786 16.1421 5 12 5C7.85786 5 4.5 8.35786 4.5 12.5C4.5 16.6421 7.85786 20 12 20ZM12 22C17.2467 22 21.5 17.7467 21.5 12.5C21.5 7.25329 17.2467 3 12 3C6.75329 3 2.5 7.25329 2.5 12.5C2.5 17.7467 6.75329 22 12 22Z" fill="#383874" />
+                                        </svg>
+                                    </div>
+                                    <span>Payments</span>
+                                </a>
+                            </div>
+                            <ul class="dropdown-menus">
+                                <li class="sideBarMenu">
+                                    <div class="menu-item fw-700">
+                                        <a href="estimatedRevenuePage.html" class="menuLink">
+                                            <div class="sidebar-icon">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M8 1C8 0.447715 8.44772 0 9 0H15C15.5523 0 16 0.447715 16 1C16 1.55228 15.5523 2 15 2H9C8.44772 2 8 1.55228 8 1Z" fill="#383874" />
+                                                    <path d="M12 7C12.5523 7 13 7.44772 13 8V11C13 11.5523 12.5523 12 12 12C11.4477 12 11 11.5523 11 11V8C11 7.44772 11.4477 7 12 7Z" fill="#383874" />
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 20C16.1421 20 19.5 16.6421 19.5 12.5C19.5 8.35786 16.1421 5 12 5C7.85786 5 4.5 8.35786 4.5 12.5C4.5 16.6421 7.85786 20 12 20ZM12 22C17.2467 22 21.5 17.7467 21.5 12.5C21.5 7.25329 17.2467 3 12 3C6.75329 3 2.5 7.25329 2.5 12.5C2.5 17.7467 6.75329 22 12 22Z" fill="#383874" />
+                                                </svg>
+                                            </div>
+                                            <span>Estimated Revennue</span>
+                                        </a>
+                                        <span class="counter">2</span>
+                                    </div>
+                                </li>
+                                <li class="sideBarMenu">
+                                    <div class="menu-item">
+                                        <a href="finilizedPayment.html" class="menuLink">
+                                            <div class="sidebar-icon">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M8 1C8 0.447715 8.44772 0 9 0H15C15.5523 0 16 0.447715 16 1C16 1.55228 15.5523 2 15 2H9C8.44772 2 8 1.55228 8 1Z" fill="#383874" />
+                                                    <path d="M12 7C12.5523 7 13 7.44772 13 8V11C13 11.5523 12.5523 12 12 12C11.4477 12 11 11.5523 11 11V8C11 7.44772 11.4477 7 12 7Z" fill="#383874" />
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 20C16.1421 20 19.5 16.6421 19.5 12.5C19.5 8.35786 16.1421 5 12 5C7.85786 5 4.5 8.35786 4.5 12.5C4.5 16.6421 7.85786 20 12 20ZM12 22C17.2467 22 21.5 17.7467 21.5 12.5C21.5 7.25329 17.2467 3 12 3C6.75329 3 2.5 7.25329 2.5 12.5C2.5 17.7467 6.75329 22 12 22Z" fill="#383874" />
+                                                </svg>
+                                            </div>
+                                            <span>Finilized Payments</span>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="sideBarMenu">
+                                    <div class="menu-item">
+                                        <a href="balance.html" class="menuLink">
+                                            <div class="sidebar-icon">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M8 1C8 0.447715 8.44772 0 9 0H15C15.5523 0 16 0.447715 16 1C16 1.55228 15.5523 2 15 2H9C8.44772 2 8 1.55228 8 1Z" fill="#383874" />
+                                                    <path d="M12 7C12.5523 7 13 7.44772 13 8V11C13 11.5523 12.5523 12 12 12C11.4477 12 11 11.5523 11 11V8C11 7.44772 11.4477 7 12 7Z" fill="#383874" />
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 20C16.1421 20 19.5 16.6421 19.5 12.5C19.5 8.35786 16.1421 5 12 5C7.85786 5 4.5 8.35786 4.5 12.5C4.5 16.6421 7.85786 20 12 20ZM12 22C17.2467 22 21.5 17.7467 21.5 12.5C21.5 7.25329 17.2467 3 12 3C6.75329 3 2.5 7.25329 2.5 12.5C2.5 17.7467 6.75329 22 12 22Z" fill="#383874" />
+                                                </svg>
+                                            </div>
+                                            <span>Balance</span>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sideBarMenu">
+                            <div class="menu-item">
+                                <a href="clientDashboardOverview.html" class="menuLink">
+                                    <div class="sidebar-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8 1C8 0.447715 8.44772 0 9 0H15C15.5523 0 16 0.447715 16 1C16 1.55228 15.5523 2 15 2H9C8.44772 2 8 1.55228 8 1Z" fill="#383874" />
+                                            <path d="M12 7C12.5523 7 13 7.44772 13 8V11C13 11.5523 12.5523 12 12 12C11.4477 12 11 11.5523 11 11V8C11 7.44772 11.4477 7 12 7Z" fill="#383874" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 20C16.1421 20 19.5 16.6421 19.5 12.5C19.5 8.35786 16.1421 5 12 5C7.85786 5 4.5 8.35786 4.5 12.5C4.5 16.6421 7.85786 20 12 20ZM12 22C17.2467 22 21.5 17.7467 21.5 12.5C21.5 7.25329 17.2467 3 12 3C6.75329 3 2.5 7.25329 2.5 12.5C2.5 17.7467 6.75329 22 12 22Z" fill="#383874" />
+                                        </svg>
+                                    </div>
+                                    <span>Client Campaigns</span>
+                                </a>
+                            </div>
+                        </li>
+                        <div class="actionBar">
+                            <span>Campaigns</span>
+                            <a href="javascript:void(0)" class="actionIcon"><img src="/assets/images/icons/sidebar/plus.svg" alt="Sidebar Icon"></a>
+                            <div class="action-popup">
+                                <a href="">Create Properties</a>
+                                <a href="">Create Payment</a>
+                            </div>
+                        </div>
+                        <li class="sideBarMenu dropdown">
+                            <div class="menu-item">
+                                <a href="javascript:void(0) " class="menuLink">
+                                    <div class="sidebar-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8 1C8 0.447715 8.44772 0 9 0H15C15.5523 0 16 0.447715 16 1C16 1.55228 15.5523 2 15 2H9C8.44772 2 8 1.55228 8 1Z" fill="#383874" />
+                                            <path d="M12 7C12.5523 7 13 7.44772 13 8V11C13 11.5523 12.5523 12 12 12C11.4477 12 11 11.5523 11 11V8C11 7.44772 11.4477 7 12 7Z" fill="#383874" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 20C16.1421 20 19.5 16.6421 19.5 12.5C19.5 8.35786 16.1421 5 12 5C7.85786 5 4.5 8.35786 4.5 12.5C4.5 16.6421 7.85786 20 12 20ZM12 22C17.2467 22 21.5 17.7467 21.5 12.5C21.5 7.25329 17.2467 3 12 3C6.75329 3 2.5 7.25329 2.5 12.5C2.5 17.7467 6.75329 22 12 22Z" fill="#383874" />
+                                        </svg>
+                                    </div>
+                                    <span>Campaigns</span>
+                                </a>
+                            </div>
+                            <ul class="dropdown-menus">
+                                <li class="sideBarMenu">
+                                    <div class="menu-item fw-700">
+                                        <a href="createCampaign.html" class="menuLink">
+                                            <div class="sidebar-icon">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M8 1C8 0.447715 8.44772 0 9 0H15C15.5523 0 16 0.447715 16 1C16 1.55228 15.5523 2 15 2H9C8.44772 2 8 1.55228 8 1Z" fill="#383874" />
+                                                    <path d="M12 7C12.5523 7 13 7.44772 13 8V11C13 11.5523 12.5523 12 12 12C11.4477 12 11 11.5523 11 11V8C11 7.44772 11.4477 7 12 7Z" fill="#383874" />
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 20C16.1421 20 19.5 16.6421 19.5 12.5C19.5 8.35786 16.1421 5 12 5C7.85786 5 4.5 8.35786 4.5 12.5C4.5 16.6421 7.85786 20 12 20ZM12 22C17.2467 22 21.5 17.7467 21.5 12.5C21.5 7.25329 17.2467 3 12 3C6.75329 3 2.5 7.25329 2.5 12.5C2.5 17.7467 6.75329 22 12 22Z" fill="#383874" />
+                                                </svg>
+                                            </div>
+                                            <span>All</span>
+                                        </a>
+                                        <span class="counter">2</span>
+                                    </div>
+                                </li>
+                                <li class="sideBarMenu">
+                                    <div class="menu-item">
+                                        <a href="createCampaign.html" class="menuLink">
+                                            <div class="sidebar-icon">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M8 1C8 0.447715 8.44772 0 9 0H15C15.5523 0 16 0.447715 16 1C16 1.55228 15.5523 2 15 2H9C8.44772 2 8 1.55228 8 1Z" fill="#383874" />
+                                                    <path d="M12 7C12.5523 7 13 7.44772 13 8V11C13 11.5523 12.5523 12 12 12C11.4477 12 11 11.5523 11 11V8C11 7.44772 11.4477 7 12 7Z" fill="#383874" />
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 20C16.1421 20 19.5 16.6421 19.5 12.5C19.5 8.35786 16.1421 5 12 5C7.85786 5 4.5 8.35786 4.5 12.5C4.5 16.6421 7.85786 20 12 20ZM12 22C17.2467 22 21.5 17.7467 21.5 12.5C21.5 7.25329 17.2467 3 12 3C6.75329 3 2.5 7.25329 2.5 12.5C2.5 17.7467 6.75329 22 12 22Z" fill="#383874" />
+                                                </svg>
+                                            </div>
+                                            <span>Scheduled</span>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="sideBarMenu">
+                                    <div class="menu-item">
+                                        <a href="createCampaign.html" class="menuLink">
+                                            <div class="sidebar-icon">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M8 1C8 0.447715 8.44772 0 9 0H15C15.5523 0 16 0.447715 16 1C16 1.55228 15.5523 2 15 2H9C8.44772 2 8 1.55228 8 1Z" fill="#383874" />
+                                                    <path d="M12 7C12.5523 7 13 7.44772 13 8V11C13 11.5523 12.5523 12 12 12C11.4477 12 11 11.5523 11 11V8C11 7.44772 11.4477 7 12 7Z" fill="#383874" />
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 20C16.1421 20 19.5 16.6421 19.5 12.5C19.5 8.35786 16.1421 5 12 5C7.85786 5 4.5 8.35786 4.5 12.5C4.5 16.6421 7.85786 20 12 20ZM12 22C17.2467 22 21.5 17.7467 21.5 12.5C21.5 7.25329 17.2467 3 12 3C6.75329 3 2.5 7.25329 2.5 12.5C2.5 17.7467 6.75329 22 12 22Z" fill="#383874" />
+                                                </svg>
+                                            </div>
+                                            <span>Ongoing</span>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="sideBarMenu">
+                                    <div class="menu-item">
+                                        <a href="createCampaign.html" class="menuLink">
+                                            <div class="sidebar-icon">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M8 1C8 0.447715 8.44772 0 9 0H15C15.5523 0 16 0.447715 16 1C16 1.55228 15.5523 2 15 2H9C8.44772 2 8 1.55228 8 1Z" fill="#383874" />
+                                                    <path d="M12 7C12.5523 7 13 7.44772 13 8V11C13 11.5523 12.5523 12 12 12C11.4477 12 11 11.5523 11 11V8C11 7.44772 11.4477 7 12 7Z" fill="#383874" />
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 20C16.1421 20 19.5 16.6421 19.5 12.5C19.5 8.35786 16.1421 5 12 5C7.85786 5 4.5 8.35786 4.5 12.5C4.5 16.6421 7.85786 20 12 20ZM12 22C17.2467 22 21.5 17.7467 21.5 12.5C21.5 7.25329 17.2467 3 12 3C6.75329 3 2.5 7.25329 2.5 12.5C2.5 17.7467 6.75329 22 12 22Z" fill="#383874" />
+                                                </svg>
+                                            </div>
+                                            <span>Completed</span>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="sideBarMenu">
+                                    <div class="menu-item">
+                                        <a href="draft.html" class="menuLink">
+                                            <div class="sidebar-icon">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M8 1C8 0.447715 8.44772 0 9 0H15C15.5523 0 16 0.447715 16 1C16 1.55228 15.5523 2 15 2H9C8.44772 2 8 1.55228 8 1Z" fill="#383874" />
+                                                    <path d="M12 7C12.5523 7 13 7.44772 13 8V11C13 11.5523 12.5523 12 12 12C11.4477 12 11 11.5523 11 11V8C11 7.44772 11.4477 7 12 7Z" fill="#383874" />
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 20C16.1421 20 19.5 16.6421 19.5 12.5C19.5 8.35786 16.1421 5 12 5C7.85786 5 4.5 8.35786 4.5 12.5C4.5 16.6421 7.85786 20 12 20ZM12 22C17.2467 22 21.5 17.7467 21.5 12.5C21.5 7.25329 17.2467 3 12 3C6.75329 3 2.5 7.25329 2.5 12.5C2.5 17.7467 6.75329 22 12 22Z" fill="#383874" />
+                                                </svg>
+                                            </div>
+                                            <span>Draft</span>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="sideBarMenu">
+                                    <div class="menu-item">
+                                        <a href="createCampaign.html" class="menuLink">
+                                            <div class="sidebar-icon">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M8 1C8 0.447715 8.44772 0 9 0H15C15.5523 0 16 0.447715 16 1C16 1.55228 15.5523 2 15 2H9C8.44772 2 8 1.55228 8 1Z" fill="#383874" />
+                                                    <path d="M12 7C12.5523 7 13 7.44772 13 8V11C13 11.5523 12.5523 12 12 12C11.4477 12 11 11.5523 11 11V8C11 7.44772 11.4477 7 12 7Z" fill="#383874" />
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 20C16.1421 20 19.5 16.6421 19.5 12.5C19.5 8.35786 16.1421 5 12 5C7.85786 5 4.5 8.35786 4.5 12.5C4.5 16.6421 7.85786 20 12 20ZM12 22C17.2467 22 21.5 17.7467 21.5 12.5C21.5 7.25329 17.2467 3 12 3C6.75329 3 2.5 7.25329 2.5 12.5C2.5 17.7467 6.75329 22 12 22Z" fill="#383874" />
+                                                </svg>
+                                            </div>
+                                            <span>Archieved</span>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <div class="actionBar">
+                            <span>My Deals</span>
+                            <a href="javascript:void(0)" class="actionIcon"><img src="/assets/images/icons/sidebar/plus.svg" alt="Sidebar Icon"></a>
+                            <div class="action-popup">
+                                <a href="">Create Properties</a>
+                                <a href="">Create Payment</a>
+                            </div>
+                        </div>
+                        <li class="sideBarMenu dropdown">
+                            <div class="menu-item">
+                                <a href="javascript:void(0) " class="menuLink">
+                                    <div class="sidebar-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8 1C8 0.447715 8.44772 0 9 0H15C15.5523 0 16 0.447715 16 1C16 1.55228 15.5523 2 15 2H9C8.44772 2 8 1.55228 8 1Z" fill="#383874" />
+                                            <path d="M12 7C12.5523 7 13 7.44772 13 8V11C13 11.5523 12.5523 12 12 12C11.4477 12 11 11.5523 11 11V8C11 7.44772 11.4477 7 12 7Z" fill="#383874" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 20C16.1421 20 19.5 16.6421 19.5 12.5C19.5 8.35786 16.1421 5 12 5C7.85786 5 4.5 8.35786 4.5 12.5C4.5 16.6421 7.85786 20 12 20ZM12 22C17.2467 22 21.5 17.7467 21.5 12.5C21.5 7.25329 17.2467 3 12 3C6.75329 3 2.5 7.25329 2.5 12.5C2.5 17.7467 6.75329 22 12 22Z" fill="#383874" />
+                                        </svg>
+                                    </div>
+                                    <span>My Deals</span>
+                                </a>
+                            </div>
+                            <ul class="dropdown-menus">
+                                <li class="sideBarMenu">
+                                    <div class="menu-item fw-700">
+                                        <a href="myDeals.html" class="menuLink">
+                                            <div class="sidebar-icon">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M8 1C8 0.447715 8.44772 0 9 0H15C15.5523 0 16 0.447715 16 1C16 1.55228 15.5523 2 15 2H9C8.44772 2 8 1.55228 8 1Z" fill="#383874" />
+                                                    <path d="M12 7C12.5523 7 13 7.44772 13 8V11C13 11.5523 12.5523 12 12 12C11.4477 12 11 11.5523 11 11V8C11 7.44772 11.4477 7 12 7Z" fill="#383874" />
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 20C16.1421 20 19.5 16.6421 19.5 12.5C19.5 8.35786 16.1421 5 12 5C7.85786 5 4.5 8.35786 4.5 12.5C4.5 16.6421 7.85786 20 12 20ZM12 22C17.2467 22 21.5 17.7467 21.5 12.5C21.5 7.25329 17.2467 3 12 3C6.75329 3 2.5 7.25329 2.5 12.5C2.5 17.7467 6.75329 22 12 22Z" fill="#383874" />
+                                                </svg>
+                                            </div>
+                                            <span>Connect Requests</span>
+                                        </a>
+                                        <span class="counter">2</span>
+                                    </div>
+                                </li>
+                                <li class="sideBarMenu">
+                                    <div class="menu-item fw-700">
+                                        <a href="myDeals.html" class="menuLink">
+                                            <div class="sidebar-icon">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M8 1C8 0.447715 8.44772 0 9 0H15C15.5523 0 16 0.447715 16 1C16 1.55228 15.5523 2 15 2H9C8.44772 2 8 1.55228 8 1Z" fill="#383874" />
+                                                    <path d="M12 7C12.5523 7 13 7.44772 13 8V11C13 11.5523 12.5523 12 12 12C11.4477 12 11 11.5523 11 11V8C11 7.44772 11.4477 7 12 7Z" fill="#383874" />
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 20C16.1421 20 19.5 16.6421 19.5 12.5C19.5 8.35786 16.1421 5 12 5C7.85786 5 4.5 8.35786 4.5 12.5C4.5 16.6421 7.85786 20 12 20ZM12 22C17.2467 22 21.5 17.7467 21.5 12.5C21.5 7.25329 17.2467 3 12 3C6.75329 3 2.5 7.25329 2.5 12.5C2.5 17.7467 6.75329 22 12 22Z" fill="#383874" />
+                                                </svg>
+                                            </div>
+                                            <span>In Progress</span>
+                                        </a>
+                                        <span class="counter">2</span>
+                                    </div>
+                                </li>
+                                <li class="sideBarMenu">
+                                    <div class="menu-item fw-700">
+                                        <a href="myDeals.html" class="menuLink">
+                                            <div class="sidebar-icon">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M8 1C8 0.447715 8.44772 0 9 0H15C15.5523 0 16 0.447715 16 1C16 1.55228 15.5523 2 15 2H9C8.44772 2 8 1.55228 8 1Z" fill="#383874" />
+                                                    <path d="M12 7C12.5523 7 13 7.44772 13 8V11C13 11.5523 12.5523 12 12 12C11.4477 12 11 11.5523 11 11V8C11 7.44772 11.4477 7 12 7Z" fill="#383874" />
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 20C16.1421 20 19.5 16.6421 19.5 12.5C19.5 8.35786 16.1421 5 12 5C7.85786 5 4.5 8.35786 4.5 12.5C4.5 16.6421 7.85786 20 12 20ZM12 22C17.2467 22 21.5 17.7467 21.5 12.5C21.5 7.25329 17.2467 3 12 3C6.75329 3 2.5 7.25329 2.5 12.5C2.5 17.7467 6.75329 22 12 22Z" fill="#383874" />
+                                                </svg>
+                                            </div>
+                                            <span>Pending Approval</span>
+                                        </a>
+                                        <span class="counter">2</span>
+                                    </div>
+                                </li>
+                                <li class="sideBarMenu">
+                                    <div class="menu-item">
+                                        <a href="myDeals.html" class="menuLink">
+                                            <div class="sidebar-icon">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M8 1C8 0.447715 8.44772 0 9 0H15C15.5523 0 16 0.447715 16 1C16 1.55228 15.5523 2 15 2H9C8.44772 2 8 1.55228 8 1Z" fill="#383874" />
+                                                    <path d="M12 7C12.5523 7 13 7.44772 13 8V11C13 11.5523 12.5523 12 12 12C11.4477 12 11 11.5523 11 11V8C11 7.44772 11.4477 7 12 7Z" fill="#383874" />
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 20C16.1421 20 19.5 16.6421 19.5 12.5C19.5 8.35786 16.1421 5 12 5C7.85786 5 4.5 8.35786 4.5 12.5C4.5 16.6421 7.85786 20 12 20ZM12 22C17.2467 22 21.5 17.7467 21.5 12.5C21.5 7.25329 17.2467 3 12 3C6.75329 3 2.5 7.25329 2.5 12.5C2.5 17.7467 6.75329 22 12 22Z" fill="#383874" />
+                                                </svg>
+                                            </div>
+                                            <span>Cancelled</span>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <div class="actionBar">
+                            <span>My Campaigns</span>
+                            <a href="javascript:void(0)" class="actionIcon"><img src="/assets/images/icons/sidebar/plus.svg" alt="Sidebar Icon"></a>
+                            <div class="action-popup">
+                                <a href="">Create Properties</a>
+                                <a href="">Create Payment</a>
+                            </div>
+                        </div>
+                        <li class="sideBarMenu dropdown">
+                            <div class="menu-item">
+                                <a href="javascript:void(0) " class="menuLink">
+                                    <div class="sidebar-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8 1C8 0.447715 8.44772 0 9 0H15C15.5523 0 16 0.447715 16 1C16 1.55228 15.5523 2 15 2H9C8.44772 2 8 1.55228 8 1Z" fill="#383874" />
+                                            <path d="M12 7C12.5523 7 13 7.44772 13 8V11C13 11.5523 12.5523 12 12 12C11.4477 12 11 11.5523 11 11V8C11 7.44772 11.4477 7 12 7Z" fill="#383874" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 20C16.1421 20 19.5 16.6421 19.5 12.5C19.5 8.35786 16.1421 5 12 5C7.85786 5 4.5 8.35786 4.5 12.5C4.5 16.6421 7.85786 20 12 20ZM12 22C17.2467 22 21.5 17.7467 21.5 12.5C21.5 7.25329 17.2467 3 12 3C6.75329 3 2.5 7.25329 2.5 12.5C2.5 17.7467 6.75329 22 12 22Z" fill="#383874" />
+                                        </svg>
+                                    </div>
+                                    <span>My Campaigns</span>
+                                </a>
+                            </div>
+                            <ul class="dropdown-menus">
+                                <li class="sideBarMenu">
+                                    <div class="menu-item fw-700">
+                                        <a href="myCampaigns.html" class="menuLink">
+                                            <div class="sidebar-icon">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M8 1C8 0.447715 8.44772 0 9 0H15C15.5523 0 16 0.447715 16 1C16 1.55228 15.5523 2 15 2H9C8.44772 2 8 1.55228 8 1Z" fill="#383874" />
+                                                    <path d="M12 7C12.5523 7 13 7.44772 13 8V11C13 11.5523 12.5523 12 12 12C11.4477 12 11 11.5523 11 11V8C11 7.44772 11.4477 7 12 7Z" fill="#383874" />
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 20C16.1421 20 19.5 16.6421 19.5 12.5C19.5 8.35786 16.1421 5 12 5C7.85786 5 4.5 8.35786 4.5 12.5C4.5 16.6421 7.85786 20 12 20ZM12 22C17.2467 22 21.5 17.7467 21.5 12.5C21.5 7.25329 17.2467 3 12 3C6.75329 3 2.5 7.25329 2.5 12.5C2.5 17.7467 6.75329 22 12 22Z" fill="#383874" />
+                                                </svg>
+                                            </div>
+                                            <span>Scheduled</span>
+                                        </a>
+                                        <span class="counter">2</span>
+                                    </div>
+                                </li>
+                                <li class="sideBarMenu">
+                                    <div class="menu-item fw-700">
+                                        <a href="myCampaigns.html" class="menuLink">
+                                            <div class="sidebar-icon">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M8 1C8 0.447715 8.44772 0 9 0H15C15.5523 0 16 0.447715 16 1C16 1.55228 15.5523 2 15 2H9C8.44772 2 8 1.55228 8 1Z" fill="#383874" />
+                                                    <path d="M12 7C12.5523 7 13 7.44772 13 8V11C13 11.5523 12.5523 12 12 12C11.4477 12 11 11.5523 11 11V8C11 7.44772 11.4477 7 12 7Z" fill="#383874" />
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 20C16.1421 20 19.5 16.6421 19.5 12.5C19.5 8.35786 16.1421 5 12 5C7.85786 5 4.5 8.35786 4.5 12.5C4.5 16.6421 7.85786 20 12 20ZM12 22C17.2467 22 21.5 17.7467 21.5 12.5C21.5 7.25329 17.2467 3 12 3C6.75329 3 2.5 7.25329 2.5 12.5C2.5 17.7467 6.75329 22 12 22Z" fill="#383874" />
+                                                </svg>
+                                            </div>
+                                            <span>Ongoing</span>
+                                        </a>
+                                        <span class="counter">2</span>
+                                    </div>
+                                </li>
+                                <li class="sideBarMenu">
+                                    <div class="menu-item">
+                                        <a href="myCampaigns.html" class="menuLink">
+                                            <div class="sidebar-icon">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M8 1C8 0.447715 8.44772 0 9 0H15C15.5523 0 16 0.447715 16 1C16 1.55228 15.5523 2 15 2H9C8.44772 2 8 1.55228 8 1Z" fill="#383874" />
+                                                    <path d="M12 7C12.5523 7 13 7.44772 13 8V11C13 11.5523 12.5523 12 12 12C11.4477 12 11 11.5523 11 11V8C11 7.44772 11.4477 7 12 7Z" fill="#383874" />
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 20C16.1421 20 19.5 16.6421 19.5 12.5C19.5 8.35786 16.1421 5 12 5C7.85786 5 4.5 8.35786 4.5 12.5C4.5 16.6421 7.85786 20 12 20ZM12 22C17.2467 22 21.5 17.7467 21.5 12.5C21.5 7.25329 17.2467 3 12 3C6.75329 3 2.5 7.25329 2.5 12.5C2.5 17.7467 6.75329 22 12 22Z" fill="#383874" />
+                                                </svg>
+                                            </div>
+                                            <span>Completed</span>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="sideBarMenu">
+                                    <div class="menu-item">
+                                        <a href="myCampaigns.html" class="menuLink">
+                                            <div class="sidebar-icon">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M8 1C8 0.447715 8.44772 0 9 0H15C15.5523 0 16 0.447715 16 1C16 1.55228 15.5523 2 15 2H9C8.44772 2 8 1.55228 8 1Z" fill="#383874" />
+                                                    <path d="M12 7C12.5523 7 13 7.44772 13 8V11C13 11.5523 12.5523 12 12 12C11.4477 12 11 11.5523 11 11V8C11 7.44772 11.4477 7 12 7Z" fill="#383874" />
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 20C16.1421 20 19.5 16.6421 19.5 12.5C19.5 8.35786 16.1421 5 12 5C7.85786 5 4.5 8.35786 4.5 12.5C4.5 16.6421 7.85786 20 12 20ZM12 22C17.2467 22 21.5 17.7467 21.5 12.5C21.5 7.25329 17.2467 3 12 3C6.75329 3 2.5 7.25329 2.5 12.5C2.5 17.7467 6.75329 22 12 22Z" fill="#383874" />
+                                                </svg>
+                                            </div>
+                                            <span>Archieved</span>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <div class="actionBar">
+                            <span>Settings</span>
+                            <a href="javascript:void(0)" class="actionIcon"><img src="/assets/images/icons/sidebar/plus.svg" alt="Sidebar Icon"></a>
+                            <div class="action-popup">
+                                <a href="">Create Properties</a>
+                                <a href="">Create Payment</a>
+                            </div>
+                        </div>
+                        <li class="sideBarMenu dropdown">
+                            <div class="menu-item">
+                                <a href="javascript:void(0) " class="menuLink">
+                                    <div class="sidebar-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8 1C8 0.447715 8.44772 0 9 0H15C15.5523 0 16 0.447715 16 1C16 1.55228 15.5523 2 15 2H9C8.44772 2 8 1.55228 8 1Z" fill="#383874" />
+                                            <path d="M12 7C12.5523 7 13 7.44772 13 8V11C13 11.5523 12.5523 12 12 12C11.4477 12 11 11.5523 11 11V8C11 7.44772 11.4477 7 12 7Z" fill="#383874" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 20C16.1421 20 19.5 16.6421 19.5 12.5C19.5 8.35786 16.1421 5 12 5C7.85786 5 4.5 8.35786 4.5 12.5C4.5 16.6421 7.85786 20 12 20ZM12 22C17.2467 22 21.5 17.7467 21.5 12.5C21.5 7.25329 17.2467 3 12 3C6.75329 3 2.5 7.25329 2.5 12.5C2.5 17.7467 6.75329 22 12 22Z" fill="#383874" />
+                                        </svg>
+                                    </div>
+                                    <span>Settings</span>
+                                </a>
+                            </div>
+                            <ul class="dropdown-menus">
+                                <li class="sideBarMenu">
+                                    <div class="menu-item fw-700">
+                                        <a href="accountSettings.html" class="menuLink">
+                                            <div class="sidebar-icon">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M8 1C8 0.447715 8.44772 0 9 0H15C15.5523 0 16 0.447715 16 1C16 1.55228 15.5523 2 15 2H9C8.44772 2 8 1.55228 8 1Z" fill="#383874" />
+                                                    <path d="M12 7C12.5523 7 13 7.44772 13 8V11C13 11.5523 12.5523 12 12 12C11.4477 12 11 11.5523 11 11V8C11 7.44772 11.4477 7 12 7Z" fill="#383874" />
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 20C16.1421 20 19.5 16.6421 19.5 12.5C19.5 8.35786 16.1421 5 12 5C7.85786 5 4.5 8.35786 4.5 12.5C4.5 16.6421 7.85786 20 12 20ZM12 22C17.2467 22 21.5 17.7467 21.5 12.5C21.5 7.25329 17.2467 3 12 3C6.75329 3 2.5 7.25329 2.5 12.5C2.5 17.7467 6.75329 22 12 22Z" fill="#383874" />
+                                                </svg>
+                                            </div>
+                                            <span>Account Settings</span>
+                                        </a>
+                                        <span class="counter">2</span>
+                                    </div>
+                                </li>
+                                <li class="sideBarMenu">
+                                    <div class="menu-item">
+                                        <a href="users.html" class="menuLink">
+                                            <div class="sidebar-icon">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M8 1C8 0.447715 8.44772 0 9 0H15C15.5523 0 16 0.447715 16 1C16 1.55228 15.5523 2 15 2H9C8.44772 2 8 1.55228 8 1Z" fill="#383874" />
+                                                    <path d="M12 7C12.5523 7 13 7.44772 13 8V11C13 11.5523 12.5523 12 12 12C11.4477 12 11 11.5523 11 11V8C11 7.44772 11.4477 7 12 7Z" fill="#383874" />
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 20C16.1421 20 19.5 16.6421 19.5 12.5C19.5 8.35786 16.1421 5 12 5C7.85786 5 4.5 8.35786 4.5 12.5C4.5 16.6421 7.85786 20 12 20ZM12 22C17.2467 22 21.5 17.7467 21.5 12.5C21.5 7.25329 17.2467 3 12 3C6.75329 3 2.5 7.25329 2.5 12.5C2.5 17.7467 6.75329 22 12 22Z" fill="#383874" />
+                                                </svg>
+                                            </div>
+                                            <span>Users</span>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="sideBarMenu">
+                                    <div class="menu-item">
+                                        <a href="activityLogPage.html" class="menuLink">
+                                            <div class="sidebar-icon">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M8 1C8 0.447715 8.44772 0 9 0H15C15.5523 0 16 0.447715 16 1C16 1.55228 15.5523 2 15 2H9C8.44772 2 8 1.55228 8 1Z" fill="#383874" />
+                                                    <path d="M12 7C12.5523 7 13 7.44772 13 8V11C13 11.5523 12.5523 12 12 12C11.4477 12 11 11.5523 11 11V8C11 7.44772 11.4477 7 12 7Z" fill="#383874" />
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 20C16.1421 20 19.5 16.6421 19.5 12.5C19.5 8.35786 16.1421 5 12 5C7.85786 5 4.5 8.35786 4.5 12.5C4.5 16.6421 7.85786 20 12 20ZM12 22C17.2467 22 21.5 17.7467 21.5 12.5C21.5 7.25329 17.2467 3 12 3C6.75329 3 2.5 7.25329 2.5 12.5C2.5 17.7467 6.75329 22 12 22Z" fill="#383874" />
+                                                </svg>
+                                            </div>
+                                            <span>Activity Log</span>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="sideBarMenu">
+                                    <div class="menu-item">
+                                        <a href="login.html" class="menuLink">
+                                            <div class="sidebar-icon">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M8 1C8 0.447715 8.44772 0 9 0H15C15.5523 0 16 0.447715 16 1C16 1.55228 15.5523 2 15 2H9C8.44772 2 8 1.55228 8 1Z" fill="#383874" />
+                                                    <path d="M12 7C12.5523 7 13 7.44772 13 8V11C13 11.5523 12.5523 12 12 12C11.4477 12 11 11.5523 11 11V8C11 7.44772 11.4477 7 12 7Z" fill="#383874" />
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 20C16.1421 20 19.5 16.6421 19.5 12.5C19.5 8.35786 16.1421 5 12 5C7.85786 5 4.5 8.35786 4.5 12.5C4.5 16.6421 7.85786 20 12 20ZM12 22C17.2467 22 21.5 17.7467 21.5 12.5C21.5 7.25329 17.2467 3 12 3C6.75329 3 2.5 7.25329 2.5 12.5C2.5 17.7467 6.75329 22 12 22Z" fill="#383874" />
+                                                </svg>
+                                            </div>
+                                            <span>Logout</span>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <div class="actionBar">
+                            <span>Advertiser</span>
+                            <a href="javascript:void(0)" class="actionIcon"><img src="/assets/images/icons/sidebar/plus.svg" alt="Sidebar Icon"></a>
+                            <div class="action-popup">
+                                <a href="">Create Properties</a>
+                                <a href="">Create Payment</a>
+                            </div>
+                        </div>
+                        <li class="sideBarMenu dropdown">
+                            <div class="menu-item">
+                                <a href="javascript:void(0) " class="menuLink">
+                                    <div class="sidebar-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8 1C8 0.447715 8.44772 0 9 0H15C15.5523 0 16 0.447715 16 1C16 1.55228 15.5523 2 15 2H9C8.44772 2 8 1.55228 8 1Z" fill="#383874" />
+                                            <path d="M12 7C12.5523 7 13 7.44772 13 8V11C13 11.5523 12.5523 12 12 12C11.4477 12 11 11.5523 11 11V8C11 7.44772 11.4477 7 12 7Z" fill="#383874" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 20C16.1421 20 19.5 16.6421 19.5 12.5C19.5 8.35786 16.1421 5 12 5C7.85786 5 4.5 8.35786 4.5 12.5C4.5 16.6421 7.85786 20 12 20ZM12 22C17.2467 22 21.5 17.7467 21.5 12.5C21.5 7.25329 17.2467 3 12 3C6.75329 3 2.5 7.25329 2.5 12.5C2.5 17.7467 6.75329 22 12 22Z" fill="#383874" />
+                                        </svg>
+                                    </div>
+                                    <span>Ad Campaigns</span>
+                                </a>
+                            </div>
+                            <ul class="dropdown-menus">
+                                <li class="sideBarMenu">
+                                    <div class="menu-item fw-700">
+                                        <a href="influencerPlatform" class="menuLink">
+                                            <img src="/assets/images/icons/sidebar/pending-draft.svg" alt="Sidebar Icon">
+                                            <span>Pending</span>
+                                        </a>
+                                        <span class="counter">2</span>
+                                    </div>
+                                </li>
+                                <li class="sideBarMenu">
+                                    <div class="menu-item">
+                                        <a href="influencerPost" class="menuLink">
+                                            <img src="/assets/images/icons/sidebar/scheduled.svg" alt="Sidebar Icon">
+                                            <span>Scheduled</span>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="sideBarMenu">
+                                    <div class="menu-item">
+                                        <a href="influencer" class="menuLink">
+                                            <img src="/assets/images/icons/sidebar/ongoing.svg" alt="Sidebar Icon">
+                                            <span>Ongoing</span>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="sideBarMenu fw-600">
+                                    <div class="menu-item">
+                                        <a href="connects.html" class="menuLink">
+                                            <img src="/assets/images/icons/sidebar/completed.svg" alt="Sidebar Icon">
+                                            <span>Completed</span>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div class="menu-area-2">
-                <ul>
-                    <li class="active">
-                        <a href="/" class="sidebar-link">
-                            <span class="sidebar-icon-left">
-                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
-                                fill="#000000" />
-                        </svg>
-                    </span>
-                            <div class="sidebar-text-box">
-                                <span class="sidebar-text">Dashboard</span>
-                                <span class="sidebar-notification">&nbsp;</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="properties.html" class="sidebar-link">
-                            <span class="sidebar-icon-left">
-                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
-                                fill="#000000" />
-                        </svg>
-                    </span>
-                            <div class="sidebar-text-box">
-                                <span class="sidebar-text">Properties</span>
-                                <span class="sidebar-notification">&nbsp;</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" class="sidebar-link">
-                            <span class="sidebar-icon-left">
-                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
-                                fill="#000000" />
-                        </svg>
-                    </span>
-                            <div class="sidebar-text-box">
-                                <span class="sidebar-text">Favorites</span>
-                                <span class="sidebar-notification">5</span>
-                            </div>
-                        </a>
-                    </li>
-                    <!-- Dropdown -->
-                    <li>
-                        <a href="#InfluncersSidebar2Dropdwon" class="sidebar-link" data-toggle="collapse" role="button" aria-expanded="false">
-                            <!-- <img src="assets/images/icons/arrow-down.svg" class="sidebar-icon-left sidebar-dropdown-icon-left" alt="Menu Icon"> -->
-                            <span class="sidebar-icon-left sidebar-dropdown-icon-left">
-                        <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M7.77552 0.232761C7.63333 0.0836789 7.44099 0 7.2405 0C7.04001 0 6.84766 0.0836789 6.70547 0.232761L3.98103 3.06631L1.29453 0.232761C1.15234 0.0836789 0.959994 0 0.759504 0C0.559014 0 0.36667 0.0836789 0.224481 0.232761C0.15335 0.307172 0.0968926 0.395701 0.0583643 0.493242C0.0198361 0.590782 0 0.695404 0 0.801071C0 0.906738 0.0198361 1.01136 0.0583643 1.1089C0.0968926 1.20644 0.15335 1.29497 0.224481 1.36938L3.44221 4.76323C3.51276 4.83826 3.59669 4.8978 3.68917 4.93844C3.78165 4.97908 3.88084 5 3.98103 5C4.08121 5 4.1804 4.97908 4.27288 4.93844C4.36536 4.8978 4.4493 4.83826 4.51985 4.76323L7.77552 1.36938C7.84665 1.29497 7.90311 1.20644 7.94163 1.1089C7.98016 1.01136 8 0.906738 8 0.801071C8 0.695404 7.98016 0.590782 7.94163 0.493242C7.90311 0.395701 7.84665 0.307172 7.77552 0.232761Z"
-                                fill="#000000" />
-                        </svg>
-                    </span>
-
-                            <div class="sidebar-text-box">
-                                <span class="sidebar-text">Influncers</span>
-                                <span class="sidebar-icon-right">
-                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M27.9688 15.9688H15.9688V27.9688H12.0312V15.9688H0.03125V12.0312H12.0312V0.03125H15.9688V12.0312H27.9688V15.9688Z"
-                                    fill="#000000" />
-                            </svg>
-                        </span>
-                            </div>
-                        </a>
-
-                        <div class="collapse sidebar-dropdwon-2" id="InfluncersSidebar2Dropdwon">
-                            <div class="card card-body">
-                                <ul>
-                                    <li>
-                                        <a href="influencerPlatform" class="sidebar-link">
-                                            <span class="sidebar-icon-left">
-                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
-                                fill="#000000" />
-                        </svg>
-                    </span>
-                                            <div class="sidebar-text-box">
-                                                <span class="sidebar-text">Platform</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                    <li>
-                                        <a href="influencer" class="sidebar-link">
-                                            <span class="sidebar-icon-left">
-                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
-                                fill="#000000" />
-                        </svg>
-                    </span>
-                                            <div class="sidebar-text-box">
-                                                <span class="sidebar-text">Influencer Posts</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="influencerPost" class="sidebar-link">
-                                            <span class="sidebar-icon-left">
-                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
-                                fill="#000000" />
-                        </svg>
-                    </span>
-                                            <div class="sidebar-text-box">
-                                                <span class="sidebar-text">Influencer Posts (Type: Advertiser)</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="placesAllAdded.html" class="sidebar-link">
-                            <span class="sidebar-icon-left">
-                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
-                                fill="#000000" />
-                        </svg>
-                    </span>
-                            <div class="sidebar-text-box">
-                                <span class="sidebar-text">Ad Place</span>
-                                <span class="sidebar-notification">&nbsp;</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="connects.html" class="sidebar-link">
-                            <span class="sidebar-icon-left">
-                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
-                                fill="#000000" />
-                        </svg>
-                    </span>
-                            <div class="sidebar-text-box">
-                                <span class="sidebar-text">Connects</span>
-                                <span class="sidebar-notification">&nbsp;</span>
-                            </div>
-                        </a>
-                    </li>
-                    <!-- Dropdown -->
-                    <li>
-                        <a href="#reportSidebar2Dropdwon" class="sidebar-link" data-toggle="collapse" role="button" aria-expanded="false">
-                            <!-- <img src="assets/images/icons/arrow-down.svg" class="sidebar-icon-left sidebar-dropdown-icon-left" alt="Menu Icon"> -->
-                            <span class="sidebar-icon-left sidebar-dropdown-icon-left">
-                        <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M7.77552 0.232761C7.63333 0.0836789 7.44099 0 7.2405 0C7.04001 0 6.84766 0.0836789 6.70547 0.232761L3.98103 3.06631L1.29453 0.232761C1.15234 0.0836789 0.959994 0 0.759504 0C0.559014 0 0.36667 0.0836789 0.224481 0.232761C0.15335 0.307172 0.0968926 0.395701 0.0583643 0.493242C0.0198361 0.590782 0 0.695404 0 0.801071C0 0.906738 0.0198361 1.01136 0.0583643 1.1089C0.0968926 1.20644 0.15335 1.29497 0.224481 1.36938L3.44221 4.76323C3.51276 4.83826 3.59669 4.8978 3.68917 4.93844C3.78165 4.97908 3.88084 5 3.98103 5C4.08121 5 4.1804 4.97908 4.27288 4.93844C4.36536 4.8978 4.4493 4.83826 4.51985 4.76323L7.77552 1.36938C7.84665 1.29497 7.90311 1.20644 7.94163 1.1089C7.98016 1.01136 8 0.906738 8 0.801071C8 0.695404 7.98016 0.590782 7.94163 0.493242C7.90311 0.395701 7.84665 0.307172 7.77552 0.232761Z"
-                                fill="#000000" />
-                        </svg>
-                    </span>
-
-                            <div class="sidebar-text-box">
-                                <span class="sidebar-text">Report</span>
-                                <span class="sidebar-icon-right">
-                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M27.9688 15.9688H15.9688V27.9688H12.0312V15.9688H0.03125V12.0312H12.0312V0.03125H15.9688V12.0312H27.9688V15.9688Z"
-                                    fill="#000000" />
-                            </svg>
-                        </span>
-                            </div>
-                        </a>
-
-                        <div class="collapse sidebar-dropdwon-2" id="reportSidebar2Dropdwon">
-                            <div class="card card-body">
-                                <ul>
-                                    <li>
-                                        <a href="overview.html" class="sidebar-link">
-                                            <span class="sidebar-icon-left">
-                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
-                                fill="#000000" />
-                        </svg>
-                    </span>
-                                            <div class="sidebar-text-box">
-                                                <span class="sidebar-text">Overview</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                    <li>
-                                        <a href="location.html" class="sidebar-link">
-                                            <span class="sidebar-icon-left">
-                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
-                                fill="#000000" />
-                        </svg>
-                    </span>
-                                            <div class="sidebar-text-box">
-                                                <span class="sidebar-text">Location</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="revenue.html" class="sidebar-link">
-                                            <span class="sidebar-icon-left">
-                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
-                                fill="#000000" />
-                        </svg>
-                    </span>
-                                            <div class="sidebar-text-box">
-                                                <span class="sidebar-text">Revenue</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="technology.html" class="sidebar-link">
-                                            <span class="sidebar-icon-left">
-                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
-                                fill="#000000" />
-                        </svg>
-                    </span>
-                                            <div class="sidebar-text-box">
-                                                <span class="sidebar-text">Technology</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
-                    <!-- Dropdown -->
-                    <li>
-                        <a href="#paymentsSidebar2Dropdwon" class="sidebar-link" data-toggle="collapse" role="button" aria-expanded="false">
-                            <!-- <img src="assets/images/icons/arrow-down.svg" class="sidebar-icon-left sidebar-dropdown-icon-left" alt="Menu Icon"> -->
-                            <span class="sidebar-icon-left sidebar-dropdown-icon-left">
-                        <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M7.77552 0.232761C7.63333 0.0836789 7.44099 0 7.2405 0C7.04001 0 6.84766 0.0836789 6.70547 0.232761L3.98103 3.06631L1.29453 0.232761C1.15234 0.0836789 0.959994 0 0.759504 0C0.559014 0 0.36667 0.0836789 0.224481 0.232761C0.15335 0.307172 0.0968926 0.395701 0.0583643 0.493242C0.0198361 0.590782 0 0.695404 0 0.801071C0 0.906738 0.0198361 1.01136 0.0583643 1.1089C0.0968926 1.20644 0.15335 1.29497 0.224481 1.36938L3.44221 4.76323C3.51276 4.83826 3.59669 4.8978 3.68917 4.93844C3.78165 4.97908 3.88084 5 3.98103 5C4.08121 5 4.1804 4.97908 4.27288 4.93844C4.36536 4.8978 4.4493 4.83826 4.51985 4.76323L7.77552 1.36938C7.84665 1.29497 7.90311 1.20644 7.94163 1.1089C7.98016 1.01136 8 0.906738 8 0.801071C8 0.695404 7.98016 0.590782 7.94163 0.493242C7.90311 0.395701 7.84665 0.307172 7.77552 0.232761Z"
-                                fill="#000000" />
-                        </svg>
-                    </span>
-
-                            <div class="sidebar-text-box">
-                                <span class="sidebar-text">Payments</span>
-                                <span class="sidebar-icon-right">
-                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M27.9688 15.9688H15.9688V27.9688H12.0312V15.9688H0.03125V12.0312H12.0312V0.03125H15.9688V12.0312H27.9688V15.9688Z"
-                                    fill="#000000" />
-                            </svg>
-                        </span>
-                            </div>
-                        </a>
-
-                        <div class="collapse sidebar-dropdwon-2" id="paymentsSidebar2Dropdwon">
-                            <div class="card card-body">
-                                <ul>
-                                    <li>
-                                        <a href="estimatedRevenuePage.html" class="sidebar-link">
-                                            <span class="sidebar-icon-left">
-                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
-                                fill="#000000" />
-                        </svg>
-                    </span>
-                                            <div class="sidebar-text-box">
-                                                <span class="sidebar-text">Estimated Revennue</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                    <li>
-                                        <a href="finilizedPayment.html" class="sidebar-link">
-                                            <span class="sidebar-icon-left">
-                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
-                                fill="#000000" />
-                        </svg>
-                    </span>
-                                            <div class="sidebar-text-box">
-                                                <span class="sidebar-text">Finilized Payments</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="balance.html" class="sidebar-link">
-                                            <span class="sidebar-icon-left">
-                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
-                                fill="#000000" />
-                        </svg>
-                    </span>
-                                            <div class="sidebar-text-box">
-                                                <span class="sidebar-text">Balance</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="clientDashboardOverview.html" class="sidebar-link">
-                            <span class="sidebar-icon-left">
-                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
-                                fill="#000000" />
-                        </svg>
-                    </span>
-                            <div class="sidebar-text-box">
-                                <span class="sidebar-text">Client Campaigns</span>
-                                <span class="sidebar-notification">&nbsp;</span>
-                            </div>
-                        </a>
-                    </li>
-                    <!-- Dropdown -->
-                    <li>
-                        <a href="#campaignsSidebar2Dropdwon" class="sidebar-link" data-toggle="collapse" role="button" aria-expanded="false">
-                            <!-- <img src="assets/images/icons/arrow-down.svg" class="sidebar-icon-left sidebar-dropdown-icon-left" alt="Menu Icon"> -->
-                            <span class="sidebar-icon-left sidebar-dropdown-icon-left">
-                        <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M7.77552 0.232761C7.63333 0.0836789 7.44099 0 7.2405 0C7.04001 0 6.84766 0.0836789 6.70547 0.232761L3.98103 3.06631L1.29453 0.232761C1.15234 0.0836789 0.959994 0 0.759504 0C0.559014 0 0.36667 0.0836789 0.224481 0.232761C0.15335 0.307172 0.0968926 0.395701 0.0583643 0.493242C0.0198361 0.590782 0 0.695404 0 0.801071C0 0.906738 0.0198361 1.01136 0.0583643 1.1089C0.0968926 1.20644 0.15335 1.29497 0.224481 1.36938L3.44221 4.76323C3.51276 4.83826 3.59669 4.8978 3.68917 4.93844C3.78165 4.97908 3.88084 5 3.98103 5C4.08121 5 4.1804 4.97908 4.27288 4.93844C4.36536 4.8978 4.4493 4.83826 4.51985 4.76323L7.77552 1.36938C7.84665 1.29497 7.90311 1.20644 7.94163 1.1089C7.98016 1.01136 8 0.906738 8 0.801071C8 0.695404 7.98016 0.590782 7.94163 0.493242C7.90311 0.395701 7.84665 0.307172 7.77552 0.232761Z"
-                                fill="#000000" />
-                        </svg>
-                    </span>
-
-                            <div class="sidebar-text-box">
-                                <span class="sidebar-text">Campaigns</span>
-                                <span class="sidebar-icon-right">
-                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M27.9688 15.9688H15.9688V27.9688H12.0312V15.9688H0.03125V12.0312H12.0312V0.03125H15.9688V12.0312H27.9688V15.9688Z"
-                                    fill="#000000" />
-                            </svg>
-                        </span>
-                            </div>
-                        </a>
-
-                        <div class="collapse sidebar-dropdwon-2" id="campaignsSidebar2Dropdwon">
-                            <div class="card card-body">
-                                <ul>
-                                    <li>
-                                        <a href="createCampaign.html" class="sidebar-link">
-                                            <span class="sidebar-icon-left">
-                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
-                                fill="#000000" />
-                        </svg>
-                    </span>
-                                            <div class="sidebar-text-box">
-                                                <span class="sidebar-text">All</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                    <li>
-                                        <a href="createCampaign.html" class="sidebar-link">
-                                            <span class="sidebar-icon-left">
-                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
-                                fill="#000000" />
-                        </svg>
-                    </span>
-                                            <div class="sidebar-text-box">
-                                                <span class="sidebar-text">Scheduled</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="createCampaign.html" class="sidebar-link">
-                                            <span class="sidebar-icon-left">
-                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
-                                fill="#000000" />
-                        </svg>
-                    </span>
-                                            <div class="sidebar-text-box">
-                                                <span class="sidebar-text">Ongoing</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="createCampaign.html" class="sidebar-link">
-                                            <span class="sidebar-icon-left">
-                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
-                                fill="#000000" />
-                        </svg>
-                    </span>
-                                            <div class="sidebar-text-box">
-                                                <span class="sidebar-text">Completed</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="draft.html" class="sidebar-link">
-                                            <span class="sidebar-icon-left">
-                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
-                                fill="#000000" />
-                        </svg>
-                    </span>
-                                            <div class="sidebar-text-box">
-                                                <span class="sidebar-text">Draft</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="createCampaign.html" class="sidebar-link">
-                                            <span class="sidebar-icon-left">
-                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
-                                fill="#000000" />
-                        </svg>
-                    </span>
-                                            <div class="sidebar-text-box">
-                                                <span class="sidebar-text">Archieved</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
-                    <!-- Dropdown -->
-                    <li>
-                        <a href="#myDealsSidebar2Dropdwon" class="sidebar-link" data-toggle="collapse" role="button" aria-expanded="false">
-                            <!-- <img src="assets/images/icons/arrow-down.svg" class="sidebar-icon-left sidebar-dropdown-icon-left" alt="Menu Icon"> -->
-                            <span class="sidebar-icon-left sidebar-dropdown-icon-left">
-                        <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M7.77552 0.232761C7.63333 0.0836789 7.44099 0 7.2405 0C7.04001 0 6.84766 0.0836789 6.70547 0.232761L3.98103 3.06631L1.29453 0.232761C1.15234 0.0836789 0.959994 0 0.759504 0C0.559014 0 0.36667 0.0836789 0.224481 0.232761C0.15335 0.307172 0.0968926 0.395701 0.0583643 0.493242C0.0198361 0.590782 0 0.695404 0 0.801071C0 0.906738 0.0198361 1.01136 0.0583643 1.1089C0.0968926 1.20644 0.15335 1.29497 0.224481 1.36938L3.44221 4.76323C3.51276 4.83826 3.59669 4.8978 3.68917 4.93844C3.78165 4.97908 3.88084 5 3.98103 5C4.08121 5 4.1804 4.97908 4.27288 4.93844C4.36536 4.8978 4.4493 4.83826 4.51985 4.76323L7.77552 1.36938C7.84665 1.29497 7.90311 1.20644 7.94163 1.1089C7.98016 1.01136 8 0.906738 8 0.801071C8 0.695404 7.98016 0.590782 7.94163 0.493242C7.90311 0.395701 7.84665 0.307172 7.77552 0.232761Z"
-                                fill="#000000" />
-                        </svg>
-                    </span>
-
-                            <div class="sidebar-text-box">
-                                <span class="sidebar-text">My Deals</span>
-                                <span class="sidebar-icon-right">
-                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M27.9688 15.9688H15.9688V27.9688H12.0312V15.9688H0.03125V12.0312H12.0312V0.03125H15.9688V12.0312H27.9688V15.9688Z"
-                                    fill="#000000" />
-                            </svg>
-                        </span>
-                            </div>
-                        </a>
-
-                        <div class="collapse sidebar-dropdwon-2" id="myDealsSidebar2Dropdwon">
-                            <div class="card card-body">
-                                <ul>
-                                    <li>
-                                        <a href="myDeals.html" class="sidebar-link">
-                                            <span class="sidebar-icon-left">
-                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
-                                fill="#000000" />
-                        </svg>
-                    </span>
-                                            <div class="sidebar-text-box">
-                                                <span class="sidebar-text">Connect Requests</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                    <li>
-                                        <a href="myDeals.html" class="sidebar-link">
-                                            <span class="sidebar-icon-left">
-                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
-                                fill="#000000" />
-                        </svg>
-                    </span>
-                                            <div class="sidebar-text-box">
-                                                <span class="sidebar-text">In Progress</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="myDeals.html" class="sidebar-link">
-                                            <span class="sidebar-icon-left">
-                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
-                                fill="#000000" />
-                        </svg>
-                    </span>
-                                            <div class="sidebar-text-box">
-                                                <span class="sidebar-text">Pending Approval</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="myDeals.html" class="sidebar-link">
-                                            <span class="sidebar-icon-left">
-                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
-                                fill="#000000" />
-                        </svg>
-                    </span>
-                                            <div class="sidebar-text-box">
-                                                <span class="sidebar-text">Cancelled</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
-                    <!-- Dropdown -->
-                    <li>
-                        <a href="#myCampaignsSidebar2Dropdwon" class="sidebar-link" data-toggle="collapse" role="button" aria-expanded="false">
-                            <!-- <img src="assets/images/icons/arrow-down.svg" class="sidebar-icon-left sidebar-dropdown-icon-left" alt="Menu Icon"> -->
-                            <span class="sidebar-icon-left sidebar-dropdown-icon-left">
-                        <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M7.77552 0.232761C7.63333 0.0836789 7.44099 0 7.2405 0C7.04001 0 6.84766 0.0836789 6.70547 0.232761L3.98103 3.06631L1.29453 0.232761C1.15234 0.0836789 0.959994 0 0.759504 0C0.559014 0 0.36667 0.0836789 0.224481 0.232761C0.15335 0.307172 0.0968926 0.395701 0.0583643 0.493242C0.0198361 0.590782 0 0.695404 0 0.801071C0 0.906738 0.0198361 1.01136 0.0583643 1.1089C0.0968926 1.20644 0.15335 1.29497 0.224481 1.36938L3.44221 4.76323C3.51276 4.83826 3.59669 4.8978 3.68917 4.93844C3.78165 4.97908 3.88084 5 3.98103 5C4.08121 5 4.1804 4.97908 4.27288 4.93844C4.36536 4.8978 4.4493 4.83826 4.51985 4.76323L7.77552 1.36938C7.84665 1.29497 7.90311 1.20644 7.94163 1.1089C7.98016 1.01136 8 0.906738 8 0.801071C8 0.695404 7.98016 0.590782 7.94163 0.493242C7.90311 0.395701 7.84665 0.307172 7.77552 0.232761Z"
-                                fill="#000000" />
-                        </svg>
-                    </span>
-
-                            <div class="sidebar-text-box">
-                                <span class="sidebar-text">My Campaigns</span>
-                                <span class="sidebar-icon-right">
-                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M27.9688 15.9688H15.9688V27.9688H12.0312V15.9688H0.03125V12.0312H12.0312V0.03125H15.9688V12.0312H27.9688V15.9688Z"
-                                    fill="#000000" />
-                            </svg>
-                        </span>
-                            </div>
-                        </a>
-
-                        <div class="collapse sidebar-dropdwon-2" id="myCampaignsSidebar2Dropdwon">
-                            <div class="card card-body">
-                                <ul>
-                                    <li>
-                                        <a href="myCampaigns.html" class="sidebar-link">
-                                            <span class="sidebar-icon-left">
-                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
-                                fill="#000000" />
-                        </svg>
-                    </span>
-                                            <div class="sidebar-text-box">
-                                                <span class="sidebar-text">Scheduled</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                    <li>
-                                        <a href="myCampaigns.html" class="sidebar-link">
-                                            <span class="sidebar-icon-left">
-                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
-                                fill="#000000" />
-                        </svg>
-                    </span>
-                                            <div class="sidebar-text-box">
-                                                <span class="sidebar-text">Ongoing</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="myCampaigns.html" class="sidebar-link">
-                                            <span class="sidebar-icon-left">
-                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
-                                fill="#000000" />
-                        </svg>
-                    </span>
-                                            <div class="sidebar-text-box">
-                                                <span class="sidebar-text">Completed</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="myCampaigns.html" class="sidebar-link">
-                                            <span class="sidebar-icon-left">
-                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
-                                fill="#000000" />
-                        </svg>
-                    </span>
-                                            <div class="sidebar-text-box">
-                                                <span class="sidebar-text">Archieved</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
-                    <!-- Dropdown -->
-                    <li>
-                        <a href="#settingsSidebar2Dropdwon" class="sidebar-link" data-toggle="collapse" role="button" aria-expanded="false">
-                            <!-- <img src="assets/images/icons/arrow-down.svg" class="sidebar-icon-left sidebar-dropdown-icon-left" alt="Menu Icon"> -->
-                            <span class="sidebar-icon-left sidebar-dropdown-icon-left">
-                        <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M7.77552 0.232761C7.63333 0.0836789 7.44099 0 7.2405 0C7.04001 0 6.84766 0.0836789 6.70547 0.232761L3.98103 3.06631L1.29453 0.232761C1.15234 0.0836789 0.959994 0 0.759504 0C0.559014 0 0.36667 0.0836789 0.224481 0.232761C0.15335 0.307172 0.0968926 0.395701 0.0583643 0.493242C0.0198361 0.590782 0 0.695404 0 0.801071C0 0.906738 0.0198361 1.01136 0.0583643 1.1089C0.0968926 1.20644 0.15335 1.29497 0.224481 1.36938L3.44221 4.76323C3.51276 4.83826 3.59669 4.8978 3.68917 4.93844C3.78165 4.97908 3.88084 5 3.98103 5C4.08121 5 4.1804 4.97908 4.27288 4.93844C4.36536 4.8978 4.4493 4.83826 4.51985 4.76323L7.77552 1.36938C7.84665 1.29497 7.90311 1.20644 7.94163 1.1089C7.98016 1.01136 8 0.906738 8 0.801071C8 0.695404 7.98016 0.590782 7.94163 0.493242C7.90311 0.395701 7.84665 0.307172 7.77552 0.232761Z"
-                                fill="#000000" />
-                        </svg>
-                    </span>
-
-                            <div class="sidebar-text-box">
-                                <span class="sidebar-text">Settings</span>
-                                <span class="sidebar-icon-right">
-                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M27.9688 15.9688H15.9688V27.9688H12.0312V15.9688H0.03125V12.0312H12.0312V0.03125H15.9688V12.0312H27.9688V15.9688Z"
-                                    fill="#000000" />
-                            </svg>
-                        </span>
-                            </div>
-                        </a>
-
-                        <div class="collapse sidebar-dropdwon-2" id="settingsSidebar2Dropdwon">
-                            <div class="card card-body">
-                                <ul>
-                                    <li>
-                                        <a href="accountSettings.html" class="sidebar-link">
-                                            <span class="sidebar-icon-left">
-                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
-                                fill="#000000" />
-                        </svg>
-                    </span>
-                                            <div class="sidebar-text-box">
-                                                <span class="sidebar-text">Account Settings</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                    <li>
-                                        <a href="users.html" class="sidebar-link">
-                                            <span class="sidebar-icon-left">
-                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
-                                fill="#000000" />
-                        </svg>
-                    </span>
-                                            <div class="sidebar-text-box">
-                                                <span class="sidebar-text">Users</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="activityLogPage.html" class="sidebar-link">
-                                            <span class="sidebar-icon-left">
-                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
-                                fill="#000000" />
-                        </svg>
-                    </span>
-                                            <div class="sidebar-text-box">
-                                                <span class="sidebar-text">Activity Log</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="login.html" class="sidebar-link">
-                                            <span class="sidebar-icon-left">
-                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M17 19H3C2.44772 19 2 18.5423 2 17.9777V9.79967H0L9.292 0.299815C9.47957 0.107858 9.73409 0 9.9995 0C10.2649 0 10.5194 0.107858 10.707 0.299815L20 9.79967H18V17.9777C18 18.5423 17.5523 19 17 19ZM8 11.8442H12V16.9555H16V8.60158L10 2.46803L4 8.60158V16.9555H8V11.8442Z"
-                                fill="#000000" />
-                        </svg>
-                    </span>
-                                            <div class="sidebar-text-box">
-                                                <span class="sidebar-text">Logout</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-
-                <ul>
-                    <li>
-                        <a href="#" class="sidebar-link">
-                            <span class="sidebar-icon-left">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path opacity="0.12"
-                                d="M12 15.5156C11.0312 15.5156 10.2031 15.1719 9.51562 14.4844C8.82812 13.7969 8.48438 12.9688 8.48438 12C8.48438 11.0312 8.82812 10.2031 9.51562 9.51562C10.2031 8.82812 11.0312 8.48438 12 8.48438C12.9688 8.48438 13.7969 8.82812 14.4844 9.51562C15.1719 10.2031 15.5156 11.0312 15.5156 12C15.5156 12.9688 15.1719 13.7969 14.4844 14.4844C13.7969 15.1719 12.9688 15.5156 12 15.5156Z"
-                                fill="#475364" />
-                            <path
-                                d="M12 15.5156C11.0312 15.5156 10.2031 15.1719 9.51562 14.4844C8.82812 13.7969 8.48438 12.9688 8.48438 12C8.48438 11.0312 8.82812 10.2031 9.51562 9.51562C10.2031 8.82812 11.0312 8.48438 12 8.48438C12.9688 8.48438 13.7969 8.82812 14.4844 9.51562C15.1719 10.2031 15.5156 11.0312 15.5156 12C15.5156 12.9688 15.1719 13.7969 14.4844 14.4844C13.7969 15.1719 12.9688 15.5156 12 15.5156ZM19.4531 12.9844C19.4844 12.6094 19.5 12.2812 19.5 12C19.5 11.7188 19.4844 11.3906 19.4531 11.0156L21.5625 9.375C21.6562 9.28125 21.7031 9.1875 21.7031 9.09375C21.7344 8.96875 21.7188 8.84375 21.6562 8.71875L19.6406 5.25C19.6094 5.15625 19.5312 5.09375 19.4062 5.0625C19.2812 5 19.1562 5 19.0312 5.0625L16.5469 6.04688C15.9844 5.60938 15.4219 5.28125 14.8594 5.0625L14.4844 2.4375C14.4844 2.3125 14.4375 2.21875 14.3438 2.15625C14.25 2.0625 14.1406 2.01562 14.0156 2.01562H9.98438C9.85938 2.01562 9.75 2.0625 9.65625 2.15625C9.5625 2.21875 9.51562 2.3125 9.51562 2.4375L9.14062 5.0625C8.57812 5.28125 8.01562 5.60938 7.45312 6.04688L4.96875 5.0625C4.84375 5 4.71875 5 4.59375 5.0625C4.46875 5.09375 4.39062 5.15625 4.35938 5.25L2.34375 8.71875C2.28125 8.84375 2.25 8.96875 2.25 9.09375C2.28125 9.1875 2.34375 9.28125 2.4375 9.375L4.54688 11.0156C4.51562 11.3906 4.5 11.7188 4.5 12C4.5 12.2812 4.51562 12.6094 4.54688 12.9844L2.4375 14.625C2.34375 14.7188 2.28125 14.8281 2.25 14.9531C2.25 15.0469 2.28125 15.1562 2.34375 15.2812L4.35938 18.75C4.39062 18.8438 4.46875 18.9219 4.59375 18.9844C4.71875 19.0156 4.84375 19 4.96875 18.9375L7.45312 17.9531C8.01562 18.3906 8.57812 18.7188 9.14062 18.9375L9.51562 21.5625C9.51562 21.6875 9.5625 21.7812 9.65625 21.8438C9.75 21.9375 9.85938 21.9844 9.98438 21.9844H14.0156C14.1406 21.9844 14.25 21.9375 14.3438 21.8438C14.4375 21.7812 14.4844 21.6875 14.4844 21.5625L14.8594 18.9375C15.4531 18.6875 16.0156 18.3594 16.5469 17.9531L19.0312 18.9375C19.1562 19 19.2812 19.0156 19.4062 18.9844C19.5312 18.9219 19.6094 18.8438 19.6406 18.75L21.6562 15.2812C21.7188 15.1562 21.7344 15.0469 21.7031 14.9531C21.7031 14.8281 21.6562 14.7188 21.5625 14.625L19.4531 12.9844Z"
-                                fill="#475364" />
-                        </svg>
-                    </span>
-                            <div class="sidebar-text-box">
-                                <span class="sidebar-text">Settings</span>
-                                <span class="sidebar-notification">&nbsp;</span>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </section>
+        </div>
         <main class="main-wrapper">
 
             <!-- Top Bar -->
@@ -1960,6 +1949,9 @@
     <!-- Daterangepicker -->
     <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+    <!-- Dropzone -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.3.0/dropzone.js"></script>
     <!-- endbuild -->
 
     <script type="text/javascript" src="assets/js/script.js"></script>

@@ -108,6 +108,43 @@ function rangeSlider() {
     }
 }
 
+function datePicker() {
+    if (window.daterangepicker) {
+        $('.duration-date-activator').daterangepicker({
+            opens: 'left',
+            "autoApply": true,
+            "singleDatePicker": true,
+            "startDate": "09/14/2021",
+            "endDate": "09/20/2021",
+            parentEl: ".campaign-wrapper",
+        }, function (start, end, label) {
+            console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
+        });
+    }
+}
+
+datePicker();
+
+function timePicker() {
+    if (window.daterangepicker) {
+        $('.duration-time-activator').daterangepicker({
+            timePicker: true,
+            singleDatePicker: true,
+            timePickerIncrement: 1,
+            timePickerSeconds: true,
+            parentEl: ".campaign-wrapper",
+            locale: {
+                format: "hh:mm:ss A"
+            },
+            "autoApply": true,
+        }).on('show.daterangepicker', function (ev, picker) {
+            picker.container.find(".calendar-table").hide();
+        });
+    }
+}
+
+timePicker();
+
 $(document).ajaxSuccess(function () {
     rangeSlider();
     inputAnimate();
@@ -125,19 +162,148 @@ function copyAnyText() {
     navigator.clipboard.writeText(copyText.value);
 
     /* Show the copied text */
-    $(".btn-copy").html( "Text copied" )
+    $(".btn-copy").html("Text copied")
 }
 
 // Tree Menu Collapse Along Screen Width
-function treeMenu(){
-    if(screen.width <= 900) {
+function treeMenu() {
+    if (screen.width <= 900) {
         $('.collapse').collapse(
-           'hide'
+            'hide'
         )
     }
 }
 
 treeMenu();
+
+/* Dropzone All Kind of File Ulploader For Banner */
+if ($(".all-files-uploder").length) {
+
+    // Get the dropzone-template HTML and remove it from the doumenthe dropzone-template HTML and remove it from the doument
+    var previewNode = document.querySelector(".dropzone-template");
+    previewNode.id = "";
+    var previewTemplate = previewNode.parentNode.innerHTML;
+    previewNode.parentNode.removeChild(previewNode);
+
+    var myDropzone = new Dropzone(".all-files-uploder", { // Make the whole body a dropzone
+        url: "/upload", // Set the url
+        thumbnailWidth: 80,
+        thumbnailHeight: 80,
+        parallelUploads: 20,
+        previewTemplate: previewTemplate,
+        autoQueue: false, // Make sure the files aren't queued until manually added
+        previewsContainer: ".previews", // Define the all-files-uploder to display the previews
+        clickable: ".fileinput-button" // Define the element that should be used as click trigger to select files.
+    });
+
+    myDropzone.on("addedfile", function (file) {
+        // Hookup the start button
+        file.previewElement.querySelector(".start").onclick = function () { myDropzone.enqueueFile(file); };
+    });
+
+    // Update the total progress bar
+    myDropzone.on("totaluploadprogress", function (progress) {
+        document.querySelector(".total-progress .progress-bar").style.width = progress + "%";
+    });
+
+    myDropzone.on("sending", function (file) {
+        // Show the total progress bar when upload starts
+        document.querySelector(".total-progress").style.opacity = "1";
+        // And disable the start button
+        file.previewElement.querySelector(".start").setAttribute("disabled", "disabled");
+    });
+
+    // Hide the total progress bar when nothing's uploading anymore
+    myDropzone.on("queuecomplete", function (progress) {
+        document.querySelector(".total-progress").style.opacity = "0";
+    });
+
+    // Setup the buttons for all transfers
+    // The "add files" button doesn't need to be setup because the config
+    // `clickable` has already been specified.
+    document.querySelector(".dropzone-actions .start").onclick = function () {
+        myDropzone.enqueueFiles(myDropzone.getFilesWithStatus(Dropzone.ADDED));
+    };
+    document.querySelector(".dropzone-actions .cancel").onclick = function () {
+        myDropzone.removeAllFiles(true);
+    };
+}
+
+/* Dropzone All Kind of File Ulploader for Draft */
+if ($(".all-files-uploder-2").length) {
+
+    // Get the dropzone-template HTML and remove it from the doumenthe dropzone-template HTML and remove it from the doument
+    var previewNode = document.querySelector(".dropzone-template");
+    previewNode.id = "";
+    var previewTemplate = previewNode.parentNode.innerHTML;
+    previewNode.parentNode.removeChild(previewNode);
+
+    var myDropzone = new Dropzone(".all-files-uploder-2", { // Make the whole body a dropzone
+        url: "/upload", // Set the url
+        thumbnailWidth: 80,
+        thumbnailHeight: 80,
+        parallelUploads: 20,
+        previewTemplate: previewTemplate,
+        autoQueue: false, // Make sure the files aren't queued until manually added
+        previewsContainer: ".previews2", // Define the all-files-uploder to display the previews
+        clickable: ".fileinput-button" // Define the element that should be used as click trigger to select files.
+    });
+
+    myDropzone.on("addedfile", function (file) {
+        // Hookup the start button
+        file.previewElement.querySelector(".start").onclick = function () { myDropzone.enqueueFile(file); };
+    });
+
+    // Update the total progress bar
+    myDropzone.on("totaluploadprogress", function (progress) {
+        document.querySelector(".total-progress2 .progress-bar").style.width = progress + "%";
+    });
+
+    myDropzone.on("sending", function (file) {
+        // Show the total progress bar when upload starts
+        document.querySelector(".total-progress2").style.opacity = "1";
+        // And disable the start button
+        file.previewElement.querySelector(".start").setAttribute("disabled", "disabled");
+    });
+
+    // Hide the total progress bar when nothing's uploading anymore
+    myDropzone.on("queuecomplete", function (progress) {
+        document.querySelector(".total-progress2").style.opacity = "0";
+    });
+
+    // Setup the buttons for all transfers
+    // The "add files" button doesn't need to be setup because the config
+    // `clickable` has already been specified.
+    document.querySelector(".dropzone-actions2 .start").onclick = function () {
+        myDropzone.enqueueFiles(myDropzone.getFilesWithStatus(Dropzone.ADDED));
+    };
+    document.querySelector(".dropzone-actions2 .cancel").onclick = function () {
+        myDropzone.removeAllFiles(true);
+    };
+}
+
+function sidebarDropdown() {
+    let btn = $('.sideBar .dropdown .menu-item');
+    btn.on('click', function () {
+        $(this).parent('.dropdown').toggleClass('open');
+        $(this).siblings('.dropdown-menus').slideToggle(200);
+    })
+}
+sidebarDropdown();
+
+function sidebarPopup() {
+    let btn = $('.sideBar .actionBar .actionIcon');
+    btn.on('click', function () {
+        $(this).siblings('.action-popup').slideToggle(200);
+    })
+    $(document).click(function (e) {
+        $('.actionBar')
+            .not($('.actionBar').has($(e.target)))
+            .children('.action-popup')
+            .slideUp(200);
+    });
+}
+sidebarPopup();
 
 
 (function ($) {
@@ -338,7 +504,6 @@ treeMenu();
                 }
             });
         }
-
     }
 
     function dropdown() {
@@ -374,39 +539,6 @@ treeMenu();
 
             $('.date-range').on('hide.daterangepicker', function (ev, picker) {
                 $(this).parents(".multi-date-range").removeClass("focus")
-            });
-        }
-    }
-
-    function datePicker() {
-        if (window.daterangepicker) {
-            $('.duration-date-activator').daterangepicker({
-                opens: 'left',
-                "autoApply": true,
-                "singleDatePicker": true,
-                "startDate": "09/14/2021",
-                "endDate": "09/20/2021",
-                parentEl: ".campaign-wrapper",
-            }, function (start, end, label) {
-                console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
-            });
-        }
-    }
-
-    function timePicker() {
-        if (window.daterangepicker) {
-            $('.duration-time-activator').daterangepicker({
-                timePicker: true,
-                singleDatePicker: true,
-                timePickerIncrement: 1,
-                timePickerSeconds: true,
-                parentEl: ".campaign-wrapper",
-                locale: {
-                    format: 'HH:mm:ss A'
-                },
-                "autoApply": true,
-            }).on('show.daterangepicker', function (ev, picker) {
-                picker.container.find(".calendar-table").hide();
             });
         }
     }
@@ -447,8 +579,6 @@ treeMenu();
         filePreview();
         dropdown();
         multiDateRangePicker();
-        datePicker();
-        timePicker();
         rangeSlider();
         animateSearch();
         redialProgressBar();
@@ -502,3 +632,4 @@ treeMenu();
     });
 
 })(window.jQuery);
+

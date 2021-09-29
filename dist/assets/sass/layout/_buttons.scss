@@ -110,6 +110,11 @@
     &.ra-btn-blue-bg {
         background-color: $darkBlueColor2;
         color: $white;
+
+        &.cancel {
+            background-color: rgba($darkBlueColor2, .2);
+            color: $darkBlueColor2;
+        }
     }
 
     &.bg-green {
