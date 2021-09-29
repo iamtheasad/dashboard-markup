@@ -519,6 +519,50 @@
    border-radius: 2px;
 }
 
+
+
+#slider_element {
+   float: left;
+   clear: left;
+   background-color: #f6f7fb;
+   border: 0px solid;
+ }
+ 
+ #slider_element .ui-slider-range {
+   background: #B8DFA1;
+ }
+ #slider_element .ui-slider-handle {
+   border-color: #B8DFA1;
+ }
+ 
+//  .container {
+//    width: 600px;
+//    margin: 0 auto;
+//    margin-top: 10vh;
+//  }
+ 
+ .slider_wrapper {
+   .amount_wrapper {
+     display: flex;
+     text-align: center;
+     justify-content: center;
+     .amount {
+       flex: 1;
+     }
+     .left_amount {
+     }
+     .right_amount {
+       flex-grow: 1;
+     }
+   }
+ }
+ .tooltip {
+   position: relative;
+   top: 30px;
+   color: green;
+ }
+ 
+
 /***********************
    // Rounded Progress Bar
 ************************/
@@ -663,7 +707,6 @@
       margin-right: 10px;
    }
 
-
    /* Mimic table appearance */
    div.table-ad-item {
       display: table;
@@ -753,27 +796,29 @@
       color: $redLight;
    }
 
-   /* Hide the progress bar when finished */
-   .previews .file-row.dz-success .progress {
-      opacity: 0;
-      transition: opacity 0.3s linear;
-   }
+   .previews {
 
-   /* Hide the delete button initially */
-   .previews .file-row .delete,
-   .previews .file-row .start {
-      display: none;
-   }
+      /* Hide the progress bar when finished */
+      .file-row.dz-success .progress {
+         opacity: 0;
+         transition: opacity 0.3s linear;
+      }
 
-   /* Hide the start and cancel buttons and show the delete button */
+      /* Hide the delete button initially */
+      .file-row .delete,
+      .file-row .start {
+         display: none;
+      }
 
-   .previews .file-row.dz-success .start,
-   .previews .file-row.dz-success .cancel {
-      display: none;
-   }
+      /* Hide the start and cancel buttons and show the delete button */
+      .file-row.dz-success .start,
+      .file-row.dz-success .cancel {
+         display: none;
+      }
 
-   .previews .file-row.dz-success .delete {
-      display: block;
+      .file-row.dz-success .delete {
+         display: block;
+      }
    }
 
    .uploaded-image-item {
@@ -792,6 +837,7 @@
    }
 
    .error {
+
       .uploaded-image-item,
       .files-description {
          opacity: .5;
@@ -826,4 +872,181 @@
       }
    }
 
-} 
+}
+
+.uploads {
+   &.uploads-2 {
+      background-color: $primaryBg;
+      border: 1px dashed $grayBorderColor;
+
+      svg {
+         width: 12px;
+         margin-right: 10px;
+      }
+
+      /* Mimic table appearance */
+      div.table-ad-item {
+         display: table;
+         width: 100%;
+      }
+
+      div.table-ad-item .file-row {
+         display: flex;
+      }
+
+      div.table-ad-item .file-row:nth-child(odd) {
+         background: transparent;
+      }
+
+      /* The total progress gets shown by event listeners */
+      .total-progress2 {
+         opacity: 0;
+         transition: opacity 0.3s linear;
+      }
+
+      .fileupload-process {
+         .progress {
+            background: transparent;
+         }
+      }
+
+      .preview {
+         img {
+            border-radius: 4px;
+            max-width: 72px;
+         }
+      }
+
+      .name {
+         font-size: rem(16);
+         font-weight: 600;
+         color: $purleDark;
+      }
+
+      .dimension {
+         font-size: rem(14);
+         color: $purpleLight7;
+         font-weight: 400;
+      }
+
+      .size {
+         color: $purpleLight7;
+         font-size: rem(14);
+         font-weight: 400;
+
+         strong {
+            font-weight: 400;
+         }
+      }
+
+      .files-description {
+         display: flex;
+         flex-direction: column;
+         justify-content: space-around;
+         padding: 0 10px;
+
+         .progress {
+            background: rgba($greenDark, .3);
+            margin-top: 8px;
+         }
+
+         .title {
+            display: flex;
+
+            .icon {
+               display: flex;
+               align-items: center;
+            }
+         }
+      }
+
+      .error {
+         font-size: rem(11);
+         font-weight: 700;
+         color: $redLight;
+         margin-top: 8px;
+      }
+
+      .remove {
+         font-size: rem(14);
+         font-weight: 500;
+         color: $redLight;
+      }
+
+      .previews2 {
+
+         /* Hide the progress bar when finished */
+         .file-row.dz-success .progress {
+            opacity: 0;
+            transition: opacity 0.3s linear;
+         }
+
+         /* Hide the delete button initially */
+         .file-row .delete,
+         .file-row .start {
+            display: none;
+         }
+
+         /* Hide the start and cancel buttons and show the delete button */
+         .file-row.dz-success .start,
+         .file-row.dz-success .cancel {
+            display: none;
+         }
+
+         .file-row.dz-success .delete {
+            display: block;
+         }
+      }
+
+      .uploaded-image-item {
+         width: 15%;
+      }
+
+      .uploaded-description-item {
+         width: 60%;
+      }
+
+      .uploaded-remove-item {
+         width: 25%;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+      }
+
+      .error {
+
+         .uploaded-image-item,
+         .files-description {
+            opacity: .5;
+         }
+      }
+
+      .file-row {
+         &.error {
+            .files-description {
+               .title {
+                  .name {
+                     color: $redLight;
+                  }
+
+                  .selection-icon {
+                     display: none !important;
+                  }
+               }
+            }
+         }
+      }
+
+      .file-row {
+         &.selection {
+            .files-description {
+               .title {
+                  .error-icon {
+                     display: none !important;
+                  }
+               }
+            }
+         }
+      }
+   }
+}

@@ -1,135 +1,220 @@
+.sideBar {
+    max-width: 272px;
+    width: 100%;
+    background-color: #F0F0F2;
+    height: 100vh;
 
-.sideBar{
-   width: 272px;
-   background-color: #F0F0F2;
-   height: 100vh;
-   
-   .sideBarBody{
-       height: 100%;
-       overflow-y: auto;
-       .sideBarHeader{
-           display: flex;
-           padding: 10px 14px;
-           img{
-               width: 40px;
-               margin-right: 12px;
-           }
-           .balance {
-               font-size: 12px;
-               color: #383874;
-               line-height: 1;
-           }
-       }
-       .sideBarMenus{
-           ul {
-               list-style: none;
-               margin: 0;
-               padding: 0;
-           }
+    /* Scrollbar Start */
+    /* width */
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
 
-           .actionBar{
-               margin-top: 15px;
-               display: flex;
-               justify-content: space-between;
-               padding: 14px 23px;
-               font-size: 13px;
-               color: #83839F;
-               position: relative;
-               .actionIcon{
-                   background-color: #E6E9F5;
-                   display: flex;
-                   justify-content: center;
-                   align-items: center;
-                   width: 20px;
-                   height: 20px;
-                   border-radius: 2px;
-               }
-               .action-popup{
-                   position: absolute;
-                   width: min-content;
-                   top: 100%;
-                   right: 5px;
-                   display: flex;
-                   flex-direction: column;
-                   align-items: flex-start;
-                   background-color: #FAFAFA;
-                   box-shadow: 0 0 4px 4px rgba(#000, .04);
-                   z-index: 2;
-                   display: none;
-                   a{
-                       padding: 8px 10px;
-                       width: 100%;
-                       white-space: nowrap;
-                       &:hover {
-                           background-color: rgba(#457AED, .06);
-                       }
-                   }
-               }
-           }
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: rgba($darkPrimaryColor, .2);
+        border-radius: 20px;
+    }
 
-           .sideBarMenu{
-               &.dropdown{
-                  .menu-item {
-                     position: relative;
-                     cursor: pointer;
-                     &:after{
-                         position: absolute;
-                         content: '\F0142';
-                         font: normal normal normal 20px/1 "Material Design Icons";
-                         top: 14px;
-                         right: 20px;
-                         transition: .3s ease-in-out;
-                         color: #383874;
-                     }
-                  }
-                   &.open .menu-item:after {
-                       transform: rotate(90deg);
-                   }
-                   .dropdown-menus{
-                       display: none;
-                       padding-bottom: 10px;
-                   }
-               }
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: rgba($darkPrimaryColor, .6);
+        border-radius: 20px;
+        height: 30px;
+        transition: .2s;
+    }
 
-               .menu-item{
-                   padding: 10px 23px;
-                   display: flex;
-                   justify-content: space-between;
-                   align-items: center;
-                   &.active{
-                       background-color: rgba(#457AED, .12);
-                       .menuLink{
-                           font-weight: 600;
-                       }
-                   }
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: $darkPrimaryColor;
+    }
 
-                   &:hover{
-                       background-color: rgba(#457AED, .06);
-                   }
+    /* Scrollbar End */
 
-                   .menuLink{
-                       color: #457AED;
-                       display: flex;
-                       align-items: center;
-                       img{
-                           margin-right: 23px;
-                           width: 24px;
-                       }
-                   }
-   
-                   .counter{
-                       min-height: 16px;
-                       min-width: 16px;
-                       background-color: #FC8B49;
-                       font-size: 10px;
-                       display: flex;
-                       justify-content: center;
-                       align-items: center;
-                       color: #fff;
-                       border-radius: 20px;
-                   }
-               }
-           }
-       }
-   }
+
+    @media screen and(max-width: 992px) {
+        opacity: 0;
+        visibility: hidden;
+        width: 0;
+    }
+
+    .active .sidebar-icon-right svg [fill],
+    .active .sidebar-icon-left svg [fill],
+    .active .sidebar-text-box {
+        fill: $greenDark !important;
+        color: $greenDark !important;
+    }
+
+    .sideBarBody {
+        height: 100vh;
+
+        .sideBarHeader {
+            position: sticky;
+            top: 0;
+            padding-bottom: 8px;
+
+            &__inner {
+                min-height: 65px;
+                border-bottom: 1px solid #DFE2ED;
+                padding: 10px 14px;
+            }
+
+            img {
+                width: 40px;
+                margin-right: 12px;
+            }
+
+            .balance {
+                font-size: 12px;
+                color: #383874;
+                line-height: 1;
+            }
+        }
+
+        .sideBarMenus {
+            height: calc(100vh - 73px);
+            overflow-y: auto;
+
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            .actionBar {
+                margin-top: 15px;
+                display: flex;
+                justify-content: space-between;
+                padding: 14px 23px;
+                font-size: 13px;
+                color: #83839F;
+                position: relative;
+
+                .actionIcon {
+                    background-color: #E6E9F5;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 2px;
+                }
+
+                .action-popup {
+                    position: absolute;
+                    width: min-content;
+                    top: 100%;
+                    right: 5px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    background-color: #FAFAFA;
+                    box-shadow: 0 0 4px 4px rgba(#000, .04);
+                    z-index: 2;
+                    display: none;
+
+                    a {
+                        padding: 8px 10px;
+                        width: 100%;
+                        white-space: nowrap;
+
+                        &:hover {
+                            background-color: rgba(#457AED, .06);
+                        }
+                    }
+                }
+            }
+
+            .sideBarMenu {
+                &.dropdown {
+                    &>.menu-item {
+                        position: relative;
+                        cursor: pointer;
+
+                        &:after {
+                            position: absolute;
+                            content: '\F0142';
+                            font: normal normal normal 20px/1 "Material Design Icons";
+                            top: 14px;
+                            right: 20px;
+                            transition: .3s ease-in-out;
+                            color: #383874;
+                        }
+                    }
+
+                    &.open {
+                        .menu-item {
+                            background-color: rgba(#457AED, .08);
+
+                            &:after {
+                                transform: rotate(90deg);
+                            }
+                        }
+
+                        .dropdown-menus .menu-item {
+                            background: rgba(#457AED, .05);
+
+                            &:hover {
+                                background-color: rgba(#457AED, .07);
+                            }
+                        }
+                    }
+
+                    .dropdown-menus {
+                        display: none;
+                        padding-bottom: 10px;
+                    }
+                }
+
+                .menu-item {
+                    padding: 10px 23px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-weight: 500;
+
+                    &.active {
+                        background-color: rgba(#457AED, .12);
+                        font-weight: 700;
+                    }
+
+                    &:hover {
+                        background-color: rgba(#457AED, .06);
+
+                        .menuLink span {
+                            transform: translateX(2px);
+                        }
+                    }
+
+                    .menuLink {
+                        color: #383874;
+                        display: flex;
+                        align-items: center;
+
+                        span {
+                            transition: .3s ease-in-out;
+                        }
+
+                        img {
+                            margin-right: 22px;
+                            width: 24px;
+                        }
+                    }
+
+                    .counter {
+                        min-height: 16px;
+                        min-width: 16px;
+                        background-color: #FC8B49;
+                        font-size: 10px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: #fff;
+                        border-radius: 20px;
+                        border: 1px solid rgba(#FC8B49, .5);
+                    }
+                }
+            }
+        }
+    }
 }

@@ -519,6 +519,50 @@
    border-radius: 2px;
 }
 
+
+
+#slider_element {
+   float: left;
+   clear: left;
+   background-color: #f6f7fb;
+   border: 0px solid;
+ }
+ 
+ #slider_element .ui-slider-range {
+   background: #B8DFA1;
+ }
+ #slider_element .ui-slider-handle {
+   border-color: #B8DFA1;
+ }
+ 
+//  .container {
+//    width: 600px;
+//    margin: 0 auto;
+//    margin-top: 10vh;
+//  }
+ 
+ .slider_wrapper {
+   .amount_wrapper {
+     display: flex;
+     text-align: center;
+     justify-content: center;
+     .amount {
+       flex: 1;
+     }
+     .left_amount {
+     }
+     .right_amount {
+       flex-grow: 1;
+     }
+   }
+ }
+ .tooltip {
+   position: relative;
+   top: 30px;
+   color: green;
+ }
+ 
+
 /***********************
    // Rounded Progress Bar
 ************************/
