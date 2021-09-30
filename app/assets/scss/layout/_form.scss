@@ -333,9 +333,20 @@ input[type="text"] {
 }
 
 .influencer-user {
+  width: 56px;
+  height: 56px;
+  background-color: $tableRowColor;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
   img {
-    border-radius: 50%;
-    background-color: $tableRowColor;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
   }
 }
 
