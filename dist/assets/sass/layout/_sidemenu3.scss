@@ -176,6 +176,14 @@
                     &.active {
                         background-color: rgba(#457AED, .12);
                         font-weight: 700;
+
+                        a {
+                            color: #457AED;
+
+                            svg [fill] {
+                                fill: #457AED;
+                            }
+                        }
                     }
 
                     &:hover {
@@ -193,6 +201,12 @@
 
                         span {
                             transition: .3s ease-in-out;
+                        }
+
+                        .sidebar-icon {
+                            margin-right: 22px;
+                            width: 24px;
+                            line-height: 0;
                         }
 
                         img {

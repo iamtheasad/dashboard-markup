@@ -435,59 +435,60 @@
 }
 
 // Range Slider
-.ui-slider {
-   height: 2px !important;
-   margin-top: 25px;
-   margin-bottom: 25px;
+.range-slider {
+   &.ui-slider {
+      height: 2px !important;
+      margin-top: 25px;
+      margin-bottom: 25px;
 
 
-   .ui-slider-handle {
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      border: 2px solid $grayCheckboxLight;
-      background: $white;
-      top: 0;
-      transform: translateY(-50%);
-      outline: none;
-      cursor: pointer;
+      .ui-slider-handle {
+         width: 20px;
+         height: 20px;
+         border-radius: 50%;
+         border: 2px solid $grayCheckboxLight;
+         background: $white;
+         top: 0;
+         transform: translateY(-50%);
+         outline: none;
+         cursor: pointer;
 
-      &:hover .value,
-      &.ui-state-focus .value {
-         transform: translateX(-50%) scale(1);
-         visibility: visible;
-         opacity: 1;
-      }
+         &:hover .value,
+         &.ui-state-focus .value {
+            transform: translateX(-50%) scale(1);
+            visibility: visible;
+            opacity: 1;
+         }
 
-      .value {
-         top: -30px;
-         position: absolute;
-         white-space: nowrap;
-         font-size: 12px;
-         background-color: $black;
-         color: $white;
-         padding: 3px 4px;
-         border-radius: 3px;
-         left: 50%;
-         transform: translateX(-50%) scale(.5);
-         visibility: hidden;
-         opacity: 0;
-         transition: .3s ease-in-out;
-
-         &:after {
-            content: '';
+         .value {
+            top: -30px;
             position: absolute;
-            width: 6px;
-            height: 6px;
+            white-space: nowrap;
+            font-size: 12px;
             background-color: $black;
-            transform: rotate(-45deg);
-            bottom: -3px;
-            left: calc(50% - 3px);
+            color: $white;
+            padding: 3px 4px;
+            border-radius: 3px;
+            left: 50%;
+            transform: translateX(-50%) scale(.5);
+            visibility: hidden;
+            opacity: 0;
+            transition: .3s ease-in-out;
+
+            &:after {
+               content: '';
+               position: absolute;
+               width: 6px;
+               height: 6px;
+               background-color: $black;
+               transform: rotate(-45deg);
+               bottom: -3px;
+               left: calc(50% - 3px);
+            }
          }
       }
    }
 }
-
 
 // Tab page 4
 .influencer-select {
