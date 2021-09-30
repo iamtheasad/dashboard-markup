@@ -13,11 +13,14 @@
     <!-- <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.18.1/dist/bootstrap-table.min.css"> -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css">
 
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
+
     <!-- build:css assets/css/all.min.css -->
     <link rel="stylesheet" href="assets/css/vendor.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- endbuild -->
     <script type="text/javascript" src="assets/vendor/jQuery/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
     <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
     <script src="https://cdn.amcharts.com/lib/4/maps.js"></script>
     <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
@@ -725,7 +728,7 @@
                                 </a>
                             </div>
                             <ul class="dropdown-menus">
-                                <li class="sideBarMenu">
+                                <li class="sideBarMenu pending">
                                     <div class="menu-item fw-700">
                                         <a href="influencerPlatform" class="menuLink">
                                             <img src="/assets/images/icons/sidebar/pending-draft.svg" alt="Sidebar Icon">
@@ -735,7 +738,7 @@
                                     </div>
                                 </li>
                                 <li class="sideBarMenu">
-                                    <div class="menu-item">
+                                    <div class="menu-item scheduled">
                                         <a href="influencerPost" class="menuLink">
                                             <img src="/assets/images/icons/sidebar/scheduled.svg" alt="Sidebar Icon">
                                             <span>Scheduled</span>
@@ -743,7 +746,7 @@
                                     </div>
                                 </li>
                                 <li class="sideBarMenu">
-                                    <div class="menu-item">
+                                    <div class="menu-item ongoing">
                                         <a href="influencer" class="menuLink">
                                             <img src="/assets/images/icons/sidebar/ongoing.svg" alt="Sidebar Icon">
                                             <span>Ongoing</span>
@@ -751,7 +754,7 @@
                                     </div>
                                 </li>
                                 <li class="sideBarMenu fw-600">
-                                    <div class="menu-item">
+                                    <div class="menu-item completed">
                                         <a href="connects.html" class="menuLink">
                                             <img src="/assets/images/icons/sidebar/completed.svg" alt="Sidebar Icon">
                                             <span>Completed</span>
@@ -843,8 +846,8 @@
 
                                             <div class="col-md-12">
                                                 <fieldset class="rs-form mb-2">
-                                                    <label for="editName" class="rs-label rs-select-editAccount fz10">Website Domain</label>
-                                                    <input type="text" class="rs-input fw-500 fz18" value="www.example.com">
+                                                    <label for="editName" class="rs-label fz10">Website Domain</label>
+                                                    <input type="url" class="rs-input fw-500 fz18" value="www.example.com">
                                                 </fieldset>
                                                 <a href="#" class="fz12 mb-4 gray-color mt-1">Don't include 'http://' or 'https://'</a>
                                             </div>

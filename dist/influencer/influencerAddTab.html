@@ -13,11 +13,14 @@
     <!-- <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.18.1/dist/bootstrap-table.min.css"> -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css">
 
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
+
     <!-- build:css assets/css/all.min.css -->
     <link rel="stylesheet" href="assets/css/vendor.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- endbuild -->
     <script type="text/javascript" src="assets/vendor/jQuery/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
     <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
     <script src="https://cdn.amcharts.com/lib/4/maps.js"></script>
     <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
@@ -725,7 +728,7 @@
                                 </a>
                             </div>
                             <ul class="dropdown-menus">
-                                <li class="sideBarMenu">
+                                <li class="sideBarMenu pending">
                                     <div class="menu-item fw-700">
                                         <a href="influencerPlatform" class="menuLink">
                                             <img src="/assets/images/icons/sidebar/pending-draft.svg" alt="Sidebar Icon">
@@ -735,7 +738,7 @@
                                     </div>
                                 </li>
                                 <li class="sideBarMenu">
-                                    <div class="menu-item">
+                                    <div class="menu-item scheduled">
                                         <a href="influencerPost" class="menuLink">
                                             <img src="/assets/images/icons/sidebar/scheduled.svg" alt="Sidebar Icon">
                                             <span>Scheduled</span>
@@ -743,7 +746,7 @@
                                     </div>
                                 </li>
                                 <li class="sideBarMenu">
-                                    <div class="menu-item">
+                                    <div class="menu-item ongoing">
                                         <a href="influencer" class="menuLink">
                                             <img src="/assets/images/icons/sidebar/ongoing.svg" alt="Sidebar Icon">
                                             <span>Ongoing</span>
@@ -751,7 +754,7 @@
                                     </div>
                                 </li>
                                 <li class="sideBarMenu fw-600">
-                                    <div class="menu-item">
+                                    <div class="menu-item completed">
                                         <a href="connects.html" class="menuLink">
                                             <img src="/assets/images/icons/sidebar/completed.svg" alt="Sidebar Icon">
                                             <span>Completed</span>
@@ -902,130 +905,99 @@
 
                                             <div class="row">
                                                 <div class="col-md-6">
-                                                    <<<<<<< HEAD <div class="radio-group mr-3 pr-3 pl-3 pb-2 pt-2 influenc-radio-group">
+                                                    <div class="radio-group checkbox-group ra-border border-radius-8 mb-1 mb-md-2 mr-3 pr-3 pl-3 pb-2 pt-2 influenc-radio-group">
                                                         <div class="rs-checkbox d-flex align-items-center">
-                                                            <input type="checkbox" name="" class="rs-checkbox-input" id="influencer-1">
-                                                            <label class="checkbox-label fz16 user_img d-flex align-items-center influencersSelect" for="influencer-1">
-                                                                <div class="influencer-user table-row-bg-color">
-                                                                    =======
-                                                                    <div class="radio-group checkbox-group ra-border border-radius-8 mb-1 mb-md-2 mr-3 pr-3 pl-3 pb-2 pt-2 influenc-radio-group">
-                                                                        <div class="rs-checkbox d-flex align-items-center">
-                                                                            <input type="radio" name="influencerSelect" class="rs-checkbox-input" id="influencer-1">
-                                                                            <label class="checkbox-label fz16 user_img d-flex align-items-center influencersSelect w-100" for="influencer-1">
-                                                                                <div class="influencer-user">
-                                                                                    >>>>>>> 45e7941f68228c2ce40d784df815b1992e4891d3
-                                                                                    <img src="assets/images/icons/user.svg" alt="Icon">
-                                                                                </div>
+                                                            <input type="radio" name="influencerSelect" class="rs-checkbox-input" id="influencer-1">
+                                                            <label class="checkbox-label fz16 user_img d-flex align-items-center influencersSelect w-100" for="influencer-1">
+                                                                <div class="influencer-user">
+                                                                    <img src="assets/images/icons/user.svg" alt="Icon">
+                                                                </div>
 
-                                                                                <div class="d-flex flex-column pl-3">
-                                                                                    <h4 class="fz20 fw-500 mb-2">Fahad Abdullah</h4>
-                                                                                    <div class="d-flex">
-                                                                                        <p class="fw-400 fz14">Gender: <span class="fw-700 pr-4">Male</span></p>
-                                                                                        <p class="fw-400 fz14">Budget: <span class="fw-700">৳ 50,000</span></p>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </label>
-                                                                        </div>
+                                                                <div class="d-flex flex-column pl-3">
+                                                                    <h4 class="fz20 fw-500 mb-2">Fahad Abdullah</h4>
+                                                                    <div class="d-flex">
+                                                                        <p class="fw-400 fz14">Gender: <span class="fw-700 pr-4">Male</span></p>
+                                                                        <p class="fw-400 fz14">Budget: <span class="fw-700">৳ 50,000</span></p>
                                                                     </div>
                                                                 </div>
-                                                                <div class="col-md-6">
-                                                                    <<<<<<< HEAD <div class="radio-group mr-3 pr-3 pl-3 pb-2 pt-2 influenc-radio-group">
-                                                                        <div class="rs-checkbox d-flex align-items-center">
-                                                                            <input type="checkbox" name="" class="rs-checkbox-input" id="influencer-2">
-                                                                            <label class="checkbox-label fz16 user_img d-flex align-items-center influencersSelect" for="influencer-2">
-                                                                                <div class="influencer-user table-row-bg-color">
-                                                                                    =======
-                                                                                    <div class="radio-group checkbox-group ra-border border-radius-8 mb-1 mb-md-2 mr-3 pr-3 pl-3 pb-2 pt-2 influenc-radio-group">
-                                                                                        <div class="rs-checkbox d-flex align-items-center">
-                                                                                            <input type="radio" name="influencerSelect" class="rs-checkbox-input" id="influencer-2">
-                                                                                            <label class="checkbox-label fz16 user_img d-flex align-items-center influencersSelect w-100" for="influencer-2">
-                                                                                                <div class="influencer-user">
-                                                                                                    >>>>>>> 45e7941f68228c2ce40d784df815b1992e4891d3
-                                                                                                    <img src="assets/images/icons/user.svg" alt="Icon">
-                                                                                                </div>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="radio-group checkbox-group ra-border border-radius-8 mb-1 mb-md-2 mr-3 pr-3 pl-3 pb-2 pt-2 influenc-radio-group">
+                                                        <div class="rs-checkbox d-flex align-items-center">
+                                                            <input type="radio" name="influencerSelect" class="rs-checkbox-input" id="influencer-2">
+                                                            <label class="checkbox-label fz16 user_img d-flex align-items-center influencersSelect w-100" for="influencer-2">
+                                                                <div class="influencer-user">
+                                                                    <img src="assets/images/icons/user.svg" alt="Icon">
+                                                                </div>
 
-                                                                                                <div class="d-flex flex-column pl-3">
-                                                                                                    <h4 class="fz20 fw-500 mb-2">Fahad Abdullah</h4>
-                                                                                                    <div class="d-flex">
-                                                                                                        <p class="fw-400 fz14">Gender: <span class="fw-700 pr-4">Male</span></p>
-                                                                                                        <p class="fw-400 fz14">Budget: <span class="fw-700">৳ 50,000</span></p>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </label>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="col-md-6">
-                                                                                    <<<<<<< HEAD <div class="radio-group mr-3 pr-3 pl-3 pb-2 pt-2 influenc-radio-group">
-                                                                                        <div class="rs-checkbox d-flex align-items-center">
-                                                                                            <input type="checkbox" name="" class="rs-checkbox-input" id="influencer-3">
-                                                                                            <label class="checkbox-label fz16 user_img d-flex align-items-center influencersSelect" for="influencer-3">
-                                                                                                <div class="influencer-user table-row-bg-color">
-                                                                                                    =======
-                                                                                                    <div class="radio-group checkbox-group ra-border border-radius-8 mb-1 mb-md-2 mr-3 pr-3 pl-3 pb-2 pt-2 influenc-radio-group">
-                                                                                                        <div class="rs-checkbox d-flex align-items-center">
-                                                                                                            <input type="radio" name="influencerSelect" class="rs-checkbox-input" id="influencer-3">
-                                                                                                            <label class="checkbox-label fz16 user_img d-flex align-items-center influencersSelect w-100" for="influencer-3">
-                                                                                                                <div class="influencer-user">
-                                                                                                                    >>>>>>> 45e7941f68228c2ce40d784df815b1992e4891d3
-                                                                                                                    <img src="assets/images/icons/user.svg" alt="Icon">
-                                                                                                                </div>
+                                                                <div class="d-flex flex-column pl-3">
+                                                                    <h4 class="fz20 fw-500 mb-2">Fahad Abdullah</h4>
+                                                                    <div class="d-flex">
+                                                                        <p class="fw-400 fz14">Gender: <span class="fw-700 pr-4">Male</span></p>
+                                                                        <p class="fw-400 fz14">Budget: <span class="fw-700">৳ 50,000</span></p>
+                                                                    </div>
+                                                                </div>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="radio-group checkbox-group ra-border border-radius-8 mb-1 mb-md-2 mr-3 pr-3 pl-3 pb-2 pt-2 influenc-radio-group">
+                                                        <div class="rs-checkbox d-flex align-items-center">
+                                                            <input type="radio" name="influencerSelect" class="rs-checkbox-input" id="influencer-3">
+                                                            <label class="checkbox-label fz16 user_img d-flex align-items-center influencersSelect w-100" for="influencer-3">
+                                                                <div class="influencer-user">
+                                                                    <img src="assets/images/icons/user.svg" alt="Icon">
+                                                                </div>
 
-                                                                                                                <div class="d-flex flex-column pl-3">
-                                                                                                                    <h4 class="fz20 fw-500 mb-2">Fahad Abdullah</h4>
-                                                                                                                    <div class="d-flex">
-                                                                                                                        <p class="fw-400 fz14">Gender: <span class="fw-700 pr-4">Male</span></p>
-                                                                                                                        <p class="fw-400 fz14">Budget: <span class="fw-700">৳ 50,000</span></p>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                            </label>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                                <div class="col-md-6">
-                                                                                                    <<<<<<< HEAD <div class="radio-group mr-3 pr-3 pl-3 pb-2 pt-2 influenc-radio-group">
-                                                                                                        <div class="rs-checkbox d-flex align-items-center">
-                                                                                                            <input type="checkbox" name="" class="rs-checkbox-input" id="influencer-4">
-                                                                                                            <label class="checkbox-label fz16 user_img d-flex align-items-center influencersSelect" for="influencer-4">
-                                                                                                                <div class="influencer-user table-row-bg-color">
-                                                                                                                    =======
-                                                                                                                    <div class="radio-group checkbox-group ra-border border-radius-8 mb-1 mb-md-2 mr-3 pr-3 pl-3 pb-2 pt-2 influenc-radio-group">
-                                                                                                                        <div class="rs-checkbox d-flex align-items-center">
-                                                                                                                            <input type="radio" name="influencerSelect" class="rs-checkbox-input" id="influencer-4">
-                                                                                                                            <label class="checkbox-label fz16 user_img d-flex align-items-center influencersSelect w-100" for="influencer-4">
-                                                                                                                                <div class="influencer-user">
-                                                                                                                                    >>>>>>> 45e7941f68228c2ce40d784df815b1992e4891d3
-                                                                                                                                    <img src="assets/images/icons/user.svg" alt="Icon">
-                                                                                                                                </div>
+                                                                <div class="d-flex flex-column pl-3">
+                                                                    <h4 class="fz20 fw-500 mb-2">Fahad Abdullah</h4>
+                                                                    <div class="d-flex">
+                                                                        <p class="fw-400 fz14">Gender: <span class="fw-700 pr-4">Male</span></p>
+                                                                        <p class="fw-400 fz14">Budget: <span class="fw-700">৳ 50,000</span></p>
+                                                                    </div>
+                                                                </div>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="radio-group checkbox-group ra-border border-radius-8 mb-1 mb-md-2 mr-3 pr-3 pl-3 pb-2 pt-2 influenc-radio-group">
+                                                        <div class="rs-checkbox d-flex align-items-center">
+                                                            <input type="radio" name="influencerSelect" class="rs-checkbox-input" id="influencer-4">
+                                                            <label class="checkbox-label fz16 user_img d-flex align-items-center influencersSelect w-100" for="influencer-4">
+                                                                <div class="influencer-user">
+                                                                    <img src="assets/images/icons/user.svg" alt="Icon">
+                                                                </div>
 
-                                                                                                                                <div class="d-flex flex-column pl-3">
-                                                                                                                                    <h4 class="fz20 fw-500 mb-2">Fahad Abdullah</h4>
-                                                                                                                                    <div class="d-flex">
-                                                                                                                                        <p class="fw-400 fz14">Gender: <span class="fw-700 pr-4">Male</span></p>
-                                                                                                                                        <p class="fw-400 fz14">Budget: <span class="fw-700">৳ 50,000</span></p>
-                                                                                                                                    </div>
-                                                                                                                                </div>
-                                                                                                                            </label>
-                                                                                                                        </div>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                        </div>
+                                                                <div class="d-flex flex-column pl-3">
+                                                                    <h4 class="fz20 fw-500 mb-2">Fahad Abdullah</h4>
+                                                                    <div class="d-flex">
+                                                                        <p class="fw-400 fz14">Gender: <span class="fw-700 pr-4">Male</span></p>
+                                                                        <p class="fw-400 fz14">Budget: <span class="fw-700">৳ 50,000</span></p>
+                                                                    </div>
+                                                                </div>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
 
-                                                                                                </div>
+                                        </div>
                                     </fieldset>
 
                                     <div class="d-flex justify-content-between mt-4 pb-5">
-                                        <<<<<<< HEAD <button data-href="#" class="step-back-btn rs-btn rs-btn-secondary rs-btn-lg uppercase mr-3">
-                                            =======
-                                            <button type="button" data-href="influencer-step-1" class="step-back-btn rs-btn rs-btn-secondary rs-btn-lg uppercase mr-3">
-                                                >>>>>>> 45e7941f68228c2ce40d784df815b1992e4891d3
-                                                <span class="mdi mdi-arrow-left"></span>
-                                                Search Influencer
-                                            </button>
+                                        <button type="button" data-href="influencer-step-1" class="step-back-btn rs-btn rs-btn-secondary rs-btn-lg uppercase mr-3">
+                                            <span class="mdi mdi-arrow-left"></span>
+                                            Search Influencer
+                                        </button>
 
-                                            <button type="submit" class="rs-btn rs-btn-primary rs-btn-lg uppercase mr-3">Next
-                                                <span class="mdi mdi-arrow-right"></span>
-                                            </button>
+                                        <button type="submit" class="rs-btn rs-btn-primary rs-btn-lg uppercase mr-3">Next
+                                            <span class="mdi mdi-arrow-right"></span>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -1048,8 +1020,9 @@
                                             <div class="radio-group mr-3 pr-3 pl-3 pb-2 pt-2 ra-border border-radius-8 influenc-radio-group campaign-influencer mb-md-4 mb-1">
                                                 <div class="rs-checkbox d-flex align-items-center">
                                                     <input type="checkbox" name="" class="rs-checkbox-input" id="influencer-1">
-                                                    <<<<<<< HEAD <a href="#" class="fz16 user_img d-flex align-items-center w-100" for="influencer-1">
-                                                        <div class="influencer-user table-row-bg-color">
+
+                                                    <a href="#" class="fz16 user_img d-flex align-items-center w-100" for="influencer-1">
+                                                        <div class="influencer-user">
                                                             <img src="assets/images/icons/user.svg" alt="Icon">
                                                         </div>
 
@@ -1060,23 +1033,7 @@
                                                                 <p class="fw-400 fz14">Budget: <span class="fw-700">৳ 50,000</span></p>
                                                             </div>
                                                         </div>
-                                                        </a>
-                                                        =======
-
-                                                        <a href="#" class="fz16 user_img d-flex align-items-center w-100" for="influencer-1">
-                                                            <div class="influencer-user">
-                                                                <img src="assets/images/icons/user.svg" alt="Icon">
-                                                            </div>
-
-                                                            <div class="d-flex flex-column pl-3">
-                                                                <h4 class="fz20 fw-500 mb-2">Fahad Abdullah</h4>
-                                                                <div class="d-flex">
-                                                                    <p class="fw-400 fz14">Gender: <span class="fw-700 pr-4">Male</span></p>
-                                                                    <p class="fw-400 fz14">Budget: <span class="fw-700">৳ 50,000</span></p>
-                                                                </div>
-                                                            </div>
-                                                        </a>
-                                                        >>>>>>> 45e7941f68228c2ce40d784df815b1992e4891d3
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -1098,19 +1055,13 @@
                                         <div class="col-md-12">
                                             <fieldset class="rs-form mb-md-4 mb-1 w-100">
                                                 <h5 class="fz10 fw-400 mb-1 mb-md-2 gray-color">Image</h5>
-                                                <<<<<<< HEAD <label for="imgUpload" class="fz10 fw-400">
-                                                    <span class="rs-btn rs-btn-secondary rs-btn-lg fz16 fw-700 uppercase">Choose Image</span>
+                                                <div class="d-flex align-items-center mb-3">
+                                                    <label for="imgUpload" class="fz10 fw-400 mb-0">
+                                                        <span class="rs-btn rs-btn-secondary fz16 fw-700 uppercase">Choose Image</span>
                                                     </label>
-                                                    <input type="file" id="imgUpload" class="rs-input b-none fz18 fw-500 d-none">
-                                                    =======
-                                                    <div class="d-flex align-items-center mb-3">
-                                                        <label for="imgUpload" class="fz10 fw-400 mb-0">
-                                                            <span class="rs-btn rs-btn-secondary fz16 fw-700 uppercase">Choose Image</span>
-                                                        </label>
-                                                        <span class="filename fz16 ml-3">No File Chosen</span>
-                                                    </div>
-                                                    <input type="file" id="imgUpload" class="rs-input file-input b-none fz18 fw-500 d-none">
-                                                    >>>>>>> 45e7941f68228c2ce40d784df815b1992e4891d3
+                                                    <span class="filename fz16 ml-3">No File Chosen</span>
+                                                </div>
+                                                <input type="file" id="imgUpload" class="rs-input file-input b-none fz18 fw-500 d-none">
                                             </fieldset>
                                         </div>
 
@@ -1130,16 +1081,13 @@
 
                                         <div class="col-md-12">
                                             <div class="d-flex justify-content-between mt-4 pb-5">
-                                                <<<<<<< HEAD <button data-href="" type="button" class="rs-btn rs-btn-secondary rs-btn-lg uppercase mr-3">
-                                                    =======
-                                                    <button type="button" data-href="influencer-step-2" class="step-back-btn rs-btn rs-btn-secondary rs-btn-lg uppercase mr-3">
-                                                        >>>>>>> 45e7941f68228c2ce40d784df815b1992e4891d3
-                                                        <span class="mdi mdi-arrow-left"></span>Select Influencer
-                                                    </button>
+                                                <button type="button" data-href="influencer-step-2" class="step-back-btn rs-btn rs-btn-secondary rs-btn-lg uppercase mr-3">
+                                                    <span class="mdi mdi-arrow-left"></span>Select Influencer
+                                                </button>
 
-                                                    <button type="submit" class="rs-btn rs-btn-primary rs-btn-lg uppercase mr-3">Next
-                                                        <span class="mdi mdi-arrow-right"></span>
-                                                    </button>
+                                                <button type="submit" class="rs-btn rs-btn-primary rs-btn-lg uppercase mr-3">Next
+                                                    <span class="mdi mdi-arrow-right"></span>
+                                                </button>
                                             </div>
                                         </div>
 
