@@ -583,8 +583,14 @@ if ($('#slider_element').length) {
     function animateSearch() {
         if ($(".animate-search").length) {
             $(document).on('click', ".hidden-search-icon", function () {
-                $(this).siblings('.hidden-search').toggleClass('show');
+                $(this).parent('.animate-search').toggleClass('show');
             })
+
+            $(document).click(function (e) {
+                $(".animate-search")
+                    .not($(".animate-search").has($(e.target)))
+                    .removeClass('show');
+            });
         }
     }
 
