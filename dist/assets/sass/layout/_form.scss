@@ -1269,30 +1269,38 @@ input[type="text"] {
     position: relative;
 
     &.show {
+      .hidden-search-icon {
+        visibility: hidden;
+        opacity: 0;
+      }
+
       .hidden-search {
         width: 100%;
         z-index: 2;
         opacity: 1;
+        visibility: visible;
       }
     }
 
     .hidden-search-icon {
       position: relative;
       z-index: 1;
+      visibility: visible;
+      opacity: 1;
+      transition: 1s;
     }
 
     .hidden-search {
       position: absolute;
-      background-color: #fff;
       width: 0%;
       transition: width .3s ease-in-out, opacity .01s ease-in-out;
       top: -4px;
       left: 0;
       border-radius: 4px;
-      border: 1px solid !important;
-      border-color: $greenDark;
+      border: 1px solid $greenDark !important;
       margin-left: 22px;
       opacity: 0;
+      visibility: hidden;
     }
   }
 
