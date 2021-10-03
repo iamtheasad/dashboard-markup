@@ -605,43 +605,6 @@ if ($('#slider_element').length) {
         }
     }
 
-<<<<<<< HEAD
-    // Range Slider 2
-    const spent = 12000, remaining = 3000, avaliable = 10000, unallocated = 5000;
-    const max = avaliable + unallocated;
-    function calculateValues() {
-        var value = $("#slider_element").slider("value");
-        let unallocatedPercentage = 0,
-            allocatedPercentage = 0;
-
-        unallocatedPercentage = (value / max) * 100;
-        console.log('unallocatedPercentage:', unallocatedPercentage)
-
-        if (unallocatedPercentage < 15) {
-            unallocatedPercentage = 15;
-        }
-        if (unallocatedPercentage > 85) {
-            unallocatedPercentage = 85;
-        }
-
-        $(".ui-slider-handle").html(`<span class="my_range_tooltip">${spent + remaining + value}</span>`);
-        $(".amount_wrapper .left_amount").html(`${value}`);
-        $(".amount_wrapper .left_amount").css("min-width", `${unallocatedPercentage}%`);
-        $(".amount_wrapper .right_amount").html(`${max - value}`);
-    }
-
-    $("#slider_element").slider({
-        orientation: "horizontal",
-        range: "min",
-        max: max,
-        value: unallocated,
-        slide: calculateValues,
-        change: calculateValues
-    });
-
-    $("#slider_element").slider("value", unallocated);
-=======
->>>>>>> influencer2
 
     /*==========================================================================
         WHEN DOCUMENT LOADING
