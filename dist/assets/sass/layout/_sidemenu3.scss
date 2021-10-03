@@ -2,10 +2,17 @@
     max-width: 272px;
     width: 100%;
     background-color: $purpleLight8;
+<<<<<<< HEAD
     height: 100vh;
 
     /* Scrollbar Start */
     
+=======
+    // height: 100vh;
+
+    /* Scrollbar Start */
+
+>>>>>>> influencer2
     /* width */
     ::-webkit-scrollbar {
         width: 10px;
@@ -47,12 +54,14 @@
     }
 
     .sideBarBody {
-        height: 100vh;
+        // height: 100vh;
 
         .sideBarHeader {
             position: sticky;
             top: 0;
             padding-bottom: 8px;
+            background-color: $purpleLight8;
+            z-index: 1;
 
             &__inner {
                 min-height: 65px;
@@ -73,8 +82,8 @@
         }
 
         .sideBarMenus {
-            height: calc(100vh - 73px);
-            overflow-y: auto;
+            // height: calc(100vh - 73px);
+            // overflow-y: auto;
 
             ul {
                 list-style: none;
