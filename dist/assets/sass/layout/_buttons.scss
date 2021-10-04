@@ -224,6 +224,27 @@
     }
 }
 
+.btn-bottom-top {
+    position: fixed;
+    bottom: 30px;
+    right: 25px;
+    padding: 6px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: none;
+
+    &:hover {
+        background-color: rgba($greenDark, .9);
+    }
+    
+    span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
 .btn-tag {
     height: 24px;
     display: flex;
