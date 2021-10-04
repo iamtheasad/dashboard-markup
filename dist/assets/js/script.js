@@ -282,20 +282,6 @@ if ($(".all-files-uploder-2").length) {
     };
 }
 
-function sidebarPopup() {
-    let btn = $('.sideBar .actionBar .actionIcon');
-    btn.on('click', function () {
-        $(this).siblings('.action-popup').slideToggle(200);
-    })
-    $(document).click(function (e) {
-        $('.actionBar')
-            .not($('.actionBar').has($(e.target)))
-            .children('.action-popup')
-            .slideUp(200);
-    });
-}
-sidebarPopup();
-
 // Range Slider 2
 if ($('#slider_element').length) {
     const spent = 12000, remaining = 3000, avaliable = 10000, unallocated = 5000;
@@ -611,6 +597,19 @@ if ($('#slider_element').length) {
         })
     }
 
+    function sidebarPopup() {
+        let btn = $('.sideBar .actionBar .actionIcon');
+        btn.on('click', function () {
+            $(this).siblings('.action-popup').slideToggle(200);
+        })
+        $(document).click(function (e) {
+            $('.actionBar')
+                .not($('.actionBar').has($(e.target)))
+                .children('.action-popup')
+                .slideUp(200);
+        });
+    }
+
     function bottomToTop() {
         $(".btn-bottom-top").click(function () {
             $("html, body").animate({ scrollTop: 0 }, 1000);
@@ -633,6 +632,7 @@ if ($('#slider_element').length) {
         animateSearch();
         redialProgressBar();
         sidebarDropdown();
+        sidebarPopup();
         bottomToTop();
 
         dataTable2();
