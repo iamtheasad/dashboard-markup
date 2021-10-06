@@ -20,10 +20,85 @@
       }
    }
 
-}
+   .form-divider-border {
+      background-color: $purpleLight3;
+      width: 100%;
+      height: 1px;
+      display: block;
+      margin-top: 28px;
+      margin-bottom: 20px;
+   }
 
-.create-gnr-account {
-   padding: 28px 32px;
+   .authentication-card-footer {
+      margin-bottom: 24px;
+   }
+
+   .register-step {
+      display: flex;
+   }
+
+   .register-step-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 24px;
+      border-top: 1px solid $purpleLight3;
+      border-bottom: 1px solid $purpleLight3;
+      height: 48px;
+      padding: 12px;
+      width: 159px;
+      background-color: $whiteLight;
+
+      &.active {
+         background-color: $greenDark;
+
+         span svg rect {
+            fill: $white;
+         }
+
+         span svg path {
+            fill: $greenDark;
+         }
+
+         .info {
+            font-weight: 700;
+            color: $white;
+         }
+      }
+
+      &.completed {
+         background-color: rgba($greenDark, .15);
+
+         span svg rect {
+            fill: $greenDark;
+         }
+
+         span svg path {
+            fill: $white;
+         }
+
+         .info {
+            font-weight: 500;
+            color: $greenDark;
+         }
+      }
+
+      span svg rect {
+         fill: rgba($purpleLight, .4);
+      }
+
+      span svg path {
+         fill: $white;
+      }
+
+      span {
+         line-height: 0;
+      }
+
+      .info {
+         font-weight: 500;
+         color: $purpleLight;
+      }
+   }
 }
 
 .or-with-bar {
@@ -49,4 +124,8 @@
    &:before {
       left: 0;
    }
+}
+
+#msform fieldset:not(:first-of-type) {
+   display: none
 }

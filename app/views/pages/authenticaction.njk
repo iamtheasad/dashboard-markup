@@ -2,27 +2,252 @@
 
 {% block content %}
 <!-- Register -->
-<form action="">
-   <div class="authentication-card text-center mb-20">
-      <div class="create-gnr-account">
-         <h3 class="fz22 fw-700 mb-16 black-color-2">Create Account</h3>
-         <p class="fz14 fw-400 purpleLight7-color mb-24">Want to run <span class="fw-600">Ad Campaigns</span> for your
+<div class="authentication-card mb-20 text-center">
+   <div class="authentication-card-header text-center mb-16">
+      <h3 class="fz22 fw-700 black-color-2 w-100">Create Account</h3>
+   </div>
+
+   <div class="authentication-card-body">
+      <div class="mb-24 p-0x32">
+         <p class="fz14 fw-400 purpleLight7-color">Want to run <span class="fw-600">Ad Campaigns</span> for your
             business or agency?
             Want to earn from <span class="fw-600">Publishing Ads</span> on your platforms?</p>
+      </div>
 
-         <a href="#" class="ra-btn bg-green fz16 fw-600 ra-btn-6x12 height-43 mb-24">Create a GNR Client Account</a>
-         <div class="mb-24">
-            <span class="or-with-bar fz14 fw-400 purple-light-color">Or,</span>
-         </div>
-         <a href="#" class="ra-btn ra-btn-orange-bg fz16 fw-600 ra-btn-6x12 height-43 mb-24">Create an Influencer
+      <div class="mb-24 p-0x32">
+         <a href="#" class="ra-btn bg-green fz16 fw-600 ra-btn-6x12 height-43">Create a GNR Client Account</a>
+      </div>
+      <div class="mb-24 p-0x32">
+         <span class="or-with-bar fz14 fw-400 purple-light-color">Or,</span>
+      </div>
+      <div class="mb-24 p-0x32">
+         <a href="#" class="ra-btn ra-btn-orange-bg fz16 fw-600 ra-btn-6x12 height-43">Create an Influencer
             Account</a>
+      </div>
+   </div>
+
+   <div class="authentication-card-footer">
+      <div class="mb-24 p-0x32">
          <p class="fz12 fw-400 purple-light-color mb-1">Already have an account?</p>
          <a href="#" class="fz14 fw-600 blue-color-2">Login Now</a>
       </div>
    </div>
-</form>
+</div>
 
 <!-- Rgister As Client -->
+<div class="row">
+   <div class="col-md-12 d-flex justify-content-center">
+      <div class="card authentication-card">
+         <div class="authentication-card-header text-center mb-16">
+            <a href="#" class="previous action-button-previous">
+               <img src="assets/images/icons/arrow-long-left.svg" alt="Icon">
+            </a>
+            <h3 class="fz22 fw-700 black-color-2 w-100">Create Client Account</h3>
+         </div>
+         <div class="row">
+            <div class="col-md-12">
+               <form id="msform" class="text-center">
 
+                  <!--
+                     */ progressbar 
+                   -->
+                  <ul class="register-step progressbar">
+                     <!-- .completed, .active class add to show status -->
+                     <li class="register-step-item fz15 fw-700 completed" id="basicInfo">
+                        <span>
+                           <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <rect width="20" height="20" rx="10" fill="white" />
+                              <path
+                                 d="M6.27755 10.6148L8.4671 12.7869C8.75352 13.071 9.22126 13.071 9.50765 12.7869L13.7225 8.6048C14.0925 8.23767 14.0925 7.64676 13.7225 7.27966C13.3465 6.90675 12.7326 6.90678 12.3568 7.27974L8.9874 10.6231L7.64316 9.28956C7.26728 8.91667 6.65343 8.91667 6.27755 9.28956C5.90748 9.65669 5.90748 10.2477 6.27755 10.6148Z"
+                                 fill="#72BF44" />
+                           </svg>
+                        </span>
+                        <span class="pl-12 fz15 info">Basic Info</span>
+                     </li>
+                     <li class="register-step-item fz15 fw-700 active" id="contactInfo">
+                        <span>
+                           <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <rect width="20" height="20" rx="10" fill="white" />
+                              <path
+                                 d="M6.27755 10.6148L8.4671 12.7869C8.75352 13.071 9.22126 13.071 9.50765 12.7869L13.7225 8.6048C14.0925 8.23767 14.0925 7.64676 13.7225 7.27966C13.3465 6.90675 12.7326 6.90678 12.3568 7.27974L8.9874 10.6231L7.64316 9.28956C7.26728 8.91667 6.65343 8.91667 6.27755 9.28956C5.90748 9.65669 5.90748 10.2477 6.27755 10.6148Z"
+                                 fill="#72BF44" />
+                           </svg>
+                        </span>
+                        <span class="pl-12 fz15 info">Contact Info</span>
+                     </li>
+                     <li class="register-step-item fz15 fw-700" id="password">
+                        <span>
+                           <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <rect width="20" height="20" rx="10" fill="white" />
+                              <path
+                                 d="M6.27755 10.6148L8.4671 12.7869C8.75352 13.071 9.22126 13.071 9.50765 12.7869L13.7225 8.6048C14.0925 8.23767 14.0925 7.64676 13.7225 7.27966C13.3465 6.90675 12.7326 6.90678 12.3568 7.27974L8.9874 10.6231L7.64316 9.28956C7.26728 8.91667 6.65343 8.91667 6.27755 9.28956C5.90748 9.65669 5.90748 10.2477 6.27755 10.6148Z"
+                                 fill="#72BF44" />
+                           </svg>
+                        </span>
+                        <span class="pl-12 fz15 info">Password</span>
+                     </li>
+                  </ul>
+
+                  <div class="p-0x32">
+                     <fieldset>
+                        <div class="row">
+                           <div class="col-md-6">
+                              <div class="form-card mb-16">
+                                 <div class="ra-form ra-form-2">
+                                    <label for="fName" class="ra-label-2 left">First name</label>
+                                    <input type="text" class="ra-input-2" name="fName" placeholder="Set a name" />
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-6">
+                              <div class="form-card mb-16">
+                                 <div class="ra-form ra-form-2">
+                                    <label for="lName" class="ra-label-2 left">Last Name</label>
+                                    <input type="text" class="ra-input-2" name="lname" placeholder="Your Last Name" />
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-12">
+                              <div class="form-card mb-16">
+                                 <div class="ra-form ra-form-2">
+                                    <label for="eMail" class="ra-label-2 left">Email</label>
+                                    <input type="email" class="ra-input-2" name="email" placeholder="Your Email" />
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+                        <input type="button" name="next"
+                           class="next ra-btn ra-btn-light-blue-bg fz16 fw-600 ra-btn-6x12 height-43 w-100"
+                           value="Next" />
+                     </fieldset>
+                     <fieldset>
+                        <div class="row">
+                           <div class="col-md-12">
+                              <div class="mb-24">
+                                 <p class="fz14 fw-400 purpleLight7-color">
+                                    You’ll get some special deals from GNR if you register as a company. Do you have a
+                                    business or agency?
+                                 </p>
+                              </div>
+
+                              <div class="settings-radio-group client-account-radio-group">
+                                 <div class="radio-btn-wrapper">
+                                    <input class="radio-btn-input" type="radio" name="yes" id="yes" value="option2"
+                                       checked>
+                                    <label class="radio-check-label" for="yes">
+                                       <span class="radio-box">
+                                          <span>&nbsp;</span>
+                                       </span>
+                                       <span class="radio-text">Yes</span>
+                                    </label>
+                                 </div>
+                                 <div class="radio-btn-wrapper">
+                                    <input class="radio-btn-input" type="radio" name="yes" id="no" value="option2">
+                                    <label class="radio-check-label" for="no">
+                                       <span class="radio-box">
+                                          <span>&nbsp;</span>
+                                       </span>
+                                       <span class="radio-text">No</span>
+                                    </label>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-12">
+                              <div class="form-card mb-16">
+                                 <div class="ra-form ra-form-2">
+                                    <label for="comName" class="ra-label-2 left">Company Name</label>
+                                    <input type="text" class="ra-input-2" name="comName"
+                                       placeholder="Name of your Company/Business" />
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-12">
+                              <div class="form-card mb-16">
+                                 <div class="ra-form ra-form-2">
+                                    <label for="comAddress" class="ra-label-2 left">Company Address</label>
+                                    <input type="text" class="ra-input-2" name="lname"
+                                       placeholder="Address of your Company/Business" />
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-12">
+                              <div class="form-card mb-16">
+                                 <div class="ra-form ra-form-2">
+                                    <label for="youAddress" class="ra-label-2 left">Your Address</label>
+                                    <input type="text" class="ra-input-2" name="youAddress"
+                                       placeholder="Your Address" />
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-12">
+                              <div class="form-card mb-16">
+                                 <div class="ra-form ra-form-2">
+                                    <label for="phno" class="ra-label-2 left">Phone Number</label>
+                                    <input type="tel" class="ra-input-2" name="phno" placeholder="Your Phone Number" />
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+                        <!-- <input type="button" name="previous" class="previous action-button-previous"
+                        value="Previous" /> -->
+
+                        <input type="button" name="next"
+                           class="next ra-btn ra-btn-light-blue-bg fz16 fw-600 ra-btn-6x12 height-43 w-100"
+                           value="Next" />
+                     </fieldset>
+
+                     <fieldset>
+                        <div class="row">
+                           <div class="col-md-12">
+                              <div class="form-card mb-16">
+                                 <div class="ra-form ra-form-2">
+                                    <label for="pwd" class="ra-label-2 left">Set a Password</label>
+                                    <input type="password" class="ra-input-2" name="pwd"
+                                       placeholder="Set your Password" />
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-12">
+                              <div class="form-card mb-16">
+                                 <div class="ra-form ra-form-2">
+                                    <label for="cpwd" class="ra-label-2 left">Retype Password</label>
+                                    <input type="password" class="ra-input-2" name="cpwd"
+                                       placeholder="Retype Password" />
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+                        <!-- <input type="button" name="previous" class="previous action-button-previous"
+                        value="Previous" /> -->
+
+                        <input type="button" name="next" class="next ra-btn ra-btn-blue-bg fz16 fw-600 ra-btn-6x12 height-43 w-100" value="Create GNR Client Account" />
+                     </fieldset>
+                     <fieldset>
+                        <div class="form-card">
+                           <h2 class="fs-title text-center">Successfully Submitted Your Form !</h2> <br><br>
+                        </div>
+                     </fieldset>
+                  </div>
+
+                  <div class="form-divider-border">&nbsp;</div>
+
+                  <div class="authentication-card-footer">
+                     <div class="p-0x32">
+                        <p class="fz12 fw-400 purple-light-color mb-1">Already have an account?</p>
+                        <a href="#" class="fz14 fw-600 blue-color-2">Login Now</a>
+                     </div>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
 
 {% endblock %}

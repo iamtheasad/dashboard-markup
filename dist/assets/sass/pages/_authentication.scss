@@ -20,10 +20,69 @@
       }
    }
 
-}
+   .form-divider-border {
+      background-color: $purpleLight3;
+      width: 100%;
+      height: 1px;
+      display: block;
+      margin-top: 28px;
+      margin-bottom: 20px;
+   }
 
-.create-gnr-account {
-   padding: 28px 32px;
+   .authentication-card-footer {
+      margin-bottom: 24px;
+   }
+
+   .register-step {
+      display: flex;
+   }
+
+   .register-step-item {
+      &.active {
+         background-color: $greenDark;
+
+        span svg [fill{
+            fill: #fff;
+         }
+
+         .info {
+            font-weight: 700;
+            color: #ffffff;
+         }
+      }
+
+      &.completed {
+         background-color: rgba($greenDark, .15);
+
+         span svg [fill] {
+            fill: #72BF44;
+         }
+
+         .info {
+            font-weight: 500;
+            color: #72BF44;
+         }
+      }
+
+      display: flex;
+      align-items: center;
+      margin-bottom: 24px;
+      border-top: 1px solid #E6E9F5;
+      border-bottom: 1px solid #E6E9F5;
+      height: 48px;
+      padding: 12px;
+      width: 159px;
+      background-color: #F7F7F7;
+
+      span {
+         line-height: 0;
+      }
+
+      .info {
+         font-weight: 500;
+         color: #83839F;
+      }
+   }
 }
 
 .or-with-bar {
