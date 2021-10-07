@@ -1,9 +1,62 @@
-{% extends "layouts/authLayout.njk" %}
+{% extends "layouts/authLayout2.njk" %}
+
 {% block content %}
-<div class="auth-card mt-8vh">
-    <div class="card-head text-center">
-        <h2>Login</h2>
+<!-- Login Page -->
+<div class="authentication-card mb-20 text-center">
+    <div class="authentication-card-header text-center mb-16">
+        <h3 class="fz22 fw-700 black-color-2 w-100">Login to GNR</h3>
     </div>
-    {% include "sections/forms/loginForm.njk" %}
+
+    <div class="authentication-card-body">
+        <div class="p-0x32">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-card mb-16">
+                        <div class="ra-form ra-form-2">
+                            <label for="eMail" class="ra-label-2 left">Email</label>
+                            <input type="email" class="ra-input-2" name="email" placeholder="Your Email" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-card mb-16">
+                        <div class="ra-form ra-form-2">
+                            <label for="pass" class="ra-label-2 left">Password</label>
+                            <input type="password" class="ra-input-2" name="pass" placeholder="Your Password" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="p-0x32">
+            <div class="row mb-16">
+                <div class="col-md-6 text-left">
+                    <div class="client-settings-checkbox">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck-1">
+                            <label class="custom-control-label" for="customCheck-1">
+                                <span class="fz14 fw-400 purple-light-color">Keep me Logged in</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 text-right">
+                    <a href="#" class="fz-16 fw-600 blue-color-2 ml-1">Forgot password?</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-24 p-0x32">
+            <a href="#" class="ra-btn ra-btn-blue-bg fw-600 ra-btn-6x12 min-height-48">Login</a>
+        </div>
+    </div>
+
+    <div class="authentication-card-footer">
+        <div class="mb-24 p-0x32">
+            <p class="fz12 fw-400 purple-light-color mb-1">Don’t have an account yet?</p>
+            <a href="register.html" class="fz14 fw-600 blue-color-2">Create Account</a>
+        </div>
+    </div>
 </div>
 {% endblock %}

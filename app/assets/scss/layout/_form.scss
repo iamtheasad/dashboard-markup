@@ -1427,3 +1427,9 @@ button:focus .dropdown-icon.up-3 {
     background-color: $greenDark;
   }
 }
+
+
+// auth form validation
+[data-form="step-2"],  [data-form="step-3"]{
+  display: none;
+}
