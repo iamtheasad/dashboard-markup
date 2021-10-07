@@ -1,35 +1,6 @@
 /* ********************************** */
 /* Custom Scripts */
 /* ********************************** */
-// import {validateEmail, validatePhone, validateUrl} from './formValidate';
-
-function registerClient(){
-    let stepCount = 1, backBtn = $('.action-button-previous');
-
-
-    backBtn.on("click", function() {
-        if(stepCount === 1) {
-            window.location.href = "/register.html";
-        }else {
-            $(`#step-${stepCount}`).removeClass('completed');
-            stepCount = stepCount - 1;
-            $(`#step-${stepCount}`).addClass('active');
-            $('[data-form]').slideUp();
-            $(`[data-form="step-${stepCount}"]`).slideDown();
-        }
-    })
-
-    $('[data-form] button.next').on('click', function() {
-        $(`#step-${stepCount}`).addClass('completed').removeClass('active');
-        stepCount = stepCount + 1;
-        $(`#step-${stepCount}`).addClass('active');
-        $(this).parents('[data-form]').slideUp();
-        $(this).parents('[data-form]').next('[data-form]').slideDown();
-    })
-}
-
-registerClient();
-
 function inputAnimate() {
     if ($('.rs-form').length) {
         // Check if has value
@@ -254,7 +225,7 @@ function bottomToTop() {
 function customForm() {
     var current_fs, next_fs, previous_fs; //fieldsets
     var opacity;
-    if( $(".register-step").length){
+    if ($(".register-step").length) {
         $(".register-step li:first-child").addClass("active");
     }
 
