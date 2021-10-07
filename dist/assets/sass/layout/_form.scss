@@ -1430,6 +1430,14 @@ button:focus .dropdown-icon.up-3 {
 
 
 // auth form validation
-[data-form="step-2"],  [data-form="step-3"]{
+[data-form="step-2"],
+[data-form="step-3"] {
   display: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #fff inset !important;
 }
