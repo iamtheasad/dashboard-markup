@@ -1,178 +1,686 @@
-<div class="client-settings-modal-all create-add-group-modal modal fade" id="createAddGroup" tabindex="-1"
-role="dialog" aria-labelledby="createAddGroup" aria-hidden="true">
-<!-- .loading class add for blur effect -->
-<div class="modal-dialog modal-dialog-centered" role="document">
-   <div class="modal-content">
-      <form action="#">
-         <div class="modal-header">
-            <h5 class="modal-title">Create Ad Group</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-               <span aria-hidden="true">&times;</span>
-            </button>
-         </div>
-         <div class="modal-body">
-            <div class="scrollable">
-               <div class="row">
-                  <div class="col-md-12 mb-20">
-                     <div class="ra-form ra-form-2">
-                        <fieldset>
-                           <label for="adGroupName" class="ra-label-2 left">Ad Group Name</label>
-                           <input type="text" class="ra-input-2" id="adGroupName" placeholder="Set a name">
-                           <!-- .selected-bg class for adding input background color -->
-                           <label for="adGroupName" class="ra-label-2 right">0/100</label>
-                        </fieldset>
-                     </div>
-                  </div>
-                  <div class="col-md-12 mb-20">
-                     <div class="ra-form ra-form-2">
-                        <fieldset>
-                           <label for="adGroupName" class="ra-label-2 left">Ad Group Name</label>
-                           <input type="text" class="ra-input-2 selected-bg" id="adGroupName"
-                              placeholder="Set a name">
-                           <!-- .selected-bg class for adding input background color -->
-                           <label for="adGroupName" class="ra-label-2 right">0/100</label>
-                        </fieldset>
-                     </div>
-                  </div>
-                  <div class="col-md-12 mb-20">
-                     <div class="ra-form ra-form-2 ra-form-2--select">
-                        <fieldset>
-                           <label for="audienceSelectField" class="ra-label-2 left">Audience</label>
-                           <select name="selectField" class="ra-select-2" id="audienceSelectField">
-                              <!-- .selected class add for opacity -->
-                              <option value="SelectAudience" selected>Select Audience</option>
-                              <option value="Demo2">Demo2</option>
-                              <option value="Demo3">Demo3</option>
-                              <option value="Demo4">Demo4</option>
-                           </select>
-                        </fieldset>
-                     </div>
-                  </div>
-                  <div class="col-md-12 mb-20">
-                     <div class="ra-form ra-form-2 ra-form-2--select">
-                        <fieldset>
-                           <label for="audienceSelectField" class="ra-label-2 left">Audience</label>
-                           <select name="selectField" class="ra-select-2 selected" id="audienceSelectField">
-                              <!-- .selected class add for opacity -->
-                              <option value="SelectAudience" selected>Select Audience</option>
-                              <option value="Demo2">Demo2</option>
-                              <option value="Demo3">Demo3</option>
-                              <option value="Demo4">Demo4</option>
-                           </select>
-                        </fieldset>
-                     </div>
-                  </div>
-
-                  <div class="col-md-6 mb-20">
-                     <div class="ra-form ra-form-2">
-                        <fieldset>
-                           <label for="addGroupBudget" class="ra-label-2 left">Ad Group Budget</label>
-                           <input type="number" class="ra-input-2" id="addGroupBudget" placeholder="Set a Budget">
-                           <!-- .selected-bg class for adding input background color -->
-                           <label for="addGroupBudget" class="ra-label-2 right fw-500">BDT</label>
-                        </fieldset>
-                     </div>
-                  </div>
-                  <div class="col-md-6 mb-20">
-                     <div class="ra-form ra-form-2">
-                        <fieldset>
-                           <label for="unallocatedBalance" class="ra-label-2 left">Unallocated Balance</label>
-                           <input type="number" class="ra-input-2 selected-bg" id="unallocatedBalance"
-                              placeholder="20,000">
-                           <!-- .selected-bg class for adding input background color -->
-                           <label for="unallocatedBalance" class="ra-label-2 right fw-500">BDT</label>
-                        </fieldset>
-                     </div>
-                  </div>
-               </div>
-
-               <div class="card settings-card radio-btn-card mb-20">
-                  <div class="card-header card-header-custom">
-                     <div class="settings-radio-group">
-                        <div class="radio-btn-wrapper">
-                           <input class="radio-btn-input" type="radio" name="cpc" id="cpc" value="option2">
-                           <label class="radio-check-label" for="cpc">
-                              <span class="radio-box">
-                                 <span>&nbsp;</span>
-                              </span>
-                              <span class="radio-text">CPC</span>
-                           </label>
+<div class="client-settings-modal-all create-add-group-modal modal fade" id="createAddGroup" tabindex="-1" role="dialog"
+   aria-labelledby="createAddGroup" aria-hidden="true">
+   <!-- .loading class add for blur effect -->
+   <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+         <form action="#">
+            <div class="modal-header">
+               <h5 class="modal-title">Create Ad Group</h5>
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+               </button>
+            </div>
+            <div class="modal-body">
+               <div class="scrollable">
+                  <div class="row">
+                     <div class="col-md-12 mb-20">
+                        <div class="ra-form ra-form-2">
+                           <fieldset>
+                              <label for="adGroupName" class="ra-label-2 left">Ad Group Name</label>
+                              <input type="text" class="ra-input-2" id="adGroupName" placeholder="Set a name">
+                              <!-- .selected-bg class for adding input background color -->
+                              <label for="adGroupName" class="ra-label-2 right">0/100</label>
+                           </fieldset>
                         </div>
-                        <div class="radio-btn-wrapper">
-                           <input class="radio-btn-input" type="radio" name="cpc" id="cpm" value="option2">
-                           <label class="radio-check-label" for="cpm">
-                              <span class="radio-box">
-                                 <span>&nbsp;</span>
-                              </span>
-                              <span class="radio-text">CPC</span>
-                           </label>
+                     </div>
+                     <div class="col-md-12 mb-20">
+                        <div class="ra-form ra-form-2">
+                           <fieldset>
+                              <label for="adGroupName" class="ra-label-2 left">Ad Group Name</label>
+                              <input type="text" class="ra-input-2 selected-bg" id="adGroupName"
+                                 placeholder="Set a name">
+                              <!-- .selected-bg class for adding input background color -->
+                              <label for="adGroupName" class="ra-label-2 right">0/100</label>
+                           </fieldset>
+                        </div>
+                     </div>
+                     <div class="col-md-12 mb-20">
+                        <div class="ra-form ra-form-2 ra-form-2--select">
+                           <fieldset>
+                              <label for="audienceSelectField" class="ra-label-2 left">Audience</label>
+                              <select name="selectField" class="ra-select-2" id="audienceSelectField">
+                                 <!-- .selected class add for opacity -->
+                                 <option value="SelectAudience" selected>Select Audience</option>
+                                 <option value="Demo2">Demo2</option>
+                                 <option value="Demo3">Demo3</option>
+                                 <option value="Demo4">Demo4</option>
+                              </select>
+                           </fieldset>
+                        </div>
+                     </div>
+                     <div class="col-md-12 mb-20">
+                        <div class="ra-form ra-form-2 ra-form-2--select">
+                           <fieldset>
+                              <label for="audienceSelectField" class="ra-label-2 left">Audience</label>
+                              <select name="selectField" class="ra-select-2 selected" id="audienceSelectField">
+                                 <!-- .selected class add for opacity -->
+                                 <option value="SelectAudience" selected>Select Audience</option>
+                                 <option value="Demo2">Demo2</option>
+                                 <option value="Demo3">Demo3</option>
+                                 <option value="Demo4">Demo4</option>
+                              </select>
+                           </fieldset>
+                        </div>
+                     </div>
+
+                     <div class="col-md-6 mb-20">
+                        <div class="ra-form ra-form-2">
+                           <fieldset>
+                              <label for="addGroupBudget" class="ra-label-2 left">Ad Group Budget</label>
+                              <input type="number" class="ra-input-2" id="addGroupBudget" placeholder="Set a Budget">
+                              <!-- .selected-bg class for adding input background color -->
+                              <label for="addGroupBudget" class="ra-label-2 right fw-500">BDT</label>
+                           </fieldset>
+                        </div>
+                     </div>
+                     <div class="col-md-6 mb-20">
+                        <div class="ra-form ra-form-2">
+                           <fieldset>
+                              <label for="unallocatedBalance" class="ra-label-2 left">Unallocated Balance</label>
+                              <input type="number" class="ra-input-2 selected-bg" id="unallocatedBalance"
+                                 placeholder="20,000">
+                              <!-- .selected-bg class for adding input background color -->
+                              <label for="unallocatedBalance" class="ra-label-2 right fw-500">BDT</label>
+                           </fieldset>
                         </div>
                      </div>
                   </div>
-                  <div class="card-body">
-                     <div class="row">
-                        <div class="col-md-12 mb-16">
-                           <div class="ra-form ra-form-2">
-                              <fieldset>
-                                 <label for="unallocatedBalance" class="ra-label-2 left">Pricing</label>
-                                 <input type="text" class="ra-input-2 selected-bg" id="unallocatedBalance"
-                                    placeholder="10.00 ~ 30.00">
-                                 <!-- .selected-bg class for adding input background color -->
-                                 <label for="unallocatedBalance" class="ra-label-2 right fw-500">BDT</label>
-                              </fieldset>
+
+                  <div class="card settings-card radio-btn-card mb-20">
+                     <div class="card-header card-header-custom">
+                        <div class="settings-radio-group">
+                           <div class="radio-btn-wrapper">
+                              <input class="radio-btn-input" type="radio" name="cpc" id="cpc" value="option2" checked>
+                              <label class="radio-check-label" for="cpc">
+                                 <span class="radio-box">
+                                    <span>&nbsp;</span>
+                                 </span>
+                                 <span class="radio-text">CPC</span>
+                              </label>
+                           </div>
+                           <div class="radio-btn-wrapper">
+                              <input class="radio-btn-input" type="radio" name="cpc" id="cpm" value="option2">
+                              <label class="radio-check-label" for="cpm">
+                                 <span class="radio-box">
+                                    <span>&nbsp;</span>
+                                 </span>
+                                 <span class="radio-text">CPC</span>
+                              </label>
                            </div>
                         </div>
-                        <div class="col-md-12">
-                           <p class="fz12 fw-400 darkPrimaryColor">**You need to add the function below in your
-                              conversion event: `___gnr_conversion()` to track Conversions. You need to add the
-                              function below in your conversion event</p>
+                     </div>
+                     <div class="card-body">
+                        <div class="row">
+                           <div class="col-md-12 mb-16">
+                              <div class="ra-form ra-form-2">
+                                 <fieldset>
+                                    <label for="unallocatedBalance" class="ra-label-2 left">Pricing</label>
+                                    <input type="text" class="ra-input-2 selected-bg" id="unallocatedBalance"
+                                       placeholder="10.00 ~ 30.00">
+                                    <!-- .selected-bg class for adding input background color -->
+                                    <label for="unallocatedBalance" class="ra-label-2 right fw-500">BDT</label>
+                                 </fieldset>
+                              </div>
+                           </div>
+                           <div class="col-md-12">
+                              <p class="fz12 fw-400 darkPrimaryColor">**You need to add the function below in your
+                                 conversion event: `___gnr_conversion()` to track Conversions. You need to add the
+                                 function below in your conversion event</p>
+                           </div>
                         </div>
                      </div>
                   </div>
-               </div>
 
-               <div class="card settings-card radio-btn-card">
-                  <div class="card-header card-header-custom border-0">
-                     <div class="settings-radio-group">
-                        <div class="radio-btn-wrapper">
-                           <input class="radio-btn-input" type="radio" name="schedule" id="defualtSchedule"
-                              value="option2">
-                           <label class="radio-check-label" for="defualtSchedule">
-                              <span class="radio-box">
-                                 <span>&nbsp;</span>
-                              </span>
-                              <span class="radio-text">Default Schedule</span>
-                           </label>
+                  <div class="card settings-card radio-btn-card">
+                     <div class="card-header card-header-custom border-0">
+                        <div class="settings-radio-group">
+                           <div class="radio-btn-wrapper">
+                              <input class="radio-btn-input" type="radio" name="schedule" id="defualtSchedule"
+                                 value="option2" checked>
+                              <label class="radio-check-label" for="defualtSchedule">
+                                 <span class="radio-box">
+                                    <span>&nbsp;</span>
+                                 </span>
+                                 <span class="radio-text">Default Schedule</span>
+                              </label>
+                           </div>
+                           <div class="radio-btn-wrapper">
+                              <input class="radio-btn-input" type="radio" name="schedule" id="customSchedule"
+                                 value="option2">
+                              <label class="radio-check-label" for="customSchedule">
+                                 <span class="radio-box">
+                                    <span>&nbsp;</span>
+                                 </span>
+                                 <span class="radio-text">Custom Schedule</span>
+                              </label>
+                           </div>
                         </div>
-                        <div class="radio-btn-wrapper">
-                           <input class="radio-btn-input" type="radio" name="schedule" id="customSchedule"
-                              value="option2">
-                           <label class="radio-check-label" for="customSchedule">
-                              <span class="radio-box">
-                                 <span>&nbsp;</span>
-                              </span>
-                              <span class="radio-text">Custom Schedule</span>
-                           </label>
+                     </div>
+
+                     <div class="card-body pt-4 p-0">
+                        <div class="campaign-duration">
+                           <div class="row">
+                              <div class="d-flex align-items-center w-100 pl-20 pr-20">
+                                 <div class="col-md-2 mb-20">
+                                    <div class="client-settings-checkbox">
+                                       <div class="custom-control custom-checkbox">
+                                          <input type="checkbox" class="custom-control-input" id="customCheck-1"
+                                             checked>
+                                          <label class="custom-control-label" for="customCheck-1">
+                                             <span class="fz14 text-uppercase">SAT</span>
+                                          </label>
+                                       </div>
+                                    </div>
+                                 </div>
+
+                                 <div class="col-md-5 mb-20">
+                                    <div class="custom-selection schedule">
+                                       <div class="dropdown dropdwon-3">
+                                          <fieldset class="multi-date-range">
+                                             <label for="startTime" class="position-absolute text-nowrap">
+                                                <span class="daterange-label-text">Start Time</span>
+                                             </label>
+                                             <label for="startTime" class="label-img text-nowrap">
+                                                <svg width="18" height="18" class="daterange-svg-icon"
+                                                   viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M9.00002 1.36241C4.78423 1.36241 1.36241 4.78423 1.36241 9.00002C1.36241 13.2158 4.78423 16.6376 9.00002 16.6376C13.2158 16.6376 16.6376 13.2158 16.6376 9.00002C16.6376 4.78423 13.2158 1.36241 9.00002 1.36241ZM0.123873 9.00002C0.123873 4.10021 4.10021 0.123873 9.00002 0.123873C13.8998 0.123873 17.8762 4.10021 17.8762 9.00002C17.8762 13.8998 13.8998 17.8762 9.00002 17.8762C4.10021 17.8762 0.123873 13.8998 0.123873 9.00002Z"
+                                                      fill="#83839F" />
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M8.69452 4.67342C9.03653 4.67342 9.31379 4.95068 9.31379 5.29269V8.67801C9.31379 8.80479 9.3622 8.98855 9.46984 9.17731C9.57751 9.36611 9.8194 9.56544 9.8194 9.56544L12.3807 11.0939C12.6744 11.2692 12.7704 11.6494 12.5951 11.9431C12.4198 12.2368 12.0397 12.3328 11.746 12.1575L9.18799 10.6309C9.18799 10.6309 8.57926 10.1158 8.39397 9.79086C8.20849 9.46563 8.07525 9.07141 8.07525 8.67801V5.29269C8.07525 4.95068 8.35251 4.67342 8.69452 4.67342Z"
+                                                      fill="#83839F" />
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M0 9C0 4.03179 4.03179 0 9 0C13.9682 0 18 4.03179 18 9C18 13.9682 13.9682 18 9 18C4.03179 18 0 13.9682 0 9ZM9 0.247706C4.16859 0.247706 0.247706 4.16859 0.247706 9C0.247706 13.8314 4.16859 17.7523 9 17.7523C13.8314 17.7523 17.7523 13.8314 17.7523 9C17.7523 4.16859 13.8314 0.247706 9 0.247706ZM9 1.48624C4.85262 1.48624 1.48624 4.85262 1.48624 9C1.48624 13.1474 4.85262 16.5138 9 16.5138C13.1474 16.5138 16.5138 13.1474 16.5138 9C16.5138 4.85262 13.1474 1.48624 9 1.48624ZM1.23853 9C1.23853 4.71581 4.71581 1.23853 9 1.23853C13.2842 1.23853 16.7615 4.71581 16.7615 9C16.7615 13.2842 13.2842 16.7615 9 16.7615C4.71581 16.7615 1.23853 13.2842 1.23853 9ZM7.95138 5.29267C7.95138 4.88226 8.28409 4.54955 8.6945 4.54955C9.10491 4.54955 9.43762 4.88226 9.43762 5.29267V8.67799C9.43762 8.77816 9.47758 8.94088 9.57741 9.11594C9.62273 9.1954 9.70041 9.28292 9.77226 9.35429C9.80725 9.38904 9.83911 9.41826 9.86215 9.43873C9.86785 9.44379 9.87299 9.4483 9.87748 9.45221C9.88206 9.45619 9.88598 9.45956 9.88914 9.46225L9.89144 9.4642L12.4441 10.9876C12.7966 11.1979 12.9118 11.6541 12.7014 12.0065C12.4911 12.3589 12.0349 12.4741 11.6825 12.2638L9.1245 10.7373C9.11867 10.7338 9.11314 10.7298 9.10796 10.7255L9.10597 10.7238L9.10058 10.7192L9.08039 10.7018C9.06301 10.6867 9.03807 10.665 9.00762 10.6379C8.94676 10.5837 8.86358 10.508 8.77439 10.4218C8.59992 10.2532 8.38892 10.032 8.28636 9.8522C8.09312 9.51335 7.95138 9.09808 7.95138 8.67799V5.29267ZM9.26042 10.5299L11.8094 12.0511C12.0444 12.1913 12.3485 12.1145 12.4887 11.8796C12.6289 11.6446 12.5521 11.3405 12.3172 11.2003L9.75591 9.67178C9.75054 9.66858 9.74543 9.66498 9.74061 9.661L9.73954 9.66012L9.7371 9.65808L9.72841 9.65073C9.72101 9.64442 9.71051 9.63535 9.69765 9.62393C9.67197 9.60112 9.63664 9.56871 9.59769 9.53003C9.52168 9.45453 9.42459 9.34798 9.36224 9.23865C9.24678 9.03618 9.18991 8.83138 9.18991 8.67799V5.29267C9.18991 5.01906 8.96811 4.79726 8.6945 4.79726C8.42089 4.79726 8.19909 5.01906 8.19909 5.29267V8.67799C8.19909 9.04471 8.32383 9.41788 8.50153 9.72949C8.58427 9.87456 8.77028 10.0734 8.9465 10.2437C9.03265 10.3269 9.11323 10.4003 9.17231 10.4528C9.20181 10.4791 9.22588 10.5001 9.24251 10.5145L9.26042 10.5299Z"
+                                                      fill="#83839F" />
+                                                </svg>
+                                             </label>
+                                             <input type="text" class="date-range duration-time duration-time-activator"
+                                                id="startTime" name="startTime" value="" />
+                                          </fieldset>
+                                       </div>
+                                    </div>
+                                 </div>
+
+                                 <div class="col-md-5 mb-20">
+                                    <div class="custom-selection schedule">
+                                       <div class="dropdown dropdwon-3">
+                                          <fieldset class="multi-date-range">
+                                             <label for="endTime" class="position-absolute text-nowrap">
+                                                <span class="daterange-label-text">End Time</span>
+                                             </label>
+                                             <label for="endTime" class="label-img text-nowrap">
+                                                <svg width="18" height="18" class="daterange-svg-icon"
+                                                   viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M9.00002 1.36241C4.78423 1.36241 1.36241 4.78423 1.36241 9.00002C1.36241 13.2158 4.78423 16.6376 9.00002 16.6376C13.2158 16.6376 16.6376 13.2158 16.6376 9.00002C16.6376 4.78423 13.2158 1.36241 9.00002 1.36241ZM0.123873 9.00002C0.123873 4.10021 4.10021 0.123873 9.00002 0.123873C13.8998 0.123873 17.8762 4.10021 17.8762 9.00002C17.8762 13.8998 13.8998 17.8762 9.00002 17.8762C4.10021 17.8762 0.123873 13.8998 0.123873 9.00002Z"
+                                                      fill="#83839F" />
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M8.69452 4.67342C9.03653 4.67342 9.31379 4.95068 9.31379 5.29269V8.67801C9.31379 8.80479 9.3622 8.98855 9.46984 9.17731C9.57751 9.36611 9.8194 9.56544 9.8194 9.56544L12.3807 11.0939C12.6744 11.2692 12.7704 11.6494 12.5951 11.9431C12.4198 12.2368 12.0397 12.3328 11.746 12.1575L9.18799 10.6309C9.18799 10.6309 8.57926 10.1158 8.39397 9.79086C8.20849 9.46563 8.07525 9.07141 8.07525 8.67801V5.29269C8.07525 4.95068 8.35251 4.67342 8.69452 4.67342Z"
+                                                      fill="#83839F" />
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M0 9C0 4.03179 4.03179 0 9 0C13.9682 0 18 4.03179 18 9C18 13.9682 13.9682 18 9 18C4.03179 18 0 13.9682 0 9ZM9 0.247706C4.16859 0.247706 0.247706 4.16859 0.247706 9C0.247706 13.8314 4.16859 17.7523 9 17.7523C13.8314 17.7523 17.7523 13.8314 17.7523 9C17.7523 4.16859 13.8314 0.247706 9 0.247706ZM9 1.48624C4.85262 1.48624 1.48624 4.85262 1.48624 9C1.48624 13.1474 4.85262 16.5138 9 16.5138C13.1474 16.5138 16.5138 13.1474 16.5138 9C16.5138 4.85262 13.1474 1.48624 9 1.48624ZM1.23853 9C1.23853 4.71581 4.71581 1.23853 9 1.23853C13.2842 1.23853 16.7615 4.71581 16.7615 9C16.7615 13.2842 13.2842 16.7615 9 16.7615C4.71581 16.7615 1.23853 13.2842 1.23853 9ZM7.95138 5.29267C7.95138 4.88226 8.28409 4.54955 8.6945 4.54955C9.10491 4.54955 9.43762 4.88226 9.43762 5.29267V8.67799C9.43762 8.77816 9.47758 8.94088 9.57741 9.11594C9.62273 9.1954 9.70041 9.28292 9.77226 9.35429C9.80725 9.38904 9.83911 9.41826 9.86215 9.43873C9.86785 9.44379 9.87299 9.4483 9.87748 9.45221C9.88206 9.45619 9.88598 9.45956 9.88914 9.46225L9.89144 9.4642L12.4441 10.9876C12.7966 11.1979 12.9118 11.6541 12.7014 12.0065C12.4911 12.3589 12.0349 12.4741 11.6825 12.2638L9.1245 10.7373C9.11867 10.7338 9.11314 10.7298 9.10796 10.7255L9.10597 10.7238L9.10058 10.7192L9.08039 10.7018C9.06301 10.6867 9.03807 10.665 9.00762 10.6379C8.94676 10.5837 8.86358 10.508 8.77439 10.4218C8.59992 10.2532 8.38892 10.032 8.28636 9.8522C8.09312 9.51335 7.95138 9.09808 7.95138 8.67799V5.29267ZM9.26042 10.5299L11.8094 12.0511C12.0444 12.1913 12.3485 12.1145 12.4887 11.8796C12.6289 11.6446 12.5521 11.3405 12.3172 11.2003L9.75591 9.67178C9.75054 9.66858 9.74543 9.66498 9.74061 9.661L9.73954 9.66012L9.7371 9.65808L9.72841 9.65073C9.72101 9.64442 9.71051 9.63535 9.69765 9.62393C9.67197 9.60112 9.63664 9.56871 9.59769 9.53003C9.52168 9.45453 9.42459 9.34798 9.36224 9.23865C9.24678 9.03618 9.18991 8.83138 9.18991 8.67799V5.29267C9.18991 5.01906 8.96811 4.79726 8.6945 4.79726C8.42089 4.79726 8.19909 5.01906 8.19909 5.29267V8.67799C8.19909 9.04471 8.32383 9.41788 8.50153 9.72949C8.58427 9.87456 8.77028 10.0734 8.9465 10.2437C9.03265 10.3269 9.11323 10.4003 9.17231 10.4528C9.20181 10.4791 9.22588 10.5001 9.24251 10.5145L9.26042 10.5299Z"
+                                                      fill="#83839F" />
+                                                </svg>
+                                             </label>
+                                             <input type="text" class="date-range duration-time duration-time-activator"
+                                                id="endTime" name="endTime" value="" />
+                                          </fieldset>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+
+                           <div class="row">
+                              <div class="d-flex align-items-center w-100 pl-20 pr-20">
+                                 <div class="col-md-2 mb-20">
+                                    <div class="client-settings-checkbox">
+                                       <div class="custom-control custom-checkbox">
+                                          <input type="checkbox" class="custom-control-input" id="customCheck-2" checked
+                                             disabled>
+                                          <label class="custom-control-label" for="customCheck-2">
+                                             <span class="fz14 text-uppercase">sun</span>
+                                          </label>
+                                       </div>
+                                    </div>
+                                 </div>
+
+                                 <div class="col-md-5 mb-20">
+                                    <div class="custom-selection schedule">
+                                       <div class="dropdown dropdwon-3">
+                                          <fieldset class="multi-date-range">
+                                             <label for="startTime" class="position-absolute text-nowrap">
+                                                <span class="daterange-label-text">Start Time</span>
+                                             </label>
+                                             <label for="startTime" class="label-img text-nowrap">
+                                                <svg width="18" height="18" class="daterange-svg-icon"
+                                                   viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M9.00002 1.36241C4.78423 1.36241 1.36241 4.78423 1.36241 9.00002C1.36241 13.2158 4.78423 16.6376 9.00002 16.6376C13.2158 16.6376 16.6376 13.2158 16.6376 9.00002C16.6376 4.78423 13.2158 1.36241 9.00002 1.36241ZM0.123873 9.00002C0.123873 4.10021 4.10021 0.123873 9.00002 0.123873C13.8998 0.123873 17.8762 4.10021 17.8762 9.00002C17.8762 13.8998 13.8998 17.8762 9.00002 17.8762C4.10021 17.8762 0.123873 13.8998 0.123873 9.00002Z"
+                                                      fill="#83839F" />
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M8.69452 4.67342C9.03653 4.67342 9.31379 4.95068 9.31379 5.29269V8.67801C9.31379 8.80479 9.3622 8.98855 9.46984 9.17731C9.57751 9.36611 9.8194 9.56544 9.8194 9.56544L12.3807 11.0939C12.6744 11.2692 12.7704 11.6494 12.5951 11.9431C12.4198 12.2368 12.0397 12.3328 11.746 12.1575L9.18799 10.6309C9.18799 10.6309 8.57926 10.1158 8.39397 9.79086C8.20849 9.46563 8.07525 9.07141 8.07525 8.67801V5.29269C8.07525 4.95068 8.35251 4.67342 8.69452 4.67342Z"
+                                                      fill="#83839F" />
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M0 9C0 4.03179 4.03179 0 9 0C13.9682 0 18 4.03179 18 9C18 13.9682 13.9682 18 9 18C4.03179 18 0 13.9682 0 9ZM9 0.247706C4.16859 0.247706 0.247706 4.16859 0.247706 9C0.247706 13.8314 4.16859 17.7523 9 17.7523C13.8314 17.7523 17.7523 13.8314 17.7523 9C17.7523 4.16859 13.8314 0.247706 9 0.247706ZM9 1.48624C4.85262 1.48624 1.48624 4.85262 1.48624 9C1.48624 13.1474 4.85262 16.5138 9 16.5138C13.1474 16.5138 16.5138 13.1474 16.5138 9C16.5138 4.85262 13.1474 1.48624 9 1.48624ZM1.23853 9C1.23853 4.71581 4.71581 1.23853 9 1.23853C13.2842 1.23853 16.7615 4.71581 16.7615 9C16.7615 13.2842 13.2842 16.7615 9 16.7615C4.71581 16.7615 1.23853 13.2842 1.23853 9ZM7.95138 5.29267C7.95138 4.88226 8.28409 4.54955 8.6945 4.54955C9.10491 4.54955 9.43762 4.88226 9.43762 5.29267V8.67799C9.43762 8.77816 9.47758 8.94088 9.57741 9.11594C9.62273 9.1954 9.70041 9.28292 9.77226 9.35429C9.80725 9.38904 9.83911 9.41826 9.86215 9.43873C9.86785 9.44379 9.87299 9.4483 9.87748 9.45221C9.88206 9.45619 9.88598 9.45956 9.88914 9.46225L9.89144 9.4642L12.4441 10.9876C12.7966 11.1979 12.9118 11.6541 12.7014 12.0065C12.4911 12.3589 12.0349 12.4741 11.6825 12.2638L9.1245 10.7373C9.11867 10.7338 9.11314 10.7298 9.10796 10.7255L9.10597 10.7238L9.10058 10.7192L9.08039 10.7018C9.06301 10.6867 9.03807 10.665 9.00762 10.6379C8.94676 10.5837 8.86358 10.508 8.77439 10.4218C8.59992 10.2532 8.38892 10.032 8.28636 9.8522C8.09312 9.51335 7.95138 9.09808 7.95138 8.67799V5.29267ZM9.26042 10.5299L11.8094 12.0511C12.0444 12.1913 12.3485 12.1145 12.4887 11.8796C12.6289 11.6446 12.5521 11.3405 12.3172 11.2003L9.75591 9.67178C9.75054 9.66858 9.74543 9.66498 9.74061 9.661L9.73954 9.66012L9.7371 9.65808L9.72841 9.65073C9.72101 9.64442 9.71051 9.63535 9.69765 9.62393C9.67197 9.60112 9.63664 9.56871 9.59769 9.53003C9.52168 9.45453 9.42459 9.34798 9.36224 9.23865C9.24678 9.03618 9.18991 8.83138 9.18991 8.67799V5.29267C9.18991 5.01906 8.96811 4.79726 8.6945 4.79726C8.42089 4.79726 8.19909 5.01906 8.19909 5.29267V8.67799C8.19909 9.04471 8.32383 9.41788 8.50153 9.72949C8.58427 9.87456 8.77028 10.0734 8.9465 10.2437C9.03265 10.3269 9.11323 10.4003 9.17231 10.4528C9.20181 10.4791 9.22588 10.5001 9.24251 10.5145L9.26042 10.5299Z"
+                                                      fill="#83839F" />
+                                                </svg>
+                                             </label>
+                                             <input type="text" class="date-range duration-time duration-time-activator"
+                                                id="startTime" name="startTime" value="" />
+                                          </fieldset>
+                                       </div>
+                                    </div>
+                                 </div>
+
+                                 <div class="col-md-5 mb-20">
+                                    <div class="custom-selection schedule">
+                                       <div class="dropdown dropdwon-3">
+                                          <fieldset class="multi-date-range">
+                                             <label for="endTime" class="position-absolute text-nowrap">
+                                                <span class="daterange-label-text">End Time</span>
+                                             </label>
+                                             <label for="endTime" class="label-img text-nowrap">
+                                                <svg width="18" height="18" class="daterange-svg-icon"
+                                                   viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M9.00002 1.36241C4.78423 1.36241 1.36241 4.78423 1.36241 9.00002C1.36241 13.2158 4.78423 16.6376 9.00002 16.6376C13.2158 16.6376 16.6376 13.2158 16.6376 9.00002C16.6376 4.78423 13.2158 1.36241 9.00002 1.36241ZM0.123873 9.00002C0.123873 4.10021 4.10021 0.123873 9.00002 0.123873C13.8998 0.123873 17.8762 4.10021 17.8762 9.00002C17.8762 13.8998 13.8998 17.8762 9.00002 17.8762C4.10021 17.8762 0.123873 13.8998 0.123873 9.00002Z"
+                                                      fill="#83839F" />
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M8.69452 4.67342C9.03653 4.67342 9.31379 4.95068 9.31379 5.29269V8.67801C9.31379 8.80479 9.3622 8.98855 9.46984 9.17731C9.57751 9.36611 9.8194 9.56544 9.8194 9.56544L12.3807 11.0939C12.6744 11.2692 12.7704 11.6494 12.5951 11.9431C12.4198 12.2368 12.0397 12.3328 11.746 12.1575L9.18799 10.6309C9.18799 10.6309 8.57926 10.1158 8.39397 9.79086C8.20849 9.46563 8.07525 9.07141 8.07525 8.67801V5.29269C8.07525 4.95068 8.35251 4.67342 8.69452 4.67342Z"
+                                                      fill="#83839F" />
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M0 9C0 4.03179 4.03179 0 9 0C13.9682 0 18 4.03179 18 9C18 13.9682 13.9682 18 9 18C4.03179 18 0 13.9682 0 9ZM9 0.247706C4.16859 0.247706 0.247706 4.16859 0.247706 9C0.247706 13.8314 4.16859 17.7523 9 17.7523C13.8314 17.7523 17.7523 13.8314 17.7523 9C17.7523 4.16859 13.8314 0.247706 9 0.247706ZM9 1.48624C4.85262 1.48624 1.48624 4.85262 1.48624 9C1.48624 13.1474 4.85262 16.5138 9 16.5138C13.1474 16.5138 16.5138 13.1474 16.5138 9C16.5138 4.85262 13.1474 1.48624 9 1.48624ZM1.23853 9C1.23853 4.71581 4.71581 1.23853 9 1.23853C13.2842 1.23853 16.7615 4.71581 16.7615 9C16.7615 13.2842 13.2842 16.7615 9 16.7615C4.71581 16.7615 1.23853 13.2842 1.23853 9ZM7.95138 5.29267C7.95138 4.88226 8.28409 4.54955 8.6945 4.54955C9.10491 4.54955 9.43762 4.88226 9.43762 5.29267V8.67799C9.43762 8.77816 9.47758 8.94088 9.57741 9.11594C9.62273 9.1954 9.70041 9.28292 9.77226 9.35429C9.80725 9.38904 9.83911 9.41826 9.86215 9.43873C9.86785 9.44379 9.87299 9.4483 9.87748 9.45221C9.88206 9.45619 9.88598 9.45956 9.88914 9.46225L9.89144 9.4642L12.4441 10.9876C12.7966 11.1979 12.9118 11.6541 12.7014 12.0065C12.4911 12.3589 12.0349 12.4741 11.6825 12.2638L9.1245 10.7373C9.11867 10.7338 9.11314 10.7298 9.10796 10.7255L9.10597 10.7238L9.10058 10.7192L9.08039 10.7018C9.06301 10.6867 9.03807 10.665 9.00762 10.6379C8.94676 10.5837 8.86358 10.508 8.77439 10.4218C8.59992 10.2532 8.38892 10.032 8.28636 9.8522C8.09312 9.51335 7.95138 9.09808 7.95138 8.67799V5.29267ZM9.26042 10.5299L11.8094 12.0511C12.0444 12.1913 12.3485 12.1145 12.4887 11.8796C12.6289 11.6446 12.5521 11.3405 12.3172 11.2003L9.75591 9.67178C9.75054 9.66858 9.74543 9.66498 9.74061 9.661L9.73954 9.66012L9.7371 9.65808L9.72841 9.65073C9.72101 9.64442 9.71051 9.63535 9.69765 9.62393C9.67197 9.60112 9.63664 9.56871 9.59769 9.53003C9.52168 9.45453 9.42459 9.34798 9.36224 9.23865C9.24678 9.03618 9.18991 8.83138 9.18991 8.67799V5.29267C9.18991 5.01906 8.96811 4.79726 8.6945 4.79726C8.42089 4.79726 8.19909 5.01906 8.19909 5.29267V8.67799C8.19909 9.04471 8.32383 9.41788 8.50153 9.72949C8.58427 9.87456 8.77028 10.0734 8.9465 10.2437C9.03265 10.3269 9.11323 10.4003 9.17231 10.4528C9.20181 10.4791 9.22588 10.5001 9.24251 10.5145L9.26042 10.5299Z"
+                                                      fill="#83839F" />
+                                                </svg>
+                                             </label>
+                                             <input type="text" class="date-range duration-time duration-time-activator"
+                                                id="endTime" name="endTime" value="" />
+                                          </fieldset>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+
+                           <div class="row">
+                              <div class="d-flex align-items-center w-100 pl-20 pr-20">
+                                 <div class="col-md-2 mb-20">
+                                    <div class="client-settings-checkbox">
+                                       <div class="custom-control custom-checkbox">
+                                          <input type="checkbox" class="custom-control-input" id="customCheck-3">
+                                          <label class="custom-control-label" for="customCheck-3">
+                                             <span class="fz14 text-uppercase">mon</span>
+                                          </label>
+                                       </div>
+                                    </div>
+                                 </div>
+
+                                 <div class="col-md-5 mb-20">
+                                    <div class="custom-selection schedule">
+                                       <div class="dropdown dropdwon-3">
+                                          <fieldset class="multi-date-range">
+                                             <label for="startTime" class="position-absolute text-nowrap">
+                                                <span class="daterange-label-text">Start Time</span>
+                                             </label>
+                                             <label for="startTime" class="label-img text-nowrap">
+                                                <svg width="18" height="18" class="daterange-svg-icon"
+                                                   viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M9.00002 1.36241C4.78423 1.36241 1.36241 4.78423 1.36241 9.00002C1.36241 13.2158 4.78423 16.6376 9.00002 16.6376C13.2158 16.6376 16.6376 13.2158 16.6376 9.00002C16.6376 4.78423 13.2158 1.36241 9.00002 1.36241ZM0.123873 9.00002C0.123873 4.10021 4.10021 0.123873 9.00002 0.123873C13.8998 0.123873 17.8762 4.10021 17.8762 9.00002C17.8762 13.8998 13.8998 17.8762 9.00002 17.8762C4.10021 17.8762 0.123873 13.8998 0.123873 9.00002Z"
+                                                      fill="#83839F" />
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M8.69452 4.67342C9.03653 4.67342 9.31379 4.95068 9.31379 5.29269V8.67801C9.31379 8.80479 9.3622 8.98855 9.46984 9.17731C9.57751 9.36611 9.8194 9.56544 9.8194 9.56544L12.3807 11.0939C12.6744 11.2692 12.7704 11.6494 12.5951 11.9431C12.4198 12.2368 12.0397 12.3328 11.746 12.1575L9.18799 10.6309C9.18799 10.6309 8.57926 10.1158 8.39397 9.79086C8.20849 9.46563 8.07525 9.07141 8.07525 8.67801V5.29269C8.07525 4.95068 8.35251 4.67342 8.69452 4.67342Z"
+                                                      fill="#83839F" />
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M0 9C0 4.03179 4.03179 0 9 0C13.9682 0 18 4.03179 18 9C18 13.9682 13.9682 18 9 18C4.03179 18 0 13.9682 0 9ZM9 0.247706C4.16859 0.247706 0.247706 4.16859 0.247706 9C0.247706 13.8314 4.16859 17.7523 9 17.7523C13.8314 17.7523 17.7523 13.8314 17.7523 9C17.7523 4.16859 13.8314 0.247706 9 0.247706ZM9 1.48624C4.85262 1.48624 1.48624 4.85262 1.48624 9C1.48624 13.1474 4.85262 16.5138 9 16.5138C13.1474 16.5138 16.5138 13.1474 16.5138 9C16.5138 4.85262 13.1474 1.48624 9 1.48624ZM1.23853 9C1.23853 4.71581 4.71581 1.23853 9 1.23853C13.2842 1.23853 16.7615 4.71581 16.7615 9C16.7615 13.2842 13.2842 16.7615 9 16.7615C4.71581 16.7615 1.23853 13.2842 1.23853 9ZM7.95138 5.29267C7.95138 4.88226 8.28409 4.54955 8.6945 4.54955C9.10491 4.54955 9.43762 4.88226 9.43762 5.29267V8.67799C9.43762 8.77816 9.47758 8.94088 9.57741 9.11594C9.62273 9.1954 9.70041 9.28292 9.77226 9.35429C9.80725 9.38904 9.83911 9.41826 9.86215 9.43873C9.86785 9.44379 9.87299 9.4483 9.87748 9.45221C9.88206 9.45619 9.88598 9.45956 9.88914 9.46225L9.89144 9.4642L12.4441 10.9876C12.7966 11.1979 12.9118 11.6541 12.7014 12.0065C12.4911 12.3589 12.0349 12.4741 11.6825 12.2638L9.1245 10.7373C9.11867 10.7338 9.11314 10.7298 9.10796 10.7255L9.10597 10.7238L9.10058 10.7192L9.08039 10.7018C9.06301 10.6867 9.03807 10.665 9.00762 10.6379C8.94676 10.5837 8.86358 10.508 8.77439 10.4218C8.59992 10.2532 8.38892 10.032 8.28636 9.8522C8.09312 9.51335 7.95138 9.09808 7.95138 8.67799V5.29267ZM9.26042 10.5299L11.8094 12.0511C12.0444 12.1913 12.3485 12.1145 12.4887 11.8796C12.6289 11.6446 12.5521 11.3405 12.3172 11.2003L9.75591 9.67178C9.75054 9.66858 9.74543 9.66498 9.74061 9.661L9.73954 9.66012L9.7371 9.65808L9.72841 9.65073C9.72101 9.64442 9.71051 9.63535 9.69765 9.62393C9.67197 9.60112 9.63664 9.56871 9.59769 9.53003C9.52168 9.45453 9.42459 9.34798 9.36224 9.23865C9.24678 9.03618 9.18991 8.83138 9.18991 8.67799V5.29267C9.18991 5.01906 8.96811 4.79726 8.6945 4.79726C8.42089 4.79726 8.19909 5.01906 8.19909 5.29267V8.67799C8.19909 9.04471 8.32383 9.41788 8.50153 9.72949C8.58427 9.87456 8.77028 10.0734 8.9465 10.2437C9.03265 10.3269 9.11323 10.4003 9.17231 10.4528C9.20181 10.4791 9.22588 10.5001 9.24251 10.5145L9.26042 10.5299Z"
+                                                      fill="#83839F" />
+                                                </svg>
+                                             </label>
+                                             <input type="text" class="date-range duration-time duration-time-activator"
+                                                id="startTime" name="startTime" value="" />
+                                          </fieldset>
+                                       </div>
+                                    </div>
+                                 </div>
+
+                                 <div class="col-md-5 mb-20">
+                                    <div class="custom-selection schedule">
+                                       <div class="dropdown dropdwon-3">
+                                          <fieldset class="multi-date-range">
+                                             <label for="endTime" class="position-absolute text-nowrap">
+                                                <span class="daterange-label-text">End Time</span>
+                                             </label>
+                                             <label for="endTime" class="label-img text-nowrap">
+                                                <svg width="18" height="18" class="daterange-svg-icon"
+                                                   viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M9.00002 1.36241C4.78423 1.36241 1.36241 4.78423 1.36241 9.00002C1.36241 13.2158 4.78423 16.6376 9.00002 16.6376C13.2158 16.6376 16.6376 13.2158 16.6376 9.00002C16.6376 4.78423 13.2158 1.36241 9.00002 1.36241ZM0.123873 9.00002C0.123873 4.10021 4.10021 0.123873 9.00002 0.123873C13.8998 0.123873 17.8762 4.10021 17.8762 9.00002C17.8762 13.8998 13.8998 17.8762 9.00002 17.8762C4.10021 17.8762 0.123873 13.8998 0.123873 9.00002Z"
+                                                      fill="#83839F" />
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M8.69452 4.67342C9.03653 4.67342 9.31379 4.95068 9.31379 5.29269V8.67801C9.31379 8.80479 9.3622 8.98855 9.46984 9.17731C9.57751 9.36611 9.8194 9.56544 9.8194 9.56544L12.3807 11.0939C12.6744 11.2692 12.7704 11.6494 12.5951 11.9431C12.4198 12.2368 12.0397 12.3328 11.746 12.1575L9.18799 10.6309C9.18799 10.6309 8.57926 10.1158 8.39397 9.79086C8.20849 9.46563 8.07525 9.07141 8.07525 8.67801V5.29269C8.07525 4.95068 8.35251 4.67342 8.69452 4.67342Z"
+                                                      fill="#83839F" />
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M0 9C0 4.03179 4.03179 0 9 0C13.9682 0 18 4.03179 18 9C18 13.9682 13.9682 18 9 18C4.03179 18 0 13.9682 0 9ZM9 0.247706C4.16859 0.247706 0.247706 4.16859 0.247706 9C0.247706 13.8314 4.16859 17.7523 9 17.7523C13.8314 17.7523 17.7523 13.8314 17.7523 9C17.7523 4.16859 13.8314 0.247706 9 0.247706ZM9 1.48624C4.85262 1.48624 1.48624 4.85262 1.48624 9C1.48624 13.1474 4.85262 16.5138 9 16.5138C13.1474 16.5138 16.5138 13.1474 16.5138 9C16.5138 4.85262 13.1474 1.48624 9 1.48624ZM1.23853 9C1.23853 4.71581 4.71581 1.23853 9 1.23853C13.2842 1.23853 16.7615 4.71581 16.7615 9C16.7615 13.2842 13.2842 16.7615 9 16.7615C4.71581 16.7615 1.23853 13.2842 1.23853 9ZM7.95138 5.29267C7.95138 4.88226 8.28409 4.54955 8.6945 4.54955C9.10491 4.54955 9.43762 4.88226 9.43762 5.29267V8.67799C9.43762 8.77816 9.47758 8.94088 9.57741 9.11594C9.62273 9.1954 9.70041 9.28292 9.77226 9.35429C9.80725 9.38904 9.83911 9.41826 9.86215 9.43873C9.86785 9.44379 9.87299 9.4483 9.87748 9.45221C9.88206 9.45619 9.88598 9.45956 9.88914 9.46225L9.89144 9.4642L12.4441 10.9876C12.7966 11.1979 12.9118 11.6541 12.7014 12.0065C12.4911 12.3589 12.0349 12.4741 11.6825 12.2638L9.1245 10.7373C9.11867 10.7338 9.11314 10.7298 9.10796 10.7255L9.10597 10.7238L9.10058 10.7192L9.08039 10.7018C9.06301 10.6867 9.03807 10.665 9.00762 10.6379C8.94676 10.5837 8.86358 10.508 8.77439 10.4218C8.59992 10.2532 8.38892 10.032 8.28636 9.8522C8.09312 9.51335 7.95138 9.09808 7.95138 8.67799V5.29267ZM9.26042 10.5299L11.8094 12.0511C12.0444 12.1913 12.3485 12.1145 12.4887 11.8796C12.6289 11.6446 12.5521 11.3405 12.3172 11.2003L9.75591 9.67178C9.75054 9.66858 9.74543 9.66498 9.74061 9.661L9.73954 9.66012L9.7371 9.65808L9.72841 9.65073C9.72101 9.64442 9.71051 9.63535 9.69765 9.62393C9.67197 9.60112 9.63664 9.56871 9.59769 9.53003C9.52168 9.45453 9.42459 9.34798 9.36224 9.23865C9.24678 9.03618 9.18991 8.83138 9.18991 8.67799V5.29267C9.18991 5.01906 8.96811 4.79726 8.6945 4.79726C8.42089 4.79726 8.19909 5.01906 8.19909 5.29267V8.67799C8.19909 9.04471 8.32383 9.41788 8.50153 9.72949C8.58427 9.87456 8.77028 10.0734 8.9465 10.2437C9.03265 10.3269 9.11323 10.4003 9.17231 10.4528C9.20181 10.4791 9.22588 10.5001 9.24251 10.5145L9.26042 10.5299Z"
+                                                      fill="#83839F" />
+                                                </svg>
+                                             </label>
+                                             <input type="text" class="date-range duration-time duration-time-activator"
+                                                id="endTime" name="endTime" value="" />
+                                          </fieldset>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+
+                           <div class="row">
+                              <div class="d-flex align-items-center w-100 pl-20 pr-20">
+                                 <div class="col-md-2 mb-20">
+                                    <div class="client-settings-checkbox">
+                                       <div class="custom-control custom-checkbox">
+                                          <input type="checkbox" class="custom-control-input" id="customCheck-4"
+                                             checked>
+                                          <label class="custom-control-label" for="customCheck-4">
+                                             <span class="fz14 text-uppercase">Tue</span>
+                                          </label>
+                                       </div>
+                                    </div>
+                                 </div>
+
+                                 <div class="col-md-5 mb-20">
+                                    <div class="custom-selection schedule">
+                                       <div class="dropdown dropdwon-3">
+                                          <fieldset class="multi-date-range">
+                                             <label for="startTime" class="position-absolute text-nowrap">
+                                                <span class="daterange-label-text">Start Time</span>
+                                             </label>
+                                             <label for="startTime" class="label-img text-nowrap">
+                                                <svg width="18" height="18" class="daterange-svg-icon"
+                                                   viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M9.00002 1.36241C4.78423 1.36241 1.36241 4.78423 1.36241 9.00002C1.36241 13.2158 4.78423 16.6376 9.00002 16.6376C13.2158 16.6376 16.6376 13.2158 16.6376 9.00002C16.6376 4.78423 13.2158 1.36241 9.00002 1.36241ZM0.123873 9.00002C0.123873 4.10021 4.10021 0.123873 9.00002 0.123873C13.8998 0.123873 17.8762 4.10021 17.8762 9.00002C17.8762 13.8998 13.8998 17.8762 9.00002 17.8762C4.10021 17.8762 0.123873 13.8998 0.123873 9.00002Z"
+                                                      fill="#83839F" />
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M8.69452 4.67342C9.03653 4.67342 9.31379 4.95068 9.31379 5.29269V8.67801C9.31379 8.80479 9.3622 8.98855 9.46984 9.17731C9.57751 9.36611 9.8194 9.56544 9.8194 9.56544L12.3807 11.0939C12.6744 11.2692 12.7704 11.6494 12.5951 11.9431C12.4198 12.2368 12.0397 12.3328 11.746 12.1575L9.18799 10.6309C9.18799 10.6309 8.57926 10.1158 8.39397 9.79086C8.20849 9.46563 8.07525 9.07141 8.07525 8.67801V5.29269C8.07525 4.95068 8.35251 4.67342 8.69452 4.67342Z"
+                                                      fill="#83839F" />
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M0 9C0 4.03179 4.03179 0 9 0C13.9682 0 18 4.03179 18 9C18 13.9682 13.9682 18 9 18C4.03179 18 0 13.9682 0 9ZM9 0.247706C4.16859 0.247706 0.247706 4.16859 0.247706 9C0.247706 13.8314 4.16859 17.7523 9 17.7523C13.8314 17.7523 17.7523 13.8314 17.7523 9C17.7523 4.16859 13.8314 0.247706 9 0.247706ZM9 1.48624C4.85262 1.48624 1.48624 4.85262 1.48624 9C1.48624 13.1474 4.85262 16.5138 9 16.5138C13.1474 16.5138 16.5138 13.1474 16.5138 9C16.5138 4.85262 13.1474 1.48624 9 1.48624ZM1.23853 9C1.23853 4.71581 4.71581 1.23853 9 1.23853C13.2842 1.23853 16.7615 4.71581 16.7615 9C16.7615 13.2842 13.2842 16.7615 9 16.7615C4.71581 16.7615 1.23853 13.2842 1.23853 9ZM7.95138 5.29267C7.95138 4.88226 8.28409 4.54955 8.6945 4.54955C9.10491 4.54955 9.43762 4.88226 9.43762 5.29267V8.67799C9.43762 8.77816 9.47758 8.94088 9.57741 9.11594C9.62273 9.1954 9.70041 9.28292 9.77226 9.35429C9.80725 9.38904 9.83911 9.41826 9.86215 9.43873C9.86785 9.44379 9.87299 9.4483 9.87748 9.45221C9.88206 9.45619 9.88598 9.45956 9.88914 9.46225L9.89144 9.4642L12.4441 10.9876C12.7966 11.1979 12.9118 11.6541 12.7014 12.0065C12.4911 12.3589 12.0349 12.4741 11.6825 12.2638L9.1245 10.7373C9.11867 10.7338 9.11314 10.7298 9.10796 10.7255L9.10597 10.7238L9.10058 10.7192L9.08039 10.7018C9.06301 10.6867 9.03807 10.665 9.00762 10.6379C8.94676 10.5837 8.86358 10.508 8.77439 10.4218C8.59992 10.2532 8.38892 10.032 8.28636 9.8522C8.09312 9.51335 7.95138 9.09808 7.95138 8.67799V5.29267ZM9.26042 10.5299L11.8094 12.0511C12.0444 12.1913 12.3485 12.1145 12.4887 11.8796C12.6289 11.6446 12.5521 11.3405 12.3172 11.2003L9.75591 9.67178C9.75054 9.66858 9.74543 9.66498 9.74061 9.661L9.73954 9.66012L9.7371 9.65808L9.72841 9.65073C9.72101 9.64442 9.71051 9.63535 9.69765 9.62393C9.67197 9.60112 9.63664 9.56871 9.59769 9.53003C9.52168 9.45453 9.42459 9.34798 9.36224 9.23865C9.24678 9.03618 9.18991 8.83138 9.18991 8.67799V5.29267C9.18991 5.01906 8.96811 4.79726 8.6945 4.79726C8.42089 4.79726 8.19909 5.01906 8.19909 5.29267V8.67799C8.19909 9.04471 8.32383 9.41788 8.50153 9.72949C8.58427 9.87456 8.77028 10.0734 8.9465 10.2437C9.03265 10.3269 9.11323 10.4003 9.17231 10.4528C9.20181 10.4791 9.22588 10.5001 9.24251 10.5145L9.26042 10.5299Z"
+                                                      fill="#83839F" />
+                                                </svg>
+                                             </label>
+                                             <input type="text" class="date-range duration-time duration-time-activator"
+                                                id="startTime" name="startTime" value="" />
+                                          </fieldset>
+                                       </div>
+                                    </div>
+                                 </div>
+
+                                 <div class="col-md-5 mb-20">
+                                    <div class="custom-selection schedule">
+                                       <div class="dropdown dropdwon-3">
+                                          <fieldset class="multi-date-range">
+                                             <label for="endTime" class="position-absolute text-nowrap">
+                                                <span class="daterange-label-text">End Time</span>
+                                             </label>
+                                             <label for="endTime" class="label-img text-nowrap">
+                                                <svg width="18" height="18" class="daterange-svg-icon"
+                                                   viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M9.00002 1.36241C4.78423 1.36241 1.36241 4.78423 1.36241 9.00002C1.36241 13.2158 4.78423 16.6376 9.00002 16.6376C13.2158 16.6376 16.6376 13.2158 16.6376 9.00002C16.6376 4.78423 13.2158 1.36241 9.00002 1.36241ZM0.123873 9.00002C0.123873 4.10021 4.10021 0.123873 9.00002 0.123873C13.8998 0.123873 17.8762 4.10021 17.8762 9.00002C17.8762 13.8998 13.8998 17.8762 9.00002 17.8762C4.10021 17.8762 0.123873 13.8998 0.123873 9.00002Z"
+                                                      fill="#83839F" />
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M8.69452 4.67342C9.03653 4.67342 9.31379 4.95068 9.31379 5.29269V8.67801C9.31379 8.80479 9.3622 8.98855 9.46984 9.17731C9.57751 9.36611 9.8194 9.56544 9.8194 9.56544L12.3807 11.0939C12.6744 11.2692 12.7704 11.6494 12.5951 11.9431C12.4198 12.2368 12.0397 12.3328 11.746 12.1575L9.18799 10.6309C9.18799 10.6309 8.57926 10.1158 8.39397 9.79086C8.20849 9.46563 8.07525 9.07141 8.07525 8.67801V5.29269C8.07525 4.95068 8.35251 4.67342 8.69452 4.67342Z"
+                                                      fill="#83839F" />
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M0 9C0 4.03179 4.03179 0 9 0C13.9682 0 18 4.03179 18 9C18 13.9682 13.9682 18 9 18C4.03179 18 0 13.9682 0 9ZM9 0.247706C4.16859 0.247706 0.247706 4.16859 0.247706 9C0.247706 13.8314 4.16859 17.7523 9 17.7523C13.8314 17.7523 17.7523 13.8314 17.7523 9C17.7523 4.16859 13.8314 0.247706 9 0.247706ZM9 1.48624C4.85262 1.48624 1.48624 4.85262 1.48624 9C1.48624 13.1474 4.85262 16.5138 9 16.5138C13.1474 16.5138 16.5138 13.1474 16.5138 9C16.5138 4.85262 13.1474 1.48624 9 1.48624ZM1.23853 9C1.23853 4.71581 4.71581 1.23853 9 1.23853C13.2842 1.23853 16.7615 4.71581 16.7615 9C16.7615 13.2842 13.2842 16.7615 9 16.7615C4.71581 16.7615 1.23853 13.2842 1.23853 9ZM7.95138 5.29267C7.95138 4.88226 8.28409 4.54955 8.6945 4.54955C9.10491 4.54955 9.43762 4.88226 9.43762 5.29267V8.67799C9.43762 8.77816 9.47758 8.94088 9.57741 9.11594C9.62273 9.1954 9.70041 9.28292 9.77226 9.35429C9.80725 9.38904 9.83911 9.41826 9.86215 9.43873C9.86785 9.44379 9.87299 9.4483 9.87748 9.45221C9.88206 9.45619 9.88598 9.45956 9.88914 9.46225L9.89144 9.4642L12.4441 10.9876C12.7966 11.1979 12.9118 11.6541 12.7014 12.0065C12.4911 12.3589 12.0349 12.4741 11.6825 12.2638L9.1245 10.7373C9.11867 10.7338 9.11314 10.7298 9.10796 10.7255L9.10597 10.7238L9.10058 10.7192L9.08039 10.7018C9.06301 10.6867 9.03807 10.665 9.00762 10.6379C8.94676 10.5837 8.86358 10.508 8.77439 10.4218C8.59992 10.2532 8.38892 10.032 8.28636 9.8522C8.09312 9.51335 7.95138 9.09808 7.95138 8.67799V5.29267ZM9.26042 10.5299L11.8094 12.0511C12.0444 12.1913 12.3485 12.1145 12.4887 11.8796C12.6289 11.6446 12.5521 11.3405 12.3172 11.2003L9.75591 9.67178C9.75054 9.66858 9.74543 9.66498 9.74061 9.661L9.73954 9.66012L9.7371 9.65808L9.72841 9.65073C9.72101 9.64442 9.71051 9.63535 9.69765 9.62393C9.67197 9.60112 9.63664 9.56871 9.59769 9.53003C9.52168 9.45453 9.42459 9.34798 9.36224 9.23865C9.24678 9.03618 9.18991 8.83138 9.18991 8.67799V5.29267C9.18991 5.01906 8.96811 4.79726 8.6945 4.79726C8.42089 4.79726 8.19909 5.01906 8.19909 5.29267V8.67799C8.19909 9.04471 8.32383 9.41788 8.50153 9.72949C8.58427 9.87456 8.77028 10.0734 8.9465 10.2437C9.03265 10.3269 9.11323 10.4003 9.17231 10.4528C9.20181 10.4791 9.22588 10.5001 9.24251 10.5145L9.26042 10.5299Z"
+                                                      fill="#83839F" />
+                                                </svg>
+                                             </label>
+                                             <input type="text" class="date-range duration-time duration-time-activator"
+                                                id="endTime" name="endTime" value="" />
+                                          </fieldset>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+
+                           <div class="row">
+                              <div class="d-flex align-items-center w-100 pl-20 pr-20">
+                                 <div class="col-md-2 mb-20">
+                                    <div class="client-settings-checkbox">
+                                       <div class="custom-control custom-checkbox">
+                                          <input type="checkbox" class="custom-control-input" id="customCheck-5">
+                                          <label class="custom-control-label" for="customCheck-5">
+                                             <span class="fz14 text-uppercase">WED</span>
+                                          </label>
+                                       </div>
+                                    </div>
+                                 </div>
+
+                                 <div class="col-md-5 mb-20">
+                                    <div class="custom-selection schedule">
+                                       <div class="dropdown dropdwon-3">
+                                          <fieldset class="multi-date-range">
+                                             <label for="startTime" class="position-absolute text-nowrap">
+                                                <span class="daterange-label-text">Start Time</span>
+                                             </label>
+                                             <label for="startTime" class="label-img text-nowrap">
+                                                <svg width="18" height="18" class="daterange-svg-icon"
+                                                   viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M9.00002 1.36241C4.78423 1.36241 1.36241 4.78423 1.36241 9.00002C1.36241 13.2158 4.78423 16.6376 9.00002 16.6376C13.2158 16.6376 16.6376 13.2158 16.6376 9.00002C16.6376 4.78423 13.2158 1.36241 9.00002 1.36241ZM0.123873 9.00002C0.123873 4.10021 4.10021 0.123873 9.00002 0.123873C13.8998 0.123873 17.8762 4.10021 17.8762 9.00002C17.8762 13.8998 13.8998 17.8762 9.00002 17.8762C4.10021 17.8762 0.123873 13.8998 0.123873 9.00002Z"
+                                                      fill="#83839F" />
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M8.69452 4.67342C9.03653 4.67342 9.31379 4.95068 9.31379 5.29269V8.67801C9.31379 8.80479 9.3622 8.98855 9.46984 9.17731C9.57751 9.36611 9.8194 9.56544 9.8194 9.56544L12.3807 11.0939C12.6744 11.2692 12.7704 11.6494 12.5951 11.9431C12.4198 12.2368 12.0397 12.3328 11.746 12.1575L9.18799 10.6309C9.18799 10.6309 8.57926 10.1158 8.39397 9.79086C8.20849 9.46563 8.07525 9.07141 8.07525 8.67801V5.29269C8.07525 4.95068 8.35251 4.67342 8.69452 4.67342Z"
+                                                      fill="#83839F" />
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M0 9C0 4.03179 4.03179 0 9 0C13.9682 0 18 4.03179 18 9C18 13.9682 13.9682 18 9 18C4.03179 18 0 13.9682 0 9ZM9 0.247706C4.16859 0.247706 0.247706 4.16859 0.247706 9C0.247706 13.8314 4.16859 17.7523 9 17.7523C13.8314 17.7523 17.7523 13.8314 17.7523 9C17.7523 4.16859 13.8314 0.247706 9 0.247706ZM9 1.48624C4.85262 1.48624 1.48624 4.85262 1.48624 9C1.48624 13.1474 4.85262 16.5138 9 16.5138C13.1474 16.5138 16.5138 13.1474 16.5138 9C16.5138 4.85262 13.1474 1.48624 9 1.48624ZM1.23853 9C1.23853 4.71581 4.71581 1.23853 9 1.23853C13.2842 1.23853 16.7615 4.71581 16.7615 9C16.7615 13.2842 13.2842 16.7615 9 16.7615C4.71581 16.7615 1.23853 13.2842 1.23853 9ZM7.95138 5.29267C7.95138 4.88226 8.28409 4.54955 8.6945 4.54955C9.10491 4.54955 9.43762 4.88226 9.43762 5.29267V8.67799C9.43762 8.77816 9.47758 8.94088 9.57741 9.11594C9.62273 9.1954 9.70041 9.28292 9.77226 9.35429C9.80725 9.38904 9.83911 9.41826 9.86215 9.43873C9.86785 9.44379 9.87299 9.4483 9.87748 9.45221C9.88206 9.45619 9.88598 9.45956 9.88914 9.46225L9.89144 9.4642L12.4441 10.9876C12.7966 11.1979 12.9118 11.6541 12.7014 12.0065C12.4911 12.3589 12.0349 12.4741 11.6825 12.2638L9.1245 10.7373C9.11867 10.7338 9.11314 10.7298 9.10796 10.7255L9.10597 10.7238L9.10058 10.7192L9.08039 10.7018C9.06301 10.6867 9.03807 10.665 9.00762 10.6379C8.94676 10.5837 8.86358 10.508 8.77439 10.4218C8.59992 10.2532 8.38892 10.032 8.28636 9.8522C8.09312 9.51335 7.95138 9.09808 7.95138 8.67799V5.29267ZM9.26042 10.5299L11.8094 12.0511C12.0444 12.1913 12.3485 12.1145 12.4887 11.8796C12.6289 11.6446 12.5521 11.3405 12.3172 11.2003L9.75591 9.67178C9.75054 9.66858 9.74543 9.66498 9.74061 9.661L9.73954 9.66012L9.7371 9.65808L9.72841 9.65073C9.72101 9.64442 9.71051 9.63535 9.69765 9.62393C9.67197 9.60112 9.63664 9.56871 9.59769 9.53003C9.52168 9.45453 9.42459 9.34798 9.36224 9.23865C9.24678 9.03618 9.18991 8.83138 9.18991 8.67799V5.29267C9.18991 5.01906 8.96811 4.79726 8.6945 4.79726C8.42089 4.79726 8.19909 5.01906 8.19909 5.29267V8.67799C8.19909 9.04471 8.32383 9.41788 8.50153 9.72949C8.58427 9.87456 8.77028 10.0734 8.9465 10.2437C9.03265 10.3269 9.11323 10.4003 9.17231 10.4528C9.20181 10.4791 9.22588 10.5001 9.24251 10.5145L9.26042 10.5299Z"
+                                                      fill="#83839F" />
+                                                </svg>
+                                             </label>
+                                             <input type="text" class="date-range duration-time duration-time-activator"
+                                                id="startTime" name="startTime" value="" />
+                                          </fieldset>
+                                       </div>
+                                    </div>
+                                 </div>
+
+                                 <div class="col-md-5 mb-20">
+                                    <div class="custom-selection schedule">
+                                       <div class="dropdown dropdwon-3">
+                                          <fieldset class="multi-date-range">
+                                             <label for="endTime" class="position-absolute text-nowrap">
+                                                <span class="daterange-label-text">End Time</span>
+                                             </label>
+                                             <label for="endTime" class="label-img text-nowrap">
+                                                <svg width="18" height="18" class="daterange-svg-icon"
+                                                   viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M9.00002 1.36241C4.78423 1.36241 1.36241 4.78423 1.36241 9.00002C1.36241 13.2158 4.78423 16.6376 9.00002 16.6376C13.2158 16.6376 16.6376 13.2158 16.6376 9.00002C16.6376 4.78423 13.2158 1.36241 9.00002 1.36241ZM0.123873 9.00002C0.123873 4.10021 4.10021 0.123873 9.00002 0.123873C13.8998 0.123873 17.8762 4.10021 17.8762 9.00002C17.8762 13.8998 13.8998 17.8762 9.00002 17.8762C4.10021 17.8762 0.123873 13.8998 0.123873 9.00002Z"
+                                                      fill="#83839F" />
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M8.69452 4.67342C9.03653 4.67342 9.31379 4.95068 9.31379 5.29269V8.67801C9.31379 8.80479 9.3622 8.98855 9.46984 9.17731C9.57751 9.36611 9.8194 9.56544 9.8194 9.56544L12.3807 11.0939C12.6744 11.2692 12.7704 11.6494 12.5951 11.9431C12.4198 12.2368 12.0397 12.3328 11.746 12.1575L9.18799 10.6309C9.18799 10.6309 8.57926 10.1158 8.39397 9.79086C8.20849 9.46563 8.07525 9.07141 8.07525 8.67801V5.29269C8.07525 4.95068 8.35251 4.67342 8.69452 4.67342Z"
+                                                      fill="#83839F" />
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M0 9C0 4.03179 4.03179 0 9 0C13.9682 0 18 4.03179 18 9C18 13.9682 13.9682 18 9 18C4.03179 18 0 13.9682 0 9ZM9 0.247706C4.16859 0.247706 0.247706 4.16859 0.247706 9C0.247706 13.8314 4.16859 17.7523 9 17.7523C13.8314 17.7523 17.7523 13.8314 17.7523 9C17.7523 4.16859 13.8314 0.247706 9 0.247706ZM9 1.48624C4.85262 1.48624 1.48624 4.85262 1.48624 9C1.48624 13.1474 4.85262 16.5138 9 16.5138C13.1474 16.5138 16.5138 13.1474 16.5138 9C16.5138 4.85262 13.1474 1.48624 9 1.48624ZM1.23853 9C1.23853 4.71581 4.71581 1.23853 9 1.23853C13.2842 1.23853 16.7615 4.71581 16.7615 9C16.7615 13.2842 13.2842 16.7615 9 16.7615C4.71581 16.7615 1.23853 13.2842 1.23853 9ZM7.95138 5.29267C7.95138 4.88226 8.28409 4.54955 8.6945 4.54955C9.10491 4.54955 9.43762 4.88226 9.43762 5.29267V8.67799C9.43762 8.77816 9.47758 8.94088 9.57741 9.11594C9.62273 9.1954 9.70041 9.28292 9.77226 9.35429C9.80725 9.38904 9.83911 9.41826 9.86215 9.43873C9.86785 9.44379 9.87299 9.4483 9.87748 9.45221C9.88206 9.45619 9.88598 9.45956 9.88914 9.46225L9.89144 9.4642L12.4441 10.9876C12.7966 11.1979 12.9118 11.6541 12.7014 12.0065C12.4911 12.3589 12.0349 12.4741 11.6825 12.2638L9.1245 10.7373C9.11867 10.7338 9.11314 10.7298 9.10796 10.7255L9.10597 10.7238L9.10058 10.7192L9.08039 10.7018C9.06301 10.6867 9.03807 10.665 9.00762 10.6379C8.94676 10.5837 8.86358 10.508 8.77439 10.4218C8.59992 10.2532 8.38892 10.032 8.28636 9.8522C8.09312 9.51335 7.95138 9.09808 7.95138 8.67799V5.29267ZM9.26042 10.5299L11.8094 12.0511C12.0444 12.1913 12.3485 12.1145 12.4887 11.8796C12.6289 11.6446 12.5521 11.3405 12.3172 11.2003L9.75591 9.67178C9.75054 9.66858 9.74543 9.66498 9.74061 9.661L9.73954 9.66012L9.7371 9.65808L9.72841 9.65073C9.72101 9.64442 9.71051 9.63535 9.69765 9.62393C9.67197 9.60112 9.63664 9.56871 9.59769 9.53003C9.52168 9.45453 9.42459 9.34798 9.36224 9.23865C9.24678 9.03618 9.18991 8.83138 9.18991 8.67799V5.29267C9.18991 5.01906 8.96811 4.79726 8.6945 4.79726C8.42089 4.79726 8.19909 5.01906 8.19909 5.29267V8.67799C8.19909 9.04471 8.32383 9.41788 8.50153 9.72949C8.58427 9.87456 8.77028 10.0734 8.9465 10.2437C9.03265 10.3269 9.11323 10.4003 9.17231 10.4528C9.20181 10.4791 9.22588 10.5001 9.24251 10.5145L9.26042 10.5299Z"
+                                                      fill="#83839F" />
+                                                </svg>
+                                             </label>
+                                             <input type="text" class="date-range duration-time duration-time-activator"
+                                                id="endTime" name="endTime" value="" />
+                                          </fieldset>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+
+                           <div class="row">
+                              <div class="d-flex align-items-center w-100 pl-20 pr-20">
+                                 <div class="col-md-2 mb-20">
+                                    <div class="client-settings-checkbox">
+                                       <div class="custom-control custom-checkbox">
+                                          <input type="checkbox" class="custom-control-input" id="customCheck-6">
+                                          <label class="custom-control-label" for="customCheck-6">
+                                             <span class="fz14 text-uppercase">THU</span>
+                                          </label>
+                                       </div>
+                                    </div>
+                                 </div>
+
+                                 <div class="col-md-5 mb-20">
+                                    <div class="custom-selection schedule">
+                                       <div class="dropdown dropdwon-3">
+                                          <fieldset class="multi-date-range">
+                                             <label for="startTime" class="position-absolute text-nowrap">
+                                                <span class="daterange-label-text">Start Time</span>
+                                             </label>
+                                             <label for="startTime" class="label-img text-nowrap">
+                                                <svg width="18" height="18" class="daterange-svg-icon"
+                                                   viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M9.00002 1.36241C4.78423 1.36241 1.36241 4.78423 1.36241 9.00002C1.36241 13.2158 4.78423 16.6376 9.00002 16.6376C13.2158 16.6376 16.6376 13.2158 16.6376 9.00002C16.6376 4.78423 13.2158 1.36241 9.00002 1.36241ZM0.123873 9.00002C0.123873 4.10021 4.10021 0.123873 9.00002 0.123873C13.8998 0.123873 17.8762 4.10021 17.8762 9.00002C17.8762 13.8998 13.8998 17.8762 9.00002 17.8762C4.10021 17.8762 0.123873 13.8998 0.123873 9.00002Z"
+                                                      fill="#83839F" />
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M8.69452 4.67342C9.03653 4.67342 9.31379 4.95068 9.31379 5.29269V8.67801C9.31379 8.80479 9.3622 8.98855 9.46984 9.17731C9.57751 9.36611 9.8194 9.56544 9.8194 9.56544L12.3807 11.0939C12.6744 11.2692 12.7704 11.6494 12.5951 11.9431C12.4198 12.2368 12.0397 12.3328 11.746 12.1575L9.18799 10.6309C9.18799 10.6309 8.57926 10.1158 8.39397 9.79086C8.20849 9.46563 8.07525 9.07141 8.07525 8.67801V5.29269C8.07525 4.95068 8.35251 4.67342 8.69452 4.67342Z"
+                                                      fill="#83839F" />
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M0 9C0 4.03179 4.03179 0 9 0C13.9682 0 18 4.03179 18 9C18 13.9682 13.9682 18 9 18C4.03179 18 0 13.9682 0 9ZM9 0.247706C4.16859 0.247706 0.247706 4.16859 0.247706 9C0.247706 13.8314 4.16859 17.7523 9 17.7523C13.8314 17.7523 17.7523 13.8314 17.7523 9C17.7523 4.16859 13.8314 0.247706 9 0.247706ZM9 1.48624C4.85262 1.48624 1.48624 4.85262 1.48624 9C1.48624 13.1474 4.85262 16.5138 9 16.5138C13.1474 16.5138 16.5138 13.1474 16.5138 9C16.5138 4.85262 13.1474 1.48624 9 1.48624ZM1.23853 9C1.23853 4.71581 4.71581 1.23853 9 1.23853C13.2842 1.23853 16.7615 4.71581 16.7615 9C16.7615 13.2842 13.2842 16.7615 9 16.7615C4.71581 16.7615 1.23853 13.2842 1.23853 9ZM7.95138 5.29267C7.95138 4.88226 8.28409 4.54955 8.6945 4.54955C9.10491 4.54955 9.43762 4.88226 9.43762 5.29267V8.67799C9.43762 8.77816 9.47758 8.94088 9.57741 9.11594C9.62273 9.1954 9.70041 9.28292 9.77226 9.35429C9.80725 9.38904 9.83911 9.41826 9.86215 9.43873C9.86785 9.44379 9.87299 9.4483 9.87748 9.45221C9.88206 9.45619 9.88598 9.45956 9.88914 9.46225L9.89144 9.4642L12.4441 10.9876C12.7966 11.1979 12.9118 11.6541 12.7014 12.0065C12.4911 12.3589 12.0349 12.4741 11.6825 12.2638L9.1245 10.7373C9.11867 10.7338 9.11314 10.7298 9.10796 10.7255L9.10597 10.7238L9.10058 10.7192L9.08039 10.7018C9.06301 10.6867 9.03807 10.665 9.00762 10.6379C8.94676 10.5837 8.86358 10.508 8.77439 10.4218C8.59992 10.2532 8.38892 10.032 8.28636 9.8522C8.09312 9.51335 7.95138 9.09808 7.95138 8.67799V5.29267ZM9.26042 10.5299L11.8094 12.0511C12.0444 12.1913 12.3485 12.1145 12.4887 11.8796C12.6289 11.6446 12.5521 11.3405 12.3172 11.2003L9.75591 9.67178C9.75054 9.66858 9.74543 9.66498 9.74061 9.661L9.73954 9.66012L9.7371 9.65808L9.72841 9.65073C9.72101 9.64442 9.71051 9.63535 9.69765 9.62393C9.67197 9.60112 9.63664 9.56871 9.59769 9.53003C9.52168 9.45453 9.42459 9.34798 9.36224 9.23865C9.24678 9.03618 9.18991 8.83138 9.18991 8.67799V5.29267C9.18991 5.01906 8.96811 4.79726 8.6945 4.79726C8.42089 4.79726 8.19909 5.01906 8.19909 5.29267V8.67799C8.19909 9.04471 8.32383 9.41788 8.50153 9.72949C8.58427 9.87456 8.77028 10.0734 8.9465 10.2437C9.03265 10.3269 9.11323 10.4003 9.17231 10.4528C9.20181 10.4791 9.22588 10.5001 9.24251 10.5145L9.26042 10.5299Z"
+                                                      fill="#83839F" />
+                                                </svg>
+                                             </label>
+                                             <input type="text" class="date-range duration-time duration-time-activator"
+                                                id="startTime" name="startTime" value="" />
+                                          </fieldset>
+                                       </div>
+                                    </div>
+                                 </div>
+
+                                 <div class="col-md-5 mb-20">
+                                    <div class="custom-selection schedule">
+                                       <div class="dropdown dropdwon-3">
+                                          <fieldset class="multi-date-range">
+                                             <label for="endTime" class="position-absolute text-nowrap">
+                                                <span class="daterange-label-text">End Time</span>
+                                             </label>
+                                             <label for="endTime" class="label-img text-nowrap">
+                                                <svg width="18" height="18" class="daterange-svg-icon"
+                                                   viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M9.00002 1.36241C4.78423 1.36241 1.36241 4.78423 1.36241 9.00002C1.36241 13.2158 4.78423 16.6376 9.00002 16.6376C13.2158 16.6376 16.6376 13.2158 16.6376 9.00002C16.6376 4.78423 13.2158 1.36241 9.00002 1.36241ZM0.123873 9.00002C0.123873 4.10021 4.10021 0.123873 9.00002 0.123873C13.8998 0.123873 17.8762 4.10021 17.8762 9.00002C17.8762 13.8998 13.8998 17.8762 9.00002 17.8762C4.10021 17.8762 0.123873 13.8998 0.123873 9.00002Z"
+                                                      fill="#83839F" />
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M8.69452 4.67342C9.03653 4.67342 9.31379 4.95068 9.31379 5.29269V8.67801C9.31379 8.80479 9.3622 8.98855 9.46984 9.17731C9.57751 9.36611 9.8194 9.56544 9.8194 9.56544L12.3807 11.0939C12.6744 11.2692 12.7704 11.6494 12.5951 11.9431C12.4198 12.2368 12.0397 12.3328 11.746 12.1575L9.18799 10.6309C9.18799 10.6309 8.57926 10.1158 8.39397 9.79086C8.20849 9.46563 8.07525 9.07141 8.07525 8.67801V5.29269C8.07525 4.95068 8.35251 4.67342 8.69452 4.67342Z"
+                                                      fill="#83839F" />
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M0 9C0 4.03179 4.03179 0 9 0C13.9682 0 18 4.03179 18 9C18 13.9682 13.9682 18 9 18C4.03179 18 0 13.9682 0 9ZM9 0.247706C4.16859 0.247706 0.247706 4.16859 0.247706 9C0.247706 13.8314 4.16859 17.7523 9 17.7523C13.8314 17.7523 17.7523 13.8314 17.7523 9C17.7523 4.16859 13.8314 0.247706 9 0.247706ZM9 1.48624C4.85262 1.48624 1.48624 4.85262 1.48624 9C1.48624 13.1474 4.85262 16.5138 9 16.5138C13.1474 16.5138 16.5138 13.1474 16.5138 9C16.5138 4.85262 13.1474 1.48624 9 1.48624ZM1.23853 9C1.23853 4.71581 4.71581 1.23853 9 1.23853C13.2842 1.23853 16.7615 4.71581 16.7615 9C16.7615 13.2842 13.2842 16.7615 9 16.7615C4.71581 16.7615 1.23853 13.2842 1.23853 9ZM7.95138 5.29267C7.95138 4.88226 8.28409 4.54955 8.6945 4.54955C9.10491 4.54955 9.43762 4.88226 9.43762 5.29267V8.67799C9.43762 8.77816 9.47758 8.94088 9.57741 9.11594C9.62273 9.1954 9.70041 9.28292 9.77226 9.35429C9.80725 9.38904 9.83911 9.41826 9.86215 9.43873C9.86785 9.44379 9.87299 9.4483 9.87748 9.45221C9.88206 9.45619 9.88598 9.45956 9.88914 9.46225L9.89144 9.4642L12.4441 10.9876C12.7966 11.1979 12.9118 11.6541 12.7014 12.0065C12.4911 12.3589 12.0349 12.4741 11.6825 12.2638L9.1245 10.7373C9.11867 10.7338 9.11314 10.7298 9.10796 10.7255L9.10597 10.7238L9.10058 10.7192L9.08039 10.7018C9.06301 10.6867 9.03807 10.665 9.00762 10.6379C8.94676 10.5837 8.86358 10.508 8.77439 10.4218C8.59992 10.2532 8.38892 10.032 8.28636 9.8522C8.09312 9.51335 7.95138 9.09808 7.95138 8.67799V5.29267ZM9.26042 10.5299L11.8094 12.0511C12.0444 12.1913 12.3485 12.1145 12.4887 11.8796C12.6289 11.6446 12.5521 11.3405 12.3172 11.2003L9.75591 9.67178C9.75054 9.66858 9.74543 9.66498 9.74061 9.661L9.73954 9.66012L9.7371 9.65808L9.72841 9.65073C9.72101 9.64442 9.71051 9.63535 9.69765 9.62393C9.67197 9.60112 9.63664 9.56871 9.59769 9.53003C9.52168 9.45453 9.42459 9.34798 9.36224 9.23865C9.24678 9.03618 9.18991 8.83138 9.18991 8.67799V5.29267C9.18991 5.01906 8.96811 4.79726 8.6945 4.79726C8.42089 4.79726 8.19909 5.01906 8.19909 5.29267V8.67799C8.19909 9.04471 8.32383 9.41788 8.50153 9.72949C8.58427 9.87456 8.77028 10.0734 8.9465 10.2437C9.03265 10.3269 9.11323 10.4003 9.17231 10.4528C9.20181 10.4791 9.22588 10.5001 9.24251 10.5145L9.26042 10.5299Z"
+                                                      fill="#83839F" />
+                                                </svg>
+                                             </label>
+                                             <input type="text" class="date-range duration-time duration-time-activator"
+                                                id="endTime" name="endTime" value="" />
+                                          </fieldset>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+
+                           <div class="row">
+                              <div class="d-flex align-items-center w-100 pl-20 pr-20">
+                                 <div class="col-md-2 mb-20">
+                                    <div class="client-settings-checkbox">
+                                       <div class="custom-control custom-checkbox">
+                                          <input type="checkbox" class="custom-control-input" id="customCheck-7"
+                                             checked>
+                                          <label class="custom-control-label" for="customCheck-7">
+                                             <span class="fz14 text-uppercase">FRI</span>
+                                          </label>
+                                       </div>
+                                    </div>
+                                 </div>
+
+                                 <div class="col-md-5 mb-20">
+                                    <div class="custom-selection schedule">
+                                       <div class="dropdown dropdwon-3">
+                                          <fieldset class="multi-date-range">
+                                             <label for="startTime" class="position-absolute text-nowrap">
+                                                <span class="daterange-label-text">Start Time</span>
+                                             </label>
+                                             <label for="startTime" class="label-img text-nowrap">
+                                                <svg width="18" height="18" class="daterange-svg-icon"
+                                                   viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M9.00002 1.36241C4.78423 1.36241 1.36241 4.78423 1.36241 9.00002C1.36241 13.2158 4.78423 16.6376 9.00002 16.6376C13.2158 16.6376 16.6376 13.2158 16.6376 9.00002C16.6376 4.78423 13.2158 1.36241 9.00002 1.36241ZM0.123873 9.00002C0.123873 4.10021 4.10021 0.123873 9.00002 0.123873C13.8998 0.123873 17.8762 4.10021 17.8762 9.00002C17.8762 13.8998 13.8998 17.8762 9.00002 17.8762C4.10021 17.8762 0.123873 13.8998 0.123873 9.00002Z"
+                                                      fill="#83839F" />
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M8.69452 4.67342C9.03653 4.67342 9.31379 4.95068 9.31379 5.29269V8.67801C9.31379 8.80479 9.3622 8.98855 9.46984 9.17731C9.57751 9.36611 9.8194 9.56544 9.8194 9.56544L12.3807 11.0939C12.6744 11.2692 12.7704 11.6494 12.5951 11.9431C12.4198 12.2368 12.0397 12.3328 11.746 12.1575L9.18799 10.6309C9.18799 10.6309 8.57926 10.1158 8.39397 9.79086C8.20849 9.46563 8.07525 9.07141 8.07525 8.67801V5.29269C8.07525 4.95068 8.35251 4.67342 8.69452 4.67342Z"
+                                                      fill="#83839F" />
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M0 9C0 4.03179 4.03179 0 9 0C13.9682 0 18 4.03179 18 9C18 13.9682 13.9682 18 9 18C4.03179 18 0 13.9682 0 9ZM9 0.247706C4.16859 0.247706 0.247706 4.16859 0.247706 9C0.247706 13.8314 4.16859 17.7523 9 17.7523C13.8314 17.7523 17.7523 13.8314 17.7523 9C17.7523 4.16859 13.8314 0.247706 9 0.247706ZM9 1.48624C4.85262 1.48624 1.48624 4.85262 1.48624 9C1.48624 13.1474 4.85262 16.5138 9 16.5138C13.1474 16.5138 16.5138 13.1474 16.5138 9C16.5138 4.85262 13.1474 1.48624 9 1.48624ZM1.23853 9C1.23853 4.71581 4.71581 1.23853 9 1.23853C13.2842 1.23853 16.7615 4.71581 16.7615 9C16.7615 13.2842 13.2842 16.7615 9 16.7615C4.71581 16.7615 1.23853 13.2842 1.23853 9ZM7.95138 5.29267C7.95138 4.88226 8.28409 4.54955 8.6945 4.54955C9.10491 4.54955 9.43762 4.88226 9.43762 5.29267V8.67799C9.43762 8.77816 9.47758 8.94088 9.57741 9.11594C9.62273 9.1954 9.70041 9.28292 9.77226 9.35429C9.80725 9.38904 9.83911 9.41826 9.86215 9.43873C9.86785 9.44379 9.87299 9.4483 9.87748 9.45221C9.88206 9.45619 9.88598 9.45956 9.88914 9.46225L9.89144 9.4642L12.4441 10.9876C12.7966 11.1979 12.9118 11.6541 12.7014 12.0065C12.4911 12.3589 12.0349 12.4741 11.6825 12.2638L9.1245 10.7373C9.11867 10.7338 9.11314 10.7298 9.10796 10.7255L9.10597 10.7238L9.10058 10.7192L9.08039 10.7018C9.06301 10.6867 9.03807 10.665 9.00762 10.6379C8.94676 10.5837 8.86358 10.508 8.77439 10.4218C8.59992 10.2532 8.38892 10.032 8.28636 9.8522C8.09312 9.51335 7.95138 9.09808 7.95138 8.67799V5.29267ZM9.26042 10.5299L11.8094 12.0511C12.0444 12.1913 12.3485 12.1145 12.4887 11.8796C12.6289 11.6446 12.5521 11.3405 12.3172 11.2003L9.75591 9.67178C9.75054 9.66858 9.74543 9.66498 9.74061 9.661L9.73954 9.66012L9.7371 9.65808L9.72841 9.65073C9.72101 9.64442 9.71051 9.63535 9.69765 9.62393C9.67197 9.60112 9.63664 9.56871 9.59769 9.53003C9.52168 9.45453 9.42459 9.34798 9.36224 9.23865C9.24678 9.03618 9.18991 8.83138 9.18991 8.67799V5.29267C9.18991 5.01906 8.96811 4.79726 8.6945 4.79726C8.42089 4.79726 8.19909 5.01906 8.19909 5.29267V8.67799C8.19909 9.04471 8.32383 9.41788 8.50153 9.72949C8.58427 9.87456 8.77028 10.0734 8.9465 10.2437C9.03265 10.3269 9.11323 10.4003 9.17231 10.4528C9.20181 10.4791 9.22588 10.5001 9.24251 10.5145L9.26042 10.5299Z"
+                                                      fill="#83839F" />
+                                                </svg>
+                                             </label>
+                                             <input type="text" class="date-range duration-time duration-time-activator"
+                                                id="startTime" name="startTime" value="" />
+                                          </fieldset>
+                                       </div>
+                                    </div>
+                                 </div>
+
+                                 <div class="col-md-5 mb-20">
+                                    <div class="custom-selection schedule">
+                                       <div class="dropdown dropdwon-3">
+                                          <fieldset class="multi-date-range">
+                                             <label for="endTime" class="position-absolute text-nowrap">
+                                                <span class="daterange-label-text">End Time</span>
+                                             </label>
+                                             <label for="endTime" class="label-img text-nowrap">
+                                                <svg width="18" height="18" class="daterange-svg-icon"
+                                                   viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M9.00002 1.36241C4.78423 1.36241 1.36241 4.78423 1.36241 9.00002C1.36241 13.2158 4.78423 16.6376 9.00002 16.6376C13.2158 16.6376 16.6376 13.2158 16.6376 9.00002C16.6376 4.78423 13.2158 1.36241 9.00002 1.36241ZM0.123873 9.00002C0.123873 4.10021 4.10021 0.123873 9.00002 0.123873C13.8998 0.123873 17.8762 4.10021 17.8762 9.00002C17.8762 13.8998 13.8998 17.8762 9.00002 17.8762C4.10021 17.8762 0.123873 13.8998 0.123873 9.00002Z"
+                                                      fill="#83839F" />
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M8.69452 4.67342C9.03653 4.67342 9.31379 4.95068 9.31379 5.29269V8.67801C9.31379 8.80479 9.3622 8.98855 9.46984 9.17731C9.57751 9.36611 9.8194 9.56544 9.8194 9.56544L12.3807 11.0939C12.6744 11.2692 12.7704 11.6494 12.5951 11.9431C12.4198 12.2368 12.0397 12.3328 11.746 12.1575L9.18799 10.6309C9.18799 10.6309 8.57926 10.1158 8.39397 9.79086C8.20849 9.46563 8.07525 9.07141 8.07525 8.67801V5.29269C8.07525 4.95068 8.35251 4.67342 8.69452 4.67342Z"
+                                                      fill="#83839F" />
+                                                   <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M0 9C0 4.03179 4.03179 0 9 0C13.9682 0 18 4.03179 18 9C18 13.9682 13.9682 18 9 18C4.03179 18 0 13.9682 0 9ZM9 0.247706C4.16859 0.247706 0.247706 4.16859 0.247706 9C0.247706 13.8314 4.16859 17.7523 9 17.7523C13.8314 17.7523 17.7523 13.8314 17.7523 9C17.7523 4.16859 13.8314 0.247706 9 0.247706ZM9 1.48624C4.85262 1.48624 1.48624 4.85262 1.48624 9C1.48624 13.1474 4.85262 16.5138 9 16.5138C13.1474 16.5138 16.5138 13.1474 16.5138 9C16.5138 4.85262 13.1474 1.48624 9 1.48624ZM1.23853 9C1.23853 4.71581 4.71581 1.23853 9 1.23853C13.2842 1.23853 16.7615 4.71581 16.7615 9C16.7615 13.2842 13.2842 16.7615 9 16.7615C4.71581 16.7615 1.23853 13.2842 1.23853 9ZM7.95138 5.29267C7.95138 4.88226 8.28409 4.54955 8.6945 4.54955C9.10491 4.54955 9.43762 4.88226 9.43762 5.29267V8.67799C9.43762 8.77816 9.47758 8.94088 9.57741 9.11594C9.62273 9.1954 9.70041 9.28292 9.77226 9.35429C9.80725 9.38904 9.83911 9.41826 9.86215 9.43873C9.86785 9.44379 9.87299 9.4483 9.87748 9.45221C9.88206 9.45619 9.88598 9.45956 9.88914 9.46225L9.89144 9.4642L12.4441 10.9876C12.7966 11.1979 12.9118 11.6541 12.7014 12.0065C12.4911 12.3589 12.0349 12.4741 11.6825 12.2638L9.1245 10.7373C9.11867 10.7338 9.11314 10.7298 9.10796 10.7255L9.10597 10.7238L9.10058 10.7192L9.08039 10.7018C9.06301 10.6867 9.03807 10.665 9.00762 10.6379C8.94676 10.5837 8.86358 10.508 8.77439 10.4218C8.59992 10.2532 8.38892 10.032 8.28636 9.8522C8.09312 9.51335 7.95138 9.09808 7.95138 8.67799V5.29267ZM9.26042 10.5299L11.8094 12.0511C12.0444 12.1913 12.3485 12.1145 12.4887 11.8796C12.6289 11.6446 12.5521 11.3405 12.3172 11.2003L9.75591 9.67178C9.75054 9.66858 9.74543 9.66498 9.74061 9.661L9.73954 9.66012L9.7371 9.65808L9.72841 9.65073C9.72101 9.64442 9.71051 9.63535 9.69765 9.62393C9.67197 9.60112 9.63664 9.56871 9.59769 9.53003C9.52168 9.45453 9.42459 9.34798 9.36224 9.23865C9.24678 9.03618 9.18991 8.83138 9.18991 8.67799V5.29267C9.18991 5.01906 8.96811 4.79726 8.6945 4.79726C8.42089 4.79726 8.19909 5.01906 8.19909 5.29267V8.67799C8.19909 9.04471 8.32383 9.41788 8.50153 9.72949C8.58427 9.87456 8.77028 10.0734 8.9465 10.2437C9.03265 10.3269 9.11323 10.4003 9.17231 10.4528C9.20181 10.4791 9.22588 10.5001 9.24251 10.5145L9.26042 10.5299Z"
+                                                      fill="#83839F" />
+                                                </svg>
+                                             </label>
+                                             <input type="text" class="date-range duration-time duration-time-activator"
+                                                id="endTime" name="endTime" value="" />
+                                          </fieldset>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+
                         </div>
                      </div>
                   </div>
+
+
                </div>
+            </div><!-- modal-body end -->
+            <div class="modal-footer">
+               <button type="submit" class="ra-btn client-settings-modal--btn w-100">Create Ad Group</button>
             </div>
-         </div>
-         <div class="modal-footer">
-            <button type="submit" class="ra-btn client-settings-modal--btn w-100">Create Ad Group</button>
-         </div>
-         <div class="modal-footer">
-            <button type="submit" class="ra-btn client-settings-modal--btn opacity w-100">Create Ad Group</button>
-         </div>
-         <div class="modal-footer">
-            <button type="submit" class="ra-btn client-settings-modal--btn w-100 btn-loader">
-               <div class="spinner-border text-success mr-2" role="status"><span class="sr-only">Loading...</span>
-               </div>
-               Creating New Ad Group
-            </button>
-         </div>
-      </form>
+            <div class="modal-footer">
+               <button type="submit" class="ra-btn client-settings-modal--btn opacity w-100">Create Ad Group</button>
+            </div>
+            <div class="modal-footer">
+               <button type="submit" class="ra-btn client-settings-modal--btn w-100 btn-loader">
+                  <div class="spinner-border text-success mr-2" role="status"><span class="sr-only">Loading...</span>
+                  </div>
+                  Creating New Ad Group
+               </button>
+            </div>
+         </form>
+      </div>
    </div>
-</div>
 </div>

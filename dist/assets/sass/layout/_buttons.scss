@@ -127,6 +127,11 @@
         color: $white;
     }
 
+    &.ra-btn-light-blue-bg {
+        background-color: rgba($darkBlueColor2, 0.2);
+        color: $darkBlueColor2;
+    }
+
     &.ra-btn-6x12 {
         padding: 6px 12px;
     }

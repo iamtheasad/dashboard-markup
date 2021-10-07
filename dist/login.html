@@ -11,86 +11,80 @@
 
     <!-- build:css assets/css/all.min.css -->
     <link rel="stylesheet" href="assets/css/vendor.css">
-    <link rel="stylesheet" href="assets/css/auth.css">
+    <link rel="stylesheet" href="assets/css/authentication.css">
     <!-- endbuild -->
     <script type="text/javascript" src="assets/vendor/jQuery/jquery.min.js"></script>
 </head>
 
 <body>
-    <header class="site-header">
-        <div class="container">
-            <div class="d-flex justify-content-between align-items-center">
-                <div class="d-flex align-items-center">
-                    <div class="site-logo">
-                        <a class="d-block" href="/"><img src="assets/images/logo.svg" alt="G&R"></a>
-                    </div>
-                    <div class="menu-area">
-                        <ul class="menu-list">
-                            <li><a href="">Advertisers</a></li>
-                            <li><a href="">Publishers</a></li>
-                            <li><a href="">Partners</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="d-flex align-items-center">
-                    <a href="registration.html" class="rs-btn rs-btn-contained uppercase mr-3">Register</a>
-                    <a href="login.html" class="rs-btn rs-btn-primary uppercase">Login</a>
-                </div>
-            </div>
-        </div>
-    </header>
-    <main class="preloader">
-        <div class="container">
-            <div class="auth-layout d-flex justify-content-center align-items-center flex-column">
+    <main>
+        <div class="container-fluid">
+            <div class="auth-layout-2 d-flex justify-content-center align-items-center flex-column">
 
-                <div class="auth-card mt-8vh">
-                    <div class="card-head text-center">
-                        <h2>Login</h2>
+                <!-- Login Page -->
+                <div class="authentication-card mb-20 text-center">
+                    <div class="authentication-card-header text-center mb-16">
+                        <h3 class="fz22 fw-700 black-color-2 w-100">Login to GNR</h3>
                     </div>
-                    <form action="" class="registration-form px-50">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <fieldset class="rs-form mb-4">
-                                    <label class="rs-label">user id</label>
-                                    <input type="text" class="rs-input">
-                                </fieldset>
-                            </div>
 
-                            <div class="col-md-12">
-                                <fieldset class="rs-form password-form mb-4">
-                                    <label class="rs-label">Password</label>
-                                    <input type="password" class="rs-input">
-                                    <span class="mdi mdi-eye icon type-toggle fz20"></span>
-                                </fieldset>
-                            </div>
-                        </div>
-                        <div class="row mb-5">
-                            <div class="col-md-6">
-                                <div class="rs-checkbox">
-                                    <input type="checkbox" name="" class="rs-checkbox-input" id="remember">
-                                    <label class="checkbox-label fz16" for="remember">Remember me.</label>
+                    <div class="authentication-card-body">
+                        <div class="p-0x32">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-card mb-16">
+                                        <div class="ra-form ra-form-2">
+                                            <label for="eMail" class="ra-label-2 left">Email</label>
+                                            <input type="email" class="ra-input-2" name="email" placeholder="Your Email" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-card mb-16">
+                                        <div class="ra-form ra-form-2">
+                                            <label for="pass" class="ra-label-2 left">Password</label>
+                                            <input type="password" class="ra-input-2" name="pass" placeholder="Your Password" />
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-md-6 text-right">
-                                <a href="forgetPassword.html" class="fw-700 ml-1">Forgot Password?</a>
+                        </div>
+
+                        <div class="p-0x32">
+                            <div class="row mb-16">
+                                <div class="col-md-6 text-left">
+                                    <div class="client-settings-checkbox">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck-1">
+                                            <label class="custom-control-label" for="customCheck-1">
+                                                <span class="fz14 fw-400 purple-light-color">Keep me Logged in</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 text-right">
+                                    <a href="#" class="fz-16 fw-600 blue-color-2 ml-1">Forgot password?</a>
+                                </div>
                             </div>
                         </div>
 
-                        <div class="text-center">
-                            <button type="submit" class="rs-btn rs-btn-primary rs-btn-lg uppercase mx-auto  mb-4">Login</button>
-                            <p class="fz16">Not a member? <a href="registration.html" class="fw-700 ml-1">Register Now</a></p>
+                        <div class="mb-24 p-0x32">
+                            <a href="#" class="ra-btn ra-btn-blue-bg fw-600 ra-btn-6x12 min-height-48">Login</a>
                         </div>
-                    </form>
+                    </div>
+
+                    <div class="authentication-card-footer">
+                        <div class="mb-24 p-0x32">
+                            <p class="fz12 fw-400 purple-light-color mb-1">Don’t have an account yet?</p>
+                            <a href="register.html" class="fz14 fw-600 blue-color-2">Create Account</a>
+                        </div>
+                    </div>
                 </div>
 
             </div>
         </div>
     </main>
 
-    <a href="javascript:void(0)" class="back-to-top" id="go-top"><i class="mdi mdi-chevron-double-up"></i><span> Back To Top</span></a>
-
     <!-- build:js assets/js/vendor.min.js -->
-    <!-- <script type="text/javascript" src="assets/vendor/aos/js/aos.js"></script> -->
     <!-- endbuild -->
     <script type="text/javascript" src="assets/js/script.js"></script>
 
