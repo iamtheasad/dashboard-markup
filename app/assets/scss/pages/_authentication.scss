@@ -47,6 +47,7 @@
       padding: 12px;
       width: 159px;
       background-color: $whiteLight;
+      transition: .3s ease-in-out;
 
       &.active {
          background-color: $greenDark;
@@ -132,4 +133,8 @@
 
 #msform fieldset:not(:first-of-type) {
    display: none
+}
+
+input.error {
+   border: 1px solid $errorColor !important;
 }
