@@ -38,41 +38,57 @@
    }
 
    .register-step-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 24px;
+      border-top: 1px solid $purpleLight3;
+      border-bottom: 1px solid $purpleLight3;
+      height: 48px;
+      padding: 12px;
+      width: 159px;
+      background-color: $whiteLight;
+
       &.active {
          background-color: $greenDark;
 
-        span svg [fill{
-            fill: #fff;
+         span svg rect {
+            fill: $white;
+         }
+
+         span svg path {
+            fill: $greenDark;
          }
 
          .info {
             font-weight: 700;
-            color: #ffffff;
+            color: $white;
          }
       }
 
       &.completed {
          background-color: rgba($greenDark, .15);
 
-         span svg [fill] {
-            fill: #72BF44;
+         span svg rect {
+            fill: $greenDark;
+         }
+
+         span svg path {
+            fill: $white;
          }
 
          .info {
             font-weight: 500;
-            color: #72BF44;
+            color: $greenDark;
          }
       }
 
-      display: flex;
-      align-items: center;
-      margin-bottom: 24px;
-      border-top: 1px solid #E6E9F5;
-      border-bottom: 1px solid #E6E9F5;
-      height: 48px;
-      padding: 12px;
-      width: 159px;
-      background-color: #F7F7F7;
+      span svg rect {
+         fill: rgba($purpleLight, .4);
+      }
+
+      span svg path {
+         fill: $white;
+      }
 
       span {
          line-height: 0;
@@ -80,8 +96,12 @@
 
       .info {
          font-weight: 500;
-         color: #83839F;
+         color: $purpleLight;
       }
+   }
+
+   .ra-btn {
+      font-size: rem(16);
    }
 }
 
@@ -108,4 +128,8 @@
    &:before {
       left: 0;
    }
+}
+
+#msform fieldset:not(:first-of-type) {
+   display: none
 }
