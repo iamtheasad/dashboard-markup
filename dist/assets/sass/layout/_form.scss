@@ -1153,6 +1153,31 @@ button:focus .dropdown-icon.up-3 {
   }
 }
 
+// Draft Date & Time Picker
+.promotion-input {
+  .multi-date-range {
+    .label-img {
+      left: 16px;
+    }
+
+    .date-range {
+      padding-left: 45px;
+    }
+
+    .date-range {
+      &.promotion-input-date-range {
+        height: 40px;
+        color: #7A7A7A;
+      }
+
+    }
+
+    .daterange-label-text {
+      color: #7A7A7A;
+    }
+  }
+}
+
 .schedule {
   .multi-date-range {
     .date-range {
@@ -1179,6 +1204,29 @@ button:focus .dropdown-icon.up-3 {
     .label-img {
       .daterange-svg-icon [fill] {
         fill: $greenDark;
+      }
+    }
+  }
+}
+
+// Draft Date & Time Picker
+.promotion-input {
+  .multi-date-range {
+    &.focus {
+      .date-range {
+        border-color: #484848;
+        outline: 0;
+        box-shadow: unset;
+      }
+  
+      .daterange-label-text {
+        color:#484848;
+      }
+  
+      .label-img {
+        .daterange-svg-icon [fill] {
+          fill:#484848;
+        }
       }
     }
   }
