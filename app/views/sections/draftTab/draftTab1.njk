@@ -25,22 +25,55 @@
 </div>
 
 <div class="promotion-start-form">
-   <h3 class="fz14 fw-600 black-color mb-12">When do you want to start the Promotion?</h3>
+   <h3 class="fz14 fw-600 black-color mb-16">When do you want to start the Promotion?</h3>
    <div class="promotion-input">
       <div class="row">
 
          <div class="col-md-6">
-            <div class="input-group custom-date-time rs-form mb-20">
-               <label class="fz14 fw-400 gray-light-text-color rs-label" for="promotionInputDate">Select date</label>
-               <input type="date" class="form-control custom-form-control rs-input" id="promotionInputDate">
-            </div>
+            <fieldset class="multi-date-range mb-20">
+               <label for="startDate" class="position-absolute text-nowrap">
+                  <span class="daterange-label-text">Select Date</span>
+               </label>
+               <label for="startDate" class="label-img text-nowrap">
+                  <svg class="daterange-svg-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                     <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M3.1 2.90909C2.7134 2.90909 2.4 3.2347 2.4 3.63636V13.8182C2.4 14.2198 2.7134 14.5455 3.1 14.5455H12.9C13.2866 14.5455 13.6 14.2198 13.6 13.8182V3.63636C13.6 3.2347 13.2866 2.90909 12.9 2.90909H3.1ZM1 3.63636C1 2.43138 1.9402 1.45455 3.1 1.45455H12.9C14.0598 1.45455 15 2.43138 15 3.63636V13.8182C15 15.0232 14.0598 16 12.9 16H3.1C1.9402 16 1 15.0232 1 13.8182V3.63636Z"
+                        fill="#7A7A7A" />
+                     <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M1 6.54545C1 6.14379 1.3134 5.81818 1.7 5.81818H14.3C14.6866 5.81818 15 6.14379 15 6.54545C15 6.94712 14.6866 7.27273 14.3 7.27273H1.7C1.3134 7.27273 1 6.94712 1 6.54545Z"
+                        fill="#7A7A7A" />
+                     <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M10.8 0C11.1866 0 11.5 0.325611 11.5 0.727273V3.63636C11.5 4.03803 11.1866 4.36364 10.8 4.36364C10.4134 4.36364 10.1 4.03803 10.1 3.63636V0.727273C10.1 0.325611 10.4134 0 10.8 0Z"
+                        fill="#7A7A7A" />
+                     <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M5.2 0C5.5866 0 5.9 0.325611 5.9 0.727273V3.63636C5.9 4.03803 5.5866 4.36364 5.2 4.36364C4.8134 4.36364 4.5 4.03803 4.5 3.63636V0.727273C4.5 0.325611 4.8134 0 5.2 0Z"
+                        fill="#7A7A7A" />
+                  </svg>
+               </label>
+               <input type="text" class="date-range promotion-input-date-range duration-date duration-date-activator"
+                  id="startDate" name="startDate" value="ok" />
+            </fieldset>
          </div>
 
          <div class="col-md-6">
-            <div class="input-group custom-date-time rs-form mb-20">
-               <label class="fz14 fw-400 gray-light-text-color rs-label" for="promotionInputTime">Select Time</label>
-               <input type="time" class="form-control custom-form-control rs-input" id="promotionInputTime">
-            </div>
+            <fieldset class="multi-date-range mb-20">
+               <label for="startTime" class="position-absolute text-nowrap">
+                  <span class="daterange-label-text">Select time</span>
+               </label>
+               <label for="startTime" class="label-img text-nowrap">
+                  <svg class="daterange-svg-icon" width="17" height="16" viewBox="0 0 17 16" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                     <path
+                        d="M8.5 14.423C10.204 14.4243 11.8388 13.7487 13.0448 12.5448C14.2487 11.3388 14.9243 9.70404 14.923 8C14.9243 6.29596 14.2487 4.66116 13.0448 3.45521C11.8388 2.25127 10.204 1.57568 8.5 1.57704C6.79596 1.57568 5.16116 2.25127 3.95521 3.45521C2.75127 4.66116 2.07568 6.29596 2.07704 8C2.07568 9.70404 2.75127 11.3388 3.95521 12.5448C5.16116 13.7487 6.79596 14.4243 8.5 14.423ZM8.5 0.000151002C9.55238 -0.00633434 10.5956 0.196144 11.5691 0.595847C12.5426 0.99555 13.4272 1.58453 14.1714 2.32863C14.9155 3.07284 15.5044 3.95735 15.9042 4.93089C16.3039 5.90443 16.5063 6.94762 16.4999 8C16.5063 9.05238 16.3039 10.0956 15.9042 11.0691C15.5044 12.0426 14.9155 12.9272 14.1714 13.6714C13.4272 14.4155 12.5426 15.0044 11.5691 15.4042C10.5956 15.8039 9.55238 16.0063 8.5 15.9998C7.44599 16.0058 6.4014 15.8012 5.42752 15.398C4.45364 14.9949 3.57006 14.4013 2.82863 13.6521C2.0878 12.9095 1.50078 12.028 1.10122 11.0581C0.701652 10.0882 0.497396 9.04897 0.500151 8C0.493666 6.94762 0.696144 5.90443 1.09585 4.93089C1.49555 3.95735 2.08453 3.07284 2.82863 2.32863C3.57284 1.58453 4.45735 0.99555 5.43089 0.595847C6.40443 0.196144 7.44762 -0.00633434 8.5 0.000151002Z"
+                        fill="#7A7A7A" />
+                     <path d="M8.9135 3.98085V8.18751L12.5192 10.3285L11.9183 11.3429L7.7116 8.78846V3.98085H8.9135Z"
+                        fill="#7A7A7A" />
+                  </svg>
+               </label>
+               <input type="text" class="date-range promotion-input-date-range duration-time duration-time-activator"
+                  id="startTime" name="startTime" value="" />
+            </fieldset>
          </div>
       </div>
    </div>
