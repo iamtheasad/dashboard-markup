@@ -95,6 +95,8 @@ function submitForm(form) {
       else if (attr === 'phone' && validatePhone($(this))) valid.push('true');
       else valid.push('false')
    })
+
+   console.log(valid)
    if (valid.length && !valid.includes('false')) return true;
    else if (valid.length === 0) return true;
    else return false;
@@ -141,4 +143,18 @@ function registerClient() {
    }
 }
 
+function loginValidate(){
+   let form = $('#loginForm');
+   if(form.length){
+      form.find('[type="submit"]').on("click", function(e){
+         e.preventDefault();
+         let valid = submitForm('#loginForm');
+         if(valid){
+            form.submit();
+         }
+      })
+   }
+}
+
 registerClient();
+loginValidate();
