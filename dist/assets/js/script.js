@@ -107,6 +107,7 @@ function rangeSlider() {
     }
 }
 
+// Date Picker
 function datePicker() {
     if (window.daterangepicker) {
         $('.duration-date-activator').daterangepicker({
@@ -124,6 +125,7 @@ function datePicker() {
 
 datePicker();
 
+// Time Picker
 function timePicker() {
     if (window.daterangepicker) {
         $('.duration-time-activator').daterangepicker({
@@ -143,6 +145,7 @@ function timePicker() {
 }
 
 timePicker();
+
 
 $(document).ajaxSuccess(function () {
     rangeSlider();
