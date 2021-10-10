@@ -27,14 +27,14 @@
                         <h3 class="fz22 fw-700 black-color-2 w-100">Login to GNR</h3>
                     </div>
 
-                    <div class="authentication-card-body">
+                    <form class="authentication-card-body" id="loginForm">
                         <div class="p-0x32">
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-card mb-16">
                                         <div class="ra-form ra-form-2">
                                             <label for="eMail" class="ra-label-2 left">Email</label>
-                                            <input type="email" class="ra-input-2" name="email" placeholder="Your Email" />
+                                            <input type="email" class="ra-input-2" name="email" placeholder="Your Email" validate="email" />
                                         </div>
                                     </div>
                                 </div>
@@ -42,7 +42,7 @@
                                     <div class="form-card mb-16">
                                         <div class="ra-form ra-form-2">
                                             <label for="pass" class="ra-label-2 left">Password</label>
-                                            <input type="password" class="ra-input-2" name="pass" placeholder="Your Password" />
+                                            <input type="password" class="ra-input-2" name="pass" placeholder="Your Password" validate="string" />
                                         </div>
                                     </div>
                                 </div>
@@ -70,7 +70,7 @@
                         <div class="mb-24 p-0x32">
                             <button type="submit" class="ra-btn ra-btn-blue-bg fw-600 ra-btn-6x12 min-height-48 w-100">Login</button>
                         </div>
-                    </div>
+                    </form>
 
                     <div class="authentication-card-footer">
                         <div class="mb-24 p-0x32">
