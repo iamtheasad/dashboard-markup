@@ -11,14 +11,18 @@
          </a>
          <span>Campaigns</span>
 
-         <!-- Button trigger modal -->
-         {% include 'snippets/modals/addCampaignModal.njk' %}
+         <!-- Modal -->
+         <button class="ra-btn ra-btn-8x16 ra-btn-dark-bg ml-3" data-toggle="modal" data-target="#addCampaignModal"><img
+               src="assets/images/icons/Union.svg" class="icon plusIcon" alt="Plus Icon">Add Campaign</button>
       </div>
    </div>
    <div class="right-menu dropdown d-flex">
       {% include 'snippets/topBar2Right.njk' %}
    </div>
 </header>
+
+<!-- Add Campaign modal -->
+{% include 'snippets/modals/addCampaignModal.njk' %}
 
 <!-- Filter Bar -->
 <div class="filter-wrapper filter-wrapper-custom mb-0 ra-data-table-bg p-16x20">
