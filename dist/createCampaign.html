@@ -922,81 +922,8 @@
                         </a>
                         <span>Campaigns</span>
 
-                        <!-- Button trigger modal -->
                         <!-- Modal -->
                         <button class="ra-btn ra-btn-8x16 ra-btn-dark-bg ml-3" data-toggle="modal" data-target="#addCampaignModal"><img src="assets/images/icons/Union.svg" class="icon plusIcon" alt="Plus Icon">Add Campaign</button>
-
-                        <div class="modal fade" id="addCampaignModal" tabindex="-1" role="dialog" aria-labelledby="campaignModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-lg" role="document">
-                                <div class="modal-content create-campaign-modal-content">
-
-                                    <h5 class="modal-title fz18 fw-600 p-16x20" id="campaignModalLabel">Add New Campaign</h5>
-
-                                    <div class="custom-border"></div>
-
-                                    <p class="fz14 fw-400 p-16x20 black-color">Lorem Ipsum has been the industry's standard dummy text ever
-                                        since the 1500s, when an unknown printer took.</p>
-
-                                    <form action="">
-                                        <div class="modal-body custom-modal-body">
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                    <div class="p-20">
-                                                        <p class="fz14 fw-600 mb-12 black-color">Give a Name to your Campaign</p>
-                                                        <fieldset class="rs-form ra-form">
-                                                            <label for="campaignName" class="rs-label ra-label">EG. Brand Name: 40% Sale Offer</label>
-                                                            <input type="text" class="rs-input ra-input fz14 fw-400" id="campaignName">
-                                                        </fieldset>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-12">
-                                                    <div class="p-20">
-                                                        <p class="fz14 fw-600 mb-3">Give a Name to your Campaign</p>
-                                                        <div class="d-flex">
-                                                            <fieldset>
-                                                                <input type="radio" class="social-radio-input d-none" name="socialOptions" id="fbBtn">
-                                                                <label for="fbBtn" class="create-campaign-modal-social social-radio-label mr-2">
-                                                                    <img class="img" src="assets/images/icons/fb.svg" alt="Facebook Icon">
-                                                                </label>
-                                                            </fieldset>
-
-                                                            <fieldset>
-                                                                <input type="radio" class="social-radio-input d-none" name="socialOptions" id="igBtn">
-                                                                <label for="igBtn" class="create-campaign-modal-social social-radio-label mr-2">
-                                                                    <img class="img" src="assets/images/icons/ig.svg" alt="Facebook Icon">
-                                                                </label>
-                                                            </fieldset>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-12">
-                                                    <div class="p-20">
-                                                        <p class="fz14 fw-600 mb-3">How do you want to Promote?</p>
-                                                        <div class="d-flex">
-                                                            <fieldset>
-                                                                <input type="radio" class="social-radio-input d-none" name="postOptions" id="post1">
-                                                                <label for="post1" class="ra-btn btn-12x12 fz14 fw-400 black-color mr-2 radio-btn">As a Post</label>
-                                                            </fieldset>
-                                                            <fieldset>
-                                                                <input type="radio" class="social-radio-input d-none" name="postOptions" id="story1">
-                                                                <label for="story1" class="ra-btn btn-12x12 fz14 fw-400 black-color radio-btn">As a Story</label>
-                                                            </fieldset>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="custom-border"></div>
-
-                                            <div class="d-flex justify-content-end add-new-campaign-btn p-20">
-                                                <button class="ra-btn btn-6x16 fz15 fw-500 mr-2" data-dismiss="modal">Cancel</button>
-                                                <button type="submit" class="ra-btn btn-6x16 fz15 fw-500 active">Create</button>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <div class="right-menu dropdown d-flex">
@@ -1043,6 +970,79 @@
                     </div>
                 </div>
             </header>
+
+            <!-- Add Campaign modal -->
+            <div class="modal fade" id="addCampaignModal" tabindex="-1" role="dialog" aria-labelledby="campaignModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content create-campaign-modal-content">
+
+                        <h5 class="modal-title fz18 fw-600 p-16x20" id="campaignModalLabel">Add New Campaign</h5>
+
+                        <div class="custom-border"></div>
+
+                        <p class="fz14 fw-400 p-16x20 black-color">Lorem Ipsum has been the industry's standard dummy text ever
+                            since the 1500s, when an unknown printer took.</p>
+
+                        <form action="">
+                            <div class="modal-body custom-modal-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="p-20">
+                                            <p class="fz14 fw-600 mb-12 black-color">Give a Name to your Campaign</p>
+                                            <fieldset class="rs-form ra-form">
+                                                <label for="campaignName" class="rs-label ra-label">EG. Brand Name: 40% Sale Offer</label>
+                                                <input type="text" class="rs-input ra-input fz14 fw-400" id="campaignName">
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="p-20">
+                                            <p class="fz14 fw-600 mb-3">Give a Name to your Campaign</p>
+                                            <div class="d-flex">
+                                                <fieldset>
+                                                    <input type="radio" class="social-radio-input d-none" name="socialOptions" id="fbBtn">
+                                                    <label for="fbBtn" class="create-campaign-modal-social social-radio-label mr-2">
+                                                        <img class="img" src="assets/images/icons/fb.svg" alt="Facebook Icon">
+                                                    </label>
+                                                </fieldset>
+
+                                                <fieldset>
+                                                    <input type="radio" class="social-radio-input d-none" name="socialOptions" id="igBtn">
+                                                    <label for="igBtn" class="create-campaign-modal-social social-radio-label mr-2">
+                                                        <img class="img" src="assets/images/icons/ig.svg" alt="Facebook Icon">
+                                                    </label>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="p-20">
+                                            <p class="fz14 fw-600 mb-3">How do you want to Promote?</p>
+                                            <div class="d-flex">
+                                                <fieldset>
+                                                    <input type="radio" class="social-radio-input d-none" name="postOptions" id="post1">
+                                                    <label for="post1" class="ra-btn btn-12x12 fz14 fw-400 black-color mr-2 radio-btn">As a Post</label>
+                                                </fieldset>
+                                                <fieldset>
+                                                    <input type="radio" class="social-radio-input d-none" name="postOptions" id="story1">
+                                                    <label for="story1" class="ra-btn btn-12x12 fz14 fw-400 black-color radio-btn">As a Story</label>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="custom-border"></div>
+
+                                <div class="d-flex justify-content-end add-new-campaign-btn p-20">
+                                    <button class="ra-btn btn-6x16 fz15 fw-500 mr-2" data-dismiss="modal">Cancel</button>
+                                    <button type="submit" class="ra-btn btn-6x16 fz15 fw-500 active">Create</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
 
             <!-- Filter Bar -->
             <div class="filter-wrapper filter-wrapper-custom mb-0 ra-data-table-bg p-16x20">
