@@ -1218,14 +1218,14 @@ button:focus .dropdown-icon.up-3 {
         outline: 0;
         box-shadow: unset;
       }
-  
+
       .daterange-label-text {
-        color:#484848;
+        color: #484848;
       }
-  
+
       .label-img {
         .daterange-svg-icon [fill] {
-          fill:#484848;
+          fill: #484848;
         }
       }
     }
@@ -1249,6 +1249,56 @@ button:focus .dropdown-icon.up-3 {
 
   input:checked~span {
     font-weight: 500 !important;
+  }
+}
+
+.check-filter {
+  position: relative;
+  padding: 3px 0;
+  cursor: pointer;
+  padding-left: 35px !important;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: $primaryColor;
+  font-weight: 500;
+
+  &.active:after {
+    opacity: 0;
+  }
+
+  &.active {
+    font-weight: 400;
+  }
+
+  &:before,
+  &:after {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    transition: .15s ease-in-out;
+  }
+
+  &:before {
+    content: "";
+    border: 1px solid $grayCheckboxLight;
+    background-color: $white;
+  }
+
+  &:after {
+    content: "\F012C";
+    font: normal normal normal 14px/1 Material Design Icons;
+    color: $white;
+    background: $greenDark;
+    line-height: 1;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
   }
 }
 
