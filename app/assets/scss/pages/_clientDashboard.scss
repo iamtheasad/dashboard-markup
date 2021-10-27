@@ -10,6 +10,11 @@
    position: relative;
    height: 100vh;
    overflow-y: auto;
+
+
+   &::-webkit-scrollbar {
+      display: none;
+    }
 }
 
 .dashboard-menu {
