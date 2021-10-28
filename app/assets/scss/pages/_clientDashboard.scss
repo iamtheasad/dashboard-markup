@@ -11,10 +11,9 @@
    height: 100vh;
    overflow-y: auto;
 
-
-   &::-webkit-scrollbar {
-      display: none;
-    }
+   // &::-webkit-scrollbar {
+   //    display: none;
+   //  }
 }
 
 .dashboard-menu {
@@ -206,5 +205,15 @@
             }
          }
       }
+   }
+}
+
+.sectionShowHide {
+   display: block !important;
+}
+
+.sectionShowHide{
+   &.active{
+      display: none !important;
    }
 }

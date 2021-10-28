@@ -974,7 +974,7 @@
 
             <div class="campaign-wrapper">
 
-                <div class="sticky-top">
+                <div class="custom-sticky-top">
                     <!-- Camaigns Dashboard Menu -->
                     <div class="filter-wrapper dashboard-menu ra-border-bottom">
                         <div class="menu-content">
@@ -989,71 +989,44 @@
 
                         <div class="d-flex align-items-center justify-content-md-between justify-content-between">
                             <div class="ra-filter mr-1 mr-md-3">
-
                                 <div class="dropdown dropdwon-3 dropdwon-4">
                                     <div class="dropdown-menu">
                                         <ul>
 
                                             <p class="fz12 fw-500 purple-light-color">Overall</p>
 
-                                            <li>
-                                                <label class="checkbox-wrapper disabled">
-                                                    <input type="checkbox" checked>
-                                                    <span class="checkmark checkmark-green"></span>
-                                                    <span class="pl-4 fz14 fw-400">Ad Groups</span>
-                                                </label>
+                                            <li data-section-id="#dashboard-current-update" class="fz14 check-filter remove-section">
+                                                Current Update
                                             </li>
-                                            <li>
-                                                <label class="checkbox-wrapper">
-                                                    <input type="checkbox">
-                                                    <span class="checkmark checkmark-green"></span>
-                                                    <span class="pl-4 fz14 fw-400">Comparison</span>
-                                                </label>
+                                            <li data-section-id="#dashboard-campaign-metrics" class="fz14 check-filter remove-section">
+                                                Campaign Metrics
                                             </li>
-                                            <li>
-                                                <label class="checkbox-wrapper">
-                                                    <input type="checkbox">
-                                                    <span class="checkmark checkmark-green"></span>
-                                                    <span class="pl-4 fz14 fw-400">Publisher Share</span>
-                                                </label>
+                                            <li data-section-id="#" class="fz14 check-filter remove-section">
+                                                Ad Groups
+                                            </li>
+                                            <li data-section-id="#" class="fz14 check-filter remove-section">
+                                                Comparison
+                                            </li>
+                                            <li data-section-id="#" class="fz14 check-filter remove-section">
+                                                Publisher Share
                                             </li>
 
                                             <p class="fz12 fw-500 purple-light-color">Individual</p>
 
-                                            <li>
-                                                <label class="checkbox-wrapper disabled">
-                                                    <input type="checkbox">
-                                                    <span class="checkmark checkmark-green"></span>
-                                                    <span class="pl-4 fz14 fw-400">Ad Group Metrics</span>
-                                                </label>
+                                            <li data-section-id="#" class="fz14 check-filter remove-section">
+                                                Ad Group Metrics
                                             </li>
-                                            <li>
-                                                <label class="checkbox-wrapper">
-                                                    <input type="checkbox" checked>
-                                                    <span class="checkmark checkmark-green"></span>
-                                                    <span class="pl-4 fz14 fw-400 title">Performance</span>
-                                                </label>
+                                            <li data-section-id="#" class="fz14 check-filter remove-section">
+                                                Performance
                                             </li>
-                                            <li>
-                                                <label class="checkbox-wrapper">
-                                                    <input type="checkbox">
-                                                    <span class="checkmark checkmark-green"></span>
-                                                    <span class="pl-4 fz14 fw-400">Performance Share</span>
-                                                </label>
+                                            <li data-section-id="#" class="fz14 check-filter remove-section">
+                                                Performance Share
                                             </li>
-                                            <li>
-                                                <label class="checkbox-wrapper">
-                                                    <input type="checkbox">
-                                                    <span class="checkmark checkmark-green"></span>
-                                                    <span class="pl-4 fz14 fw-400">Spending</span>
-                                                </label>
+                                            <li data-section-id="#" class="fz14 check-filter remove-section">
+                                                Spending
                                             </li>
-                                            <li>
-                                                <label class="checkbox-wrapper">
-                                                    <input type="checkbox">
-                                                    <span class="checkmark checkmark-green"></span>
-                                                    <span class="pl-4 fz14 fw-400">Delivery Trend</span>
-                                                </label>
+                                            <li data-section-id="#" class="fz14 check-filter remove-section">
+                                                Delivery Trend
                                             </li>
                                         </ul>
                                     </div>
@@ -1076,14 +1049,12 @@
                                 </div>
                             </div>
 
-                            <div>
-                                <button class="filter-btn custom d-flex align-items-center mr-20">
-                                    <span class="pr-2 active">
-                     <img src="assets/images/icons/export.svg" alt="Icon">
-                  </span>
-                                    <p class="fz14 fw-500">Export</p>
-                                </button>
-                            </div>
+                            <button class="filter-btn custom d-flex align-items-center mr-20">
+                                <span class="pr-2 active">
+                  <img src="assets/images/icons/export.svg" alt="Icon">
+               </span>
+                                <p class="fz14 fw-500">Export</p>
+                            </button>
 
                             <div class="dropdown dot-dropdown">
                                 <button type="button" class="ra-three-dot-btn" data-toggle="dropdown" aria-haspopup="true">
@@ -1432,7 +1403,7 @@
                 </div>
 
                 <!-- Current Update Chart -->
-                <div class="bg-white tab-top ra-border-2 radius-4 p-20 m-20 d-flex justify-content-between">
+                <div id="dashboard-current-update" class="sectionShowHide bg-white tab-top ra-border-2 radius-4 p-20 m-20 d-flex justify-content-between">
                     <div class="tab-left">
                         <ul class="nav" id="chartTab" role="tablist">
                             <li class="nav-item">
@@ -1487,7 +1458,7 @@
                     </div>
                 </div>
 
-                <div class="p-0x20">
+                <div id="dashboard-campaign-metrics" class="p-0x20 sectionShowHide">
                     <!-- Filter Bar -->
                     <div class="filter-wrapper campaign-metrics mb-0 bg-white p-16x20">
                         <div class="fitler-top w-100">
