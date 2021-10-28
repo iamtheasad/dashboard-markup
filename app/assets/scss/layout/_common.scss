@@ -293,6 +293,7 @@ main {
 
 /* Custom Scrollbar */
 %green-scrollbar {
+
   /* width */
   ::-webkit-scrollbar {
     width: 8px;
@@ -316,4 +317,10 @@ main {
   ::-webkit-scrollbar-thumb:hover {
     background: rgba($greenDark, .7);
   }
+}
+
+.custom-sticky-top {
+  position: sticky;
+  top: 65px;
+  z-index: 1001;
 }
