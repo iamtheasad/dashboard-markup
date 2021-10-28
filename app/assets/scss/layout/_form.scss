@@ -1263,6 +1263,11 @@ button:focus .dropdown-icon.up-3 {
   color: $primaryColor;
   font-weight: 500;
 
+  &::selection {
+    color: none;
+    background: none;
+}
+
   &.active:after {
     opacity: 0;
   }
