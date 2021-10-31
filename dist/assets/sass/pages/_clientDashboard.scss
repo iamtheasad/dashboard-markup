@@ -5,13 +5,6 @@
    border-radius: 4px 4px 0 0;
 }
 
-.campaign-wrapper {
-   background-color: $purpleLight4;
-   position: relative;
-   height: 100vh;
-   overflow-y: auto;
-}
-
 .dashboard-menu {
    background-color: $white;
    padding: 10px 20px;
@@ -201,5 +194,15 @@
             }
          }
       }
+   }
+}
+
+.sectionShowHide {
+   display: block !important;
+}
+
+.sectionShowHide{
+   &.active{
+      display: none !important;
    }
 }
