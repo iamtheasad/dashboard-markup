@@ -6,10 +6,10 @@
 
    .dataTables_wrapper {
       position: absolute;
-      right: 21vh;
-      top: -5vh;
+      right: 170px;
+      top: -47px;
 
-      @media screen  and (max-width: 1230px){
+      @media screen and (max-width: 1230px) {
          right: 1vh;
       }
    }
@@ -52,7 +52,7 @@
 }
 
 .tab-content .all-datatable .dataTables_wrapper {
-   @media screen  and (max-width: 1230px){
+   @media screen and (max-width: 1230px) {
       right: -1vh;
    }
 }
@@ -63,13 +63,13 @@
    }
 
    .page-item.disabled .page-link {
-      color: rgba(71,83,100,.8);
-      background-color: rgba( $grayLightBgColor, .6);
-  }
+      color: rgba(71, 83, 100, .8);
+      background-color: rgba($grayLightBgColor, .6);
+   }
 
-  .page-link {
-   background-color: $grayLightBgColor;
-  }
+   .page-link {
+      background-color: $grayLightBgColor;
+   }
 
 }
 
