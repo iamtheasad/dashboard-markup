@@ -711,11 +711,9 @@ input[type="text"] {
       margin-left: 0px;
     }
 
-    .radio-btn-input {
-      appearance: none;
-
-      &:checked~label.radio-check-label {
-        background-color: $greenDark;
+    &.active{
+      .radio-check-label {
+        background-color: $greenDark !important;
 
         .radio-box {
           border: 2px solid $white;
@@ -729,6 +727,26 @@ input[type="text"] {
           color: $white;
         }
       }
+    }
+
+    .radio-btn-input {
+      appearance: none;
+
+      // &:checked~label.radio-check-label {
+      //   background-color: $greenDark;
+
+      //   .radio-box {
+      //     border: 2px solid $white;
+
+      //     span {
+      //       background: $white;
+      //     }
+      //   }
+
+      //   .radio-text {
+      //     color: $white;
+      //   }
+      // }
     }
 
     .radio-check-label {
