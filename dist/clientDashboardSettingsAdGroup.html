@@ -21,6 +21,9 @@
     <!-- Dropzone -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.3.0/dropzone.css" />
 
+    <!-- Bootstrap Multi Select -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap-multiselect/bootstrap-multiselect.min.css">
+
     <!-- build:css assets/css/all.min.css -->
     <link rel="stylesheet" href="assets/css/vendor.css">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -1053,6 +1056,7 @@
                                                     </fieldset>
                                                 </div>
                                             </div>
+
                                             <div class="col-md-12 mb-20">
                                                 <div class="ra-form ra-form-2 ra-form-2--select">
                                                     <fieldset>
@@ -1063,6 +1067,42 @@
                                                             <option value="Demo2">Demo2</option>
                                                             <option value="Demo3">Demo3</option>
                                                             <option value="Demo4">Demo4</option>
+                                                        </select>
+                                                    </fieldset>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12 mb-20">
+                                                <div class="ra-form ra-form-2 ra-form-2--select">
+                                                    <!-- Add .selected class when it's selected -->
+                                                    <fieldset class="dropdown-with-search-wrapper selected">
+                                                        <label for="" class="ra-label-2 left">Audience</label>
+                                                        <select multiple="multiple" name="selectField" class="ra-select-2 dropdownWithSearchActivator">
+                                                            <!-- .selected class add for opacity -->
+                                                            <option value="SelectAudience" selected>Select Audience</option>
+                                                            <option value="Demo2">Demo2</option>
+                                                            <option value="Demo3">Demo3</option>
+                                                            <option value="Demo4">Demo4</option>
+                                                            <option value="Demo4">Demo5</option>
+                                                            <option value="Demo4">Demo6</option>
+                                                        </select>
+                                                    </fieldset>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12 mb-20">
+                                                <div class="ra-form ra-form-2 ra-form-2--select">
+                                                    <!-- Add .selected class when it's selected -->
+                                                    <fieldset class="dropdown-with-search-wrapper">
+                                                        <label for="" class="ra-label-2 left">Audience</label>
+                                                        <select multiple="multiple" name="selectField" class="ra-select-2 dropdownWithSearchActivator">
+                                                            <!-- .selected class add for opacity -->
+                                                            <option value="SelectAudience" selected>Select Audience</option>
+                                                            <option value="Demo2">Demo2</option>
+                                                            <option value="Demo3">Demo3</option>
+                                                            <option value="Demo4">Demo4</option>
+                                                            <option value="Demo4">Demo5</option>
+                                                            <option value="Demo4">Demo6</option>
                                                         </select>
                                                     </fieldset>
                                                 </div>
@@ -3324,10 +3364,13 @@
 
     <!-- Dropzone -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.3.0/dropzone.js"></script>
+
+    <!-- Bootstrap Multi Select -->
+    <script src="assets/vendor/bootstrap-multiselect/bootstrap-multiselect.min.js"></script>
     <!-- endbuild -->
 
-    <script type="text/javascript" src="assets/js/script.js"></script>
     <script type="text/javascript" src="assets/js/datatable.js"></script>
+    <script type="text/javascript" src="assets/js/script.js"></script>
 
 </body>
 
