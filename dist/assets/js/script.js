@@ -1,6 +1,27 @@
 /* ********************************** */
 /* Custom Scripts */
 /* ********************************** */
+
+// Multi Select With Search
+function dropdownWithSearch(){
+      
+    for (var i = 1; i <= 100; i++) {
+        $('.dropdownWithSearchActivator').append('<option value="' + i + '">' + i + '</option>');
+    }
+
+    $('.dropdownWithSearchActivator').multiselect({
+        enableHTML:false,
+        enableCaseInsensitiveFiltering: true,
+        includeSelectAllOption: true,
+        buttonWidth: '100%',
+        maxHeight: 150,
+        allSelectedText: 'All selected',
+        dropUp:false
+    });
+}
+
+dropdownWithSearch();
+
 function inputAnimate() {
     if ($('.rs-form').length) {
         // Check if has value
