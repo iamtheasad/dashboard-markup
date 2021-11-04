@@ -651,40 +651,88 @@ input[type="text"] {
   }
 }
 
-// Dropdown Multi Select
+// Dropdown Multi Select With Search
 
-.multiselect-container {
-  width: 100%;
+.dropdown-with-search-wrapper {
+
+  .multiselect-container {
+    width: 100%;
+    border: 1px solid $greenDark !important;
+  }
+
+  .multiselect-search {
+    color: $primaryColor !important;
+    border-bottom: 1px solid $purpleLight3 !important;
+    border-radius: 0 !important;
+
+    &:focus {
+      outline: none !important;
+      box-shadow: none !important;
+      border-bottom: 1px solid $greenDark !important;
+    }
+  }
+
+  &.selected {
+    .multiselect-selected-text {
+      color: $primaryColor;
+    }
+  }
+
+  .multiselect-selected-text {
+    color: rgba(71, 83, 100, .4);
+    font-weight: 500;
+    display: flex;
+  }
+
+  .multiselect-search {
+    margin-left: 0 !important;
+    padding-left: 10px !important;
+  }
+
+  .custom-select {
+    background: #fff url('data:image/svg+xml;utf8, <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M7.77552 0.232761C7.63333 0.0836789 7.44099 0 7.2405 0C7.04001 0 6.84766 0.0836789 6.70547 0.232761L3.98103 3.06631L1.29453 0.232761C1.15234 0.0836789 0.959994 0 0.759504 0C0.559014 0 0.36667 0.0836789 0.224481 0.232761C0.15335 0.307172 0.0968926 0.395701 0.0583643 0.493242C0.0198361 0.590782 0 0.695404 0 0.801071C0 0.906738 0.0198361 1.01136 0.0583643 1.1089C0.0968926 1.20644 0.15335 1.29497 0.224481 1.36938L3.44221 4.76323C3.51276 4.83826 3.59669 4.8978 3.68917 4.93844C3.78165 4.97908 3.88084 5 3.98103 5C4.08121 5 4.1804 4.97908 4.27288 4.93844C4.36536 4.8978 4.4493 4.83826 4.51985 4.76323L7.77552 1.36938C7.84665 1.29497 7.90311 1.20644 7.94163 1.1089C7.98016 1.01136 8 0.906738 8 0.801071C8 0.695404 7.98016 0.590782 7.94163 0.493242C7.90311 0.395701 7.84665 0.307172 7.77552 0.232761Z" fill="%23373773"/></svg>') no-repeat right .75rem center;
+    border-radius: 4px;
+    border: 1px solid $purpleLight3;
+    min-height: 44px;
+    transition: all .2s ease-in-out;
+
+    &:focus {
+      outline: none;
+      border: 1px solid $greenDark;
+      box-shadow: none;
+    }
+  }
+
+  .text-muted {
+    display: none;
+  }
+
+  .form-check-label {
+    color: $primaryColor !important;
+    font-size: rem(14);
+  }
+
+  .multiselect-container .multiselect-all:focus,
+  .multiselect-container .multiselect-all:hover,
+  .multiselect-container .multiselect-group:focus,
+  .multiselect-container .multiselect-group:hover,
+  .multiselect-container .multiselect-option:focus,
+  .multiselect-container .multiselect-option:hover {
+    background-color: $purpleLight5 !important;
+    color: $primaryColor !important;
+  }
+
+  .multiselect-container .multiselect-all.active:not(.multiselect-active-item-fallback),
+  .multiselect-container .multiselect-all:not(.multiselect-active-item-fallback):active,
+  .multiselect-container .multiselect-group.active:not(.multiselect-active-item-fallback),
+  .multiselect-container .multiselect-group:not(.multiselect-active-item-fallback):active,
+  .multiselect-container .multiselect-option.active:not(.multiselect-active-item-fallback),
+  .multiselect-container .multiselect-option:not(.multiselect-active-item-fallback):active {
+    background-color: $purpleLight6 !important;
+    color: $primaryColor !important;
+  }
+
 }
-
-.multiselect-search {
-  color: #475364;
-}
-
-.multiselect-selected-text {
-  color: #475364;
-}
-
-.multiselect-search {
-  margin-left: 0 !important;
-  padding-left: 0 !important;
-}
-
-.custom-select {
-  background: red url('data:image/svg+xml;utf8, <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M7.77552 0.232761C7.63333 0.0836789 7.44099 0 7.2405 0C7.04001 0 6.84766 0.0836789 6.70547 0.232761L3.98103 3.06631L1.29453 0.232761C1.15234 0.0836789 0.959994 0 0.759504 0C0.559014 0 0.36667 0.0836789 0.224481 0.232761C0.15335 0.307172 0.0968926 0.395701 0.0583643 0.493242C0.0198361 0.590782 0 0.695404 0 0.801071C0 0.906738 0.0198361 1.01136 0.0583643 1.1089C0.0968926 1.20644 0.15335 1.29497 0.224481 1.36938L3.44221 4.76323C3.51276 4.83826 3.59669 4.8978 3.68917 4.93844C3.78165 4.97908 3.88084 5 3.98103 5C4.08121 5 4.1804 4.97908 4.27288 4.93844C4.36536 4.8978 4.4493 4.83826 4.51985 4.76323L7.77552 1.36938C7.84665 1.29497 7.90311 1.20644 7.94163 1.1089C7.98016 1.01136 8 0.906738 8 0.801071C8 0.695404 7.98016 0.590782 7.94163 0.493242C7.90311 0.395701 7.84665 0.307172 7.77552 0.232761Z" fill="%23373773"/></svg>') no-repeat right .75rem center;
-}
-
-.text-muted {
-  display: none;
-}
-
-
-
-
-
-
-
-
 
 
 // Checkbox
@@ -1268,18 +1316,18 @@ button:focus .dropdown-icon.up-3 {
   .multi-date-range {
     &.focus {
       .date-range {
-        border-color: #484848;
+        border-color: $darkPrimaryColor;
         outline: 0;
         box-shadow: unset;
       }
 
       .daterange-label-text {
-        color: #484848;
+        color: $darkPrimaryColor;
       }
 
       .label-img {
         .daterange-svg-icon [fill] {
-          fill: #484848;
+          fill: $darkPrimaryColor;
         }
       }
     }

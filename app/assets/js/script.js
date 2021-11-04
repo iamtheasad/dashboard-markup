@@ -3,24 +3,29 @@
 /* ********************************** */
 
 // Multi Select With Search
-function dropdownWithSearch(){
-      
+function dropdownWithSearch() {
+
     for (var i = 1; i <= 100; i++) {
         $('.dropdownWithSearchActivator').append('<option value="' + i + '">' + i + '</option>');
     }
 
     $('.dropdownWithSearchActivator').multiselect({
-        enableHTML:false,
         enableCaseInsensitiveFiltering: true,
         includeSelectAllOption: true,
         buttonWidth: '100%',
         maxHeight: 150,
-        allSelectedText: 'All selected',
-        dropUp:false
+        selectedClass: 'active',
+        selectAllValue: 'multiselect-all',
+        selectAllName: true,
+        filterPlaceholder: 'Search',
+        includeFilterClearBtn: true,
+        allSelectedText: 'All Selected',
+        dropUp: false,
+
     });
 }
 
-dropdownWithSearch();
+// dropdownWithSearch();
 
 function inputAnimate() {
     if ($('.rs-form').length) {
@@ -266,6 +271,67 @@ $('.registration-form').on('submit', function (e) {
     /*==========================================================================
         :: All Essential Functions
     ==========================================================================*/
+
+    function dropdownSearch() {
+        $.fn.select2.amd.require([
+            'select2/selection/single',
+            'select2/selection/placeholder',
+            'select2/selection/allowClear',
+            'select2/dropdown',
+            'select2/dropdown/search',
+            'select2/dropdown/attachBody',
+            'select2/utils'
+        ], function (SingleSelection, Placeholder, AllowClear, Dropdown, DropdownSearch, AttachBody, Utils) {
+
+            var SelectionAdapter = Utils.Decorate(
+                SingleSelection,
+                Placeholder
+            );
+
+            SelectionAdapter = Utils.Decorate(
+                SelectionAdapter,
+                AllowClear
+            );
+
+            var DropdownAdapter = Utils.Decorate(
+                Utils.Decorate(
+                    Dropdown,
+                    DropdownSearch
+                ),
+                AttachBody
+            );
+
+            var base_element = $('.select2-multiple2')
+            $(base_element).select2({
+                placeholder: 'Select multiple items',
+                selectionAdapter: SelectionAdapter,
+                dropdownAdapter: DropdownAdapter,
+                allowClear: true,
+                templateResult: function (data) {
+
+                    if (!data.id) { return data.text; }
+
+                    var $res = $('<div></div>');
+
+                    $res.text(data.text);
+                    // add .active class to uncheck checkbox
+                    $res.addClass('check-filter searchDropdown');
+
+                    return $res;
+                },
+                templateSelection: function (data) {
+                    if (!data.id) { return data.text; }
+                    var selected = ($(base_element).val() || []).length;
+                    var total = $('option', $(base_element)).length;
+                    return "Selected " + selected + " of " + total;
+                },
+            })
+
+        });
+    }
+
+    dropdownSearch();
+
     function dashSectionShowHide() {
         $(".remove-section").click(function () {
             let id = $(this).data("section-id");
