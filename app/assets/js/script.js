@@ -189,7 +189,6 @@ if ($('#slider_element').length) {
             allocatedPercentage = 0;
 
         unallocatedPercentage = (value / max) * 100;
-        console.log('unallocatedPercentage:', unallocatedPercentage)
 
         if (unallocatedPercentage < 15) {
             unallocatedPercentage = 15;
@@ -279,31 +278,6 @@ $('.registration-form').on('submit', function (e) {
         }
     }
     dropdownSearchNselect();
-
-    // Multi Select With Search
-    function dropdownWithSearch() {
-
-        for (var i = 1; i <= 100; i++) {
-            $('.dropdownWithSearchActivator').append('<option value="' + i + '">' + i + '</option>');
-        }
-
-        $('.dropdownWithSearchActivator').multiselect({
-            enableCaseInsensitiveFiltering: true,
-            includeSelectAllOption: true,
-            buttonWidth: '100%',
-            maxHeight: 150,
-            selectedClass: 'active',
-            selectAllValue: 'multiselect-all',
-            selectAllName: true,
-            filterPlaceholder: 'Search',
-            includeFilterClearBtn: true,
-            allSelectedText: 'All Selected',
-            dropUp: false,
-
-        });
-    }
-
-    dropdownWithSearch();
 
     function dashSectionShowHide() {
         $(".remove-section").click(function () {
