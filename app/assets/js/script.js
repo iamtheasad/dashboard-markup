@@ -2,31 +2,6 @@
 /* Custom Scripts */
 /* ********************************** */
 
-// Multi Select With Search
-function dropdownWithSearch() {
-
-    for (var i = 1; i <= 100; i++) {
-        $('.dropdownWithSearchActivator').append('<option value="' + i + '">' + i + '</option>');
-    }
-
-    $('.dropdownWithSearchActivator').multiselect({
-        enableCaseInsensitiveFiltering: true,
-        includeSelectAllOption: true,
-        buttonWidth: '100%',
-        maxHeight: 150,
-        selectedClass: 'active',
-        selectAllValue: 'multiselect-all',
-        selectAllName: true,
-        filterPlaceholder: 'Search',
-        includeFilterClearBtn: true,
-        allSelectedText: 'All Selected',
-        dropUp: false,
-
-    });
-}
-
-// dropdownWithSearch();
-
 function inputAnimate() {
     if ($('.rs-form').length) {
         // Check if has value
@@ -172,7 +147,6 @@ function timePicker() {
 
 timePicker();
 
-
 $(document).ajaxSuccess(function () {
     rangeSlider();
     inputAnimate();
@@ -272,65 +246,64 @@ $('.registration-form').on('submit', function (e) {
         :: All Essential Functions
     ==========================================================================*/
 
-    function dropdownSearch() {
-        $.fn.select2.amd.require([
-            'select2/selection/single',
-            'select2/selection/placeholder',
-            'select2/selection/allowClear',
-            'select2/dropdown',
-            'select2/dropdown/search',
-            'select2/dropdown/attachBody',
-            'select2/utils'
-        ], function (SingleSelection, Placeholder, AllowClear, Dropdown, DropdownSearch, AttachBody, Utils) {
 
-            var SelectionAdapter = Utils.Decorate(
-                SingleSelection,
-                Placeholder
-            );
-
-            SelectionAdapter = Utils.Decorate(
-                SelectionAdapter,
-                AllowClear
-            );
-
-            var DropdownAdapter = Utils.Decorate(
-                Utils.Decorate(
-                    Dropdown,
-                    DropdownSearch
-                ),
-                AttachBody
-            );
-
-            var base_element = $('.select2-multiple2')
-            $(base_element).select2({
-                placeholder: 'Select multiple items',
-                selectionAdapter: SelectionAdapter,
-                dropdownAdapter: DropdownAdapter,
+    // Dropdown Search with select2
+    function dropdownSearchNselect() {
+        if ($('.js-select2').length) {
+            $(".js-select2").select2({
+                closeOnSelect: false,
+                placeholder: "Placeholder",
+                allowHtml: true,
                 allowClear: true,
-                templateResult: function (data) {
+                tags: true
+            });
 
-                    if (!data.id) { return data.text; }
+            $('.icons_select2').select2({
+                width: "100%",
+                templateSelection: iformat,
+                templateResult: iformat,
+                allowHtml: true,
+                placeholder: "Placeholder",
+                dropdownParent: $('.select-icon'),
+                allowClear: true,
+                multiple: false
+            });
 
-                    var $res = $('<div></div>');
 
-                    $res.text(data.text);
-                    // add .active class to uncheck checkbox
-                    $res.addClass('check-filter searchDropdown');
+            function iformat(icon, badge,) {
+                var originalOption = icon.element;
+                var originalOptionBadge = $(originalOption).data('badge');
 
-                    return $res;
-                },
-                templateSelection: function (data) {
-                    if (!data.id) { return data.text; }
-                    var selected = ($(base_element).val() || []).length;
-                    var total = $('option', $(base_element)).length;
-                    return "Selected " + selected + " of " + total;
-                },
-            })
+                return $('<span><i class="fa ' + $(originalOption).data('icon') + '"></i> ' + icon.text + '<span class="badge">' + originalOptionBadge + '</span></span>');
+            }
+        }
+    }
+    dropdownSearchNselect();
+
+    // Multi Select With Search
+    function dropdownWithSearch() {
+
+        for (var i = 1; i <= 100; i++) {
+            $('.dropdownWithSearchActivator').append('<option value="' + i + '">' + i + '</option>');
+        }
+
+        $('.dropdownWithSearchActivator').multiselect({
+            enableCaseInsensitiveFiltering: true,
+            includeSelectAllOption: true,
+            buttonWidth: '100%',
+            maxHeight: 150,
+            selectedClass: 'active',
+            selectAllValue: 'multiselect-all',
+            selectAllName: true,
+            filterPlaceholder: 'Search',
+            includeFilterClearBtn: true,
+            allSelectedText: 'All Selected',
+            dropUp: false,
 
         });
     }
 
-    dropdownSearch();
+    dropdownWithSearch();
 
     function dashSectionShowHide() {
         $(".remove-section").click(function () {
