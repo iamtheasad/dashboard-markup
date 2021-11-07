@@ -2,26 +2,6 @@
 /* Custom Scripts */
 /* ********************************** */
 
-// Multi Select With Search
-function dropdownWithSearch(){
-      
-    for (var i = 1; i <= 100; i++) {
-        $('.dropdownWithSearchActivator').append('<option value="' + i + '">' + i + '</option>');
-    }
-
-    $('.dropdownWithSearchActivator').multiselect({
-        enableHTML:false,
-        enableCaseInsensitiveFiltering: true,
-        includeSelectAllOption: true,
-        buttonWidth: '100%',
-        maxHeight: 150,
-        allSelectedText: 'All selected',
-        dropUp:false
-    });
-}
-
-dropdownWithSearch();
-
 function inputAnimate() {
     if ($('.rs-form').length) {
         // Check if has value
@@ -167,7 +147,6 @@ function timePicker() {
 
 timePicker();
 
-
 $(document).ajaxSuccess(function () {
     rangeSlider();
     inputAnimate();
@@ -210,7 +189,6 @@ if ($('#slider_element').length) {
             allocatedPercentage = 0;
 
         unallocatedPercentage = (value / max) * 100;
-        console.log('unallocatedPercentage:', unallocatedPercentage)
 
         if (unallocatedPercentage < 15) {
             unallocatedPercentage = 15;
@@ -266,6 +244,41 @@ $('.registration-form').on('submit', function (e) {
     /*==========================================================================
         :: All Essential Functions
     ==========================================================================*/
+
+
+    // Dropdown Search with select2
+    function dropdownSearchNselect() {
+        if ($('.js-select2').length) {
+            $(".js-select2").select2({
+                closeOnSelect: false,
+                placeholder: "Placeholder",
+                allowHtml: true,
+                allowClear: true,
+                tags: true
+            });
+
+            $('.icons_select2').select2({
+                width: "100%",
+                templateSelection: iformat,
+                templateResult: iformat,
+                allowHtml: true,
+                placeholder: "Placeholder",
+                dropdownParent: $('.select-icon'),
+                allowClear: true,
+                multiple: false
+            });
+
+
+            function iformat(icon, badge,) {
+                var originalOption = icon.element;
+                var originalOptionBadge = $(originalOption).data('badge');
+
+                return $('<span><i class="fa ' + $(originalOption).data('icon') + '"></i> ' + icon.text + '<span class="badge">' + originalOptionBadge + '</span></span>');
+            }
+        }
+    }
+    dropdownSearchNselect();
+
     function dashSectionShowHide() {
         $(".remove-section").click(function () {
             let id = $(this).data("section-id");
