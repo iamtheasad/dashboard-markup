@@ -251,7 +251,7 @@ $('.registration-form').on('submit', function (e) {
         if ($('.js-select2').length) {
             $(".js-select2").select2({
                 closeOnSelect: false,
-                placeholder: "Placeholder",
+                placeholder: "Search",
                 allowHtml: true,
                 allowClear: true,
                 tags: true
@@ -262,7 +262,7 @@ $('.registration-form').on('submit', function (e) {
                 templateSelection: iformat,
                 templateResult: iformat,
                 allowHtml: true,
-                placeholder: "Placeholder",
+                placeholder: "Search",
                 dropdownParent: $('.select-icon'),
                 allowClear: true,
                 multiple: false
