@@ -700,7 +700,7 @@ input[type="text"] {
 .select2-container--default .select2-selection--multiple {
   padding-bottom: 5px !important;
   padding-top: 5px !important;
-  border-width: 1px;
+  border: 1px solid $purpleLight3;
 }
 
 .select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple {
