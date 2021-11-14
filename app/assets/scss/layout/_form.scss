@@ -861,21 +861,21 @@ input[type="text"] {
     .radio-btn-input {
       appearance: none;
 
-      // &:checked~label.radio-check-label {
-      //   background-color: $greenDark;
+      &:checked~label.radio-check-label {
+        background-color: $greenDark;
 
-      //   .radio-box {
-      //     border: 2px solid $white;
+        .radio-box {
+          border: 2px solid $white;
 
-      //     span {
-      //       background: $white;
-      //     }
-      //   }
+          span {
+            background: $white;
+          }
+        }
 
-      //   .radio-text {
-      //     color: $white;
-      //   }
-      // }
+        .radio-text {
+          color: $white;
+        }
+      }
     }
 
     .radio-check-label {
