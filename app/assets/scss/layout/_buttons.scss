@@ -199,14 +199,6 @@
             }
         }
 
-        .activate-icon {
-            display: none;
-        }
-
-        .acitvate-txt {
-            display: none;
-        }
-
         // &.active {
         //     background: $greenDark;
 
@@ -231,8 +223,48 @@
         //     background: $orangDark;
         // }
 
+        &.activate {
+            background: $greenDark;
+
+            &:hover {
+                background: $orangDark;
+            }
+
+            &:hover .activate-icon {
+                display: none;
+            }
+
+            .hold-icon {
+                display: none;
+            }
+
+            &:hover .hold-icon {
+                display: block;
+            }
+
+            .hold-txt {
+                display: none;
+            }
+
+            &:hover .hold-txt {
+                display: block;
+            }
+
+            &:hover .acitvate-txt {
+                display: none;
+            }
+        }
+
         &.hold {
             background: $orangDark;
+
+            .activate-icon {
+                display: none;
+            }
+
+            .acitvate-txt {
+                display: none;
+            }
 
             &:hover {
                 background: $greenDark;

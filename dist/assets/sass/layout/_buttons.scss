@@ -199,28 +199,92 @@
             }
         }
 
-        &.active {
-            background: $greenDark;
+        // &.active {
+        //     background: $greenDark;
 
-            svg {
-                display: none;
-            }
-        }
+        //     svg {
+        //         display: none;
+        //     }
+        // }
+
+        // &.activate {
+        //     background: $greenDark;
+        // }
+
+        // &.on-hold {
+        //     background: $orangDark;
+
+        //     svg {
+        //         display: none;
+        //     }
+        // }
+
+        // &.hold {
+        //     background: $orangDark;
+        // }
 
         &.activate {
             background: $greenDark;
-        }
 
-        &.on-hold {
-            background: $orangDark;
+            &:hover {
+                background: $orangDark;
+            }
 
-            svg {
+            &:hover .activate-icon {
+                display: none;
+            }
+
+            .hold-icon {
+                display: none;
+            }
+
+            &:hover .hold-icon {
+                display: block;
+            }
+
+            .hold-txt {
+                display: none;
+            }
+
+            &:hover .hold-txt {
+                display: block;
+            }
+
+            &:hover .acitvate-txt {
                 display: none;
             }
         }
 
         &.hold {
             background: $orangDark;
+
+            .activate-icon {
+                display: none;
+            }
+
+            .acitvate-txt {
+                display: none;
+            }
+
+            &:hover {
+                background: $greenDark;
+            }
+
+            &:hover .activate-icon {
+                display: block;
+            }
+
+            &:hover .hold-icon {
+                display: none;
+            }
+
+            &:hover .acitvate-txt {
+                display: block;
+            }
+
+            &:hover .hold-txt {
+                display: none;
+            }
         }
     }
 
@@ -242,7 +306,7 @@
     &:hover {
         background-color: rgba($greenDark, .9);
     }
-    
+
     span {
         display: flex;
         align-items: center;
