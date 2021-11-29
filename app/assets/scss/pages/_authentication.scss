@@ -1,5 +1,5 @@
 .auth-layout-2 {
-   padding-top: 125px;
+   padding-top: 80px;
    padding-bottom: 50px;
 }
 
@@ -99,6 +99,43 @@
          font-weight: 500;
          color: $purpleLight;
       }
+
+      &.register-influencer-item {
+         &.active {
+            background-color: $orangDark;
+
+            span svg rect {
+               fill: $white;
+            }
+
+            span svg path {
+               fill: $orangDark;
+            }
+
+            .info {
+               font-weight: 700;
+               color: $white;
+            }
+         }
+
+         &.completed {
+            background-color: rgba($orangDark, .15);
+
+            span svg rect {
+               fill: $orangDark;
+            }
+
+            span svg path {
+               fill: $white;
+            }
+
+            .info {
+               font-weight: 500;
+               color: $orangDark;
+            }
+         }
+      }
+
    }
 
    .ra-btn {
