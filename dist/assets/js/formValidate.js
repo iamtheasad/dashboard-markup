@@ -79,6 +79,7 @@ function validateString(field) {
 function submitForm(form) {
    let valid = [];
    $(form).find('[validate]').each(function () {
+      console.log(this);
       let attr = $(this).attr('validate');
       if ($('[name="confirmPassword"]') && attr === 'string' && validateString($(this))) {
          if ($('[name="confirmPassword"]').val() === $('[name="password"]').val()) {
@@ -136,15 +137,18 @@ function registerClient() {
       })
 
       $('input[name="company"]').on('change', function () {
+
          let value = $(this).val();
+         console.log(value);
+
          if (value === 'true') {
-            $('.personalField').slideUp().removeAttr('validate');
-            $('.companyName').slideDown().removeAttr('validate');
-            $('.companyAddress').slideDown().removeAttr('validate');
+            $('.personalField').slideUp().find('input').removeAttr('validate');
+            $('.companyName').slideDown().find('input').attr('validate', "string");
+            $('.companyAddress').slideDown().find('input').attr('validate', "string");
          } else {
             $('.personalField').slideDown().find('input').attr('validate', "string");
-            $('.companyName').slideUp().find('input').attr('validate', "string");
-            $('.companyAddress').slideUp().find('input').attr('validate', "string");
+            $('.companyName').slideUp().find('input').removeAttr('validate');
+            $('.companyAddress').slideUp().find('input').removeAttr('validate');
          }
       })
    }
