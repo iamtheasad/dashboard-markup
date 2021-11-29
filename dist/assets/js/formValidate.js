@@ -137,19 +137,26 @@ function registerClient() {
 
       $('input[name="company"]').on('change', function () {
          let value = $(this).val();
-         if (value === 'true') $('.personalField').slideUp().removeAttr('validate');
-         else $('.personalField').slideDown().find('input').attr('validate', "string");
+         if (value === 'true') {
+            $('.personalField').slideUp().removeAttr('validate');
+            $('.companyName').slideDown().removeAttr('validate');
+            $('.companyAddress').slideDown().removeAttr('validate');
+         } else {
+            $('.personalField').slideDown().find('input').attr('validate', "string");
+            $('.companyName').slideUp().find('input').attr('validate', "string");
+            $('.companyAddress').slideUp().find('input').attr('validate', "string");
+         }
       })
    }
 }
 
-function loginValidate(){
+function loginValidate() {
    let form = $('#loginForm');
-   if(form.length){
-      form.find('[type="submit"]').on("click", function(e){
+   if (form.length) {
+      form.find('[type="submit"]').on("click", function (e) {
          e.preventDefault();
          let valid = submitForm('#loginForm');
-         if(valid){
+         if (valid) {
             form.submit();
          }
       })
