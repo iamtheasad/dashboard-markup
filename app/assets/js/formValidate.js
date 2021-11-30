@@ -110,11 +110,18 @@ function registerClient() {
       backBtn.on("click", function () {
          let stepCount = $('[data-step]').attr('data-step');
          stepCount = parseInt(stepCount);
+         console.log('Before step count');
+         console.log(stepCount);
          if (stepCount === 1) {
+            console.log('inside step count');
             window.location.href = "/register.html";
-         } else {
+         }
+         else {
+            console.log("Inside Else");
+            console.log(stepCount);
             $(`#step-${stepCount}`).removeClass('active');
             stepCount = stepCount - 1;
+            console.log(stepCount);
             $('[data-step]').attr('data-step', stepCount);
             $(`#step-${stepCount}`).removeClass('completed').addClass('active');
             $('[data-form]').slideUp();
@@ -154,6 +161,59 @@ function registerClient() {
    }
 }
 
+function registerInfluencer() {
+   if ($('.authentication-card-influ').length) {
+      let backBtn = $('.action-button-previous-influ');
+
+      backBtn.on("click", function () {
+         let stepCount = $('[influ-data-step]').attr('influ-data-step');
+         stepCount = parseInt(stepCount);
+         if (stepCount === 1) {
+            window.location.href = "/register.html";
+         } else {
+            $(`#influencer-step-${stepCount}`).removeClass('active');
+            console.log(stepCount);
+            stepCount = stepCount - 1;
+            console.log(stepCount);
+            $('[influ-data-step]').attr('influ-data-step', stepCount);
+            $(`#influencer-step-${stepCount}`).removeClass('completed').addClass('active');
+            $('[influ-data-form]').slideUp();
+            $(`[influ-data-form="influencer-step-${stepCount}"]`).slideDown();
+         }
+      })
+
+      $(document).on('click', '[influ-data-form] button.next', function () {
+         let stepCount = $('[influ-data-step]').attr('influ-data-step');
+         stepCount = parseInt(stepCount);
+         let valid = submitForm('[influ-data-form="influencer-step-' + stepCount + '"]');
+         if (valid) {
+            $(`#influencer-step-${stepCount}`).addClass('completed').removeClass('active');
+            stepCount = stepCount + 1;
+            $('[influ-data-step]').attr('influ-data-step', stepCount);
+            $(`#influencer-step-${stepCount}`).addClass('active');
+            $(this).parents('[influ-data-form]').slideUp();
+            $(this).parents('[influ-data-form]').next('[influ-data-form]').slideDown();
+         }
+      })
+
+      $('input[name="company"]').on('change', function () {
+
+         let value = $(this).val();
+         console.log(value);
+
+         if (value === 'true') {
+            $('.personalField').slideUp().find('input').removeAttr('validate');
+            $('.companyName').slideDown().find('input').attr('validate', "string");
+            $('.companyAddress').slideDown().find('input').attr('validate', "string");
+         } else {
+            $('.personalField').slideDown().find('input').attr('validate', "string");
+            $('.companyName').slideUp().find('input').removeAttr('validate');
+            $('.companyAddress').slideUp().find('input').removeAttr('validate');
+         }
+      })
+   }
+}
+
 function loginValidate() {
    let form = $('#loginForm');
    if (form.length) {
@@ -167,5 +227,19 @@ function loginValidate() {
    }
 }
 
+function formShowHide() {
+   $('.create-gnr-client-account').on('click', function () {
+      $('.register-wrapper').slideUp();
+      $('.create-account-for-client').slideDown();
+   });
+
+   $('.create-influencer-account').on('click', function () {
+      $('.register-wrapper').slideUp();
+      $('.create-account-for-influencer').slideDown();
+   });
+}
+
+formShowHide();
 registerClient();
+registerInfluencer();
 loginValidate();
