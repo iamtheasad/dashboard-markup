@@ -110,18 +110,12 @@ function registerClient() {
       backBtn.on("click", function () {
          let stepCount = $('[data-step]').attr('data-step');
          stepCount = parseInt(stepCount);
-         console.log('Before step count');
-         console.log(stepCount);
          if (stepCount === 1) {
-            console.log('inside step count');
             window.location.href = "/register.html";
          }
          else {
-            console.log("Inside Else");
-            console.log(stepCount);
             $(`#step-${stepCount}`).removeClass('active');
             stepCount = stepCount - 1;
-            console.log(stepCount);
             $('[data-step]').attr('data-step', stepCount);
             $(`#step-${stepCount}`).removeClass('completed').addClass('active');
             $('[data-form]').slideUp();
@@ -172,9 +166,7 @@ function registerInfluencer() {
             window.location.href = "/register.html";
          } else {
             $(`#influencer-step-${stepCount}`).removeClass('active');
-            console.log(stepCount);
             stepCount = stepCount - 1;
-            console.log(stepCount);
             $('[influ-data-step]').attr('influ-data-step', stepCount);
             $(`#influencer-step-${stepCount}`).removeClass('completed').addClass('active');
             $('[influ-data-form]').slideUp();
