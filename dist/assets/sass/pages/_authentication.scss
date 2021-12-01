@@ -3,6 +3,14 @@
    padding-bottom: 50px;
 }
 
+.create-account-for-client {
+   display: none;
+}
+
+.create-account-for-influencer {
+   display: none;
+}
+
 .authentication-card {
    max-width: 480px;
    width: 100%;
@@ -99,6 +107,43 @@
          font-weight: 500;
          color: $purpleLight;
       }
+
+      &.register-influencer-item {
+         &.active {
+            background-color: $orangDark;
+
+            span svg rect {
+               fill: $white;
+            }
+
+            span svg path {
+               fill: $orangDark;
+            }
+
+            .info {
+               font-weight: 700;
+               color: $white;
+            }
+         }
+
+         &.completed {
+            background-color: rgba($orangDark, .15);
+
+            span svg rect {
+               fill: $orangDark;
+            }
+
+            span svg path {
+               fill: $white;
+            }
+
+            .info {
+               font-weight: 500;
+               color: $orangDark;
+            }
+         }
+      }
+
    }
 
    .ra-btn {
@@ -131,10 +176,16 @@
    }
 }
 
-#msform fieldset:not(:first-of-type) {
-   display: none
-}
-
 input.error {
    border: 1px solid $errorColor !important;
+}
+
+[data-form="step-2"],
+[data-form="step-3"] {
+   display: none;
+}
+
+[influ-data-form="influencer-step-2"],
+[influ-data-form="influencer-step-3"] {
+   display: none;
 }

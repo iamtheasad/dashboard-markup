@@ -42,7 +42,7 @@
 
 <div class="create-account-for-client">
     <!-- Create Client Account Page -->
-    <div class="card authentication-card">
+    <div class="card authentication-card create-account-for-client">
         <div class="authentication-card-header text-center mb-16">
             <a href="javascript:void(0)" class="previous action-button-previous" data-step="1">
                 <img src="assets/images/icons/arrow-long-left.svg" alt="Icon">
@@ -256,10 +256,9 @@
 </div>
 
 <div class="create-account-for-influencer">
-    <!-- Create Client Account Page -->
     <div class="card authentication-card authentication-card-influ">
         <div class="authentication-card-header text-center mb-16">
-            <a href="javascript:void(0)" class="previous action-button-previous-influ" influ-data-step="1">
+            <a href="javascript:void(0)" class="previous action-button-previous-influ" data-step-influ="1">
                 <img src="assets/images/icons/arrow-long-left.svg" alt="Icon">
             </a>
             <h3 class="fz22 fw-700 black-color-2 w-100">Create Influencer Account</h3>
@@ -268,11 +267,10 @@
             <div class="col-md-12">
                 <form class="text-center">
 
-                    <!--  */ progressbar  -->
+
                     <ul class="register-step progressbar">
-                        <!-- .completed, .active class add to show status -->
-                        <li class="register-step-item register-influencer-item fz15 fw-700 active"
-                            id="influencer-step-1">
+
+                        <li class="register-step-item register-influencer-item fz15 fw-700 active" id="influ-step-1">
                             <span>
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -284,7 +282,7 @@
                             </span>
                             <span class="pl-12 fz15 info">Basic Info</span>
                         </li>
-                        <li class="register-step-item register-influencer-item fz15 fw-700 " id="influencer-step-2">
+                        <li class="register-step-item register-influencer-item fz15 fw-700 " id="influ-step-2">
                             <span>
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -296,7 +294,7 @@
                             </span>
                             <span class="pl-12 fz15 info">Contact Info</span>
                         </li>
-                        <li class="register-step-item register-influencer-item fz15 fw-700" id="influencer-step-3">
+                        <li class="register-step-item register-influencer-item fz15 fw-700" id="influ-step-3">
                             <span>
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -311,7 +309,7 @@
                     </ul>
 
                     <div class="p-0x32">
-                        <div class="form-step" influ-data-form="influencer-step-1">
+                        <div class="form-step" data-form-influ="influ-step-1">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-card mb-16">
@@ -346,7 +344,7 @@
                                 class="next ra-btn ra-btn-light-blue-bg fw-600 ra-btn-6x12 min-height-48 w-100">Next</button>
                         </div>
 
-                        <div class="form-step" influ-data-form="influencer-step-2">
+                        <div class="form-step" data-form-influ="influ-step-2">
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="mb-24">
@@ -423,7 +421,7 @@
                                 class="next ra-btn ra-btn-light-blue-bg fw-600 ra-btn-6x12 min-height-48 w-100">Next</button>
                         </div>
 
-                        <div class="form-step" influ-data-form="influencer-step-3">
+                        <div class="form-step" data-form-influ="influ-step-3">
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-card mb-16">
@@ -452,7 +450,7 @@
 
                         </div>
 
-                        <div class="form-step" influ-data-form="influencer-step-4" style="display: none;">
+                        <div class="form-step" data-form-influ="influ-step-4" style="display: none;">
                             <h3>Form submittioin successful</h3>
                         </div>
                     </div>
