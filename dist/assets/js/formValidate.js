@@ -79,7 +79,6 @@ function validateString(field) {
 function submitForm(form) {
    let valid = [];
    $(form).find('[validate]').each(function () {
-      console.log(this);
       let attr = $(this).attr('validate');
       if ($('[name="confirmPassword"]') && attr === 'string' && validateString($(this))) {
          if ($('[name="confirmPassword"]').val() === $('[name="password"]').val()) {
@@ -131,18 +130,14 @@ function registerEvent(client = true) {
 function stepProcessor(mainClass, cardClass, buttonClass, dataStepSelector, dataStepAttr, dataFormAttr, dataFormSelector, step) {
    if ($(cardClass).length) {
       let backBtn = $(buttonClass);
-      console.log(backBtn);
       backBtn.on("click", function () {
          let stepCount = $(dataStepSelector).attr(dataStepAttr);
          stepCount = parseInt(stepCount);
-         console.log(stepCount);
          if (stepCount === 1) {
             $('.register-wrapper').slideDown();
             $(mainClass).slideUp();
          }
          else {
-            console.log("stepCount");
-            console.log(stepCount);
             $(`#` + step + `-${stepCount}`).removeClass('active');
             stepCount = stepCount - 1;
             $(dataStepSelector).attr(dataStepAttr, stepCount);
