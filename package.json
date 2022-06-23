@@ -20,10 +20,11 @@
     "gulp-postcss": "^8.0.0",
     "gulp-pretty-html": "^2.0.10",
     "gulp-replace": "^1.0.0",
-    "gulp-sass": "^4.1.0",
+    "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2",
-    "gulp-useref": "^4.0.1"
+    "gulp-useref": "^4.0.1",
+    "sass": "^1.53.0"
   },
   "dependencies": {
     "gulp-if": "^3.0.0",

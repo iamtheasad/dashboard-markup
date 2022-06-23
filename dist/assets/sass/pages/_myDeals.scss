@@ -1,224 +1,224 @@
 .my-deals-wrapper {
-   padding-top: 20px;
+  padding-top: 20px;
 }
 
 .ra-progress-top {
-   display: flex;
-   justify-content: space-between;
-   padding: 16px 20px;
-   background: $primaryBg;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background: $primaryBg;
 }
 
 .dropdown {
-   &.dot-dropdown {
-      display: flex;
-   }
+  &.dot-dropdown {
+    display: flex;
+  }
 }
 
 .ra-three-dot-btn {
-   position: relative;
-   background-color: transparent;
-   border: none;
-   height: 20px;
+  position: relative;
+  background-color: transparent;
+  border: none;
+  height: 20px;
 }
 
 .ra-three-dot-btn span:nth-child(1),
 .ra-three-dot-btn span:nth-child(2),
 .ra-three-dot-btn span:nth-child(3) {
-   position: absolute;
-   left: 50%;
-   transform: translateX(-50%);
-   width: 3px;
-   height: 3px;
-   background: $purpleLight;
-   border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 3px;
+  background: $purpleLight;
+  border-radius: 50%;
 }
 
 .ra-three-dot-btn span:nth-child(1) {
-   top: 25%;
+  top: 25%;
 }
 
 .ra-three-dot-btn span:nth-child(2) {
-   top: 50%;
+  top: 50%;
 }
 
 .ra-three-dot-btn span:nth-child(3) {
-   top: 75%;
+  top: 75%;
 }
 
 .ra-progress-item {
-   display: flex;
-   padding: 0px 20px;
-   align-items: center;
-   min-height: 72px;
+  display: flex;
+  padding: 0px 20px;
+  align-items: center;
+  min-height: 72px;
 
-   @media screen and (max-width: 1202px) {
-      padding: 0px 10px;
-   }
+  @media screen and (max-width: 1202px) {
+    padding: 0px 10px;
+  }
 }
 
 .ra-progress-item.active {
-   background-color: $dataTableSearchBgColor;
+  background-color: $dataTableSearchBgColor;
 }
 
 .ra-progress-user {
-   width: 36px;
-   height: 36px;
-   border-radius: 50%;
-   overflow: hidden;
-   display: flex;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
 }
 
 .progress-user-status {
-   position: relative;
+  position: relative;
 }
 
 .ra-progress-social {
-   position: absolute;
-   width: 16px;
-   height: 16px;
-   top: 60%;
-   left: 79%;
-   transform: translate(-50%, -50%);
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 60%;
+  left: 79%;
+  transform: translate(-50%, -50%);
 }
 
 .ra-progress-social img {
-   border-radius: 4px 0 4px 0;
+  border-radius: 4px 0 4px 0;
 }
 
 .ra-progress-body {
-   width: 100%;
-   padding-left: 10px;
+  width: 100%;
+  padding-left: 10px;
 }
 
 .ra-brand-name-title {
-   display: flex;
-   justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .ra-brand-name-subtitle {
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
 }
 
 .ra-time {
-   white-space: nowrap;
+  white-space: nowrap;
 }
 
 .rs-btn.in-btn-primary {
-   background-color: $darkPrimaryColor;
-   color: $white;
-   font-weight: 500;
+  background-color: $darkPrimaryColor;
+  color: $white;
+  font-weight: 500;
 }
 
 .rs-btn.in-btn-primary:hover {
-   color: $white;
+  color: $white;
 }
 
 .brand-name-top {
-   background-color: $dataTableSearchBgColor;
-   padding: 16px;
-   margin-bottom: 16px;
+  background-color: $dataTableSearchBgColor;
+  padding: 16px;
+  margin-bottom: 16px;
 }
 
 .brand-name-body {
-   padding: 0px 16px;
+  padding: 0px 16px;
 
-   p {
-      color: $darkPrimaryColor;
-      margin-bottom: 5px;
-   }
+  p {
+    color: $darkPrimaryColor;
+    margin-bottom: 5px;
+  }
 }
 
 .ra-progress.border {
-   border: 1px solid $grayBorderColor !important;
+  border: 1px solid $grayBorderColor !important;
 }
 
-.no-gutter>[class*='col-'] {
-   padding-right: 0;
-   padding-left: 0;
+.no-gutter > [class*="col-"] {
+  padding-right: 0;
+  padding-left: 0;
 }
 
 .my-deals-form {
-   display: flex;
-   padding: 16px 20px;
-   background-color: $dataTableSearchBgColor;
+  display: flex;
+  padding: 16px 20px;
+  background-color: $dataTableSearchBgColor;
 }
 
 .rs-btn.in-btn-secondary {
-   border: none;
-   background-color: $darkPrimaryColor;
-   opacity: 0.6;
-   color: #fff;
+  border: none;
+  background-color: $darkPrimaryColor;
+  opacity: 0.6;
+  color: #fff;
 }
 
 .rs-btn.in-btn-secondary:hover {
-   color: $white;
+  color: $white;
 }
 
 .my-deals-form input {
-   background: $white;
-   border: 1px solid $grayBorderColor;
-   border-radius: 4px;
-   font-size: 14px;
-   width: 100%;
-   padding: 10px 15px;
-   color: $black;
+  background: $white;
+  border: 1px solid $grayBorderColor;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 100%;
+  padding: 10px 15px;
+  color: $black;
 }
 
 .my-deals-form input::placeholder {
-   color: $grayLightTextColor;
+  color: $grayLightTextColor;
 }
 
 .my-deals-form-height {
-   min-height: calc(100vh-110px);
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
+  min-height: calc(100vh - 110px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
-   @media screen and (max-width: 992px) {
-      min-height: 100vh;
-   }
+  @media screen and (max-width: 992px) {
+    min-height: 100vh;
+  }
 }
 
 .deals-details {
-   padding: 16px 20px;
+  padding: 16px 20px;
 
-   @media screen and(max-width: 767px) {
-      padding: 30px;
-   }
+  @media screen and(max-width: 767px) {
+    padding: 30px;
+  }
 }
 
 .deals-details-desc {
-   color: $darkPrimaryColor;
+  color: $darkPrimaryColor;
 }
 
 .in-btn-primary.hashtag-primary {
-   border: none;
-   background: $darkPrimaryColor;
-   color: $white;
-   padding: 4px 12px;
-   border-radius: 4px;
+  border: none;
+  background: $darkPrimaryColor;
+  color: $white;
+  padding: 4px 12px;
+  border-radius: 4px;
 }
 
 .in-btn-primary.hashtag-secondary {
-   border: none;
-   background: $grayProgressLight;
-   color: $black;
-   padding: 4px 12px;
-   border-radius: 4px;
+  border: none;
+  background: $grayProgressLight;
+  color: $black;
+  padding: 4px 12px;
+  border-radius: 4px;
 }
 
 .my-deals-attachment {
-   display: flex;
+  display: flex;
 }
 
 .my-deals-attachment-img {
-   width: 145px;
+  width: 145px;
 }
 
 .my-deals-attachment-img:not(:last-child) {
-   margin-right: 8px;
+  margin-right: 8px;
 }
