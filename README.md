@@ -1,16 +1,12 @@
 # Gulp Task Runner Used Here
 
-```python
-   ok
-```
-
 For Install Packages Run:
 
 ```
 npm install
 ```
 
-Or
+or
 
 ```
 yarn
@@ -25,25 +21,13 @@ gulp
 For Clean Build Folder Run:
 
 ```
-yarn cleanBuild
+yarn clean
 ```
 
 or
 
 ```
-npm run cleanBuild
-```
-
-For Image Optimized Run:
-
-```
-npm run imageMinify
-```
-
-or
-
-```
-yarn imageMinify
+npm run clean
 ```
 
 For Image Clean Run:
