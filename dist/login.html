@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G&R</title>
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/jpg">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
+
+    <!-- build:css assets/css/all.min.css -->
+    <link rel="stylesheet" href="assets/css/vendor.css">
+    <link rel="stylesheet" href="assets/css/authentication.css">
+    <!-- endbuild -->
+    <script type="text/javascript" src="assets/vendor/jQuery/jquery.min.js"></script>
+</head>
+
+<body>
+    <main>
+        <div class="container-fluid">
+            <div class="auth-layout-2 d-flex justify-content-center align-items-center flex-column">
+
+                <!-- Login Page -->
+                <div class="authentication-card mb-20 text-center">
+                    <div class="authentication-card-header text-center mb-16">
+                        <h3 class="fz22 fw-700 black-color-2 w-100">Login to GNR</h3>
+                    </div>
+
+                    <form class="authentication-card-body" id="loginForm">
+                        <div class="p-0x32">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-card mb-16">
+                                        <div class="ra-form ra-form-2">
+                                            <label for="eMail" class="ra-label-2 left">Email</label>
+                                            <input type="email" class="ra-input-2" name="email" placeholder="Your Email" validate="email" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-card mb-16">
+                                        <div class="ra-form ra-form-2">
+                                            <label for="pass" class="ra-label-2 left">Password</label>
+                                            <input type="password" class="ra-input-2" name="pass" placeholder="Your Password" validate="string" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-0x32">
+                            <div class="row mb-16">
+                                <div class="col-md-6 text-left">
+                                    <div class="client-settings-checkbox">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck-1">
+                                            <label class="custom-control-label" for="customCheck-1">
+                                                <span class="fz14 fw-400 purple-light-color">Keep me Logged in</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 text-right">
+                                    <a href="#" class="fz-16 fw-600 blue-color-2 ml-1">Forgot password?</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-24 p-0x32">
+                            <button type="submit" class="ra-btn ra-btn-blue-bg fw-600 ra-btn-6x12 min-height-48 w-100">Login</button>
+                        </div>
+                    </form>
+
+                    <div class="authentication-card-footer">
+                        <div class="mb-24 p-0x32">
+                            <p class="fz12 fw-400 purple-light-color mb-1">Don’t have an account yet?</p>
+                            <a href="register.html" class="fz14 fw-600 blue-color-2">Create Account</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- build:js assets/js/vendor.min.js -->
+    <!-- endbuild -->
+    <script type="text/javascript" src="assets/js/formValidate.js"></script>
+    <script type="text/javascript" src="assets/js/script.js"></script>
+
+</body>
+
+</html>

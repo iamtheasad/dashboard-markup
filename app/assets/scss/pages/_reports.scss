@@ -1,0 +1,40 @@
+.overview-round-chart-list {
+    li{
+        a{
+            position: relative;
+            padding-left: 30px;
+
+            &::before{
+                content: "";
+                position: absolute;
+                width: 18px;
+                height: 18px;
+                border-radius: 50%;
+                top: 50%;
+                left: 0%;
+                transform: translateY(-50%);
+            }
+        }
+
+        &:nth-child(1) a::before {
+            background-color: $black;
+        }
+        &:nth-child(2) a::before {
+            background-color: $primaryColor;
+        }
+        &:nth-child(3) a::before {
+            background-color: $report-round-btn-color;
+        }
+    }
+}
+
+.tab-wrap {
+    background-color: $tableRowColor;
+}
+
+.chart-amount {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}

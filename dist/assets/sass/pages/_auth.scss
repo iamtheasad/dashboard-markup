@@ -1,0 +1,23 @@
+body{
+    background-color: #FAFAFA;
+}
+
+.auth-layout{
+    padding-top: 24px;
+    padding-bottom: 81px;
+}
+
+.auth-card{
+    background: #FFFFFF;
+    box-shadow: 0px 12px 17px rgba(0, 0, 0, 0.14), 0px 5px 22px rgba(0, 0, 0, 0.12), 0px 7px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 64px;
+    max-width: 768px;
+    width: 100%;
+    .card-head{
+        margin-bottom: 40px;
+    }
+    @media(max-width: 767px){
+        padding: 10px;
+    }
+}

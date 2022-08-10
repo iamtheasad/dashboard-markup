@@ -1,0 +1,1692 @@
+.rs-form {
+  position: relative;
+
+  @media (max-width: 767px) {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  &.password-form {
+    .rs-input {
+      padding-right: 50px;
+    }
+  }
+
+  &.animate {
+    .rs-label {
+      top: 0;
+      font-size: rem(10);
+      font-weight: 400;
+    }
+
+    .rs-input {
+      border: 1px solid $primaryColor;
+    }
+  }
+
+  .rs-label {
+    position: absolute;
+    font-size: rem(16);
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: $white;
+    padding: 5px 6px;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+    color: $darkGray;
+  }
+
+  .rs-input {
+    width: 100%;
+    min-height: 56px;
+    border-radius: 4px;
+    border: 1px solid $borderColor;
+    padding: 5px 16px;
+    font-size: rem(16);
+    transition: 0.2s ease-in-out;
+    color: $black;
+
+    @media (max-width: 992px) {
+      min-height: 40px;
+    }
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 35%;
+    right: 14px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+  }
+
+  .influ-comment-label {
+    top: 46%;
+  }
+}
+
+.radio-group {
+  &.checkbox-group {
+    border: 1px solid $tableRowColor;
+
+    &.active {
+      border: 1px solid $primaryColor;
+    }
+  }
+
+  .radio-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $primaryColor;
+    font-size: rem(16);
+    min-height: 40px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    background: $tableRowColor;
+    border: 1px solid $primaryColor;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    letter-spacing: 0.16em;
+    font-weight: 600;
+
+    img {
+      width: 24px;
+      margin-right: 6px;
+    }
+  }
+
+  .radio-input {
+    display: none;
+  }
+
+  .radio-input:checked+.radio-label {
+    opacity: 1;
+  }
+}
+
+.rs-checkbox {
+  .rs-checkbox-input {
+    display: none;
+  }
+
+  .checkbox-label {
+    padding-left: 32px;
+    position: relative;
+
+    @media (max-width: 575px) {
+      font-size: rem(12px);
+    }
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      top: 0;
+      left: 0;
+      border-radius: 4px;
+
+      @media (max-width: 575px) {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    &:before {
+      border: 2px solid $paymentInputColor3;
+      z-index: 1;
+    }
+
+    &:after {
+      z-index: 2;
+      background-image: url("../images/icons/check.svg");
+      background-repeat: no-repeat;
+      background-size: 24px;
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.3s ease-in-out;
+    }
+  }
+
+  .rs-checkbox-input:checked+.checkbox-label:after {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.acitvity-log-search {
+  max-width: 400px;
+  width: 100%;
+  float: right;
+
+  @media (max-width: 767px) {
+    margin-top: 20px;
+    float: left;
+  }
+}
+
+.ra-add-block-input {
+  @media (max-width: 992px) {
+    width: 100% !important;
+  }
+}
+
+.property-data-table-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
+}
+
+.propert-header-right {
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+}
+
+.activity-log-header {
+  justify-content: space-between;
+}
+
+.acitvity-log-selection {
+  width: 35%;
+
+  @media (max-width: 767px) {
+    width: 100%;
+  }
+}
+
+.form-width {
+  width: 300px !important;
+}
+
+/***********************************
+// Edit Account Info
+**************************************/
+.rs-select-editAccount {
+  position: absolute !important;
+  top: -3% !important;
+}
+
+input[type="text"] {
+  font-size: rem(24px);
+}
+
+.ra-select {
+  padding: 10px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 10.127L12 18.127L20 10.127H4Z" fill="%238E8E93"/></svg>');
+  background-repeat: no-repeat;
+  background-position-y: 50%;
+  background-position-x: 95%;
+  min-height: 56px;
+  border-radius: 4px;
+  background-color: $white;
+  cursor: pointer;
+
+  @media (max-width: 992px) {
+    min-height: 40px;
+  }
+}
+
+.selection-filter {
+  label {
+    color: $purpleLight !important;
+  }
+}
+
+.form-width {
+  @media (max-width: 768px) {
+    width: 100% !important;
+  }
+}
+
+.ra-select:focus {
+  outline: none;
+  border: 1px solid $borderColor;
+}
+
+.ra-select option {
+  background-color: $white;
+}
+
+/***********************************
+// Influencer
+**************************************/
+.influInpu {
+  position: relative;
+}
+
+.influInput:after {
+  content: "৳";
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  width: 100px;
+  height: 100%;
+  text-align: center;
+  transform: translateY(-45%);
+  font-size: rem(30);
+
+  @media (max-width: 992px) {
+    right: -5%;
+    top: 33%;
+  }
+}
+
+.rs-form.influInput .rs-input {
+  padding-right: 77px;
+}
+
+.genderSelect input {
+  display: inline-box;
+}
+
+.influencerLabel {
+  display: flex;
+  align-items: center;
+}
+
+.influencersSelect:before,
+.influencersSelect:after {
+  width: 20px !important;
+  height: 20px !important;
+}
+
+.influencersSelect:before {
+  top: 50% !important;
+  transform: translateY(-50%);
+  border-radius: 50% !important;
+}
+
+.influencersSelect:after {
+  top: 50% !important;
+  transform: translateY(-50%);
+  border-radius: 50% !important;
+  background-size: 20px !important;
+}
+
+.influencer-user {
+  width: 56px;
+  height: 56px;
+  background-color: $tableRowColor;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.rs-label.influencer-label {
+  top: 28%;
+}
+
+.influTextarea {
+  position: relative;
+}
+
+.influActiveArrow {
+  position: absolute;
+  top: 47%;
+  right: 0%;
+  transform: translateY(-50%);
+  font-size: rem(25);
+  border: none;
+  background: transparent;
+  width: 7%;
+  border-radius: 8px;
+}
+
+.campagnDetailsInput {
+  width: 75%;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.campagnDetailsInput-request {
+  width: 40%;
+
+  @media (max-width: 992px) {
+    width: 50%;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.custom-date-time {
+  height: 42px;
+
+  input[type="time"],
+  input[type="date"] {
+    min-height: 100%;
+
+    &::-webkit-calendar-picker-indicator {
+      margin-left: 10px;
+      background-position: left center;
+      position: absolute;
+      left: 0;
+      background-size: auto;
+    }
+
+    &::-webkit-datetime-edit-fields-wrapper {
+      position: absolute;
+      left: 40px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &::-webkit-datetime-edit-fields-wrapper {
+      visibility: hidden;
+    }
+  }
+
+  input[type="time"] {
+    &::-webkit-calendar-picker-indicator {
+      background-image: url('../images/icons/time.svg')
+    }
+  }
+
+  input[type="date"] {
+    &::-webkit-calendar-picker-indicator {
+      background-image: url('../images/icons/Date.svg')
+    }
+  }
+
+  input {
+    border-top-left-radius: 4px !important;
+    border-bottom-left-radius: 4px !important;
+  }
+
+  .rs-label {
+    left: 40px;
+    margin: 0;
+    z-index: 9;
+  }
+
+  &.animate {
+    .rs-label {
+      left: 5px;
+      padding: 0 4px;
+    }
+
+    input {
+      &::-webkit-datetime-edit-fields-wrapper {
+        visibility: visible;
+      }
+    }
+  }
+}
+
+
+.rs-form {
+  &.ra-form {
+    position: relative;
+
+    @media (max-width: 767px) {
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    &.password-form {
+      .rs-input {
+        &.ra-input {
+          padding-right: 50px;
+        }
+      }
+    }
+
+    &.animate {
+      .rs-label {
+        &.ra-label {
+          top: 0%;
+          left: 5px;
+          font-size: rem(10);
+          font-weight: 400;
+        }
+      }
+
+      .rs-input {
+        &.ra-input {
+          border: 1px solid $primaryColor !important;
+        }
+      }
+    }
+
+    .rs-label {
+      &.ra-label {
+        left: 15px;
+        top: 50%;
+        font-size: rem(14);
+        font-weight: 400;
+        transform: translateY(-50%);
+        counter-reset: $grayLightTextColor;
+        transition: 0.2s ease-in-out;
+        z-index: 10;
+      }
+    }
+
+    .rs-input {
+      &.ra-input {
+        border-radius: 4px;
+        width: 100%;
+        transition: .1s ease;
+        min-height: 40px;
+        font-size: rem(14);
+        font-weight: 500;
+        color: $black;
+        transition: 0.2s ease-in-out;
+
+        &.ra-input-border-transparent {
+          border: 1px solid transparent !important;
+
+          &:focus {
+            border: 1px solid $darkPrimaryColor !important;
+          }
+        }
+
+        &.ra-input-border-primary {
+          border: 1px solid $grayBorderColor !important;
+
+          &:focus {
+            border: 1px solid $darkPrimaryColor !important;
+          }
+        }
+
+        &.ra-input-primary-bg {
+          background-color: $primaryBg;
+        }
+
+        &.ra-input-dark-bg {
+          background-color: $dataTableSearchBgColor;
+        }
+
+        &::placeholder {
+          font-size: rem(14);
+          color: $grayLightTextColor;
+        }
+
+        @media (max-width: 992px) {
+          min-height: 30px;
+        }
+      }
+    }
+  }
+}
+
+.ra-form {
+  &.ra-form-2 {
+    position: relative;
+
+    .ra-input-2 {
+      width: 100%;
+      border: 1px solid $purpleLight3;
+      border-radius: 4px;
+      padding: 0 65px 0px 16px;
+      font-size: rem(14);
+      color: $primaryColor;
+      min-height: 44px;
+      font-weight: 500;
+      transition: all .2s ease-in-out;
+
+      &::placeholder {
+        color: $primaryColor;
+        opacity: .4;
+        font-size: rem(14);
+        font-weight: 500;
+      }
+
+      &:focus,
+      &:visited,
+      &:hover {
+        border-color: $greenDark;
+      }
+
+      &.selected-bg {
+        background: $purpleLight4;
+
+        &::placeholder {
+          color: $primaryColor;
+          opacity: 1;
+        }
+      }
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    input[type=number] {
+      -moz-appearance: textfield;
+    }
+
+    .ra-label-2 {
+      position: absolute;
+      font-size: rem(12);
+
+      &.left {
+        left: 13px;
+        top: 1%;
+        z-index: 1;
+        background: $white;
+        padding: 0px 4px;
+        color: $purpleLight;
+        font-weight: 500;
+        transform: translateY(-50%);
+      }
+
+      &.right {
+        top: 50%;
+        right: 17px;
+        z-index: 1;
+        transform: translateY(-50%);
+        color: $grayLight7;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.ra-select-2 {
+  width: 100%;
+  padding-left: 16px;
+  border-radius: 4px;
+  border: 1px solid $purpleLight3;
+  min-height: 44px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;utf8, <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M7.77552 0.232761C7.63333 0.0836789 7.44099 0 7.2405 0C7.04001 0 6.84766 0.0836789 6.70547 0.232761L3.98103 3.06631L1.29453 0.232761C1.15234 0.0836789 0.959994 0 0.759504 0C0.559014 0 0.36667 0.0836789 0.224481 0.232761C0.15335 0.307172 0.0968926 0.395701 0.0583643 0.493242C0.0198361 0.590782 0 0.695404 0 0.801071C0 0.906738 0.0198361 1.01136 0.0583643 1.1089C0.0968926 1.20644 0.15335 1.29497 0.224481 1.36938L3.44221 4.76323C3.51276 4.83826 3.59669 4.8978 3.68917 4.93844C3.78165 4.97908 3.88084 5 3.98103 5C4.08121 5 4.1804 4.97908 4.27288 4.93844C4.36536 4.8978 4.4493 4.83826 4.51985 4.76323L7.77552 1.36938C7.84665 1.29497 7.90311 1.20644 7.94163 1.1089C7.98016 1.01136 8 0.906738 8 0.801071C8 0.695404 7.98016 0.590782 7.94163 0.493242C7.90311 0.395701 7.84665 0.307172 7.77552 0.232761Z" fill="%23373773"/></svg>');
+  background-repeat: no-repeat;
+  background-position-x: 97%;
+  background-position-y: 50%;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+  color: rgba($primaryColor, .4);
+  font-weight: 500;
+
+  &:focus,
+  &:visited,
+  &:hover {
+    border: 1px solid $greenDark;
+    outline: none;
+  }
+
+  option {
+    color: $black;
+  }
+
+  &.selected {
+    color: rgba($primaryColor, 1);
+  }
+}
+
+
+/* Dropdown Search 2 Start */
+.select2-container {
+  width: 100% !important;
+}
+
+.select2-results__option {
+  padding-right: 20px;
+  vertical-align: middle;
+  color: $primaryColor;
+  font-family: inherit;
+}
+
+.select2-results__option:before {
+  // content: "";
+  // display: inline-block;
+  // position: relative;
+  // height: 16px;
+  // width: 16px;
+  // border: 1px solid $grayCheckboxLight;
+  // border-radius: 4px;
+  // background-color: $white;
+  // margin-right: 20px;
+  // vertical-align: middle;
+}
+
+.select2-results__option[aria-selected=true]:before {
+  // content: "\F012C";
+  // font-family: Material Design Icons;
+  // font-size: 11px;
+  // color: $white;
+  // background-color: $greenDark;
+  // border: 0;
+  // display: inline-block;
+  // padding-left: 3px;
+}
+
+.select2-container--default .select2-results__option[aria-selected=true] {
+  background-color: $white;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+  background-color: $purpleLight5;
+  color: $primaryColor;
+}
+
+.select2-container--default .select2-selection--multiple {
+  padding-bottom: 5px !important;
+  padding-top: 5px !important;
+  border: 1px solid $purpleLight3;
+}
+
+.select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple {
+  border-radius: 4px;
+}
+
+.select2-container--default.select2-container--focus .select2-selection--multiple {
+  border-color: $greenDark;
+  border-width: 1px;
+}
+
+.select2-container--open .select2-dropdown--below {
+  border-radius: 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.select2-dropdown {
+  border: 1px solid $greenDark !important;
+}
+
+.select2-selection .select2-selection--multiple:after {
+  content: 'hhghgh';
+}
+
+.select-icon .select2-selection__placeholder .badge {
+  display: none;
+}
+
+.select-icon .placeholder {
+  display: none;
+}
+
+.select-icon .select2-results__option:before,
+.select-icon .select2-results__option[aria-selected=true]:before {
+  display: none !important;
+}
+
+.select-icon .select2-search--dropdown {
+  display: none;
+}
+
+.select2-container--default .select2-results__option--selected {
+  background-color: $purpleLight6;
+}
+
+
+.select2-container .select2-selection--multiple {
+  min-height: 44px !important;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__display {
+  color: $primaryColor;
+  font-weight: 600;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+  color: $primaryColor;
+  font-weight: 600;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+  background-color: $purpleLight6;
+  border: 1px solid $greenDark;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__clear {
+  color: $primaryColor;
+  font-weight: 600;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove:hover,
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove:focus {
+  background-color: $purpleLight5 !important;
+  color: $primaryColor !important;
+}
+
+/* Dropdown Search 2 End */
+
+
+// Checkbox
+.btn-checkbox {
+  .btn-checkbox-label {
+    height: 36px;
+    line-height: 36px;
+    font-size: .875rem;
+    color: $black;
+    border-radius: 200px;
+    background-color: transparent;
+    width: 132px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $grayBorderColor;
+    transition: .2s ease-in-out;
+    margin-right: 4px;
+
+    &:hover {
+      background-color: $primaryBg;
+    }
+  }
+
+  .btn-checkbox-input:checked+.btn-checkbox-label {
+    background-color: $darkPrimaryColor;
+    color: $white;
+  }
+}
+
+// File input
+.img-video {
+  position: relative;
+
+  .file-input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+}
+
+// Radio Buttons
+.settings-radio-group {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  .radio-btn-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 16px;
+
+    &:last-child {
+      margin-left: 0px;
+    }
+
+    &.active {
+      .radio-check-label {
+        background-color: $greenDark !important;
+
+        .radio-box {
+          border: 2px solid $white;
+
+          span {
+            background: $white;
+          }
+        }
+
+        .radio-text {
+          color: $white;
+        }
+      }
+    }
+
+    .radio-btn-input {
+      appearance: none;
+
+      &:checked~label.radio-check-label {
+        background-color: $greenDark;
+
+        .radio-box {
+          border: 2px solid $white;
+
+          span {
+            background: $white;
+          }
+        }
+
+        .radio-text {
+          color: $white;
+        }
+      }
+    }
+
+    .radio-check-label {
+      display: inline-flex;
+      align-items: center;
+      padding: 0;
+      margin: 0;
+      min-height: 44px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      background-color: $white;
+      border-radius: 4px;
+
+      &.light-bg {
+        background-color: $purpleLight4;
+      }
+    }
+
+    .radio-box {
+      width: 16px;
+      height: 16px;
+      display: inline-block;
+      border-radius: 50%;
+      border: 2px solid $purpleLight;
+      padding: 7px;
+      position: relative;
+    }
+
+    .radio-box span {
+      width: 8px;
+      height: 8px;
+      display: inline-block;
+      background: $purpleLight;
+      border-radius: 50%;
+      position: absolute;
+      top: 3px;
+      right: 3px;
+    }
+
+    .radio-text {
+      font-size: rem(14);
+      font-weight: 500;
+      color: $purpleLight;
+      padding-left: 10px;
+    }
+  }
+}
+
+.client-account-radio-group {
+  .radio-btn-wrapper {
+    margin: 0;
+    margin-bottom: 24px;
+
+    .radio-btn-input {
+
+      &:checked~label.radio-check-label {
+        background-color: $orangDark;
+      }
+    }
+
+    .radio-check-label {
+      border: 1px solid $purpleLight3;
+      background-color: $whiteLight;
+    }
+
+  }
+
+  .radio-btn-wrapper:last-child {
+    margin-left: 16px;
+  }
+}
+
+.campaign-type {
+  .settings-radio-group {
+    padding: 20px;
+
+    @media screen and (max-width: 575px) {
+      display: unset;
+    }
+  }
+
+  .radio-btn-wrapper {
+    margin: 0;
+
+    &:not(:last-child) {
+      margin-right: 16px;
+
+      @media screen and (max-width: 575px) {
+        margin-right: 0px;
+      }
+    }
+
+    @media screen and (max-width: 575px) {
+      padding: 8px 16px;
+    }
+  }
+}
+
+.card {
+  &.settings-card {
+    &.radio-btn-card {
+      .card-header {
+        &.card-header-custom {
+          padding: 0px;
+          background-color: $purpleLight4;
+        }
+      }
+    }
+  }
+}
+
+/***********************************
+// Client Dashboard Dropdown
+**************************************/
+.dropdown {
+  &.dropdwon-3 {
+    button {
+      height: 52px;
+      background: $white;
+      padding: 8px 12px;
+      border-radius: 3px;
+      color: $primaryColor;
+      border: 1px solid $purpleLight3;
+      width: 100%;
+      position: relative;
+      transition: .2s;
+    }
+
+    .dropdown-menu {
+      top: 12% !important;
+      border: none;
+      padding: 0px;
+
+      ul {
+        li {
+          padding-left: 10px;
+          margin-bottom: 0px;
+
+          .checkbox-wrapper {
+            font-size: rem(14);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            color: $primaryColor;
+            padding: 10px 10px;
+            margin-bottom: 0px;
+            width: 100%;
+          }
+
+          &:hover {
+            background-color: $purpleLight5;
+          }
+        }
+      }
+    }
+
+    .disabled {
+      .label-text {
+        color: rgba($purpleLight, 0.6);
+      }
+
+      .disable-title {
+        color: rgba($primaryColor, 0.6);
+      }
+
+      .disable-img {
+        opacity: .4;
+      }
+
+      .dropdown-icon {
+        position: absolute;
+        left: 94%;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    .dropdown-icon {
+      display: flex;
+      position: absolute;
+    }
+
+    .dropdown-icon {
+      &.up {
+        transform: rotate(180deg) translateY(-50%);
+        top: 21%;
+        left: 94%;
+        display: none;
+      }
+
+      &.down {
+        top: 53%;
+        left: 94%;
+        transform: translateY(-50%);
+      }
+    }
+
+    button:focus {
+      border: 1px solid $greenDark;
+    }
+
+    button.disabled:focus {
+      border: 1px solid $purpleLight3;
+    }
+
+    button:focus .label-text {
+      color: $greenDark;
+    }
+
+    button:focus .dropdown-icon.down {
+      display: none;
+    }
+
+    button:focus .dropdown-icon.up {
+      display: block;
+    }
+
+    button.disabled:focus .label-text {
+      color: rgba($purpleLight, 0.6);
+    }
+
+    button:focus .blur {
+      color: rgba($primaryColor, 0.6);
+      transition: .2s;
+    }
+
+    .dropdown-menu.show~button {
+      border: 1px solid $greenDark;
+    }
+
+    .dropdown-menu.show~button.disabled {
+      border: 1px solid $purpleLight3;
+    }
+
+    .dropdown-menu.show~button .label-text {
+      color: $greenDark;
+    }
+
+    .dropdown-menu.show~button.disabled .label-text {
+      color: rgba($purpleLight, 0.6);
+    }
+
+    .dropdown-menu.show~button:focus .blur {
+      color: rgba($primaryColor, 0.6);
+      transition: .2s;
+    }
+
+    &.dropdwon-4 {
+
+      .filter-btn {
+        height: 36px;
+        background: $purpleLight6;
+        padding: 8px 12px;
+        border-radius: 4px;
+        color: $primaryColor;
+        border: 1px solid transparent;
+        white-space: nowrap;
+
+        &:focus {
+          border: 1px solid transparent;
+        }
+      }
+
+      .dropdown-menu.show~.filter-btn {
+        border: 1px solid transparent;
+        background: rgba($purpleLight6, .8);
+      }
+
+      .dropdown-icon.down.down-2 {
+        left: 88%;
+      }
+
+      .dropdown-icon.up.up-2 {
+        left: 88%;
+        top: 10%;
+      }
+
+      .dropdown-menu {
+        top: -25% !important;
+        box-shadow: 0px 4px 8px rgba(36, 48, 97, 0.15);
+        border: 1px solid $purpleLight3;
+        border-radius: 4px;
+        width: 300px;
+
+        ul {
+          p {
+            padding: 10px;
+          }
+        }
+
+        .disabled {
+          pointer-events: none;
+          opacity: .6;
+        }
+      }
+    }
+  }
+}
+
+.dropdown-icon {
+  &.up-3 {
+    position: absolute;
+    transform: rotate(180deg) translateY(-50%);
+    top: -3%;
+    left: 84%;
+    display: none;
+  }
+
+  &.down-3 {
+    position: absolute;
+    top: 43%;
+    left: 84%;
+    transform: translateY(-50%);
+  }
+}
+
+button:focus .dropdown-icon.down-3 {
+  display: none;
+}
+
+button:focus .dropdown-icon.up-3 {
+  display: block;
+}
+
+.filter-btn {
+  &.custom {
+    height: 36px;
+    background: $greenDark;
+    padding: 8px 12px;
+    border-radius: 4px;
+    color: $primaryColor;
+    border: 1px solid transparent;
+    color: $white;
+  }
+}
+
+.label-text {
+  position: absolute;
+  top: -12px;
+  background: $white;
+  color: $purpleLight;
+  padding: 0px 5px;
+  left: 11px;
+  font-size: rem(12);
+  font-weight: 500;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  border: 0px;
+  transition: .2s;
+}
+
+.number-notification {
+  font-size: rem(14);
+  font-weight: 600;
+  color: $white;
+  background: $orangDark;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 10px;
+
+  @media screen and(max-width: 991px) {
+    margin-right: 57px !important;
+  }
+
+  @media screen and(max-width: 576px) {
+    margin-right: 30px !important;
+  }
+}
+
+.multi-date-range {
+  position: relative;
+
+  .date-range {
+    width: 100%;
+    height: 52px;
+    background: $white;
+    padding: 8px 12px;
+    border-radius: 3px;
+    color: $primaryColor;
+    border: 1px solid $purpleLight3;
+    font-size: rem(14) !important;
+    font-weight: 500;
+    transition: .2s;
+
+    &.duration-date,
+    &.duration-time {
+      &.bg {
+        background: $purpleLight4;
+      }
+    }
+  }
+
+  .daterange-label-text {
+    position: absolute;
+    top: -11px;
+    left: 11px;
+    z-index: 1;
+    background: $white;
+    color: $purpleLight;
+    padding: 0px 5px;
+    font-size: rem(12);
+    font-weight: 500;
+    transition: .2s;
+  }
+
+  .label-img {
+    position: absolute;
+    left: 89%;
+    top: 55%;
+    transform: translateY(-50%);
+
+    .daterange-svg-icon [fill] {
+      transition: .2s;
+    }
+  }
+}
+
+// Draft Date & Time Picker
+.promotion-input {
+  .multi-date-range {
+    .label-img {
+      left: 16px;
+    }
+
+    .date-range {
+      padding-left: 45px;
+    }
+
+    .date-range {
+      &.promotion-input-date-range {
+        height: 40px;
+        color: #7A7A7A;
+      }
+
+    }
+
+    .daterange-label-text {
+      color: #7A7A7A;
+    }
+  }
+}
+
+.schedule {
+  .multi-date-range {
+    .date-range {
+      height: 44px;
+    }
+
+    .label-img {
+      left: 86%;
+    }
+  }
+}
+
+.multi-date-range {
+  &.focus {
+    .date-range {
+      color: rgba($purpleLight, 0.6);
+      border: 1px solid $greenDark;
+    }
+
+    .daterange-label-text {
+      color: $greenDark;
+    }
+
+    .label-img {
+      .daterange-svg-icon [fill] {
+        fill: $greenDark;
+      }
+    }
+  }
+}
+
+// Draft Date & Time Picker
+.promotion-input {
+  .multi-date-range {
+    &.focus {
+      .date-range {
+        border-color: $darkPrimaryColor;
+        outline: 0;
+        box-shadow: unset;
+      }
+
+      .daterange-label-text {
+        color: $darkPrimaryColor;
+      }
+
+      .label-img {
+        .daterange-svg-icon [fill] {
+          fill: $darkPrimaryColor;
+        }
+      }
+    }
+  }
+}
+
+.checkbox-wrapper {
+
+  input~.checkmark.checkmark-green,
+  .checkbox-green {
+    background-color: $purpleLight5;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  input:checked~.checkmark.checkmark-green {
+    background-color: $greenDark;
+    border-color: transparent;
+  }
+
+  input:checked~span {
+    font-weight: 500 !important;
+  }
+}
+
+.check-filter {
+  position: relative;
+  padding: 3px 0;
+  cursor: pointer;
+  padding-left: 35px !important;
+  padding-right: 10px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  color: $primaryColor;
+  font-weight: 500;
+
+  &::selection {
+    color: none;
+    background: none;
+  }
+
+  &.active:after {
+    opacity: 0;
+  }
+
+  &.active {
+    font-weight: 400;
+  }
+
+  &:before,
+  &:after {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    transition: .15s ease-in-out;
+  }
+
+  &:before {
+    content: "";
+    border: 1px solid $grayCheckboxLight;
+    background-color: $white;
+  }
+
+  &:after {
+    content: "\F012C";
+    font: normal normal normal 14px/1 Material Design Icons;
+    color: $white;
+    background: $greenDark;
+    line-height: 1;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+  }
+
+  &.searchDropdown {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+}
+
+.client-settings-checkbox {
+
+  .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: $darkBlueColor2;
+    box-shadow: none;
+  }
+
+  .custom-checkbox .custom-control-label span {
+    color: $purpleLight;
+    font-weight: 500;
+  }
+
+  .custom-checkbox .custom-control-input:checked~.custom-control-label span {
+    color: $primaryColor;
+    font-weight: 600;
+  }
+
+  .custom-checkbox .custom-control-label::before {
+    background-color: $purpleLight5;
+    border: 1px solid $purpleLight3;
+    border-radius: 4px;
+  }
+
+  .custom-control-label:hover.custom-control-label::before {
+    box-shadow: none;
+  }
+
+  .custom-control-input:disabled~.custom-control-label::before {
+    background-color: $purpleLight5;
+    border: 1px solid $purpleLight3;
+    opacity: .5;
+  }
+
+  .custom-control-input:disabled:checked~.custom-control-label::before {
+    background-color: $darkBlueColor2;
+    opacity: .5;
+  }
+}
+
+.dropdown-search {
+  position: relative;
+  border-bottom: 1px solid $purpleLight3;
+}
+
+.dropdown-search {
+  label {
+    position: absolute;
+    right: 6px;
+    top: 44%;
+    transform: translateY(-50%);
+    opacity: .6;
+  }
+
+  input {
+    border: 1px solid transparent;
+    width: 100%;
+    padding: 5px 45px 5px 10px;
+    position: relative;
+    transition: .2s;
+    border-radius: 4px;
+  }
+
+  &.searchInDropdown {
+    input {
+
+      &:active,
+      &:focus,
+      &:visited {
+        border: 1px solid $greenDark;
+      }
+
+    }
+  }
+}
+
+.animate-search {
+  position: relative;
+
+  &.show {
+    .hidden-search-icon {
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    .hidden-search {
+      width: 100%;
+      z-index: 2;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  .hidden-search-icon {
+    position: relative;
+    z-index: 1;
+    visibility: visible;
+    opacity: 1;
+    transition: 1s;
+  }
+
+  .hidden-search {
+    position: absolute;
+    width: 0%;
+    transition: width .3s ease-in-out, opacity .01s ease-in-out;
+    top: -4px;
+    left: 0;
+    border-radius: 4px;
+    border: 1px solid $greenDark !important;
+    margin-left: 22px;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+
+/***********************************
+// Custom Daterange Picker
+**************************************/
+.daterangepicker .calendar-table .prev span {
+  background-image: url("../images/icons/arrow-short-left.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 16px;
+  transform: rotate(0deg);
+}
+
+.daterangepicker .calendar-table .next span {
+  background-image: url("../images/icons/arrow-short-left.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 16px;
+  transform: rotate(180deg);
+}
+
+.daterangepicker .calendar-table .next span,
+.daterangepicker .calendar-table .prev span {
+  color: $white;
+  border: unset;
+  padding: 3px;
+  height: 12px;
+  width: 18px;
+}
+
+.prev.available,
+.next.available {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.daterangepicker td.available,
+.daterangepicker th.available {
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.daterangepicker td.available:hover,
+.daterangepicker th.available:hover {
+  background-color: rgba($orangDark, .10);
+  color: $purpleLight;
+}
+
+.month {
+  color: $purple;
+  font-size: rem(20);
+  font-weight: 700;
+}
+
+.daterangepicker .calendar-table th {
+  color: $purple;
+  font-size: rem(14);
+  font-weight: 700;
+}
+
+.daterangepicker .calendar-table td {
+  color: $purpleLight;
+  font-size: rem(14);
+  font-weight: 500;
+}
+
+.daterangepicker .calendar-table tr {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.daterangepicker td.active,
+.daterangepicker td.active:hover {
+  background-color: $orangDark !important;
+  border-color: transparent;
+  color: $white !important;
+  border-radius: 50% !important;
+  height: 32px;
+  width: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.daterangepicker td.start-date {
+  border-radius: 0px;
+  font-weight: 600;
+}
+
+.daterangepicker td.in-range {
+  background-color: $orangLight;
+  border-color: transparent;
+  color: $orangDark;
+  border-radius: 50%;
+  font-weight: 600;
+}
+
+.progress-bar {
+  &.green {
+    background-color: $greenDark;
+  }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #fff inset !important;
+}

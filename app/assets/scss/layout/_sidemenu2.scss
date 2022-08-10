@@ -1,0 +1,237 @@
+.sidebar-menu {
+
+   &.sidebar-menu-2 {
+      max-width: 272px;
+      width: 100%;
+      background-color: $grayLight2;
+      transition: max-width .5s;
+      height: 100vh;
+      top: 0;
+      z-index: 1000;
+      position: sticky;
+      padding: 0px;
+
+      @media screen and (max-width: 992px) {
+         transform: translateX(-100%);
+         position: fixed;
+
+         &.show {
+            transform: translateX(0);
+         }
+      }
+
+      .menu-toggler {
+         &.menu-toggler-2 {
+            position: absolute;
+            right: -25px;
+            top: 19px;
+            width: 30px;
+            height: 30px;
+            background-color: rgba($greenDark, .1);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: $greenDark;
+            font-size: 25px;
+            transform: translateX(100%);
+
+            @media (min-width: 993px) {
+               display: none;
+            }
+         }
+      }
+
+      .site-logo-2 {
+         display: flex;
+         padding: 14px;
+         border-bottom: 1px solid $grayLightBgColor;
+         height: 65px;
+
+         // @media screen and (max-width: 992px) {
+         //    padding: 20px 5px 0px 5px;
+         // }
+
+         // @media screen and (max-width: 460px) {
+         //    height: 120px;
+         // }
+
+         .sidebar-user-info {
+            display: flex;
+            flex-direction: column;
+            margin-left: 14px;
+            line-height: 8px;
+            color: $black;
+
+            // @media screen and (max-width: 992px) {
+            //    display: none;
+            // }
+
+            .user {
+               margin-bottom: 10px;
+               font-size: rem(16);
+               font-weight: 700;
+               display: block;
+            }
+
+            .amount {
+               font-size: rem(12);
+               font-weight: 400;
+            }
+         }
+      }
+
+      .menu-area-2 {
+         overflow-y: auto;
+         height: calc(100% - 65px);
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
+         background-color: $grayLight2;
+         overflow-x: hidden;
+
+         ul {
+            li {
+               .sidebar-icon-left {
+                  width: 20px;
+                  line-height: 0px;
+                  text-align: center;
+
+                  &.sidebar-dropdown-icon-left svg {
+                     width: 10px;
+                  }
+
+                  svg [fill] {
+                     fill: $black;
+                  }
+               }
+
+               .sidebar-dropdown-icon-left {
+
+                  // @media screen and (max-width: 992px) {
+                  //    padding-left: 4px;
+                  // }
+               }
+
+               .sidebar-link {
+                  display: flex;
+                  color: $black;
+                  padding: 0px 14px;
+                  transition: all .2s;
+                  height: 40px;
+                  align-items: center;
+
+                  // @media screen and (max-width: 992px) {
+                  //    padding-left: 10px;
+                  // }
+
+                  &:hover,
+                  &:active,
+                  &:focus {
+                     background-color: $grayLight1;
+                     color: $greenDark;
+                  }
+
+                  &:hover .sidebar-icon-right svg [fill],
+                  &:active .sidebar-icon-right svg [fill],
+                  &:focus .sidebar-icon-right svg [fill],
+                  &:hover .sidebar-icon-left svg [fill],
+                  &:active .sidebar-icon-left svg [fill],
+                  &:focus .sidebar-icon-left svg [fill],
+                  &:hover .sidebar-text-box,
+                  &:active .sidebar-text-box,
+                  &:focus .sidebar-text-box {
+                     fill: $greenDark;
+                     color: $greenDark;
+                  }
+
+                  .sidebar-text-box {
+                     display: flex;
+                     justify-content: space-between;
+                     align-items: center;
+                     width: 100%;
+                     padding-left: 22px;
+                     font-size: 15px;
+                     font-weight: 500;
+                     color: $black;
+                     transition: all .2s ease;
+                     visibility: visible;
+                     opacity: 1;
+
+                     // @media screen and(max-width: 992px) {
+                     //    visibility: hidden;
+                     //    opacity: 0;
+                     // }
+
+                     .sidebar-icon-right svg {
+                        width: 20px;
+                        height: 20px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 5px;
+                        border-radius: 2px;
+                        background-color: $grayProgressLight;
+
+                        [fill] {
+                           transition: all .2s ease;
+                        }
+                     }
+                  }
+               }
+
+               .sidebar-dropdwon-2 {
+                  .card {
+                     border: none;
+                     border-radius: 0px;
+                  }
+
+                  .card-body {
+                     padding: 0px 0px;
+                  }
+               }
+            }
+         }
+      }
+
+      /* width */
+      ::-webkit-scrollbar {
+         width: 10px;
+      }
+
+      /* Track */
+      ::-webkit-scrollbar-track {
+         background: rgba($darkPrimaryColor, .2);
+         border-radius: 20px;
+      }
+
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+         background: rgba($darkPrimaryColor, .6);
+         border-radius: 20px;
+         height: 30px;
+         transition: .2s;
+      }
+
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+         background: $darkPrimaryColor;
+      }
+
+      .active .sidebar-icon-right svg [fill],
+      .active .sidebar-icon-left svg [fill],
+      .active .sidebar-text-box {
+         fill: $greenDark !important;
+         color: $greenDark !important;
+      }
+   }
+}
+
+.breadcumb {
+
+   @media screen and (max-width: 992px) {
+      visibility: hidden;
+      opacity: 0;
+   }
+}

@@ -1,0 +1,91 @@
+{% extends "layouts/layout.njk" %}
+
+
+{% block content %}
+<!-- Add Place Details Page -->
+
+<div class="d-card mb-5">
+    <div class="location-info">
+        <div class="row ">
+            <div class="col">
+                <p class="fz24 fw-500 mb-3">AdPlaceName 1</p>
+            </div>
+            <div class="col d-flex justify-content-end align-items-center">
+                <p class="fz12 gray-color">Est. m/m Growth</p>
+                <div class="ra-property-details-head d-flex align-items-center">
+                    <p class="fz24 pl-3 pr-2 fw-700">36.5%</p>
+                    <span class="mdi mdi-menu-up green-color fz44"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <p class="fz12 gray-color mb-1">ID</p>
+                <div class="d-flex align-items-center">
+                    <p class="fz14 fw-500">88876</p>
+                </div>
+            </div>
+            <div class="col">
+                <p class="fz12 gray-color mb-1">Property Name</p>
+                <div class="d-flex align-items-center">
+                    <p class="fz14 fw-500">PropertyName</p>
+                </div>
+            </div>
+            <div class="col">
+                <p class="fz12 gray-color mb-1">Property Type</p>
+                <div class="d-flex align-items-center">
+                    <p class="fz14 fw-500">Website</p>
+                </div>
+            </div>
+            <div class="col">
+                <p class="fz12 gray-color mb-1">Request</p>
+                <div class="d-flex align-items-center">
+                    <p class="fz14 fw-500">1,625,790,161</p>
+                </div>
+            </div>
+            <div class="col">
+                <p class="fz12 gray-color mb-1">Impressions</p>
+                <div class="d-flex align-items-center">
+                    <p class="fz14 fw-500">1,625,790,161</p>
+                </div>
+            </div>
+            <div class="col">
+                <p class="fz12 gray-color mb-1">Fill Rate</p>
+                <div class="d-flex align-items-center">
+                    <p class="fz14 fw-500">85.29%</p>
+                </div>
+            </div>
+            <div class="col">
+                <p class="fz12 gray-color mb-1">Clicks</p>
+                <div class="d-flex align-items-center">
+                    <p class="fz14 fw-500">148,673</p>
+                </div>
+            </div>
+            <div class="col">
+                <p class="fz12 gray-color mb-1">Revenue</p>
+                <div class="d-flex align-items-center">
+                    <p class="fz14 fw-500">৳ 1,702,908</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="proper-button-wrapper d-flex mt-4">
+            <div class="user_btn mr-2">
+                <a href="javascript:void(0)" class="rs-btn rs-btn-lg rs-btn-primary uppercase fz20">Get Code</a>
+            </div>
+
+            <div class="user_btn mr-2">
+                <a href="javascript:void(0)" class="rs-btn rs-btn-lg uppercase fz20">Reports</a>
+            </div>
+
+            <div class="user_btn mr-2">
+                <button data-target="#placeEditModal" data-toggle="modal" class="rs-btn rs-btn-lg uppercase fz20">edit</button>
+            </div>
+
+            {% include "snippets/modals/placeEditModal.njk" %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}

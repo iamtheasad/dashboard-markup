@@ -1,0 +1,38 @@
+// Reset Browser Defaults
+@import "base/normalize";
+
+// Core variables and mixins
+@import "base/variables";
+@import "base/mixins";
+@import "base/functions";
+
+// Dependencies
+@import "base/typography";
+@import "base/animation";
+
+// Layouts 
+@import "layout/colors";
+@import "layout/grid";
+@import "layout/spacing";
+@import "layout/common";
+@import "layout/preload";
+@import "layout/buttons";
+@import "layout/form";
+// @import "layout/sidemenu";
+// @import "layout/sidemenu2";
+@import "layout/sidemenu3";
+@import "layout/topbar";
+
+// Pages
+@import "pages/index";
+@import "pages/custom";
+@import "pages/dataTable";
+@import "pages/reports";
+@import "pages/myCampaigns";
+@import "pages/dataTable2";
+@import "pages/dataTable3";
+@import "pages/myDeals";
+@import "pages/createCampaigns";
+@import "pages/draft";
+@import "pages/clientDashboard";
+@import "pages/clientDashboardSettingsCampaign";

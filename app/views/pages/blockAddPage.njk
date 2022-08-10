@@ -1,0 +1,72 @@
+{% extends "layouts/layout.njk" %}
+
+
+{% block content %}
+<!-- Block Add Page -->
+<div class="ra-data-table-bg p-2 p-md-3 border-radius-8">
+    <form action="">
+        <div class="d-card pb-3">
+            <div class="row">
+                <div class="col">
+                    <h2 class="fz24 fw-500 mb-3">Add New Place for Advertise</h2>
+                    <p class="fz12 gray-color mb-3 mb-md-5">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting
+                        industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                        unknown.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <fieldset class="rs-form mb-2 mb-md-4 f44">
+                        <label for="editName" class="rs-label ra-add-block-select rs-select-editAccount fz10 fz10">Title of your property</label>
+                        <select class="ra-select ra-block-add-select-bg ra-add-block-input fz18 fw-500 w-50">
+                            <option value="Eastern Bank Ltd.">PropertyName 1</option>
+                            <option value="Eastern Bank Ltd.">PropertyName 2</option>
+                            <option value="Eastern Bank Ltd.">PropertyName 3</option>
+                        </select>
+                    </fieldset>
+                </div>
+
+                <div class="col-md-12">
+                    <fieldset class="rs-form mb-2">
+                        <label for="editName" class="ra-add-block-select rs-label fz10">Ad Place Name</label>
+                        <input type="text" class="rs-input fw-500 fz18 ra-add-block-input w-50" value="PropertyName 1">
+                    </fieldset>
+                </div>
+            </div>
+            <div class="user_btn mt-4">
+                <button data-target="#addNewUserModal" data-toggle="modal"
+                    class="rs-btn rs-btn-lg rs-btn-primary uppercase fz20"><span class="mdi mdi-plus-thick"></span>
+                    Add</button>
+            </div>
+        </div>
+    </form>
+
+
+    <!-- Block Add Table -->
+    <div class="ra-property-list mt-4 mt-md-4 dashbaord-main">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="property-data-table-head mb-2">
+                    <h2 class="fw-500 fz24">Block Ads List</h2>
+
+                    <div class="propert-header-right">
+                        <form action="" class="rs-form">
+                            <button type="submit" class="position-absolute ra-search-label" for="searchInput">
+                                <img src="assets/images/icons/search.svg" alt="Search Icon">
+                            </button>
+                            <input type="search" class="rs-input min-height-48 pr-5" id="searchInput"
+                                placeholder="enter property name">
+                        </form>
+                    </div>
+                </div>
+                <div class="dataTable table-responsive">
+                    {% include "snippets/dataTable/blockAddDataTable.njk" %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

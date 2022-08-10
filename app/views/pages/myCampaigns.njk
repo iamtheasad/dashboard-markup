@@ -1,0 +1,89 @@
+{% extends "layouts/layout2.njk" %}
+
+{% block content %}
+
+<!-- Top Bar -->
+<header class="topbar topbar2 d-flex justify-content-between align-items-center">
+   <div class="breadcumb fz16 fw-600">
+      <div class="d-flex align-items-center">
+         <a href="#" class="mr-20">
+            <img src="assets/images/icons/coolicon.svg" class="img long-arrow" alt="Arrow Icon">
+         </a>
+         <span class="pl-2 pr-3">My Campaigns</span>
+      </div>
+   </div>
+   <div class="right-menu dropdown d-flex">
+      {% include 'snippets/topBar2Right.njk' %}
+   </div>
+</header>
+
+
+<div class="ra-gray-light-bg my-campaigns-wrapper">
+   <ul class="nav d-flex justify-content-center nav-pills bg-transparent tab-wrapper" id="pills-tab" role="tablist">
+      <li class="nav-item">
+         <a class="nav-link ra-custom-nav-link rounded-0 dot active" id="scheduled-tab" data-toggle="pill"
+            href="#scheduled" role="tab" aria-controls="scheduled" aria-selected="true">Scheduled (2)</a>
+      </li>
+      <li class="nav-item">
+         <a class="nav-link ra-custom-nav-link rounded-0 dot" id="ongoing-tab" data-toggle="pill" href="#ongoing"
+            role="tab" aria-controls="ongoing" aria-selected="false">Ongoing (2)</a>
+      </li>
+      <li class="nav-item">
+         <a class="nav-link ra-custom-nav-link rounded-0 dot" id="completed-tab" data-toggle="pill" href="#completed"
+            role="tab" aria-controls="completed" aria-selected="false">Completed (1)</a>
+      </li>
+      <li class="nav-item">
+         <a class="nav-link ra-custom-nav-link rounded-0" id="archieved-tab" data-toggle="pill" href="#archieved"
+            role="tab" aria-controls="archieved" aria-selected="false">Archieved</a>
+      </li>
+   </ul>
+
+   <div class="tab-content" id="pills-tabContent">
+      <div class="tab-pane fade show active" id="scheduled" role="tabpanel" aria-labelledby="scheduled-tab">
+         {% set data = {
+         searchTitle : 'Search in Scheduled'
+         }%}
+         <div class="ml-20 mr-20">
+            {% include "snippets/searchBar.njk"%}
+         </div>
+         <div class="wrapper-item">
+            {% include "sections/myCampaigns/scheduledDataTable.njk"%}
+         </div>
+      </div>
+      <div class="tab-pane fade" id="ongoing" role="tabpanel" aria-labelledby="ongoing-tab">
+         {% set data = {
+         searchTitle : 'Search in Ongoing'
+         }%}
+         <div class="ml-20 mr-20">
+            {% include "snippets/searchBar.njk"%}
+         </div>
+         <div class="wrapper-item">
+            {% include "sections/myCampaigns/ongoingDataTable.njk"%}
+         </div>
+      </div>
+      <div class="tab-pane fade" id="completed" role="tabpanel" aria-labelledby="completed-tab">
+         {% set data = {
+         searchTitle : 'Search in Completed'
+         }%}
+         <div class="ml-20 mr-20">
+            {% include "snippets/searchBar.njk"%}
+         </div>
+         <div class="wrapper-item">
+            {% include "sections/myCampaigns/completedDataTable.njk"%}
+         </div>
+      </div>
+      <div class="tab-pane fade" id="archieved" role="tabpanel" aria-labelledby="archieved-tab">
+         {% set data = {
+         searchTitle : 'Search in Archieved'
+         }%}
+         <div class="ml-20 mr-20">
+            {% include "snippets/searchBar.njk"%}
+         </div>
+         <div class="wrapper-item">
+            {% include "sections/myCampaigns/archievedDataTable.njk"%}
+         </div>
+      </div>
+   </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,217 @@
+.filter-wrapper {
+   display: flex;
+   justify-content: space-between;
+
+   @media (max-width: 767px) {
+      flex-direction: column;
+   }
+}
+
+.search-custom {
+   font-size: 31px;
+
+   svg {
+      display: block;
+   }
+
+   @media screen and (max-width: 767px) {
+      font-size: 20px;
+   }
+}
+
+.filter-number {
+   border-radius: 4px;
+   height: 24px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border: none;
+   margin: 8px 8px 8px 0px;
+   opacity: .5;
+   background-color: $grayLight1;
+   color: $black;
+
+   &.active {
+      color: $primaryColor;
+      background-color: $grayLight1;
+      opacity: 1;
+   }
+
+   &.custom {
+      color: $primaryColor;
+      background-color: $purpleLight2;
+
+      &.active {
+         color: $primaryColor;
+         background-color: $purpleLight2;
+         opacity: 1;
+      }
+   }
+}
+
+.filter-wrapper-custom {
+   min-height: 61px;
+   padding: 16px 20px;
+   border-bottom: 1px solid $grayLightBgColor;
+   margin-bottom: 20px;
+
+   @media screen and (max-width: 575px) {
+      padding: 5px 10px;
+   }
+}
+
+.campaign-star {
+   color: $grayProgressLight;
+   font-size: 25px;
+}
+
+.campaign-star.checked {
+   color: $grayLightTextColor;
+}
+
+.ra-progress-item.custom {
+   height: unset;
+   background: transparent;
+}
+
+.img {
+   object-fit: cover;
+}
+
+.post-black {
+   color: $black;
+}
+
+.post-blue {
+   color: $darkBlueColor;
+}
+
+.search-icon {
+   width: 25px;
+   height: 25px;
+}
+
+.create-campaign-form {
+   display: flex;
+   justify-content: flex-start;
+   width: 50%;
+   margin-right: 8px;
+
+   @media screen and(max-width: 767px) {
+      justify-content: center;
+      width: 100%;
+      margin-right: 0px;
+   }
+}
+
+.fitler-top {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 100%;
+
+   @media screen and(max-width:1230px) {
+      flex-direction: column;
+      align-items: flex-start;
+   }
+}
+
+.search-right {
+   display: flex;
+
+   @media screen and (max-width: 767px) {
+      margin-bottom: 50px;
+   }
+
+   @media screen and (max-width: 394px) {
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+   }
+
+}
+
+.dashboard-menu .ra-filter {
+   margin-top: unset;
+}
+
+.ra-filter {
+   @media screen and(max-width:1230px) {
+      margin-top: 30px;
+   }
+
+   @media screen and(max-width:767px) {
+      margin-top: 20px;
+   }
+}
+
+.create-campaign-filter {
+
+   @media screen and (min-width: 768px) and (max-width: 1230px) {
+      height: 101px;
+   }
+}
+
+.pages-number {
+   @media screen and (max-width: 394px) {
+      order: 3;
+   }
+}
+
+.create-campaign-wrapper {
+   display: flex;
+   align-items: center;
+   white-space: nowrap;
+
+   @media screen and(max-width: 767px) {
+      flex-direction: row;
+      justify-content: flex-start;
+      width: 100%;
+   }
+}
+
+.custom-border {
+   background-color: $grayLightBgColor;
+   height: 1px;
+   width: 100%;
+}
+
+.custom-modal-body {
+   padding: 0px;
+}
+
+.create-campaign-modal-social img {
+   height: 40px;
+   width: 174px;
+}
+
+.create-campaign-modal-content {
+   width: 410px;
+   margin: 0 auto;
+}
+
+.create-campaign-th {
+   padding-left: 35px !important;
+}
+
+.social-radio-label,
+.radio-btn {
+   transition: .2s;
+}
+
+.social-radio-input:checked~.create-campaign-modal-social.social-radio-label {
+   border-radius: 4px;
+   box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.2), 0px 0px 0px 4px rgba(0, 0, 0, 0.1);
+}
+
+.social-radio-input:checked~.create-campaign-modal-social.social-radio-label img {
+   filter: saturate(0.8);
+}
+
+.social-radio-input:checked~.radio-btn {
+   border: 1px solid $darkPrimaryColor;
+   border-radius: 200px;
+   box-shadow: -1px 5px 17px -5px $black;
+   background: $darkPrimaryColor;
+   color: $white;
+}

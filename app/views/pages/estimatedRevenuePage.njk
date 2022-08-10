@@ -1,0 +1,100 @@
+{% extends "layouts/layout.njk" %}
+
+{% block content %}
+
+<div class="row">
+   <div class="col-md-4">
+      <div class="d-card esitmate-card">
+         <h2 class="fz20 fw-500 mb-3">Today</h2>
+         <div class="d-flex justify-content-between">
+            <div class="d-flex align-items-start flex-column">
+               <p class="fz12 gray-color">Est. m/m Growth</p>
+               <div class="d-flex align-items-center">
+                  <h4 class="fw-700 fz14">36.5%</h4>
+                  <span class="mdi mdi-menu-up fz44 lh-1 green-color"></span>
+               </div>
+            </div>
+
+            <div class="d-flex align-items-center justify-content-end">
+               <!-- <div class="bdt">
+                  <img src="assets/images/icons/BDT.svg" alt="BDT">
+               </div> -->
+               <h3 class="fz28 fw-700">৳ 353.60</h3> <!-- <span>&#2547;</span> For taka icon -->
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="col-md-4">
+      <div class="d-card esitmate-card">
+         <h2 class="fz20 fw-500 mb-3">This Month</h2>
+         <div class="d-flex justify-content-between">
+            <div class="d-flex align-items-start flex-column">
+               <p class="fz12 gray-color">Est. m/m Growth</p>
+               <div class="d-flex align-items-center">
+                  <h4 class="fw-700 fz14">36.5%</h4>
+                  <span class="mdi mdi-menu-up fz44 lh-1 green-color"></span>
+               </div>
+            </div>
+
+            <div class="d-flex align-items-center justify-content-end">
+               <!-- <div class="bdt">
+                  <img src="assets/images/icons/BDT.svg" alt="BDT">
+               </div> -->
+               <h3 class="fz28 fw-700">৳ 5,264.52</h3> <!-- <span>&#2547;</span> For taka icon -->
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="col-md-4">
+      <div class="d-card esitmate-card">
+         <h2 class="fz20 fw-500 mb-3">Last Month</h2>
+         <div class="d-flex justify-content-between">
+            <div class="d-flex align-items-start flex-column">
+               <p class="fz12 gray-color">Est. m/m Growth</p>
+               <div class="d-flex align-items-center">
+                  <h4 class="fw-700 fz14">36.5%</h4>
+                  <span class="mdi mdi-menu-up fz44 lh-1 green-color"></span>
+               </div>
+            </div>
+
+            <div class="d-flex align-items-center justify-content-end">
+               <!-- <div class="bdt">
+                  <img src="assets/images/icons/BDT.svg" alt="BDT">
+               </div> -->
+               <h3 class="fz28 fw-700">৳ 46,371.30</h3> <!-- <span>&#2547;</span> For taka icon -->
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+
+<div class="ra-data-table-bg p-3 border-radius-8  ra-property-list  mt-2 mt-md-5 dashbaord-main">
+   <div class="row">
+      <div class="col-md-12">
+         <div class="property-data-table-head mb-2">
+            <h2 class="fw-500 fz24 text-sm-center">Last 10 Day to Day Information</h2>
+
+            <div class="propert-header-right">
+               <fieldset class="rs-form">
+                  <select class="ra-select estimate-revenue-select min-height-40 form-width fw-700 fz16">
+                     <option class="fz18 fw-500" value="bangladesh" selected>G&R</option>
+                     <option class="fz18 fw-500" value="saudi arabia">G&R</option>
+                     <option class="fz18 fw-500" value="us">G&R</option>
+                     <option class="fz18 fw-500" value="india">G&R</option>
+                  </select>
+               </fieldset>
+            </div>
+         </div>
+         <div class="dataTable table-responsive">
+
+            {% include "snippets/dataTable/estimatedRevenueDataTable.njk" %}
+
+            <!--Load More Button-->
+            {% include "snippets/loadMoreBtn.njk" %}
+
+         </div>
+      </div>
+   </div>
+</div>
+{% endblock %}

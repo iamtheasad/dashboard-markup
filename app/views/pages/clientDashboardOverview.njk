@@ -1,0 +1,1731 @@
+{% extends "layouts/layout2.njk" %}
+
+{% block content %}
+
+<!-- Top Bar -->
+<header class="topbar topbar2 d-flex justify-content-between align-items-center">
+   <div class="breadcumb fz16 fw-700">
+      <div class="d-flex">
+         <a href="#" class="mr-20">
+            <img src="assets/images/icons/left-arrow.svg" class="img long-arrow" alt="Arrow Icon">
+         </a>
+         <div class="d-flex flex-column pr-3">
+            <span class="purple-color fz16 fw-700">Sharetrip Summer Campaign 21</span>
+            <span class="purple-light-color fz12 fw-400">18 June - 17 July 2021</span>
+         </div>
+         <button class="btn-tag bg-green btn-4x12 radius-4 fz12 fw-600 border-0">Ongoing</button>
+      </div>
+   </div>
+   <div class="right-menu dropdown d-flex">
+      {% include 'snippets/topBar2Right.njk' %}
+   </div>
+</header>
+
+
+<div class="campaign-wrapper">
+
+   <div class="custom-sticky-top">
+      <!-- Camaigns Dashboard Menu -->
+      <div class="filter-wrapper dashboard-menu ra-border-bottom">
+         <div class="menu-content">
+            <ul>
+               <li><a href="clientDashboardOverview.html" class="active">Overview</a></li>
+               <li><a href="clientDashbaordAdGroups.html">Ad Groups</a></li>
+               <li><a href="clientDashboardAdBanners.html">Ad Banners</a></li>
+               <li><a href="clientDashboardAnalytics.html">Analytics</a></li>
+               <li><a href="clientDashboardSettingsCampaign.html">Settings</a></li>
+            </ul>
+         </div>
+
+         <div class="d-flex align-items-center justify-content-md-between justify-content-between">
+            <div class="ra-filter mr-1 mr-md-3">
+               <div class="dropdown dropdwon-3 dropdwon-4">
+                  <div class="dropdown-menu">
+                     <ul>
+
+                        <p class="fz12 fw-500 purple-light-color">Overall</p>
+
+                        <li data-section-id="#dashboard-current-update" class="fz14 check-filter remove-section">
+                           Current Update
+                        </li>
+                        <li data-section-id="#dashboard-campaign-metrics-0" class="fz14 check-filter remove-section">
+                           Campaign Metrics
+                        </li>
+                        <li data-section-id="#" class="fz14 check-filter remove-section">
+                           Ad Groups
+                        </li>
+                        <li data-section-id="#" class="fz14 check-filter remove-section">
+                           Comparison
+                        </li>
+                        <li data-section-id="#" class="fz14 check-filter remove-section">
+                           Publisher Share
+                        </li>
+
+                        <p class="fz12 fw-500 purple-light-color">Individual</p>
+
+                        <li data-section-id="#" class="fz14 check-filter remove-section">
+                           Ad Group Metrics
+                        </li>
+                        <li data-section-id="#" class="fz14 check-filter remove-section">
+                           Performance
+                        </li>
+                        <li data-section-id="#" class="fz14 check-filter remove-section">
+                           Performance Share
+                        </li>
+                        <li data-section-id="#" class="fz14 check-filter remove-section">
+                           Spending
+                        </li>
+                        <li data-section-id="#" class="fz14 check-filter remove-section">
+                           Delivery Trend
+                        </li>
+                     </ul>
+                  </div>
+
+                  <button class="filter-btn fw-500 fz14 d-flex align-items-center" type="button" data-toggle="dropdown"
+                     aria-haspopup="true">
+                     <span class="pr-2">
+                        <img src="assets/images/icons/select-section.svg" alt="Icon">
+                     </span>
+                     <p class="fz14">Select Sections</p>
+
+                     <div class="pl-2 pr-3">
+                        <span class="dropdown-icon down down-2">
+                           <img src="assets/images/icons/arrow-down.svg" alt="Icon">
+                        </span>
+                        <span class="dropdown-icon up up-2">
+                           <img src="assets/images/icons/arrow-down.svg" alt="Icon">
+                        </span>
+                     </div>
+                  </button>
+               </div>
+            </div>
+
+            <button class="filter-btn custom d-flex align-items-center mr-20">
+               <span class="pr-2 active">
+                  <img src="assets/images/icons/export.svg" alt="Icon">
+               </span>
+               <p class="fz14 fw-500">Export</p>
+            </button>
+
+            {% include 'snippets/threeDot.njk' %}
+         </div>
+      </div>
+
+      <!-- Campaign Dashbaord Filter -->
+      <div class="slection-tab mb-18">
+         <div class="slection-tab-content">
+            <div class="row">
+               <div class="col-md-12 col-lg-6 col-xl-3 mb-4">
+                  <form action="">
+                     <div class="custom-selection">
+                        <div class="dropdown dropdwon-3">
+                           <button class="disabled fw-500 fz14 d-flex align-items-center justify-content-between"
+                              type="button" data-toggle="dropdown">
+                              <p class="label-text">Select Campaign</p>
+
+                              <p class="fz14 disable-title blur">Sharetrip Summer Campaign...</p>
+                              <div class="d-flex align-items-center">
+                                 <div>
+                                    <span class="dropdown-icon">
+                                       <img src="assets/images/icons/arrow-down.svg" class="disable-img" alt="Icon">
+                                    </span>
+                                 </div>
+                              </div>
+                           </button>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+               <div class="col-md-12 col-lg-6 col-xl-3 mb-4">
+                  <form action="">
+                     <div class="custom-selection">
+                        <div class="dropdown dropdwon-3">
+
+                           <div class="dropdown-menu">
+                              <div class="dropdown-search searchInDropdown mb-3">
+                                 <input type="search" id="dropdwonSearch2" placeholder="Search" />
+                                 <label for="dropdwonSearch2">
+                                    <button type="submit" class="bg-transparent border-0">
+                                       <img src="assets/images/icons/search-purple.svg" alt="Icon">
+                                    </button>
+                                 </label>
+                              </div>
+
+                              <ul>
+                                 <li>
+                                    <label class="checkbox-wrapper">
+                                       <input type="checkbox">
+                                       <span class="checkmark checkmark-green"></span>
+                                       <span class="pl-4">Select All 3</span>
+                                    </label>
+                                 </li>
+                                 <li>
+                                    <label class="checkbox-wrapper">
+                                       <input type="checkbox">
+                                       <span class="checkmark checkmark-green"></span>
+                                       <span class="pl-4">Add Group for Dhaka</span>
+                                    </label>
+                                 </li>
+                                 <li>
+                                    <label class="checkbox-wrapper">
+                                       <input type="checkbox">
+                                       <span class="checkmark checkmark-green"></span>
+                                       <span class="pl-4">Add Group for Chittagong</span>
+                                    </label>
+                                 </li>
+                                 <li>
+                                    <label class="checkbox-wrapper">
+                                       <input type="checkbox">
+                                       <span class="checkmark checkmark-green"></span>
+                                       <span class="pl-4">Add Group for Sylhet</span>
+                                    </label>
+                                 </li>
+                              </ul>
+                           </div>
+
+                           <button class="fw-500 fz14 d-flex align-items-center justify-content-between" type="button"
+                              data-toggle="dropdown">
+                              <p class="label-text">Select Ad Group</p>
+
+                              <p class="fz14 blur">All Ad Groups</p>
+                              <div class="d-flex align-items-center">
+                                 <span class="number-notification mr-4">99</span>
+                                 <div>
+                                    <span class="dropdown-icon down">
+                                       <img src="assets/images/icons/arrow-down.svg" alt="Icon">
+                                    </span>
+                                    <span class="dropdown-icon up">
+                                       <img src="assets/images/icons/arrow-down.svg" alt="Icon">
+                                    </span>
+                                 </div>
+                              </div>
+                           </button>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+               <div class="col-md-12 col-lg-6 col-xl-3 mb-4">
+                  <form action="">
+                     <div class="custom-selection">
+                        <div class="dropdown dropdwon-3">
+                           <div class="dropdown-menu">
+                              <div class="dropdown-search searchInDropdown mb-3">
+                                 <input type="search" id="dropdwonSearch" placeholder="Search" />
+                                 <label for="dropdwonSearch">
+                                    <button type="submit" class="bg-transparent border-0">
+                                       <img src="assets/images/icons/search-purple.svg" alt="Icon">
+                                    </button>
+                                 </label>
+                              </div>
+
+                              <ul>
+                                 <li>
+                                    <label class="checkbox-wrapper">
+                                       <input type="checkbox">
+                                       <span class="checkmark checkmark-green"></span>
+                                       <span class="pl-4">Select All 3</span>
+                                    </label>
+                                 </li>
+                                 <li>
+                                    <label class="checkbox-wrapper">
+                                       <input type="checkbox">
+                                       <span class="checkmark checkmark-green"></span>
+                                       <span class="pl-4">Add Group for Dhaka</span>
+                                    </label>
+                                 </li>
+                                 <li>
+                                    <label class="checkbox-wrapper">
+                                       <input type="checkbox">
+                                       <span class="checkmark checkmark-green"></span>
+                                       <span class="pl-4">Add Group for Chittagong</span>
+                                    </label>
+                                 </li>
+                                 <li>
+                                    <label class="checkbox-wrapper">
+                                       <input type="checkbox">
+                                       <span class="checkmark checkmark-green"></span>
+                                       <span class="pl-4">Add Group for Sylhet</span>
+                                    </label>
+                                 </li>
+                              </ul>
+                           </div>
+
+                           <button class="fw-500 fz14 d-flex align-items-center justify-content-between" type="button"
+                              data-toggle="dropdown">
+                              <p class="label-text">Select Ad Banner</p>
+
+                              <p class="fz14 blur">All Ad Banners</p>
+                              <div class="d-flex align-items-center">
+                                 <span class="number-notification mr-4">3</span>
+                                 <div>
+                                    <span class="dropdown-icon down">
+                                       <img src="assets/images/icons/arrow-down.svg" alt="Icon">
+                                    </span>
+                                    <span class="dropdown-icon up">
+                                       <img src="assets/images/icons/arrow-down.svg" alt="Icon">
+                                    </span>
+                                 </div>
+                              </div>
+                           </button>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+               <div class="col-md-12 col-lg-6 col-xl-3 mb-4">
+                  <form action="">
+                     <div class="custom-selection">
+                        <div class="dropdown dropdwon-3">
+                           <fieldset class="multi-date-range">
+                              <label for="multiDateRange" class="position-absolute text-nowrap">
+                                 <span class="daterange-label-text">Select Date</span>
+                              </label>
+                              <label for="multiDateRange" class="label-img text-nowrap">
+                                 <svg width="18" height="21" class="daterange-svg-icon" viewBox="0 0 18 21" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                       d="M5.30769 0.5C5.69004 0.5 6 0.812359 6 1.19767V3.98837C6 4.37369 5.69004 4.68605 5.30769 4.68605C4.92534 4.68605 4.61538 4.37369 4.61538 3.98837V1.19767C4.61538 0.812359 4.92534 0.5 5.30769 0.5Z"
+                                       fill="#475364" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                       d="M12.6923 0.5C13.0747 0.5 13.3846 0.812359 13.3846 1.19767V3.98837C13.3846 4.37369 13.0747 4.68605 12.6923 4.68605C12.31 4.68605 12 4.37369 12 3.98837V1.19767C12 0.812359 12.31 0.5 12.6923 0.5Z"
+                                       fill="#475364" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                       d="M0.461538 7.79302C0.461538 7.40771 0.771495 7.09535 1.15385 7.09535H16.8462C17.2285 7.09535 17.5385 7.40771 17.5385 7.79302C17.5385 8.17834 17.2285 8.49069 16.8462 8.49069H1.15385C0.771495 8.49069 0.461538 8.17834 0.461538 7.79302Z"
+                                       fill="#475364" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                       d="M2.29578 4.34683C1.70434 4.9887 1.38462 5.95579 1.38462 7.24419V15.1512C1.38462 16.4396 1.70434 17.4066 2.29578 18.0485C2.8786 18.681 3.82426 19.1047 5.30769 19.1047H12.6923C14.1757 19.1047 15.1214 18.681 15.7042 18.0485C16.2957 17.4066 16.6154 16.4396 16.6154 15.1512V7.24419C16.6154 5.95579 16.2957 4.9887 15.7042 4.34683C15.1214 3.71431 14.1757 3.2907 12.6923 3.2907H5.30769C3.82426 3.2907 2.8786 3.71431 2.29578 4.34683ZM1.28114 3.39736C2.19833 2.40197 3.56035 1.89535 5.30769 1.89535H12.6923C14.4396 1.89535 15.8017 2.40197 16.7189 3.39736C17.6274 4.38339 18 5.74189 18 7.24419V15.1512C18 16.6535 17.6274 18.012 16.7189 18.998C15.8017 19.9934 14.4396 20.5 12.6923 20.5H5.30769C3.56035 20.5 2.19833 19.9934 1.28114 18.998C0.372585 18.012 0 16.6535 0 15.1512V7.24419C0 5.74189 0.372585 4.38339 1.28114 3.39736Z"
+                                       fill="#475364" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                       d="M8.07275 12.0814C8.07275 11.5677 8.48603 11.1512 8.99583 11.1512H9.00412C9.51392 11.1512 9.9272 11.5677 9.9272 12.0814C9.9272 12.5952 9.51392 13.0116 9.00412 13.0116H8.99583C8.48603 13.0116 8.07275 12.5952 8.07275 12.0814Z"
+                                       fill="#475364" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                       d="M4.65629 12.0814C4.65629 11.5677 5.06956 11.1512 5.57936 11.1512H5.58766C6.09746 11.1512 6.51073 11.5677 6.51073 12.0814C6.51073 12.5952 6.09746 13.0116 5.58766 13.0116H5.57936C5.06956 13.0116 4.65629 12.5952 4.65629 12.0814Z"
+                                       fill="#475364" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                       d="M4.65629 14.8721C4.65629 14.3584 5.06956 13.9419 5.57936 13.9419H5.58766C6.09746 13.9419 6.51073 14.3584 6.51073 14.8721C6.51073 15.3859 6.09746 15.8023 5.58766 15.8023H5.57936C5.06956 15.8023 4.65629 15.3859 4.65629 14.8721Z"
+                                       fill="#475364" />
+                                 </svg>
+                              </label>
+                              <input type="text" class="date-range date-range-activator" id="multiDateRange"
+                                 name="daterange" value="" />
+                           </fieldset>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+
+         <form action="">
+            <div class="d-flex justify-content-end p-0x20 pb-16">
+               <button class="ra-btn blue-color-2 ra-btn-6x12 bg-transparent min-height-32fz14 fw-500"
+                  type="button">Clear
+                  All</button>
+               <button class="ra-btn ra-btn-blue-bg ra-btn-6x12 min-height-32fz14 fw-500" type="submit">Apply
+                  Filters</button>
+            </div>
+
+            <div>
+               <div class="p-0x20 mb-3 d-flex align-items-center">
+                  <div class="ml-auto">
+                     <p class="fz12 fw-500 purple-light-color">Applying Filters. Please wait while we reload the
+                        overview</p>
+                  </div>
+                  <div class="ml-auto">
+                     <button class="ra-btn blue-color-2 ra-btn-6x12 bg-transparent min-height-32fz14 fw-500"
+                        type="button">Cancel</button>
+                  </div>
+               </div>
+
+               <div class="progress" style="height: 3px;">
+                  <div class="progress-bar green" role="progressbar" style="width: 25%;" aria-valuenow="25"
+                     aria-valuemin="0" aria-valuemax="100"></div>
+               </div>
+            </div>
+
+            <div class="p-0x20 pb-16">
+               <div class="d-flex align-items-center">
+                  <div class="ml-auto">
+                     <p class="fz12 fw-500 purple-light-color">Showing results for 2 Ad Banners from 1 Ad Group between
+                        18 June 21 - 29 June 21</p>
+                  </div>
+                  <div class="ml-auto">
+                     <button class="ra-btn blue-color-2 ra-btn-6x12 bg-transparent min-height-32fz14 fw-500"
+                        type="button">Clear Filters</button>
+                  </div>
+               </div>
+            </div>
+         </form>
+      </div>
+   </div>
+
+
+   <div class="card-wrapper">
+      {% set data = {
+      img: 'assets/images/icons/total-reach.svg',
+      title: 'Total Reach',
+      amount: '997,098'
+      }%}
+      {% include 'snippets/resultCard.njk' %}
+
+      {% set data = {
+      img: 'assets/images/icons/total-clicks.svg',
+      title: 'Total Reach',
+      amount: '997,098'
+      }%}
+      {% include 'snippets/resultCard.njk' %}
+
+      {% set data = {
+      img: 'assets/images/icons/total-impressions.svg',
+      title: 'Total Clicks',
+      amount: '11,354'
+      }%}
+      {% include 'snippets/resultCard.njk' %}
+
+      {% set data = {
+      img: 'assets/images/icons/total-conversions.svg',
+      title: 'Total Impressions',
+      amount: '1,109,789'
+      }%}
+      {% include 'snippets/resultCard.njk' %}
+
+      {% set data = {
+      img: 'assets/images/icons/total-spent.svg',
+      title: 'Total Spent',
+      amount: 'BDT 7,990'
+      }%}
+      {% include 'snippets/resultCard.njk' %}
+   </div>
+
+
+   <div class="card-wrapper mb-18">
+      {% set data = {
+      img: 'assets/images/icons/ctr.svg',
+      title: 'CTR',
+      amount: '0.85%'
+      }%}
+      {% include 'snippets/resultCard.njk' %}
+
+      {% set data = {
+      img: 'assets/images/icons/cpc.svg',
+      title: 'CPC',
+      amount: 'BDT 0.54'
+      }%}
+      {% include 'snippets/resultCard.njk' %}
+
+      {% set data = {
+      img: 'assets/images/icons/cpm.svg',
+      title: 'CPM',
+      amount: 'BDT 1.14'
+      }%}
+      {% include 'snippets/resultCard.njk' %}
+
+      {% set data = {
+      img: 'assets/images/icons/cpa.svg',
+      title: 'CPA',
+      amount: 'BDT 7.97'
+      }%}
+      {% include 'snippets/resultCard.njk' %}
+
+      {% set data = {
+      img: 'assets/images/icons/cvr.svg',
+      title: 'CVR',
+      amount: '0.02%'
+      }%}
+      {% include 'snippets/resultCard.njk' %}
+   </div>
+
+
+   <!-- Current Update Chart -->
+   <div id="dashboard-current-update"
+      class="sectionShowHide bg-white tab-top ra-border-2 radius-4 p-20 m-20 d-flex justify-content-between">
+      <div class="tab-left">
+         <ul class="nav" id="chartTab" role="tablist">
+            <li class="nav-item">
+               <h3 class="fz18 fw-700 mr-2">Current Update</h3>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link fz14 fw-500 p-6x16 active" id="update-tab" data-toggle="pill" href="#today" role="tab"
+                  aria-controls="today" aria-selected="true">Today</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link fz14 fw-500 p-6x16" id="yesterday-tab" data-toggle="pill" href="#yesterday" role="tab"
+                  aria-controls="yesterday" aria-selected="false">Yesterday</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link fz14 fw-500 p-6x16" id="days-tab" data-toggle="pill" href="#days" role="tab"
+                  aria-controls="days" aria-selected="false">Last 7 days</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link fz14 fw-500 p-6x16" id="lifetime-tab" data-toggle="pill" href="#lifetime" role="tab"
+                  aria-controls="lifetime" aria-selected="false">Lifetime</a>
+            </li>
+            <li class="nav-item ml-auto">
+               <div class="d-flex">
+                  <p class="fz12 fw-400 purple-light-color pt-1 mr-3">12:00 AM - 17:00 PM, 29 June 2021</p>
+                  <div class="dropdown dot-dropdown">
+                     <button type="button" class="ra-three-dot-btn" data-toggle="dropdown" aria-haspopup="true">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                     </button>
+                     <div class="dropdown-menu filter-dropdown">
+                        <a class="dropdown-item" href="#">Demo Text 1</a>
+                        <a class="dropdown-item" href="#">Demo Text 2</a>
+                        <a class="dropdown-item" href="#">Demo Text 3</a>
+                        <a class="dropdown-item" href="#">Demo Text 4</a>
+                     </div>
+                  </div>
+               </div>
+            </li>
+         </ul>
+
+         <div class="tab-content" id="chartTabContent">
+            <div class="tab-pane fade show active" id="today" role="tabpanel" aria-labelledby="today-tab">
+               <img src="assets/images/icons/graph.jpg" alt="">
+            </div>
+            <div class="tab-pane fade" id="yesterday" role="tabpanel" aria-labelledby="yesterday-tab">
+               <img src="assets/images/icons/graph.jpg" alt="">
+            </div>
+            <div class="tab-pane fade" id="days" role="tabpanel" aria-labelledby="days-tab">
+               <img src="assets/images/icons/graph.jpg" alt="">
+            </div>
+            <div class="tab-pane fade" id="lifetime" role="tabpanel" aria-labelledby="lifetime-tab">
+               <img src="assets/images/icons/graph.jpg" alt="">
+            </div>
+         </div>
+      </div>
+   </div>
+
+
+   <!-- DatatTable Container -->
+   <div id="dashboard-campaign-metrics-0" class="datatableMultiple p-0x20 sectionShowHide">
+      <!-- Filter Bar -->
+      <div class="filter-wrapper campaign-metrics mb-0 bg-white p-16x20">
+         <div class="fitler-top w-100">
+            <form action="" class="rs-form create-campaign-form custom-form">
+               <div class="create-campaign-wrapper w-100">
+                  <div class="fz18 fw-700 purple-color mr-2">Campaign Metrics</div>
+                  <div class="animate-search w-100">
+                     <button type="button"
+                        class="hidden-search-icon search-icon border-0 bg-transparent ml-md-3 ml-0 d-flex align-items-center">
+                        <span class="search-img search-custom">
+                           <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                 d="M13.8034 12.8176L11.208 10.2416C12.2154 8.98472 12.7033 7.38934 12.5713 5.78354C12.4393 4.17774 11.6974 2.68358 10.4983 1.60828C9.29906 0.532985 7.7337 -0.0417126 6.12404 0.00235967C4.51437 0.046432 2.98276 0.705924 1.84413 1.84523C0.705504 2.98454 0.0464044 4.51706 0.00235827 6.12768C-0.0416878 7.7383 0.532668 9.30459 1.60733 10.5045C2.68198 11.7044 4.17526 12.4467 5.7801 12.5788C7.38495 12.7109 8.97938 12.2227 10.2355 11.2146L12.81 13.7906C12.8751 13.8562 12.9524 13.9083 13.0377 13.9439C13.1229 13.9794 13.2144 13.9977 13.3067 13.9977C13.3991 13.9977 13.4905 13.9794 13.5758 13.9439C13.661 13.9083 13.7384 13.8562 13.8034 13.7906C13.9295 13.6601 14 13.4857 14 13.3041C14 13.1226 13.9295 12.9482 13.8034 12.8176ZM6.31088 11.2146C5.34233 11.2146 4.39552 10.9273 3.5902 10.3888C2.78488 9.85041 2.15721 9.08514 1.78656 8.18978C1.41591 7.29442 1.31893 6.3092 1.50789 5.35869C1.69684 4.40818 2.16324 3.53508 2.84811 2.84981C3.53298 2.16453 4.40556 1.69785 5.3555 1.50878C6.30545 1.31971 7.29009 1.41675 8.18491 1.78762C9.07974 2.15849 9.84456 2.78654 10.3827 3.59234C10.9208 4.39814 11.208 5.3455 11.208 6.31463C11.208 7.61419 10.692 8.86053 9.77364 9.77945C8.85526 10.6984 7.60967 11.2146 6.31088 11.2146Z"
+                                 fill="#383874" />
+                           </svg>
+                        </span>
+                     </button>
+
+                     <div class="dropdown-search hidden-search">
+                        <input type="search" class="dataTable-search-activator" placeholder="Search" />
+                        <label for="dropdwonSearch">
+                           <button class="bg-transparent border-0">
+                              <img src="assets/images/icons/search-purple.svg" alt="Icon">
+                           </button>
+                        </label>
+                     </div>
+                  </div>
+               </div>
+            </form>
+
+            <div class="search-right text-nowrap">
+               <div class="ra-filter mr-3 mr-md-0">
+                  <div class="dropdown dropdwon-3 dropdwon-4">
+                     <div class="dropdown-menu">
+                        <ul>
+                           <li class="fz14 check-filter toggle-vis" data-column="0">
+                              Dates
+                           </li>
+                           <li class="fz14 check-filter toggle-vis" data-column="1">
+                              Reach
+                           </li>
+                           <li class="fz14 check-filter toggle-vis" data-column="2">
+                              Clicks
+                           </li>
+                           <li class="fz14 check-filter toggle-vis" data-column="3">
+                              Imprssn
+                           </li>
+                           <li class="fz14 check-filter toggle-vis" data-column="4">
+                              Convrsn
+                           </li>
+                           <li class="fz14 check-filter toggle-vis" data-column="5">
+                              CPM
+                           </li>
+                           <li class="fz14 check-filter toggle-vis" data-column="6">
+                              CPC
+                           </li>
+                           <li class="fz14 check-filter toggle-vis" data-column="7">
+                              CPA
+                           </li>
+                           <li class="fz14 check-filter toggle-vis" data-column="8">
+                              CTR
+                           </li>
+                           <li class="fz14 check-filter toggle-vis" data-column="9">
+                              Spent
+                           </li>
+                        </ul>
+                     </div>
+
+                     <button class="filter-btn fw-500 fz14 d-flex align-items-center" type="button"
+                        data-toggle="dropdown" aria-haspopup="true">
+                        <span class="pr-2 d-flex">
+                           <svg width="18" height="16" viewBox="0 0 18 16" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd"
+                                 d="M10.8493 12.6561C10.8493 12.3054 11.1253 12.0212 11.4658 12.0212H17.2192C17.5596 12.0212 17.8356 12.3054 17.8356 12.6561C17.8356 13.0067 17.5596 13.291 17.2192 13.291H11.4658C11.1253 13.291 10.8493 13.0067 10.8493 12.6561Z"
+                                 fill="#475364" />
+                              <path fill-rule="evenodd" clip-rule="evenodd"
+                                 d="M0.164384 12.6561C0.164384 12.3054 0.440372 12.0212 0.780822 12.0212H3.24658C3.58702 12.0212 3.86301 12.3054 3.86301 12.6561C3.86301 13.0067 3.58702 13.291 3.24658 13.291H0.780822C0.440372 13.291 0.164384 13.0067 0.164384 12.6561Z"
+                                 fill="#475364" />
+                              <path fill-rule="evenodd" clip-rule="evenodd"
+                                 d="M14.137 3.34392C14.137 2.99326 14.413 2.70899 14.7534 2.70899H17.2192C17.5596 2.70899 17.8356 2.99326 17.8356 3.34392C17.8356 3.69457 17.5596 3.97884 17.2192 3.97884H14.7534C14.413 3.97884 14.137 3.69457 14.137 3.34392Z"
+                                 fill="#475364" />
+                              <path fill-rule="evenodd" clip-rule="evenodd"
+                                 d="M0.164384 3.34392C0.164384 2.99326 0.440372 2.70899 0.780822 2.70899H6.53425C6.8747 2.70899 7.15068 2.99326 7.15068 3.34392C7.15068 3.69457 6.8747 3.97884 6.53425 3.97884H0.780822C0.440372 3.97884 0.164384 3.69457 0.164384 3.34392Z"
+                                 fill="#475364" />
+                              <path fill-rule="evenodd" clip-rule="evenodd"
+                                 d="M4.13195 10.9677C4.00486 11.0805 3.86301 11.3057 3.86301 11.8095V13.5026C3.86301 14.0065 4.00486 14.2317 4.13195 14.3445C4.27609 14.4725 4.51934 14.5608 4.89041 14.5608H9.82192C10.193 14.5608 10.4362 14.4725 10.5804 14.3445C10.7075 14.2317 10.8493 14.0065 10.8493 13.5026V11.8095C10.8493 11.3057 10.7075 11.0805 10.5804 10.9677C10.4362 10.8397 10.193 10.7513 9.82192 10.7513H4.89041C4.51934 10.7513 4.27609 10.8397 4.13195 10.9677ZM3.32695 10.0059C3.77871 9.60476 4.35738 9.48148 4.89041 9.48148H9.82192C10.355 9.48148 10.9336 9.60476 11.3854 10.0059C11.8542 10.4221 12.0822 11.0435 12.0822 11.8095V13.5026C12.0822 14.2686 11.8542 14.89 11.3854 15.3063C10.9336 15.7074 10.355 15.8307 9.82192 15.8307H4.89041C4.35738 15.8307 3.77871 15.7074 3.32695 15.3063C2.85815 14.89 2.63014 14.2686 2.63014 13.5026V11.8095C2.63014 11.0435 2.85815 10.4221 3.32695 10.0059Z"
+                                 fill="#475364" />
+                              <path fill-rule="evenodd" clip-rule="evenodd"
+                                 d="M7.41962 1.6555C7.29253 1.76834 7.15068 1.99352 7.15068 2.49735V4.19048C7.15068 4.69431 7.29253 4.91949 7.41962 5.03233C7.56376 5.16031 7.80701 5.24868 8.17808 5.24868H13.1096C13.4807 5.24868 13.7239 5.16031 13.8681 5.03233C13.9951 4.91949 14.137 4.69431 14.137 4.19048V2.49735C14.137 1.99352 13.9951 1.76834 13.8681 1.6555C13.7239 1.52752 13.4807 1.43915 13.1096 1.43915H8.17808C7.80701 1.43915 7.56376 1.52752 7.41962 1.6555ZM6.61463 0.693708C7.06638 0.29259 7.64505 0.169312 8.17808 0.169312H13.1096C13.6426 0.169312 14.2213 0.29259 14.673 0.693708C15.1418 1.10997 15.3699 1.73135 15.3699 2.49735V4.19048C15.3699 4.95648 15.1418 5.57786 14.673 5.99412C14.2213 6.39524 13.6426 6.51852 13.1096 6.51852H8.17808C7.64505 6.51852 7.06638 6.39524 6.61463 5.99412C6.14582 5.57786 5.91781 4.95648 5.91781 4.19048V2.49735C5.91781 1.73135 6.14582 1.10997 6.61463 0.693708Z"
+                                 fill="#475364" />
+                              <path fill-rule="evenodd" clip-rule="evenodd"
+                                 d="M6.50729 0.565469C7.00014 0.127866 7.6236 0 8.17808 0H13.1096C13.6641 0 14.2875 0.127866 14.7804 0.565469C15.2949 1.02232 15.5342 1.69667 15.5342 2.49735V2.53968H17.2192C17.6504 2.53968 18 2.89975 18 3.34392C18 3.78808 17.6504 4.14815 17.2192 4.14815H15.5342V4.19048C15.5342 4.99116 15.2949 5.66551 14.7804 6.12236C14.2875 6.55996 13.6641 6.68783 13.1096 6.68783H8.17808C7.6236 6.68783 7.00014 6.55996 6.50729 6.12236C5.99277 5.66551 5.75342 4.99116 5.75342 4.19048V4.14815H0.780822C0.349586 4.14815 0 3.78808 0 3.34392C0 2.89975 0.349586 2.53968 0.780822 2.53968H5.75342V2.49735C5.75342 1.69667 5.99277 1.02232 6.50729 0.565469ZM5.75342 2.87831H0.780822C0.531159 2.87831 0.328767 3.08677 0.328767 3.34392C0.328767 3.60106 0.531159 3.80952 0.780822 3.80952H5.75342V2.87831ZM6.08219 3.80952V2.87831H6.53425C6.78391 2.87831 6.9863 3.08677 6.9863 3.34392C6.9863 3.60106 6.78391 3.80952 6.53425 3.80952H6.08219ZM6.08219 4.14815V4.19048C6.08219 4.9218 6.29888 5.49022 6.72196 5.86588C7.13262 6.23052 7.6665 6.34921 8.17808 6.34921H13.1096C13.6212 6.34921 14.1551 6.23052 14.5657 5.86588C14.9888 5.49022 15.2055 4.9218 15.2055 4.19048V4.14815H14.7534C14.585 4.14815 14.4289 4.09319 14.3014 3.99974V4.19048C14.3014 4.72989 14.1477 5.00759 13.9754 5.16057C13.7904 5.32483 13.5026 5.41799 13.1096 5.41799H8.17808C7.7851 5.41799 7.49728 5.32483 7.31229 5.16057C7.14 5.00759 6.9863 4.72989 6.9863 4.19048V3.99974C6.85873 4.09319 6.70272 4.14815 6.53425 4.14815H6.08219ZM7.31507 4.19048C7.31507 4.65874 7.44507 4.83139 7.52695 4.90409C7.63024 4.9958 7.82891 5.07936 8.17808 5.07936H13.1096C13.4588 5.07936 13.6574 4.9958 13.7607 4.90409C13.8426 4.83139 13.9726 4.65874 13.9726 4.19048V2.49735C13.9726 2.02909 13.8426 1.85644 13.7607 1.78374C13.6574 1.69203 13.4588 1.60847 13.1096 1.60847H8.17808C7.82891 1.60847 7.63024 1.69203 7.52695 1.78374C7.44507 1.85644 7.31507 2.02909 7.31507 2.49735V4.19048ZM14.3014 2.68809V2.49735C14.3014 1.95794 14.1477 1.68024 13.9754 1.52726C13.7904 1.363 13.5026 1.26984 13.1096 1.26984H8.17808C7.7851 1.26984 7.49728 1.363 7.31229 1.52726C7.14 1.68024 6.9863 1.95794 6.9863 2.49735V2.68809C6.85873 2.59464 6.70272 2.53968 6.53425 2.53968H6.08219V2.49735C6.08219 1.76603 6.29888 1.19761 6.72196 0.821947C7.13262 0.457313 7.6665 0.338624 8.17808 0.338624H13.1096C13.6212 0.338624 14.1551 0.457313 14.5657 0.821947C14.9888 1.19761 15.2055 1.76603 15.2055 2.49735V2.53968H14.7534C14.585 2.53968 14.4289 2.59464 14.3014 2.68809ZM15.2055 2.87831H14.7534C14.5038 2.87831 14.3014 3.08677 14.3014 3.34392C14.3014 3.60106 14.5038 3.80952 14.7534 3.80952H15.2055V2.87831ZM15.5342 3.80952H17.2192C17.4688 3.80952 17.6712 3.60106 17.6712 3.34392C17.6712 3.08677 17.4688 2.87831 17.2192 2.87831H15.5342V3.80952ZM3.21962 9.87764C3.71247 9.44003 4.33593 9.31217 4.89041 9.31217H9.82192C10.3764 9.31217 10.9999 9.44003 11.4927 9.87764C12.0072 10.3345 12.2466 11.0088 12.2466 11.8095V11.8519H17.2192C17.6504 11.8519 18 12.2119 18 12.6561C18 13.1002 17.6504 13.4603 17.2192 13.4603H12.2466V13.5026C12.2466 14.3033 12.0072 14.9777 11.4927 15.4345C10.9999 15.8721 10.3764 16 9.82192 16H4.89041C4.33593 16 3.71247 15.8721 3.21962 15.4345C2.7051 14.9777 2.46575 14.3033 2.46575 13.5026V13.4603H0.780822C0.349586 13.4603 0 13.1002 0 12.6561C0 12.2119 0.349586 11.8519 0.780822 11.8519H2.46575V11.8095C2.46575 11.0088 2.7051 10.3345 3.21962 9.87764ZM2.46575 12.1905H0.780822C0.531159 12.1905 0.328767 12.3989 0.328767 12.6561C0.328767 12.9132 0.531159 13.1217 0.780822 13.1217H2.46575V12.1905ZM2.79452 13.1217V12.1905H3.24658C3.49624 12.1905 3.69863 12.3989 3.69863 12.6561C3.69863 12.9132 3.49624 13.1217 3.24658 13.1217H2.79452ZM2.79452 13.4603V13.5026C2.79452 14.234 3.0112 14.8024 3.43429 15.1781C3.84495 15.5427 4.37883 15.6614 4.89041 15.6614H9.82192C10.3335 15.6614 10.8674 15.5427 11.278 15.1781C11.7011 14.8024 11.9178 14.234 11.9178 13.5026V13.4603H11.4658C11.2973 13.4603 11.1413 13.4054 11.0137 13.3119V13.5026C11.0137 14.0421 10.86 14.3198 10.6877 14.4727C10.5027 14.637 10.2149 14.7302 9.82192 14.7302H4.89041C4.49743 14.7302 4.20961 14.637 4.02462 14.4727C3.85233 14.3198 3.69863 14.0421 3.69863 13.5026V13.3119C3.57106 13.4054 3.41505 13.4603 3.24658 13.4603H2.79452ZM4.0274 13.5026C4.0274 13.9709 4.1574 14.1436 4.23928 14.2163C4.34256 14.308 4.54124 14.3915 4.89041 14.3915H9.82192C10.1711 14.3915 10.3698 14.308 10.473 14.2163C10.5549 14.1436 10.6849 13.9709 10.6849 13.5026V11.8095C10.6849 11.3413 10.5549 11.1686 10.473 11.0959C10.3698 11.0042 10.1711 10.9206 9.82192 10.9206H4.89041C4.54124 10.9206 4.34256 11.0042 4.23928 11.0959C4.1574 11.1686 4.0274 11.3413 4.0274 11.8095V13.5026ZM11.0137 12.0003V11.8095C11.0137 11.2701 10.86 10.9924 10.6877 10.8394C10.5027 10.6752 10.2149 10.582 9.82192 10.582H4.89041C4.49743 10.582 4.20961 10.6752 4.02462 10.8394C3.85233 10.9924 3.69863 11.2701 3.69863 11.8095V12.0003C3.57106 11.9068 3.41505 11.8519 3.24658 11.8519H2.79452V11.8095C2.79452 11.0782 3.0112 10.5098 3.43429 10.1341C3.84495 9.76948 4.37883 9.65079 4.89041 9.65079H9.82192C10.3335 9.65079 10.8674 9.76948 11.278 10.1341C11.7011 10.5098 11.9178 11.0782 11.9178 11.8095V11.8519H11.4658C11.2973 11.8519 11.1413 11.9068 11.0137 12.0003ZM11.9178 12.1905H11.4658C11.2161 12.1905 11.0137 12.3989 11.0137 12.6561C11.0137 12.9132 11.2161 13.1217 11.4658 13.1217H11.9178V12.1905ZM12.2466 13.1217H17.2192C17.4688 13.1217 17.6712 12.9132 17.6712 12.6561C17.6712 12.3989 17.4688 12.1905 17.2192 12.1905H12.2466V13.1217Z"
+                                 fill="#475364" />
+                           </svg>
+                        </span>
+                        <p class="fz14">Customize</p>
+
+                        <div class="pl-2 pr-3">
+                           <span class="dropdown-icon down down-2">
+                              <img src="assets/images/icons/arrow-down.svg" alt="Icon">
+                           </span>
+                           <span class="dropdown-icon up up-2">
+                              <img src="assets/images/icons/arrow-down.svg" alt="Icon">
+                           </span>
+                        </div>
+                     </button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <!-- Datatabel -->
+      <div class="row">
+         <div class="col-md-12">
+            <div class="data-table-3 all-datatable">
+
+               <table class="table table-striped table-hover table-bordered datatableActivator-2" style="width:100%">
+                  <thead>
+                     <tr>
+                        <th class="fz13 fw-400 purple-color">Date</th>
+                        <th class="fz13 fw-400 purple-color">Reach</th>
+                        <th class="fz13 fw-400 purple-color">Clicks</th>
+                        <th class="fz13 fw-400 purple-color">Imprssn </th>
+                        <th class="fz13 fw-400 purple-color">Convrsn</th>
+                        <th class="fz13 fw-400 purple-color">CPM</th>
+                        <th class="fz13 fw-400 purple-color">CPC</th>
+                        <th class="fz13 fw-400 purple-color">CPA</th>
+                        <th class="fz13 fw-400 purple-color">CTR</th>
+                        <th class="fz13 fw-400 purple-color">Spent</th>
+                        <th class="no-icon">&nbsp;</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td>
+                           <span class="fz16 fw-500 purple-color">29 June, 2021</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">0.02%</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">2,308</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">646,232</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">34</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳ 23.96</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳ 7.60</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳ 27.60</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">0.85%</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳15,486</span>
+                        </td>
+                        <td>
+                           <div class="dropdown dot-dropdown justify-content-center">
+                              <button type="button" class="ra-three-dot-btn" data-toggle="dropdown"
+                                 aria-haspopup="true">
+                                 <span></span>
+                                 <span></span>
+                                 <span></span>
+                              </button>
+                              <div class="dropdown-menu filter-dropdown">
+                                 <a class="dropdown-item" href="#">Demo Text 1</a>
+                                 <a class="dropdown-item" href="#">Demo Text 2</a>
+                                 <a class="dropdown-item" href="#">Demo Text 3</a>
+                                 <a class="dropdown-item" href="#">Demo Text 4</a>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <span class="fz16 fw-500 purple-color">30 June, 2021</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">0.20%</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">2,5608</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">746,232</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">84</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳ 93.96</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳ 7.60</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳ 2.60</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">0.75%</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳55,486</span>
+                        </td>
+                        <td>
+                           <div class="dropdown dot-dropdown justify-content-center">
+                              <button type="button" class="ra-three-dot-btn" data-toggle="dropdown"
+                                 aria-haspopup="true">
+                                 <span></span>
+                                 <span></span>
+                                 <span></span>
+                              </button>
+                              <div class="dropdown-menu filter-dropdown">
+                                 <a class="dropdown-item" href="#">Demo Text 1</a>
+                                 <a class="dropdown-item" href="#">Demo Text 2</a>
+                                 <a class="dropdown-item" href="#">Demo Text 3</a>
+                                 <a class="dropdown-item" href="#">Demo Text 4</a>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <span class="fz16 fw-500 purple-color">29 June, 2021</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">0.02%</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">2,308</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">646,232</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">34</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳ 23.96</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳ 7.60</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳ 27.60</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">0.85%</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳15,486</span>
+                        </td>
+                        <td>
+                           <div class="dropdown dot-dropdown justify-content-center">
+                              <button type="button" class="ra-three-dot-btn" data-toggle="dropdown"
+                                 aria-haspopup="true">
+                                 <span></span>
+                                 <span></span>
+                                 <span></span>
+                              </button>
+                              <div class="dropdown-menu filter-dropdown">
+                                 <a class="dropdown-item" href="#">Demo Text 1</a>
+                                 <a class="dropdown-item" href="#">Demo Text 2</a>
+                                 <a class="dropdown-item" href="#">Demo Text 3</a>
+                                 <a class="dropdown-item" href="#">Demo Text 4</a>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <span class="fz16 fw-500 purple-color">29 June, 2021</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">0.02%</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">2,308</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">646,232</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">34</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳ 23.96</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳ 7.60</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳ 27.60</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">0.85%</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳15,486</span>
+                        </td>
+                        <td>
+                           <div class="dropdown dot-dropdown justify-content-center">
+                              <button type="button" class="ra-three-dot-btn" data-toggle="dropdown"
+                                 aria-haspopup="true">
+                                 <span></span>
+                                 <span></span>
+                                 <span></span>
+                              </button>
+                              <div class="dropdown-menu filter-dropdown">
+                                 <a class="dropdown-item" href="#">Demo Text 1</a>
+                                 <a class="dropdown-item" href="#">Demo Text 2</a>
+                                 <a class="dropdown-item" href="#">Demo Text 3</a>
+                                 <a class="dropdown-item" href="#">Demo Text 4</a>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <span class="fz16 fw-500 purple-color">30 June, 2021</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">0.20%</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">2,5608</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">746,232</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">84</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳ 93.96</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳ 7.60</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳ 2.60</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">0.75%</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳55,486</span>
+                        </td>
+                        <td>
+                           <div class="dropdown dot-dropdown justify-content-center">
+                              <button type="button" class="ra-three-dot-btn" data-toggle="dropdown"
+                                 aria-haspopup="true">
+                                 <span></span>
+                                 <span></span>
+                                 <span></span>
+                              </button>
+                              <div class="dropdown-menu filter-dropdown">
+                                 <a class="dropdown-item" href="#">Demo Text 1</a>
+                                 <a class="dropdown-item" href="#">Demo Text 2</a>
+                                 <a class="dropdown-item" href="#">Demo Text 3</a>
+                                 <a class="dropdown-item" href="#">Demo Text 4</a>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <span class="fz16 fw-500 purple-color">29 Aug, 2022</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">0.04%</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">2,208</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">632</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">994</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳ 2.96</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳ 2.60</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳ 7.60</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">0.95%</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳95,486</span>
+                        </td>
+                        <td>
+                           <div class="dropdown dot-dropdown justify-content-center">
+                              <button type="button" class="ra-three-dot-btn" data-toggle="dropdown"
+                                 aria-haspopup="true">
+                                 <span></span>
+                                 <span></span>
+                                 <span></span>
+                              </button>
+                              <div class="dropdown-menu filter-dropdown">
+                                 <a class="dropdown-item" href="#">Demo Text 1</a>
+                                 <a class="dropdown-item" href="#">Demo Text 2</a>
+                                 <a class="dropdown-item" href="#">Demo Text 3</a>
+                                 <a class="dropdown-item" href="#">Demo Text 4</a>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <span class="fz16 fw-500 purple-color">2 June, 2021</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">0.02%</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">2,308</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">654,232</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">34</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳ 23.96</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳ 7.60</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳ 27.60</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">0.85%</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳15,486</span>
+                        </td>
+                        <td>
+                           <div class="dropdown dot-dropdown justify-content-center">
+                              <button type="button" class="ra-three-dot-btn" data-toggle="dropdown"
+                                 aria-haspopup="true">
+                                 <span></span>
+                                 <span></span>
+                                 <span></span>
+                              </button>
+                              <div class="dropdown-menu filter-dropdown">
+                                 <a class="dropdown-item" href="#">Demo Text 1</a>
+                                 <a class="dropdown-item" href="#">Demo Text 2</a>
+                                 <a class="dropdown-item" href="#">Demo Text 3</a>
+                                 <a class="dropdown-item" href="#">Demo Text 4</a>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <span class="fz16 fw-500 purple-color">1 June, 2021</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">0.20%</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">2,5608</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">746,232</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">84</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳ 93.96</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳ 7.60</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳ 2.60</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">0.75%</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳55,786</span>
+                        </td>
+                        <td>
+                           <div class="dropdown dot-dropdown justify-content-center">
+                              <button type="button" class="ra-three-dot-btn" data-toggle="dropdown"
+                                 aria-haspopup="true">
+                                 <span></span>
+                                 <span></span>
+                                 <span></span>
+                              </button>
+                              <div class="dropdown-menu filter-dropdown">
+                                 <a class="dropdown-item" href="#">Demo Text 1</a>
+                                 <a class="dropdown-item" href="#">Demo Text 2</a>
+                                 <a class="dropdown-item" href="#">Demo Text 3</a>
+                                 <a class="dropdown-item" href="#">Demo Text 4</a>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <span class="fz16 fw-500 purple-color">4 June, 2021</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">0.02%</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">2,308</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">454,232</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">34</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳ 23.96</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳ 7.60</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳ 27.60</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">0.85%</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳15,486</span>
+                        </td>
+                        <td>
+                           <div class="dropdown dot-dropdown justify-content-center">
+                              <button type="button" class="ra-three-dot-btn" data-toggle="dropdown"
+                                 aria-haspopup="true">
+                                 <span></span>
+                                 <span></span>
+                                 <span></span>
+                              </button>
+                              <div class="dropdown-menu filter-dropdown">
+                                 <a class="dropdown-item" href="#">Demo Text 1</a>
+                                 <a class="dropdown-item" href="#">Demo Text 2</a>
+                                 <a class="dropdown-item" href="#">Demo Text 3</a>
+                                 <a class="dropdown-item" href="#">Demo Text 4</a>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+
+                  <tfoot>
+                     <tr>
+                        <th>
+                           <span class="fz16 fw-600 purple-color">Total:</span>
+                        </th>
+                        <th>
+                           <span class="fz14 fw-600 purple-color">997,098</span>
+                        </th>
+                        <th>
+                           <span class="fz14 fw-600 purple-color">11,354</span>
+                        </th>
+                        <th>
+                           <span class="fz14 fw-600 purple-color">909,789</span>
+                        </th>
+                        <th>
+                           <span class="fz14 fw-600 purple-color">1,109</span>
+                        </th>
+                        <th>
+                           <span class="fz14 fw-600 purple-color"></span>
+                        </th>
+                        <th>
+                           <span class="fz14 fw-600 purple-color"></span>
+                        </th>
+                        <th>
+                           <span class="fz14 fw-600 purple-color"></span>
+                        </th>
+                        <th>
+                           <span class="fz14 fw-600 purple-color"></span>
+                        </th>
+                        <th>
+                           <span class="fz14 fw-600 purple-color">৳74,507</span>
+                        </th>
+                        <th>
+                           <span class="fz14 fw-600 purple-color"></span>
+                        </th>
+                     </tr>
+                  </tfoot>
+                  </tbody>
+               </table>
+            </div>
+         </div>
+      </div>
+   </div>
+   
+
+   <!-- DatatTable Container -->
+   <div id="dashboard-campaign-metrics-1" class="datatableMultiple p-0x20 sectionShowHide">
+      <!-- Filter Bar -->
+      <div class="filter-wrapper campaign-metrics mb-0 bg-white p-16x20">
+         <div class="fitler-top w-100">
+            <form action="" class="rs-form create-campaign-form custom-form">
+               <div class="create-campaign-wrapper w-100">
+                  <div class="fz18 fw-700 purple-color mr-2">Campaign Metrics</div>
+                  <div class="animate-search w-100">
+                     <button type="button"
+                        class="hidden-search-icon search-icon border-0 bg-transparent ml-md-3 ml-0 d-flex align-items-center">
+                        <span class="search-img search-custom">
+                           <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                 d="M13.8034 12.8176L11.208 10.2416C12.2154 8.98472 12.7033 7.38934 12.5713 5.78354C12.4393 4.17774 11.6974 2.68358 10.4983 1.60828C9.29906 0.532985 7.7337 -0.0417126 6.12404 0.00235967C4.51437 0.046432 2.98276 0.705924 1.84413 1.84523C0.705504 2.98454 0.0464044 4.51706 0.00235827 6.12768C-0.0416878 7.7383 0.532668 9.30459 1.60733 10.5045C2.68198 11.7044 4.17526 12.4467 5.7801 12.5788C7.38495 12.7109 8.97938 12.2227 10.2355 11.2146L12.81 13.7906C12.8751 13.8562 12.9524 13.9083 13.0377 13.9439C13.1229 13.9794 13.2144 13.9977 13.3067 13.9977C13.3991 13.9977 13.4905 13.9794 13.5758 13.9439C13.661 13.9083 13.7384 13.8562 13.8034 13.7906C13.9295 13.6601 14 13.4857 14 13.3041C14 13.1226 13.9295 12.9482 13.8034 12.8176ZM6.31088 11.2146C5.34233 11.2146 4.39552 10.9273 3.5902 10.3888C2.78488 9.85041 2.15721 9.08514 1.78656 8.18978C1.41591 7.29442 1.31893 6.3092 1.50789 5.35869C1.69684 4.40818 2.16324 3.53508 2.84811 2.84981C3.53298 2.16453 4.40556 1.69785 5.3555 1.50878C6.30545 1.31971 7.29009 1.41675 8.18491 1.78762C9.07974 2.15849 9.84456 2.78654 10.3827 3.59234C10.9208 4.39814 11.208 5.3455 11.208 6.31463C11.208 7.61419 10.692 8.86053 9.77364 9.77945C8.85526 10.6984 7.60967 11.2146 6.31088 11.2146Z"
+                                 fill="#383874" />
+                           </svg>
+                        </span>
+                     </button>
+
+                     <div class="dropdown-search hidden-search">
+                        <input type="search" class="dataTable-search-activator" placeholder="Search" />
+                        <label for="dropdwonSearch">
+                           <button class="bg-transparent border-0">
+                              <img src="assets/images/icons/search-purple.svg" alt="Icon">
+                           </button>
+                        </label>
+                     </div>
+                  </div>
+               </div>
+            </form>
+
+            <div class="search-right text-nowrap">
+               <div class="ra-filter mr-3 mr-md-0">
+                  <div class="dropdown dropdwon-3 dropdwon-4">
+                     <div class="dropdown-menu">
+                        <ul>
+                           <li class="fz14 check-filter toggle-vis" data-column="0">
+                              Dates
+                           </li>
+                           <li class="fz14 check-filter toggle-vis" data-column="1">
+                              Reach
+                           </li>
+                           <li class="fz14 check-filter toggle-vis" data-column="2">
+                              Clicks
+                           </li>
+                           <li class="fz14 check-filter toggle-vis" data-column="3">
+                              Imprssn
+                           </li>
+                           <li class="fz14 check-filter toggle-vis" data-column="4">
+                              Convrsn
+                           </li>
+                           <li class="fz14 check-filter toggle-vis" data-column="5">
+                              CPM
+                           </li>
+                           <li class="fz14 check-filter toggle-vis" data-column="6">
+                              CPC
+                           </li>
+                           <li class="fz14 check-filter toggle-vis" data-column="7">
+                              CPA
+                           </li>
+                           <li class="fz14 check-filter toggle-vis" data-column="8">
+                              CTR
+                           </li>
+                           <li class="fz14 check-filter toggle-vis" data-column="9">
+                              Spent
+                           </li>
+                        </ul>
+                     </div>
+
+                     <button class="filter-btn fw-500 fz14 d-flex align-items-center" type="button"
+                        data-toggle="dropdown" aria-haspopup="true">
+                        <span class="pr-2 d-flex">
+                           <svg width="18" height="16" viewBox="0 0 18 16" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd"
+                                 d="M10.8493 12.6561C10.8493 12.3054 11.1253 12.0212 11.4658 12.0212H17.2192C17.5596 12.0212 17.8356 12.3054 17.8356 12.6561C17.8356 13.0067 17.5596 13.291 17.2192 13.291H11.4658C11.1253 13.291 10.8493 13.0067 10.8493 12.6561Z"
+                                 fill="#475364" />
+                              <path fill-rule="evenodd" clip-rule="evenodd"
+                                 d="M0.164384 12.6561C0.164384 12.3054 0.440372 12.0212 0.780822 12.0212H3.24658C3.58702 12.0212 3.86301 12.3054 3.86301 12.6561C3.86301 13.0067 3.58702 13.291 3.24658 13.291H0.780822C0.440372 13.291 0.164384 13.0067 0.164384 12.6561Z"
+                                 fill="#475364" />
+                              <path fill-rule="evenodd" clip-rule="evenodd"
+                                 d="M14.137 3.34392C14.137 2.99326 14.413 2.70899 14.7534 2.70899H17.2192C17.5596 2.70899 17.8356 2.99326 17.8356 3.34392C17.8356 3.69457 17.5596 3.97884 17.2192 3.97884H14.7534C14.413 3.97884 14.137 3.69457 14.137 3.34392Z"
+                                 fill="#475364" />
+                              <path fill-rule="evenodd" clip-rule="evenodd"
+                                 d="M0.164384 3.34392C0.164384 2.99326 0.440372 2.70899 0.780822 2.70899H6.53425C6.8747 2.70899 7.15068 2.99326 7.15068 3.34392C7.15068 3.69457 6.8747 3.97884 6.53425 3.97884H0.780822C0.440372 3.97884 0.164384 3.69457 0.164384 3.34392Z"
+                                 fill="#475364" />
+                              <path fill-rule="evenodd" clip-rule="evenodd"
+                                 d="M4.13195 10.9677C4.00486 11.0805 3.86301 11.3057 3.86301 11.8095V13.5026C3.86301 14.0065 4.00486 14.2317 4.13195 14.3445C4.27609 14.4725 4.51934 14.5608 4.89041 14.5608H9.82192C10.193 14.5608 10.4362 14.4725 10.5804 14.3445C10.7075 14.2317 10.8493 14.0065 10.8493 13.5026V11.8095C10.8493 11.3057 10.7075 11.0805 10.5804 10.9677C10.4362 10.8397 10.193 10.7513 9.82192 10.7513H4.89041C4.51934 10.7513 4.27609 10.8397 4.13195 10.9677ZM3.32695 10.0059C3.77871 9.60476 4.35738 9.48148 4.89041 9.48148H9.82192C10.355 9.48148 10.9336 9.60476 11.3854 10.0059C11.8542 10.4221 12.0822 11.0435 12.0822 11.8095V13.5026C12.0822 14.2686 11.8542 14.89 11.3854 15.3063C10.9336 15.7074 10.355 15.8307 9.82192 15.8307H4.89041C4.35738 15.8307 3.77871 15.7074 3.32695 15.3063C2.85815 14.89 2.63014 14.2686 2.63014 13.5026V11.8095C2.63014 11.0435 2.85815 10.4221 3.32695 10.0059Z"
+                                 fill="#475364" />
+                              <path fill-rule="evenodd" clip-rule="evenodd"
+                                 d="M7.41962 1.6555C7.29253 1.76834 7.15068 1.99352 7.15068 2.49735V4.19048C7.15068 4.69431 7.29253 4.91949 7.41962 5.03233C7.56376 5.16031 7.80701 5.24868 8.17808 5.24868H13.1096C13.4807 5.24868 13.7239 5.16031 13.8681 5.03233C13.9951 4.91949 14.137 4.69431 14.137 4.19048V2.49735C14.137 1.99352 13.9951 1.76834 13.8681 1.6555C13.7239 1.52752 13.4807 1.43915 13.1096 1.43915H8.17808C7.80701 1.43915 7.56376 1.52752 7.41962 1.6555ZM6.61463 0.693708C7.06638 0.29259 7.64505 0.169312 8.17808 0.169312H13.1096C13.6426 0.169312 14.2213 0.29259 14.673 0.693708C15.1418 1.10997 15.3699 1.73135 15.3699 2.49735V4.19048C15.3699 4.95648 15.1418 5.57786 14.673 5.99412C14.2213 6.39524 13.6426 6.51852 13.1096 6.51852H8.17808C7.64505 6.51852 7.06638 6.39524 6.61463 5.99412C6.14582 5.57786 5.91781 4.95648 5.91781 4.19048V2.49735C5.91781 1.73135 6.14582 1.10997 6.61463 0.693708Z"
+                                 fill="#475364" />
+                              <path fill-rule="evenodd" clip-rule="evenodd"
+                                 d="M6.50729 0.565469C7.00014 0.127866 7.6236 0 8.17808 0H13.1096C13.6641 0 14.2875 0.127866 14.7804 0.565469C15.2949 1.02232 15.5342 1.69667 15.5342 2.49735V2.53968H17.2192C17.6504 2.53968 18 2.89975 18 3.34392C18 3.78808 17.6504 4.14815 17.2192 4.14815H15.5342V4.19048C15.5342 4.99116 15.2949 5.66551 14.7804 6.12236C14.2875 6.55996 13.6641 6.68783 13.1096 6.68783H8.17808C7.6236 6.68783 7.00014 6.55996 6.50729 6.12236C5.99277 5.66551 5.75342 4.99116 5.75342 4.19048V4.14815H0.780822C0.349586 4.14815 0 3.78808 0 3.34392C0 2.89975 0.349586 2.53968 0.780822 2.53968H5.75342V2.49735C5.75342 1.69667 5.99277 1.02232 6.50729 0.565469ZM5.75342 2.87831H0.780822C0.531159 2.87831 0.328767 3.08677 0.328767 3.34392C0.328767 3.60106 0.531159 3.80952 0.780822 3.80952H5.75342V2.87831ZM6.08219 3.80952V2.87831H6.53425C6.78391 2.87831 6.9863 3.08677 6.9863 3.34392C6.9863 3.60106 6.78391 3.80952 6.53425 3.80952H6.08219ZM6.08219 4.14815V4.19048C6.08219 4.9218 6.29888 5.49022 6.72196 5.86588C7.13262 6.23052 7.6665 6.34921 8.17808 6.34921H13.1096C13.6212 6.34921 14.1551 6.23052 14.5657 5.86588C14.9888 5.49022 15.2055 4.9218 15.2055 4.19048V4.14815H14.7534C14.585 4.14815 14.4289 4.09319 14.3014 3.99974V4.19048C14.3014 4.72989 14.1477 5.00759 13.9754 5.16057C13.7904 5.32483 13.5026 5.41799 13.1096 5.41799H8.17808C7.7851 5.41799 7.49728 5.32483 7.31229 5.16057C7.14 5.00759 6.9863 4.72989 6.9863 4.19048V3.99974C6.85873 4.09319 6.70272 4.14815 6.53425 4.14815H6.08219ZM7.31507 4.19048C7.31507 4.65874 7.44507 4.83139 7.52695 4.90409C7.63024 4.9958 7.82891 5.07936 8.17808 5.07936H13.1096C13.4588 5.07936 13.6574 4.9958 13.7607 4.90409C13.8426 4.83139 13.9726 4.65874 13.9726 4.19048V2.49735C13.9726 2.02909 13.8426 1.85644 13.7607 1.78374C13.6574 1.69203 13.4588 1.60847 13.1096 1.60847H8.17808C7.82891 1.60847 7.63024 1.69203 7.52695 1.78374C7.44507 1.85644 7.31507 2.02909 7.31507 2.49735V4.19048ZM14.3014 2.68809V2.49735C14.3014 1.95794 14.1477 1.68024 13.9754 1.52726C13.7904 1.363 13.5026 1.26984 13.1096 1.26984H8.17808C7.7851 1.26984 7.49728 1.363 7.31229 1.52726C7.14 1.68024 6.9863 1.95794 6.9863 2.49735V2.68809C6.85873 2.59464 6.70272 2.53968 6.53425 2.53968H6.08219V2.49735C6.08219 1.76603 6.29888 1.19761 6.72196 0.821947C7.13262 0.457313 7.6665 0.338624 8.17808 0.338624H13.1096C13.6212 0.338624 14.1551 0.457313 14.5657 0.821947C14.9888 1.19761 15.2055 1.76603 15.2055 2.49735V2.53968H14.7534C14.585 2.53968 14.4289 2.59464 14.3014 2.68809ZM15.2055 2.87831H14.7534C14.5038 2.87831 14.3014 3.08677 14.3014 3.34392C14.3014 3.60106 14.5038 3.80952 14.7534 3.80952H15.2055V2.87831ZM15.5342 3.80952H17.2192C17.4688 3.80952 17.6712 3.60106 17.6712 3.34392C17.6712 3.08677 17.4688 2.87831 17.2192 2.87831H15.5342V3.80952ZM3.21962 9.87764C3.71247 9.44003 4.33593 9.31217 4.89041 9.31217H9.82192C10.3764 9.31217 10.9999 9.44003 11.4927 9.87764C12.0072 10.3345 12.2466 11.0088 12.2466 11.8095V11.8519H17.2192C17.6504 11.8519 18 12.2119 18 12.6561C18 13.1002 17.6504 13.4603 17.2192 13.4603H12.2466V13.5026C12.2466 14.3033 12.0072 14.9777 11.4927 15.4345C10.9999 15.8721 10.3764 16 9.82192 16H4.89041C4.33593 16 3.71247 15.8721 3.21962 15.4345C2.7051 14.9777 2.46575 14.3033 2.46575 13.5026V13.4603H0.780822C0.349586 13.4603 0 13.1002 0 12.6561C0 12.2119 0.349586 11.8519 0.780822 11.8519H2.46575V11.8095C2.46575 11.0088 2.7051 10.3345 3.21962 9.87764ZM2.46575 12.1905H0.780822C0.531159 12.1905 0.328767 12.3989 0.328767 12.6561C0.328767 12.9132 0.531159 13.1217 0.780822 13.1217H2.46575V12.1905ZM2.79452 13.1217V12.1905H3.24658C3.49624 12.1905 3.69863 12.3989 3.69863 12.6561C3.69863 12.9132 3.49624 13.1217 3.24658 13.1217H2.79452ZM2.79452 13.4603V13.5026C2.79452 14.234 3.0112 14.8024 3.43429 15.1781C3.84495 15.5427 4.37883 15.6614 4.89041 15.6614H9.82192C10.3335 15.6614 10.8674 15.5427 11.278 15.1781C11.7011 14.8024 11.9178 14.234 11.9178 13.5026V13.4603H11.4658C11.2973 13.4603 11.1413 13.4054 11.0137 13.3119V13.5026C11.0137 14.0421 10.86 14.3198 10.6877 14.4727C10.5027 14.637 10.2149 14.7302 9.82192 14.7302H4.89041C4.49743 14.7302 4.20961 14.637 4.02462 14.4727C3.85233 14.3198 3.69863 14.0421 3.69863 13.5026V13.3119C3.57106 13.4054 3.41505 13.4603 3.24658 13.4603H2.79452ZM4.0274 13.5026C4.0274 13.9709 4.1574 14.1436 4.23928 14.2163C4.34256 14.308 4.54124 14.3915 4.89041 14.3915H9.82192C10.1711 14.3915 10.3698 14.308 10.473 14.2163C10.5549 14.1436 10.6849 13.9709 10.6849 13.5026V11.8095C10.6849 11.3413 10.5549 11.1686 10.473 11.0959C10.3698 11.0042 10.1711 10.9206 9.82192 10.9206H4.89041C4.54124 10.9206 4.34256 11.0042 4.23928 11.0959C4.1574 11.1686 4.0274 11.3413 4.0274 11.8095V13.5026ZM11.0137 12.0003V11.8095C11.0137 11.2701 10.86 10.9924 10.6877 10.8394C10.5027 10.6752 10.2149 10.582 9.82192 10.582H4.89041C4.49743 10.582 4.20961 10.6752 4.02462 10.8394C3.85233 10.9924 3.69863 11.2701 3.69863 11.8095V12.0003C3.57106 11.9068 3.41505 11.8519 3.24658 11.8519H2.79452V11.8095C2.79452 11.0782 3.0112 10.5098 3.43429 10.1341C3.84495 9.76948 4.37883 9.65079 4.89041 9.65079H9.82192C10.3335 9.65079 10.8674 9.76948 11.278 10.1341C11.7011 10.5098 11.9178 11.0782 11.9178 11.8095V11.8519H11.4658C11.2973 11.8519 11.1413 11.9068 11.0137 12.0003ZM11.9178 12.1905H11.4658C11.2161 12.1905 11.0137 12.3989 11.0137 12.6561C11.0137 12.9132 11.2161 13.1217 11.4658 13.1217H11.9178V12.1905ZM12.2466 13.1217H17.2192C17.4688 13.1217 17.6712 12.9132 17.6712 12.6561C17.6712 12.3989 17.4688 12.1905 17.2192 12.1905H12.2466V13.1217Z"
+                                 fill="#475364" />
+                           </svg>
+                        </span>
+                        <p class="fz14">Customize</p>
+
+                        <div class="pl-2 pr-3">
+                           <span class="dropdown-icon down down-2">
+                              <img src="assets/images/icons/arrow-down.svg" alt="Icon">
+                           </span>
+                           <span class="dropdown-icon up up-2">
+                              <img src="assets/images/icons/arrow-down.svg" alt="Icon">
+                           </span>
+                        </div>
+                     </button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <!-- Datatabel -->
+      <div class="row">
+         <div class="col-md-12">
+            <div class="data-table-3 all-datatable">
+
+               <table class="table table-striped table-hover table-bordered datatableActivator-2" style="width:100%">
+                  <thead>
+                     <tr>
+                        <th class="fz13 fw-400 purple-color">Date</th>
+                        <th class="fz13 fw-400 purple-color">Reach</th>
+                        <th class="fz13 fw-400 purple-color">Clicks</th>
+                        <th class="fz13 fw-400 purple-color">Imprssn </th>
+                        <th class="fz13 fw-400 purple-color">Convrsn</th>
+                        <th class="fz13 fw-400 purple-color">CPM</th>
+                        <th class="fz13 fw-400 purple-color">CPC</th>
+                        <th class="fz13 fw-400 purple-color">CPA</th>
+                        <th class="fz13 fw-400 purple-color">CTR</th>
+                        <th class="fz13 fw-400 purple-color">Spent</th>
+                        <th class="no-icon">&nbsp;</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td>
+                           <span class="fz16 fw-500 purple-color">29 June, 2021</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">0.02%</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">2,308</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">646,232</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">34</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳ 23.96</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳ 7.60</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳ 27.60</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">0.85%</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳15,486</span>
+                        </td>
+                        <td>
+                           <div class="dropdown dot-dropdown justify-content-center">
+                              <button type="button" class="ra-three-dot-btn" data-toggle="dropdown"
+                                 aria-haspopup="true">
+                                 <span></span>
+                                 <span></span>
+                                 <span></span>
+                              </button>
+                              <div class="dropdown-menu filter-dropdown">
+                                 <a class="dropdown-item" href="#">Demo Text 1</a>
+                                 <a class="dropdown-item" href="#">Demo Text 2</a>
+                                 <a class="dropdown-item" href="#">Demo Text 3</a>
+                                 <a class="dropdown-item" href="#">Demo Text 4</a>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <span class="fz16 fw-500 purple-color">30 June, 2021</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">0.20%</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">2,5608</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">746,232</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">84</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳ 93.96</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳ 7.60</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳ 2.60</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">0.75%</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳55,486</span>
+                        </td>
+                        <td>
+                           <div class="dropdown dot-dropdown justify-content-center">
+                              <button type="button" class="ra-three-dot-btn" data-toggle="dropdown"
+                                 aria-haspopup="true">
+                                 <span></span>
+                                 <span></span>
+                                 <span></span>
+                              </button>
+                              <div class="dropdown-menu filter-dropdown">
+                                 <a class="dropdown-item" href="#">Demo Text 1</a>
+                                 <a class="dropdown-item" href="#">Demo Text 2</a>
+                                 <a class="dropdown-item" href="#">Demo Text 3</a>
+                                 <a class="dropdown-item" href="#">Demo Text 4</a>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <span class="fz16 fw-500 purple-color">29 June, 2021</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">0.02%</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">2,308</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">646,232</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">34</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳ 23.96</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳ 7.60</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳ 27.60</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">0.85%</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳15,486</span>
+                        </td>
+                        <td>
+                           <div class="dropdown dot-dropdown justify-content-center">
+                              <button type="button" class="ra-three-dot-btn" data-toggle="dropdown"
+                                 aria-haspopup="true">
+                                 <span></span>
+                                 <span></span>
+                                 <span></span>
+                              </button>
+                              <div class="dropdown-menu filter-dropdown">
+                                 <a class="dropdown-item" href="#">Demo Text 1</a>
+                                 <a class="dropdown-item" href="#">Demo Text 2</a>
+                                 <a class="dropdown-item" href="#">Demo Text 3</a>
+                                 <a class="dropdown-item" href="#">Demo Text 4</a>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <span class="fz16 fw-500 purple-color">29 June, 2021</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">0.02%</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">2,308</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">646,232</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">34</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳ 23.96</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳ 7.60</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳ 27.60</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">0.85%</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳15,486</span>
+                        </td>
+                        <td>
+                           <div class="dropdown dot-dropdown justify-content-center">
+                              <button type="button" class="ra-three-dot-btn" data-toggle="dropdown"
+                                 aria-haspopup="true">
+                                 <span></span>
+                                 <span></span>
+                                 <span></span>
+                              </button>
+                              <div class="dropdown-menu filter-dropdown">
+                                 <a class="dropdown-item" href="#">Demo Text 1</a>
+                                 <a class="dropdown-item" href="#">Demo Text 2</a>
+                                 <a class="dropdown-item" href="#">Demo Text 3</a>
+                                 <a class="dropdown-item" href="#">Demo Text 4</a>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <span class="fz16 fw-500 purple-color">30 June, 2021</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">0.20%</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">2,5608</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">746,232</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">84</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳ 93.96</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳ 7.60</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳ 2.60</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">0.75%</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳55,486</span>
+                        </td>
+                        <td>
+                           <div class="dropdown dot-dropdown justify-content-center">
+                              <button type="button" class="ra-three-dot-btn" data-toggle="dropdown"
+                                 aria-haspopup="true">
+                                 <span></span>
+                                 <span></span>
+                                 <span></span>
+                              </button>
+                              <div class="dropdown-menu filter-dropdown">
+                                 <a class="dropdown-item" href="#">Demo Text 1</a>
+                                 <a class="dropdown-item" href="#">Demo Text 2</a>
+                                 <a class="dropdown-item" href="#">Demo Text 3</a>
+                                 <a class="dropdown-item" href="#">Demo Text 4</a>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <span class="fz16 fw-500 purple-color">29 Aug, 2022</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">0.04%</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">2,208</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">632</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">994</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳ 2.96</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳ 2.60</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳ 7.60</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">0.95%</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳95,486</span>
+                        </td>
+                        <td>
+                           <div class="dropdown dot-dropdown justify-content-center">
+                              <button type="button" class="ra-three-dot-btn" data-toggle="dropdown"
+                                 aria-haspopup="true">
+                                 <span></span>
+                                 <span></span>
+                                 <span></span>
+                              </button>
+                              <div class="dropdown-menu filter-dropdown">
+                                 <a class="dropdown-item" href="#">Demo Text 1</a>
+                                 <a class="dropdown-item" href="#">Demo Text 2</a>
+                                 <a class="dropdown-item" href="#">Demo Text 3</a>
+                                 <a class="dropdown-item" href="#">Demo Text 4</a>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <span class="fz16 fw-500 purple-color">2 June, 2021</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">0.02%</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">2,308</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">654,232</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">34</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳ 23.96</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳ 7.60</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳ 27.60</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">0.85%</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳15,486</span>
+                        </td>
+                        <td>
+                           <div class="dropdown dot-dropdown justify-content-center">
+                              <button type="button" class="ra-three-dot-btn" data-toggle="dropdown"
+                                 aria-haspopup="true">
+                                 <span></span>
+                                 <span></span>
+                                 <span></span>
+                              </button>
+                              <div class="dropdown-menu filter-dropdown">
+                                 <a class="dropdown-item" href="#">Demo Text 1</a>
+                                 <a class="dropdown-item" href="#">Demo Text 2</a>
+                                 <a class="dropdown-item" href="#">Demo Text 3</a>
+                                 <a class="dropdown-item" href="#">Demo Text 4</a>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <span class="fz16 fw-500 purple-color">1 June, 2021</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">0.20%</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">2,5608</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">746,232</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">84</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳ 93.96</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳ 7.60</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳ 2.60</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">0.75%</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳55,786</span>
+                        </td>
+                        <td>
+                           <div class="dropdown dot-dropdown justify-content-center">
+                              <button type="button" class="ra-three-dot-btn" data-toggle="dropdown"
+                                 aria-haspopup="true">
+                                 <span></span>
+                                 <span></span>
+                                 <span></span>
+                              </button>
+                              <div class="dropdown-menu filter-dropdown">
+                                 <a class="dropdown-item" href="#">Demo Text 1</a>
+                                 <a class="dropdown-item" href="#">Demo Text 2</a>
+                                 <a class="dropdown-item" href="#">Demo Text 3</a>
+                                 <a class="dropdown-item" href="#">Demo Text 4</a>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <span class="fz16 fw-500 purple-color">4 June, 2021</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">0.02%</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">2,308</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">454,232</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">34</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳ 23.96</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳ 7.60</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳ 27.60</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">0.85%</span>
+                        </td>
+                        <td>
+                           <span class="fz14 fw-500 purple-color">৳15,486</span>
+                        </td>
+                        <td>
+                           <div class="dropdown dot-dropdown justify-content-center">
+                              <button type="button" class="ra-three-dot-btn" data-toggle="dropdown"
+                                 aria-haspopup="true">
+                                 <span></span>
+                                 <span></span>
+                                 <span></span>
+                              </button>
+                              <div class="dropdown-menu filter-dropdown">
+                                 <a class="dropdown-item" href="#">Demo Text 1</a>
+                                 <a class="dropdown-item" href="#">Demo Text 2</a>
+                                 <a class="dropdown-item" href="#">Demo Text 3</a>
+                                 <a class="dropdown-item" href="#">Demo Text 4</a>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+
+                  <tfoot>
+                     <tr>
+                        <th>
+                           <span class="fz16 fw-600 purple-color">Total:</span>
+                        </th>
+                        <th>
+                           <span class="fz14 fw-600 purple-color">997,098</span>
+                        </th>
+                        <th>
+                           <span class="fz14 fw-600 purple-color">11,354</span>
+                        </th>
+                        <th>
+                           <span class="fz14 fw-600 purple-color">909,789</span>
+                        </th>
+                        <th>
+                           <span class="fz14 fw-600 purple-color">1,109</span>
+                        </th>
+                        <th>
+                           <span class="fz14 fw-600 purple-color"></span>
+                        </th>
+                        <th>
+                           <span class="fz14 fw-600 purple-color"></span>
+                        </th>
+                        <th>
+                           <span class="fz14 fw-600 purple-color"></span>
+                        </th>
+                        <th>
+                           <span class="fz14 fw-600 purple-color"></span>
+                        </th>
+                        <th>
+                           <span class="fz14 fw-600 purple-color">৳74,507</span>
+                        </th>
+                        <th>
+                           <span class="fz14 fw-600 purple-color"></span>
+                        </th>
+                     </tr>
+                  </tfoot>
+                  </tbody>
+               </table>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   {% endblock %}

@@ -1,0 +1,803 @@
+.draft-top-message {
+   background-color: $grayProgressLight;
+   padding: 8px 20px;
+   height: 32px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.draft-progress-bar {
+   padding: 16px 24px;
+   background-color: $dataTableSearchBgColor;
+   display: flex;
+   justify-content: space-between;
+   min-height: 68px;
+
+   @media screen and (max-width: 767px) {
+      justify-content: center;
+      flex-direction: column;
+   }
+}
+
+.step {
+   &.draft-progress-bar-item {
+      display: flex;
+      justify-content: space-around;
+      width: 25%;
+      align-items: center;
+
+      @media screen and (max-width: 767px) {
+         width: 100%;
+         margin: 5px;
+      }
+
+      .draft-step-item {
+         display: flex;
+         align-items: center;
+
+         @media screen and (max-width: 767px) {
+            flex-direction: column;
+         }
+      }
+   }
+}
+
+.draft-position {
+   min-width: 30px;
+   height: 30px;
+   background: $grayLight1;
+   border-radius: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-weight: 700;
+   font-size: 14px;
+   margin-bottom: 5px;
+   position: relative;
+
+   .draft-step-number {
+      display: none;
+   }
+}
+
+.blur {
+   .draft-position {
+      opacity: .6;
+      color: $black;
+
+      .draft-step-number {
+         display: block;
+      }
+   }
+}
+
+.ongoing {
+   .draft-position {
+      background: $greenDark;
+
+      .draft-step-number {
+         color: $white;
+         display: block;
+      }
+   }
+
+   &.active-text {
+      .draft-step-title {
+         font-weight: 500;
+         opacity: 1;
+      }
+
+      .draft-step-subtitle {
+         opacity: 1;
+      }
+   }
+}
+
+.selected {
+   .draft-position {
+      background: $darkPrimaryColor;
+
+      &:after {
+         position: absolute;
+         content: "";
+         background-image: url('../images/icons/ok.svg');
+         width: 12px;
+         height: 12px;
+         background-repeat: no-repeat;
+         background-size: contain;
+         background-position: center;
+      }
+   }
+
+   &.active-text {
+      .draft-step-title {
+         font-weight: 500;
+         opacity: 1;
+      }
+
+      .draft-step-subtitle {
+         opacity: 1;
+      }
+   }
+}
+
+.lock {
+   .draft-position {
+      background: $darkPrimaryColor;
+
+      &:after {
+         position: absolute;
+         content: "";
+         background-image: url('../images/icons/lock.svg');
+         width: 12px;
+         height: 12px;
+         background-repeat: no-repeat;
+         background-size: contain;
+         background-position: center;
+      }
+   }
+
+   &.active-text {
+      .draft-step-title {
+         font-weight: 500;
+         opacity: 1;
+      }
+
+      .draft-step-subtitle {
+         opacity: 1;
+      }
+   }
+}
+
+.selected,
+.lock {
+
+   &.active-text {
+      .draft-step-title {
+         font-weight: 500;
+         opacity: 1;
+      }
+
+      .draft-step-subtitle {
+         opacity: 1;
+      }
+   }
+}
+
+.draft-step-title {
+   font-weight: 500;
+   opacity: .6;
+   line-height: 14px;
+
+   &.active-text {
+      opacity: 1;
+      font-weight: 600;
+   }
+}
+
+.draft-step-subtitle {
+   font-weight: 500;
+   color: $grayLightTextColor;
+   opacity: .6;
+
+   &.active-text {
+      opacity: 1;
+   }
+}
+
+.draft-step-text {
+   margin-left: 10px;
+   margin-right: 10px;
+}
+
+.draft-step-seperator {
+   width: 25px;
+   height: 1px;
+   background-color: $grayProgressLight;
+   margin-right: 10px;
+   display: flex;
+
+   @media screen and (max-width: 767px) {
+      display: none;
+   }
+}
+
+.draft-content-wrapper {
+   background-color: $white;
+
+   .draft-body .page {
+      max-width: 555px;
+      width: 100%;
+      margin: 20px;
+   }
+
+   .draft-body .page.page-4,
+   .draft-body .page.page-5 {
+      max-width: 100%;
+      margin: 0px;
+   }
+}
+
+// Draft Tab 1
+
+.draft-brand-tag {
+   margin-bottom: 8px;
+}
+
+.promotion-tag {
+   display: flex;
+   overflow: hidden;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   margin-bottom: 12px;
+
+   @media screen and (max-width: 767px) {
+      width: unset;
+      justify-content: space-evenly;
+   }
+
+   .promotion-tag-btn {
+      padding: 10px 12px;
+      height: 36px;
+      font-size: .875rem;
+      color: $black;
+      border-radius: 200px;
+      background-color: transparent;
+      width: 132px;
+      margin-bottom: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid $grayBorderColor;
+      transition: .2s ease-in-out;
+      margin-right: 4px;
+
+      &:active,
+      &:focus,
+      &:hover {
+         background-color: $darkPrimaryColor;
+         color: $white;
+      }
+   }
+}
+
+.promotion-input {
+
+   .input-icon {
+      background: transparent;
+      border: 1px solid $grayBorderColor;
+      border-radius: 4px;
+      border-right: none;
+   }
+
+   .custom-form-control {
+      border-radius: 4px;
+      border-color: $grayBorderColor;
+      color: $grayLightTextColor;
+
+      &:focus {
+         border-color: $darkPrimaryColor;
+         outline: 0;
+         box-shadow: unset;
+      }
+   }
+}
+
+.brief {
+   margin-bottom: 32px;
+
+   .brief-content {
+      textarea {
+         width: 100%;
+         border: 1px solid $grayBorderColor;
+         color: $black;
+         height: 112px;
+         resize: none;
+         border-radius: 4px;
+         padding: 12px 16px;
+
+         &::placeholder {
+            color: $grayLightTextColor;
+         }
+      }
+   }
+}
+
+.draft-btn {
+   padding: 6px 28px;
+}
+
+// Draft Tab 2
+
+.at-icon {
+   margin-right: 12px;
+
+   img {
+      width: 16px;
+   }
+}
+
+.btn-custom {
+   button {
+      margin: 4px 6px;
+   }
+}
+
+// Draft Tab 3
+
+.ra-select-form-group {
+   position: relative;
+}
+
+.ra-select-form-control {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   -o-appearance: none;
+
+   min-height: 40px;
+   border: 1px solid $grayBorderColor;
+   border-radius: 4px;
+   color: $grayLightTextColor;
+   font-size: 14px;
+   font-weight: 400;
+   padding-left: 12px;
+}
+
+.ra-select-form-control:focus {
+   color: $grayLightTextColor;
+   border-color: $darkPrimaryColor;
+   box-shadow: none;
+}
+
+.select-custom-icon {
+   pointer-events: none;
+   padding-right: 5px;
+   font-size: 25px;
+   position: absolute;
+   top: 73%;
+   right: 0px;
+   transform: translateY(-50%);
+   width: 8%;
+   height: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.ra-select-form-control {
+   option {
+      color: $black;
+   }
+}
+
+
+//  Radio Button
+.custom-radio-input:checked,
+.custom-radio-input:not(:checked) {
+   position: absolute;
+   left: -9999px;
+}
+
+.custom-radio-input:checked+.custom-radio-label,
+.custom-radio-input:not(:checked)+.custom-radio-label {
+   position: relative;
+   padding-left: 28px;
+   cursor: pointer;
+   line-height: 13px;
+   display: inline-block;
+   color: $black;
+}
+
+.custom-radio-input:not(:checked)+.custom-radio-label {
+   color: $grayLightTextColor;
+}
+
+.custom-radio-input:checked+.custom-radio-label:before,
+.custom-radio-input:not(:checked)+.custom-radio-label:before {
+   content: '';
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 16px;
+   height: 16px;
+   border: 2px solid $black;
+   border-radius: 50%;
+   background: $white;
+}
+
+.custom-radio-input:not(:checked)+.custom-radio-label:before {
+   border: 2px solid $grayCheckboxLight;
+}
+
+.custom-radio-input:checked+.custom-radio-label:after,
+.custom-radio-input:not(:checked)+.custom-radio-label:after {
+   content: '';
+   width: 8px;
+   height: 8px;
+   background: $black;
+   position: absolute;
+   top: 4px;
+   left: 4px;
+   border-radius: 50%;
+   -webkit-transition: all 0.2s ease;
+   transition: all 0.2s ease;
+}
+
+.custom-radio-input:not(:checked)+.custom-radio-label:after {
+   opacity: 0;
+   -webkit-transform: scale(0);
+   transform: scale(0);
+}
+
+.custom-radio-input:checked+.custom-radio-label:after {
+   opacity: 1;
+   -webkit-transform: scale(1);
+   transform: scale(1);
+}
+
+// Range Slider
+.range-slider {
+   &.ui-slider {
+      height: 2px !important;
+      margin-top: 25px;
+      margin-bottom: 25px;
+
+
+      .ui-slider-handle {
+         width: 20px;
+         height: 20px;
+         border-radius: 50%;
+         border: 2px solid $grayCheckboxLight;
+         background: $white;
+         top: 0;
+         transform: translateY(-50%);
+         outline: none;
+         cursor: pointer;
+
+         &:hover .value,
+         &.ui-state-focus .value {
+            transform: translateX(-50%) scale(1);
+            visibility: visible;
+            opacity: 1;
+         }
+
+         .value {
+            top: -30px;
+            position: absolute;
+            white-space: nowrap;
+            font-size: 12px;
+            background-color: $black;
+            color: $white;
+            padding: 3px 4px;
+            border-radius: 3px;
+            left: 50%;
+            transform: translateX(-50%) scale(.5);
+            visibility: hidden;
+            opacity: 0;
+            transition: .3s ease-in-out;
+
+            &:after {
+               content: '';
+               position: absolute;
+               width: 6px;
+               height: 6px;
+               background-color: $black;
+               transform: rotate(-45deg);
+               bottom: -3px;
+               left: calc(50% - 3px);
+            }
+         }
+      }
+   }
+}
+
+// Tab page 4
+.influencer-select {
+   padding: 20px;
+   background: $grayLight2;
+   border-radius: 4px;
+
+   h3 {
+      line-height: 28px;
+   }
+}
+
+.influencer-select-btn {
+   display: flex;
+   justify-content: flex-end;
+}
+
+.connect-influencer {
+
+   p {
+      color: $grayDark;
+   }
+}
+
+.influencer-connect-btn {
+   display: flex;
+   justify-content: flex-end;
+}
+
+.social-details {
+   background-color: transparent;
+}
+
+.chat-content {
+   display: flex;
+   flex-direction: column;
+   padding: 16px;
+
+   .chat-text {
+      min-height: 44px;
+      padding: 12px 16px;
+      border-radius: 24px;
+      width: fit-content;
+      max-width: 70%;
+
+      &.sent {
+         background: $darkPrimaryColor;
+         color: $white;
+         margin-bottom: 24px;
+         margin-left: auto;
+      }
+
+      &.recieved {
+         background: $grayProgressLight;
+         color: $black;
+         margin-bottom: 4px;
+      }
+   }
+}
+
+// Tab page 5
+.limit-notification {
+   display: flex;
+   justify-content: space-between;
+}
+
+.limit-notification,
+.limit-box {
+   background-color: $grayProgressLight !important;
+}
+
+.msg-white-bg {
+   background-color: $white;
+
+   .msg-short {
+      font-weight: 400;
+      color: $grayLightTextColor;
+   }
+}
+
+.msg-light-bg {
+   background-color: $primaryBg;
+
+   .msg-short {
+      font-weight: 400;
+      color: $grayLightTextColor;
+   }
+}
+
+.msg-dark-bg {
+   background-color: $dataTableSearchBgColor;
+
+   .msg-short {
+      font-weight: 500;
+      color: $darkPrimaryColor;
+   }
+}
+
+.msg-dot {
+   .green-dot {
+      width: 8px;
+      height: 8px;
+      background-color: $greenDark;
+      border-radius: 50%;
+      display: block;
+      align-self: flex-start;
+      margin-top: 6px;
+   }
+}
+
+.msg-blur {
+   opacity: .6;
+}
+
+.msg-interest {
+   background-color: $dataTableSearchBgColor;
+
+   .msg-short {
+      font-weight: 500;
+      color: $darkBlueColor;
+   }
+}
+
+.msg-btn {
+   display: none;
+   background-color: $grayProgressLight;
+   height: 20px;
+   margin-left: 4px;
+   padding-bottom: 3px;
+}
+
+.msg-interest {
+   .msg-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+}
+
+.offer-details {
+   background-color: $dataTableSearchBgColor;
+}
+
+.offer-status p {
+   color: $darkPrimaryColor;
+}
+
+.chat-wrapper {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   background-color: $primaryBg;
+   align-items: stretch;
+   height: calc(100vh - 193px);
+
+   .chat-top {
+      overflow-y: auto;
+      flex-grow: 1;
+
+      &.chat-top-2 {
+         max-height: 79vh;
+      }
+   }
+
+   /* width */
+   ::-webkit-scrollbar {
+      width: 7px;
+   }
+
+   /* Track */
+   ::-webkit-scrollbar-track {
+      background: rgba($darkPrimaryColor, .2);
+      border-radius: 20px;
+   }
+
+   /* Handle */
+   ::-webkit-scrollbar-thumb {
+      background: rgba($darkPrimaryColor, .6);
+      border-radius: 20px;
+      height: 30px;
+      transition: .2s;
+   }
+
+   /* Handle on hover */
+   ::-webkit-scrollbar-thumb:hover {
+      background: $darkPrimaryColor;
+   }
+
+}
+
+.msg-input {
+   display: flex;
+   justify-content: center;
+   background-color: $dataTableSearchBgColor;
+   position: relative;
+}
+
+.offer-label {
+   position: absolute;
+   left: 71.7%;
+   top: 50%;
+   transform: translateY(-50%);
+   background: transparent;
+   padding: 9px 16px;
+   cursor: inherit;
+}
+
+.offer-input-box {
+   background-color: $dataTableSearchBgColor;
+}
+
+.rs-input.ra-input.offer-input {
+   padding-right: 50px;
+}
+
+.c-row {
+   display: flex;
+
+   @media screen and (max-width: 992px) {
+      flex-wrap: wrap;
+      margin-bottom: 36px;
+   }
+
+   @media screen and (max-width: 575px) {
+      flex-wrap: wrap;
+      margin-bottom: 25px;
+   }
+
+   .c-col {
+      width: 33.33%;
+
+      @media screen and (max-width: 992px) {
+         width: 100%;
+      }
+   }
+}
+
+.c-row-2 {
+   display: flex;
+
+   @media screen and (max-width: 992px) {
+      flex-wrap: wrap;
+      margin-bottom: 36px;
+   }
+
+   @media screen and (max-width: 575px) {
+      flex-wrap: wrap;
+      margin-bottom: 25px;
+   }
+
+   .c-col-2 {
+
+      @media screen and (max-width: 992px) {
+         width: 100% !important;
+      }
+   }
+
+   .custom-1 {
+      width: 33.33%;
+   }
+
+   .custom-2 {
+      width: 66.66%;
+   }
+
+   .custom-3 {
+      width: 50%;
+   }
+}
+
+// Client Details
+.user-image {
+   position: relative;
+   height: 136px;
+
+   .cover-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 75px;
+      background-color: rgba($darkPrimaryColor, .5);
+
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         object-position: center;
+      }
+   }
+
+   .profile-image {
+      position: absolute;
+      background-color: rgba($darkPrimaryColor, 1);
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      left: 50%;
+      top: 20%;
+      transform: translate(-50%);
+
+      img {
+         width: 100%;
+         height: 100%;
+         border-radius: 50%;
+         object-fit: cover;
+         object-position: center;
+      }
+   }
+}

@@ -1,0 +1,195 @@
+.topbar {
+    padding: 20px 0;
+    background-color: $white;
+    margin-bottom: 15px;
+    z-index: 1002 !important;
+    position: sticky;
+    top: 0;
+
+    @media(max-width: 992px) {
+        padding-left: 30px;
+    }
+
+    @media(max-width: 575px) {
+        padding-left: 45px;
+    }
+
+    .account-menu {
+        background-color: $grayLight1;
+        border-radius: 50px;
+
+        &:after {
+            display: none;
+        }
+
+        .avater {
+            border-radius: 50%;
+            margin-right: 10px;
+            overflow: hidden;
+            width: 40px;
+            height: 40px;
+            display: flex;
+
+            img {
+                object-fit: cover;
+                object-position: center;
+            }
+
+            @media(max-width: 757px) {
+                margin-right: 0;
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        .acc-name {
+            color: $black;
+            font-weight: 500;
+            font-size: rem(15);
+            margin-right: 10px;
+
+            @media(max-width: 757px) {
+                display: none;
+            }
+        }
+
+        .dropdown-icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: rem(30);
+            color: $white;
+            border-radius: 50%;
+            background-color: transparent;
+            transition: .3s ease-in-out;
+            border: none;
+            cursor: pointer;
+
+            &:hover {
+                background-color: lighten($darkPrimaryColor, 10);
+            }
+
+            &:after {
+                display: none;
+            }
+
+            @media(max-width: 757px) {
+                display: none;
+            }
+        }
+    }
+}
+
+.topbar {
+    &.topbar2 {
+        min-height: 65px;
+        background: $primaryBg;
+        margin: 0;
+        border-bottom: 1px solid $grayLightBgColor;
+        padding: 0px 20px;
+        // z-index: 1021!important;
+
+        .account-menu {
+            background-color: rgba($greenDark, .15);
+            border-radius: 50px;
+
+            &:after {
+                display: none;
+            }
+
+            .avater {
+                border-radius: 50%;
+                margin-right: 10px;
+                overflow: hidden;
+                width: 36px;
+                height: 36px;
+                background: $greenDark;
+                color: $white;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    object-fit: cover;
+                    object-position: center;
+                    width: 36px;
+                    height: 36px;
+                }
+
+                @media(max-width: 757px) {
+                    margin-right: 0;
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+
+            .acc-name {
+                color: $purleDark;
+                font-weight: 500;
+                font-size: rem(14);
+                margin-right: 10px;
+
+                @media(max-width: 757px) {
+                    display: none;
+                }
+            }
+
+            .dropdown-icon {
+                width: 40px;
+                height: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: rem(30);
+                color: $white;
+                border-radius: 50%;
+                background-color: transparent;
+                transition: .3s ease-in-out;
+                border: none;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: rgba($greenDark, .70);
+                }
+
+                &:hover {
+                    .topbar-dropdown-icon [fill] {
+                        fill: $white;
+                    }
+                }
+
+                &:after {
+                    display: none;
+                }
+
+                @media(max-width: 757px) {
+                    display: none;
+                }
+            }
+        }
+
+        .breadcumb {
+
+            i {
+                font-size: 24px;
+            }
+        }
+
+        .plusIcon {
+            width: 18px;
+            margin: 0px 10px 0px 0px;
+        }
+    }
+}
+
+.long-arrow {
+    width: 18px;
+}
+
+.topbar-notification {
+    border: none;
+    background: transparent;
+    width: 16px;
+    padding: 2px;
+}
